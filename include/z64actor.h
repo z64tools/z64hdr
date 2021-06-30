@@ -5,6 +5,7 @@
 #include "z64animation.h"
 #include "z64math.h"
 #include "z64collision_check.h"
+#include "z64bgcheck.h"
 
 #define ACTOR_NUMBER_MAX 200
 #define INVISIBLE_ACTOR_MAX 20
@@ -156,7 +157,9 @@ typedef struct Actor {
     /* 0x130 */ ActorFunc update; // Update Routine. Called by `Actor_UpdateAll`
     /* 0x134 */ ActorFunc draw; // Draw Routine. Called by `Actor_Draw`
     /* 0x138 */ ActorOverlay* overlayEntry; // Pointer to the overlay table entry for this actor
+#ifndef _Z64OVL_10_
     /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
+#endif
 } Actor; // size = 0x14C
 
 typedef enum {

@@ -21,6 +21,15 @@ asm ("gSegments = 0x80166FA8");
 extern DmaEntry gDmaDataTable[];
 asm("gDmaDataTable = 0x80016DA0");
 
+extern RomFile gObjectTable[402];
+asm ("gObjectTable = 0x80127528;");
+
+extern RomFile gActorOverlayTable[];
+asm ("gObjectTable = 0x801162A0;");
+
+extern RomFile gSceneTable[];
+asm ("gObjectTable = 0x80129A10;");
+
 extern u32 gUpgradeMasks[8];
 asm("gUpgradeMasks = 0x801271B0");
 
@@ -38,11 +47,6 @@ asm ("gMtxClear = 0x8012DB20");
 
 extern u16 gTimeSpeed;
 asm ("gTimeSpeed = 0x8011FB40");
-
-typedef void (*SceneDrawFunc)(GlobalContext* globalCtx);
-
-extern RomFile gObjectTable[402];
-asm ("gObjectTable = 0x80127528;");
 
 extern u32 gBitFlags[32];
 asm ("gBitFlags = 0x80127120;");

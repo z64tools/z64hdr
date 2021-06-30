@@ -1,6 +1,9 @@
 #ifndef _ULTRA64_PI_H_
 #define _ULTRA64_PI_H_
 
+#include "types.h"
+#include "message.h"
+
 typedef struct {
     /* 0x00 */ u32 errStatus;
     /* 0x04 */ void* dramAddr;

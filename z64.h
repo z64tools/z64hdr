@@ -1798,11 +1798,23 @@ typedef struct {
 } FlagSetEntry; // size = 0x08
 
 #include "include/functions.h"
-#include "extern/functions.h"
 #include "include/macros.h"
 
+#ifdef _Z64OVL_DEBUG_
+
+#include "extern/functions_debug.h"
 #ifndef __STAHP__
-#include "extern/symbols.h"
+#include "extern/symbols_debug.h"
 #endif
+#endif
+
+#ifdef _Z64OVL_10_
+
+#include "extern/functions_1.0.h"
+#ifndef __STAHP__
+#include "extern/symbols_1.0.h"
+#endif
+#endif
+
 
 #endif
