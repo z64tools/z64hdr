@@ -1,9 +1,6 @@
-#ifndef _Z64_H_
+#ifndef _Z64HDR_H_
+#define _Z64HDR_H_
 #define _Z64_H_
-
-#define NULL (void*)0
-
-typedef unsigned int size_t;
 
 #include "include/z64save.h"
 #include "include/z64light.h"
@@ -1801,20 +1798,19 @@ typedef struct {
 #include "include/macros.h"
 
 #ifdef _Z64OVL_DEBUG_
-
-#include "extern/functions_debug.h"
-#ifndef __STAHP__
-#include "extern/symbols_debug.h"
-#endif
+	
+ #include "extern/functions_debug.h"
+ #ifndef __STAHP__
+  #include "extern/symbols_debug.h"
+ #endif
 #endif
 
 #ifdef _Z64OVL_10_
-
-#include "extern/functions_10.h"
-#ifndef __STAHP__
-#include "extern/symbols_10.h"
+	
+ #include "extern/functions_10.h"
+ #ifndef __STAHP__
+  #include "extern/symbols_10.h"
+ #endif
 #endif
-#endif
-
 
 #endif

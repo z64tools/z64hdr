@@ -1,7 +1,7 @@
 #ifndef _ULTRA64_H_
 #define _ULTRA64_H_
 
-// #include "stddef.h"
+#include "stddef.h"
 #include "stdbool.h"
 #include "math.h"
 #include "unk.h"
