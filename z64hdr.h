@@ -1810,9 +1810,9 @@ typedef struct {
 
 #ifdef _Z64OVL_10_
 
-#include "extern/functions_1.0.h"
+#include "extern/functions_10.h"
 #ifndef __STAHP__
-#include "extern/symbols_1.0.h"
+#include "extern/symbols_10.h"
 #endif
 #endif
 

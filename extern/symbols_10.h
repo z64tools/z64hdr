@@ -2,7 +2,7 @@
 #define _SYMBOLS_H_
 #define __STAHP__
 
-#include "../z64.h"
+#include "../z64hdr.h"
 
 extern GameInfo* gGameInfo;
 asm("gGameInfo = 0x8011BA00");
