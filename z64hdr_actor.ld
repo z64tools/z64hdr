@@ -1,17 +1,9 @@
 INCLUDE entry.ld
 
-
-/* Libaries here -- add your own if you need to*/
-SEARCH_DIR( /usr/mips/mips/lib )
-SEARCH_DIR( /usr/mips/lib/gcc/mips/3.4.6/ )
-
 /* This script is for MIPS */
 OUTPUT_ARCH( mips )
 OUTPUT_FORMAT( "elf32-bigmips", "elf32-bigmips", "elf32-littlemips" )
-
-/* Entrypoint is function `n64start` */
 ENTRY( ENTRY_POINT )
-
 
 SECTIONS
 {
@@ -101,5 +93,3 @@ SECTIONS
 	. = ALIGN( 8 );
 	end = . ;
 }
-
-

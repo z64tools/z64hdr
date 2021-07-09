@@ -1,5 +1,10 @@
 #ifndef _Z64HDR_H_
 #define _Z64HDR_H_
+
+#if !defined(_Z64OVL_DEBUG_) && !defined(_Z64OVL_10_)
+#error "Please define _Z64OVL_DEBUG_ or _Z64OVL_10_, or include oot_debug.h or oot_10.h instead of z64hdr.h"
+#endif
+
 #define _Z64_H_
 
 #include "include/z64save.h"
@@ -1796,21 +1801,14 @@ typedef struct {
 
 #include "include/functions.h"
 #include "include/macros.h"
-
-#ifdef _Z64OVL_DEBUG_
-	
- #include "extern/functions_debug.h"
- #ifndef __STAHP__
-  #include "extern/symbols_debug.h"
- #endif
+#ifndef _Z64OVL_NO_SYMBOLS_
+#include "symbols.h"
 #endif
 
-#ifdef _Z64OVL_10_
-	
- #include "extern/functions_10.h"
- #ifndef __STAHP__
-  #include "extern/symbols_10.h"
- #endif
+#ifdef _Z64OVL_DEBUG_
+#define GLOBAL_CONTEXT ((GlobalContext*)0x80212020)
+#elif defined(_Z64OVL_10_)
+#define GLOBAL_CONTEXT ((GlobalContext*)0x801C84A0)
 #endif
 
 #endif
