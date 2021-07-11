@@ -1,9 +1,10 @@
 /* Functions */
 
-fabsf = 0xDEADBEEF;
-sqrtf = 0xDEADBEEF;
-sqrt = 0xDEADBEEF;
-memset = 0xDEADBEEF;
+/*
+fabsf = ???;
+sqrtf = ???;
+sqrt = ???;
+*/
 
 DmaMgr_DMARomToRam = 0x8000085C;
 DmaMgr_ProcessMsg = 0x80000B0C;
@@ -365,6 +366,7 @@ func_800775F0 = 0x80063434;
 func_80077624 = 0x80063474;
 func_80077684 = 0x800634D4;
 func_800776E4 = 0x80063534;
+memset = 0x80063630;
 Lib_MemSet = 0x80063630;
 Math_CosS = 0x80063684;
 Math_SinS = 0x800636C4;

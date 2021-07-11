@@ -1,10 +1,5 @@
 /* Functions */
 
-fabsf = 0x801067E0;
-sqrtf = 0x801031E0;
-sqrt = 0x801067D0;
-memset = 0x800777E0;
-
 cleararena = 0x80000460;
 bootproc = 0x80000498;
 Main_ThreadEntry = 0x800005A0;
@@ -786,6 +781,7 @@ func_80077624 = 0x80077624;
 func_80077684 = 0x80077684;
 func_800776E4 = 0x800776E4;
 Lib_MemSet = 0x800777E0;
+memset = 0x800777E0;
 Math_CosS = 0x80077834;
 Math_SinS = 0x80077870;
 Math_ScaledStepToS = 0x800778AC;
@@ -2296,6 +2292,7 @@ __osCheckId = 0x80102BF0;
 __osPfsRWInode = 0x80102CC4;
 guMtxL2F = 0x80102FA0;
 osPfsFindFile = 0x80103010;
+sqrtf = 0x801031E0;
 osAfterPreNMI = 0x801031F0;
 osContStartQuery = 0x80103210;
 osContGetQuery = 0x8010328C;
@@ -2354,7 +2351,9 @@ __ull_to_d = 0x801066F4;
 __ull_to_f = 0x80106728;
 osViGetCurrentFramebuffer = 0x80106760;
 __osSpSetPc = 0x801067A0;
+sqrt = 0x801067D0;
 absf = 0x801067E0;
+fabsf = 0x801067E0;
 func_80106860 = 0x80106860;
 func_801068B0 = 0x801068B0;
 func_801069B0 = 0x801069B0;
