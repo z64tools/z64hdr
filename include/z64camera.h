@@ -1,8 +1,8 @@
 #ifndef _Z64CAMERA_H_
 #define _Z64CAMERA_H_
 
-#include "ultra64.h"
-#include "z64cutscene.h"
+#include <ultra64.h>
+#include <z64cutscene.h>
 
 #define CAM_STAT_CUT        0
 #define CAM_STAT_WAIT       1
@@ -310,7 +310,7 @@ typedef struct {
     /* 0x0008 */ f32 distMax;
     /* 0x000C */ f32 yawUpateRateTarget;
     /* 0x0010 */ f32 maxYawUpdate;
-    /* 0x0014 */ f32 unk_14; // never used.
+    /* 0x0014 */ f32 unk_14; // never used.  
     /* 0x0018 */ f32 atLERPScaleMax;
     /* 0x001C */ s16 interfaceFlags;
     /* 0x0020 */ Jump1Anim anim;
@@ -692,7 +692,7 @@ typedef struct {
  * 0x2: Add atTargetInit to view's lookAt
  *      if initFlags & 0x6060: use world for focus point
  * 0x3: Add atTargetInit to camera's at
- * 0x4: Don't update targets?
+ * 0x4: Don't update targets? 
  * 0x8: flag to use atTagetInit as f32 pitch, yaw, r
  * 0x10: ? unused
  * 0x20: focus on player
@@ -766,7 +766,7 @@ typedef struct {
 typedef struct {
     /* 0x0000 */ s16 interfaceFlags;
     /* 0x0002 */ s16 unk_02;
-    /* 0x0004 */ Demo6Anim anim;
+    /* 0x0004 */ Demo6Anim anim; 
 } Demo6; // size = 0x14
 
 typedef struct {

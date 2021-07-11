@@ -1,10 +1,6 @@
 #ifndef _Z64_AUDIO_H_
 #define _Z64_AUDIO_H_
 
-#include "ultra64/types.h"
-#include "ultra64/message.h"
-#include "ultra64/pi.h"
-
 /**
  * Structs in this repository have primarily been imported from the SM64 Decompilation.
  * Many struct members are wrong; the symbol '?' next to an offset means the member is a guess.
@@ -779,7 +775,7 @@ typedef struct {
     /* 0x18 */ f32*     unk_18;
     /* 0x1C */ f32      unk_1C;
     /* 0x20 */ u32      unk_20;
-    /* 0x24 */ u8       unk_24;
+    /* 0x24 */ u8       unk_24; 
     /* 0x26 */ u16      unk_26;
     /* 0x28 */ u16      unk_28;     // "flag"
     /* 0x2A */ u8       unk_2A;
@@ -792,7 +788,7 @@ typedef struct {
 
 /*
  * SFX IDs
- *
+ * 
  * index    0000000111111111    observed in audio code
  * & 200    0000001000000000    single bit
  * & 400    0000010000000000    single bit
@@ -802,7 +798,7 @@ typedef struct {
  * & C00    0000110000000000    2 bits, observed in audio code
  * & E00    0000111000000000    all 3 bits
  * bank     1111000000000000    observed in audio code
- *
+ * 
  */
 
 #define SFX_BANK_SHIFT(sfxId)   (((sfxId) >> 0xC) & 0xFF)

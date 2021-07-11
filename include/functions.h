@@ -3,16 +3,12 @@
 
 #include "z64.h"
 
-extern f32 fabsf(f32 f);
-asm ("fabsf = 0x801067E0");
-extern f32 sqrtf(f32 f);
-asm ("sqrtf = 0x801031E0");
-extern f64 sqrt(f64 d);
-asm ("sqrt = 0x801067D0");
-extern void* memset(void*, int, size_t);
-asm ("memset = 0x800777E0");
-
-#define Math_SqrtF(a) sqrtf(a);
+f32 fabsf(f32 f);
+#pragma intrinsic(fabsf)
+f32 sqrtf(f32 f);
+#pragma intrinsic(sqrtf)
+f64 sqrt(f64 d);
+#pragma intrinsic(sqrt)
 
 void cleararena(void);
 void bootproc(void);

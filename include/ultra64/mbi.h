@@ -12,10 +12,10 @@
 
 /*
  * the SHIFT macros are used to build display list commands, inserting
- * bit-fields into a 32-bit word. They take a value, a shift amount,
+ * bit-fields into a 32-bit word. They take a value, a shift amount, 
  * and a width.
  *
- * For the left shift, the lower bits of the value are masked,
+ * For the left shift, the lower bits of the value are masked, 
  * then shifted left.
  *
  * For the right shift, the value is shifted right, then the lower bits
@@ -32,8 +32,8 @@
 #define G_ON    (1)
 #define G_OFF   (0)
 
-#include "gbi.h"
-#include "abi.h"
+#include "ultra64/gbi.h"
+#include "ultra64/abi.h"
 
 #define NUM_SEGMENTS        (16)
 #define SEGMENT_OFFSET(a)   ((u32)(a) & 0x00ffffff)

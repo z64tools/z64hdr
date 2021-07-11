@@ -1,5 +1,10 @@
 /* Functions */
 
+fabsf = 0xDEADBEEF;
+sqrtf = 0xDEADBEEF;
+sqrt = 0xDEADBEEF;
+memset = 0xDEADBEEF;
+
 DmaMgr_DMARomToRam = 0x8000085C;
 DmaMgr_ProcessMsg = 0x80000B0C;
 DmaMgr_SendRequest0 = 0x80001AA0;

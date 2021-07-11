@@ -1,4 +1,4 @@
-// #include "mbi.h"
+#include "ultra64/mbi.h"
 
 #ifndef _ULTRA64_GBI_H_
 #define _ULTRA64_GBI_H_
@@ -954,7 +954,7 @@
 /*
  * BEGIN C-specific section: (typedef's)
  */
-// #if defined(_LANGUAGE_C) || defined(_LANGUAGE_C_PLUS_PLUS)
+#if defined(_LANGUAGE_C) || defined(_LANGUAGE_C_PLUS_PLUS)
 
 /*
  * Data Structures
@@ -4495,6 +4495,6 @@ _DW({                                   \
 #define gDPNoOpCloseDisp(pkt, file, line)   gDma1p(pkt, G_NOOP, file, line, 8)
 #define gDPNoOpTag3(pkt, type, data, n)     gDma1p(pkt, G_NOOP, data, n, type)
 
-// #endif
+#endif
 
 #endif
