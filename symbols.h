@@ -3,7 +3,7 @@
 
 extern GameInfo* gGameInfo;
 extern SaveContext gSaveContext;
-extern GlobalContext* gGlobalContext;
+extern GlobalContext gGlobalContext;
 extern u32 gSegments[16];
 extern DmaEntry gDmaDataTable[];
 extern RomFile gObjectTable[402];
