@@ -42,3 +42,16 @@ Addresses from:
 - [z64ovl_archived](https://github.com/z64me/z64ovl_archived)
 - [CrookedPoe's spreadsheet](https://docs.google.com/spreadsheets/d/1PqqbENJRmxj0iWDexm-6J3LWJ5lAWZpWQJM8_sRhMQU/edit#gid=0)
 - Manual asm comparison by z64me, rankaisija, Sauraen
+
+## Internal documentation: what to change when copying new decomp headers
+
+- z64actor.h, in `Actor`:
+    ```
+    #ifndef _Z64OVL_10_
+    /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
+    #endif
+    ```
+- z64actor.h, in `ActorInit`:
+    ```
+    /* 0x0A */ u16 padding; // Padding exists, but must be named for DEAD BEEF algorithm for zzrtl and friends
+    ```
