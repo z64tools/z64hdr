@@ -5,7 +5,7 @@
 #endif
 
 #include "include/z64.h"
-#include "include/globals.h"
+#include "include/global.h"
 #include "actor.h"
 #include "symbols.h"
 
