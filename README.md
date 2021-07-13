@@ -55,3 +55,7 @@ Addresses from:
     ```
     /* 0x0A */ u16 padding; // Padding exists, but must be named for DEAD BEEF algorithm for zzrtl and friends
     ```
+- functions.h: Replace three functions at the top which have `#pragma intrinsic` with them, with
+    ```
+    #include "../intrinsics.h"
+    ```    

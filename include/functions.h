@@ -3,12 +3,7 @@
 
 #include "z64.h"
 
-f32 fabsf(f32 f);
-#pragma intrinsic(fabsf)
-f32 sqrtf(f32 f);
-#pragma intrinsic(sqrtf)
-f64 sqrt(f64 d);
-#pragma intrinsic(sqrt)
+#include "../intrinsics.h"
 
 void cleararena(void);
 void bootproc(void);

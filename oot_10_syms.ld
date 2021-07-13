@@ -17,6 +17,7 @@ __assert = 0x800A01B8;
 LogUtils_HungupThread = 0x80001B38;
 sprintf = 0x800CE7B4;
 osSendMesg = 0x80001E20;
+osRecvMesg = 0x80002030;
 bzero = 0x80002E80;
 osWritebackDCache = 0x80003440;
 osGetMemSize = 0x80003E90;
