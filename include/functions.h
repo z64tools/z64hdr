@@ -128,7 +128,7 @@ OSTime __osInsertTimer(OSTimer* timer);
 u32 osGetCount(void);
 void __osSetGlobalIntMask(u32 mask);
 void __osSetCompare(u32);
-void* bcopy(void* __src, void* __dest, u32 __n);
+void* bcopy(const void* __src, void* __dest, u32 __n);
 void __osResetGlobalIntMask(u32 mask);
 s32 __osDisableInt(void);
 void __osRestoreInt(s32);

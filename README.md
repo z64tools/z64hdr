@@ -59,3 +59,7 @@ Addresses from:
     ```
     #include "../intrinsics.h"
     ```    
+- functions.h: add `const` to `bcopy`:
+    ```
+    void* bcopy(const void* __src, void* __dest, u32 __n);
+    ```
