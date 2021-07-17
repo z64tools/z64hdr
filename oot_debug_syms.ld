@@ -1061,6 +1061,7 @@ func_800981B8 = 0x800981B8;
 Scene_ExecuteCommands = 0x8009840C;
 func_80098CBC = 0x80098CBC;
 func_800994A0 = 0x800994A0;
+func_8009E730 = 0x8009E730;
 Scene_Draw = 0x800A06F8;
 SkelAnime_DrawLod = 0x800A0B40;
 SkelAnime_DrawFlexLod = 0x800A106C;
