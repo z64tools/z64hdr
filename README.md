@@ -41,7 +41,7 @@ Addresses from:
 - [The decomp](https://github.com/zeldaret/oot)
 - [z64ovl_archived](https://github.com/z64me/z64ovl_archived)
 - [CrookedPoe's spreadsheet](https://docs.google.com/spreadsheets/d/1PqqbENJRmxj0iWDexm-6J3LWJ5lAWZpWQJM8_sRhMQU/edit#gid=0)
-- Manual asm comparison by z64me, rankaisija, Sauraen
+- Manual asm comparison by z64me, rankaisija, Sauraen, Skawo, Dragorn421 
 
 ## Internal documentation: what to change when copying new decomp headers
 
