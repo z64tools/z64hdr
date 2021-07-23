@@ -2405,7 +2405,8 @@ Opening_Init = 0x80803CAC;
 Opening_Destroy = 0x80803CA4;
 func_80811A20 = 0x80811A20;
 func_80811A18 = 0x80811A18;
-Object_Spawn = 0x80097C00;
+
+/* Not yet in functions.h */
 
 __ull_rshift = 0x80003710;
 __ull_rem = 0x8000373C;
@@ -2706,9 +2707,6 @@ Camera_UnsetParam = 0x8005AC24;
 Camera_GetDbgCamEnabled = 0x8005AFA8;
 Camera_QRegInit = 0x8005B044;
 
-
-/* Not yet in functions.h */
-
 Collider_DestroyBase = 0x8005B6A0;
 Collider_SetBaseToActor = 0x8005B6B0;
 Collider_SetBaseType1 = 0x8005B6EC;
@@ -2986,6 +2984,7 @@ Sample_Draw = 0x80097604;
 Sample_Main = 0x80097820;
 Sample_SetupView = 0x80097850;
 Sample_LoadTitleStatic = 0x80097904;
+Object_Spawn = 0x80097C00;
 func_800982FC = 0x800982FC;
 func_80098508 = 0x80098508;
 func_800985DC = 0x800985DC;
@@ -3285,8 +3284,6 @@ lroundf = 0x800FD4AC;
 lround = 0x800FD4CC;
 func_801067F0 = 0x801067F0;
 func_80111070 = 0x80111070;
-
-
 
 /* Symbols */
 

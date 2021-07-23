@@ -8,5 +8,6 @@
 #include "include/global.h"
 #include "actor.h"
 #include "symbols.h"
+#include "missing_functions.h"
 
 #endif
