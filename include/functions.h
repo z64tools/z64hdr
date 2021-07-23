@@ -2594,7 +2594,7 @@ void Opening_Init(GameState* thisx);
 void Opening_Destroy(GameState* thisx);
 void func_80811A20(GameState* thisx); // FileChoose_Init
 void func_80811A18(GameState* thisx); // FileChoose_Destroy
-
+s32 Object_Spawn(ObjectContext* objectCtx, s16 objectId);
 
 s64 __ull_rshift(u64 l, s64 r);
 u64 __ull_rem(u64 l, u64 r);
