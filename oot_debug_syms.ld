@@ -2707,6 +2707,8 @@ Camera_UnsetParam = 0x8005AC24;
 Camera_GetDbgCamEnabled = 0x8005AFA8;
 Camera_QRegInit = 0x8005B044;
 
+/* Not yet in functions.h, missing prototype */
+
 Collider_DestroyBase = 0x8005B6A0;
 Collider_SetBaseToActor = 0x8005B6B0;
 Collider_SetBaseType1 = 0x8005B6EC;
