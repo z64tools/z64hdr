@@ -378,6 +378,7 @@ Math_StepToS = 0x80063704;
 Math_StepToF = 0x8006385C;
 Math_StepUntilS = 0x80063958;
 Math_StepToAngleS = 0x800639B8;
+Math_AsymStepToF = 0x80063ACC;
 Rand_S16Offset = 0x80063BF0;
 Math_Vec3f_Copy = 0x80063CAC;
 Math_Vec3s_ToVec3f = 0x80063CCC;
