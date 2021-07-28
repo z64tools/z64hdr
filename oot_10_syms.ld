@@ -1,9 +1,10 @@
 /* Functions */
 
+sqrtf = 0x800D0DC0;
+sqrt = 0x800D5DD0;
+
 /*
 fabsf = ???;
-sqrtf = ???;
-sqrt = ???;
 */
 
 DmaMgr_DMARomToRam = 0x8000085C;

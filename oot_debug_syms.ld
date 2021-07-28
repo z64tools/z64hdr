@@ -1,5 +1,9 @@
 /* Functions */
 
+sqrtf = 0x801031E0;
+sqrt = 0x801067D0;
+fabsf = 0x801067E0;
+
 cleararena = 0x80000460;
 bootproc = 0x80000498;
 Main_ThreadEntry = 0x800005A0;
