@@ -51,7 +51,9 @@ Addresses from:
     /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
     #endif
     ```
-- z64actor.h, in `ActorInit`:
+- actor.h (not in include/ but at the repo's root), in `ActorInit`:
+    * replace `ActorInitExplPad` struct definition with `ActorInit`'s from `include/z64actor.h`
+    * rename that `ActorInit` copy to `ActorInitExplPad` and add the following padding member explicitly:
     ```
     /* 0x0A */ u16 padding; // Padding exists, but must be named for DEAD BEEF algorithm for zzrtl and friends
     ```
