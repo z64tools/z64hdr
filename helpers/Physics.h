@@ -208,8 +208,8 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		return;
 	}
 	
-	Gfx* disp = *dispType;
 	Mtx* matrix = Graph_Alloc(gfxCtx, param->numLimbs * sizeof(Mtx));
+	Gfx* disp = *dispType;
 	s16 y = RADF_TO_BINANG(rot[0].y);
 	Vec3f* pRot = &rot[0];
 	
