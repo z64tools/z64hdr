@@ -38,9 +38,9 @@ typedef struct {
 	Vec3f push;       // direction Z, pushes based on rot[0]
 	f32   pushMult;   // How much the pushing fill affect
 	Vec2f headRotAdd; // DEG, relative, used to control push direction
-} PhysicParams;
+} PhysicsStrand;
 
-void Physics_SetHead(PhysicParams* params) {
+void Physics_SetHead(PhysicsStrand* params) {
     MtxF mtx;
     Vec3f zero = { 0 };
 	
@@ -49,7 +49,7 @@ void Physics_SetHead(PhysicParams* params) {
     Matrix_MultVec3f(&zero, &params->headPos);
 }
 
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* pos, Vec3f* rot, Vec3f* vel, PhysicParams* param) {
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* pos, Vec3f* rot, Vec3f* vel, PhysicsStrand* param) {
 	s16 i;
 	f32 tempY;
 	f32 angX = 0;
@@ -244,7 +244,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 #define SKELANIME_NUMBONES 19 + 1
 
 typedef struct {
-	Vec3f rot[PONYTAIL_LIMBS]; // Set same amount to these as for .J in PhysicParams
+	Vec3f rot[PONYTAIL_LIMBS]; // Set same amount to these as for .J in PhysicsStrand
 	Vec3f pos[PONYTAIL_LIMBS];
 	Vec3f vel[PONYTAIL_LIMBS]; 
 } PonytailPhysics;
@@ -270,7 +270,7 @@ f32 sLength[] = {
 	(-400.0f),
 };
 
-PhysicParams sPhysicParams = {
+PhysicsStrand sPonytailPhysic = {
 	.J = PONYTAIL_LIMBS,
 	.lengthList = sLength,
 	.gfx = {
@@ -319,7 +319,7 @@ PhysicParams sPhysicParams = {
 
 void EnNPC_Init(EnNPC* this, GlobalContext* globalCtx) {
     SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKELETON, ANIM, this->limbDrawTable, this->transitionDrawTable, SKELANIME_NUMBONES);
-    sPhysicParams.spheres.vecList = this->bodyPartsPos;
+    sPonytailPhysic.spheres.vecList = this->bodyPartsPos;
 }
 
 void EnNPC_PostDraw(GlobalContext* globalCtx, u8 limbID, u32* dlistPtr, Vec3s* rot, EnNPC* this) {
@@ -327,7 +327,7 @@ void EnNPC_PostDraw(GlobalContext* globalCtx, u8 limbID, u32* dlistPtr, Vec3s* r
 
     switch (limbID) {
         case HEAD:
-            Physics_SetHead(&sPhysicParams);
+            Physics_SetHead(&sPonytailPhysic);
             break;
 	    case UPPERARM_L:
 		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[0]);
@@ -353,7 +353,7 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 	);
 
     // Run without drawing to get limbs in position
-	if (sPhysicParams.gfx.noDraw == true) {
+	if (sPonytailPhysic.gfx.noDraw == true) {
 		for (s32 i = 0; i < 60; i++)
 			Physics_DrawDynamicStrand(
                 globalCtx->state.gfxCtx, 
@@ -361,9 +361,9 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
                 this->phy.pos, 
                 this->phy.rot, 
                 this->phy.vel, 
-                &sPhysicParams
+                &sPonytailPhysic
             );
-		sPhysicParams.gfx.noDraw = false;
+		sPonytailPhysic.gfx.noDraw = false;
 	}
 	
     Physics_DrawDynamicStrand(
@@ -372,7 +372,7 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
         this->phy.pos, 
         this->phy.rot, 
         this->phy.vel, 
-        &sPhysicParams
+        &sPonytailPhysic
     );
 }
 
