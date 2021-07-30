@@ -16,28 +16,31 @@ typedef struct {
 		u8    noDraw; /* If there needs to be calculations
 		                 to get in position before drawing */
 	} gfx;
+
 	struct {
 		s32    num; // amount of spheres
 		Vec3f* centers;
 		f32    radius;
 	} spheres;  // "collision" spheres
+
 	struct {
 		Vec2f rotLimit;     // DEG, limits rot to next limb in main calc
 		f32   drawYawLimit; // DEG, limits rot on draw, smoothens output
 	} constraint;
-	
+
+	struct {
+		s32   num;    // How many limbs will be smoothed with push
+		Vec3f push;   // direction Z, pushes based on rot[0]
+		f32   mult;   // How much the pushing fill affect
+		Vec2f rotAdd; // DEG, relative, used to control push direction
+	} rigidity;
+
 	/* Physics */
 	f32 gravity;
 	f32 floorY;       // world.pos.y, won't go through this
 	f32 maxVel;       // Clamps velocity value
 	f32 velStep;      // Values below 1.0f will give it spring like motion
 	f32 velMult;      // Control the power of velocity
-	
-	/* Rigidity Push */
-	s32   numPush;    // How many limbs will be smoothed with push
-	Vec3f push;       // direction Z, pushes based on rot[0]
-	f32   pushMult;   // How much the pushing fill affect
-	Vec2f headRotAdd; // DEG, relative, used to control push direction
 } PhysicsStrand;
 
 void Physics_SetHead(PhysicsStrand* params) {
@@ -74,11 +77,11 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	
 	Matrix_RotateY_s(param->headRot.y, MTXMODE_NEW);
 	Matrix_RotateX_s(param->headRot.x, MTXMODE_APPLY);
-	if (param->headRotAdd.y)
-		Matrix_RotateY_f(param->headRotAdd.y, MTXMODE_APPLY);
-	if (param->headRotAdd.x)
-		Matrix_RotateX_f(param->headRotAdd.x, MTXMODE_APPLY);
-	Matrix_MultVec3f(&param->push, &shapeVec);
+	if (param->rigidity.rotAdd.y)
+		Matrix_RotateY_f(param->rigidity.rotAdd.y, MTXMODE_APPLY);
+	if (param->rigidity.rotAdd.x)
+		Matrix_RotateX_f(param->rigidity.rotAdd.x, MTXMODE_APPLY);
+	Matrix_MultVec3f(&param->rigidity.push, &shapeVec);
 	
 	Vec3f* pPos = &pos[1];
 	Vec3f* pPrevPos = pos;
@@ -89,10 +92,10 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	for (i = 1; i < param->numLimbs + 1; i++, pPos++, pPrevPos++, pVel++, pPrevRot++) {
 		// Smoothens curve at the start of the limb array
 		shapePush = (Vec3f) { 0 };
-		if (i < param->numPush) {
-			shapePush.x = ((param->numPush - i) * shapeVec.x) * param->pushMult;
-			shapePush.y = ((param->numPush - i) * shapeVec.y) * param->pushMult;
-			shapePush.z = ((param->numPush - i) * shapeVec.z) * param->pushMult;
+		if (i < param->rigidity.num) {
+			shapePush.x = ((param->rigidity.num - i) * shapeVec.x) * param->rigidity.mult;
+			shapePush.y = ((param->rigidity.num - i) * shapeVec.y) * param->rigidity.mult;
+			shapePush.z = ((param->rigidity.num - i) * shapeVec.z) * param->rigidity.mult;
 		}
 		
 		workVec.x = pPos->x + pVel->x - pPrevPos->x + shapePush.x;
