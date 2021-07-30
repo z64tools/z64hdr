@@ -1,7 +1,7 @@
 #ifndef _HELPERS_PHYSICS_H_
 #define _HELPERS_PHYSICS_H_
 
-#include "../include/z64.h"
+#include "include/z64.h"
 #include "Matrix.h"
 
 typedef struct {
