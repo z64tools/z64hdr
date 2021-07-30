@@ -4,5 +4,6 @@
 extern GlobalContext gGlobalContext;
 
 extern u16 gTimeSpeed;
+extern MtxF* sCurrentMatrix;
 
 #endif

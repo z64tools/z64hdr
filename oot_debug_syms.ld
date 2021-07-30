@@ -3309,3 +3309,4 @@ gScreenWidth = 0x8012D270;
 gScreenHeight = 0x8012D274;
 gMtxClear = 0x8012DB20;
 gTimeSpeed = 0x8011FB40;
+sCurrentMatrix = 0x8016A7C4;

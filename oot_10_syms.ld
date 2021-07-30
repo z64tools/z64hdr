@@ -718,3 +718,4 @@ gSaveContext = 0x8011A5D0;
 gGameInfo = 0x8011BA00;
 gSegments = 0x80120C38;
 gGlobalContext = 0x801C84A0;
+sCurrentMatrix = 0x80121204;
