@@ -8,7 +8,7 @@ typedef struct {
 	s32   J; // Amount of strand limbs + 1
 	Vec3f headPos;
 	Vec3s headRot;
-	f32*  lengthList;
+	f32*  limbsLength;
 	struct {
 		Vec3f scale;  // Gfx scale
 		u32   dlist;
@@ -17,10 +17,10 @@ typedef struct {
 		                 to get in position before drawing */
 	} gfx;
 	struct {
-		s32    numVec;      // num of how many vec are used from vecList
-		Vec3f* vecList;     // "collision" spheres
-		f32    dist;        // XYZ distance from limb to vecList member
-	} spheres;
+		s32    num; // amount of spheres
+		Vec3f* centers;
+		f32    radius;
+	} spheres;  // "collision" spheres
 	struct {
 		Vec2f rotLimit;     // DEG, limits rot to next limb in main calc
 		f32   drawYawLimit; // DEG, limits rot on draw, smoothens output
@@ -28,7 +28,7 @@ typedef struct {
 	
 	/* Physics */
 	f32 gravity;
-	f32 floor;        // world.pos.y, won't go through this
+	f32 floorY;       // world.pos.y, won't go through this
 	f32 maxVel;       // Clamps velocity value
 	f32 velStep;      // Values below 1.0f will give it spring like motion
 	f32 velMult;      // Control the power of velocity
@@ -41,11 +41,9 @@ typedef struct {
 } PhysicsStrand;
 
 void Physics_SetHead(PhysicsStrand* params) {
-    MtxF mtx;
     Vec3f zero = { 0 };
 	
-    Matrix_Get(&mtx);
-    func_800D20CC(&mtx, &params->headRot, 0);
+    func_800D20CC(&sCurrentMatrix, &params->headRot, 0);
     Matrix_MultVec3f(&zero, &params->headPos);
 }
 
@@ -202,14 +200,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		};
 	}
 	
-	if (param->gfx.noDraw == true) {
+	if (param->gfx.noDraw) {
 		Matrix_Pull();
 		
 		return;
 	}
 	
 	Gfx* disp = *dispType;
-	Mtx* matrix = Graph_Alloc(gfxCtx, param->J * sizeof(Mtx));
+	Mtx* matrix = Graph_Alloc(gfxCtx, (param->J - 1) * sizeof(Mtx));
 	s16 y = RADF_TO_BINANG(rot[0].y);
 	Vec3f* pRot = &rot[0];
 	
@@ -230,7 +228,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, -param->gfx.scale.z, MTXMODE_APPLY);
 		else
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
-		Matrix_ToMtx(&matrix[i], 0, 0);
+		Matrix_ToMtx(&matrix[i], "Physics_DrawDynamicStrand", 0);
 	}
 	
 	gSPDisplayList(disp++, param->gfx.dlist);

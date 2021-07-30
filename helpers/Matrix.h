@@ -1,8 +1,8 @@
 #ifndef _HELPERS_MATRIX_H_
 #define _HELPERS_MATRIX_H_
 
-#include "../include/z64.h"
-#include "../symbols.h"
+#include "include/z64.h"
+#include "symbols.h"
 
 #define Matrix_RotateY_s(binang, A) Matrix_RotateY(BINANG_TO_RAD(binang), A)
 #define Matrix_RotateX_s(binang, A) Matrix_RotateX(BINANG_TO_RAD(binang), A)
