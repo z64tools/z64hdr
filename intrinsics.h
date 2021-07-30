@@ -16,11 +16,11 @@ f64 sqrt(f64 d);
 //You can either use intrinsics or this inline asm. However, unless this is
 //disabled, it'll get emitted into every file you compile. (It's only two
 //instructions though.)
-asm(
+asm(".set noat\n .set noreorder\n"
     "fabsf:\n"
     "jr    $ra \n"
     "abs.s $f0, $f12\n"
-);
+    ".set at\n .set reorder");
 #endif
 
 #endif
