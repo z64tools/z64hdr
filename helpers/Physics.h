@@ -5,7 +5,7 @@
 #include "Matrix.h"
 
 typedef struct {
-	s32   J; // Amount of strand limbs + 1
+	s32   numLimbs;
 	Vec3f headPos;
 	Vec3s headRot;
 	f32*  limbsLength;
@@ -33,7 +33,7 @@ typedef struct {
 	f32 velStep;      // Values below 1.0f will give it spring like motion
 	f32 velMult;      // Control the power of velocity
 	
-	/* Shape Push */
+	/* Rigidity Push */
 	s32   numPush;    // How many limbs will be smoothed with push
 	Vec3f push;       // direction Z, pushes based on rot[0]
 	f32   pushMult;   // How much the pushing fill affect
@@ -60,7 +60,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	
 	Matrix_Push();
 	
-	for (i = 0; i < param->J; i++) {
+	for (i = 0; i < param->numLimbs + 1; i++) {
 		if (i == 0) {
 			pos[0].x = param->headPos.x;
 			pos[0].y = param->headPos.y;
@@ -86,7 +86,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	Vec3f* pPrevRot = rot;
 	
 	// Main calculation loop
-	for (i = 1; i < param->J; i++, pPos++, pPrevPos++, pVel++, pPrevRot++) {
+	for (i = 1; i < param->numLimbs + 1; i++, pPos++, pPrevPos++, pVel++, pPrevRot++) {
 		// Smoothens curve at the start of the limb array
 		shapePush = (Vec3f) { 0 };
 		if (i < param->numPush) {
@@ -100,11 +100,11 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		workVec.z = pPos->z + pVel->z - pPrevPos->z + shapePush.z;
 		
 		// FLOOR, also gets rid of the shapePush
-		if (tempY < param->floor + 10.0f) {
+		if (tempY < param->floorY + 10.0f) {
 			workVec.x -= shapePush.x;
 			workVec.z -= shapePush.z;
-			if (i != param->J && tempY < param->floor)
-				tempY = CLAMP_MIN(tempY, param->floor);
+			if (i != param->numLimbs + 1 && tempY < param->floorY)
+				tempY = CLAMP_MIN(tempY, param->floorY);
 		}
 		
 		workVec.y = tempY - pPrevPos->y;
@@ -156,25 +156,24 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		
 		Matrix_RotateY(angY, MTXMODE_NEW);
 		Matrix_RotateX(angX, MTXMODE_APPLY);
-		Matrix_MultZ(ABS(param->lengthList[i]) * param->gfx.scale.z, &posAdd);
+		Matrix_MultZ(ABS(param->limbsLength[i]) * param->gfx.scale.z, &posAdd);
 		
 		// Pushes limbs away from selected Vec3f points
-		for (s32 i = 0; i < param->spheres.numVec; i++) {
+		for (s32 i = 0; i < param->spheres.num; i++) {
 			Vec3f tempPosAdd = {
 				pPrevPos->x + posAdd.x,
 				pPrevPos->y + posAdd.y,
 				pPrevPos->z + posAdd.z
 			};
-			f32 distTo = Math_Vec3f_DistXYZ(&tempPosAdd, &param->spheres.vecList[i]);
+			f32 radiusTo = Math_Vec3f_DistXYZ(&tempPosAdd, &param->spheres.centers[i]);
 			
-			if (distTo < param->spheres.dist) {
-				s16 yaw = Math_Vec3f_Yaw(&param->spheres.vecList[i], &tempPosAdd);
-				s16 pitch = Math_Vec3f_Pitch(&param->spheres.vecList[i], &tempPosAdd);
-				posAdd.x += Math_SinS(headRotY + 0x8000) * (param->spheres.dist - distTo) * 0.5f;
-				posAdd.z += Math_CosS(headRotY + 0x8000) * (param->spheres.dist - distTo) * 0.5f;
-				// posAdd.y += Math_SinS((-RADF_TO_BINANG(angX))) * (param->spheres.dist - distTo) * 0.5;
-				velAdj.x += Math_SinS(headRotY + 0x8000) * (param->spheres.dist - distTo) * 0.5f;
-				velAdj.z += Math_CosS(headRotY + 0x8000) * (param->spheres.dist - distTo) * 0.5f;
+			if (radiusTo < param->spheres.radius) {
+				s16 yaw = Math_Vec3f_Yaw(&param->spheres.centers[i], &tempPosAdd);
+				s16 pitch = Math_Vec3f_Pitch(&param->spheres.centers[i], &tempPosAdd);
+				posAdd.x += Math_SinS(headRotY + 0x8000) * (param->spheres.radius - radiusTo) * 0.5f;
+				posAdd.z += Math_CosS(headRotY + 0x8000) * (param->spheres.radius - radiusTo) * 0.5f;
+				velAdj.x += Math_SinS(headRotY + 0x8000) * (param->spheres.radius - radiusTo) * 0.5f;
+				velAdj.z += Math_CosS(headRotY + 0x8000) * (param->spheres.radius - radiusTo) * 0.5f;
 				
 				pPrevRot->y = angY =  Math_Atan2F(posAdd.z, posAdd.x);
 				pPrevRot->x = angX = -Math_Atan2F(sqrtf(SQ(posAdd.x) + SQ(posAdd.z)), posAdd.y);
@@ -207,7 +206,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	}
 	
 	Gfx* disp = *dispType;
-	Mtx* matrix = Graph_Alloc(gfxCtx, (param->J - 1) * sizeof(Mtx));
+	Mtx* matrix = Graph_Alloc(gfxCtx, param->numLimbs * sizeof(Mtx));
 	s16 y = RADF_TO_BINANG(rot[0].y);
 	Vec3f* pRot = &rot[0];
 	
@@ -215,7 +214,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	gSPSegment(disp++, param->gfx.segID, matrix);
 	pPos = &pos[0];
 	
-	for (i = 0; i < param->J - 1; i++, pPos++, pRot++) {
+	for (i = 0; i < param->numLimbs; i++, pPos++, pRot++) {
 		Matrix_Translate(pPos->x, pPos->y, pPos->z, MTXMODE_NEW);
 		if (param->constraint.drawYawLimit) {
 			Math_SmoothStepToS(&y, RADF_TO_BINANG(rot[i].y), 3, DEGF_TO_BINANG(param->constraint.drawYawLimit), 1);
@@ -224,7 +223,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 			Matrix_RotateY(rot[i].y, MTXMODE_APPLY);
 		}
 		Matrix_RotateX(rot[i].x, MTXMODE_APPLY);
-		if (param->lengthList[i] < 0)
+		if (param->limbsLength[i] < 0)
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, -param->gfx.scale.z, MTXMODE_APPLY);
 		else
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
@@ -236,143 +235,4 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 	*dispType = disp;
 }
 
-#if 0 // Example
-
-#define PONYTAIL_LIMBS 8 + 1
-#define SKELANIME_NUMBONES 19 + 1
-
-typedef struct {
-	Vec3f rot[PONYTAIL_LIMBS]; // Set same amount to these as for .J in PhysicsStrand
-	Vec3f pos[PONYTAIL_LIMBS];
-	Vec3f vel[PONYTAIL_LIMBS]; 
-} PonytailPhysics;
-
-typedef struct {
-    Actor     actor;
-    SkelAnime skelAnime;
-    Vec3s     jointTable[SKELANIME_NUMBONES];
-    Vec3s     morphTable[SKELANIME_NUMBONES];
-    PonytailPhysics phy;
-    Vec3f bodyPartPos[3];
-} EnNPC;
-
-f32 sLength[] = {
-	-934.1f,
-	(-1534.0f - 934.1f) ,
-	(-2165.0f - 1534.0f),
-	(-3156.0f - 2165.0f),
-	(-4092.0f - 3156.0f),
-	(-5195.0f - 4092.0f),
-	(-6072.0f - 5195.0f),
-	(-6816.0f - 6072.0f),
-	(-400.0f),
-};
-
-PhysicsStrand sPonytailPhysic = {
-	.J = PONYTAIL_LIMBS,
-	.lengthList = sLength,
-	.gfx = {
-		.scale = {
-			0.0055f,
-			0.0055f,
-			0.0055f
-		},
-		.dlist = DL_PONYTAIL,
-		.segID = 0x0B,
-		.noDraw = true,
-	},
-	.spheres = {
-		.numVec = 3,
-		.vecList = NULL, // Set in Init
-		.dist = 4.0f
-	},
-	.constraint = {
-		.rotLimit = {
-			.x = 45.0f,
-			.y = 45.0f,
-		},
-		.drawYawLimit = 25.0f,
-	},
-	
-	/* Physics */
-	.gravity = 2.0f,
-	.floor = 2.0f,
-	.maxVel = 64.0f,
-	.velStep = 0.7f,
-	.velMult = 0.9f,
-	
-	/* Shape Push */
-	.numPush = 5,
-	.push = {
-		0,
-		0.2f,
-		-3.0f
-	},
-	.pushMult = 0.2f,
-	.headRotAdd = {
-		65.0f,
-		0,
-	}
-};
-
-void EnNPC_Init(EnNPC* this, GlobalContext* globalCtx) {
-    SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKELETON, ANIM, this->limbDrawTable, this->transitionDrawTable, SKELANIME_NUMBONES);
-    sPonytailPhysic.spheres.vecList = this->bodyPartsPos;
-}
-
-void EnNPC_PostDraw(GlobalContext* globalCtx, u8 limbID, u32* dlistPtr, Vec3s* rot, EnNPC* this) {
-	Vec3f zero = { 0 };
-
-    switch (limbID) {
-        case HEAD:
-            Physics_SetHead(&sPonytailPhysic);
-            break;
-	    case UPPERARM_L:
-		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[0]);
-		    break;
-	    case UPPERARM_R:
-		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[1]);
-		    break;
-	    case UPPERBODY:
-		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[2]);
-		    break;
-    }
-}
-
-void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
-    SkelAnime_DrawFlexOpa(
-		globalCtx,
-		this->skelAnime.skeleton,
-		this->skelAnime.jointTable,
-		this->skelAnime.dListCount,
-		NULL,
-		EnNPC_PostDraw,
-		&this->actor
-	);
-
-    // Run without drawing to get limbs in position
-	if (sPonytailPhysic.gfx.noDraw == true) {
-		for (s32 i = 0; i < 60; i++)
-			Physics_DrawDynamicStrand(
-                globalCtx->state.gfxCtx, 
-                &POLY_OPA_DISP, 
-                this->phy.pos, 
-                this->phy.rot, 
-                this->phy.vel, 
-                &sPonytailPhysic
-            );
-		sPonytailPhysic.gfx.noDraw = false;
-	}
-	
-    Physics_DrawDynamicStrand(
-        globalCtx->state.gfxCtx, 
-        &POLY_OPA_DISP, 
-        this->phy.pos, 
-        this->phy.rot, 
-        this->phy.vel, 
-        &sPonytailPhysic
-    );
-}
-
-#endif
 #endif
