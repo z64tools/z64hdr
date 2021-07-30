@@ -10,11 +10,11 @@ typedef struct {
 	Vec3s headRot;
 	f32*  lengthList;
 	struct {
-		f32 scale;  // Gfx scale
-		u32 dlist;
-		u8  segID;  // For matrix
-		u8  noDraw; /* If there needs to be calculations
-		               to get in position before drawing */
+		Vec3f scale;  // Gfx scale
+		u32   dlist;
+		u8    segID;  // For matrix
+		u8    noDraw; /* If there needs to be calculations
+		                 to get in position before drawing */
 	} gfx;
 	struct {
 		s32    numVec;      // num of how many vec are used from vecList
@@ -41,11 +41,11 @@ typedef struct {
 } PhysicParams;
 
 void Physics_SetHead(PhysicParams* params) {
-	MtxF mtx;
+    MtxF mtx;
     Vec3f zero = { 0 };
 	
-	Matrix_Get(&mtx);
-	func_800D20CC(&mtx, &params->headRot, 0);
+    Matrix_Get(&mtx);
+    func_800D20CC(&mtx, &params->headRot, 0);
     Matrix_MultVec3f(&zero, &params->headPos);
 }
 
@@ -158,7 +158,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		
 		Matrix_RotateY(angY, MTXMODE_NEW);
 		Matrix_RotateX(angX, MTXMODE_APPLY);
-		Matrix_MultZ(ABS(param->lengthList[i]), &posAdd);
+		Matrix_MultZ(ABS(param->lengthList[i]) * param->gfx.scale.z, &posAdd);
 		
 		// Pushes limbs away from selected Vec3f points
 		for (s32 i = 0; i < param->spheres.numVec; i++) {
@@ -227,9 +227,9 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, Gfx** dispType, Vec3f* p
 		}
 		Matrix_RotateX(rot[i].x, MTXMODE_APPLY);
 		if (param->lengthList[i] < 0)
-			Matrix_Scale(param->gfx.scale, param->gfx.scale, -param->gfx.scale, MTXMODE_APPLY);
+			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, -param->gfx.scale.z, MTXMODE_APPLY);
 		else
-			Matrix_Scale(param->gfx.scale, param->gfx.scale, param->gfx.scale, MTXMODE_APPLY);
+			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
 		Matrix_ToMtx(&matrix[i], 0, 0);
 	}
 	
@@ -253,29 +253,32 @@ typedef struct {
     Actor     actor;
     SkelAnime skelAnime;
     Vec3s     jointTable[SKELANIME_NUMBONES];
-	Vec3s     morphTable[SKELANIME_NUMBONES];
+    Vec3s     morphTable[SKELANIME_NUMBONES];
     PonytailPhysics phy;
     Vec3f bodyPartPos[3];
 } EnNPC;
 
-// Length multiplied with scale
 f32 sLength[] = {
-	-934.1f              * 0.0055f,
-	(-1534.0f - 934.1f)  * 0.0055f,
-	(-2165.0f - 1534.0f) * 0.0055f,
-	(-3156.0f - 2165.0f) * 0.0055f,
-	(-4092.0f - 3156.0f) * 0.0055f,
-	(-5195.0f - 4092.0f) * 0.0055f,
-	(-6072.0f - 5195.0f) * 0.0055f,
-	(-6816.0f - 6072.0f) * 0.0055f,
-	(-400.0f)            * 0.0055f,
+	-934.1f,
+	(-1534.0f - 934.1f) ,
+	(-2165.0f - 1534.0f),
+	(-3156.0f - 2165.0f),
+	(-4092.0f - 3156.0f),
+	(-5195.0f - 4092.0f),
+	(-6072.0f - 5195.0f),
+	(-6816.0f - 6072.0f),
+	(-400.0f),
 };
 
 PhysicParams sPhysicParams = {
 	.J = PONYTAIL_LIMBS,
 	.lengthList = sLength,
 	.gfx = {
-		.scale = 0.0055f,
+		.scale = {
+			0.0055f,
+			0.0055f,
+			0.0055f
+		},
 		.dlist = DL_PONYTAIL,
 		.segID = 0x0B,
 		.noDraw = true,
