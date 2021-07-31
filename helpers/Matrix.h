@@ -1,6 +1,10 @@
 #ifndef _HELPERS_MATRIX_H_
 #define _HELPERS_MATRIX_H_
 
+#ifndef _Z64HDR_HELPER_PREFIX_
+#define _Z64HDR_HELPER_PREFIX_
+#endif
+
 #include "include/z64.h"
 #include "symbols.h"
 
@@ -12,6 +16,7 @@
 #define Matrix_RotateX_f(degf, A)   Matrix_RotateX(DEGF_TO_RADF(degf), A)
 #define Matrix_RotateZ_f(degf, A)   Matrix_RotateZ(DEGF_TO_RADF(degf), A)
 
+_Z64HDR_HELPER_PREFIX_
 void Matrix_MultX(f32 scale, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	
@@ -20,6 +25,7 @@ void Matrix_MultX(f32 scale, Vec3f* dst) {
 	dst->z = cmf->wz + cmf->xz * scale;
 }
 
+_Z64HDR_HELPER_PREFIX_
 void Matrix_MultY(f32 scale, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	
@@ -28,6 +34,7 @@ void Matrix_MultY(f32 scale, Vec3f* dst) {
 	dst->z = cmf->wz + cmf->yz * scale;
 }
 
+_Z64HDR_HELPER_PREFIX_
 void Matrix_MultZ(f32 scale, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	
