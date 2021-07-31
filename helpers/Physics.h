@@ -11,8 +11,13 @@
 typedef void(*PhysicCallback)(s32 limbIndex, ...);
 
 typedef struct {
+	Vec3f pos;
+	Vec3f rot;
+	Vec3f vel;
+} PhysicsJoint;
+
+typedef struct {
 	s32  numLimbs;
-	f32* limbsLength;
 	struct {
 		Vec3f pos;
 		Vec3s rot;
@@ -52,6 +57,7 @@ typedef struct {
 	f32 maxVel;  // Clamps velocity value
 	f32 velStep; // Values below 1.0f will give it spring like motion
 	f32 velMult; // Control the power of velocity
+	f32 limbsLength[];
 } PhysicStrand;
 
 _Z64HDR_HELPER_PREFIX_
@@ -71,7 +77,7 @@ void Physics_GetHeadProperties(PhysicStrand* params, Vec3f* mult, s32 flag) {
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, Vec3f* pos, Vec3f* rot, Vec3f* vel, PhysicStrand* param, ...) {
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicStrand* param, ...) {
 	s32 i;
 	f32 tempY;
 	f32 angX;
@@ -81,17 +87,22 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 	Vec3f rigidity, smoothedRigid;
 	Vec3f velAdj = { 0 };
 	s16 headRotY = param->head.rot.y;
+	Vec3f* pPos;
+	Vec3f* pRot;
+	Vec3f* pVel;
+	Vec3f* pPrevPos;
+	Vec3f* pPrevRot;
 	
 	Matrix_Push();
 	
-	pos[0].x = param->head.pos.x;
-	pos[0].y = param->head.pos.y;
-	pos[0].z = param->head.pos.z;
+	jointTable[0].pos.x = param->head.pos.x;
+	jointTable[0].pos.y = param->head.pos.y;
+	jointTable[0].pos.z = param->head.pos.z;
 	
 	for (i = 1; i < param->numLimbs + 1; i++) {
-		Math_ApproachF(&vel[i].x, 0.0f, 1.0f, param->velStep);
-		Math_ApproachF(&vel[i].y, 0.0f, 1.0f, param->velStep);
-		Math_ApproachF(&vel[i].z, 0.0f, 1.0f, param->velStep);
+		Math_ApproachF(&jointTable[i].vel.x, 0.0f, 1.0f, param->velStep);
+		Math_ApproachF(&jointTable[i].vel.y, 0.0f, 1.0f, param->velStep);
+		Math_ApproachF(&jointTable[i].vel.z, 0.0f, 1.0f, param->velStep);
 	}
 	
 	Matrix_RotateX_s(param->head.rot.x, MTXMODE_NEW);
@@ -102,13 +113,13 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 	if (param->rigidity.rot.z) Matrix_RotateZ_f(param->rigidity.rot.z, MTXMODE_APPLY);
 	Matrix_MultVec3f(&param->rigidity.push, &rigidity);
 	
-	Vec3f* pPos = &pos[1];
-	Vec3f* pVel = &vel[1];
-	Vec3f* pPrevPos = pos;
-	Vec3f* pPrevRot = rot;
-	
 	// Main calculation loop
-	for (i = 1; i < param->numLimbs + 1; i++, pPos++, pPrevPos++, pVel++, pPrevRot++) {
+	for (i = 1; i < param->numLimbs + 1; i++) {
+		pPos = &jointTable[i].pos;
+		pVel = &jointTable[i].vel;
+		pPrevPos = &jointTable[i - 1].pos;
+		pPrevRot = &jointTable[i - 1].rot;
+		
 		// Smoothens curve at the start of the limb array
 		smoothedRigid = (Vec3f) { 0 };
 		if (i < param->rigidity.num) {
@@ -165,14 +176,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 				}
 			} else {
 				if (param->constraint.rotStepCalc.x) {
-					tempAngleX = RADF_TO_BINANG(rot[i - 2].x);
+					tempAngleX = RADF_TO_BINANG(jointTable[i - 2].rot.x);
 					workAngleX = RADF_TO_BINANG(-Math_Atan2F(sqrtf(SQ(workVec.x) + SQ(workVec.z)), workVec.y));
 					Math_SmoothStepToS(&tempAngleX, workAngleX, 1, DEGF_TO_BINANG(param->constraint.rotStepCalc.x), 1);
 					angX = BINANG_TO_RAD(tempAngleX);
 					pPrevRot->x = angX;
 				}
 				if (param->constraint.rotStepCalc.y) {
-					tempAngleY = RADF_TO_BINANG(rot[i - 2].y);
+					tempAngleY = RADF_TO_BINANG(jointTable[i - 2].rot.y);
 					workAngleY = RADF_TO_BINANG(Math_Atan2F(workVec.z, workVec.x));
 					Math_SmoothStepToS(&tempAngleY, workAngleY, 1, DEGF_TO_BINANG(param->constraint.rotStepCalc.y), 1);
 					angY = BINANG_TO_RAD(tempAngleY);
@@ -219,7 +230,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 		pVel->y = (pPos->y - workVec.y + velAdj.y) * param->velMult;
 		pVel->z = (pPos->z - workVec.z + velAdj.z) * param->velMult;
 		
-		vel[i] = (Vec3f) {
+		jointTable[i].vel = (Vec3f) {
 			CLAMP(pVel->x, -param->maxVel, param->maxVel),
 			CLAMP(pVel->y, -param->maxVel, param->maxVel),
 			CLAMP(pVel->z, -param->maxVel, param->maxVel),
@@ -233,30 +244,31 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 	}
 	
 	Mtx* matrix = Graph_Alloc(gfxCtx, param->numLimbs * sizeof(Mtx));
-	Vec3f* pRot = &rot[0];
-	s16 y = RADF_TO_BINANG(rot[0].y);
-	s16 x = RADF_TO_BINANG(rot[0].x);
+	s16 y = RADF_TO_BINANG(jointTable[0].rot.y);
+	s16 x = RADF_TO_BINANG(jointTable[0].rot.x);
 	__builtin_va_list args;
+	
 	__builtin_va_start(args, param);
-   PhysicCallback callback = __builtin_va_arg(args, PhysicCallback);
+	PhysicCallback callback = __builtin_va_arg(args, PhysicCallback);
 	
-	pPos = &pos[0];
-	
-	for (i = 0; i < param->numLimbs; i++, pPos++, pRot++) {
+	for (i = 0; i < param->numLimbs; i++) {
+		pPos = &jointTable[i].pos;
+		pRot = &jointTable[i].rot;
+		
 		Matrix_Translate(pPos->x, pPos->y, pPos->z, MTXMODE_NEW);
 		
 		if (param->constraint.rotStepDraw.y) {
-			Math_SmoothStepToS(&y, RADF_TO_BINANG(rot[i].y), 3, DEGF_TO_BINANG(param->constraint.rotStepDraw.y), 1);
+			Math_SmoothStepToS(&y, RADF_TO_BINANG(pRot->y), 3, DEGF_TO_BINANG(param->constraint.rotStepDraw.y), 1);
 			Matrix_RotateY(BINANG_TO_RAD(y), MTXMODE_APPLY);
 		} else {
-			Matrix_RotateY(rot[i].y, MTXMODE_APPLY);
+			Matrix_RotateY(pRot->y, MTXMODE_APPLY);
 		}
 		
 		if (param->constraint.rotStepDraw.x) {
-			Math_SmoothStepToS(&x, RADF_TO_BINANG(rot[i].x), 3, DEGF_TO_BINANG(param->constraint.rotStepDraw.x), 1);
+			Math_SmoothStepToS(&x, RADF_TO_BINANG(pRot->x), 3, DEGF_TO_BINANG(param->constraint.rotStepDraw.x), 1);
 			Matrix_RotateX(BINANG_TO_RAD(x), MTXMODE_APPLY);
 		} else {
-			Matrix_RotateX(rot[i].x, MTXMODE_APPLY);
+			Matrix_RotateX(pRot->x, MTXMODE_APPLY);
 		}
 		
 		if (param->limbsLength[i] < 0)
@@ -265,7 +277,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
 		
 		if(callback) {
-			 __builtin_va_start(args, param);
+			__builtin_va_start(args, param);
 			callback = __builtin_va_arg(args, PhysicCallback);
 			callback(i, __builtin_va_arg(args, void*), __builtin_va_arg(args, void*));
 		}
