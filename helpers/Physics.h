@@ -58,10 +58,10 @@ typedef struct {
 	f32 velStep; // Values below 1.0f will give it spring like motion
 	f32 velMult; // Control the power of velocity
 	f32 limbsLength[];
-} PhysicStrand;
+} PhysicsStrand;
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_GetHeadProperties(PhysicStrand* params, Vec3f* mult, s32 flag) {
+void Physics_GetHeadProperties(PhysicsStrand* params, Vec3f* mult, s32 flag) {
 	static MtxF mtxF;
 	Vec3f zero = { 0 };
 	
@@ -77,7 +77,7 @@ void Physics_GetHeadProperties(PhysicStrand* params, Vec3f* mult, s32 flag) {
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicStrand* param, ...) {
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicsStrand* param, ...) {
 	s32 i;
 	f32 tempY;
 	f32 angX;
