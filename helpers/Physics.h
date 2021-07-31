@@ -8,6 +8,8 @@
 #include "include/z64.h"
 #include "Matrix.h"
 
+typedef void(*PhysicCallback)(s32 limbIndex, ...);
+
 typedef struct {
 	s32  numLimbs;
 	f32* limbsLength;
@@ -69,7 +71,7 @@ void Physics_GetHeadProperties(PhysicStrand* params, Vec3f* mult, s32 flag) {
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, Vec3f* pos, Vec3f* rot, Vec3f* vel, PhysicStrand* param) {
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, Vec3f* pos, Vec3f* rot, Vec3f* vel, PhysicStrand* param, ...) {
 	s32 i;
 	f32 tempY;
 	f32 angX;
@@ -91,7 +93,6 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 		Math_ApproachF(&vel[i].y, 0.0f, 1.0f, param->velStep);
 		Math_ApproachF(&vel[i].z, 0.0f, 1.0f, param->velStep);
 	}
-	
 	
 	Matrix_RotateX_s(param->head.rot.x, MTXMODE_NEW);
 	Matrix_RotateY_s(param->head.rot.y, MTXMODE_APPLY);
@@ -235,6 +236,9 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 	Vec3f* pRot = &rot[0];
 	s16 y = RADF_TO_BINANG(rot[0].y);
 	s16 x = RADF_TO_BINANG(rot[0].x);
+	__builtin_va_list args;
+	__builtin_va_start(args, param);
+   PhysicCallback callback = __builtin_va_arg(args, PhysicCallback);
 	
 	pPos = &pos[0];
 	
@@ -260,6 +264,11 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 		else
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
 		
+		if(callback) {
+			 __builtin_va_start(args, param);
+			callback = __builtin_va_arg(args, PhysicCallback);
+			callback(i, __builtin_va_arg(args, void*), __builtin_va_arg(args, void*));
+		}
 		Matrix_ToMtx(&matrix[i], __FILE__, __LINE__);
 	}
 	
@@ -267,6 +276,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, V
 	gSPSegment(disp->p++, param->gfx.segID, matrix);
 	gSPDisplayList(disp->p++, param->gfx.dlist);
 	Matrix_Pull();
+	va_end(args);
 }
 
 #endif
