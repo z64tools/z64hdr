@@ -34,6 +34,9 @@ void Matrix_MultX(f32 scale, Vec3f* dst);
 void Matrix_MultY(f32 scale, Vec3f* dst);
 void Matrix_MultZ(f32 scale, Vec3f* dst);
 ```
+[Back to top](#list-of-content)
+
+---
 ## Matrix Macros
 ```c
 #define Matrix_RotateY_s(binang, A) Matrix_RotateY(BINANG_TO_RAD(binang), A)
@@ -44,6 +47,8 @@ void Matrix_MultZ(f32 scale, Vec3f* dst);
 #define Matrix_RotateX_f(degf, A)   Matrix_RotateX(DEGF_TO_RADF(degf), A)
 #define Matrix_RotateZ_f(degf, A)   Matrix_RotateZ(DEGF_TO_RADF(degf), A)
 ```
+[Back to top](#list-of-content)
+
 ---
 # Physics
 ---
