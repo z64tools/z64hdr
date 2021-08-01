@@ -1,7 +1,17 @@
 
 # Z64 Helpers
+
+By default these aren't set `static inline`. To do this, you can `#define` `_Z64HDR_HELPER_PREFIX_` to achieve this.
+```c
+#define _Z64HDR_HELPER_PREFIX_ static inline
+#include <helpers/Helper.h>
+```
+---
 ### List of content
-1. [Physics](#physics)
+1. [MATRIX](#matrix)
+	1. [Matrix Multiply](#matrix-mult)
+	1. [Matrix Macros](#matrix-macros)
+1. [PHYSICS](#physics)
 	1. [PhysicsStrand Struct](#physicsstrand-struct)
 		1. [PhysicsInfo](#physicsinfo)
 		1. [PhysicsHead](#physicshead)
@@ -16,10 +26,29 @@
 		1. [PhysicCallback](#physiccallback)
         1. [ActorDraw](#actordraw)
 1. [Credits](#credits)
-
-# Physics
-## PhysicsStrand Struct
+---
+# Matrix
+## Matrix Mult
 ```c
+void Matrix_MultX(f32 scale, Vec3f* dst);
+void Matrix_MultY(f32 scale, Vec3f* dst);
+void Matrix_MultZ(f32 scale, Vec3f* dst);
+```
+## Matrix Macros
+```c
+#define Matrix_RotateY_s(binang, A) Matrix_RotateY(BINANG_TO_RAD(binang), A)
+#define Matrix_RotateX_s(binang, A) Matrix_RotateX(BINANG_TO_RAD(binang), A)
+#define Matrix_RotateZ_s(binang, A) Matrix_RotateZ(BINANG_TO_RAD(binang), A)
+
+#define Matrix_RotateY_f(degf, A)   Matrix_RotateY(DEGF_TO_RADF(degf), A)
+#define Matrix_RotateX_f(degf, A)   Matrix_RotateX(DEGF_TO_RADF(degf), A)
+#define Matrix_RotateZ_f(degf, A)   Matrix_RotateZ(DEGF_TO_RADF(degf), A)
+```
+---
+# Physics
+---
+## PhysicsStrand Struct
+```md
 typedef struct {
 	PhysicsInfo       info;
 	PhysicsHead       head;
@@ -43,6 +72,8 @@ typedef struct {
 Difference between `PhysicsStrand` and `PhysicsStrandInit` is like how `Zelda 64` games handle `Colliders`.
 
 [Back to top](#list-of-content)
+
+---
 ### PhysicsInfo
 ```c
 typedef struct {
@@ -55,6 +86,8 @@ typedef struct {
 } PhysicsInfo;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsHead
 ```c
 typedef struct {
@@ -64,6 +97,8 @@ typedef struct {
 } PhysicsHead;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsGfx
 ```c
 typedef struct {
@@ -75,6 +110,8 @@ typedef struct {
 } PhysicsGfx;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsSpheres
 ```c
 typedef struct {
@@ -84,6 +121,8 @@ typedef struct {
 } PhysicsSpheres;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsConstraint
 ```c
 typedef struct {
@@ -93,6 +132,8 @@ typedef struct {
 } PhysicsConstraint;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsRigidity
 ```c
 typedef struct {
@@ -103,6 +144,8 @@ typedef struct {
 } PhysicsRigidity;
 ```
 [Back to top](#list-of-content)
+
+---
 ## Examples
 Here you set the arrays for physics to store/read values from. In this specific example the substruct is named `PonytailPhysics`, but you can name it whatever you like.
 
@@ -121,6 +164,8 @@ typedef struct {
 } EnNPC;
 ```
 [Back to top](#list-of-content)
+
+---
 ### PhysicsStrand
 Here are all the options that affect how the strand will be processed. These could also be stored in Actors struct, if these are set into it in init.
 ```c
@@ -187,6 +232,8 @@ PhysicsStrandInit sPonytailInit = {
 };
 ```
 [Back to top](#list-of-content)
+
+---
 ### ActorInit
 ```c
 void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
@@ -197,6 +244,8 @@ void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 }
 ```
 [Back to top](#list-of-content)
+
+---
 ### OverridePostDraw
 In `SkelAnime` PostDraw you can get the "sphere" collision centers like so. This will prevent the limbs of the strand go through them.
 ```c
@@ -232,6 +281,9 @@ void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s*
 	}
 }
 ```
+[Back to top](#list-of-content)
+
+---
 ### PhysicCallback
 This callback can have up to two `pointers` of your choice. Type of the pointers are declared in this callback function itself and then assigned to the `Physics_DrawDynamicStrand` function if used.
 ```c
@@ -243,6 +295,8 @@ void EnNpc_PhysicsCallback(s32 limbIndex, GlobalContext* globalCtx, void* arg2) 
 }
 ```
 [Back to top](#list-of-content)
+
+---
 ### ActorDraw
 In draw you can do a `for loop` to get the positions calculated instantly. Also remember to use the extra arguments if you're going to use `PhysicCallback`.
 ```c
@@ -284,6 +338,8 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 }
 ```
 [Back to top](#list-of-content)
+
+---
 # Credits
 ```
 Rankaisija - Coding Physics helpers
