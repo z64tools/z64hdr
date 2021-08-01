@@ -8,7 +8,7 @@
 #include "include/z64.h"
 #include "Matrix.h"
 
-typedef void(*PhysicCallback)(s32 limbIndex, ...);
+typedef void(*PhysicCallback)(s32 limbIndex, void*, void*);
 
 typedef struct {
 	Vec3f pos;
@@ -17,47 +17,65 @@ typedef struct {
 } PhysicsJoint;
 
 typedef struct {
-	s32  numLimbs;
-	struct {
-		Vec3f pos;
-		Vec3s rot;
-		MtxF* mtxF;
-	} head;
-	
-	struct {
-		u32   dlist;
-		Vec3f scale;  // Gfx scale
-		u8    segID;  // For matrix
-		u8    noDraw; /* If there needs to be calculations
-		                 to get in position before drawing */
-	} gfx;
-	
-	struct {
-		s32    num; // amount of spheres
-		Vec3f* centers;
-		f32    radius;
-	} spheres; // "collision" spheres
-	
-	struct {
-		u8    lockRoot;    // Prevent physics rotating root limb
-		Vec2f rotStepCalc; // DEG, limits rot to next limb in main calc
-		Vec2f rotStepDraw; // DEG, limits rot on draw, smoothens output
-	} constraint;
-	
-	struct {
-		s32   num;  // How many limbs will be smoothed with push
-		Vec3f push; // direction Z, pushes based on rot[0]
-		f32   mult; // How much the pushing fill affect
-		Vec3f rot;  // DEG, rigids towards, relative rot
-	} rigidity;
-	
-	/* Physics */
+	s32 numLimbs;
 	f32 gravity;
 	f32 floorY;  // world.pos.y, won't go through this
 	f32 maxVel;  // Clamps velocity value
 	f32 velStep; // Values below 1.0f will give it spring like motion
 	f32 velMult; // Control the power of velocity
+} PhysicsInfo;
+
+typedef struct {
+	Vec3f pos;
+	Vec3s rot;
+	MtxF* mtxF;
+} PhysicsHead;
+
+typedef struct {
+	u32   dlist;
+	Vec3f scale;  // Gfx scale
+	u8    segID;  // For matrix
+	u8    noDraw; /* If there needs to be calculations
+	                 to get in position before drawing */
+} PhysicsGfx;
+
+typedef struct {
+	s32    num; // amount of spheres
+	Vec3f* centers;
+	f32    radius;
+} PhysicsSpheres; // "collision" spheres, pushes limbs away
+
+typedef struct {
+	u8    lockRoot;    // Prevent physics rotating root limb
+	Vec2f rotStepCalc; // DEG, limits rot to next limb in main calc
+	Vec2f rotStepDraw; // DEG, limits rot on draw, smoothens output
+} PhysicsConstraint;
+
+typedef struct {
+	s32   num;  // How many limbs will be smoothed with push
+	Vec3f push; // direction Z, pushes based on rot[0]
+	f32   mult; // How much the pushing fill affect
+	Vec3f rot;  // DEG, rigids towards, relative rot
+} PhysicsRigidity;
+
+typedef struct {
+	PhysicsInfo       info;
+	PhysicsHead       head;
+	PhysicsGfx        gfx;
+	PhysicsSpheres    spheres;
+	PhysicsConstraint constraint;
+	PhysicsRigidity   rigidity;
 	f32 limbsLength[];
+} PhysicsStrandInit;
+
+typedef struct {
+	PhysicsInfo       info;
+	PhysicsHead       head;
+	PhysicsGfx        gfx;
+	PhysicsSpheres    spheres;
+	PhysicsConstraint constraint;
+	PhysicsRigidity   rigidity;
+	f32* limbsLength;
 } PhysicsStrand;
 
 _Z64HDR_HELPER_PREFIX_
@@ -77,7 +95,23 @@ void Physics_GetHeadProperties(PhysicsStrand* params, Vec3f* mult, s32 flag) {
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicsStrand* param, ...) {
+void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* lengthDest, Vec3f* sphereCenters) {
+	dest->info = init->info;
+	dest->head = init->head;
+	dest->gfx = init->gfx;
+	dest->spheres = init->spheres;
+	dest->constraint = init->constraint;
+	dest->rigidity = init->rigidity;
+	
+	for (s32 i = 0; i < init->info.numLimbs + 1; i++) {
+		lengthDest[i] = init->limbsLength[i];
+	}
+	dest->limbsLength = lengthDest;
+	dest->spheres.centers = sphereCenters;
+}
+
+_Z64HDR_HELPER_PREFIX_
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicsStrand* param, void* callback, void* callbackArg1, void* callbackArg2) {
 	s32 i;
 	f32 tempY;
 	f32 angX;
@@ -99,10 +133,10 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 	jointTable[0].pos.y = param->head.pos.y;
 	jointTable[0].pos.z = param->head.pos.z;
 	
-	for (i = 1; i < param->numLimbs + 1; i++) {
-		Math_ApproachF(&jointTable[i].vel.x, 0.0f, 1.0f, param->velStep);
-		Math_ApproachF(&jointTable[i].vel.y, 0.0f, 1.0f, param->velStep);
-		Math_ApproachF(&jointTable[i].vel.z, 0.0f, 1.0f, param->velStep);
+	for (i = 1; i < param->info.numLimbs + 1; i++) {
+		Math_ApproachF(&jointTable[i].vel.x, 0.0f, 1.0f, param->info.velStep);
+		Math_ApproachF(&jointTable[i].vel.y, 0.0f, 1.0f, param->info.velStep);
+		Math_ApproachF(&jointTable[i].vel.z, 0.0f, 1.0f, param->info.velStep);
 	}
 	
 	Matrix_RotateX_s(param->head.rot.x, MTXMODE_NEW);
@@ -114,7 +148,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 	Matrix_MultVec3f(&param->rigidity.push, &rigidity);
 	
 	// Main calculation loop
-	for (i = 1; i < param->numLimbs + 1; i++) {
+	for (i = 1; i < param->info.numLimbs + 1; i++) {
 		pPos = &jointTable[i].pos;
 		pVel = &jointTable[i].vel;
 		pPrevPos = &jointTable[i - 1].pos;
@@ -129,15 +163,15 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		}
 		
 		workVec.x = pPos->x + pVel->x - pPrevPos->x + smoothedRigid.x;
-		tempY = pPos->y + pVel->y + param->gravity + smoothedRigid.y;
+		tempY = pPos->y + pVel->y + param->info.gravity + smoothedRigid.y;
 		workVec.z = pPos->z + pVel->z - pPrevPos->z + smoothedRigid.z;
 		
 		// FLOOR, also gets rid of the smoothedRigid
-		if (tempY < param->floorY + 10.0f) {
+		if (tempY < param->info.floorY + 10.0f) {
 			workVec.x -= smoothedRigid.x;
 			workVec.z -= smoothedRigid.z;
-			if (i != param->numLimbs + 1 && tempY < param->floorY)
-				tempY = CLAMP_MIN(tempY, param->floorY);
+			if (i != param->info.numLimbs + 1 && tempY < param->info.floorY)
+				tempY = CLAMP_MIN(tempY, param->info.floorY);
 		}
 		
 		workVec.y = tempY - pPrevPos->y;
@@ -226,14 +260,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		pPos->y = pPrevPos->y + posAdd.y;
 		pPos->z = pPrevPos->z + posAdd.z;
 		
-		pVel->x = (pPos->x - workVec.x + velAdj.x) * param->velMult;
-		pVel->y = (pPos->y - workVec.y + velAdj.y) * param->velMult;
-		pVel->z = (pPos->z - workVec.z + velAdj.z) * param->velMult;
+		pVel->x = (pPos->x - workVec.x + velAdj.x) * param->info.velMult;
+		pVel->y = (pPos->y - workVec.y + velAdj.y) * param->info.velMult;
+		pVel->z = (pPos->z - workVec.z + velAdj.z) * param->info.velMult;
 		
 		jointTable[i].vel = (Vec3f) {
-			CLAMP(pVel->x, -param->maxVel, param->maxVel),
-			CLAMP(pVel->y, -param->maxVel, param->maxVel),
-			CLAMP(pVel->z, -param->maxVel, param->maxVel),
+			CLAMP(pVel->x, -param->info.maxVel, param->info.maxVel),
+			CLAMP(pVel->y, -param->info.maxVel, param->info.maxVel),
+			CLAMP(pVel->z, -param->info.maxVel, param->info.maxVel),
 		};
 	}
 	
@@ -243,15 +277,11 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		return;
 	}
 	
-	Mtx* matrix = Graph_Alloc(gfxCtx, param->numLimbs * sizeof(Mtx));
+	Mtx* matrix = Graph_Alloc(gfxCtx, param->info.numLimbs * sizeof(Mtx));
 	s16 y = RADF_TO_BINANG(jointTable[0].rot.y);
 	s16 x = RADF_TO_BINANG(jointTable[0].rot.x);
-	__builtin_va_list args;
 	
-	__builtin_va_start(args, param);
-	PhysicCallback callback = __builtin_va_arg(args, PhysicCallback);
-	
-	for (i = 0; i < param->numLimbs; i++) {
+	for (i = 0; i < param->info.numLimbs; i++) {
 		pPos = &jointTable[i].pos;
 		pRot = &jointTable[i].rot;
 		
@@ -277,9 +307,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 			Matrix_Scale(param->gfx.scale.x, param->gfx.scale.y, param->gfx.scale.z, MTXMODE_APPLY);
 		
 		if(callback) {
-			__builtin_va_start(args, param);
-			callback = __builtin_va_arg(args, PhysicCallback);
-			callback(i, __builtin_va_arg(args, void*), __builtin_va_arg(args, void*));
+			((PhysicCallback)callback)(i, callbackArg1, callbackArg2);
 		}
 		Matrix_ToMtx(&matrix[i], __FILE__, __LINE__);
 	}
@@ -288,7 +316,6 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 	gSPSegment(disp->p++, param->gfx.segID, matrix);
 	gSPDisplayList(disp->p++, param->gfx.dlist);
 	Matrix_Pull();
-	va_end(args);
 }
 
 #endif

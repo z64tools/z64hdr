@@ -2,9 +2,14 @@
 # Z64 Helpers
 ### List of content
 1. [Physics](#physics)
-    1. [ActorHeader](#actorheader)
-    1. [ActorCode](#actorcode)
-        1. [LimbLength](#limblength)
+	1. [PhysicsStrand Struct](#physicsstrand-struct)
+		1. [PhysicsInfo](#physicsinfo)
+		1. [PhysicsHead](#physicshead)
+		1. [PhysicsGfx](#physicsgfx)
+		1. [PhysicsSpheres](#physicsspheres)
+		1. [PhysicsConstraint](#physicsconstraint)
+		1. [PhysicsRigidity](#physicsrigidity)
+    1. [Examples](#examples)
         1. [PhysicsStrand](#physicsstrand)
         1. [ActorInit](#actorinit)
         1. [OverridePostDraw](#overridepostdraw)
@@ -13,50 +18,121 @@
 1. [Credits](#credits)
 
 # Physics
-## ActorHeader
+## PhysicsStrand Struct
+```c
+typedef struct {
+	PhysicsInfo       info;
+	PhysicsHead       head;
+	PhysicsGfx        gfx;
+	PhysicsSpheres    spheres; // "collision" spheres
+	PhysicsConstraint constraint;
+	PhysicsRigidity   rigidity;
+	f32 limbsLength[];
+} PhysicsStrandInit;
+
+typedef struct {
+	PhysicsInfo       info;
+	PhysicsHead       head;
+	PhysicsGfx        gfx;
+	PhysicsSpheres    spheres; // "collision" spheres
+	PhysicsConstraint constraint;
+	PhysicsRigidity   rigidity;
+	f32* limbsLength;
+} PhysicsStrand;
+```
+Difference between `PhysicsStrand` and `PhysicsStrandInit` is like how `Zelda 64` games handle `Colliders`.
+
+[Back to top](#list-of-content)
+### PhysicsInfo
+```c
+typedef struct {
+	s32 numLimbs;
+	f32 gravity;
+	f32 floorY;  // world.pos.y, won't go through this
+	f32 maxVel;  // Clamps velocity value
+	f32 velStep; // Values below 1.0f will give it spring like motion
+	f32 velMult; // Control the power of velocity
+} PhysicsInfo;
+```
+[Back to top](#list-of-content)
+### PhysicsHead
+```c
+typedef struct {
+	Vec3f pos;
+	Vec3s rot;
+	MtxF* mtxF;
+} PhysicsHead;
+```
+[Back to top](#list-of-content)
+### PhysicsGfx
+```c
+typedef struct {
+	u32   dlist;
+	Vec3f scale;  // Gfx scale
+	u8    segID;  // For matrix
+	u8    noDraw; /* If there needs to be calculations
+	                 to get in position before drawing */
+} PhysicsGfx;
+```
+[Back to top](#list-of-content)
+### PhysicsSpheres
+```c
+typedef struct {
+	s32    num; // amount of spheres
+	Vec3f* centers;
+	f32    radius;
+} PhysicsSpheres;
+```
+[Back to top](#list-of-content)
+### PhysicsConstraint
+```c
+typedef struct {
+	u8    lockRoot;    // Prevent physics rotating root limb
+	Vec2f rotStepCalc; // DEG, limits rot to next limb in main calc
+	Vec2f rotStepDraw; // DEG, limits rot on draw, smoothens output
+} PhysicsConstraint;
+```
+[Back to top](#list-of-content)
+### PhysicsRigidity
+```c
+typedef struct {
+	s32   num;  // How many limbs will be smoothed with push
+	Vec3f push; // direction Z, pushes based on rot[0]
+	f32   mult; // How much the pushing fill affect
+	Vec3f rot;  // DEG, rigids towards, relative rot
+} PhysicsRigidity;
+```
+[Back to top](#list-of-content)
+## Examples
 Here you set the arrays for physics to store/read values from. In this specific example the substruct is named `PonytailPhysics`, but you can name it whatever you like.
 
 ```c
-typedef struct {
-	Vec3f rot[10];
-	Vec3f pos[10];
-	Vec3f vel[10];
-    Vec3f bodyPartsPos[7];
-} PonytailPhysics;
 
 typedef struct {
-	Actor     actor;
-	SkelAnime skelAnime;
-	Vec3s     jointTable[SKEL_NPC_NUMBONES_DT];
-	Vec3s     morphTable[SKEL_NPC_NUMBONES_DT];
-	PonytailPhysics tail;
-	Vec3f     tailEnd;
+	Actor         actor;
+	SkelAnime     skelAnime;
+	Vec3s         jointTable[SKEL_NPC_NUMBONES_DT];
+	Vec3s         morphTable[SKEL_NPC_NUMBONES_DT];
+	PhysicsStrand phyPonytail;
+	f32           phyJointLength[10]; // Number of limbs + 1
+	PhysicsJoint  phyJointTable[10];  // Number of limbs + 1
+	Vec3f         bodyPartsPos[6];
+	Vec3f         tailEnd;
 } EnNPC;
-```
-[Back to top](#list-of-content)
-## ActorCode
-### LimbLength
-Firstly we initialize some variables. `sLimbLength` is the length from limb to next. This value should be in the `normal scale`. To get these values you need to check position units from your bones in `Blender`. Also adjust the scale for the values based on what scale you're using with `z64convert`.
-```c
-f32 sLimbLength[] = {
-	 -930.0f,
-	-1530.0f +  930.0f,
-	-2160.0f + 1530.0f,
-	-3150.0f + 2160.0f,
-	-4090.0f + 3150.0f,
-	-5190.0f + 4090.0f,
-	-6070.0f + 5190.0f,
-	-6810.0f + 6070.0f,
-	 -400.0f,
-};
 ```
 [Back to top](#list-of-content)
 ### PhysicsStrand
 Here are all the options that affect how the strand will be processed. These could also be stored in Actors struct, if these are set into it in init.
 ```c
-PhysicsStrand sPonytailPhysics = {
-	.numLimbs = 9,
-	.limbsLength = sLength,
+PhysicsStrandInit sPonytailInit = {
+	.info = {
+		.numLimbs = 9,
+		.gravity = -2.0f,
+		.floorY = 2.0f,
+		.maxVel = 64.0f,
+		.velStep = 0.7f,
+		.velMult = 0.9f,
+	},
 	.gfx = {
 		.dlist = DL_PONYTAIL,
 		.scale = {
@@ -97,57 +173,61 @@ PhysicsStrand sPonytailPhysics = {
 			.z = 0.0f,
 		},
 	},
-	.gravity = -2.0f,
-	.floorY = 2.0f,
-	.maxVel = 64.0f,
-	.velStep = 0.7f,
-	.velMult = 0.9f,
+	.limbsLength = {
+		-930.0f,
+		-1530.0f +  930.0f,
+		-2160.0f + 1530.0f,
+		-3150.0f + 2160.0f,
+		-4090.0f + 3150.0f,
+		-5190.0f + 4090.0f,
+		-6070.0f + 5190.0f,
+		-6810.0f + 6070.0f,
+		-400.0f,
+	},
 };
 ```
 [Back to top](#list-of-content)
 ### ActorInit
-In init you assign the pointer to `sphere centers`.
 ```c
-void EnNPC_Init(EnNPC* this, GlobalContext* globalCtx) {
+void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 	Actor_SetScale(&this->actor, 0.0055f);
-	Collider_SetCylinder(globalCtx, &this->collider, &this->actor, &sCylInit);
-	SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKELETONHEADER, ANIM_IDLE, this->jointTable, this->morphTable, SKEL_NPC_NUMBONES_DT);
+	SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKEL_NPC, ANIM_IDLE, this->jointTable, this->morphTable, SKEL_NPC_NUMBONES_DT);
 	
-	sPonytailPhysics.spheres.centers = this->tail.bodyPartsPos;
+	Physics_SetPhysicsStrand(&sPonytailInit, &this->phyPonytail, this->phyJointLength, this->bodyPartsPos);
 }
 ```
 [Back to top](#list-of-content)
 ### OverridePostDraw
 In `SkelAnime` PostDraw you can get the "sphere" collision centers like so. This will prevent the limbs of the strand go through them.
 ```c
-void EnNPC_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s* rot, void* thisx) {
-	EnNPC* this = (EnNPC*)thisx;
+void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s* rot, void* thisx) {
+	EnNpc* this = (EnNpc*)thisx;
 	Vec3f zero = { 0 };
 	
 	switch (limbIndex) {
-	    case Head:
-	        Physics_GetHeadProperties(&sPonytailPhysics, &zero, 0);
-	        break;
-	    case Upperbody:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[0]);
+		case NpcLimb_Head:
+			Matrix_MultVec3f(&zero, &this->actor.focus.pos);
+			break;
+		case NpcLimb_Ponytail1:
+			Physics_GetHeadProperties(&this->phyPonytail, &zero, 0);
+			break;
+	    case NpcLimb_Upperbody:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[0]);
 		    break;
-	    case Root:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[1]);
+	    case NpcLimb_Upperarm_R:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[1]);
 		    break;
-	    case Upperarm_R:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[2]);
+	    case NpcLimb_Thigh_R:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[2]);
 		    break;
-	    case Thigh_R:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[3]);
+	    case NpcLimb_Waist:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[3]);
 		    break;
-	    case Waist:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[4]);
+	    case NpcLimb_Upperarm_L:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[4]);
 		    break;
-	    case Upperarm_L:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[5]);
-		    break;
-	    case Thigh_L:
-		    Matrix_MultVec3f(&zero, &this->tail.bodyPartsPos[6]);
+	    case NpcLimb_Thigh_L:
+		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[5]);
 		    break;
 	}
 }
@@ -155,7 +235,7 @@ void EnNPC_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s*
 ### PhysicCallback
 This callback can have up to two `pointers` of your choice. Type of the pointers are declared in this callback function itself and then assigned to the `Physics_DrawDynamicStrand` function if used.
 ```c
-void EnNPC_PhysicsCallback(s32 limbIndex, EnNPC* this) {
+void EnNpc_PhysicsCallback(s32 limbIndex, GlobalContext* globalCtx, void* arg2) {
 	Vec3f zero = { 0.0f, 100.0f, 0.0f };
 
 	if (limbIndex == LIMB_END)
@@ -177,29 +257,29 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 		&this->actor
 	);
 	
-	if (sPonytailPhysics.gfx.noDraw) {
-		for (s32 i = 0; i < 60; i++)
+	if (this->phyPonytail.gfx.noDraw == true) {
+		for (s32 i = 0; i < 60; i++) {
 			Physics_DrawDynamicStrand(
 				globalCtx->state.gfxCtx,
 				&POLY_OPA,
-				this->tail.pos,
-				this->tail.rot,
-				this->tail.vel,
-				&sPonytailPhysics
+				this->phyJointTable,
+				&this->phyPonytail,
+				0,
+				0,
+				0
 			);
-		
-		sPonytailPhysics.gfx.noDraw = false;
+		}
+		this->phyPonytail.gfx.noDraw = false;
 	}
 	
 	Physics_DrawDynamicStrand(
 		globalCtx->state.gfxCtx,
 		&POLY_OPA,
-		this->tail.pos,
-		this->tail.rot,
-		this->tail.vel,
-		&sPonytailPhysics,
-		EnNPC_PhysicsCallback,
-		this
+		this->phyJointTable,
+		&this->phyPonytail,
+		EnNpc_PhysicsCallback,
+		globalCtx,
+		0
 	);
 }
 ```
