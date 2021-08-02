@@ -14,7 +14,7 @@ typedef struct {
 	Vec3f pos;
 	Vec3f rot;
 	Vec3f vel;
-} PhysicsJoint;
+} PhysicsLimb;
 
 typedef struct {
 	s32 numLimbs;
@@ -112,7 +112,7 @@ void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32*
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsJoint* jointTable, PhysicsStrand* strand, void* callback, void* callbackArg1, void* callbackArg2) {
+void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsLimb* jointTable, PhysicsStrand* strand, void* callback, void* callbackArg1, void* callbackArg2) {
 	s32 i;
 	f32 tempY;
 	f32 angX;
