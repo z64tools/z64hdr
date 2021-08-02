@@ -1,7 +1,7 @@
 #ifndef _HELPERS_MATRIX_H_
 #define _HELPERS_MATRIX_H_
 
-#ifndef _Z64HDR_HELPER_PREFIX_
+#ifndef _Z64HDR_HELPER_QUALIFIERS_
 #define _Z64HDR_HELPER_PREFIX_
 #endif
 
