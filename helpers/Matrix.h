@@ -1,8 +1,8 @@
 #ifndef _HELPERS_MATRIX_H_
 #define _HELPERS_MATRIX_H_
 
-#ifndef _Z64HDR_HELPER_QUALIFIERS_
-#define _Z64HDR_HELPER_QUALIFIERS_
+#ifndef Z64HDR_HELPER_QUALIFIERS
+#define Z64HDR_HELPER_QUALIFIERS
 #endif
 
 #include "include/z64.h"
@@ -16,7 +16,7 @@
 #define Matrix_RotateX_f(degf, mtxMode)   Matrix_RotateX(DEGF_TO_RADF(degf), mtxMode)
 #define Matrix_RotateZ_f(degf, mtxMode)   Matrix_RotateZ(DEGF_TO_RADF(degf), mtxMode)
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Matrix_MultX(f32 x, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	
@@ -25,7 +25,7 @@ void Matrix_MultX(f32 x, Vec3f* dst) {
 	dst->z = cmf->wz + cmf->xz * x;
 }
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Matrix_MultY(f32 y, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	
@@ -34,7 +34,7 @@ void Matrix_MultY(f32 y, Vec3f* dst) {
 	dst->z = cmf->wz + cmf->yz * y;
 }
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Matrix_MultZ(f32 z, Vec3f* dst) {
 	MtxF* cmf = sCurrentMatrix;
 	

@@ -1,8 +1,8 @@
 #ifndef _HELPERS_PHYSICS_H_
 #define _HELPERS_PHYSICS_H_
 
-#ifndef _Z64HDR_HELPER_QUALIFIERS_
-#define _Z64HDR_HELPER_QUALIFIERS_
+#ifndef Z64HDR_HELPER_QUALIFIERS
+#define Z64HDR_HELPER_QUALIFIERS
 #endif
 
 #include "include/z64.h"
@@ -78,7 +78,7 @@ typedef struct {
 	f32* limbsLength;
 } PhysicsStrand;
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
 	static MtxF mtxF;
 	Vec3f zero = { 0 };
@@ -94,7 +94,7 @@ void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
 	Matrix_MultVec3f(headPosModel, &strand->head.pos);
 }
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* limbLengthDest, Vec3f* spheresCenters, s32 spheresArrayCount) {
 	dest->info = init->info;
 	dest->head = init->head;
@@ -111,7 +111,7 @@ void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32*
 	dest->spheres.num = spheresArrayCount;
 }
 
-_Z64HDR_HELPER_QUALIFIERS_
+Z64HDR_HELPER_QUALIFIERS
 void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, PhysicsLimb* jointTable, PhysicsStrand* strand, void* callback, void* callbackArg1, void* callbackArg2) {
 	s32 i;
 	f32 tempY;

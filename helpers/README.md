@@ -1,12 +1,12 @@
 
 # Z64 Helpers
 
-By default these aren't set `static inline`. To do this, you can `#define` `_Z64HDR_HELPER_QUALIFIERS_` to achieve this.
+By default these aren't set `static inline`. To do this, you can `#define` `Z64HDR_HELPER_QUALIFIERS` to achieve this.
 ```c
-#define _Z64HDR_HELPER_QUALIFIERS_ static inline
-#include <helpers/Helper.h>
+#define Z64HDR_HELPER_QUALIFIERS static inline
+#include <helpers/HelperOfYourChoice.h>
 ```
-### List of content
+### Table of Content
  - [1. MATRIX](#matrix)
 	 - [1.1 Matrix Multiply](#matrix-mult)
 	 - [1.2 Matrix Macros](#matrix-macros)
@@ -33,7 +33,7 @@ void Matrix_MultX(f32 x, Vec3f* dst);
 void Matrix_MultY(f32 y, Vec3f* dst);
 void Matrix_MultZ(f32 z, Vec3f* dst);
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ## Matrix Macros
 
@@ -57,9 +57,16 @@ These macros are for using different format of rotations. By default `Matrix_Rot
 `RADF` \
 **f32** rotation value. - 90° would be equal to `M_PI / 2.0f`.
 
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 # Physics
+Physics takes care of doing calculations.
+
+#### TODO:
+- [x] ``Strand`` Uses one head, used for **hair**, **tails**, etc...
+- [ ] ``Bridge`` Same as strand but instead would have two heads for head and tail.
+- [ ] ``Cloth`` **Capes**, **dresses**, etc...
+
 ## PhysicsStrand Struct
 These are the main struct for drawing dynamic strand. Think of as ``settings``.
 
@@ -95,7 +102,7 @@ typedef struct {
 } PhysicsStrandInit;
 ```
 
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsInfo
 Here we have the "settings" for how the physics behave.
@@ -132,7 +139,7 @@ could be also called ___deacceleration step___. It handles from stepping the vel
 multiplies the calculation that gets the velocity. It is normally used to soften the velocity, as higher than ``1.0f`` _might_ become unstable. But going above ``1.0f`` isn't bad. Best way to find the results you want is to try.
 
 [Back to PhysicsStrand struct](#physicsstrand-struct)\
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsHead
 Values that are used in the **Physics_DrawDynamicStrand** to have the strand aligned to the head. These can be altered between **Physics_GetHeadProperties** and 
@@ -162,7 +169,7 @@ For ``folded characters``, it's very likely that the rotations aren't matching h
 
 
 [Back to PhysicsStrand struct](#physicsstrand-struct)\
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsGfx
 Here we handle all that has to do with graphics.
@@ -189,7 +196,7 @@ Segment ID where the __matrix__ is allocated. `Physics_DrawDynamicStrand` alloca
 Disables all that has to do with drawing your strand. Like mentioned in the comment, this can be used to have the positions ___"precalculated"___ for you. Example can be found in [Actor Draw function](#actor-draw-function). 
 
 [Back to PhysicsStrand struct](#physicsstrand-struct) \
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsSpheres
 "Collision" spheres, that push the pos of each limb away, if they are within the radius.
@@ -210,7 +217,7 @@ Pointer to array, where the center positions are stored.
 Tests if `dist < radius` and pushes limbs based on that.
 
 [Back to PhysicsStrand struct](#physicsstrand-struct)\
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsConstraint
 Limits rotations, as it can get wild very easily.
@@ -231,7 +238,7 @@ This limits the amount of rotation to next limb in `calculation`. If this isn't 
 This limits the amount of rotation to next limb in `draw`. If this isn't needed, set it to `zero`.
 
 [Back to PhysicsStrand struct](#physicsstrand-struct)\
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsRigidity
 This helps getting the shape you want to have.
@@ -258,7 +265,7 @@ Multiplys the amount of how much push affects. Recommended value is `0.2f`.
 This affects the rotation it pushes towards. This is additional on top of the `head rotation` so if you do not feel like you need it, keep it `zero`.
 
 [Back to PhysicsStrand struct](#physicsstrand-struct)\
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ## Examples
 Here's example of how to store necessary values in your `Entity Struct`.
@@ -289,7 +296,7 @@ f32 array, that also needs to have ``[NumberOfLimbs + 1]``.
 ``tailEnd`` \
 Not necessary, but is here for example shown in [PhysicsCallback](#physicscallback).
 
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicsStrandInit
 If you're not completely sure how to fill this, you may use this as a reference.
@@ -356,7 +363,7 @@ PhysicsStrandInit sPonytailInit = {
 	},
 };
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### Actor Init function
 ```c
@@ -375,7 +382,7 @@ Arguments for ``Physics_SetPhysicsStrand``
  1. ``Pointer``, location of **sphere centers array** to read them from
  1. ``s32``, **ARRAY_COUNT(X)** of **sphere centers array**
 
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### OverridePostDraw
 In `SkelAnime` PostDraw you can update the "sphere" collision centers like so (`bodyPartsPos`). This will prevent the limbs of the strand from going through the skeleton limbs.
@@ -412,7 +419,7 @@ void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s*
 	}
 }
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### PhysicCallback
 Optional feature. \
@@ -425,7 +432,7 @@ void EnNpc_PhysicsCallback(s32 limbIndex, GlobalContext* globalCtx, void* arg2) 
 		Matrix_MultVec3f(&zero, &this->tailEnd);
 }
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 ### Actor Draw function
 In draw you can do a `for loop` to get the positions calculated instantly. Also remember to use the extra arguments if you're going to use `PhysicCallback`.
@@ -467,7 +474,7 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 	);
 }
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
 
 # Credits
 ```
@@ -484,4 +491,4 @@ zel.
 Decompiling Boss07 - Majora whip function for reference
 Improvement suggestions for Physics functions
 ```
-[Back to list](#list-of-content)
+[Back to Table of Content](#table-of-content)
