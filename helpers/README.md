@@ -472,13 +472,16 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 # Credits
 ```
 Dragorn421
-Improvement suggestions for Physics helpers
+Improvement suggestions for Physics functions
 
 Rankaisija
-Coding Physics helpers
+Physics functions
+
+Thar0
+Matrix functions
 
 zel.
 Decompiling Boss07 - Majora whip function for reference
-Improvement suggestions for Physics helpers
+Improvement suggestions for Physics functions
 ```
 [Back to list](#list-of-content)
