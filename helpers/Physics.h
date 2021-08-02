@@ -121,7 +121,6 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 	Vec3f posAdd;
 	Vec3f rigidity, smoothedRigid;
 	Vec3f velAdj = { 0 };
-	s16 headRotY = strand->head.rot.y;
 	Vec3f* pPos;
 	Vec3f* pRot;
 	Vec3f* pVel;
