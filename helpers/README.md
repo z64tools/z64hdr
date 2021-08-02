@@ -6,28 +6,25 @@ By default these aren't set `static inline`. To do this, you can `#define` `_Z64
 #define _Z64HDR_HELPER_PREFIX_ static inline
 #include <helpers/Helper.h>
 ```
----
 ### List of content
- - [<span style="color:red">1. MATRIX](#matrix)
-	 - [<span style="color:red">1.1 Matrix Multiply](#matrix-mult)
-	 - [<span style="color:red">1.2 Matrix Macros](#matrix-macros)
- - [<span style="color:red">2. PHYSICS](#physics)
-	- [<span style="color:red">2.1 PhysicsStrand Struct](#physicsstrand-struct)
-		- [<span style="color:red">2.1.1 PhysicsInfo](#physicsinfo)
-		- [<span style="color:red">2.1.2 PhysicsHead](#physicshead)
-		- [<span style="color:red">2.1.3 PhysicsGfx](#physicsgfx)
-		- [<span style="color:red">2.1.4 PhysicsSpheres](#physicsspheres)
-		- [<span style="color:red">2.1.5 PhysicsConstraint](#physicsconstraint)
-		- [<span style="color:red">2.1.6 PhysicsRigidity](#physicsrigidity)
-	- [<span style="color:red">2.2 Examples](#examples)
-		- [<span style="color:red">2.2.1 PhysicsStrand](#physicsstrand)
-		- [<span style="color:red">2.2.2 Actor Init function](#actor-init-function)
-		- [<span style="color:red">2.2.3 OverridePostDraw](#overridepostdraw)
-		- [<span style="color:red">2.2.4 PhysicCallback](#physiccallback)
-		- [<span style="color:red">2.2.5 Actor Draw function](#actor-draw-function)
-- [<span style="color:red">3. Credits](#credits)
----
----
+ - [1. MATRIX](#matrix)
+	 - [1.1 Matrix Multiply](#matrix-mult)
+	 - [1.2 Matrix Macros](#matrix-macros)
+ - [2. PHYSICS](#physics)
+	- [2.1 PhysicsStrand Struct](#physicsstrand-struct)
+		- [2.1.1 PhysicsInfo](#physicsinfo)
+		- [2.1.2 PhysicsHead](#physicshead)
+		- [2.1.3 PhysicsGfx](#physicsgfx)
+		- [2.1.4 PhysicsSpheres](#physicsspheres)
+		- [2.1.5 PhysicsConstraint](#physicsconstraint)
+		- [2.1.6 PhysicsRigidity](#physicsrigidity)
+	- [2.2 Examples](#examples)
+		- [2.2.1 PhysicsStrandInit](#physicsstrandinit)
+		- [2.2.2 Actor Init function](#actor-init-function)
+		- [2.2.3 OverridePostDraw](#overridepostdraw)
+		- [2.2.4 PhysicCallback](#physiccallback)
+		- [2.2.5 Actor Draw function](#actor-draw-function)
+- [3. Credits](#credits)
 # Matrix
 ## Matrix Mult
 These are pretty much same as `Matrix_MultVec3f`, but instead of using Vec3f, these are for individual axises.
@@ -36,9 +33,8 @@ void Matrix_MultX(f32 x, Vec3f* dst);
 void Matrix_MultY(f32 y, Vec3f* dst);
 void Matrix_MultZ(f32 z, Vec3f* dst);
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 ## Matrix Macros
 
 These macros are for using different format of rotations. By default `Matrix_Rotate` first argument is used with radiance.
@@ -52,33 +48,30 @@ These macros are for using different format of rotations. By default `Matrix_Rot
 #define Matrix_RotateZ_f(degf, mtxMode)   Matrix_RotateZ(DEGF_TO_RADF(degf), mtxMode)
 ```
 
->`DEGF` \
-`f32` value that is the most readable of these, using degrees to rotate.
+`DEGF` \
+**f32** rotation value. - 90° would be equal to `90.0f`.
 
->`BINANG` \
-`s16` rotation value.
+`BINANG` \
+**s16** rotation value. - 90° would be equal to `0x4000`.
 
->`RADF` \
-``f32`` rotation value.
+`RADF` \
+**f32** rotation value. - 90° would be equal to `M_PI / 2.0f`.
 
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
----
 # Physics
----
 ## PhysicsStrand Struct
 These are the main struct for drawing dynamic strand. Think of as ``settings``.
 
 Difference between these is that `PhysicsStrandInit` has `flexible array` at the bottom of it, which is perfect for initialization, if you want to keep your initial values stored.
 
 Read more about the individual structs inside these from: \
-[<span style="color:red">PhysicsInfo](#physicsinfo)\
-[<span style="color:red">PhysicsHead](#physicshead)\
-[<span style="color:red">PhysicsGfx](#physicsgfx)\
-[<span style="color:red">PhysicsSpheres](#physicsspheres)\
-[<span style="color:red">PhysicsConstraint](#physicsconstraint)\
-[<span style="color:red">PhysicsRigidity](#physicsrigidity)
+[PhysicsInfo](#physicsinfo)\
+[PhysicsHead](#physicshead)\
+[PhysicsGfx](#physicsgfx)\
+[PhysicsSpheres](#physicsspheres)\
+[PhysicsConstraint](#physicsconstraint)\
+[PhysicsRigidity](#physicsrigidity)
 ```c
 typedef struct {
 	PhysicsInfo       info;
@@ -102,9 +95,8 @@ typedef struct {
 } PhysicsStrandInit;
 ```
 
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 ### PhysicsInfo
 Here we have the "settings" for how the physics behave.
 
@@ -119,30 +111,29 @@ typedef struct {
 } PhysicsInfo;
 ```
 
->``numLimbs`` \
+``numLimbs`` \
 is the amount of limbs you have for your strand. Basically how many bones you've set to it in Blender.
 
->``gravity`` \
+``gravity`` \
  as you'd think, affects how strongly it'll be pulled upwards or downwards.
 
->``floorY`` \
+``floorY`` \
 is the world position, which will prevent the limbs going below that. Bot fear not, if the target goes below this, the limbs wont be stuck at this pos, but they just aim towards this ``Y`` location. This effect is utilized by ``Volvagia`` in Ocarina of Time. When Volvagia goes back into the hole, its mane has natural movement into the hole as well.
 
->``maxVel`` \
+``maxVel`` \
 clamps the velocity to certain value. If you're not sure what value to use here, safest value would be `50.0f`.
 
 
->``velStep`` \
+``velStep`` \
 could be also called ___deacceleration step___. It handles from stepping the velocity towards ``0.0f``. But it also works as a __dampening__ value. __velStep__ below ``1.0f`` will have spring like motion and above ``1.0f`` dampens it.
 
 
->``velMult`` \
+``velMult`` \
 multiplies the calculation that gets the velocity. It is normally used to soften the velocity, as higher than ``1.0f`` _might_ become unstable. But going above ``1.0f`` isn't bad. Best way to find the results you want is to try.
 
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
+[Back to PhysicsStrand struct](#physicsstrand-struct)\
+[Back to list](#list-of-content)
 
----
 ### PhysicsHead
 Values that are used in the **Physics_DrawDynamicStrand** to have the strand aligned to the head. These can be altered between **Physics_GetHeadProperties** and 
 **Physics_DrawDynamicStrand**, and in some cases it's even necessary. Trial and error is definitely required if working with ``folder characters``.
@@ -155,26 +146,26 @@ typedef struct {
 } PhysicsHead;
 ```
 
-If you'd like to alter position, use Physics_GetHeadProperties ``arg2`` to alter position in heads model space.
+If you'd like to alter position, use Physics_GetHeadProperties ``headPosModel`` to alter position in heads model space. The local axises depend on the `Head direction` in rest pose, the axises might not match being `X = X, Y = Y, Z = Z`.
 
 ```c
-void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel, s32 flag);
+void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel);
 ```
 
-If rotation mostly matches and you want to **adjust** rotation, check [<span style="color:red">rigidity](#physicsrigidity).
+If rotation mostly matches and you want to **adjust** rotation, check [rigidity](#physicsrigidity).
 
 
-For ``folded characters``, it's very likely that the rotations aren't matching how you would think they would. For example `Player head` rotations would go like this:
- - RotX - PlayerRotZ
- - RotY - PlayerRotY
- - RotZ - PlayerRotX
+For ``folded characters``, it's very likely that the rotations aren't matching how you would think they would. For example `Player head` rotations would go like this: \
+ RotX == PlayerRotZ \
+ RotY == PlayerRotY \
+ RotZ == PlayerRotX
 
 
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
+[Back to PhysicsStrand struct](#physicsstrand-struct)\
+[Back to list](#list-of-content)
 
----
 ### PhysicsGfx
+Here we handle all that has to do with graphics.
 ```c
 typedef struct {
 	u32   dlist;
@@ -184,11 +175,24 @@ typedef struct {
 	                 to get in position before drawing */
 } PhysicsGfx;
 ```
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
 
----
+``dlist`` \
+For this you'll give the single __displaylist__ address that will be used to display the whole strand.
+
+``scale`` \
+Think of this like you think of `Actor_SetScale`
+
+``segID`` \
+Segment ID where the __matrix__ is allocated. `Physics_DrawDynamicStrand` allocates matrix and uses `gSPSegment` to this ID.
+
+``noDraw`` \
+Disables all that has to do with drawing your strand. Like mentioned in the comment, this can be used to have the positions ___"precalculated"___ for you. Example can be found in [Actor Draw function](#actor-draw-function). 
+
+[Back to PhysicsStrand struct](#physicsstrand-struct) \
+[Back to list](#list-of-content)
+
 ### PhysicsSpheres
+"Collision" spheres, that push the pos of each limb away, if they are within the radius.
 ```c
 typedef struct {
 	s32    num; // amount of spheres
@@ -196,11 +200,20 @@ typedef struct {
 	f32    radius;
 } PhysicsSpheres;
 ```
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
+``num`` \
+Count of the `centers` array.
 
----
+``centers`` \
+Pointer to array, where the center positions are stored.
+
+``radius`` \
+Tests if `dist < radius` and pushes limbs based on that.
+
+[Back to PhysicsStrand struct](#physicsstrand-struct)\
+[Back to list](#list-of-content)
+
 ### PhysicsConstraint
+Limits rotations, as it can get wild very easily.
 ```c
 typedef struct {
 	u8    lockRoot;    // Prevent physics rotating root limb
@@ -208,11 +221,20 @@ typedef struct {
 	Vec2f rotStepDraw; // DEG, limits rot on draw, smoothens output
 } PhysicsConstraint;
 ```
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
+``lockRoot`` \
+Locks the first limb, ***root***, to the value it is already in. This is necessary if you want the **strand** to match exactly to something, like example **Link's hat**.
 
----
+``rotStepCalc`` \
+This limits the amount of rotation to next limb in `calculation`. If this isn't needed, set it to `zero`.
+
+``rotStepDraw`` \
+This limits the amount of rotation to next limb in `draw`. If this isn't needed, set it to `zero`.
+
+[Back to PhysicsStrand struct](#physicsstrand-struct)\
+[Back to list](#list-of-content)
+
 ### PhysicsRigidity
+This helps getting the shape you want to have.
 ```c
 typedef struct {
 	s32   num;  // How many limbs will be smoothed with push
@@ -221,32 +243,56 @@ typedef struct {
 	Vec3f rot;  // DEG, rigids towards, relative rot
 } PhysicsRigidity;
 ```
-[<span style="color:red">Back to PhysicsStrand struct](#physicsstrand-struct)\
-[<span style="color:red">Back to list](#list-of-content)
+``num`` \
+***num / info.num*** is processed to be shaped. So for example if you have ponytail that you want to have nice smooth shape at the beginning, you would ***probably*** use something like `num = 5` out of `9 total limbs`. 
 
----
+***Do note*** that this is smoothened. There is a `for loop` used with this, and the closer it gets to the `num`, the less it affects the position.
+
+``push`` \
+Think of this kind of like a direction of where you want your strand to go to. For example if you're working on ponytail, `Z` should be negative value to shape it go behind your character. Using other axises isn't necessary but they're there if they are needed.
+
+``mult`` \
+Multiplys the amount of how much push affects. Recommended value is `0.2f`.
+
+``rot`` \
+This affects the rotation it pushes towards. This is additional on top of the `head rotation` so if you do not feel like you need it, keep it `zero`.
+
+[Back to PhysicsStrand struct](#physicsstrand-struct)\
+[Back to list](#list-of-content)
+
 ## Examples
-Here you set the arrays for physics to store/read values from. In this specific example the substruct is named `PonytailPhysics`, but you can name it whatever you like.
+Here's example of how to store necessary values in your `Entity Struct`.
 
 ```c
-
 typedef struct {
 	Actor         actor;
 	SkelAnime     skelAnime;
 	Vec3s         jointTable[SKEL_NPC_NUMBONES_DT];
 	Vec3s         morphTable[SKEL_NPC_NUMBONES_DT];
-	PhysicsStrand phyPonytail;
-	f32           phyJointLength[10]; // Number of limbs + 1
-	PhysicsJoint  phyJointTable[10];  // Number of limbs + 1
+	PhysicsStrand tailStrand;
+	PhysicsLimb   tailLimb[10];  // Number of limbs + 1
+	f32           tailLength[10]; // Number of limbs + 1
 	Vec3f         bodyPartsPos[6];
 	Vec3f         tailEnd;
 } EnNPC;
 ```
-[<span style="color:red">Back to list](#list-of-content)
 
----
-### PhysicsStrand
-Here are all the options that affect how the strand will be processed. These could also be stored in Actors struct, if these are set into it in init.
+`PhysicsStrand` \
+Needs to be only 1 per strand.
+
+`PhysicsLimb` \
+Must have ``[NumberOfLimbs + 1]``. Otherwise the data will flow over.
+
+`PhysicsLimbLength` \
+f32 array, that also needs to have ``[NumberOfLimbs + 1]``.
+
+``tailEnd`` \
+Not necessary, but is here for example shown in [PhysicsCallback](#physicscallback).
+
+[Back to list](#list-of-content)
+
+### PhysicsStrandInit
+If you're not completely sure how to fill this, you may use this as a reference.
 ```c
 PhysicsStrandInit sPonytailInit = {
 	.info = {
@@ -268,7 +314,7 @@ PhysicsStrandInit sPonytailInit = {
 		.noDraw = true,
 	},
 	.spheres = {
-		.num = 6,
+		.num = 0,
 		.centers = NULL,
 		.radius = 4.0f
 	},
@@ -310,21 +356,27 @@ PhysicsStrandInit sPonytailInit = {
 	},
 };
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 ### Actor Init function
 ```c
 void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 	Actor_SetScale(&this->actor, 0.0055f);
 	SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKEL_NPC, ANIM_IDLE, this->jointTable, this->morphTable, SKEL_NPC_NUMBONES_DT);
 	
-	Physics_SetPhysicsStrand(&sPonytailInit, &this->phyPonytail, this->phyJointLength, this->bodyPartsPos);
+	Physics_SetPhysicsStrand(&sPonytailInit, &this->tailStrand, this->tailLength, this->bodyPartsPos, ARRAY_COUNT(this->bodyPartsPos));
 }
 ```
-[<span style="color:red">Back to list](#list-of-content)
 
----
+Arguments for ``Physics_SetPhysicsStrand``
+ 1. ``Pointer``, source **PhysicsStrandInit**,
+ 1. ``Pointer``, destination to **PhysicsStrand** where it will be initialized,
+ 1. ``Pointer``, destination for **limbLengths** from **PhysicsStrandInit**
+ 1. ``Pointer``, location of **sphere centers array** to read them from
+ 1. ``s32``, **ARRAY_COUNT(X)** of **sphere centers array**
+
+[Back to list](#list-of-content)
+
 ### OverridePostDraw
 In `SkelAnime` PostDraw you can update the "sphere" collision centers like so (`bodyPartsPos`). This will prevent the limbs of the strand from going through the skeleton limbs.
 ```c
@@ -337,7 +389,7 @@ void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s*
 			Matrix_MultVec3f(&zero, &this->actor.focus.pos);
 			break;
 		case NpcLimb_Ponytail1:
-			Physics_GetHeadProperties(&this->phyPonytail, &zero, 0);
+			Physics_GetHeadProperties(&this->phyPonytail, &zero);
 			break;
 	    case NpcLimb_Upperbody:
 		    Matrix_MultVec3f(&zero, &this->bodyPartsPos[0]);
@@ -360,11 +412,11 @@ void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s*
 	}
 }
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 ### PhysicCallback
-This callback can have up to two `pointers` of your choice. Type of the pointers are declared in this callback function itself and then assigned to the `Physics_DrawDynamicStrand` function if used.
+Optional feature. \
+This callback can have up to two ***pointers of your choice***. Type of the pointers are declared in this callback function itself and then assigned to the `Physics_DrawDynamicStrand` function if used.
 ```c
 void EnNpc_PhysicsCallback(s32 limbIndex, GlobalContext* globalCtx, void* arg2) {
 	Vec3f zero = { 0.0f, 100.0f, 0.0f };
@@ -373,9 +425,8 @@ void EnNpc_PhysicsCallback(s32 limbIndex, GlobalContext* globalCtx, void* arg2) 
 		Matrix_MultVec3f(&zero, &this->tailEnd);
 }
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 ### Actor Draw function
 In draw you can do a `for loop` to get the positions calculated instantly. Also remember to use the extra arguments if you're going to use `PhysicCallback`.
 ```c
@@ -397,9 +448,9 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 				&POLY_OPA,
 				this->phyJointTable,
 				&this->phyPonytail,
-				0,
-				0,
-				0
+				0, // No PhysicsCallback
+				0, // No need for callback arguments
+				0  // No need for callback arguments
 			);
 		}
 		this->phyPonytail.gfx.noDraw = false;
@@ -410,15 +461,14 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 		&POLY_OPA,
 		this->phyJointTable,
 		&this->phyPonytail,
-		EnNpc_PhysicsCallback,
-		globalCtx,
-		NULL
+		EnNpc_PhysicsCallback, // Callback
+		globalCtx, // Arguments sent to PhysicsCallback
+		NULL       // Arguments sent to PhysicsCallback
 	);
 }
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
 
----
 # Credits
 ```
 Dragorn421
@@ -431,4 +481,4 @@ zel.
 Decompiling Boss07 - Majora whip function for reference
 Improvement suggestions for Physics helpers
 ```
-[<span style="color:red">Back to list](#list-of-content)
+[Back to list](#list-of-content)
