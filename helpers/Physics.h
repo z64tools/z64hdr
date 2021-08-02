@@ -79,23 +79,23 @@ typedef struct {
 } PhysicsStrand;
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* mult, s32 flag) {
+void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel, s32 flag) {
 	static MtxF mtxF;
 	Vec3f zero = { 0 };
 	
 	Matrix_Get(&mtxF);
 	strand->head.mtxF = &mtxF;
 	func_800D20CC(&mtxF, &strand->head.rot, flag);
-	if (mult == NULL) {
+	if (headPosModel == NULL) {
 		Matrix_MultVec3f(&zero, &strand->head.pos);
 		
 		return;
 	}
-	Matrix_MultVec3f(mult, &strand->head.pos);
+	Matrix_MultVec3f(headPosModel, &strand->head.pos);
 }
 
 _Z64HDR_HELPER_PREFIX_
-void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* lengthDest, Vec3f* sphereCenters) {
+void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* limbLengthDest, Vec3f* spheresCenters, s32 spheresArrayCount) {
 	dest->info = init->info;
 	dest->head = init->head;
 	dest->gfx = init->gfx;
@@ -104,10 +104,11 @@ void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32*
 	dest->rigidity = init->rigidity;
 	
 	for (s32 i = 0; i < init->info.numLimbs + 1; i++) {
-		lengthDest[i] = init->limbsLength[i];
+		limbLengthDest[i] = init->limbsLength[i];
 	}
-	dest->limbsLength = lengthDest;
-	dest->spheres.centers = sphereCenters;
+	dest->limbsLength = limbLengthDest;
+	dest->spheres.centers = spheresCenters;
+	dest->spheres.num = spheresArrayCount;
 }
 
 _Z64HDR_HELPER_PREFIX_
