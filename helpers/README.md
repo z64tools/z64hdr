@@ -239,7 +239,7 @@ PhysicsStrandInit sPonytailInit = {
 [Back to top](#list-of-content)
 
 ---
-### ActorInit
+### Actor Init function
 ```c
 void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 	Actor_SetScale(&this->actor, 0.0055f);
@@ -252,7 +252,7 @@ void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 
 ---
 ### OverridePostDraw
-In `SkelAnime` PostDraw you can get the "sphere" collision centers like so. This will prevent the limbs of the strand go through them.
+In `SkelAnime` PostDraw you can update the "sphere" collision centers like so (`bodyPartsPos`). This will prevent the limbs of the strand from going through the skeleton limbs.
 ```c
 void EnNpc_PostDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s* rot, void* thisx) {
 	EnNpc* this = (EnNpc*)thisx;
@@ -338,7 +338,7 @@ void EnNPC_Draw(EnNPC* this, GlobalContext* globalCtx) {
 		&this->phyPonytail,
 		EnNpc_PhysicsCallback,
 		globalCtx,
-		0
+		NULL
 	);
 }
 ```

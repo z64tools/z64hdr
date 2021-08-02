@@ -142,9 +142,9 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 	Matrix_RotateX_s(strand->head.rot.x, MTXMODE_NEW);
 	Matrix_RotateY_s(strand->head.rot.y, MTXMODE_APPLY);
 	Matrix_RotateZ_s(strand->head.rot.z, MTXMODE_APPLY);
-	if (strand->rigidity.rot.x) Matrix_RotateX_f(strand->rigidity.rot.x, MTXMODE_APPLY);
-	if (strand->rigidity.rot.y) Matrix_RotateY_f(strand->rigidity.rot.y, MTXMODE_APPLY);
-	if (strand->rigidity.rot.z) Matrix_RotateZ_f(strand->rigidity.rot.z, MTXMODE_APPLY);
+	if (strand->rigidity.rot.x != 0) Matrix_RotateX_f(strand->rigidity.rot.x, MTXMODE_APPLY);
+	if (strand->rigidity.rot.y != 0) Matrix_RotateY_f(strand->rigidity.rot.y, MTXMODE_APPLY);
+	if (strand->rigidity.rot.z != 0) Matrix_RotateZ_f(strand->rigidity.rot.z, MTXMODE_APPLY);
 	Matrix_MultVec3f(&strand->rigidity.push, &rigidity);
 	
 	// Main calculation loop
