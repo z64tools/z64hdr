@@ -1,9 +1,9 @@
 
 # Z64 Helpers
 
-By default these aren't set `static inline`. To do this, you can `#define` `_Z64HDR_HELPER_PREFIX_` to achieve this.
+By default these aren't set `static inline`. To do this, you can `#define` `_Z64HDR_HELPER_QUALIFIERS_` to achieve this.
 ```c
-#define _Z64HDR_HELPER_PREFIX_ static inline
+#define _Z64HDR_HELPER_QUALIFIERS_ static inline
 #include <helpers/Helper.h>
 ```
 ### List of content
