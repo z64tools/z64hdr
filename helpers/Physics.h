@@ -79,13 +79,13 @@ typedef struct {
 } PhysicsStrand;
 
 _Z64HDR_HELPER_QUALIFIERS_
-void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel, s32 flag) {
+void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
 	static MtxF mtxF;
 	Vec3f zero = { 0 };
 	
 	Matrix_Get(&mtxF);
 	strand->head.mtxF = &mtxF;
-	func_800D20CC(&mtxF, &strand->head.rot, flag);
+	func_800D20CC(&mtxF, &strand->head.rot, 0);
 	if (headPosModel == NULL) {
 		Matrix_MultVec3f(&zero, &strand->head.pos);
 		
@@ -242,11 +242,10 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 			
 			if (radiusTo < strand->spheres.radius) {
 				s16 yaw = Math_Vec3f_Yaw(&strand->spheres.centers[i], &tempPosAdd);
-				s16 pitch = Math_Vec3f_Pitch(&strand->spheres.centers[i], &tempPosAdd);
-				posAdd.x += Math_SinS(headRotY + 0x8000) * (strand->spheres.radius - radiusTo) * 0.5f;
-				posAdd.z += Math_CosS(headRotY + 0x8000) * (strand->spheres.radius - radiusTo) * 0.5f;
-				velAdj.x += Math_SinS(headRotY + 0x8000) * (strand->spheres.radius - radiusTo) * 0.5f;
-				velAdj.z += Math_CosS(headRotY + 0x8000) * (strand->spheres.radius - radiusTo) * 0.5f;
+				posAdd.x += Math_SinS(yaw) * (strand->spheres.radius - radiusTo) * 0.5f;
+				posAdd.z += Math_CosS(yaw) * (strand->spheres.radius - radiusTo) * 0.5f;
+				velAdj.x += Math_SinS(yaw) * (strand->spheres.radius - radiusTo) * 0.5f;
+				velAdj.z += Math_CosS(yaw) * (strand->spheres.radius - radiusTo) * 0.5f;
 				
 				pPrevRot->y = angY =  Math_Atan2F(posAdd.z, posAdd.x);
 				pPrevRot->x = angX = -Math_Atan2F(sqrtf(SQ(posAdd.x) + SQ(posAdd.z)), posAdd.y);
@@ -307,7 +306,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		else
 			Matrix_Scale(strand->gfx.scale.x, strand->gfx.scale.y, strand->gfx.scale.z, MTXMODE_APPLY);
 		
-		if(callback) {
+		if (callback) {
 			((PhysicCallback)callback)(i, callbackArg1, callbackArg2);
 		}
 		Matrix_ToMtx(&matrix[i], __FILE__, __LINE__);
