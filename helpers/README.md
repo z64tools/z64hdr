@@ -93,7 +93,6 @@ typedef struct {
 ```c
 typedef struct {
 	PhysicsInfo       info;
-	PhysicsHead       head;
 	PhysicsGfx        gfx;
 	PhysicsSpheres    spheres;
 	PhysicsConstraint constraint;

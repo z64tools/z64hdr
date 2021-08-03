@@ -98,6 +98,7 @@ void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32*
 	dest->spheres = init->spheres;
 	dest->constraint = init->constraint;
 	dest->rigidity = init->rigidity;
+	dest->head = (PhysicsHead){ 0 };
 	
 	for (s32 i = 0; i < init->info.numLimbs + 1; i++) {
 		limbLengthDest[i] = init->limbsLength[i];
