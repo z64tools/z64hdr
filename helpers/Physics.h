@@ -61,7 +61,6 @@ typedef struct {
 typedef struct {
 	PhysicsInfo       info;
 	PhysicsGfx        gfx;
-	PhysicsSpheres    spheres;
 	PhysicsConstraint constraint;
 	PhysicsRigidity   rigidity;
 	f32 limbsLength[];
@@ -92,10 +91,9 @@ void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
 }
 
 Z64HDR_HELPER_QUALIFIERS
-void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* limbLengthDest, Vec3f* spheresCenters, s32 spheresArrayCount) {
+void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* limbLengthDest, Vec3f* spheresCenters, s32 spheresArrayCount, f32 spheresRadius) {
 	dest->info = init->info;
 	dest->gfx = init->gfx;
-	dest->spheres = init->spheres;
 	dest->constraint = init->constraint;
 	dest->rigidity = init->rigidity;
 	dest->head = (PhysicsHead){ 0 };
@@ -106,6 +104,7 @@ void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32*
 	dest->limbsLength = limbLengthDest;
 	dest->spheres.centers = spheresCenters;
 	dest->spheres.num = spheresArrayCount;
+	dest->spheres.radius = spheresRadius;
 }
 
 Z64HDR_HELPER_QUALIFIERS

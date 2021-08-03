@@ -94,7 +94,6 @@ typedef struct {
 typedef struct {
 	PhysicsInfo       info;
 	PhysicsGfx        gfx;
-	PhysicsSpheres    spheres;
 	PhysicsConstraint constraint;
 	PhysicsRigidity   rigidity;
 	f32 limbsLength[]; // Flexible array
@@ -319,11 +318,6 @@ PhysicsStrandInit sPonytailInit = {
 		.segID = 0x0B,
 		.noDraw = true,
 	},
-	.spheres = {
-		.num = 0,
-		.centers = NULL,
-		.radius = 4.0f
-	},
 	.constraint = {
 		.lockRoot = false,
 		.rotStepCalc = {
@@ -370,7 +364,7 @@ void EnNpc_Init(EnNpc* this, GlobalContext* globalCtx) {
 	Actor_SetScale(&this->actor, 0.0055f);
 	SkelAnime_InitFlex(globalCtx, &this->skelAnime, SKEL_NPC, ANIM_IDLE, this->jointTable, this->morphTable, SKEL_NPC_NUMBONES_DT);
 	
-	Physics_SetPhysicsStrand(&sPonytailInit, &this->tailStrand, this->tailLength, this->bodyPartsPos, ARRAY_COUNT(this->bodyPartsPos));
+	Physics_SetPhysicsStrand(&sPonytailInit, &this->tailStrand, this->tailLength, this->bodyPartsPos, ARRAY_COUNT(this->bodyPartsPos), 4.0f);
 }
 ```
 
@@ -380,6 +374,7 @@ Arguments for ``Physics_SetPhysicsStrand``
  1. ``Pointer``, destination for **limbLengths** from **PhysicsStrandInit**
  1. ``Pointer``, location of **sphere centers array** to read them from
  1. ``s32``, **ARRAY_COUNT(X)** of **sphere centers array**
+  1. ``f32``, **sphereRadius**
 
 [Back to Table of Content](#table-of-content)
 
