@@ -94,7 +94,6 @@ void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
 Z64HDR_HELPER_QUALIFIERS
 void Physics_SetPhysicsStrand(PhysicsStrandInit* init, PhysicsStrand* dest, f32* limbLengthDest, Vec3f* spheresCenters, s32 spheresArrayCount) {
 	dest->info = init->info;
-	dest->head = init->head;
 	dest->gfx = init->gfx;
 	dest->spheres = init->spheres;
 	dest->constraint = init->constraint;
