@@ -28,7 +28,7 @@ typedef struct {
 typedef struct {
 	Vec3f pos;
 	Vec3s rot;
-	MtxF* mtxF;
+	MtxF  mtxF;
 } PhysicsHead;
 
 typedef struct {
@@ -60,7 +60,6 @@ typedef struct {
 
 typedef struct {
 	PhysicsInfo       info;
-	PhysicsHead       head;
 	PhysicsGfx        gfx;
 	PhysicsSpheres    spheres;
 	PhysicsConstraint constraint;
@@ -80,12 +79,10 @@ typedef struct {
 
 Z64HDR_HELPER_QUALIFIERS
 void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel) {
-	static MtxF mtxF;
 	Vec3f zero = { 0 };
 	
-	Matrix_Get(&mtxF);
-	strand->head.mtxF = &mtxF;
-	func_800D20CC(&mtxF, &strand->head.rot, 0);
+	Matrix_Get(&strand->head.mtxF);
+	func_800D20CC(&strand->head.mtxF, &strand->head.rot, 0);
 	if (headPosModel == NULL) {
 		Matrix_MultVec3f(&zero, &strand->head.pos);
 		
@@ -182,7 +179,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		pPrevRot->x = angX;
 		
 		// Handle constraints if they are set
-		if (strand->constraint.rotStepCalc.x || strand->constraint.rotStepCalc.y || strand->constraint.lockRoot) {
+		if (strand->constraint.rotStepCalc.x != 0 || strand->constraint.rotStepCalc.y != 0 || strand->constraint.lockRoot) {
 			s16 rootAngleX, rootAngleY;
 			s16 workAngleX, workAngleY;
 			s16 tempAngleX, tempAngleY;
@@ -193,14 +190,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 					pPrevRot->x = angX = -Math_Atan2F(sqrtf(SQ(rigidity.x) + SQ(rigidity.z)), rigidity.y);
 					pPrevRot->y = angY = Math_Atan2F(rigidity.z, rigidity.x);
 				} else {
-					if (strand->constraint.rotStepCalc.x) {
+					if (strand->constraint.rotStepCalc.x != 0) {
 						rootAngleX = RADF_TO_BINANG(-Math_Atan2F(sqrtf(SQ(rigidity.x) + SQ(rigidity.z)), rigidity.y));
 						workAngleX = RADF_TO_BINANG(-Math_Atan2F(sqrtf(SQ(workVec.x) + SQ(workVec.z)), workVec.y));
 						Math_SmoothStepToS(&rootAngleX, workAngleX, 1, DEGF_TO_BINANG(strand->constraint.rotStepCalc.x), 1);
 						angX = BINANG_TO_RAD(rootAngleX);
 						pPrevRot->x = angX;
 					}
-					if (strand->constraint.rotStepCalc.y) {
+					if (strand->constraint.rotStepCalc.y != 0) {
 						rootAngleY = RADF_TO_BINANG(Math_Atan2F(rigidity.z, rigidity.x));
 						workAngleY = RADF_TO_BINANG(Math_Atan2F(workVec.z, workVec.x));
 						Math_SmoothStepToS(&rootAngleY, workAngleY, 1, DEGF_TO_BINANG(strand->constraint.rotStepCalc.y), 1);
@@ -209,14 +206,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 					}
 				}
 			} else {
-				if (strand->constraint.rotStepCalc.x) {
+				if (strand->constraint.rotStepCalc.x != 0) {
 					tempAngleX = RADF_TO_BINANG(jointTable[i - 2].rot.x);
 					workAngleX = RADF_TO_BINANG(-Math_Atan2F(sqrtf(SQ(workVec.x) + SQ(workVec.z)), workVec.y));
 					Math_SmoothStepToS(&tempAngleX, workAngleX, 1, DEGF_TO_BINANG(strand->constraint.rotStepCalc.x), 1);
 					angX = BINANG_TO_RAD(tempAngleX);
 					pPrevRot->x = angX;
 				}
-				if (strand->constraint.rotStepCalc.y) {
+				if (strand->constraint.rotStepCalc.y != 0) {
 					tempAngleY = RADF_TO_BINANG(jointTable[i - 2].rot.y);
 					workAngleY = RADF_TO_BINANG(Math_Atan2F(workVec.z, workVec.x));
 					Math_SmoothStepToS(&tempAngleY, workAngleY, 1, DEGF_TO_BINANG(strand->constraint.rotStepCalc.y), 1);
@@ -286,14 +283,14 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		
 		Matrix_Translate(pPos->x, pPos->y, pPos->z, MTXMODE_NEW);
 		
-		if (strand->constraint.rotStepDraw.y) {
+		if (strand->constraint.rotStepDraw.y != 0) {
 			Math_SmoothStepToS(&y, RADF_TO_BINANG(pRot->y), 3, DEGF_TO_BINANG(strand->constraint.rotStepDraw.y), 1);
 			Matrix_RotateY_s(y, MTXMODE_APPLY);
 		} else {
 			Matrix_RotateY(pRot->y, MTXMODE_APPLY);
 		}
 		
-		if (strand->constraint.rotStepDraw.x) {
+		if (strand->constraint.rotStepDraw.x != 0) {
 			Math_SmoothStepToS(&x, RADF_TO_BINANG(pRot->x), 3, DEGF_TO_BINANG(strand->constraint.rotStepDraw.x), 1);
 			Matrix_RotateX_s(x, MTXMODE_APPLY);
 		} else {
@@ -305,7 +302,7 @@ void Physics_DrawDynamicStrand(GraphicsContext* gfxCtx, TwoHeadGfxArena* disp, P
 		else
 			Matrix_Scale(strand->gfx.scale.x, strand->gfx.scale.y, strand->gfx.scale.z, MTXMODE_APPLY);
 		
-		if (callback) {
+		if (callback != NULL) {
 			((PhysicCallback)callback)(i, callbackArg1, callbackArg2);
 		}
 		Matrix_ToMtx(&matrix[i], __FILE__, __LINE__);

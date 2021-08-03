@@ -27,7 +27,7 @@ By default these aren't set `static inline`. To do this, you can `#define` `Z64H
 - [3. Credits](#credits)
 # Matrix
 ## Matrix Mult
-These are pretty much same as `Matrix_MultVec3f`, but instead of using Vec3f, these are for individual axises.
+These are pretty much the same as `Matrix_MultVec3f`, but instead of using Vec3f, these are for individual axes.
 ```c
 void Matrix_MultX(f32 x, Vec3f* dst);
 void Matrix_MultY(f32 y, Vec3f* dst);
@@ -37,7 +37,7 @@ void Matrix_MultZ(f32 z, Vec3f* dst);
 
 ## Matrix Macros
 
-These macros are for using different format of rotations. By default `Matrix_Rotate` first argument is used with radiance.
+These macros are for using different units of rotations. By default `Matrix_Rotate` first argument is used with radians.
 ```c
 #define Matrix_RotateY_s(binang, mtxMode) Matrix_RotateY(BINANG_TO_RAD(binang), mtxMode)
 #define Matrix_RotateX_s(binang, mtxMode) Matrix_RotateX(BINANG_TO_RAD(binang), mtxMode)
@@ -68,9 +68,9 @@ Physics takes care of doing calculations.
 - [ ] ``Cloth`` **Capes**, **dresses**, etc...
 
 ## PhysicsStrand Struct
-These are the main struct for drawing dynamic strand. Think of as ``settings``.
+These are the main structs for drawing dynamic strand. Think of them as ``settings``.
 
-Difference between these is that `PhysicsStrandInit` has `flexible array` at the bottom of it, which is perfect for initialization, if you want to keep your initial values stored.
+Difference between these is that `PhysicsStrandInit` has a `flexible array` at the end of it, which is perfect for initialization, if you want to keep your initial values stored.
 
 Read more about the individual structs inside these from: \
 [PhysicsInfo](#physicsinfo)\
@@ -132,7 +132,7 @@ clamps the velocity to certain value. If you're not sure what value to use here,
 
 
 ``velStep`` \
-could be also called ___deacceleration step___. It handles from stepping the velocity towards ``0.0f``. But it also works as a __dampening__ value. __velStep__ below ``1.0f`` will have spring like motion and above ``1.0f`` dampens it.
+could be also called ___deceleration step___. It handles from stepping the velocity towards ``0.0f``. But it also works as a __dampening__ value. __velStep__ below ``1.0f`` will have spring like motion and above ``1.0f`` dampens it.
 
 
 ``velMult`` \
@@ -143,7 +143,7 @@ multiplies the calculation that gets the velocity. It is normally used to soften
 
 ### PhysicsHead
 Values that are used in the **Physics_DrawDynamicStrand** to have the strand aligned to the head. These can be altered between **Physics_GetHeadProperties** and 
-**Physics_DrawDynamicStrand**, and in some cases it's even necessary. Trial and error is definitely required if working with ``folder characters``.
+**Physics_DrawDynamicStrand**, and in some cases it's even necessary. Trial and error is definitely required if working with ``folded characters``.
 
 ```c
 typedef struct {
@@ -153,7 +153,7 @@ typedef struct {
 } PhysicsHead;
 ```
 
-If you'd like to alter position, use Physics_GetHeadProperties ``headPosModel`` to alter position in heads model space. The local axises depend on the `Head direction` in rest pose, the axises might not match being `X = X, Y = Y, Z = Z`.
+If you'd like to alter position, use Physics_GetHeadProperties ``headPosModel`` to alter position in heads model space. The local axises depend on the `Head direction` in rest pose, the axes might not match being `X = X, Y = Y, Z = Z`.
 
 ```c
 void Physics_GetHeadProperties(PhysicsStrand* strand, Vec3f* headPosModel);
