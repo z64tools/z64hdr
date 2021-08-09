@@ -701,6 +701,22 @@ func_8010BD58 = 0x800DD400;
 func_8010BD58 = 0x800DD400;
 func_8010BD88 = 0x800DD430;
 func_8010BDBC = 0x800DD464;
+Lights_PointSetInfo = 0x80065B70;
+Object_Spawn = 0x800812F0;
+Flags_UnsetTempClear = 0x800206C8;
+ZeldaArena_Malloc = 0x80066C10;
+ZeldaArena_Free = 0x80066C90;
+LinkAnimation_Change = 0x8008C000;
+EffectSsDust_Spawn = 0x8001BCE0;
+EffectSsGSpk_SpawnAccel = 0x8001CB58;
+EffectSsSibuki2_Spawn = 0x8001D62C;
+EffectSsIcePiece_SpawnBurst = 0x8001DAB8;
+EffectSsDeadDs_Spawn = 0x8001E3B0;
+EffectSsBlast_Spawn = 0x8001C9EC;
+EffectSsFireTail_Spawn = 0x8001DE40;
+EffectSsHitMark_Spawn = 0x8001D750;
+EffectSsDFire_Spawn = 0x8001CE18;
+Inventory_DeleteItem = 0x080071960;
 
 /* Symbols */
 
