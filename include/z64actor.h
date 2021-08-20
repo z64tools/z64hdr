@@ -156,7 +156,7 @@ typedef struct Actor {
     /* 0x130 */ ActorFunc update; // Update Routine. Called by `Actor_UpdateAll`
     /* 0x134 */ ActorFunc draw; // Draw Routine. Called by `Actor_Draw`
     /* 0x138 */ ActorOverlay* overlayEntry; // Pointer to the overlay table entry for this actor
-    #ifndef _Z64HDR_10_
+    #ifndef _Z64HDR_U10_
     /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
     #endif
 } Actor; // size = 0x14C

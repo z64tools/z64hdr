@@ -17,8 +17,8 @@ Currently supports OoT MQ Debug (the Debug ROM) and OoT 1.0 J/U.
 
 ## How to Use
 
-- `#include "oot_debug.h"` or `#include "oot_10.h"`.
-- In your link step, use a linker script like `mips64-ld -T LINKER_SCRIPT.ld --emit-relocs -o something.elf something.o`. If you are building a custom actor, use `oot_debug.ld` or `oot_10.ld` as appropriate; these will include `oot_X_syms.ld` and `z64hdr_actor.ld`. If you are writing other custom code which requires a different ELF layout than provided in `z64hdr_actor.ld`, provide your own linker script, and within that `INCLUDE oot_X_syms.ld` or provide `-T oot_X_syms.ld` in addition to your own script to the linker.
+- `#include "oot_mq_debug/z64hdr.h"` or `#include "oot_u10/z64hdr.h"`.
+- In your link step, use a linker script like `mips64-ld -T LINKER_SCRIPT.ld --emit-relocs -o something.elf something.o`. If you are building a custom actor, use `oot_mq_debug/z64hdr.ld` or `oot_u10/z64hdr.ld` as appropriate; these will include `oot_X/syms.ld` and `common/z64hdr_actor.ld`. If you are writing other custom code which requires a different ELF layout than provided in `z64hdr_actor.ld`, provide your own linker script, and within that `INCLUDE oot_X/syms.ld` or provide `-T oot_X/syms.ld` in addition to your own script to the linker.
 
 ## Other info
 
@@ -65,7 +65,7 @@ Addresses from:
     ```
     void* bcopy(const void* __src, void* __dest, u32 __n);
     ```
-- functions.h: add `#ifdef _Z64HDR_DEBUG_` around `, const char* file, s32 line` in
+- functions.h: add `#ifdef _Z64HDR_MQ_DEBUG_` around `, const char* file, s32 line` in
     ```
     DmaMgr_SendRequest2
     DmaMgr_SendRequest1
