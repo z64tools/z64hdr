@@ -3,7 +3,7 @@
 
 #include "z64.h"
 
-#include "../common/intrinsics.h""
+#include "common/intrinsics.h"
 
 void cleararena(void);
 void bootproc(void);
