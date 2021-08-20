@@ -5,8 +5,8 @@
 #define Z64HDR_HELPER_QUALIFIERS
 #endif
 
-#include "include/z64.h"
-#include "symbols.h"
+#include "z64.h"
+#include "../symbols.h"
 
 #define Matrix_RotateY_s(binang, mtxMode) Matrix_RotateY(BINANG_TO_RAD(binang), mtxMode)
 #define Matrix_RotateX_s(binang, mtxMode) Matrix_RotateX(BINANG_TO_RAD(binang), mtxMode)

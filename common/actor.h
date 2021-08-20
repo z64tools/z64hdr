@@ -1,7 +1,7 @@
 #ifndef _ACTOR_ADDITIONAL_H_
 #define _ACTOR_ADDITIONAL_H_
 
-#include "include/z64.h"
+#include "z64.h"
 
 #define ACTORFLAG_TARGET        (1)
 #define ACTORFLAG_UNK_02        (1 << 2)

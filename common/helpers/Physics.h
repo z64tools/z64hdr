@@ -5,7 +5,7 @@
 #define Z64HDR_HELPER_QUALIFIERS
 #endif
 
-#include "include/z64.h"
+#include "z64.h"
 #include "Matrix.h"
 
 typedef void(*PhysicCallback)(s32 limbIndex, void*, void*);

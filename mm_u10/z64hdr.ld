@@ -1,2 +1,2 @@
 INCLUDE syms.ld
-INCLUDE ../common/z64hdr_actor.ld
+INCLUDE z64hdr_actor.ld
