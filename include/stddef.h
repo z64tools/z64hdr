@@ -3,6 +3,8 @@
 
 #define NULL ((void*)0)
 
-typedef unsigned long size_t;
+#ifndef __IDE_FLAG__
+	typedef unsigned long size_t;
+#endif
 
 #endif
