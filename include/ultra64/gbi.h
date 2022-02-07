@@ -196,8 +196,8 @@
 #define G_TX_CLAMP            (gI_(0b1) << 1)
 #define G_TX_NOMASK           gI_(0)
 #define G_TX_NOLOD            gI_(0)
-#define G_OFF                 gI_(0)
-#define G_ON                  gI_(1)
+// #define G_OFF                 gI_(0)
+// #define G_ON                  gI_(1)
 
 /* tile indices */
 #define G_TX_LOADTILE         7
