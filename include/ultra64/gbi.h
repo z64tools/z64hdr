@@ -4318,4 +4318,25 @@ typedef struct {
 #define gO_(opc, hi, lo)        ((Gfx) { gF_(opc, 8, 24) | gI_(hi), gI_(lo) })
 #define gD_(gdl, m, ...)        gDisplayListPut(gdl, m(__VA_ARGS__))
 
+#define _DW(macro) do {macro} while (0)
+#define gDma1p(pkt, c, s, l, p)                     \
+_DW({                                   \
+    Gfx *_g = (Gfx *)(pkt);                     \
+                                    \
+    _g->hi = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
+            _SHIFTL((l), 0, 16));               \
+    _g->lo = (unsigned int)(s);               \
+})
+
+#define gDPNoOpHere(pkt, file, line)        gDma1p(pkt, G_NOOP, file, line, 1)
+#define gDPNoOpString(pkt, data, n)         gDma1p(pkt, G_NOOP, data, n, 2)
+#define gDPNoOpWord(pkt, data, n)           gDma1p(pkt, G_NOOP, data, n, 3)
+#define gDPNoOpFloat(pkt, data, n)          gDma1p(pkt, G_NOOP, data, n, 4)
+#define gDPNoOpQuiet(pkt)                   gDma1p(pkt, G_NOOP, 0, 0, 5)
+#define gDPNoOpVerbose(pkt, n)              gDma1p(pkt, G_NOOP, 0, n, 5)
+#define gDPNoOpCallBack(pkt, callback, arg) gDma1p(pkt, G_NOOP, callback, arg, 6)
+#define gDPNoOpOpenDisp(pkt, file, line)    gDma1p(pkt, G_NOOP, file, line, 7)
+#define gDPNoOpCloseDisp(pkt, file, line)   gDma1p(pkt, G_NOOP, file, line, 8)
+#define gDPNoOpTag3(pkt, type, data, n)     gDma1p(pkt, G_NOOP, data, n, type)
+
 #endif
