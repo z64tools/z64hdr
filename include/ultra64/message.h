@@ -1,7 +1,7 @@
-#ifndef _ULTRA64_MESSAGE_H_
-#define _ULTRA64_MESSAGE_H_
+#ifndef ULTRA64_MESSAGE_H
+#define ULTRA64_MESSAGE_H
 
-#include "ultra64/types.h"
+#include "thread.h"
 
 #define OS_MESG_NOBLOCK         0
 #define OS_MESG_BLOCK           1

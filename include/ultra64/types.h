@@ -1,5 +1,5 @@
-#ifndef _ULTRA64_TYPES_H_
-#define _ULTRA64_TYPES_H_
+#ifndef ULTRA64_TYPES_H
+#define ULTRA64_TYPES_H
 
 typedef signed char            s8;
 typedef unsigned char          u8;
@@ -26,17 +26,21 @@ typedef double f64;
 typedef long int Mtx_t[4][4];
 typedef union {
     Mtx_t m;
-    long long int forc_structure_alignment;
+    struct {
+        u16 intPart[4][4];
+        u16 fracPart[4][4];
+    };
+    long long int force_structure_alignment;
 } Mtx;
 
 typedef float MtxF_t[4][4];
 typedef union {
     MtxF_t mf;
     struct {
-        float xx, xy, xz, xw,
-              yx, yy, yz, yw,
-              zx, zy, zz, zw,
-              wx, wy, wz, ww;
+        float xx, yx, zx, wx,
+              xy, yy, zy, wy,
+              xz, yz, zz, wz,
+              xw, yw, zw, ww;
     };
 } MtxF;
 

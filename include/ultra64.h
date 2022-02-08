@@ -1,13 +1,16 @@
-#ifndef _ULTRA64_H_
-#define _ULTRA64_H_
-
-#include "stddef.h"
-#include "stdbool.h"
-#include "math.h"
-#include "unk.h"
+#ifndef ULTRA64_H
+#define ULTRA64_H
 
 #include "ultra64/types.h"
-#include "ultra64/interrupt.h"
+#include "unk.h"
+
+#include "libc/stdarg.h"
+#include "libc/stdbool.h"
+#include "libc/stddef.h"
+#include "libc/stdlib.h"
+#include "libc/math.h"
+
+#include "ultra64/exception.h"
 #include "ultra64/rcp.h"
 #include "ultra64/rdp.h"
 #include "ultra64/rsp.h"
@@ -19,10 +22,11 @@
 #include "ultra64/gu.h"
 #include "ultra64/vi.h"
 #include "ultra64/pi.h"
-#include "ultra64/hardware.h"
 #include "ultra64/controller.h"
 #include "ultra64/printf.h"
 #include "ultra64/mbi.h"
 #include "ultra64/pfs.h"
+#include "ultra64/motor.h"
+#include "ultra64/r4300.h"
 
 #endif
