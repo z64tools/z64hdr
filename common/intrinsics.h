@@ -1,4 +1,4 @@
-#ifndef _FUNCTIONS_H_
+#ifndef FUNCTIONS_H
 #error "This file must be included from functions.h"
 #endif
 

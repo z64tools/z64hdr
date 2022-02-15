@@ -33,7 +33,7 @@
 #ifndef N64_GBI_H
 #define N64_GBI_H
 #define F3DEX_GBI_2
-#define _GS2DEX_H_
+#define GS2DEX_H
 
 #include <stdint.h>
 
