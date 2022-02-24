@@ -402,6 +402,7 @@ Color_RGBA8_Copy = 0x800646C8;
 func_80078884 = 0x800646F0;
 func_800788CC = 0x80064738;
 func_80078914 = 0x80064780;
+OLib_Vec3fDistNormalize = 0x800676F4;
 Lights_PointNoGlowSetInfo = 0x80065BCC;
 Lights_PointGlowSetInfo = 0x80065C30;
 Lights_PointSetColorAndRadius = 0x80065C98;
