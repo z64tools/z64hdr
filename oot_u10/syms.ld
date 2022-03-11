@@ -7,6 +7,8 @@ sqrt = 0x800D5DD0;
 fabsf = ???;
 */
 
+strlen = 0x800D237C;
+memcpy = 0x800D23A4;
 DmaMgr_DMARomToRam = 0x8000085C;
 DmaMgr_ProcessMsg = 0x80000B0C;
 DmaMgr_SendRequest2 = 0x80000D28;
