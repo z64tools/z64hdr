@@ -1,6 +1,8 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+#include "common/assert_version_set.h"
+
 #include "z64.h"
 
 #include "common/intrinsics.h"

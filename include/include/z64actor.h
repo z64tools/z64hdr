@@ -1,6 +1,8 @@
 #ifndef Z64ACTOR_H
 #define Z64ACTOR_H
 
+#include "common/assert_version_set.h"
+
 #include "z64dma.h"
 #include "z64animation.h"
 #include "z64math.h"
