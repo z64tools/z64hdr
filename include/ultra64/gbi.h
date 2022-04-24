@@ -189,6 +189,13 @@
 #define G_IM_SIZ_16b          2
 #define G_IM_SIZ_32b          3
 
+/* fast64 now emits gsDPLoadTextureBlock and friends as their constituent
+instructions, using the SGI gbi.h names. */
+#define G_IM_SIZ_4b_LOAD_BLOCK  G_SIZ_LDSIZ(G_IM_SIZ_4b)
+#define G_IM_SIZ_8b_LOAD_BLOCK  G_SIZ_LDSIZ(G_IM_SIZ_8b)
+#define G_IM_SIZ_16b_LOAD_BLOCK G_SIZ_LDSIZ(G_IM_SIZ_16b)
+#define G_IM_SIZ_32b_LOAD_BLOCK G_SIZ_LDSIZ(G_IM_SIZ_32b)
+
 /* texture settings */
 #define G_TX_NOMIRROR         (gI_(0b0) << 0)
 #define G_TX_MIRROR           (gI_(0b1) << 0)
