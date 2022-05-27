@@ -6,8 +6,6 @@
  /* .text */
   __osExceptionPreamble = 0x800039D0;  /* ROM: 0x000045D0 */
   __osException         = 0x800039E0;  /* ROM: 0x000045E0 */
-  send_mesg             = 0x80003F2C;  /* ROM: 0x00004B2C */
-  func_80004000         = 0x80004000;  /* ROM: 0x00004C00 */
   __osEnqueueAndYield   = 0x80004014;  /* ROM: 0x00004C14 */
   __osEnqueueThread     = 0x80004114;  /* ROM: 0x00004D14 */
   __osPopThread         = 0x8000415C;  /* ROM: 0x00004D5C */
@@ -17,9 +15,6 @@
  /* .data */
   __osHwIntTable = 0x8000AD10;  /* ROM: 0x0000B910 */
   __osPiIntTable = 0x8000AD38;  /* ROM: 0x0000B938 */
- /* .rodata */
-  __osIntOffTable = 0x800120F0;  /* ROM: 0x00012CF0 */
-  __osIntTable    = 0x80012110;  /* ROM: 0x00012D10 */
 
 /* build/asm/bzero.o */
  /* .text */
@@ -75,12 +70,9 @@
  /* .text */
   bcopy = 0x80006F10;  /* ROM: 0x00007B10 */
 
-/* build/asm/__osDisableInt.o */
+/* build/asm/interrupt.o */
  /* .text */
   __osDisableInt = 0x80007280;  /* ROM: 0x00007E80 */
-
-/* build/asm/__osRestoreInt.o */
- /* .text */
   __osRestoreInt = 0x800072F0;  /* ROM: 0x00007EF0 */
 
 /* build/asm/__osSetFpcCsr.o */
@@ -105,7 +97,11 @@
 
 /* build/data/rsp_boot.text.o */
  /* .text */
-  D_80009320 = 0x80009320;  /* ROM: 0x00009F20 */
+  rspbootTextStart = 0x80009320;  /* ROM: 0x00009F20 */
+  rspbootTextEnd   = 0x800093F0;  /* ROM: 0x00009FF0 */
+
+/* build/data/unk_800093F0.data.o */
+ /* .data */
   D_800093F0 = 0x800093F0;  /* ROM: 0x00009FF0 */
 
 /* build/data/unk_80009410.data.o */
@@ -127,10 +123,10 @@
   _binary_baserom_Audiotable_start = 0x0007B850;  /* ROM: 0x00094870 */
   _binary_baserom_Audiotable_end   = 0x004CCBE0;  /* ROM: 0x004E5C00 */
 
-/* build/asm/code_800D71F0.o */
+/* build/asm/kanread.o */
  /* .text */
-  func_800D71F0 = 0x800D71F0;  /* ROM: 0x00B4E390 */
-  D_800D7288    = 0x800D7288;  /* ROM: 0x00B4E428 */
+  Kanji_OffsetFromShiftJIS = 0x800D71F0;  /* ROM: 0x00B4E390 */
+  sNonKanjiIndices         = 0x800D7288;  /* ROM: 0x00B4E428 */
 
 /* build/asm/fp.o */
  /* .text */
@@ -193,9 +189,12 @@
 
 /* build/data/rsp.text.o */
  /* .text */
-  D_801120C0 = 0x801120C0;  /* ROM: 0x00B89260 */
-  D_80113070 = 0x80113070;  /* ROM: 0x00B8A210 */
-  gJpegUCode = 0x80114930;  /* ROM: 0x00B8BAD0 */
+  aspMainTextStart         = 0x801120C0;  /* ROM: 0x00B89260 */
+  aspMainTextEnd           = 0x80113070;  /* ROM: 0x00B8A210 */
+  gspS2DEX2d_fifoTextStart = 0x80113070;  /* ROM: 0x00B8A210 */
+  njpgdspMainTextStart     = 0x80114930;  /* ROM: 0x00B8BAD0 */
+  gspS2DEX2d_fifoTextEnd   = 0x80114930;  /* ROM: 0x00B8BAD0 */
+  njpgdspMainTextEnd       = 0x80115420;  /* ROM: 0x00B8C5C0 */
 
 /* build/data/z_text.data.o */
  /* .data */
@@ -210,18 +209,25 @@
  /* .rodata */
   __libm_qnan_f = 0x8014B2D0;  /* ROM: 0x00BC2470 */
 
+/* build/data/audio_tables.rodata.o */
+ /* .rodata */
+  gSoundFontTable    = 0x801550D0;  /* ROM: 0x00BCC270 */
+  gSequenceFontTable = 0x80155340;  /* ROM: 0x00BCC4E0 */
+  gSequenceTable     = 0x80155500;  /* ROM: 0x00BCC6A0 */
+  gSampleBankTable   = 0x80155BF0;  /* ROM: 0x00BCCD90 */
+
 /* build/data/rsp.rodata.o */
  /* .rodata */
-  gSoundFontTable     = 0x801550D0;  /* ROM: 0x00BCC270 */
-  gSequenceFontTable  = 0x80155340;  /* ROM: 0x00BCC4E0 */
-  gSequenceTable      = 0x80155500;  /* ROM: 0x00BCC6A0 */
-  gSampleBankTable    = 0x80155BF0;  /* ROM: 0x00BCCD90 */
-  rspAspMainDataStart = 0x80155C70;  /* ROM: 0x00BCCE10 */
-  rspAspMainDataEnd   = 0x80155F50;  /* ROM: 0x00BCD0F0 */
-  D_80155F50          = 0x80155F50;  /* ROM: 0x00BCD0F0 */
-  D_80157580          = 0x80157580;  /* ROM: 0x00BCE720 */
-  D_801579A0          = 0x801579A0;  /* ROM: 0x00BCEB40 */
-  gJpegUCodeData      = 0x80157D30;  /* ROM: 0x00BCEED0 */
+  aspMainDataStart                      = 0x80155C70;  /* ROM: 0x00BCCE10 */
+  gspF3DZEX2_NoN_PosLight_fifoTextStart = 0x80155F50;  /* ROM: 0x00BCD0F0 */
+  aspMainDataEnd                        = 0x80155F50;  /* ROM: 0x00BCD0F0 */
+  gspF3DZEX2_NoN_PosLight_fifoDataStart = 0x80157580;  /* ROM: 0x00BCE720 */
+  gspF3DZEX2_NoN_PosLight_fifoTextEnd   = 0x80157580;  /* ROM: 0x00BCE720 */
+  gspS2DEX2d_fifoDataStart              = 0x801579A0;  /* ROM: 0x00BCEB40 */
+  gspF3DZEX2_NoN_PosLight_fifoDataEnd   = 0x801579A0;  /* ROM: 0x00BCEB40 */
+  njpgdspMainDataStart                  = 0x80157D30;  /* ROM: 0x00BCEED0 */
+  gspS2DEX2d_fifoDataEnd                = 0x80157D30;  /* ROM: 0x00BCEED0 */
+  njpgdspMainDataEnd                    = 0x80157D90;  /* ROM: 0x00BCEF30 */
 
 /* build/data/fault.bss.o */
  /* .bss */

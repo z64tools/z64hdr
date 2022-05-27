@@ -51,7 +51,7 @@ extern u64 gAmmoDigit7Tex[];
 extern u64 gAmmoDigit8Tex[];
 extern u64 gAmmoDigit9Tex[];
 extern u64 gUnusedAmmoDigitHalfTex[];
-extern u64 gMagicBarEndTex[];
-extern u64 gMagicBarMidTex[];
-extern u64 gMagicBarFillTex[];
+extern u64 gMagicMeterEndTex[];
+extern u64 gMagicMeterMidTex[];
+extern u64 gMagicMeterFillTex[];
 

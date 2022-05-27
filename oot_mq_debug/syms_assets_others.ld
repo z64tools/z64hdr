@@ -9414,7 +9414,7 @@
   gAmmoDigit8Tex               = 0x020037C0;  /* ROM: 0x01AEF7C0 */
   gAmmoDigit9Tex               = 0x02003800;  /* ROM: 0x01AEF800 */
   gUnusedAmmoDigitHalfTex      = 0x02003840;  /* ROM: 0x01AEF840 */
-  gMagicBarEndTex              = 0x020038C0;  /* ROM: 0x01AEF8C0 */
-  gMagicBarMidTex              = 0x02003940;  /* ROM: 0x01AEF940 */
-  gMagicBarFillTex             = 0x02003AC0;  /* ROM: 0x01AEFAC0 */
+  gMagicMeterEndTex            = 0x020038C0;  /* ROM: 0x01AEF8C0 */
+  gMagicMeterMidTex            = 0x02003940;  /* ROM: 0x01AEF940 */
+  gMagicMeterFillTex           = 0x02003AC0;  /* ROM: 0x01AEFAC0 */
 

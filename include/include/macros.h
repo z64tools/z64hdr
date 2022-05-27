@@ -20,9 +20,9 @@
 
 #define RGBA8(r, g, b, a) ((((r) & 0xFF) << 24) | (((g) & 0xFF) << 16) | (((b) & 0xFF) << 8) | (((a) & 0xFF) << 0))
 
-#define GET_PLAYER(globalCtx) ((Player*)(globalCtx)->actorCtx.actorLists[ACTORCAT_PLAYER].head)
+#define GET_PLAYER(play) ((Player*)(play)->actorCtx.actorLists[ACTORCAT_PLAYER].head)
 
-#define GET_ACTIVE_CAM(globalCtx) ((globalCtx)->cameraPtrs[(globalCtx)->activeCamera])
+#define GET_ACTIVE_CAM(play) ((play)->cameraPtrs[(play)->activeCamId])
 
 #define LINK_IS_ADULT (gSaveContext.linkAge == LINK_AGE_ADULT)
 #define LINK_IS_CHILD (gSaveContext.linkAge == LINK_AGE_CHILD)
@@ -30,6 +30,8 @@
 #define YEARS_CHILD 5
 #define YEARS_ADULT 17
 #define LINK_AGE_IN_YEARS (!LINK_IS_ADULT ? YEARS_CHILD : YEARS_ADULT)
+
+#define CLOCK_TIME(hr, min) ((s32)(((hr) * 60 + (min)) * (f32)0x10000 / (24 * 60) + 0.5f))
 
 #define IS_DAY (gSaveContext.nightFlag == 0)
 #define IS_NIGHT (gSaveContext.nightFlag == 1)
@@ -41,7 +43,15 @@
 
 #define ALL_EQUIP_VALUE(equip) ((s32)(gSaveContext.inventory.equipment & gEquipMasks[equip]) >> gEquipShifts[equip])
 #define CUR_EQUIP_VALUE(equip) ((s32)(gSaveContext.equips.equipment & gEquipMasks[equip]) >> gEquipShifts[equip])
-#define CHECK_OWNED_EQUIP(equip, value) ((gBitFlags[value] << gEquipShifts[equip]) & gSaveContext.inventory.equipment)
+#define OWNED_EQUIP_FLAG(equip, value) (gBitFlags[value] << gEquipShifts[equip])
+#define OWNED_EQUIP_FLAG_ALT(equip, value) ((1 << (value)) << gEquipShifts[equip])
+#define CHECK_OWNED_EQUIP(equip, value) (OWNED_EQUIP_FLAG(equip, value) & gSaveContext.inventory.equipment)
+#define CHECK_OWNED_EQUIP_ALT(equip, value) (gBitFlags[(value) + (equip) * 4] & gSaveContext.inventory.equipment)
+
+#define SWORD_EQUIP_TO_PLAYER(swordEquip) (swordEquip)
+#define SHIELD_EQUIP_TO_PLAYER(shieldEquip) (shieldEquip)
+#define TUNIC_EQUIP_TO_PLAYER(tunicEquip) ((tunicEquip) - 1)
+#define BOOTS_EQUIP_TO_PLAYER(bootsEquip) ((bootsEquip) - 1)
 
 #define CUR_UPG_VALUE(upg) ((s32)(gSaveContext.inventory.upgrades & gUpgradeMasks[upg]) >> gUpgradeShifts[upg])
 #define CAPACITY(upg, value) gUpgradeCapacities[upg][value]
@@ -56,6 +66,21 @@
     (gSaveContext.gsFlags[(index) >> 2] |= (value) << gGsFlagsShifts[(index) & 3])
 
 #define HIGH_SCORE(score) (gSaveContext.highScores[score])
+
+#define GET_EVENTCHKINF(flag) (gSaveContext.eventChkInf[(flag) >> 4] & (1 << ((flag) & 0xF)))
+#define SET_EVENTCHKINF(flag) (gSaveContext.eventChkInf[(flag) >> 4] |= (1 << ((flag) & 0xF)))
+#define CLEAR_EVENTCHKINF(flag) (gSaveContext.eventChkInf[(flag) >> 4] &= ~(1 << ((flag) & 0xF)))
+
+#define GET_ITEMGETINF(flag) (gSaveContext.itemGetInf[(flag) >> 4] & (1 << ((flag) & 0xF)))
+#define SET_ITEMGETINF(flag) (gSaveContext.itemGetInf[(flag) >> 4] |= (1 << ((flag) & 0xF)))
+
+#define GET_INFTABLE(flag) (gSaveContext.infTable[(flag) >> 4] & (1 << ((flag) & 0xF)))
+#define SET_INFTABLE(flag) (gSaveContext.infTable[(flag) >> 4] |= (1 << ((flag) & 0xF)))
+#define CLEAR_INFTABLE(flag) (gSaveContext.infTable[(flag) >> 4] &= ~(1 << ((flag) & 0xF)))
+
+#define GET_EVENTINF(flag) (gSaveContext.eventInf[(flag) >> 4] & (1 << ((flag) & 0xF)))
+#define SET_EVENTINF(flag) (gSaveContext.eventInf[(flag) >> 4] |= (1 << ((flag) & 0xF)))
+#define CLEAR_EVENTINF(flag) (gSaveContext.eventInf[(flag) >> 4] &= ~(1 << ((flag) & 0xF)))
 
 #define B_BTN_ITEM ((gSaveContext.buttonStatus[0] == ITEM_NONE)                    \
                         ? ITEM_NONE                                                \

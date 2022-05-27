@@ -1,6 +1,6 @@
-extern u64 sCircleWipeDefaultTex[];
-extern u64 sCircleWipeWaveTex[];
-extern u64 sCircleWipeRippleTex[];
-extern u64 sCircleWipeStarburstTex[];
+extern u64 sTransCircleNormalTex[];
+extern u64 sTransCircleWaveTex[];
+extern u64 sTransCircleRippleTex[];
+extern u64 sTransCircleStarburstTex[];
 extern Vtx sCircleWipeVtx[];
 
