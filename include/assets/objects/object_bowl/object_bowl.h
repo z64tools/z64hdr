@@ -1,3 +1,6 @@
+#ifndef OBJECT_BOWL_H
+#define OBJECT_BOWL_H 1
+
 extern Vtx object_bowlVtx_000000[];
 extern Gfx gBowlingRound1WallDL[];
 extern CamData gBowlingFirstAndFinalRoundColCamDataList[];
@@ -23,3 +26,4 @@ extern u64 gBowlingWoodPanelTex[];
 extern u64 gBowlingStoneWallTex[];
 extern u64 gBowlingStripesTex[];
 
+#endif

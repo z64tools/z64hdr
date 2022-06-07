@@ -1,3 +1,6 @@
+#ifndef SYATEKIJYOU_ROOM_0_H
+#define SYATEKIJYOU_ROOM_0_H 1
+
 extern SceneCmd syatekijyou_room_0Commands[];
 extern SceneCmd* syatekijyou_room_0AlternateHeaders0x000048[];
 extern s16 syatekijyou_room_0ObjectList_000060[];
@@ -57,3 +60,4 @@ extern Vtx syatekijyou_room_0Vtx_006F10[];
 extern Gfx syatekijyou_room_0DL_007390[];
 extern Gfx syatekijyou_room_0DL_0076D8[];
 
+#endif

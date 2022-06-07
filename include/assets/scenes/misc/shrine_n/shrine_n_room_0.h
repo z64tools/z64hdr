@@ -1,3 +1,6 @@
+#ifndef SHRINE_N_ROOM_0_H
+#define SHRINE_N_ROOM_0_H 1
+
 extern SceneCmd shrine_n_room_0Commands[];
 extern s16 shrine_n_room_0ObjectList_000040[];
 extern ActorEntry shrine_n_room_0ActorList_000048[];
@@ -28,3 +31,4 @@ extern Gfx shrine_n_room_0DL_007B00[];
 extern u64 shrine_n_room_0Background_007B10[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 extern u64 shrine_n_room_0Background_02D310[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_KIBAKO2_H
+#define OBJECT_KIBAKO2_H 1
+
 extern u64 gLargeCrate1TLUT[];
 extern u64 gLargeCrateTex[];
 extern u64 gLargeCrateFragment1Tex[];
@@ -13,3 +16,4 @@ extern u64 gLargeCrateFragment2Tex[];
 extern Vtx object_kibako2Vtx_000FC0[];
 extern Gfx gLargeCrateFragmentDL[];
 
+#endif

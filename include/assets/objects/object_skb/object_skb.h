@@ -1,3 +1,6 @@
+#ifndef OBJECT_SKB_H
+#define OBJECT_SKB_H 1
+
 extern s16 sStalchildAttackingAnimFrameData[];
 extern JointIndex sStalchildAttackingAnimJointIndices[];
 extern AnimationHeader gStalchildAttackingAnim;
@@ -62,3 +65,4 @@ extern s16 sStalchildWalkingAnimFrameData[];
 extern JointIndex sStalchildWalkingAnimJointIndices[];
 extern AnimationHeader gStalchildWalkingAnim;
 
+#endif

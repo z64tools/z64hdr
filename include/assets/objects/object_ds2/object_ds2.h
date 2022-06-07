@@ -1,3 +1,6 @@
+#ifndef OBJECT_DS2_H
+#define OBJECT_DS2_H 1
+
 extern s16 object_ds2_Anim_0002E4FrameData[];
 extern JointIndex object_ds2_Anim_0002E4JointIndices[];
 extern AnimationHeader object_ds2_Anim_0002E4;
@@ -33,3 +36,4 @@ extern StandardLimb object_ds2_Limb_00422C;
 extern void* object_ds2_Skel_004258Limbs[];
 extern FlexSkeletonHeader object_ds2_Skel_004258;
 
+#endif

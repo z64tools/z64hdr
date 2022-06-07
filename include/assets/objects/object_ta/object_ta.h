@@ -1,3 +1,6 @@
+#ifndef OBJECT_TA_H
+#define OBJECT_TA_H 1
+
 extern s16 sTalonSitSleepingAnimFrameData[];
 extern JointIndex sTalonSitSleepingAnimJointIndices[];
 extern AnimationHeader gTalonSitSleepingAnim;
@@ -85,3 +88,4 @@ extern s16 sTalonWakeUpAnimFrameData[];
 extern JointIndex sTalonWakeUpAnimJointIndices[];
 extern AnimationHeader gTalonWakeUpAnim;
 
+#endif

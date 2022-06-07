@@ -1,3 +1,6 @@
+#ifndef OBJECT_CNE_H
+#define OBJECT_CNE_H 1
+
 extern StandardLimb object_cne_Limb_000000;
 extern StandardLimb object_cne_Limb_00000C;
 extern StandardLimb object_cne_Limb_000018;
@@ -44,3 +47,4 @@ extern u64 object_cne_Tex_0024D0[];
 extern Vtx object_cneVtx_002550[];
 extern Gfx object_cne_DL_002860[];
 
+#endif

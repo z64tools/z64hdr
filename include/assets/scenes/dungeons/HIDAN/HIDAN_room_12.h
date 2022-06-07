@@ -1,3 +1,6 @@
+#ifndef HIDAN_ROOM_12_H
+#define HIDAN_ROOM_12_H 1
+
 extern SceneCmd HIDAN_room_12Commands[];
 extern s16 HIDAN_room_12ObjectList_000040[];
 extern ActorEntry HIDAN_room_12ActorList_000050[];
@@ -14,3 +17,4 @@ extern u64 HIDAN_room_12Tex_001D68[];
 extern u64 HIDAN_room_12Tex_001F68[];
 extern u64 HIDAN_room_12Tex_002768[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_BOB_H
+#define OBJECT_BOB_H 1
+
 extern StandardLimb object_bob_Limb_000000;
 extern StandardLimb object_bob_Limb_00000C;
 extern StandardLimb object_bob_Limb_000018;
@@ -44,3 +47,4 @@ extern Gfx object_bob_DL_004D08[];
 extern Gfx object_bob_DL_004DD8[];
 extern Gfx object_bob_DL_004E28[];
 
+#endif

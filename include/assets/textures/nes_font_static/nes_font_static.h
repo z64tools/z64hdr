@@ -1,3 +1,6 @@
+#ifndef NES_FONT_STATIC_H
+#define NES_FONT_STATIC_H 1
+
 extern u64 gMsgChar20SpaceTex[];
 extern u64 gMsgChar21ExclamationMarkTex[];
 extern u64 gMsgChar22QuotationMarkTex[];
@@ -139,3 +142,4 @@ extern u64 gMsgCharA9ZTargetSignTex[];
 extern u64 gMsgCharAAControlStickTex[];
 extern u64 gMsgCharABControlPadTex[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef HAIRAL_NIWA_N_SCENE_H
+#define HAIRAL_NIWA_N_SCENE_H 1
+
 extern SceneCmd hairal_niwa_n_sceneCommands[];
 extern ActorEntry hairal_niwa_n_sceneStartPositionList0x000058[];
 extern RomFile hairal_niwa_n_sceneRoomList0x000068[];
@@ -24,3 +27,4 @@ extern u64 hairal_niwa_n_sceneTex_0070F0[];
 extern u64 hairal_niwa_n_sceneTex_0078F0[];
 extern u64 hairal_niwa_n_sceneTex_0080F0[];
 
+#endif

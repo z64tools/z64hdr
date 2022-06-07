@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT08_OBJ_H
+#define OBJECT_SPOT08_OBJ_H 1
+
 extern u64 gZorasFountainIceRampTLUT[];
 extern u64 gZorasFountainIceRampLowerSideTex[];
 extern Vtx object_spot08_objVtx_000820[];
@@ -32,3 +35,4 @@ extern u64 gZorasFountainIceRampSurfaceTex[];
 extern u64 gZorasFountainIceRampUpperSideTex[];
 extern u64 gZorasFountainIceRampMiddleSlopeTex[];
 
+#endif

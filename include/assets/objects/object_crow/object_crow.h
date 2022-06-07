@@ -1,3 +1,6 @@
+#ifndef OBJECT_CROW_H
+#define OBJECT_CROW_H 1
+
 extern s16 sGuayFlyAnimFrameData[];
 extern JointIndex sGuayFlyAnimJointIndices[];
 extern AnimationHeader gGuayFlyAnim;
@@ -23,3 +26,4 @@ extern StandardLimb gGuaySkelLimbsLimb_001094;
 extern void* gGuaySkelLimbs[];
 extern FlexSkeletonHeader gGuaySkel;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT18_OBJ_H
+#define OBJECT_SPOT18_OBJ_H 1
+
 extern Vtx object_spot18_objVtx_000000[];
 extern Gfx gGoronCityVaseLidDL[];
 extern CamData gGoronCityVaseLidColCamDataList[];
@@ -49,3 +52,4 @@ extern u64 gGoronCityVaseLidTex[];
 extern u64 gGoronCityVaseLidHandleTex[];
 extern u64 gGoronCityDoorTex[];
 
+#endif

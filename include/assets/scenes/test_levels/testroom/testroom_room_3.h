@@ -1,3 +1,6 @@
+#ifndef TESTROOM_ROOM_3_H
+#define TESTROOM_ROOM_3_H 1
+
 extern SceneCmd testroom_room_3Commands[];
 extern s16 testroom_room_3ObjectList_000038[];
 extern PolygonType0 testroom_room_3PolygonType0_000050;
@@ -10,3 +13,4 @@ extern u64 testroom_room_3Tex_001218[];
 extern u64 testroom_room_3Tex_002218[];
 extern u64 testroom_room_3Tex_003218[];
 
+#endif

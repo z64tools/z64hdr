@@ -1,3 +1,6 @@
+#ifndef BOWLING_ROOM_0_H
+#define BOWLING_ROOM_0_H 1
+
 extern SceneCmd bowling_room_0Commands[];
 extern s16 bowling_room_0ObjectList_000040[];
 extern ActorEntry bowling_room_0ActorList_000058[];
@@ -47,3 +50,4 @@ extern Vtx bowling_room_0Vtx_005FF8[];
 extern Gfx bowling_room_0DL_0060E8[];
 extern Gfx bowling_room_0DL_0061A8[];
 
+#endif

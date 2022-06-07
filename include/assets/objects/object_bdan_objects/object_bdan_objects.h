@@ -1,3 +1,6 @@
+#ifndef OBJECT_BDAN_OBJECTS_H
+#define OBJECT_BDAN_OBJECTS_H 1
+
 extern u64 gJabuObjects1TLUT[];
 extern u64 gJabuObjectsTex_00140[];
 extern Vtx object_bdan_objectsVtx_000540[];
@@ -80,3 +83,4 @@ extern u64 gJabuObjectsTex_0B510[];
 extern u64 gJabuObjectsTex_0BD10[];
 extern u64 gJabuObjectsTex_0C510[];
 
+#endif

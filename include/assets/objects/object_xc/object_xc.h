@@ -1,3 +1,6 @@
+#ifndef OBJECT_XC_H
+#define OBJECT_XC_H 1
+
 extern s16 sSheikPlayingHarpAnimFrameData[];
 extern JointIndex sSheikPlayingHarpAnimJointIndices[];
 extern AnimationHeader gSheikPlayingHarpAnim;
@@ -130,3 +133,4 @@ extern s16 sSheikFallingFromSkyAnimFrameData[];
 extern JointIndex sSheikFallingFromSkyAnimJointIndices[];
 extern AnimationHeader gSheikFallingFromSkyAnim;
 
+#endif

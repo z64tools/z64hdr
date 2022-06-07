@@ -1,3 +1,6 @@
+#ifndef GAMEPLAY_DANGEON_KEEP_H
+#define GAMEPLAY_DANGEON_KEEP_H 1
+
 extern u64 gameplay_dangeon_keepTex_000000[];
 extern u64 gameplay_dangeon_keepTex_000200[];
 extern Vtx gameplay_dangeon_keepVtx_000400[];
@@ -102,3 +105,4 @@ extern Gfx gPotDL[];
 extern Vtx gameplay_dangeon_keepVtx_017A30[];
 extern Gfx gPotFragmentDL[];
 
+#endif

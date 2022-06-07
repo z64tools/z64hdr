@@ -1,3 +1,6 @@
+#ifndef OBJECT_RS_H
+#define OBJECT_RS_H 1
+
 extern s16 object_rs_Anim_00065CFrameData[];
 extern JointIndex object_rs_Anim_00065CJointIndices[];
 extern AnimationHeader object_rs_Anim_00065C;
@@ -31,3 +34,4 @@ extern StandardLimb object_rs_Limb_00483C;
 extern void* object_rs_Skel_004868Limbs[];
 extern FlexSkeletonHeader object_rs_Skel_004868;
 
+#endif

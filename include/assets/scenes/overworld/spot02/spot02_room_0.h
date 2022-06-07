@@ -1,3 +1,6 @@
+#ifndef SPOT02_ROOM_0_H
+#define SPOT02_ROOM_0_H 1
+
 extern SceneCmd spot02_room_0Commands[];
 extern SceneCmd* spot02_room_0AlternateHeaders0x000048[];
 extern s16 spot02_room_0ObjectList_00005C[];
@@ -40,3 +43,4 @@ extern Vtx spot02_room_0Vtx_002330[];
 extern Gfx spot02_room_0DL_0025E0[];
 extern Gfx gSpot02DL_0026D0[];
 
+#endif

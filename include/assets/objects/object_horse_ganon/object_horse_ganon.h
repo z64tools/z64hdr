@@ -1,3 +1,6 @@
+#ifndef OBJECT_HORSE_GANON_H
+#define OBJECT_HORSE_GANON_H 1
+
 extern Vtx object_horse_ganonVtx_000000[];
 extern Gfx gHorseGanonSkelLimbsLimb_008394DL_0001C0[];
 extern Vtx object_horse_ganonVtx_0002F0[];
@@ -337,3 +340,4 @@ extern u64 object_horse_ganonTex_00B610[];
 extern u64 object_horse_ganonTex_00B690[];
 extern u64 object_horse_ganonTex_00BE90[];
 
+#endif

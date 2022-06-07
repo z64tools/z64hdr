@@ -1,3 +1,6 @@
+#ifndef OBJECT_REEBA_H
+#define OBJECT_REEBA_H 1
+
 extern s16 object_reeba_Anim_0001E4FrameData[];
 extern JointIndex object_reeba_Anim_0001E4JointIndices[];
 extern AnimationHeader object_reeba_Anim_0001E4;
@@ -48,3 +51,4 @@ extern StandardLimb object_reeba_Skel_001EE8LimbsLimb_001E98;
 extern void* object_reeba_Skel_001EE8Limbs[];
 extern SkeletonHeader object_reeba_Skel_001EE8;
 
+#endif

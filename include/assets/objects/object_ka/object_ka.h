@@ -1,3 +1,6 @@
+#ifndef OBJECT_KA_H
+#define OBJECT_KA_H 1
+
 extern s16 object_ka_Anim_000214FrameData[];
 extern JointIndex object_ka_Anim_000214JointIndices[];
 extern AnimationHeader object_ka_Anim_000214;
@@ -65,3 +68,4 @@ extern s16 object_ka_Anim_0067ACFrameData[];
 extern JointIndex object_ka_Anim_0067ACJointIndices[];
 extern AnimationHeader object_ka_Anim_0067AC;
 
+#endif

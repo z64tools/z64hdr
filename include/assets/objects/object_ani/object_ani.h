@@ -1,3 +1,6 @@
+#ifndef OBJECT_ANI_H
+#define OBJECT_ANI_H 1
+
 extern StandardLimb gRoofManRootLimb;
 extern StandardLimb gRoofManLeftThighLimb;
 extern StandardLimb gRoofManLeftLegLimb;
@@ -56,3 +59,4 @@ extern s16 sRoofManIdleAnimFrameData[];
 extern JointIndex sRoofManIdleAnimJointIndices[];
 extern AnimationHeader gRoofManIdleAnim;
 
+#endif

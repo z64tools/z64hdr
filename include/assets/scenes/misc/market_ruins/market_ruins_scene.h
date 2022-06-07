@@ -1,3 +1,6 @@
+#ifndef MARKET_RUINS_SCENE_H
+#define MARKET_RUINS_SCENE_H 1
+
 extern SceneCmd market_ruins_sceneCommands[];
 extern ActorEntry market_ruins_sceneStartPositionList0x000058[];
 extern RomFile market_ruins_sceneRoomList0x000108[];
@@ -11,3 +14,4 @@ extern CollisionPoly market_ruins_sceneCollisionHeader_0015F8Polygons[];
 extern Vec3s market_ruins_sceneCollisionHeader_0015F8Vertices[];
 extern CollisionHeader market_ruins_sceneCollisionHeader_0015F8;
 
+#endif

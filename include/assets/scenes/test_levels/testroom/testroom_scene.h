@@ -1,3 +1,6 @@
+#ifndef TESTROOM_SCENE_H
+#define TESTROOM_SCENE_H 1
+
 extern SceneCmd testroom_sceneCommands[];
 extern ActorEntry testroom_sceneStartPositionList0x000058[];
 extern TransitionActorEntry testroom_sceneTransitionActorList_000068[];
@@ -14,3 +17,4 @@ extern u64 testroom_sceneTex_002200[];
 extern u64 testroom_sceneTex_002A00[];
 extern u64 testroom_sceneTex_003A00[];
 
+#endif

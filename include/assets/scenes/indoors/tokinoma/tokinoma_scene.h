@@ -1,3 +1,6 @@
+#ifndef TOKINOMA_SCENE_H
+#define TOKINOMA_SCENE_H 1
+
 extern SceneCmd tokinoma_sceneCommands[];
 extern SceneCmd* tokinoma_sceneAlternateHeaders0x000068[];
 extern ActorEntry tokinoma_sceneStartPositionList0x0000A0[];
@@ -12,17 +15,17 @@ extern SurfaceType tokinoma_sceneCollisionHeader_0032F8SurfaceType[];
 extern CollisionPoly tokinoma_sceneCollisionHeader_0032F8Polygons[];
 extern Vec3s tokinoma_sceneCollisionHeader_0032F8Vertices[];
 extern CollisionHeader tokinoma_sceneCollisionHeader_0032F8;
-extern CutsceneData tokinoma_sceneSet_00C730CutsceneData_003330[];
-extern CutsceneData tokinoma_sceneSet_00C930CutsceneData_0035D0[];
-extern CutsceneData tokinoma_sceneSet_00C830CutsceneData_0038C0[];
-extern CutsceneData tokinoma_sceneSet_00C350CutsceneData_003BB0[];
+extern CutsceneData tokinoma_sceneCutsceneData_003330[];
+extern CutsceneData tokinoma_sceneCutsceneData_0035D0[];
+extern CutsceneData tokinoma_sceneCutsceneData_0038C0[];
+extern CutsceneData tokinoma_sceneCutsceneData_003BB0[];
 extern CutsceneData gTempleOfTimeFirstAdultCs[];
-extern CutsceneData tokinoma_sceneSet_00CB30CutsceneData_0061C0[];
+extern CutsceneData tokinoma_sceneCutsceneData_0061C0[];
 extern CutsceneData gTempleOfTimePreludeCs[];
-extern CutsceneData tokinoma_sceneSet_00CC40CutsceneData_0084E0[];
-extern CutsceneData tokinoma_sceneSet_00CD10CutsceneData_008BC0[];
-extern CutsceneData tokinoma_sceneSet_00C450CutsceneData_009F70[];
-extern CutsceneData tokinoma_sceneSet_00CA30CutsceneData_00BE90[];
+extern CutsceneData tokinoma_sceneCutsceneData_0084E0[];
+extern CutsceneData tokinoma_sceneCutsceneData_008BC0[];
+extern CutsceneData tokinoma_sceneCutsceneData_009F70[];
+extern CutsceneData tokinoma_sceneCutsceneData_00BE90[];
 extern SceneCmd tokinoma_sceneSet_00C1A0[];
 extern ActorEntry tokinoma_sceneStartPositionList0x00C208[];
 extern TransitionActorEntry tokinoma_sceneTransitionActorList_00C218[];
@@ -111,3 +114,4 @@ extern u64 tokinoma_sceneTex_010FA0[];
 extern u64 tokinoma_sceneTex_0117A0[];
 extern u64 tokinoma_sceneTex_011FA0[];
 
+#endif

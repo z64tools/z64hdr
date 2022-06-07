@@ -1,3 +1,6 @@
+#ifndef OBJECT_DY_OBJ_H
+#define OBJECT_DY_OBJ_H 1
+
 extern s16 sGreatFairyAnim_000108FrameData[];
 extern JointIndex sGreatFairyAnim_000108JointIndices[];
 extern AnimationHeader gGreatFairyAnim_000108;
@@ -119,3 +122,4 @@ extern s16 sGreatFairySittingAnimFrameData[];
 extern JointIndex sGreatFairySittingAnimJointIndices[];
 extern AnimationHeader gGreatFairySittingAnim;
 
+#endif

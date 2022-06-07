@@ -1,3 +1,6 @@
+#ifndef OBJECT_PO_FIELD_H
+#define OBJECT_PO_FIELD_H 1
+
 extern s16 sPoeFieldAttackAnimFrameData[];
 extern JointIndex sPoeFieldAttackAnimJointIndices[];
 extern AnimationHeader gPoeFieldAttackAnim;
@@ -59,3 +62,4 @@ extern StandardLimb gPoeFieldSkelLimbsLimb_006A00;
 extern void* gPoeFieldSkelLimbs[];
 extern SkeletonHeader gPoeFieldSkel;
 
+#endif

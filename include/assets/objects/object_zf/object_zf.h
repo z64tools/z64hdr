@@ -1,3 +1,6 @@
+#ifndef OBJECT_ZF_H
+#define OBJECT_ZF_H 1
+
 extern u64 gZfDinolfosTLUT[];
 extern u64 object_zf_Tex_000200[];
 extern u64 object_zf_Tex_000240[];
@@ -225,3 +228,4 @@ extern s16 sZfSidesteppingAnimFrameData[];
 extern JointIndex sZfSidesteppingAnimJointIndices[];
 extern AnimationHeader gZfSidesteppingAnim;
 
+#endif

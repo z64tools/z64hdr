@@ -1,3 +1,6 @@
+#ifndef OBJECT_FU_H
+#define OBJECT_FU_H 1
+
 extern s16 sWindmillManPlayAndMoveHeadAnimFrameData[];
 extern JointIndex sWindmillManPlayAndMoveHeadAnimJointIndices[];
 extern AnimationHeader gWindmillManPlayAndMoveHeadAnim;
@@ -53,3 +56,4 @@ extern StandardLimb gWindmillManHornLimb;
 extern void* gWindmillManSkelLimbs[];
 extern FlexSkeletonHeader gWindmillManSkel;
 
+#endif

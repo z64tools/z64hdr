@@ -1,3 +1,6 @@
+#ifndef OBJECT_SHOPNUTS_H
+#define OBJECT_SHOPNUTS_H 1
+
 extern s16 sBusinessScrubAnim_1ECFrameData[];
 extern JointIndex sBusinessScrubAnim_1ECJointIndices[];
 extern AnimationHeader gBusinessScrubAnim_1EC;
@@ -73,3 +76,4 @@ extern s16 sBusinessScrubAnim_4574FrameData[];
 extern JointIndex sBusinessScrubAnim_4574JointIndices[];
 extern AnimationHeader gBusinessScrubAnim_4574;
 
+#endif

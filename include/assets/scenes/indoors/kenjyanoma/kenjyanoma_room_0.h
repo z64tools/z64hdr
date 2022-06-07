@@ -1,3 +1,6 @@
+#ifndef KENJYANOMA_ROOM_0_H
+#define KENJYANOMA_ROOM_0_H 1
+
 extern SceneCmd kenjyanoma_room_0Commands[];
 extern SceneCmd* kenjyanoma_room_0AlternateHeaders0x000048[];
 extern s16 kenjyanoma_room_0ObjectList_000060[];
@@ -40,3 +43,4 @@ extern u64 kenjyanoma_room_0Tex_011D08[];
 extern u64 kenjyanoma_room_0Tex_012508[];
 extern u64 kenjyanoma_room_0Tex_012D08[];
 
+#endif

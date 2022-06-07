@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT06_OBJECTS_H
+#define OBJECT_SPOT06_OBJECTS_H 1
+
 extern Vtx object_spot06_objectsVtx_000000[];
 extern Gfx gLakeHyliaLowWaterDL[];
 extern Vtx object_spot06_objectsVtx_000230[];
@@ -23,3 +26,4 @@ extern Vtx object_spot06_objectsVtx_002270[];
 extern Gfx gLakeHyliaWaterTempleKeyDL[];
 extern u64 gLakeHyliaWaterTex[];
 
+#endif

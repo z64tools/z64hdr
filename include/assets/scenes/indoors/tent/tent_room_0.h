@@ -1,3 +1,6 @@
+#ifndef TENT_ROOM_0_H
+#define TENT_ROOM_0_H 1
+
 extern SceneCmd tent_room_0Commands[];
 extern s16 tent_room_0ObjectList_000040[];
 extern ActorEntry tent_room_0ActorList_000048[];
@@ -17,3 +20,4 @@ extern Gfx tent_room_0DL_00DBE8[];
 extern Gfx tent_room_0DL_00DE30[];
 extern u64 tent_room_0Background_00DEA0[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

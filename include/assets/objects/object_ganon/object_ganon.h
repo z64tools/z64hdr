@@ -1,3 +1,6 @@
+#ifndef OBJECT_GANON_H
+#define OBJECT_GANON_H 1
+
 extern Vtx object_ganonVtx_000000[];
 extern Gfx object_ganon_DL_0049C0[];
 extern Gfx object_ganon_DL_004C08[];
@@ -90,3 +93,4 @@ extern StandardLimb object_ganon_Limb_011478;
 extern void* gDorfSkelLimbs[];
 extern FlexSkeletonHeader gDorfSkel;
 
+#endif

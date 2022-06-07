@@ -1,3 +1,6 @@
+#ifndef JYASINZOU_ROOM_25_H
+#define JYASINZOU_ROOM_25_H 1
+
 extern SceneCmd jyasinzou_room_25Commands[];
 extern s16 jyasinzou_room_25ObjectList_000040[];
 extern ActorEntry jyasinzou_room_25ActorList_00005C[];
@@ -97,3 +100,4 @@ extern u64 jyasinzou_room_25Tex_014798[];
 extern u64 jyasinzou_room_25Tex_014F98[];
 extern u64 jyasinzou_room_25Tex_015398[];
 
+#endif

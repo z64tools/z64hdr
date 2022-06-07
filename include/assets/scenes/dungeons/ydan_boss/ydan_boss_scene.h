@@ -1,3 +1,6 @@
+#ifndef YDAN_BOSS_SCENE_H
+#define YDAN_BOSS_SCENE_H 1
+
 extern SceneCmd ydan_boss_sceneCommands[];
 extern ActorEntry ydan_boss_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ydan_boss_sceneTransitionActorList_000070[];
@@ -13,3 +16,4 @@ extern CollisionHeader ydan_boss_sceneCollisionHeader_000CFC;
 extern u64 ydan_boss_sceneTLUT_000D30[];
 extern u64 ydan_boss_sceneTex_000F38[];
 
+#endif

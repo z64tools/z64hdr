@@ -1,3 +1,6 @@
+#ifndef KINSUTA_ROOM_0_H
+#define KINSUTA_ROOM_0_H 1
+
 extern SceneCmd kinsuta_room_0Commands[];
 extern s16 kinsuta_room_0ObjectList_000040[];
 extern ActorEntry kinsuta_room_0ActorList_000050[];
@@ -36,3 +39,4 @@ extern u64 kinsuta_room_0Tex_00B098[];
 extern u64 kinsuta_room_0Tex_00C098[];
 extern u64 kinsuta_room_0Tex_00D098[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_GANON_ANIME2_H
+#define OBJECT_GANON_ANIME2_H 1
+
 extern s16 object_ganon_anime2_Anim_001F58FrameData[];
 extern JointIndex object_ganon_anime2_Anim_001F58JointIndices[];
 extern AnimationHeader object_ganon_anime2_Anim_001F58;
@@ -50,3 +53,4 @@ extern s16 object_ganon_anime2_Anim_010514FrameData[];
 extern JointIndex object_ganon_anime2_Anim_010514JointIndices[];
 extern AnimationHeader object_ganon_anime2_Anim_010514;
 
+#endif

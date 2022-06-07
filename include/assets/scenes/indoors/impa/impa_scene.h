@@ -1,3 +1,6 @@
+#ifndef IMPA_SCENE_H
+#define IMPA_SCENE_H 1
+
 extern SceneCmd impa_sceneCommands[];
 extern ActorEntry impa_sceneStartPositionList0x000060[];
 extern TransitionActorEntry impa_sceneTransitionActorList_000070[];
@@ -12,3 +15,4 @@ extern CollisionPoly impa_sceneCollisionHeader_000CE0Polygons[];
 extern Vec3s impa_sceneCollisionHeader_000CE0Vertices[];
 extern CollisionHeader impa_sceneCollisionHeader_000CE0;
 
+#endif

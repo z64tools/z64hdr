@@ -1,3 +1,6 @@
+#ifndef OBJECT_BLKOBJ_H
+#define OBJECT_BLKOBJ_H 1
+
 extern Vtx object_blkobjVtx_000000[];
 extern Gfx gIllusionRoomNormalDL[];
 extern Vtx object_blkobjVtx_001F30[];
@@ -32,3 +35,4 @@ extern u64 object_blkobjTex_012090[];
 extern u64 object_blkobjTex_012890[];
 extern u64 object_blkobjTex_013090[];
 
+#endif

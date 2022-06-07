@@ -1,3 +1,6 @@
+#ifndef HIRAL_DEMO_ROOM_0_H
+#define HIRAL_DEMO_ROOM_0_H 1
+
 extern SceneCmd hiral_demo_room_0Commands[];
 extern SceneCmd* hiral_demo_room_0AlternateHeaders0x000048[];
 extern s16 hiral_demo_room_0ObjectList_000078[];
@@ -34,3 +37,4 @@ extern s16 hiral_demo_room_0ObjectList_000610[];
 extern ActorEntry hiral_demo_room_0ActorList_000614[];
 extern Gfx hiral_demo_room_0DL_000630[];
 
+#endif

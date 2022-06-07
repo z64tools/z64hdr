@@ -1,3 +1,6 @@
+#ifndef SPOT05_SCENE_H
+#define SPOT05_SCENE_H 1
+
 extern SceneCmd spot05_sceneCommands[];
 extern SceneCmd* spot05_sceneAlternateHeaders0x000060[];
 extern ActorEntry spot05_sceneStartPositionList0x000074[];
@@ -66,3 +69,4 @@ extern u64 spot05_sceneTex_013B60[];
 extern u64 spot05_sceneTex_014360[];
 extern u64 spot05_sceneTex_014B60[];
 
+#endif

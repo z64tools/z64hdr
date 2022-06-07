@@ -1,3 +1,6 @@
+#ifndef OBJECT_DDAN_OBJECTS_H
+#define OBJECT_DDAN_OBJECTS_H 1
+
 extern Vtx object_ddan_objectsVtx_000000[];
 extern Gfx gDodongoDoorDL[];
 extern Vtx object_ddan_objectsVtx_000170[];
@@ -37,3 +40,4 @@ extern u64 gDodongoBarsBottomTex[];
 extern u64 gDodongoTex_6F60[];
 extern u64 gDodongoFallingStairsVinesTex[];
 
+#endif

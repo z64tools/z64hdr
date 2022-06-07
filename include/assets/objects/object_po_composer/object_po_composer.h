@@ -1,3 +1,6 @@
+#ifndef OBJECT_PO_COMPOSER_H
+#define OBJECT_PO_COMPOSER_H 1
+
 extern s16 sPoeComposerAttackAnimFrameData[];
 extern JointIndex sPoeComposerAttackAnimJointIndices[];
 extern AnimationHeader gPoeComposerAttackAnim;
@@ -63,3 +66,4 @@ extern StandardLimb gPoeComposerSkelLimbsLimb_006F58;
 extern void* gPoeComposerSkelLimbs[];
 extern FlexSkeletonHeader gPoeComposerSkel;
 
+#endif

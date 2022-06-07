@@ -1,3 +1,6 @@
+#ifndef OBJECT_IM_H
+#define OBJECT_IM_H 1
+
 extern s16 sImpaRaiseArmsAnimFrameData[];
 extern JointIndex sImpaRaiseArmsAnimJointIndices[];
 extern AnimationHeader gImpaRaiseArmsAnim;
@@ -95,3 +98,4 @@ extern s16 sImpaSealGanonAnimFrameData[];
 extern JointIndex sImpaSealGanonAnimJointIndices[];
 extern AnimationHeader gImpaSealGanonAnim;
 
+#endif

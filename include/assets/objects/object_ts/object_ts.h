@@ -1,3 +1,6 @@
+#ifndef OBJECT_TS_H
+#define OBJECT_TS_H 1
+
 extern s16 object_ts_Anim_000498FrameData[];
 extern JointIndex object_ts_Anim_000498JointIndices[];
 extern AnimationHeader object_ts_Anim_000498;
@@ -33,3 +36,4 @@ extern StandardLimb object_ts_Limb_004FB0;
 extern void* object_ts_Skel_004FE0Limbs[];
 extern FlexSkeletonHeader object_ts_Skel_004FE0;
 
+#endif

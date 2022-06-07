@@ -1,3 +1,6 @@
+#ifndef TURIBORI_SCENE_H
+#define TURIBORI_SCENE_H 1
+
 extern SceneCmd turibori_sceneCommands[];
 extern ActorEntry turibori_sceneStartPositionList0x000060[];
 extern TransitionActorEntry turibori_sceneTransitionActorList_000070[];
@@ -39,3 +42,4 @@ extern u64 turibori_sceneTex_0104E0[];
 extern u64 turibori_sceneTex_0114E0[];
 extern u64 turibori_sceneTex_0116E0[];
 
+#endif

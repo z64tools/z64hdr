@@ -1,3 +1,6 @@
+#ifndef JYASINBOSS_SCENE_H
+#define JYASINBOSS_SCENE_H 1
+
 extern SceneCmd jyasinboss_sceneCommands[];
 extern SceneCmd* jyasinboss_sceneAlternateHeaders0x000068[];
 extern ActorEntry jyasinboss_sceneStartPositionList0x000080[];
@@ -13,7 +16,7 @@ extern Vec3s jyasinboss_sceneCollisionHeader_002B80Vertices[];
 extern CollisionHeader jyasinboss_sceneCollisionHeader_002B80;
 extern CutsceneData gSpiritBossNabooruKnuckleIntroCs[];
 extern CutsceneData gSpiritBossNabooruKnuckleDefeatCs[];
-extern CutsceneData jyasinboss_sceneSet_006B40CutsceneData_005850[];
+extern CutsceneData jyasinboss_sceneCutsceneData_005850[];
 extern SceneCmd jyasinboss_sceneSet_0067C0[];
 extern ActorEntry jyasinboss_sceneStartPositionList0x006820[];
 extern TransitionActorEntry jyasinboss_sceneTransitionActorList_006840[];
@@ -38,3 +41,4 @@ extern LightSettings jyasinboss_sceneLightSettings0x006C08[];
 extern u64 jyasinboss_sceneTex_006CF0[];
 extern u64 jyasinboss_sceneTex_007CF0[];
 
+#endif

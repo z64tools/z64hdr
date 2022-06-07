@@ -1,3 +1,6 @@
+#ifndef PARAMETER_STATIC_H
+#define PARAMETER_STATIC_H 1
+
 extern u64 gHeartEmptyTex[];
 extern u64 gHeartQuarterTex[];
 extern u64 gHeartHalfTex[];
@@ -55,3 +58,4 @@ extern u64 gMagicMeterEndTex[];
 extern u64 gMagicMeterMidTex[];
 extern u64 gMagicMeterFillTex[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef HAKADANCH_SCENE_H
+#define HAKADANCH_SCENE_H 1
+
 extern SceneCmd HAKAdanCH_sceneCommands[];
 extern ActorEntry HAKAdanCH_sceneStartPositionList0x000068[];
 extern TransitionActorEntry HAKAdanCH_sceneTransitionActorList_000078[];
@@ -20,3 +23,4 @@ extern u64 HAKAdanCH_sceneTex_00AD90[];
 extern u64 HAKAdanCH_sceneTex_00B590[];
 extern u64 HAKAdanCH_sceneTex_00BD90[];
 
+#endif

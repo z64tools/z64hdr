@@ -1,3 +1,6 @@
+#ifndef SPOT12_SCENE_H
+#define SPOT12_SCENE_H 1
+
 extern SceneCmd spot12_sceneCommands[];
 extern SceneCmd* spot12_sceneAlternateHeaders0x000068[];
 extern ActorEntry spot12_sceneStartPositionList0x000080[];
@@ -12,8 +15,8 @@ extern SurfaceType spot12_sceneCollisionHeader_005030SurfaceType[];
 extern CollisionPoly spot12_sceneCollisionHeader_005030Polygons[];
 extern Vec3s spot12_sceneCollisionHeader_005030Vertices[];
 extern CollisionHeader spot12_sceneCollisionHeader_005030;
-extern CutsceneData spot12_sceneSet_005FB0CutsceneData_005060[];
-extern CutsceneData spot12_sceneSet_0061D0CutsceneData_005450[];
+extern CutsceneData spot12_sceneCutsceneData_005060[];
+extern CutsceneData spot12_sceneCutsceneData_005450[];
 extern CutsceneData gGerudoFortressFirstCaptureCs[];
 extern SceneCmd spot12_sceneSet_0059B0[];
 extern ActorEntry spot12_sceneStartPositionList0x005A10[];
@@ -67,3 +70,4 @@ extern u64 spot12_sceneTex_00D678[];
 extern u64 gSpot12_00DE78Tex[];
 extern u64 spot12_sceneTex_00EE78[];
 
+#endif

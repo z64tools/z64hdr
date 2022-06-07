@@ -1,3 +1,6 @@
+#ifndef DDAN_BOSS_ROOM_1_H
+#define DDAN_BOSS_ROOM_1_H 1
+
 extern SceneCmd ddan_boss_room_1Commands[];
 extern s16 ddan_boss_room_1ObjectList_000040[];
 extern ActorEntry ddan_boss_room_1ActorList_00004C[];
@@ -12,3 +15,4 @@ extern u64 gDodongosCavernBossLavaFloorTex[];
 extern u64 ddan_boss_room_1Tex_0031D8[];
 extern u64 ddan_boss_room_1Tex_0039D8[];
 
+#endif

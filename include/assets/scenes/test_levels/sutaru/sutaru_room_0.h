@@ -1,3 +1,6 @@
+#ifndef SUTARU_ROOM_0_H
+#define SUTARU_ROOM_0_H 1
+
 extern SceneCmd sutaru_room_0Commands[];
 extern s16 sutaru_room_0ObjectList_000040[];
 extern ActorEntry sutaru_room_0ActorList_000050[];
@@ -14,3 +17,4 @@ extern u64 sutaru_room_0Tex_0042F0[];
 extern u64 sutaru_room_0Tex_0052F0[];
 extern u64 sutaru_room_0Tex_0062F0[];
 
+#endif

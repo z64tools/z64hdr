@@ -1,3 +1,6 @@
+#ifndef MAP_I_STATIC_H
+#define MAP_I_STATIC_H 1
+
 extern u64 gDekuTreeRoom0Floor1MinimapTex[];
 extern u64 gDekuTreeRoom1MinimapTex[];
 extern u64 gDekuTreeRoom2MinimapTex[];
@@ -238,3 +241,4 @@ extern u64 gIceCavernRoom9MinimapTex[];
 extern u64 gIceCavernRoom10MinimapTex[];
 extern u64 gIceCavernRoom11MinimapTex[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_OE_ANIME_H
+#define OBJECT_OE_ANIME_H 1
+
 extern s16 object_oE_anime_Anim_00001034FrameData[];
 extern JointIndex object_oE_anime_Anim_00001034JointIndices[];
 extern AnimationHeader object_oE_anime_Anim_00001034;
@@ -17,3 +20,4 @@ extern s16 object_oE_anime_Anim_00005044FrameData[];
 extern JointIndex object_oE_anime_Anim_00005044JointIndices[];
 extern AnimationHeader object_oE_anime_Anim_00005044;
 
+#endif

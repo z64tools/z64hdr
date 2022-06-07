@@ -1,3 +1,6 @@
+#ifndef SPOT04_ROOM_0_H
+#define SPOT04_ROOM_0_H 1
+
 extern SceneCmd spot04_room_0Commands[];
 extern SceneCmd* spot04_room_0AlternateHeaders0x000048[];
 extern s16 spot04_room_0ObjectList_00007C[];
@@ -113,3 +116,4 @@ extern u64 spot04_room_0Tex_01AC90[];
 extern u64 spot04_room_0Tex_01AE90[];
 extern u64 spot04_room_0Tex_01B090[];
 
+#endif

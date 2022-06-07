@@ -1,3 +1,6 @@
+#ifndef HAKAANA2_SCENE_H
+#define HAKAANA2_SCENE_H 1
+
 extern SceneCmd hakaana2_sceneCommands[];
 extern ActorEntry hakaana2_sceneStartPositionList0x000058[];
 extern RomFile hakaana2_sceneRoomList0x000068[];
@@ -29,3 +32,4 @@ extern u64 hakaana2_sceneTex_00B890[];
 extern u64 hakaana2_sceneTex_00C090[];
 extern u64 hakaana2_sceneTex_00C890[];
 
+#endif

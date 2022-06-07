@@ -1,3 +1,6 @@
+#ifndef GANON_ROOM_3_H
+#define GANON_ROOM_3_H 1
+
 extern SceneCmd ganon_room_3Commands[];
 extern s16 ganon_room_3ObjectList_000040[];
 extern ActorEntry ganon_room_3ActorList_000050[];
@@ -13,3 +16,4 @@ extern u64 ganon_room_3Tex_005730[];
 extern u64 ganon_room_3Tex_005F30[];
 extern u64 ganon_room_3Tex_006730[];
 
+#endif

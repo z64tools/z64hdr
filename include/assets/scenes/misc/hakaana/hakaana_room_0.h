@@ -1,3 +1,6 @@
+#ifndef HAKAANA_ROOM_0_H
+#define HAKAANA_ROOM_0_H 1
+
 extern SceneCmd hakaana_room_0Commands[];
 extern s16 hakaana_room_0ObjectList_000040[];
 extern ActorEntry hakaana_room_0ActorList_000048[];
@@ -31,3 +34,4 @@ extern Gfx hakaana_room_0DL_0067E0[];
 extern Gfx hakaana_room_0DL_0068B8[];
 extern u64 hakaana_room_0Tex_0068C8[];
 
+#endif

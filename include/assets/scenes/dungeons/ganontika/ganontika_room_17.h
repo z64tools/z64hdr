@@ -1,3 +1,6 @@
+#ifndef GANONTIKA_ROOM_17_H
+#define GANONTIKA_ROOM_17_H 1
+
 extern SceneCmd ganontika_room_17Commands[];
 extern s16 ganontika_room_17ObjectList_000040[];
 extern ActorEntry ganontika_room_17ActorList_00004C[];
@@ -27,3 +30,4 @@ extern u64 ganontika_room_17Tex_006618[];
 extern u64 ganontika_room_17Tex_006E18[];
 extern u64 ganontika_room_17Tex_007618[];
 
+#endif

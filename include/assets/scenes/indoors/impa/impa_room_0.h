@@ -1,3 +1,6 @@
+#ifndef IMPA_ROOM_0_H
+#define IMPA_ROOM_0_H 1
+
 extern SceneCmd impa_room_0Commands[];
 extern s16 impa_room_0ObjectList_000040[];
 extern ActorEntry impa_room_0ActorList_000058[];
@@ -12,3 +15,4 @@ extern Gfx impa_room_0DL_0016D8[];
 extern Gfx impa_room_0DL_001758[];
 extern u64 impa_room_0Background_0017A0[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

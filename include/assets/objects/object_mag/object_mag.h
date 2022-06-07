@@ -1,3 +1,6 @@
+#ifndef OBJECT_MAG_H
+#define OBJECT_MAG_H 1
+
 extern u64 gTitleZeldaShieldLogoMQTex[];
 extern u64 gTitleCopyright19982002Tex[];
 extern u64 gTitleCopyright19982003Tex[];
@@ -18,3 +21,4 @@ extern u64 gTitleTheLegendOfTextTex[];
 extern u64 gTitleOcarinaOfTimeTMTextTex[];
 extern u64 gTitleTitleJPNTex[];
 
+#endif

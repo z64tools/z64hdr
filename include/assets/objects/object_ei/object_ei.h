@@ -1,3 +1,6 @@
+#ifndef OBJECT_EI_H
+#define OBJECT_EI_H 1
+
 extern s16 sStingerPopOutAnimFrameData[];
 extern JointIndex sStingerPopOutAnimJointIndices[];
 extern AnimationHeader gStingerPopOutAnim;
@@ -54,3 +57,4 @@ extern StandardLimb gStingerRightWingEndLimb;
 extern void* gStingerSkelLimbs[];
 extern SkeletonHeader gStingerSkel;
 
+#endif

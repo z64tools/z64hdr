@@ -1,3 +1,6 @@
+#ifndef ICON_ITEM_NES_STATIC_H
+#define ICON_ITEM_NES_STATIC_H 1
+
 extern u64 gPauseDekuTitleENGTex[];
 extern u64 gPauseDodongoTitleENGTex[];
 extern u64 gPauseJabuTitleENGTex[];
@@ -30,3 +33,4 @@ extern u64 gPauseQuestStatus10ENGTex[];
 extern u64 gPauseQuestStatus20ENGTex[];
 extern u64 gPauseSave10ENGTex[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_HORSE_ZELDA_H
+#define OBJECT_HORSE_ZELDA_H 1
+
 extern u64 gHorseZeldaEyeTex[];
 extern u64 object_horse_zeldaTex_000408[];
 extern u64 gHorseZeldaNoseTex[];
@@ -351,3 +354,4 @@ extern s16 sHorseZeldaGallopingAnimFrameData[];
 extern JointIndex sHorseZeldaGallopingAnimJointIndices[];
 extern AnimationHeader gHorseZeldaGallopingAnim;
 
+#endif

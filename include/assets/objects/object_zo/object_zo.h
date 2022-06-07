@@ -1,3 +1,6 @@
+#ifndef OBJECT_ZO_H
+#define OBJECT_ZO_H 1
+
 extern s16 sZoraHandsOnHipsTappingFootAnimFrameData[];
 extern JointIndex sZoraHandsOnHipsTappingFootAnimJointIndices[];
 extern AnimationHeader gZoraHandsOnHipsTappingFootAnim;
@@ -75,3 +78,4 @@ extern FlexSkeletonHeader gZoraSkel;
 extern Gfx gZoraRipplesMaterialDL[];
 extern Gfx gZoraRipplesModelDL[];
 
+#endif

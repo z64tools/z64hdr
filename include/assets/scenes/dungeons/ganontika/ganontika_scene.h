@@ -1,3 +1,6 @@
+#ifndef GANONTIKA_SCENE_H
+#define GANONTIKA_SCENE_H 1
+
 extern SceneCmd ganontika_sceneCommands[];
 extern ActorEntry ganontika_sceneStartPositionList0x000068[];
 extern TransitionActorEntry ganontika_sceneTransitionActorList_0000F8[];
@@ -38,3 +41,4 @@ extern u64 ganontika_sceneTex_020380[];
 extern u64 ganontika_sceneTex_020B80[];
 extern CutsceneData gShadowBarrierCs[];
 
+#endif

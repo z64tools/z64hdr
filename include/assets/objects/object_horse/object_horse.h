@@ -1,3 +1,6 @@
+#ifndef OBJECT_HORSE_H
+#define OBJECT_HORSE_H 1
+
 extern u8 gEponaBlob_000000[];
 extern Vtx object_horseVtx_000380[];
 extern Gfx gEponaUnusedWhiteCubeDL[];
@@ -397,3 +400,4 @@ extern u64 gEponaNeckTex[];
 extern u64 gEponaThighTex[];
 extern u64 gEponaShoulderTex[];
 
+#endif

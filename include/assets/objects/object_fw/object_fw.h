@@ -1,3 +1,6 @@
+#ifndef OBJECT_FW_H
+#define OBJECT_FW_H 1
+
 extern s16 sFlareDancerCastingFireAnimFrameData[];
 extern JointIndex sFlareDancerCastingFireAnimJointIndices[];
 extern AnimationHeader gFlareDancerCastingFireAnim;
@@ -106,3 +109,4 @@ extern s16 sFlareDancerCoreEndRunCycleAnimFrameData[];
 extern JointIndex sFlareDancerCoreEndRunCycleAnimJointIndices[];
 extern AnimationHeader gFlareDancerCoreEndRunCycleAnim;
 
+#endif

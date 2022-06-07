@@ -1,3 +1,6 @@
+#ifndef SPOT16_SCENE_H
+#define SPOT16_SCENE_H 1
+
 extern SceneCmd spot16_sceneCommands[];
 extern SceneCmd* spot16_sceneAlternateHeaders0x000068[];
 extern ActorEntry spot16_sceneStartPositionList0x000088[];
@@ -13,11 +16,11 @@ extern SurfaceType spot16_sceneCollisionHeader_003D10SurfaceType[];
 extern CollisionPoly spot16_sceneCollisionHeader_003D10Polygons[];
 extern Vec3s spot16_sceneCollisionHeader_003D10Vertices[];
 extern CollisionHeader spot16_sceneCollisionHeader_003D10;
-extern CutsceneData spot16_sceneSet_0079C0CutsceneData_003D40[];
-extern CutsceneData spot16_sceneSet_007AA0CutsceneData_0040B0[];
-extern CutsceneData spot16_sceneSet_007BC0CutsceneData_0063D0[];
-extern CutsceneData spot16_sceneSet_007CE0CutsceneData_006550[];
-extern CutsceneData spot16_sceneSet_007D80CutsceneData_0066E0[];
+extern CutsceneData spot16_sceneCutsceneData_003D40[];
+extern CutsceneData spot16_sceneCutsceneData_0040B0[];
+extern CutsceneData spot16_sceneCutsceneData_0063D0[];
+extern CutsceneData spot16_sceneCutsceneData_006550[];
+extern CutsceneData spot16_sceneCutsceneData_0066E0[];
 extern SceneCmd spot16_sceneSet_0075A0[];
 extern ActorEntry spot16_sceneStartPositionList0x007600[];
 extern RomFile spot16_sceneRoomList0x007660[];
@@ -98,3 +101,4 @@ extern u64 spot16_sceneTex_01D698[];
 extern u64 spot16_sceneTex_01DE98[];
 extern CutsceneData gDMTOwlCs[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_PU_BOX_H
+#define OBJECT_PU_BOX_H 1
+
 extern Gfx gBlockSmallDL[];
 extern Vtx object_pu_boxVtx_0000C8[];
 extern CamData gBlockSmallColCamDataList[];
@@ -28,3 +31,4 @@ extern CollisionPoly gBlockTallestColPolygons[];
 extern Vec3s gBlockTallestColVertices[];
 extern CollisionHeader gBlockTallestCol;
 
+#endif

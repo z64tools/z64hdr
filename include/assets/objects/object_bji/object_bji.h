@@ -1,3 +1,6 @@
+#ifndef OBJECT_BJI_H
+#define OBJECT_BJI_H 1
+
 extern StandardLimb object_bji_Limb_000000;
 extern StandardLimb object_bji_Limb_00000C;
 extern StandardLimb object_bji_Limb_000018;
@@ -48,3 +51,4 @@ extern u64 object_bji_Tex_003A08[];
 extern Vtx object_bjiVtx_003A88[];
 extern Gfx object_bji_DL_003F68[];
 
+#endif

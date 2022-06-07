@@ -1,3 +1,6 @@
+#ifndef OBJECT_MASTERKOKIRIHEAD_H
+#define OBJECT_MASTERKOKIRIHEAD_H 1
+
 extern u64 gKokiriShopkeeperTLUT[];
 extern u64 gKokiriShopkeeperEyeHalfTex[];
 extern u64 object_masterkokiriheadTex_0009F0[];
@@ -12,3 +15,4 @@ extern u64 gKokiriShopkeeperMouthAndNoseTex[];
 extern Vtx object_masterkokiriheadVtx_0021B0[];
 extern Gfx gKokiriShopkeeperHeadDL[];
 
+#endif

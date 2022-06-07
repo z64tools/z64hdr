@@ -1,3 +1,6 @@
+#ifndef OBJECT_DOG_H
+#define OBJECT_DOG_H 1
+
 extern s16 sDogBarkAnimFrameData[];
 extern JointIndex sDogBarkAnimJointIndices[];
 extern AnimationHeader gDogBarkAnim;
@@ -50,3 +53,4 @@ extern StandardLimb gDogTailLimb;
 extern void* gDogSkelLimbs[];
 extern FlexSkeletonHeader gDogSkel;
 
+#endif

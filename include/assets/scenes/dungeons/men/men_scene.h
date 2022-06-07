@@ -1,3 +1,6 @@
+#ifndef MEN_SCENE_H
+#define MEN_SCENE_H 1
+
 extern SceneCmd men_sceneCommands[];
 extern ActorEntry men_sceneStartPositionList0x000060[];
 extern TransitionActorEntry men_sceneTransitionActorList_000070[];
@@ -18,3 +21,4 @@ extern u64 gGTGNightEntranceTex[];
 extern u64 men_sceneTex_0108C0[];
 extern u64 men_sceneTex_010CC0[];
 
+#endif

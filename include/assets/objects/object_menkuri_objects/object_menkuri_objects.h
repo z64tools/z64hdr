@@ -1,3 +1,6 @@
+#ifndef OBJECT_MENKURI_OBJECTS_H
+#define OBJECT_MENKURI_OBJECTS_H 1
+
 extern u64 gGTGDoorTex[];
 extern Vtx object_menkuri_objectsVtx_001000[];
 extern Gfx gGTGDoorDL[];
@@ -22,3 +25,4 @@ extern u64 gGTGTex_6310[];
 extern u64 gGTGStatueEyeTex[];
 extern u64 gGTGRotatingRingPlatformOuterCircleTex[];
 
+#endif

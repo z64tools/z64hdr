@@ -1,3 +1,6 @@
+#ifndef SHOP1_SCENE_H
+#define SHOP1_SCENE_H 1
+
 extern SceneCmd shop1_sceneCommands[];
 extern ActorEntry shop1_sceneStartPositionList0x000058[];
 extern RomFile shop1_sceneRoomList0x000078[];
@@ -11,3 +14,4 @@ extern CollisionPoly shop1_sceneCollisionHeader_0002B8Polygons[];
 extern Vec3s shop1_sceneCollisionHeader_0002B8Vertices[];
 extern CollisionHeader shop1_sceneCollisionHeader_0002B8;
 
+#endif

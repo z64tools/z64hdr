@@ -1,3 +1,6 @@
+#ifndef OBJECT_NIW_H
+#define OBJECT_NIW_H 1
+
 extern s16 sCuccoAnimFrameData[];
 extern JointIndex sCuccoAnimJointIndices[];
 extern AnimationHeader gCuccoAnim;
@@ -38,3 +41,4 @@ extern StandardLimb gCuccoHeadLimb;
 extern void* gCuccoSkelLimbs[];
 extern FlexSkeletonHeader gCuccoSkel;
 
+#endif

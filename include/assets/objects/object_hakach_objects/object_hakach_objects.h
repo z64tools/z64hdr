@@ -1,3 +1,6 @@
+#ifndef OBJECT_HAKACH_OBJECTS_H
+#define OBJECT_HAKACH_OBJECTS_H 1
+
 extern Vtx object_hakach_objectsVtx_000000[];
 extern Gfx gBotwHoleTrap1DL[];
 extern Vtx object_hakach_objectsVtx_0002C0[];
@@ -46,3 +49,4 @@ extern u64 gBotwTex_0058F0[];
 extern u64 gBotwTex_0060F0[];
 extern u64 object_hakach_objectsTex_0062F0[];
 
+#endif

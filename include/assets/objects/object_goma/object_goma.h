@@ -1,3 +1,6 @@
+#ifndef OBJECT_GOMA_H
+#define OBJECT_GOMA_H 1
+
 extern s16 sGohmaStandAnimFrameData[];
 extern JointIndex sGohmaStandAnimJointIndices[];
 extern AnimationHeader gGohmaStandAnim;
@@ -229,3 +232,4 @@ extern Vec3s gGohmaDoorColVertices[];
 extern CollisionHeader gGohmaDoorCol;
 extern u64 gGohmaDoorTex[];
 
+#endif

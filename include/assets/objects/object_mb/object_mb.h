@@ -1,3 +1,6 @@
+#ifndef OBJECT_MB_H
+#define OBJECT_MB_H 1
+
 extern s16 sEnMbSpearFallFaceDownAnimFrameData[];
 extern JointIndex sEnMbSpearFallFaceDownAnimJointIndices[];
 extern AnimationHeader gEnMbSpearFallFaceDownAnim;
@@ -173,3 +176,4 @@ extern StandardLimb gEnMbClubSkelLimbsLimb_014118;
 extern void* gEnMbClubSkelLimbs[];
 extern FlexSkeletonHeader gEnMbClubSkel;
 
+#endif

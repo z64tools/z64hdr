@@ -1,3 +1,6 @@
+#ifndef OBJECT_OS_ANIME_H
+#define OBJECT_OS_ANIME_H 1
+
 extern s16 sObjOsAnim_00B4FrameData[];
 extern JointIndex sObjOsAnim_00B4JointIndices[];
 extern AnimationHeader gObjOsAnim_00B4;
@@ -194,3 +197,4 @@ extern s16 sObjOsAnim_A630FrameData[];
 extern JointIndex sObjOsAnim_A630JointIndices[];
 extern AnimationHeader gObjOsAnim_A630;
 
+#endif

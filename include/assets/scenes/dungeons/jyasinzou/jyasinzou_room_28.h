@@ -1,3 +1,6 @@
+#ifndef JYASINZOU_ROOM_28_H
+#define JYASINZOU_ROOM_28_H 1
+
 extern SceneCmd jyasinzou_room_28Commands[];
 extern s16 jyasinzou_room_28ObjectList_000038[];
 extern PolygonType2 jyasinzou_room_28PolygonType2_000060;
@@ -27,3 +30,4 @@ extern u64 jyasinzou_room_28Tex_007A30[];
 extern u64 jyasinzou_room_28Tex_007E30[];
 extern u64 jyasinzou_room_28Tex_008630[];
 
+#endif

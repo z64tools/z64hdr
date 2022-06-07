@@ -1,3 +1,6 @@
+#ifndef GANON_ROOM_7_H
+#define GANON_ROOM_7_H 1
+
 extern SceneCmd ganon_room_7Commands[];
 extern s16 ganon_room_7ObjectList_000040[];
 extern ActorEntry ganon_room_7ActorList_00004C[];
@@ -20,3 +23,4 @@ extern Gfx ganon_room_7DL_009DF0[];
 extern Gfx ganon_room_7DL_009F88[];
 extern u64 ganon_room_7Tex_009F98[];
 
+#endif

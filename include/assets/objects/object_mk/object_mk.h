@@ -1,3 +1,6 @@
+#ifndef OBJECT_MK_H
+#define OBJECT_MK_H 1
+
 extern s16 object_mk_Anim_000368FrameData[];
 extern JointIndex object_mk_Anim_000368JointIndices[];
 extern AnimationHeader object_mk_Anim_000368;
@@ -49,3 +52,4 @@ extern StandardLimb object_mk_Limb_005DB4;
 extern void* object_mk_Skel_005DF0Limbs[];
 extern FlexSkeletonHeader object_mk_Skel_005DF0;
 
+#endif

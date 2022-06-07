@@ -1,3 +1,6 @@
+#ifndef BOWLING_SCENE_H
+#define BOWLING_SCENE_H 1
+
 extern SceneCmd bowling_sceneCommands[];
 extern ActorEntry bowling_sceneStartPositionList0x000060[];
 extern TransitionActorEntry bowling_sceneTransitionActorList_000070[];
@@ -40,3 +43,4 @@ extern u64 bowling_sceneTex_00C720[];
 extern u64 bowling_sceneTex_00D720[];
 extern u64 bowling_sceneTex_00DB20[];
 
+#endif

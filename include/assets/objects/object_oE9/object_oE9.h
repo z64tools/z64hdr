@@ -1,3 +1,6 @@
+#ifndef OBJECT_OE9_H
+#define OBJECT_OE9_H 1
+
 extern Vtx object_oE9Vtx_000000[];
 extern Gfx object_oE9_DL_000800[];
 extern u64 object_oE9_TLUT_000C90[];
@@ -11,3 +14,4 @@ extern u64 object_oE9_Tex_001ED0[];
 extern u64 object_oE9_Tex_0026D0[];
 extern u64 object_oE9_Tex_002ED0[];
 
+#endif

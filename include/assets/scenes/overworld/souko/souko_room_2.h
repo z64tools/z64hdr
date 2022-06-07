@@ -1,3 +1,6 @@
+#ifndef SOUKO_ROOM_2_H
+#define SOUKO_ROOM_2_H 1
+
 extern SceneCmd souko_room_2Commands[];
 extern s16 souko_room_2ObjectList_000040[];
 extern ActorEntry souko_room_2ActorList_000044[];
@@ -29,3 +32,4 @@ extern Vtx souko_room_2Vtx_007D10[];
 extern Gfx souko_room_2DL_007E90[];
 extern u64 souko_room_2Tex_007F78[];
 
+#endif

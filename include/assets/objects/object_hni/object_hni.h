@@ -1,3 +1,6 @@
+#ifndef OBJECT_HNI_H
+#define OBJECT_HNI_H 1
+
 extern u64 gHorseIngoEyeTex[];
 extern u64 gHorseIngoNoseTex[];
 extern u64 gHorseIngoNostrilsTex[];
@@ -351,3 +354,4 @@ extern s16 sHorseIngoWalkingAnimFrameData[];
 extern JointIndex sHorseIngoWalkingAnimJointIndices[];
 extern AnimationHeader gHorseIngoWalkingAnim;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef HIDAN_SCENE_H
+#define HIDAN_SCENE_H 1
+
 extern SceneCmd HIDAN_sceneCommands[];
 extern ActorEntry HIDAN_sceneStartPositionList0x000068[];
 extern TransitionActorEntry HIDAN_sceneTransitionActorList_000088[];
@@ -25,3 +28,4 @@ extern u64 HIDAN_sceneTex_0195D0[];
 extern u64 HIDAN_sceneTex_019DD0[];
 extern u64 HIDAN_sceneTex_019FD0[];
 
+#endif

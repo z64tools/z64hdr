@@ -1,3 +1,6 @@
+#ifndef GANON_DEMO_ROOM_0_H
+#define GANON_DEMO_ROOM_0_H 1
+
 extern SceneCmd ganon_demo_room_0Commands[];
 extern SceneCmd* ganon_demo_room_0AlternateHeaders0x000048[];
 extern s16 ganon_demo_room_0ObjectList_000058[];
@@ -29,3 +32,4 @@ extern Vtx ganon_demo_room_0Vtx_003DA0[];
 extern Gfx ganon_demo_room_0DL_004040[];
 extern Gfx ganon_demo_room_0DL_004140[];
 
+#endif

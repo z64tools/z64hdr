@@ -1,3 +1,6 @@
+#ifndef MARKET_NIGHT_SCENE_H
+#define MARKET_NIGHT_SCENE_H 1
+
 extern SceneCmd market_night_sceneCommands[];
 extern ActorEntry market_night_sceneStartPositionList0x000068[];
 extern TransitionActorEntry market_night_sceneTransitionActorList_000118[];
@@ -20,3 +23,4 @@ extern CollisionPoly market_night_sceneCollisionHeader_0025F8Polygons[];
 extern Vec3s market_night_sceneCollisionHeader_0025F8Vertices[];
 extern CollisionHeader market_night_sceneCollisionHeader_0025F8;
 
+#endif

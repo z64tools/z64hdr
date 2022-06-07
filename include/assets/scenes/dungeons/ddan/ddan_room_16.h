@@ -1,3 +1,6 @@
+#ifndef DDAN_ROOM_16_H
+#define DDAN_ROOM_16_H 1
+
 extern SceneCmd ddan_room_16Commands[];
 extern s16 ddan_room_16ObjectList_000038[];
 extern PolygonType2 ddan_room_16PolygonType2_000050;
@@ -14,3 +17,4 @@ extern u64 ddan_room_16Tex_004158[];
 extern u64 ddan_room_16Tex_004958[];
 extern u64 ddan_room_16Tex_005158[];
 
+#endif

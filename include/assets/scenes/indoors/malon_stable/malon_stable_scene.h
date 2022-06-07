@@ -1,3 +1,6 @@
+#ifndef MALON_STABLE_SCENE_H
+#define MALON_STABLE_SCENE_H 1
+
 extern SceneCmd malon_stable_sceneCommands[];
 extern ActorEntry malon_stable_sceneStartPositionList0x000060[];
 extern TransitionActorEntry malon_stable_sceneTransitionActorList_000070[];
@@ -12,3 +15,4 @@ extern CollisionPoly malon_stable_sceneCollisionHeader_000644Polygons[];
 extern Vec3s malon_stable_sceneCollisionHeader_000644Vertices[];
 extern CollisionHeader malon_stable_sceneCollisionHeader_000644;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef YOUSEI_IZUMI_YOKO_ROOM_0_H
+#define YOUSEI_IZUMI_YOKO_ROOM_0_H 1
+
 extern SceneCmd yousei_izumi_yoko_room_0Commands[];
 extern SceneCmd* yousei_izumi_yoko_room_0AlternateHeaders0x000048[];
 extern s16 yousei_izumi_yoko_room_0ObjectList_000060[];
@@ -21,3 +24,4 @@ extern Vtx yousei_izumi_yoko_room_0Vtx_002BA0[];
 extern Gfx yousei_izumi_yoko_room_0DL_003AD0[];
 extern Gfx yousei_izumi_yoko_room_0DL_003FF8[];
 
+#endif

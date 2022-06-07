@@ -1,3 +1,6 @@
+#ifndef OBJECT_DNS_H
+#define OBJECT_DNS_H 1
+
 extern s16 sDntJijiSpitAnimFrameData[];
 extern JointIndex sDntJijiSpitAnimJointIndices[];
 extern AnimationHeader gDntJijiSpitAnim;
@@ -71,3 +74,4 @@ extern s16 sDntJijiWalkAnimFrameData[];
 extern JointIndex sDntJijiWalkAnimJointIndices[];
 extern AnimationHeader gDntJijiWalkAnim;
 
+#endif

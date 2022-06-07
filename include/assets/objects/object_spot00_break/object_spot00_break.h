@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT00_BREAK_H
+#define OBJECT_SPOT00_BREAK_H 1
+
 extern Vtx object_spot00_breakVtx_000000[];
 extern Gfx gBrokenDrawbridgeDL[];
 extern CamData gBrokenDrawbridgeColCamDataList[];
@@ -17,3 +20,4 @@ extern u64 gBrokenDrawbridgeDirtTex[];
 extern u64 gBrokenDrawbridgeChainTex[];
 extern u64 gBarbedWireFenceTex[];
 
+#endif

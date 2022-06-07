@@ -1,3 +1,6 @@
+#ifndef OBJECT_OA5_H
+#define OBJECT_OA5_H 1
+
 extern StandardLimb object_oA5_Limb_00000000;
 extern StandardLimb object_oA5_Limb_0000000C;
 extern StandardLimb object_oA5_Limb_00000018;
@@ -75,3 +78,4 @@ extern u64 object_oA5_Tex_00001530[];
 extern u64 object_oA5_Tex_000015B0[];
 extern u64 object_oA5_Tex_00001630[];
 
+#endif

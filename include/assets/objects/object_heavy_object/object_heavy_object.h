@@ -1,3 +1,6 @@
+#ifndef OBJECT_HEAVY_OBJECT_H
+#define OBJECT_HEAVY_OBJECT_H 1
+
 extern u64 gHeavyBlockTex[];
 extern Vtx object_heavy_objectVtx_001000[];
 extern Gfx gHeavyBlockEntirePillarDL[];
@@ -11,3 +14,4 @@ extern Gfx gHeavyBlockBigPieceDL[];
 extern Vtx object_heavy_objectVtx_001980[];
 extern Gfx gHeavyBlockSmallPieceDL[];
 
+#endif

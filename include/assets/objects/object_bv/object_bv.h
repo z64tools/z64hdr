@@ -1,3 +1,6 @@
+#ifndef OBJECT_BV_H
+#define OBJECT_BV_H 1
+
 extern s16 sBarinadeBariAnimFrameData[];
 extern JointIndex sBarinadeBariAnimJointIndices[];
 extern AnimationHeader gBarinadeBariAnim;
@@ -290,3 +293,4 @@ extern u64 object_bvTex_01E8B8[];
 extern Vtx object_bvVtx_01F0B8[];
 extern Gfx gBarinadeDoorPiece8DL[];
 
+#endif

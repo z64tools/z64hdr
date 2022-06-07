@@ -1,3 +1,6 @@
+#ifndef OBJECT_LINK_CHILD_H
+#define OBJECT_LINK_CHILD_H 1
+
 extern u64 gLinkChildEyesOpenTex[];
 extern u64 gLinkChildEyesHalfTex[];
 extern u64 gLinkChildEyesClosedfTex[];
@@ -183,3 +186,4 @@ extern LodLimb gLinkChildTorsoLimb;
 extern void* gLinkChildSkelLimbs[];
 extern FlexSkeletonHeader gLinkChildSkel;
 
+#endif

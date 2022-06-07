@@ -1,3 +1,6 @@
+#ifndef JYASINBOSS_ROOM_1_H
+#define JYASINBOSS_ROOM_1_H 1
+
 extern SceneCmd jyasinboss_room_1Commands[];
 extern SceneCmd* jyasinboss_room_1AlternateHeaders0x000048[];
 extern s16 jyasinboss_room_1ObjectList_000060[];
@@ -40,3 +43,4 @@ extern u64 jyasinboss_room_1Tex_006638[];
 extern u64 jyasinboss_room_1Tex_006E38[];
 extern u64 jyasinboss_room_1Tex_007638[];
 
+#endif

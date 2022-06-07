@@ -1,3 +1,6 @@
+#ifndef MIZUSIN_ROOM_8_H
+#define MIZUSIN_ROOM_8_H 1
+
 extern SceneCmd MIZUsin_room_8Commands[];
 extern s16 MIZUsin_room_8ObjectList_000040[];
 extern ActorEntry MIZUsin_room_8ActorList_00004C[];
@@ -61,3 +64,4 @@ extern Vtx MIZUsin_room_8Vtx_00D198[];
 extern Gfx MIZUsin_room_8DL_00D408[];
 extern u64 MIZUsin_room_8Tex_00D578[];
 
+#endif

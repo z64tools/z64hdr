@@ -1,3 +1,6 @@
+#ifndef OBJECT_DNK_H
+#define OBJECT_DNK_H 1
+
 extern s16 sDntStageSpitAnimFrameData[];
 extern JointIndex sDntStageSpitAnimJointIndices[];
 extern AnimationHeader gDntStageSpitAnim;
@@ -55,3 +58,4 @@ extern s16 sDntStageWalkAnimFrameData[];
 extern JointIndex sDntStageWalkAnimJointIndices[];
 extern AnimationHeader gDntStageWalkAnim;
 
+#endif

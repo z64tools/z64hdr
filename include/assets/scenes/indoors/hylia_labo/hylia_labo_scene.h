@@ -1,3 +1,6 @@
+#ifndef HYLIA_LABO_SCENE_H
+#define HYLIA_LABO_SCENE_H 1
+
 extern SceneCmd hylia_labo_sceneCommands[];
 extern ActorEntry hylia_labo_sceneStartPositionList0x000060[];
 extern TransitionActorEntry hylia_labo_sceneTransitionActorList_000080[];
@@ -43,3 +46,4 @@ extern u64 hylia_labo_sceneTex_010090[];
 extern u64 hylia_labo_sceneTex_010490[];
 extern u64 hylia_labo_sceneTex_010890[];
 
+#endif

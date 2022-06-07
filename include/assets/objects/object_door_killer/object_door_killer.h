@@ -1,3 +1,6 @@
+#ifndef OBJECT_DOOR_KILLER_H
+#define OBJECT_DOOR_KILLER_H 1
+
 extern Vtx object_door_killerVtx_000000[];
 extern Gfx object_door_killer_DL_000A20[];
 extern Gfx object_door_killer_DL_000AD8[];
@@ -26,3 +29,4 @@ extern StandardLimb object_door_killer_Skel_001BC8LimbsLimb_001B98;
 extern void* object_door_killer_Skel_001BC8Limbs[];
 extern FlexSkeletonHeader object_door_killer_Skel_001BC8;
 
+#endif

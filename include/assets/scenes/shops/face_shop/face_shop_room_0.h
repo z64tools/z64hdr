@@ -1,3 +1,6 @@
+#ifndef FACE_SHOP_ROOM_0_H
+#define FACE_SHOP_ROOM_0_H 1
+
 extern SceneCmd face_shop_room_0Commands[];
 extern s16 face_shop_room_0ObjectList_000040[];
 extern ActorEntry face_shop_room_0ActorList_00005C[];
@@ -11,3 +14,4 @@ extern Gfx face_shop_room_0DL_008D88[];
 extern Gfx face_shop_room_0DL_008E08[];
 extern u64 face_shop_room_0Background_008E40[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

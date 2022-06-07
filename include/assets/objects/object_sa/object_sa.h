@@ -1,3 +1,6 @@
+#ifndef OBJECT_SA_H
+#define OBJECT_SA_H 1
+
 extern s16 sSariaSealGanonAnimFrameData[];
 extern JointIndex sSariaSealGanonAnimJointIndices[];
 extern AnimationHeader gSariaSealGanonAnim;
@@ -151,3 +154,4 @@ extern s16 sSariaHandsOnFaceAnimFrameData[];
 extern JointIndex sSariaHandsOnFaceAnimJointIndices[];
 extern AnimationHeader gSariaHandsOnFaceAnim;
 
+#endif

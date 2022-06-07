@@ -1,3 +1,6 @@
+#ifndef OBJECT_SYOKUDAI_H
+#define OBJECT_SYOKUDAI_H 1
+
 extern Vtx object_syokudaiVtx_000000[];
 extern Gfx gGoldenTorchDL[];
 extern Vtx object_syokudaiVtx_000570[];
@@ -10,3 +13,4 @@ extern u64 gTorchFlameGuardTex[];
 extern u64 gTimedTorchTex[];
 extern u64 gWoodenTorchTex[];
 
+#endif

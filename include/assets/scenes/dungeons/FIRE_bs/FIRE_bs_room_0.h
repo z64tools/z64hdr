@@ -1,3 +1,6 @@
+#ifndef FIRE_BS_ROOM_0_H
+#define FIRE_BS_ROOM_0_H 1
+
 extern SceneCmd FIRE_bs_room_0Commands[];
 extern s16 FIRE_bs_room_0ObjectList_000038[];
 extern PolygonType0 FIRE_bs_room_0PolygonType0_000050;
@@ -20,3 +23,4 @@ extern u64 FIRE_bs_room_0Tex_003A68[];
 extern u64 FIRE_bs_room_0Tex_003C68[];
 extern u64 FIRE_bs_room_0Tex_004068[];
 
+#endif

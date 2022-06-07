@@ -1,3 +1,6 @@
+#ifndef MARKET_DAY_ROOM_0_H
+#define MARKET_DAY_ROOM_0_H 1
+
 extern SceneCmd market_day_room_0Commands[];
 extern s16 market_day_room_0ObjectList_000040[];
 extern ActorEntry market_day_room_0ActorList_000060[];
@@ -40,3 +43,4 @@ extern Vtx market_day_room_0Vtx_005650[];
 extern Gfx market_day_room_0DL_005750[];
 extern Gfx market_day_room_0DL_0057D8[];
 
+#endif

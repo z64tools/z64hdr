@@ -1,3 +1,6 @@
+#ifndef SOUKO_SCENE_H
+#define SOUKO_SCENE_H 1
+
 extern SceneCmd souko_sceneCommands[];
 extern ActorEntry souko_sceneStartPositionList0x000060[];
 extern TransitionActorEntry souko_sceneTransitionActorList_000090[];
@@ -18,3 +21,4 @@ extern u64 gLonLonHouseDayEntranceTex[];
 extern u64 souko_sceneTex_005410[];
 extern u64 souko_sceneTex_005C10[];
 
+#endif

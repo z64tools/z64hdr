@@ -1,3 +1,6 @@
+#ifndef OBJECT_MM_H
+#define OBJECT_MM_H 1
+
 extern s16 sRunningManSprintAnimFrameData[];
 extern JointIndex sRunningManSprintAnimJointIndices[];
 extern AnimationHeader gRunningManSprintAnim;
@@ -62,3 +65,4 @@ extern s16 sRunningManHappyAnimFrameData[];
 extern JointIndex sRunningManHappyAnimJointIndices[];
 extern AnimationHeader gRunningManHappyAnim;
 
+#endif

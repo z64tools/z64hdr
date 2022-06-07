@@ -1,3 +1,6 @@
+#ifndef GERUDOWAY_SCENE_H
+#define GERUDOWAY_SCENE_H 1
+
 extern SceneCmd gerudoway_sceneCommands[];
 extern ActorEntry gerudoway_sceneStartPositionList0x000060[];
 extern RomFile gerudoway_sceneRoomList0x000130[];
@@ -27,3 +30,4 @@ extern u64 gThievesHideoutDayEntranceTex[];
 extern u64 gerudoway_sceneTex_00C120[];
 extern u64 gerudoway_sceneTex_00D120[];
 
+#endif

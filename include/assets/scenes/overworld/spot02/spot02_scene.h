@@ -1,3 +1,6 @@
+#ifndef SPOT02_SCENE_H
+#define SPOT02_SCENE_H 1
+
 extern SceneCmd spot02_sceneCommands[];
 extern SceneCmd* spot02_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot02_sceneStartPositionList0x000084[];
@@ -15,7 +18,7 @@ extern CollisionPoly spot02_sceneCollisionHeader_003C54Polygons[];
 extern Vec3s spot02_sceneCollisionHeader_003C54Vertices[];
 extern CollisionHeader spot02_sceneCollisionHeader_003C54;
 extern CutsceneData spot02_scene_Cs_003C80[];
-extern CutsceneData spot02_sceneSet_006EC0CutsceneData_004E90[];
+extern CutsceneData spot02_sceneCutsceneData_004E90[];
 extern CutsceneData spot02_scene_Cs_005020[];
 extern SceneCmd spot02_sceneSet_0061D0[];
 extern ActorEntry spot02_sceneStartPositionList0x006238[];
@@ -75,3 +78,4 @@ extern u64 spot02_sceneTex_00AE80[];
 extern u64 spot02_sceneTex_00B080[];
 extern u64 spot02_sceneTex_00B880[];
 
+#endif

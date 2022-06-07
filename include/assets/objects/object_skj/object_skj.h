@@ -1,3 +1,6 @@
+#ifndef OBJECT_SKJ_H
+#define OBJECT_SKJ_H 1
+
 extern s16 sSkullKidBackflipAnimFrameData[];
 extern JointIndex sSkullKidBackflipAnimJointIndices[];
 extern AnimationHeader gSkullKidBackflipAnim;
@@ -89,3 +92,4 @@ extern s16 sSkullKidWalkToPlayerAnimFrameData[];
 extern JointIndex sSkullKidWalkToPlayerAnimJointIndices[];
 extern AnimationHeader gSkullKidWalkToPlayerAnim;
 
+#endif

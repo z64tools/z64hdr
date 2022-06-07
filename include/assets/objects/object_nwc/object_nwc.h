@@ -1,3 +1,6 @@
+#ifndef OBJECT_NWC_H
+#define OBJECT_NWC_H 1
+
 extern u64 gCuccoChickBodyTex[];
 extern Vtx object_nwcVtx_000800[];
 extern Gfx gCuccoChickSetupBodyDL[];
@@ -13,3 +16,4 @@ extern Gfx gCuccoChickSetupShadowDL[];
 extern Gfx gCuccoChickShadowDL[];
 extern Vtx object_nwcVtx_000D68[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_COW_H
+#define OBJECT_COW_H 1
+
 extern s16 sCowBodyChewAnimFrameData[];
 extern JointIndex sCowBodyChewAnimJointIndices[];
 extern AnimationHeader gCowBodyChewAnim;
@@ -45,3 +48,4 @@ extern s16 sCowTailSwishAnimFrameData[];
 extern JointIndex sCowTailSwishAnimJointIndices[];
 extern AnimationHeader gCowTailSwishAnim;
 
+#endif

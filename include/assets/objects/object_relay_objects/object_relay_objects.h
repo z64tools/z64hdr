@@ -1,3 +1,6 @@
+#ifndef OBJECT_RELAY_OBJECTS_H
+#define OBJECT_RELAY_OBJECTS_H 1
+
 extern Vtx object_relay_objectsVtx_000000[];
 extern Gfx gDampeRaceDoorDL[];
 extern CamData gDampeRaceDoorColCamDataList[];
@@ -17,3 +20,4 @@ extern Vec3s gWindmillRotatingPlatformColVertices[];
 extern CollisionHeader gWindmillRotatingPlatformCol;
 extern u64 gDampeRaceDoorTex[];
 
+#endif

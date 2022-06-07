@@ -1,3 +1,6 @@
+#ifndef OBJECT_TITE_H
+#define OBJECT_TITE_H 1
+
 extern s16 object_tite_Anim_0001D4FrameData[];
 extern JointIndex object_tite_Anim_0001D4JointIndices[];
 extern AnimationHeader object_tite_Anim_0001D4;
@@ -68,3 +71,4 @@ extern StandardLimb object_tite_Limb_0039B4;
 extern void* object_tite_Skel_003A20Limbs[];
 extern SkeletonHeader object_tite_Skel_003A20;
 
+#endif

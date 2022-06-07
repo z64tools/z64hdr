@@ -1,3 +1,6 @@
+#ifndef OBJECT_COB_H
+#define OBJECT_COB_H 1
+
 extern u64 object_cob_TLUT_000000[];
 extern u64 object_cob_Tex_000200[];
 extern u64 object_cob_Tex_000280[];
@@ -38,3 +41,4 @@ extern StandardLimb object_cob_Limb_0021B0;
 extern void* object_cob_Skel_0021F8Limbs[];
 extern FlexSkeletonHeader object_cob_Skel_0021F8;
 
+#endif

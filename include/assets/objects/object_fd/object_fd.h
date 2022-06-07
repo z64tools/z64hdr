@@ -1,3 +1,6 @@
+#ifndef OBJECT_FD_H
+#define OBJECT_FD_H 1
+
 extern Vtx object_fdVtx_000000[];
 extern Gfx gVolvagiaPlatformDL[];
 extern u64 object_fdTLUT_000438[];
@@ -158,3 +161,4 @@ extern StandardLimb gVolvagiaHeadSkelLimbsLimb_01163C;
 extern void* gVolvagiaHeadSkelLimbs[];
 extern SkeletonHeader gVolvagiaHeadSkel;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef BDAN_ROOM_7_H
+#define BDAN_ROOM_7_H 1
+
 extern SceneCmd bdan_room_7Commands[];
 extern SceneCmd* bdan_room_7AlternateHeaders0x000048[];
 extern s16 bdan_room_7ObjectList_000058[];
@@ -16,3 +19,4 @@ extern Gfx bdan_room_7DL_002CB8[];
 extern u64 bdan_room_7Tex_002CD0[];
 extern u64 bdan_room_7Tex_0030D0[];
 
+#endif

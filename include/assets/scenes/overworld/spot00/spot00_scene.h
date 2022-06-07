@@ -1,3 +1,6 @@
+#ifndef SPOT00_SCENE_H
+#define SPOT00_SCENE_H 1
+
 extern SceneCmd spot00_sceneCommands[];
 extern SceneCmd* spot00_sceneAlternateHeaders0x000068[];
 extern ActorEntry spot00_sceneStartPositionList0x000098[];
@@ -13,14 +16,14 @@ extern CollisionPoly spot00_sceneCollisionHeader_008464Polygons[];
 extern Vec3s spot00_sceneCollisionHeader_008464Vertices[];
 extern WaterBox spot00_sceneCollisionHeader_008464WaterBoxes[];
 extern CollisionHeader spot00_sceneCollisionHeader_008464;
-extern CutsceneData spot00_sceneSet_011B70CutsceneData_008494[];
-extern CutsceneData spot00_sceneSet_011CC0CutsceneData_00A000[];
-extern CutsceneData spot00_sceneSet_011D60CutsceneData_00A920[];
+extern CutsceneData spot00_sceneCutsceneData_008494[];
+extern CutsceneData spot00_sceneCutsceneData_00A000[];
+extern CutsceneData spot00_sceneCutsceneData_00A920[];
 extern CutsceneData gHyruleFieldGetOoTCs[];
-extern CutsceneData spot00_sceneSet_011F20CutsceneData_00BF40[];
-extern CutsceneData spot00_sceneSet_012020CutsceneData_00C120[];
-extern CutsceneData spot00_sceneSet_0120E0CutsceneData_00C8C0[];
-extern CutsceneData spot00_sceneSet_012180CutsceneData_00DCB0[];
+extern CutsceneData spot00_sceneCutsceneData_00BF40[];
+extern CutsceneData spot00_sceneCutsceneData_00C120[];
+extern CutsceneData spot00_sceneCutsceneData_00C8C0[];
+extern CutsceneData spot00_sceneCutsceneData_00DCB0[];
 extern CutsceneData gHyruleFieldZeldaSongOfTimeCs[];
 extern CutsceneData gHyruleFieldSouthEponaJumpCs[];
 extern CutsceneData gHyruleFieldEastEponaJumpCs[];
@@ -97,7 +100,7 @@ extern RomFile spot00_sceneRoomList0x0121F0[];
 extern EntranceEntry spot00_sceneEntranceList0x0121F8[];
 extern u16 spot00_sceneExitList_0121FC[];
 extern LightSettings spot00_sceneLightSettings0x01221C[];
-extern CutsceneData spot00_sceneSet_011AD0CutsceneData_012400[];
+extern CutsceneData spot00_sceneCutsceneData_012400[];
 extern CutsceneData gHyruleFieldIntroCs[];
 extern u64 spot00_sceneTLUT_013D70[];
 extern u64 spot00_sceneTex_013D98[];
@@ -152,3 +155,4 @@ extern u64 spot00_sceneTex_029D98[];
 extern u64 spot00_sceneTex_029F98[];
 extern u64 spot00_scene_Tex_02A198[];
 
+#endif

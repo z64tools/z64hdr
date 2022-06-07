@@ -1,3 +1,6 @@
+#ifndef ENRUI_SCENE_H
+#define ENRUI_SCENE_H 1
+
 extern SceneCmd enrui_sceneCommands[];
 extern ActorEntry enrui_sceneStartPositionList0x000060[];
 extern TransitionActorEntry enrui_sceneTransitionActorList_000090[];
@@ -12,3 +15,4 @@ extern CollisionPoly enrui_sceneCollisionHeader_0003B4Polygons[];
 extern Vec3s enrui_sceneCollisionHeader_0003B4Vertices[];
 extern CollisionHeader enrui_sceneCollisionHeader_0003B4;
 
+#endif

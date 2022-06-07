@@ -1,3 +1,6 @@
+#ifndef OBJECT_BOJ_H
+#define OBJECT_BOJ_H 1
+
 extern StandardLimb object_boj_Limb_000000;
 extern StandardLimb object_boj_Limb_00000C;
 extern StandardLimb object_boj_Limb_000018;
@@ -58,3 +61,4 @@ extern Gfx object_boj_DL_005738[];
 extern Gfx object_boj_DL_0059B0[];
 extern Gfx object_boj_DL_005BC8[];
 
+#endif

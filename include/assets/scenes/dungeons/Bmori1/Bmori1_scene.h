@@ -1,3 +1,6 @@
+#ifndef BMORI1_SCENE_H
+#define BMORI1_SCENE_H 1
+
 extern SceneCmd Bmori1_sceneCommands[];
 extern ActorEntry Bmori1_sceneStartPositionList0x000060[];
 extern TransitionActorEntry Bmori1_sceneTransitionActorList_000090[];
@@ -21,3 +24,4 @@ extern u64 Bmori1_sceneTex_015690[];
 extern u64 Bmori1_sceneTex_015A90[];
 extern u64 Bmori1_sceneTex_015B90[];
 
+#endif

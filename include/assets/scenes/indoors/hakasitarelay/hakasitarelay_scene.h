@@ -1,3 +1,6 @@
+#ifndef HAKASITARELAY_SCENE_H
+#define HAKASITARELAY_SCENE_H 1
+
 extern SceneCmd hakasitarelay_sceneCommands[];
 extern ActorEntry hakasitarelay_sceneStartPositionList0x000060[];
 extern TransitionActorEntry hakasitarelay_sceneTransitionActorList_000090[];
@@ -15,3 +18,4 @@ extern u64 hakasitarelay_sceneTex_00D080[];
 extern u64 hakasitarelay_sceneTex_00D880[];
 extern CutsceneData gSongOfStormsCs[];
 
+#endif

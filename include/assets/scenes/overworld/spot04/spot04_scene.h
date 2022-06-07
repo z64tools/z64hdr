@@ -1,3 +1,6 @@
+#ifndef SPOT04_SCENE_H
+#define SPOT04_SCENE_H 1
+
 extern SceneCmd spot04_sceneCommands[];
 extern SceneCmd* spot04_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot04_sceneStartPositionList0x0000A4[];
@@ -17,15 +20,15 @@ extern CollisionPoly spot04_sceneCollisionHeader_008918Polygons[];
 extern Vec3s spot04_sceneCollisionHeader_008918Vertices[];
 extern WaterBox spot04_sceneCollisionHeader_008918WaterBoxes[];
 extern CollisionHeader spot04_sceneCollisionHeader_008918;
-extern CutsceneData spot04_sceneSet_00D220CutsceneData_008950[];
-extern CutsceneData spot04_sceneSet_00D350CutsceneData_008DA0[];
-extern CutsceneData spot04_sceneSet_00D470CutsceneData_0093A0[];
-extern CutsceneData spot04_sceneSet_00D590CutsceneData_00A6D0[];
-extern CutsceneData spot04_sceneSet_00D740CutsceneData_00B280[];
-extern CutsceneData spot04_sceneSet_00D8F0CutsceneData_00B800[];
-extern CutsceneData spot04_sceneSet_00DAA0CutsceneData_00B9B0[];
-extern CutsceneData spot04_sceneSet_00DB80CutsceneData_00BB20[];
-extern CutsceneData spot04_sceneSet_00DC60CutsceneData_00BCB0[];
+extern CutsceneData spot04_sceneCutsceneData_008950[];
+extern CutsceneData spot04_sceneCutsceneData_008DA0[];
+extern CutsceneData spot04_sceneCutsceneData_0093A0[];
+extern CutsceneData spot04_sceneCutsceneData_00A6D0[];
+extern CutsceneData spot04_sceneCutsceneData_00B280[];
+extern CutsceneData spot04_sceneCutsceneData_00B800[];
+extern CutsceneData spot04_sceneCutsceneData_00B9B0[];
+extern CutsceneData spot04_sceneCutsceneData_00BB20[];
+extern CutsceneData spot04_sceneCutsceneData_00BCB0[];
 extern CutsceneData gKokiriForestDekuSproutCs[];
 extern SceneCmd spot04_sceneSet_00CC00[];
 extern ActorEntry spot04_sceneStartPositionList0x00CC68[];
@@ -131,3 +134,4 @@ extern u64 spot04_sceneTex_00FE18[];
 extern u64 spot04_sceneTex_010618[];
 extern CutsceneData gSpot04Cs_10E20[];
 
+#endif

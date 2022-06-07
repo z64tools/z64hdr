@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT01_MATOYAB_H
+#define OBJECT_SPOT01_MATOYAB_H 1
+
 extern u64 gKakarikoConstructionSiteTLUT[];
 extern u64 gKakarikoConstructionSiteBrickWithGrassTex[];
 extern u64 gKakarikoConstructionSiteBrickTex[];
@@ -19,3 +22,4 @@ extern Vec3s gKakarikoGuardGateColVertices[];
 extern CollisionHeader gKakarikoGuardGateCol;
 extern u64 gKakarikoGuardGateMetalSidebarDL[];
 
+#endif

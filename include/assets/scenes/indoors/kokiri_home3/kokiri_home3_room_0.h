@@ -1,3 +1,6 @@
+#ifndef KOKIRI_HOME3_ROOM_0_H
+#define KOKIRI_HOME3_ROOM_0_H 1
+
 extern SceneCmd kokiri_home3_room_0Commands[];
 extern s16 kokiri_home3_room_0ObjectList_000040[];
 extern ActorEntry kokiri_home3_room_0ActorList_000048[];
@@ -20,3 +23,4 @@ extern Gfx kokiri_home3_room_0DL_036100[];
 extern Gfx kokiri_home3_room_0DL_036348[];
 extern Gfx kokiri_home3_room_0DL_036590[];
 
+#endif

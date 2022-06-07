@@ -1,3 +1,6 @@
+#ifndef OBJECT_DODONGO_H
+#define OBJECT_DODONGO_H 1
+
 extern s16 sDodongoDieAnimFrameData[];
 extern JointIndex sDodongoDieAnimJointIndices[];
 extern AnimationHeader gDodongoDieAnim;
@@ -95,3 +98,4 @@ extern u64 gDodongoFire3Tex[];
 extern Gfx gDodongoFireDL[];
 extern Vtx object_dodongoVtx_009900[];
 
+#endif

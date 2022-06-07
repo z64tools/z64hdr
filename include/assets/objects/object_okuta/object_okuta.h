@@ -1,3 +1,6 @@
+#ifndef OBJECT_OKUTA_H
+#define OBJECT_OKUTA_H 1
+
 extern s16 sOctorokShootAnimFrameData[];
 extern JointIndex sOctorokShootAnimJointIndices[];
 extern AnimationHeader gOctorokShootAnim;
@@ -84,3 +87,4 @@ extern s16 sOctorokAppearAnimFrameData[];
 extern JointIndex sOctorokAppearAnimJointIndices[];
 extern AnimationHeader gOctorokAppearAnim;
 
+#endif

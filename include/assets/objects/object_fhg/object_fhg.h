@@ -1,3 +1,6 @@
+#ifndef OBJECT_FHG_H
+#define OBJECT_FHG_H 1
+
 extern Vtx object_fhgVtx_000000[];
 extern Gfx gPhantomHorseSkelLimbsLimb_00AD54DL_001F50[];
 extern Gfx gPhantomHorseSkelLimbsLimb_00AD44DL_002098[];
@@ -309,3 +312,4 @@ extern u64 object_fhgTex_011120[];
 extern Vtx object_fhgVtx_012120[];
 extern Gfx gPhantomEnergyBallDL[];
 
+#endif

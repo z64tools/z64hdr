@@ -1,3 +1,6 @@
+#ifndef OBJECT_BROB_H
+#define OBJECT_BROB_H 1
+
 extern s16 object_brob_Anim_000290FrameData[];
 extern JointIndex object_brob_Anim_000290JointIndices[];
 extern AnimationHeader object_brob_Anim_000290;
@@ -34,3 +37,4 @@ extern CollisionPoly object_brob_Col_001A70Polygons[];
 extern Vec3s object_brob_Col_001A70Vertices[];
 extern CollisionHeader object_brob_Col_001A70;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef FIRE_BS_SCENE_H
+#define FIRE_BS_SCENE_H 1
+
 extern SceneCmd FIRE_bs_sceneCommands[];
 extern ActorEntry FIRE_bs_sceneStartPositionList0x000060[];
 extern TransitionActorEntry FIRE_bs_sceneTransitionActorList_000070[];
@@ -15,3 +18,4 @@ extern u64 FIRE_bs_sceneTex_003400[];
 extern u64 FIRE_bs_sceneTex_003C00[];
 extern u64 FIRE_bs_sceneTex_004400[];
 
+#endif

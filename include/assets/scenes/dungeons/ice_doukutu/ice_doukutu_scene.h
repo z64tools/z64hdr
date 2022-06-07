@@ -1,3 +1,6 @@
+#ifndef ICE_DOUKUTU_SCENE_H
+#define ICE_DOUKUTU_SCENE_H 1
+
 extern SceneCmd ice_doukutu_sceneCommands[];
 extern SceneCmd* ice_doukutu_sceneAlternateHeaders0x000070[];
 extern ActorEntry ice_doukutu_sceneStartPositionList0x000080[];
@@ -35,3 +38,4 @@ extern u64 ice_doukutu_sceneTex_0108C0[];
 extern u64 ice_doukutu_sceneTex_010AC0[];
 extern u64 ice_doukutu_sceneTex_010EC0[];
 
+#endif

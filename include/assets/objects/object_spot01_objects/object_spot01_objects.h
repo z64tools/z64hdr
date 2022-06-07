@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT01_OBJECTS_H
+#define OBJECT_SPOT01_OBJECTS_H 1
+
 extern Vtx object_spot01_objectsVtx_000000[];
 extern Gfx gKakarikoWindmillSailsDL[];
 extern Vtx object_spot01_objectsVtx_0001B0[];
@@ -13,3 +16,4 @@ extern u64 gKakarikoWellWaterTex[];
 extern u64 gKakarikoWindmillSailsTex[];
 extern u64 gKakarikoWellArchTex[];
 
+#endif

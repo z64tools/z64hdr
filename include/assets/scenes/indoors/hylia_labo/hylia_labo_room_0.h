@@ -1,3 +1,6 @@
+#ifndef HYLIA_LABO_ROOM_0_H
+#define HYLIA_LABO_ROOM_0_H 1
+
 extern SceneCmd hylia_labo_room_0Commands[];
 extern s16 hylia_labo_room_0ObjectList_000040[];
 extern ActorEntry hylia_labo_room_0ActorList_000048[];
@@ -47,3 +50,4 @@ extern Gfx hylia_labo_room_0DL_006CE0[];
 extern Vtx hylia_labo_room_0Vtx_007020[];
 extern Gfx hylia_labo_room_0DL_007460[];
 
+#endif

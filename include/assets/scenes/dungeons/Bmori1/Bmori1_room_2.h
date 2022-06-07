@@ -1,3 +1,6 @@
+#ifndef BMORI1_ROOM_2_H
+#define BMORI1_ROOM_2_H 1
+
 extern SceneCmd Bmori1_room_2Commands[];
 extern s16 Bmori1_room_2ObjectList_000040[];
 extern ActorEntry Bmori1_room_2ActorList_00005C[];
@@ -37,3 +40,4 @@ extern u64 Bmori1_room_2Tex_00E580[];
 extern u64 Bmori1_room_2Tex_00E980[];
 extern u64 Bmori1_room_2Tex_00F180[];
 
+#endif

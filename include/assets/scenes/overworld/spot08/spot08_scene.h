@@ -1,3 +1,6 @@
+#ifndef SPOT08_SCENE_H
+#define SPOT08_SCENE_H 1
+
 extern SceneCmd spot08_sceneCommands[];
 extern SceneCmd* spot08_sceneAlternateHeaders0x000060[];
 extern ActorEntry spot08_sceneStartPositionList0x000078[];
@@ -11,9 +14,9 @@ extern CollisionPoly spot08_sceneCollisionHeader_002CE0Polygons[];
 extern Vec3s spot08_sceneCollisionHeader_002CE0Vertices[];
 extern WaterBox spot08_sceneCollisionHeader_002CE0WaterBoxes[];
 extern CollisionHeader spot08_sceneCollisionHeader_002CE0;
-extern CutsceneData spot08_sceneSet_004730CutsceneData_002D10[];
-extern CutsceneData spot08_sceneSet_004810CutsceneData_003C80[];
-extern CutsceneData spot08_sceneSet_004990CutsceneData_0041F0[];
+extern CutsceneData spot08_sceneCutsceneData_002D10[];
+extern CutsceneData spot08_sceneCutsceneData_003C80[];
+extern CutsceneData spot08_sceneCutsceneData_0041F0[];
 extern SceneCmd spot08_sceneSet_004370[];
 extern ActorEntry spot08_sceneStartPositionList0x0043C8[];
 extern RomFile spot08_sceneRoomList0x004428[];
@@ -73,3 +76,4 @@ extern u64 spot08_sceneTex_0109A0[];
 extern u64 spot08_sceneTex_010AA0[];
 extern u64 spot08_sceneTex_010EA0[];
 
+#endif

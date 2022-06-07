@@ -1,3 +1,6 @@
+#ifndef MAP_GRAND_STATIC_H
+#define MAP_GRAND_STATIC_H 1
+
 extern u64 gHyruleFieldMinimapTex[];
 extern u64 gKakarikoVillageMinimapTex[];
 extern u64 gGraveyardMinimapTex[];
@@ -23,3 +26,4 @@ extern u64 gDrainedLakeHyliaMinimapTex[];
 extern u64 gGerudoValleyWithBrokenBridgeMinimapTex[];
 extern u64 gGerudosFortressMinimapTex[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef YDAN_ROOM_6_H
+#define YDAN_ROOM_6_H 1
+
 extern SceneCmd ydan_room_6Commands[];
 extern s16 ydan_room_6ObjectList_000040[];
 extern ActorEntry ydan_room_6ActorList_000058[];
@@ -13,3 +16,4 @@ extern u64 ydan_room_6Tex_003700[];
 extern u64 ydan_room_6Tex_003F00[];
 extern u64 ydan_room_6Tex_004700[];
 
+#endif

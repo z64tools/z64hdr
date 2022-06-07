@@ -1,3 +1,6 @@
+#ifndef OBJECT_DU_H
+#define OBJECT_DU_H 1
+
 extern s16 sDaruniaItemGiveAnimFrameData[];
 extern JointIndex sDaruniaItemGiveAnimJointIndices[];
 extern AnimationHeader gDaruniaItemGiveAnim;
@@ -113,3 +116,4 @@ extern s16 sDaruniaSageFormationAnimFrameData[];
 extern JointIndex sDaruniaSageFormationAnimJointIndices[];
 extern AnimationHeader gDaruniaSageFormationAnim;
 
+#endif

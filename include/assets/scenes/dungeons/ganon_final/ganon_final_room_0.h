@@ -1,3 +1,6 @@
+#ifndef GANON_FINAL_ROOM_0_H
+#define GANON_FINAL_ROOM_0_H 1
+
 extern SceneCmd ganon_final_room_0Commands[];
 extern s16 ganon_final_room_0ObjectList_000040[];
 extern ActorEntry ganon_final_room_0ActorList_000050[];
@@ -47,3 +50,4 @@ extern Vtx ganon_final_room_0Vtx_00CAE0[];
 extern Gfx ganon_final_room_0DL_00CD90[];
 extern Gfx ganon_final_room_0DL_00CE98[];
 
+#endif

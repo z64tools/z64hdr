@@ -1,3 +1,6 @@
+#ifndef OBJECT_DH_H
+#define OBJECT_DH_H 1
+
 extern Vtx object_dhVtx_000000[];
 extern Gfx object_dh_DL_000760[];
 extern Gfx object_dh_DL_000808[];
@@ -77,3 +80,4 @@ extern Gfx object_dh_DL_007FC0[];
 extern u64 object_dh_Tex_0080C0[];
 extern u64 object_dh_Tex_0088C0[];
 
+#endif

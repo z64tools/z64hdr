@@ -1,3 +1,6 @@
+#ifndef OBJECT_MO_H
+#define OBJECT_MO_H 1
+
 extern u64 object_moTex_000000[];
 extern Vtx object_moVtx_000100[];
 extern Gfx gMorphaBubbleDL[];
@@ -69,3 +72,4 @@ extern Gfx gMorphaTentaclePart39DL[];
 extern Gfx gMorphaTentaclePart40DL[];
 extern u64 gMorphaWaterTex[];
 
+#endif

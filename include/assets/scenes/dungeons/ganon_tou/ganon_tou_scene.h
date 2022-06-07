@@ -1,3 +1,6 @@
+#ifndef GANON_TOU_SCENE_H
+#define GANON_TOU_SCENE_H 1
+
 extern SceneCmd ganon_tou_sceneCommands[];
 extern SceneCmd* ganon_tou_sceneAlternateHeaders0x000060[];
 extern ActorEntry ganon_tou_sceneStartPositionList0x000070[];
@@ -20,3 +23,4 @@ extern LightSettings ganon_tou_sceneLightSettings0x003228[];
 extern u64 ganon_tou_sceneTex_003280[];
 extern CutsceneData gGanonsCastleIntroCs[];
 
+#endif

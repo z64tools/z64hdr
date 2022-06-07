@@ -1,3 +1,6 @@
+#ifndef SYOTES2_SCENE_H
+#define SYOTES2_SCENE_H 1
+
 extern SceneCmd syotes2_sceneCommands[];
 extern ActorEntry syotes2_sceneStartPositionList0x000050[];
 extern RomFile syotes2_sceneRoomList0x000060[];
@@ -9,3 +12,4 @@ extern CollisionPoly syotes2_sceneCollisionHeader_002478Polygons[];
 extern Vec3s syotes2_sceneCollisionHeader_002478Vertices[];
 extern CollisionHeader syotes2_sceneCollisionHeader_002478;
 
+#endif

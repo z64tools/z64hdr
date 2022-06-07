@@ -1,3 +1,6 @@
+#ifndef OBJECT_KW1_H
+#define OBJECT_KW1_H 1
+
 extern StandardLimb gKw1SkelLimb_000000;
 extern StandardLimb gKw1SkelLimb_00000C;
 extern StandardLimb gKw1SkelLimb_000018;
@@ -50,3 +53,4 @@ extern Gfx object_kw1_DL_006478[];
 extern Gfx object_kw1_DL_006620[];
 extern Gfx object_kw1_DL_0067C0[];
 
+#endif

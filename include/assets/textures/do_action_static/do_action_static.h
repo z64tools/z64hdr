@@ -1,3 +1,6 @@
+#ifndef DO_ACTION_STATIC_H
+#define DO_ACTION_STATIC_H 1
+
 extern u64 gAttackDoActionENGTex[];
 extern u64 gCheckDoActionENGTex[];
 extern u64 gEnterDoActionENGTex[];
@@ -86,3 +89,4 @@ extern u64 gNum6DoActionFRATex[];
 extern u64 gNum7DoActionFRATex[];
 extern u64 gNum8DoActionFRATex[];
 
+#endif

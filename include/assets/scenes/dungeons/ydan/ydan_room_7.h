@@ -1,3 +1,6 @@
+#ifndef YDAN_ROOM_7_H
+#define YDAN_ROOM_7_H 1
+
 extern SceneCmd ydan_room_7Commands[];
 extern s16 ydan_room_7ObjectList_000040[];
 extern ActorEntry ydan_room_7ActorList_00005C[];
@@ -21,3 +24,4 @@ extern Vtx ydan_room_7Vtx_0078A0[];
 extern Gfx ydan_room_7DL_0079C0[];
 extern u64 ydan_room_7Tex_007A98[];
 
+#endif

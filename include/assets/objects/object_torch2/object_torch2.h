@@ -1,3 +1,6 @@
+#ifndef OBJECT_TORCH2_H
+#define OBJECT_TORCH2_H 1
+
 extern Vtx object_torch2Vtx_000000[];
 extern Gfx gDarkLinkSkelLimbsLimb_0045D0FarDL_002BD0[];
 extern Gfx gDarkLinkSkelLimbsLimb_0045F0FarDL_002CD0[];
@@ -43,3 +46,4 @@ extern LodLimb gDarkLinkSkelLimbsLimb_004700;
 extern void* gDarkLinkSkelLimbs[];
 extern FlexSkeletonHeader gDarkLinkSkel;
 
+#endif

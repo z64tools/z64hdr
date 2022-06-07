@@ -1,3 +1,6 @@
+#ifndef ICON_ITEM_FRA_STATIC_H
+#define ICON_ITEM_FRA_STATIC_H 1
+
 extern u64 gPauseDekuTitleFRATex[];
 extern u64 gPauseDodongoTitleFRATex[];
 extern u64 gPauseJabuTitleFRATex[];
@@ -32,3 +35,4 @@ extern u64 gPauseSave00FRATex[];
 extern u64 gPauseSave10FRATex[];
 extern u64 gPauseSave20FRATex[];
 
+#endif

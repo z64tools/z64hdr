@@ -1,3 +1,6 @@
+#ifndef TURIBORI_ROOM_0_H
+#define TURIBORI_ROOM_0_H 1
+
 extern SceneCmd turibori_room_0Commands[];
 extern s16 turibori_room_0ObjectList_000040[];
 extern ActorEntry turibori_room_0ActorList_000044[];
@@ -37,3 +40,4 @@ extern Vtx turibori_room_0Vtx_006348[];
 extern Gfx turibori_room_0DL_0065B8[];
 extern Gfx turibori_room_0DL_006740[];
 
+#endif

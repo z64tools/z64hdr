@@ -1,3 +1,6 @@
+#ifndef OBJECT_HUMAN_H
+#define OBJECT_HUMAN_H 1
+
 extern u64 gHumanEyeLookForwardOpenTex[];
 extern u64 gHumanEyeLookForwardHalfTex[];
 extern u64 gHumanEyeLookForwardClosedTex[];
@@ -183,3 +186,4 @@ extern s16 gHumanWalkingStartAnimFrameData[];
 extern JointKey gHumanWalkingStartAnimJointKey[];
 extern LegacyAnimationHeader gHumanWalkingStartAnim;
 
+#endif

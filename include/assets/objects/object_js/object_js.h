@@ -1,3 +1,6 @@
+#ifndef OBJECT_JS_H
+#define OBJECT_JS_H 1
+
 extern s16 sCarpetMerchantIdleAnimFrameData[];
 extern JointIndex sCarpetMerchantIdleAnimJointIndices[];
 extern AnimationHeader gCarpetMerchantIdleAnim;
@@ -47,3 +50,4 @@ extern CollisionPoly gCarpetMerchantColPolygons[];
 extern Vec3s gCarpetMerchantColVertices[];
 extern CollisionHeader gCarpetMerchantCol;
 
+#endif

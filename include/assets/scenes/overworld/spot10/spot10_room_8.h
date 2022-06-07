@@ -1,3 +1,6 @@
+#ifndef SPOT10_ROOM_8_H
+#define SPOT10_ROOM_8_H 1
+
 extern SceneCmd spot10_room_8Commands[];
 extern SceneCmd* spot10_room_8AlternateHeaders0x000048[];
 extern s16 spot10_room_8ObjectList_000058[];
@@ -23,3 +26,4 @@ extern Vtx spot10_room_8Vtx_002268[];
 extern Gfx spot10_room_8DL_0024E8[];
 extern Gfx spot10_room_8DL_002630[];
 
+#endif

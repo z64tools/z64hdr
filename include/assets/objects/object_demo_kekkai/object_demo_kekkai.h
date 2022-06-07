@@ -1,3 +1,6 @@
+#ifndef OBJECT_DEMO_KEKKAI_H
+#define OBJECT_DEMO_KEKKAI_H 1
+
 extern u64 object_demo_kekkaiTex_000000[];
 extern u64 object_demo_kekkaiTex_000800[];
 extern u64 object_demo_kekkaiTex_001000[];
@@ -62,3 +65,4 @@ extern CollisionPoly gFireTrialPlatformColPolygons[];
 extern Vec3s gFireTrialPlatformColVertices[];
 extern CollisionHeader gFireTrialPlatformCol;
 
+#endif

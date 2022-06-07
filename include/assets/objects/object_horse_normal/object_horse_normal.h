@@ -1,3 +1,6 @@
+#ifndef OBJECT_HORSE_NORMAL_H
+#define OBJECT_HORSE_NORMAL_H 1
+
 extern s16 sHorseNormalGallopingAnimFrameData[];
 extern JointIndex sHorseNormalGallopingAnimJointIndices[];
 extern AnimationHeader gHorseNormalGallopingAnim;
@@ -340,3 +343,4 @@ extern SkinLimb gHorseNormalSkelLimbsLimb_009EE4;
 extern void* gHorseNormalSkelLimbs[];
 extern SkeletonHeader gHorseNormalSkel;
 
+#endif

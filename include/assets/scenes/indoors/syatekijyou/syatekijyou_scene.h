@@ -1,3 +1,6 @@
+#ifndef SYATEKIJYOU_SCENE_H
+#define SYATEKIJYOU_SCENE_H 1
+
 extern SceneCmd syatekijyou_sceneCommands[];
 extern SceneCmd* syatekijyou_sceneAlternateHeaders0x000068[];
 extern ActorEntry syatekijyou_sceneStartPositionList0x000080[];
@@ -12,9 +15,9 @@ extern SurfaceType syatekijyou_sceneCollisionHeader_001420SurfaceType[];
 extern CollisionPoly syatekijyou_sceneCollisionHeader_001420Polygons[];
 extern Vec3s syatekijyou_sceneCollisionHeader_001420Vertices[];
 extern CollisionHeader syatekijyou_sceneCollisionHeader_001420;
-extern CutsceneData syatekijyou_sceneSet_001A20CutsceneData_001450[];
-extern CutsceneData syatekijyou_sceneSet_001AC0CutsceneData_001640[];
-extern CutsceneData syatekijyou_sceneSet_001B70CutsceneData_001830[];
+extern CutsceneData syatekijyou_sceneCutsceneData_001450[];
+extern CutsceneData syatekijyou_sceneCutsceneData_001640[];
+extern CutsceneData syatekijyou_sceneCutsceneData_001830[];
 extern SceneCmd syatekijyou_sceneSet_001A20[];
 extern ActorEntry syatekijyou_sceneStartPositionList0x001A78[];
 extern TransitionActorEntry syatekijyou_sceneTransitionActorList_001A88[];
@@ -58,3 +61,4 @@ extern u64 syatekijyou_sceneTex_00ACC0[];
 extern u64 syatekijyou_sceneTex_00B0C0[];
 extern u64 syatekijyou_sceneTex_00B2C0[];
 
+#endif

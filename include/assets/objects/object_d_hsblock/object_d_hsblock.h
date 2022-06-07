@@ -1,3 +1,6 @@
+#ifndef OBJECT_D_HSBLOCK_H
+#define OBJECT_D_HSBLOCK_H 1
+
 extern Vtx object_d_hsblockVtx_000000[];
 extern Gfx gHookshotPostDL[];
 extern Vtx object_d_hsblockVtx_000330[];
@@ -15,3 +18,4 @@ extern CollisionHeader gHookshotPostCol;
 extern u64 gHookshotTargetTex[];
 extern u64 gHookshotPostTex[];
 
+#endif

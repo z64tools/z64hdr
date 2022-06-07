@@ -1,3 +1,6 @@
+#ifndef OBJECT_HINTNUTS_H
+#define OBJECT_HINTNUTS_H 1
+
 extern s16 sHintNutsSpitAnimFrameData[];
 extern JointIndex sHintNutsSpitAnimJointIndices[];
 extern AnimationHeader gHintNutsSpitAnim;
@@ -57,3 +60,4 @@ extern s16 sHintNutsRunAnimFrameData[];
 extern JointIndex sHintNutsRunAnimJointIndices[];
 extern AnimationHeader gHintNutsRunAnim;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_OA1_H
+#define OBJECT_OA1_H 1
+
 extern StandardLimb object_oA1_Limb_00000000;
 extern StandardLimb object_oA1_Limb_0000000C;
 extern StandardLimb object_oA1_Limb_00000018;
@@ -66,3 +69,4 @@ extern u64 object_oA1_Tex_00004208[];
 extern u64 object_oA1_Tex_00004308[];
 extern u64 object_oA1_Tex_00004508[];
 
+#endif

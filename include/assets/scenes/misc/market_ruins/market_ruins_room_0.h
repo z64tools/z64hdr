@@ -1,3 +1,6 @@
+#ifndef MARKET_RUINS_ROOM_0_H
+#define MARKET_RUINS_ROOM_0_H 1
+
 extern SceneCmd market_ruins_room_0Commands[];
 extern s16 market_ruins_room_0ObjectList_000040[];
 extern ActorEntry market_ruins_room_0ActorList_000044[];
@@ -30,3 +33,4 @@ extern Vtx market_ruins_room_0Vtx_0025E0[];
 extern Gfx market_ruins_room_0DL_002720[];
 extern Gfx market_ruins_room_0DL_0027B0[];
 
+#endif

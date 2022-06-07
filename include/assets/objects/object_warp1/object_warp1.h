@@ -1,3 +1,6 @@
+#ifndef OBJECT_WARP1_H
+#define OBJECT_WARP1_H 1
+
 extern Vtx object_warp1Vtx_000000[];
 extern Gfx gWarpPortalDL[];
 extern u64 gWarpPortalTex[];
@@ -37,3 +40,4 @@ extern StandardLimb gWarpCrystalLimb_002C48;
 extern void* gWarpCrystalSkelLimbs[];
 extern SkeletonHeader gWarpCrystalSkel;
 
+#endif

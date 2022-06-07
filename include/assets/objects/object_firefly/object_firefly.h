@@ -1,3 +1,6 @@
+#ifndef OBJECT_FIREFLY_H
+#define OBJECT_FIREFLY_H 1
+
 extern s16 sKeeseFlyAnimFrameData[];
 extern JointIndex sKeeseFlyAnimJointIndices[];
 extern AnimationHeader gKeeseFlyAnim;
@@ -53,3 +56,4 @@ extern StandardLimb gKeeseSkeletonLimbsLimb_001840;
 extern void* gKeeseSkeletonLimbs[];
 extern SkeletonHeader gKeeseSkeleton;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_SD_H
+#define OBJECT_SD_H 1
+
 extern u64 gEnHeishiKingGuardTLUT[];
 extern u64 gEnHeishiKingGuardTex_200[];
 extern u64 gEnHeishiKingGuardTex_240[];
@@ -74,3 +77,4 @@ extern s16 sEnHeishiDyingGuardTalkAnimFrameData[];
 extern JointIndex sEnHeishiDyingGuardTalkAnimJointIndices[];
 extern AnimationHeader gEnHeishiDyingGuardTalkAnim;
 
+#endif

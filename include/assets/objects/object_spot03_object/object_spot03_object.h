@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT03_OBJECT_H
+#define OBJECT_SPOT03_OBJECT_H 1
+
 extern u64 object_spot03_object_Tex_000000[];
 extern Vtx object_spot03_object_Vtx_000800[];
 extern Vtx object_spot03_object_Vtx_000990[];
@@ -12,3 +15,4 @@ extern u64 object_spot03_object_Tex_000CD0[];
 extern Vtx object_spot03_objectVtx_0014D0[];
 extern Gfx object_spot03_object_DL_001580[];
 
+#endif

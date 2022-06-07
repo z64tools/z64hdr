@@ -1,3 +1,6 @@
+#ifndef GANON_BOSS_SCENE_H
+#define GANON_BOSS_SCENE_H 1
+
 extern SceneCmd ganon_boss_sceneCommands[];
 extern ActorEntry ganon_boss_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ganon_boss_sceneTransitionActorList_000070[];
@@ -34,3 +37,4 @@ extern u64 ganon_boss_sceneTex_006418[];
 extern u64 ganon_boss_sceneTex_006C18[];
 extern u64 ganon_boss_sceneTex_007418[];
 
+#endif

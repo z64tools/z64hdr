@@ -1,3 +1,6 @@
+#ifndef OBJECT_OWL_H
+#define OBJECT_OWL_H 1
+
 extern s16 sOwlTakeoffAnimFrameData[];
 extern JointIndex sOwlTakeoffAnimJointIndices[];
 extern AnimationHeader gOwlTakeoffAnim;
@@ -102,3 +105,4 @@ extern StandardLimb gOwlPerchingSkelLimbsLimb_010068;
 extern void* gOwlPerchingSkelLimbs[];
 extern FlexSkeletonHeader gOwlPerchingSkel;
 
+#endif

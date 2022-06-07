@@ -1,3 +1,6 @@
+#ifndef MIZUSIN_ROOM_16_H
+#define MIZUSIN_ROOM_16_H 1
+
 extern SceneCmd MIZUsin_room_16Commands[];
 extern s16 MIZUsin_room_16ObjectList_000040[];
 extern ActorEntry MIZUsin_room_16ActorList_00004C[];
@@ -12,3 +15,4 @@ extern u64 MIZUsin_room_16Tex_002330[];
 extern u64 MIZUsin_room_16Tex_002B30[];
 extern u64 MIZUsin_room_16Tex_003330[];
 
+#endif

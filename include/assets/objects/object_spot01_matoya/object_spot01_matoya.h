@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT01_MATOYA_H
+#define OBJECT_SPOT01_MATOYA_H 1
+
 extern u64 gKakarikoShootingGalleryTLUT[];
 extern u64 gKakarikoShootingGalleryRoofEdgeTex[];
 extern u64 gKakarikoShootingGalleryRoofTex[];
@@ -29,3 +32,4 @@ extern CollisionPoly gKakarikoBOTWStoneColPolygons[];
 extern Vec3s gKakarikoBOTWStoneColVertices[];
 extern CollisionHeader gKakarikoBOTWStoneCol;
 
+#endif

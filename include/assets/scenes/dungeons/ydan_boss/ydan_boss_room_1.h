@@ -1,3 +1,6 @@
+#ifndef YDAN_BOSS_ROOM_1_H
+#define YDAN_BOSS_ROOM_1_H 1
+
 extern SceneCmd ydan_boss_room_1Commands[];
 extern s16 ydan_boss_room_1ObjectList_000040[];
 extern ActorEntry ydan_boss_room_1ActorList_00004C[];
@@ -15,3 +18,4 @@ extern Gfx ydan_boss_room_1DL_005D90[];
 extern Gfx ydan_boss_room_1DL_005FD8[];
 extern u64 ydan_boss_room_1Tex_005FE8[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_AHG_H
+#define OBJECT_AHG_H 1
+
 extern StandardLimb object_ahg_Limb_000000;
 extern StandardLimb object_ahg_Limb_00000C;
 extern StandardLimb object_ahg_Limb_000018;
@@ -53,3 +56,4 @@ extern Vtx object_ahgVtx_004D08[];
 extern Gfx object_ahg_DL_005508[];
 extern Gfx object_ahg_DL_005728[];
 
+#endif

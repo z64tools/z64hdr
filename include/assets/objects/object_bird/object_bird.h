@@ -1,3 +1,6 @@
+#ifndef OBJECT_BIRD_H
+#define OBJECT_BIRD_H 1
+
 extern s16 sBirdFlyAnimFrameData[];
 extern JointIndex sBirdFlyAnimJointIndices[];
 extern AnimationHeader gBirdFlyAnim;
@@ -28,3 +31,4 @@ extern StandardLimb gBirdBodyLimb;
 extern void* gBirdSkelLimbs[];
 extern SkeletonHeader gBirdSkel;
 
+#endif

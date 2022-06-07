@@ -1,3 +1,6 @@
+#ifndef OBJECT_FD2_H
+#define OBJECT_FD2_H 1
+
 extern Vtx object_fd2Vtx_000000[];
 extern Gfx gHoleVolvagiaSkelLimbsLimb_0119DCDL_001010[];
 extern Gfx gHoleVolvagiaSkelLimbsLimb_0119D0DL_001308[];
@@ -130,3 +133,4 @@ extern StandardLimb gHoleVolvagiaSkelLimbsLimb_0119DC;
 extern void* gHoleVolvagiaSkelLimbs[];
 extern FlexSkeletonHeader gHoleVolvagiaSkel;
 
+#endif

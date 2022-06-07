@@ -1,3 +1,6 @@
+#ifndef LINK_HOME_SCENE_H
+#define LINK_HOME_SCENE_H 1
+
 extern SceneCmd link_home_sceneCommands[];
 extern SceneCmd* link_home_sceneAlternateHeaders0x000060[];
 extern ActorEntry link_home_sceneStartPositionList0x000074[];
@@ -23,6 +26,7 @@ extern RomFile link_home_sceneRoomList0x000FD0[];
 extern EntranceEntry link_home_sceneEntranceList0x000FD8[];
 extern u16 link_home_sceneExitList_000FDC[];
 extern LightSettings link_home_sceneLightSettings0x000FE0[];
-extern CutsceneData link_home_sceneSet_000E80CutsceneData_001040[];
-extern CutsceneData link_home_sceneSet_000F60CutsceneData_0015D0[];
+extern CutsceneData link_home_sceneCutsceneData_001040[];
+extern CutsceneData link_home_sceneCutsceneData_0015D0[];
 
+#endif

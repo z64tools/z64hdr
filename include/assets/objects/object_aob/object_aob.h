@@ -1,3 +1,6 @@
+#ifndef OBJECT_AOB_H
+#define OBJECT_AOB_H 1
+
 extern StandardLimb gDogLadyRootLimb;
 extern StandardLimb gDogLadyLimb_00C;
 extern StandardLimb gDogLadyLimb_018;
@@ -44,3 +47,4 @@ extern Gfx gDogLadyDL_53E8[];
 extern Gfx gDogLadyDL_54B8[];
 extern Gfx gDogLadyDressDL[];
 
+#endif

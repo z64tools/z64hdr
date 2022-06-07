@@ -1,3 +1,6 @@
+#ifndef OBJECT_DEKUBABA_H
+#define OBJECT_DEKUBABA_H 1
+
 extern s16 sDekuBabaPauseChompAnimFrameData[];
 extern JointIndex sDekuBabaPauseChompAnimJointIndices[];
 extern AnimationHeader gDekuBabaPauseChompAnim;
@@ -34,3 +37,4 @@ extern Vtx object_dekubabaVtx_002A50[];
 extern Gfx gDekuBabaStickDropDL[];
 extern u64 gDekuBabaStickDropTex[];
 
+#endif

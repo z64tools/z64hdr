@@ -1,3 +1,6 @@
+#ifndef LINK_HOME_ROOM_0_H
+#define LINK_HOME_ROOM_0_H 1
+
 extern SceneCmd link_home_room_0Commands[];
 extern SceneCmd* link_home_room_0AlternateHeaders0x000048[];
 extern s16 link_home_room_0ObjectList_00005C[];
@@ -19,3 +22,4 @@ extern SceneCmd link_home_room_0Set_002440[];
 extern s16 link_home_room_0ObjectList_002478[];
 extern u64 link_home_room_0Background_002480[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

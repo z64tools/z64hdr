@@ -1,3 +1,6 @@
+#ifndef GAMEPLAY_FIELD_KEEP_H
+#define GAMEPLAY_FIELD_KEEP_H 1
+
 extern Gfx gHanaFlower1DL[];
 extern Gfx gHanaFlower2DL[];
 extern Gfx gHanaFlower3DL[];
@@ -96,3 +99,4 @@ extern u64 gFieldSandstorm2Tex[];
 extern Gfx gFieldSandstormDL[];
 extern u64 gFieldKeepTex_00CB30[];
 
+#endif

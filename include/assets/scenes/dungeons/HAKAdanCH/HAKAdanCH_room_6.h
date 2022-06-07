@@ -1,3 +1,6 @@
+#ifndef HAKADANCH_ROOM_6_H
+#define HAKADANCH_ROOM_6_H 1
+
 extern SceneCmd HAKAdanCH_room_6Commands[];
 extern s16 HAKAdanCH_room_6ObjectList_000040[];
 extern ActorEntry HAKAdanCH_room_6ActorList_000050[];
@@ -12,3 +15,4 @@ extern u64 HAKAdanCH_room_6Tex_000EA0[];
 extern u64 HAKAdanCH_room_6Tex_0016A0[];
 extern u64 HAKAdanCH_room_6Tex_0026A0[];
 
+#endif

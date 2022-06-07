@@ -1,3 +1,6 @@
+#ifndef OBJECT_KINGDODONGO_H
+#define OBJECT_KINGDODONGO_H 1
+
 extern s16 object_kingdodongo_Anim_000690FrameData[];
 extern JointIndex object_kingdodongo_Anim_000690JointIndices[];
 extern AnimationHeader object_kingdodongo_Anim_000690;
@@ -193,3 +196,4 @@ extern u64 object_kingdodongo_Tex_0300E0[];
 extern u64 object_kingdodongo_Tex_0304E0[];
 extern u64 object_kingdodongo_Tex_0308E0[];
 
+#endif

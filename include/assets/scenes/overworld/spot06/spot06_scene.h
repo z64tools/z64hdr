@@ -1,3 +1,6 @@
+#ifndef SPOT06_SCENE_H
+#define SPOT06_SCENE_H 1
+
 extern SceneCmd spot06_sceneCommands[];
 extern SceneCmd* spot06_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot06_sceneStartPositionList0x000084[];
@@ -15,8 +18,8 @@ extern CollisionPoly spot06_sceneCollisionHeader_0055ACPolygons[];
 extern Vec3s spot06_sceneCollisionHeader_0055ACVertices[];
 extern WaterBox spot06_sceneCollisionHeader_0055ACWaterBoxes[];
 extern CollisionHeader spot06_sceneCollisionHeader_0055AC;
-extern CutsceneData spot06_sceneSet_007780CutsceneData_0055E0[];
-extern CutsceneData spot06_sceneSet_007920CutsceneData_006E90[];
+extern CutsceneData spot06_sceneCutsceneData_0055E0[];
+extern CutsceneData spot06_sceneCutsceneData_006E90[];
 extern CutsceneData gLakeHyliaFireArrowsCS[];
 extern SceneCmd spot06_sceneSet_007450[];
 extern ActorEntry spot06_sceneStartPositionList0x0074B8[];
@@ -92,3 +95,4 @@ extern u64 spot06_sceneTex_01A4B8[];
 extern u64 spot06_sceneTex_01ACB8[];
 extern CutsceneData gLakeHyliaOwlCs[];
 
+#endif

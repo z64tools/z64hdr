@@ -1,3 +1,6 @@
+#ifndef OBJECT_GE1_H
+#define OBJECT_GE1_H 1
+
 extern s16 sGerudoWhiteUnusedFoldingArmsAnimFrameData[];
 extern JointIndex sGerudoWhiteUnusedFoldingArmsAnimJointIndices[];
 extern AnimationHeader gGerudoWhiteUnusedFoldingArmsAnim;
@@ -66,3 +69,4 @@ extern s16 sGerudoWhiteDismissiveAnimFrameData[];
 extern JointIndex sGerudoWhiteDismissiveAnimJointIndices[];
 extern AnimationHeader gGerudoWhiteDismissiveAnim;
 
+#endif

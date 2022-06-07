@@ -1,3 +1,6 @@
+#ifndef HAIRAL_NIWA_N_ROOM_0_H
+#define HAIRAL_NIWA_N_ROOM_0_H 1
+
 extern SceneCmd hairal_niwa_n_room_0Commands[];
 extern s16 hairal_niwa_n_room_0ObjectList_000040[];
 extern ActorEntry hairal_niwa_n_room_0ActorList_00004C[];
@@ -17,3 +20,4 @@ extern Vtx hairal_niwa_n_room_0Vtx_0032F8[];
 extern Gfx hairal_niwa_n_room_0DL_0034F8[];
 extern Gfx hairal_niwa_n_room_0DL_003608[];
 
+#endif

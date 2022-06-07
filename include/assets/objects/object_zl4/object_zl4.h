@@ -1,3 +1,6 @@
+#ifndef OBJECT_ZL4_H
+#define OBJECT_ZL4_H 1
+
 extern s16 sChildZeldaAnim_000654FrameData[];
 extern JointIndex sChildZeldaAnim_000654JointIndices[];
 extern AnimationHeader gChildZeldaAnim_000654;
@@ -179,3 +182,4 @@ extern s16 sChildZeldaAnim_01CE08FrameData[];
 extern JointIndex sChildZeldaAnim_01CE08JointIndices[];
 extern AnimationHeader gChildZeldaAnim_01CE08;
 
+#endif

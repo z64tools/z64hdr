@@ -1,3 +1,6 @@
+#ifndef ICON_ITEM_FIELD_STATIC_H
+#define ICON_ITEM_FIELD_STATIC_H 1
+
 extern u64 gWorldMapImageTex[];
 extern u64 gWorldMapImageTLUT[];
 extern u64 gWorldMapDotTex[];
@@ -27,3 +30,4 @@ extern u64 gWorldMapCloud14Tex[];
 extern u64 gWorldMapCloud15Tex[];
 extern u64 gWorldMapCloud16Tex[];
 
+#endif

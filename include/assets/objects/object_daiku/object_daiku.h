@@ -1,3 +1,6 @@
+#ifndef OBJECT_DAIKU_H
+#define OBJECT_DAIKU_H 1
+
 extern s16 object_daiku_Anim_000600FrameData[];
 extern JointIndex object_daiku_Anim_000600JointIndices[];
 extern AnimationHeader object_daiku_Anim_000600;
@@ -69,3 +72,4 @@ extern s16 object_daiku_Anim_00885CFrameData[];
 extern JointIndex object_daiku_Anim_00885CJointIndices[];
 extern AnimationHeader object_daiku_Anim_00885C;
 
+#endif

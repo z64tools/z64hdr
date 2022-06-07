@@ -1,3 +1,6 @@
+#ifndef OBJECT_LIGHTBOX_H
+#define OBJECT_LIGHTBOX_H 1
+
 extern u8 object_lightbox_Blob_000000[];
 extern Gfx object_lightbox_DL_000008[];
 extern Vtx object_lightboxVtx_000120[];
@@ -18,3 +21,4 @@ extern CollisionPoly object_lightbox_Col_001F10Polygons[];
 extern Vec3s object_lightbox_Col_001F10Vertices[];
 extern CollisionHeader object_lightbox_Col_001F10;
 
+#endif

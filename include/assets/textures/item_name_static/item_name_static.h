@@ -1,3 +1,6 @@
+#ifndef ITEM_NAME_STATIC_H
+#define ITEM_NAME_STATIC_H 1
+
 extern u64 gDekuStickItemNameENGTex[];
 extern u64 gDekuNutItemNameENGTex[];
 extern u64 gBombItemNameENGTex[];
@@ -368,3 +371,4 @@ extern u64 gUnusedBossKeyItemName20JPNTex[];
 extern u64 gUnusedBossKeyItemName21JPNTex[];
 extern u64 gBiggoronsSwordItemNameFRATex[];
 
+#endif

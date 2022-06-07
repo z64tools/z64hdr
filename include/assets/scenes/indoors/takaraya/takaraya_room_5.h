@@ -1,3 +1,6 @@
+#ifndef TAKARAYA_ROOM_5_H
+#define TAKARAYA_ROOM_5_H 1
+
 extern SceneCmd takaraya_room_5Commands[];
 extern s16 takaraya_room_5ObjectList_000040[];
 extern ActorEntry takaraya_room_5ActorList_00004C[];
@@ -17,3 +20,4 @@ extern u64 takaraya_room_5Tex_0017F8[];
 extern u64 takaraya_room_5Tex_001FF8[];
 extern u64 takaraya_room_5Tex_0027F8[];
 
+#endif

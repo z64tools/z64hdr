@@ -1,3 +1,6 @@
+#ifndef OBJECT_POH_H
+#define OBJECT_POH_H 1
+
 extern s16 sPoeAttackAnimFrameData[];
 extern JointIndex sPoeAttackAnimJointIndices[];
 extern AnimationHeader gPoeAttackAnim;
@@ -72,3 +75,4 @@ extern StandardLimb gPoeSkelLimbsLimb_005074;
 extern void* gPoeSkelLimbs[];
 extern SkeletonHeader gPoeSkel;
 
+#endif

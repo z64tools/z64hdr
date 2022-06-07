@@ -1,3 +1,6 @@
+#ifndef OBJECT_TOKI_OBJECTS_H
+#define OBJECT_TOKI_OBJECTS_H 1
+
 extern u64 object_toki_objects_Tex_000000[];
 extern Vtx object_toki_objectsVtx_000800[];
 extern Gfx object_toki_objects_DL_000880[];
@@ -32,3 +35,4 @@ extern Gfx object_toki_objects_DL_008190[];
 extern Vtx object_toki_objectsVtx_008250[];
 extern Gfx object_toki_objects_DL_008390[];
 
+#endif

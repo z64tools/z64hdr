@@ -1,3 +1,6 @@
+#ifndef MIHARIGOYA_SCENE_H
+#define MIHARIGOYA_SCENE_H 1
+
 extern SceneCmd miharigoya_sceneCommands[];
 extern SceneCmd* miharigoya_sceneAlternateHeaders0x000068[];
 extern ActorEntry miharigoya_sceneStartPositionList0x000074[];
@@ -37,3 +40,4 @@ extern u64 miharigoya_sceneTex_009D50[];
 extern u64 miharigoya_sceneTex_00AD50[];
 extern u64 miharigoya_sceneTex_00BD50[];
 
+#endif

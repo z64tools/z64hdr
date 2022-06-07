@@ -1,3 +1,6 @@
+#ifndef MORIBOSSROOM_ROOM_1_H
+#define MORIBOSSROOM_ROOM_1_H 1
+
 extern SceneCmd moribossroom_room_1Commands[];
 extern s16 moribossroom_room_1ObjectList_000040[];
 extern ActorEntry moribossroom_room_1ActorList_00004C[];
@@ -43,3 +46,4 @@ extern Gfx moribossroom_room_1DL_00D5E0[];
 extern Gfx moribossroom_room_1DL_00D698[];
 extern u64 moribossroom_room_1Tex_00D6A8[];
 
+#endif

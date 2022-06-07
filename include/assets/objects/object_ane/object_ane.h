@@ -1,3 +1,6 @@
+#ifndef OBJECT_ANE_H
+#define OBJECT_ANE_H 1
+
 extern StandardLimb gCuccoLadyRootLimb;
 extern StandardLimb gCuccoLadyLimb_00C;
 extern StandardLimb gCuccoLadyLimb_018;
@@ -45,3 +48,4 @@ extern Gfx gCuccoLadyDL_6C38[];
 extern Gfx gCuccoLadyDL_6D20[];
 extern Gfx gCuccoLadyDressDL[];
 
+#endif

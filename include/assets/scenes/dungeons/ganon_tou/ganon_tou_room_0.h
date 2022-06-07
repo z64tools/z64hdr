@@ -1,3 +1,6 @@
+#ifndef GANON_TOU_ROOM_0_H
+#define GANON_TOU_ROOM_0_H 1
+
 extern SceneCmd ganon_tou_room_0Commands[];
 extern SceneCmd* ganon_tou_room_0AlternateHeaders0x000050[];
 extern s16 ganon_tou_room_0ObjectList_000060[];
@@ -86,3 +89,4 @@ extern u64 ganon_tou_room_0Tex_012DF0[];
 extern u64 ganon_tou_room_0Tex_0135F0[];
 extern u64 ganon_tou_room_0Tex_0139F0[];
 
+#endif

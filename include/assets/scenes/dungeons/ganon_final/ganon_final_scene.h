@@ -1,3 +1,6 @@
+#ifndef GANON_FINAL_SCENE_H
+#define GANON_FINAL_SCENE_H 1
+
 extern SceneCmd ganon_final_sceneCommands[];
 extern ActorEntry ganon_final_sceneStartPositionList0x000060[];
 extern RomFile ganon_final_sceneRoomList0x0000E0[];
@@ -41,3 +44,4 @@ extern u64 ganon_final_sceneTex_010580[];
 extern u64 ganon_final_sceneTex_010980[];
 extern u64 ganon_final_sceneTex_011180[];
 
+#endif

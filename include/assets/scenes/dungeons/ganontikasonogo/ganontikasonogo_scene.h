@@ -1,3 +1,6 @@
+#ifndef GANONTIKASONOGO_SCENE_H
+#define GANONTIKASONOGO_SCENE_H 1
+
 extern SceneCmd ganontikasonogo_sceneCommands[];
 extern ActorEntry ganontikasonogo_sceneStartPositionList0x000068[];
 extern TransitionActorEntry ganontikasonogo_sceneTransitionActorList_000088[];
@@ -16,3 +19,4 @@ extern CollisionHeader ganontikasonogo_sceneCollisionHeader_002ACC;
 extern u64 ganontikasonogo_sceneTex_002B00[];
 extern u64 ganontikasonogo_sceneTex_003B00[];
 
+#endif

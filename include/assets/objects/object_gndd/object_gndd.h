@@ -1,3 +1,6 @@
+#ifndef OBJECT_GNDD_H
+#define OBJECT_GNDD_H 1
+
 extern s16 object_gndd_Anim_0005B4FrameData[];
 extern JointIndex object_gndd_Anim_0005B4JointIndices[];
 extern AnimationHeader object_gndd_Anim_0005B4;
@@ -123,3 +126,4 @@ extern StandardLimb object_gndd_Limb_011980;
 extern void* object_gndd_Skel_0119E8Limbs[];
 extern FlexSkeletonHeader object_gndd_Skel_0119E8;
 
+#endif

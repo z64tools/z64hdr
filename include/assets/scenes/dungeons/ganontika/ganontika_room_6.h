@@ -1,3 +1,6 @@
+#ifndef GANONTIKA_ROOM_6_H
+#define GANONTIKA_ROOM_6_H 1
+
 extern SceneCmd ganontika_room_6Commands[];
 extern s16 ganontika_room_6ObjectList_000040[];
 extern ActorEntry ganontika_room_6ActorList_000054[];
@@ -48,3 +51,4 @@ extern Vtx ganontika_room_6Vtx_00E900[];
 extern Gfx ganontika_room_6DL_00EB30[];
 extern u64 ganontika_room_6Tex_00EC58[];
 
+#endif

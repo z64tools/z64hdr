@@ -1,3 +1,6 @@
+#ifndef TESTROOM_ROOM_2_H
+#define TESTROOM_ROOM_2_H 1
+
 extern SceneCmd testroom_room_2Commands[];
 extern s16 testroom_room_2ObjectList_000040[];
 extern ActorEntry testroom_room_2ActorList_000048[];
@@ -11,3 +14,4 @@ extern u64 testroom_room_2Tex_001A78[];
 extern u64 testroom_room_2Tex_002278[];
 extern u64 testroom_room_2Tex_002A78[];
 
+#endif

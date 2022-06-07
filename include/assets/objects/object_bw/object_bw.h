@@ -1,3 +1,6 @@
+#ifndef OBJECT_BW_H
+#define OBJECT_BW_H 1
+
 extern s16 object_bw_Anim_000228FrameData[];
 extern JointIndex object_bw_Anim_000228JointIndices[];
 extern AnimationHeader object_bw_Anim_000228;
@@ -36,3 +39,4 @@ extern s16 object_bw_Anim_002250FrameData[];
 extern JointIndex object_bw_Anim_002250JointIndices[];
 extern AnimationHeader object_bw_Anim_002250;
 
+#endif

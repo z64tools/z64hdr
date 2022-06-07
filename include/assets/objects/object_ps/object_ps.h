@@ -1,3 +1,6 @@
+#ifndef OBJECT_PS_H
+#define OBJECT_PS_H 1
+
 extern s16 sPoeSellerIdleAnimFrameData[];
 extern JointIndex sPoeSellerIdleAnimJointIndices[];
 extern AnimationHeader gPoeSellerIdleAnim;
@@ -70,3 +73,4 @@ extern s16 sPoeSellerSwingStickAnimFrameData[];
 extern JointIndex sPoeSellerSwingStickAnimJointIndices[];
 extern AnimationHeader gPoeSellerSwingStickAnim;
 
+#endif

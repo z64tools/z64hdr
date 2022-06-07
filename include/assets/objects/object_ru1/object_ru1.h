@@ -1,3 +1,6 @@
+#ifndef OBJECT_RU1_H
+#define OBJECT_RU1_H 1
+
 extern s16 sRutoChildWaitHandsBehindBackAnimFrameData[];
 extern JointIndex sRutoChildWaitHandsBehindBackAnimJointIndices[];
 extern AnimationHeader gRutoChildWaitHandsBehindBackAnim;
@@ -117,3 +120,4 @@ extern s16 sRutoChildTreadWaterAnimFrameData[];
 extern JointIndex sRutoChildTreadWaterAnimJointIndices[];
 extern AnimationHeader gRutoChildTreadWaterAnim;
 
+#endif

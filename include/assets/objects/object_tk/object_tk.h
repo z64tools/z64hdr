@@ -1,3 +1,6 @@
+#ifndef OBJECT_TK_H
+#define OBJECT_TK_H 1
+
 extern s16 sDampeDigAnimFrameData[];
 extern JointIndex sDampeDigAnimJointIndices[];
 extern AnimationHeader gDampeDigAnim;
@@ -78,3 +81,4 @@ extern StandardLimb gDampeSkelLimbsLimb_00BDF0;
 extern void* gDampeSkelLimbs[];
 extern FlexSkeletonHeader gDampeSkel;
 
+#endif

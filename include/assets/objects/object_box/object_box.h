@@ -1,3 +1,6 @@
+#ifndef OBJECT_BOX_H
+#define OBJECT_BOX_H 1
+
 extern s16 sTreasureChestAnim_000128FrameData[];
 extern JointIndex sTreasureChestAnim_000128JointIndices[];
 extern AnimationHeader gTreasureChestAnim_000128;
@@ -64,3 +67,4 @@ extern CollisionPoly gTreasureChestColPolygons[];
 extern Vec3s gTreasureChestColVertices[];
 extern CollisionHeader gTreasureChestCol;
 
+#endif

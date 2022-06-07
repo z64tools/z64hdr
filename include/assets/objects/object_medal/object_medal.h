@@ -1,3 +1,6 @@
+#ifndef OBJECT_MEDAL_H
+#define OBJECT_MEDAL_H 1
+
 extern Vtx object_medalVtx_000000[];
 extern Gfx object_medal_DL_000360[];
 extern Vtx object_medalVtx_0004E0[];
@@ -18,3 +21,4 @@ extern u64 object_medal_Tex_003940[];
 extern u64 object_medal_Tex_004140[];
 extern u64 object_medal_Tex_004940[];
 
+#endif

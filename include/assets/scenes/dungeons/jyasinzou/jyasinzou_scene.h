@@ -1,3 +1,6 @@
+#ifndef JYASINZOU_SCENE_H
+#define JYASINZOU_SCENE_H 1
+
 extern SceneCmd jyasinzou_sceneCommands[];
 extern ActorEntry jyasinzou_sceneStartPositionList0x000068[];
 extern TransitionActorEntry jyasinzou_sceneTransitionActorList_0000A8[];
@@ -27,3 +30,4 @@ extern u64 gSpiritTempleDayEntranceTex[];
 extern u64 jyasinzou_sceneTex_019120[];
 extern u64 jyasinzou_sceneTex_019320[];
 
+#endif

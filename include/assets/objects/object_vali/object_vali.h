@@ -1,3 +1,6 @@
+#ifndef OBJECT_VALI_H
+#define OBJECT_VALI_H 1
+
 extern s16 sBariWaitingAnimFrameData[];
 extern JointIndex sBariWaitingAnimJointIndices[];
 extern AnimationHeader gBariWaitingAnim;
@@ -63,3 +66,4 @@ extern StandardLimb gBariOuterHoodLimb;
 extern void* gBariSkelLimbs[];
 extern SkeletonHeader gBariSkel;
 
+#endif

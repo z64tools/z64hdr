@@ -1,3 +1,6 @@
+#ifndef OBJECT_ZL2_ANIME1_H
+#define OBJECT_ZL2_ANIME1_H 1
+
 extern s16 sZelda2Anime1Anim_0003BCFrameData[];
 extern JointIndex sZelda2Anime1Anim_0003BCJointIndices[];
 extern AnimationHeader gZelda2Anime1Anim_0003BC;
@@ -77,3 +80,4 @@ extern s16 sZelda2Anime1Anim_00B5FCFrameData[];
 extern JointIndex sZelda2Anime1Anim_00B5FCJointIndices[];
 extern AnimationHeader gZelda2Anime1Anim_00B5FC;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_DS_H
+#define OBJECT_DS_H 1
+
 extern s16 sPotionShopLadyAnimFrameData[];
 extern JointIndex sPotionShopLadyAnimJointIndices[];
 extern AnimationHeader gPotionShopLadyAnim;
@@ -26,3 +29,4 @@ extern StandardLimb gPotionShopLadyHeadLimb;
 extern void* gPotionShopLadySkelLimbs[];
 extern FlexSkeletonHeader gPotionShopLadySkel;
 
+#endif

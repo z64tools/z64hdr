@@ -1,3 +1,6 @@
+#ifndef OBJECT_FR_H
+#define OBJECT_FR_H 1
+
 extern s16 object_fr_Anim_0007BCFrameData[];
 extern JointIndex object_fr_Anim_0007BCJointIndices[];
 extern AnimationHeader object_fr_Anim_0007BC;
@@ -68,3 +71,4 @@ extern StandardLimb object_fr_Limb_00B430;
 extern void* object_fr_Skel_00B498Limbs[];
 extern FlexSkeletonHeader object_fr_Skel_00B498;
 
+#endif

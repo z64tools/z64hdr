@@ -15,7 +15,7 @@
   Idle_ThreadEntry = 0x80000694;  /* ROM: 0x00001294 */
  /* .data */
   D_80009430                   = 0x80009430;  /* ROM: 0x0000A030 */
-  gViConfigUseDefault          = 0x80009434;  /* ROM: 0x0000A034 */
+  gViConfigBlack               = 0x80009434;  /* ROM: 0x0000A034 */
   gViConfigAdditionalScanLines = 0x80009438;  /* ROM: 0x0000A038 */
   gViConfigFeatures            = 0x8000943C;  /* ROM: 0x0000A03C */
   gViConfigXScale              = 0x80009440;  /* ROM: 0x0000A040 */
@@ -112,6 +112,10 @@
  /* .bss */
   __DriveRomHandle = 0x80014520;
 
+/* build/src/boot/mio0.o */
+ /* .text */
+  Mio0_Decompress = 0x800025B0;  /* ROM: 0x000031B0 */
+
 /* build/src/boot/stackcheck.o */
  /* .text */
   StackCheck_Init     = 0x80002660;  /* ROM: 0x00003260 */
@@ -195,6 +199,20 @@
   __ll_mod      = 0x80003908;  /* ROM: 0x00004508 */
   __ll_rshift   = 0x800039A4;  /* ROM: 0x000045A4 */
 
+/* build/src/libultra/os/exceptasm.o */
+ /* .text */
+  __osExceptionPreamble = 0x800039D0;  /* ROM: 0x000045D0 */
+  __osException         = 0x800039E0;  /* ROM: 0x000045E0 */
+  __osEnqueueAndYield   = 0x80004014;  /* ROM: 0x00004C14 */
+  __osEnqueueThread     = 0x80004114;  /* ROM: 0x00004D14 */
+  __osPopThread         = 0x8000415C;  /* ROM: 0x00004D5C */
+  __osNop               = 0x8000416C;  /* ROM: 0x00004D6C */
+  __osDispatchThread    = 0x80004174;  /* ROM: 0x00004D74 */
+  __osCleanupThread     = 0x800042F0;  /* ROM: 0x00004EF0 */
+ /* .data */
+  __osHwIntTable = 0x8000AD10;  /* ROM: 0x0000B910 */
+  __osPiIntTable = 0x8000AD38;  /* ROM: 0x0000B938 */
+
 /* build/src/libultra/os/dequeuethread.o */
  /* .text */
   __osDequeueThread = 0x80004300;  /* ROM: 0x00004F00 */
@@ -202,6 +220,10 @@
 /* build/src/libultra/os/destroythread.o */
  /* .text */
   osDestroyThread = 0x80004340;  /* ROM: 0x00004F40 */
+
+/* build/src/libultra/libc//bzero.o */
+ /* .text */
+  bzero = 0x80004450;  /* ROM: 0x00005050 */
 
 /* build/src/libultra/os/createthread.o */
  /* .text */
@@ -212,6 +234,18 @@
   __osActiveQueue   = 0x8000AD4C;  /* ROM: 0x0000B94C */
   __osRunningThread = 0x8000AD50;  /* ROM: 0x0000B950 */
   __osFaultedThread = 0x8000AD54;  /* ROM: 0x0000B954 */
+
+/* build/src/libultra/os/setsr.o */
+ /* .text */
+  __osSetSR = 0x800046A0;  /* ROM: 0x000052A0 */
+
+/* build/src/libultra/os/getsr.o */
+ /* .text */
+  __osGetSR = 0x800046B0;  /* ROM: 0x000052B0 */
+
+/* build/src/libultra/os/writebackdcache.o */
+ /* .text */
+  osWritebackDCache = 0x800046C0;  /* ROM: 0x000052C0 */
 
 /* build/src/libultra/io/vigetnextframebuf.o */
  /* .text */
@@ -257,9 +291,19 @@
  /* .text */
   osGetThreadId = 0x80004F20;  /* ROM: 0x00005B20 */
 
+/* build/src/libultra/os/setintmask.o */
+ /* .text */
+  osSetIntMask = 0x80004F40;  /* ROM: 0x00005B40 */
+ /* .rodata */
+  __osRcpImTable = 0x80012160;  /* ROM: 0x00012D60 */
+
 /* build/src/libultra/io/visetmode.o */
  /* .text */
   osViSetMode = 0x80004FE0;  /* ROM: 0x00005BE0 */
+
+/* build/src/libultra/os/probetlb.o */
+ /* .text */
+  __osProbeTLB = 0x80005040;  /* ROM: 0x00005C40 */
 
 /* build/src/libultra/os/getmemsize.o */
  /* .text */
@@ -281,6 +325,10 @@
   spaces = 0x8000ADA0;  /* ROM: 0x0000B9A0 */
   zeroes = 0x8000ADC4;  /* ROM: 0x0000B9C4 */
 
+/* build/src/libultra/os/unmaptlball.o */
+ /* .text */
+  osUnmapTLBAll = 0x80005FC0;  /* ROM: 0x00006BC0 */
+
 /* build/src/libultra/io/epidma.o */
  /* .text */
   osEPiStartDma = 0x80006010;  /* ROM: 0x00006C10 */
@@ -291,9 +339,17 @@
   strlen = 0x800060F0;  /* ROM: 0x00006CF0 */
   memcpy = 0x80006118;  /* ROM: 0x00006D18 */
 
+/* build/src/libultra/os/invalicache.o */
+ /* .text */
+  osInvalICache = 0x80006150;  /* ROM: 0x00006D50 */
+
 /* build/src/libultra/os/createmesgqueue.o */
  /* .text */
   osCreateMesgQueue = 0x800061D0;  /* ROM: 0x00006DD0 */
+
+/* build/src/libultra/os/invaldcache.o */
+ /* .text */
+  osInvalDCache = 0x80006200;  /* ROM: 0x00006E00 */
 
 /* build/src/libultra/io/si.o */
  /* .text */
@@ -323,6 +379,10 @@
  /* .text */
   __osEPiRawStartDma = 0x800066E0;  /* ROM: 0x000072E0 */
 
+/* build/src/libultra/libc/bcmp.o */
+ /* .text */
+  bcmp = 0x800068C0;  /* ROM: 0x000074C0 */
+
 /* build/src/libultra/os/gettime.o */
  /* .text */
   osGetTime = 0x800069E0;  /* ROM: 0x000075E0 */
@@ -342,13 +402,30 @@
   __osViIntrCount  = 0x80015AEC;
   __osTimerCounter = 0x80015AF0;
 
+/* build/src/libultra/os/getcount.o */
+ /* .text */
+  osGetCount = 0x80006EA0;  /* ROM: 0x00007AA0 */
+
 /* build/src/libultra/os/setglobalintmask.o */
  /* .text */
   __osSetGlobalIntMask = 0x80006EB0;  /* ROM: 0x00007AB0 */
 
+/* build/src/libultra/os/setcompare.o */
+ /* .text */
+  __osSetCompare = 0x80006F00;  /* ROM: 0x00007B00 */
+
+/* build/src/libultra/libc/bcopy.o */
+ /* .text */
+  bcopy = 0x80006F10;  /* ROM: 0x00007B10 */
+
 /* build/src/libultra/os/resetglobalintmask.o */
  /* .text */
   __osResetGlobalIntMask = 0x80007220;  /* ROM: 0x00007E20 */
+
+/* build/src/libultra/os/interrupt.o */
+ /* .text */
+  __osDisableInt = 0x80007280;  /* ROM: 0x00007E80 */
+  __osRestoreInt = 0x800072F0;  /* ROM: 0x00007EF0 */
 
 /* build/src/libultra/io/vi.o */
  /* .text */
@@ -380,13 +457,29 @@
  /* .bss */
   __CartRomHandle = 0x80015B00;
 
+/* build/src/libultra/os/setfpccsr.o */
+ /* .text */
+  __osSetFpcCsr = 0x80007A70;  /* ROM: 0x00008670 */
+
+/* build/src/libultra/os/getfpccsr.o */
+ /* .text */
+  __osGetFpcCsr = 0x80007A80;  /* ROM: 0x00008680 */
+
 /* build/src/libultra/io/epiwrite.o */
  /* .text */
   osEPiWriteIo = 0x80007A90;  /* ROM: 0x00008690 */
 
+/* build/src/libultra/os/maptlbrdb.o */
+ /* .text */
+  osMapTLBRdb = 0x80007AE0;  /* ROM: 0x000086E0 */
+
 /* build/src/libultra/os/yieldthread.o */
  /* .text */
   osYieldThread = 0x80007B40;  /* ROM: 0x00008740 */
+
+/* build/src/libultra/os/getcause.o */
+ /* .text */
+  __osGetCause = 0x80007B90;  /* ROM: 0x00008790 */
 
 /* build/src/libultra/io/epirawwrite.o */
  /* .text */
@@ -454,6 +547,10 @@
 /* build/src/libultra/os/gethwintrroutine.o */
  /* .text */
   __osGetHWIntrRoutine = 0x800092E0;  /* ROM: 0x00009EE0 */
+
+/* build/src/libultra/os/setwatchlo.o */
+ /* .text */
+  __osSetWatchLo = 0x80009310;  /* ROM: 0x00009F10 */
 
 /* build/src/libultra/io/vimodepallan1.o */
  /* .data */
@@ -936,10 +1033,10 @@
   func_80037C94                     = 0x80037C94;  /* ROM: 0x00AAEE34 */
   func_80037CB8                     = 0x80037CB8;  /* ROM: 0x00AAEE58 */
   func_80037D98                     = 0x80037D98;  /* ROM: 0x00AAEF38 */
-  func_80037F30                     = 0x80037F30;  /* ROM: 0x00AAF0D0 */
-  func_80037FC8                     = 0x80037FC8;  /* ROM: 0x00AAF168 */
-  func_80038154                     = 0x80038154;  /* ROM: 0x00AAF2F4 */
-  func_80038290                     = 0x80038290;  /* ROM: 0x00AAF430 */
+  Actor_TrackNone                   = 0x80037F30;  /* ROM: 0x00AAF0D0 */
+  Actor_TrackPoint                  = 0x80037FC8;  /* ROM: 0x00AAF168 */
+  Actor_TrackPlayerSetFocusHeight   = 0x80038154;  /* ROM: 0x00AAF2F4 */
+  Actor_TrackPlayer                 = 0x80038290;  /* ROM: 0x00AAF430 */
  /* .data */
   sNaviColorList        = 0x80115F84;  /* ROM: 0x00B8D124 */
   D_80115FF0            = 0x80115FF0;  /* ROM: 0x00B8D190 */
@@ -2276,9 +2373,9 @@
   PreNmiBuff_SetReset    = 0x8007BED4;  /* ROM: 0x00AF3074 */
   PreNmiBuff_IsResetting = 0x8007BF08;  /* ROM: 0x00AF30A8 */
 
-/* build/src/code/z_msgevent.o */
+/* build/src/code/z_nulltask.o */
  /* .text */
-  MsgEvent_SendNullTask = 0x8007BF10;  /* ROM: 0x00AF30B0 */
+  Sched_FlushTaskQueue = 0x8007BF10;  /* ROM: 0x00AF30B0 */
 
 /* build/src/code/z_olib.o */
  /* .text */
@@ -2450,7 +2547,7 @@
   Player_OverrideLimbDrawGameplayFirstPerson = 0x800902F0;  /* ROM: 0x00B07490 */
   Player_OverrideLimbDrawGameplay_80090440   = 0x80090440;  /* ROM: 0x00B075E0 */
   func_80090480                              = 0x80090480;  /* ROM: 0x00B07620 */
-  func_80090604                              = 0x80090604;  /* ROM: 0x00B077A4 */
+  Player_UpdateShieldCollider                = 0x80090604;  /* ROM: 0x00B077A4 */
   func_800906D4                              = 0x800906D4;  /* ROM: 0x00B07874 */
   Player_DrawGetItemImpl                     = 0x800907E4;  /* ROM: 0x00B07984 */
   Player_DrawGetItem                         = 0x800909B4;  /* ROM: 0x00B07B54 */
@@ -2462,72 +2559,71 @@
   Player_DrawPauseImpl                       = 0x80091A24;  /* ROM: 0x00B08BC4 */
   Player_DrawPause                           = 0x8009214C;  /* ROM: 0x00B092EC */
  /* .data */
-  gPlayerSkelHeaders           = 0x80125B70;  /* ROM: 0x00B9CD10 */
-  sBootData                    = 0x80125B78;  /* ROM: 0x00B9CD18 */
-  sActionModelGroups           = 0x80125C44;  /* ROM: 0x00B9CDE4 */
-  sTextTriggers                = 0x80125C88;  /* ROM: 0x00B9CE28 */
-  gPlayerModelTypes            = 0x80125C98;  /* ROM: 0x00B9CE38 */
-  D_80125CE8                   = 0x80125CE8;  /* ROM: 0x00B9CE88 */
-  D_80125D28                   = 0x80125D28;  /* ROM: 0x00B9CEC8 */
-  D_80125D68                   = 0x80125D68;  /* ROM: 0x00B9CF08 */
-  D_80125D88                   = 0x80125D88;  /* ROM: 0x00B9CF28 */
-  D_80125DE8                   = 0x80125DE8;  /* ROM: 0x00B9CF88 */
-  D_80125E08                   = 0x80125E08;  /* ROM: 0x00B9CFA8 */
-  D_80125E18                   = 0x80125E18;  /* ROM: 0x00B9CFB8 */
-  D_80125E28                   = 0x80125E28;  /* ROM: 0x00B9CFC8 */
-  D_80125E38                   = 0x80125E38;  /* ROM: 0x00B9CFD8 */
-  D_80125E48                   = 0x80125E48;  /* ROM: 0x00B9CFE8 */
-  D_80125E58                   = 0x80125E58;  /* ROM: 0x00B9CFF8 */
-  D_80125E68                   = 0x80125E68;  /* ROM: 0x00B9D008 */
-  D_80125E78                   = 0x80125E78;  /* ROM: 0x00B9D018 */
-  D_80125E88                   = 0x80125E88;  /* ROM: 0x00B9D028 */
-  D_80125E98                   = 0x80125E98;  /* ROM: 0x00B9D038 */
-  D_80125EA8                   = 0x80125EA8;  /* ROM: 0x00B9D048 */
-  D_80125EB8                   = 0x80125EB8;  /* ROM: 0x00B9D058 */
-  D_80125EC8                   = 0x80125EC8;  /* ROM: 0x00B9D068 */
-  D_80125ED8                   = 0x80125ED8;  /* ROM: 0x00B9D078 */
-  D_80125EE8                   = 0x80125EE8;  /* ROM: 0x00B9D088 */
-  D_80125EF8                   = 0x80125EF8;  /* ROM: 0x00B9D098 */
-  D_80125F08                   = 0x80125F08;  /* ROM: 0x00B9D0A8 */
-  sArmOutDLs                   = 0x80125F18;  /* ROM: 0x00B9D0B8 */
-  sHandOutDLs                  = 0x80125F20;  /* ROM: 0x00B9D0C0 */
-  sRightShoulderNearDLs        = 0x80125F28;  /* ROM: 0x00B9D0C8 */
-  D_80125F30                   = 0x80125F30;  /* ROM: 0x00B9D0D0 */
-  sHoldingFirstPersonWeaponDLs = 0x80125F38;  /* ROM: 0x00B9D0D8 */
-  sPlayerDListGroups           = 0x80125F40;  /* ROM: 0x00B9D0E0 */
-  gCullBackDList               = 0x80125F98;  /* ROM: 0x00B9D138 */
-  gCullFrontDList              = 0x80125FA8;  /* ROM: 0x00B9D148 */
-  sEyeMouthIndices             = 0x80125FB8;  /* ROM: 0x00B9D158 */
-  sEyeTextures                 = 0x80125FD8;  /* ROM: 0x00B9D178 */
-  sMouthTextures               = 0x80125FF8;  /* ROM: 0x00B9D198 */
-  sTunicColors                 = 0x80126008;  /* ROM: 0x00B9D1A8 */
-  sGauntletColors              = 0x80126014;  /* ROM: 0x00B9D1B4 */
-  sBootDListGroups             = 0x8012601C;  /* ROM: 0x00B9D1BC */
-  sZeroVec                     = 0x8012602C;  /* ROM: 0x00B9D1CC */
-  D_80126038                   = 0x80126038;  /* ROM: 0x00B9D1D8 */
-  D_80126050                   = 0x80126050;  /* ROM: 0x00B9D1F0 */
-  D_80126058                   = 0x80126058;  /* ROM: 0x00B9D1F8 */
-  D_80126060                   = 0x80126060;  /* ROM: 0x00B9D200 */
-  D_80126068                   = 0x80126068;  /* ROM: 0x00B9D208 */
-  D_80126070                   = 0x80126070;  /* ROM: 0x00B9D210 */
-  D_80126080                   = 0x80126080;  /* ROM: 0x00B9D220 */
-  D_8012608C                   = 0x8012608C;  /* ROM: 0x00B9D22C */
-  D_80126098                   = 0x80126098;  /* ROM: 0x00B9D238 */
-  D_801260A4                   = 0x801260A4;  /* ROM: 0x00B9D244 */
-  D_801260D4                   = 0x801260D4;  /* ROM: 0x00B9D274 */
-  sMeleeWeaponLengths          = 0x801260E0;  /* ROM: 0x00B9D280 */
-  sBottleDLists                = 0x801260F8;  /* ROM: 0x00B9D298 */
-  sBottleColors                = 0x80126100;  /* ROM: 0x00B9D2A0 */
-  D_80126128                   = 0x80126128;  /* ROM: 0x00B9D2C8 */
-  sBowStringData               = 0x80126134;  /* ROM: 0x00B9D2D4 */
-  D_80126154                   = 0x80126154;  /* ROM: 0x00B9D2F4 */
-  D_80126184                   = 0x80126184;  /* ROM: 0x00B9D324 */
-  D_80126190                   = 0x80126190;  /* ROM: 0x00B9D330 */
-  D_8012619C                   = 0x8012619C;  /* ROM: 0x00B9D33C */
-  D_801261CC                   = 0x801261CC;  /* ROM: 0x00B9D36C */
-  D_801261D8                   = 0x801261D8;  /* ROM: 0x00B9D378 */
-  D_801261E0                   = 0x801261E0;  /* ROM: 0x00B9D380 */
-  D_801261F8                   = 0x801261F8;  /* ROM: 0x00B9D398 */
+  gPlayerSkelHeaders                    = 0x80125B70;  /* ROM: 0x00B9CD10 */
+  sBootData                             = 0x80125B78;  /* ROM: 0x00B9CD18 */
+  sActionModelGroups                    = 0x80125C44;  /* ROM: 0x00B9CDE4 */
+  sTextTriggers                         = 0x80125C88;  /* ROM: 0x00B9CE28 */
+  gPlayerModelTypes                     = 0x80125C98;  /* ROM: 0x00B9CE38 */
+  sPlayerRightHandShieldDLs             = 0x80125CE8;  /* ROM: 0x00B9CE88 */
+  D_80125D28                            = 0x80125D28;  /* ROM: 0x00B9CEC8 */
+  D_80125D88                            = 0x80125D88;  /* ROM: 0x00B9CF28 */
+  gPlayerLeftHandBgsDLs                 = 0x80125DE8;  /* ROM: 0x00B9CF88 */
+  gPlayerLeftHandOpenDLs                = 0x80125E08;  /* ROM: 0x00B9CFA8 */
+  gPlayerLeftHandClosedDLs              = 0x80125E18;  /* ROM: 0x00B9CFB8 */
+  sPlayerLeftHandSwordDLs2              = 0x80125E28;  /* ROM: 0x00B9CFC8 */
+  sPlayerLeftHandSwordDLs               = 0x80125E38;  /* ROM: 0x00B9CFD8 */
+  sPlayerRightHandOpenDLs               = 0x80125E48;  /* ROM: 0x00B9CFE8 */
+  sPlayerRightHandClosedDLs             = 0x80125E58;  /* ROM: 0x00B9CFF8 */
+  sPlayerRightHandBowSlingshotDLs       = 0x80125E68;  /* ROM: 0x00B9D008 */
+  D_80125E78                            = 0x80125E78;  /* ROM: 0x00B9D018 */
+  D_80125E88                            = 0x80125E88;  /* ROM: 0x00B9D028 */
+  sPlayerWaistDLs                       = 0x80125E98;  /* ROM: 0x00B9D038 */
+  sPlayerRightHandBowSlingshotDLs2      = 0x80125EA8;  /* ROM: 0x00B9D048 */
+  sPlayerRightHandOcarinaDLs            = 0x80125EB8;  /* ROM: 0x00B9D058 */
+  sPlayerRightHandOotDLs                = 0x80125EC8;  /* ROM: 0x00B9D068 */
+  sPlayerRightHandHookshotDLs           = 0x80125ED8;  /* ROM: 0x00B9D078 */
+  sPlayerLeftHandHammerDLs              = 0x80125EE8;  /* ROM: 0x00B9D088 */
+  gPlayerLeftHandBoomerangDLs           = 0x80125EF8;  /* ROM: 0x00B9D098 */
+  sPlayerLeftHandBottleDLs              = 0x80125F08;  /* ROM: 0x00B9D0A8 */
+  sFirstPersonLeftForearmDLs            = 0x80125F18;  /* ROM: 0x00B9D0B8 */
+  sFirstPersonLeftHandDLs               = 0x80125F20;  /* ROM: 0x00B9D0C0 */
+  sFirstPersonRightShoulderDLs          = 0x80125F28;  /* ROM: 0x00B9D0C8 */
+  sFirstPersonForearmDLs                = 0x80125F30;  /* ROM: 0x00B9D0D0 */
+  sFirstPersonRightHandHoldingWeaponDLs = 0x80125F38;  /* ROM: 0x00B9D0D8 */
+  sPlayerDListGroups                    = 0x80125F40;  /* ROM: 0x00B9D0E0 */
+  gCullBackDList                        = 0x80125F98;  /* ROM: 0x00B9D138 */
+  gCullFrontDList                       = 0x80125FA8;  /* ROM: 0x00B9D148 */
+  sEyeMouthIndices                      = 0x80125FB8;  /* ROM: 0x00B9D158 */
+  sEyeTextures                          = 0x80125FD8;  /* ROM: 0x00B9D178 */
+  sMouthTextures                        = 0x80125FF8;  /* ROM: 0x00B9D198 */
+  sTunicColors                          = 0x80126008;  /* ROM: 0x00B9D1A8 */
+  sGauntletColors                       = 0x80126014;  /* ROM: 0x00B9D1B4 */
+  sBootDListGroups                      = 0x8012601C;  /* ROM: 0x00B9D1BC */
+  sZeroVec                              = 0x8012602C;  /* ROM: 0x00B9D1CC */
+  D_80126038                            = 0x80126038;  /* ROM: 0x00B9D1D8 */
+  D_80126050                            = 0x80126050;  /* ROM: 0x00B9D1F0 */
+  D_80126058                            = 0x80126058;  /* ROM: 0x00B9D1F8 */
+  D_80126060                            = 0x80126060;  /* ROM: 0x00B9D200 */
+  D_80126068                            = 0x80126068;  /* ROM: 0x00B9D208 */
+  D_80126070                            = 0x80126070;  /* ROM: 0x00B9D210 */
+  D_80126080                            = 0x80126080;  /* ROM: 0x00B9D220 */
+  D_8012608C                            = 0x8012608C;  /* ROM: 0x00B9D22C */
+  D_80126098                            = 0x80126098;  /* ROM: 0x00B9D238 */
+  D_801260A4                            = 0x801260A4;  /* ROM: 0x00B9D244 */
+  sPlayerFocusHeadLimbModelPos          = 0x801260D4;  /* ROM: 0x00B9D274 */
+  sMeleeWeaponLengths                   = 0x801260E0;  /* ROM: 0x00B9D280 */
+  sBottleDLists                         = 0x801260F8;  /* ROM: 0x00B9D298 */
+  sBottleColors                         = 0x80126100;  /* ROM: 0x00B9D2A0 */
+  D_80126128                            = 0x80126128;  /* ROM: 0x00B9D2C8 */
+  sBowSlingshotStringData               = 0x80126134;  /* ROM: 0x00B9D2D4 */
+  sRightHandLimbModelShieldQuadVertices = 0x80126154;  /* ROM: 0x00B9D2F4 */
+  D_80126184                            = 0x80126184;  /* ROM: 0x00B9D324 */
+  D_80126190                            = 0x80126190;  /* ROM: 0x00B9D330 */
+  sSheathLimbModelShieldQuadVertices    = 0x8012619C;  /* ROM: 0x00B9D33C */
+  sSheathLimbModelShieldOnBackPos       = 0x801261CC;  /* ROM: 0x00B9D36C */
+  sSheathLimbModelShieldOnBackZyxRot    = 0x801261D8;  /* ROM: 0x00B9D378 */
+  sLeftRightFootLimbModelFootPos        = 0x801261E0;  /* ROM: 0x00B9D380 */
+  sPauseModelGroupBySword               = 0x801261F8;  /* ROM: 0x00B9D398 */
  /* .bss */
   sCurBodyPartPos  = 0x80160000;
   sDListsLodOffset = 0x80160004;
@@ -2580,67 +2676,67 @@
   Gfx_SetFog               = 0x80093370;  /* ROM: 0x00B0A510 */
   Gfx_SetFogWithSync       = 0x8009352C;  /* ROM: 0x00B0A6CC */
   Gfx_SetFog2              = 0x80093708;  /* ROM: 0x00B0A8A8 */
-  Gfx_CallSetupDLImpl      = 0x8009373C;  /* ROM: 0x00B0A8DC */
-  Gfx_CallSetupDL          = 0x80093774;  /* ROM: 0x00B0A914 */
-  Gfx_CallSetupDLAtPtr     = 0x80093794;  /* ROM: 0x00B0A934 */
-  func_800937C0            = 0x800937C0;  /* ROM: 0x00B0A960 */
-  func_800937E4            = 0x800937E4;  /* ROM: 0x00B0A984 */
-  func_80093808            = 0x80093808;  /* ROM: 0x00B0A9A8 */
-  func_80093848            = 0x80093848;  /* ROM: 0x00B0A9E8 */
-  func_800938B4            = 0x800938B4;  /* ROM: 0x00B0AA54 */
-  func_80093920            = 0x80093920;  /* ROM: 0x00B0AAC0 */
-  func_8009398C            = 0x8009398C;  /* ROM: 0x00B0AB2C */
-  func_800939F8            = 0x800939F8;  /* ROM: 0x00B0AB98 */
-  func_80093A64            = 0x80093A64;  /* ROM: 0x00B0AC04 */
-  func_80093AD0            = 0x80093AD0;  /* ROM: 0x00B0AC70 */
-  func_80093B3C            = 0x80093B3C;  /* ROM: 0x00B0ACDC */
-  func_80093BA8            = 0x80093BA8;  /* ROM: 0x00B0AD48 */
-  func_80093C14            = 0x80093C14;  /* ROM: 0x00B0ADB4 */
+  Gfx_SetupDLImpl          = 0x8009373C;  /* ROM: 0x00B0A8DC */
+  Gfx_SetupDL              = 0x80093774;  /* ROM: 0x00B0A914 */
+  Gfx_SetupDLAtPtr         = 0x80093794;  /* ROM: 0x00B0A934 */
+  Gfx_SetupDL_57           = 0x800937C0;  /* ROM: 0x00B0A960 */
+  Gfx_SetupDL_57b          = 0x800937E4;  /* ROM: 0x00B0A984 */
+  Gfx_SetupDL_52NoCD       = 0x80093808;  /* ROM: 0x00B0A9A8 */
+  Gfx_SetupDL_58Opa        = 0x80093848;  /* ROM: 0x00B0A9E8 */
+  Gfx_SetupDL_57Opa        = 0x800938B4;  /* ROM: 0x00B0AA54 */
+  Gfx_SetupDL_50Opa        = 0x80093920;  /* ROM: 0x00B0AAC0 */
+  Gfx_SetupDL_51Opa        = 0x8009398C;  /* ROM: 0x00B0AB2C */
+  Gfx_SetupDL_52Xlu        = 0x800939F8;  /* ROM: 0x00B0AB98 */
+  Gfx_SetupDL_53Opa        = 0x80093A64;  /* ROM: 0x00B0AC04 */
+  Gfx_SetupDL_54Opa        = 0x80093AD0;  /* ROM: 0x00B0AC70 */
+  Gfx_SetupDL_55Xlu        = 0x80093B3C;  /* ROM: 0x00B0ACDC */
+  Gfx_SetupDL_26Opa        = 0x80093BA8;  /* ROM: 0x00B0AD48 */
+  Gfx_SetupDL_25Xlu2       = 0x80093C14;  /* ROM: 0x00B0ADB4 */
   func_80093C80            = 0x80093C80;  /* ROM: 0x00B0AE20 */
-  func_80093D18            = 0x80093D18;  /* ROM: 0x00B0AEB8 */
-  func_80093D84            = 0x80093D84;  /* ROM: 0x00B0AF24 */
-  func_80093DF0            = 0x80093DF0;  /* ROM: 0x00B0AF90 */
-  func_80093E5C            = 0x80093E5C;  /* ROM: 0x00B0AFFC */
-  func_80093EC8            = 0x80093EC8;  /* ROM: 0x00B0B068 */
-  func_80093F34            = 0x80093F34;  /* ROM: 0x00B0B0D4 */
-  func_80093F58            = 0x80093F58;  /* ROM: 0x00B0B0F8 */
-  func_80093F7C            = 0x80093F7C;  /* ROM: 0x00B0B11C */
-  func_80093FD8            = 0x80093FD8;  /* ROM: 0x00B0B178 */
-  func_80094044            = 0x80094044;  /* ROM: 0x00B0B1E4 */
-  func_800940B0            = 0x800940B0;  /* ROM: 0x00B0B250 */
-  func_8009411C            = 0x8009411C;  /* ROM: 0x00B0B2BC */
-  func_80094140            = 0x80094140;  /* ROM: 0x00B0B2E0 */
-  func_800941AC            = 0x800941AC;  /* ROM: 0x00B0B34C */
-  func_80094218            = 0x80094218;  /* ROM: 0x00B0B3B8 */
-  func_80094284            = 0x80094284;  /* ROM: 0x00B0B424 */
-  func_800942F0            = 0x800942F0;  /* ROM: 0x00B0B490 */
-  func_8009435C            = 0x8009435C;  /* ROM: 0x00B0B4FC */
-  func_800943C8            = 0x800943C8;  /* ROM: 0x00B0B568 */
-  func_80094434            = 0x80094434;  /* ROM: 0x00B0B5D4 */
-  func_800944A0            = 0x800944A0;  /* ROM: 0x00B0B640 */
-  func_800944C4            = 0x800944C4;  /* ROM: 0x00B0B664 */
-  func_80094520            = 0x80094520;  /* ROM: 0x00B0B6C0 */
-  func_8009457C            = 0x8009457C;  /* ROM: 0x00B0B71C */
-  func_800945A0            = 0x800945A0;  /* ROM: 0x00B0B740 */
-  func_8009460C            = 0x8009460C;  /* ROM: 0x00B0B7AC */
-  func_80094678            = 0x80094678;  /* ROM: 0x00B0B818 */
-  func_800946E4            = 0x800946E4;  /* ROM: 0x00B0B884 */
-  func_80094708            = 0x80094708;  /* ROM: 0x00B0B8A8 */
-  func_8009472C            = 0x8009472C;  /* ROM: 0x00B0B8CC */
-  func_8009476C            = 0x8009476C;  /* ROM: 0x00B0B90C */
+  Gfx_SetupDL_25Opa        = 0x80093D18;  /* ROM: 0x00B0AEB8 */
+  Gfx_SetupDL_25Xlu        = 0x80093D84;  /* ROM: 0x00B0AF24 */
+  Gfx_SetupDL_31Opa        = 0x80093DF0;  /* ROM: 0x00B0AF90 */
+  Gfx_SetupDL_32Opa        = 0x80093E5C;  /* ROM: 0x00B0AFFC */
+  Gfx_SetupDL_33Opa        = 0x80093EC8;  /* ROM: 0x00B0B068 */
+  Gfx_SetupDL_64           = 0x80093F34;  /* ROM: 0x00B0B0D4 */
+  Gfx_SetupDL_34           = 0x80093F58;  /* ROM: 0x00B0B0F8 */
+  Gfx_SetupDL_34Opa        = 0x80093F7C;  /* ROM: 0x00B0B11C */
+  Gfx_SetupDL_35Opa        = 0x80093FD8;  /* ROM: 0x00B0B178 */
+  Gfx_SetupDL_44Xlu        = 0x80094044;  /* ROM: 0x00B0B1E4 */
+  Gfx_SetupDL_36Opa        = 0x800940B0;  /* ROM: 0x00B0B250 */
+  Gfx_SetupDL_28           = 0x8009411C;  /* ROM: 0x00B0B2BC */
+  Gfx_SetupDL_28Opa        = 0x80094140;  /* ROM: 0x00B0B2E0 */
+  Gfx_SetupDL_43Opa        = 0x800941AC;  /* ROM: 0x00B0B34C */
+  Gfx_SetupDL_45Opa        = 0x80094218;  /* ROM: 0x00B0B3B8 */
+  Gfx_SetupDL_46Overlay    = 0x80094284;  /* ROM: 0x00B0B424 */
+  Gfx_SetupDL_38Xlu        = 0x800942F0;  /* ROM: 0x00B0B490 */
+  Gfx_SetupDL_4Xlu         = 0x8009435C;  /* ROM: 0x00B0B4FC */
+  Gfx_SetupDL_37Opa        = 0x800943C8;  /* ROM: 0x00B0B568 */
+  Gfx_SetupDL_2Opa         = 0x80094434;  /* ROM: 0x00B0B5D4 */
+  Gfx_SetupDL_39           = 0x800944A0;  /* ROM: 0x00B0B640 */
+  Gfx_SetupDL_39Opa        = 0x800944C4;  /* ROM: 0x00B0B664 */
+  Gfx_SetupDL_39Overlay    = 0x80094520;  /* ROM: 0x00B0B6C0 */
+  Gfx_SetupDL_39Ptr        = 0x8009457C;  /* ROM: 0x00B0B71C */
+  Gfx_SetupDL_40Opa        = 0x800945A0;  /* ROM: 0x00B0B740 */
+  Gfx_SetupDL_41Opa        = 0x8009460C;  /* ROM: 0x00B0B7AC */
+  Gfx_SetupDL_47Xlu        = 0x80094678;  /* ROM: 0x00B0B818 */
+  Gfx_SetupDL_66           = 0x800946E4;  /* ROM: 0x00B0B884 */
+  Gfx_SetupDL_67           = 0x80094708;  /* ROM: 0x00B0B8A8 */
+  Gfx_SetupDL_68NoCD       = 0x8009472C;  /* ROM: 0x00B0B8CC */
+  Gfx_SetupDL_69NoCD       = 0x8009476C;  /* ROM: 0x00B0B90C */
   func_800947AC            = 0x800947AC;  /* ROM: 0x00B0B94C */
-  func_80094944            = 0x80094944;  /* ROM: 0x00B0BAE4 */
-  func_80094968            = 0x80094968;  /* ROM: 0x00B0BB08 */
-  func_800949A8            = 0x800949A8;  /* ROM: 0x00B0BB48 */
-  func_80094A14            = 0x80094A14;  /* ROM: 0x00B0BBB4 */
-  func_80094A80            = 0x80094A80;  /* ROM: 0x00B0BC20 */
-  func_80094AEC            = 0x80094AEC;  /* ROM: 0x00B0BC8C */
-  func_80094B58            = 0x80094B58;  /* ROM: 0x00B0BCF8 */
-  func_80094BC4            = 0x80094BC4;  /* ROM: 0x00B0BD64 */
-  func_80094C50            = 0x80094C50;  /* ROM: 0x00B0BDF0 */
-  func_80094CBC            = 0x80094CBC;  /* ROM: 0x00B0BE5C */
-  func_80094D28            = 0x80094D28;  /* ROM: 0x00B0BEC8 */
-  func_80094D4C            = 0x80094D4C;  /* ROM: 0x00B0BEEC */
+  Gfx_SetupDL_70           = 0x80094944;  /* ROM: 0x00B0BAE4 */
+  Gfx_SetupDL_20NoCD       = 0x80094968;  /* ROM: 0x00B0BB08 */
+  Gfx_SetupDL_42Opa        = 0x800949A8;  /* ROM: 0x00B0BB48 */
+  Gfx_SetupDL_42Overlay    = 0x80094A14;  /* ROM: 0x00B0BBB4 */
+  Gfx_SetupDL_48Opa        = 0x80094A80;  /* ROM: 0x00B0BC20 */
+  Gfx_SetupDL_49Xlu        = 0x80094AEC;  /* ROM: 0x00B0BC8C */
+  Gfx_SetupDL_27Xlu        = 0x80094B58;  /* ROM: 0x00B0BCF8 */
+  Gfx_SetupDL_60NoCDXlu    = 0x80094BC4;  /* ROM: 0x00B0BD64 */
+  Gfx_SetupDL_61Xlu        = 0x80094C50;  /* ROM: 0x00B0BDF0 */
+  Gfx_SetupDL_56Opa        = 0x80094CBC;  /* ROM: 0x00B0BE5C */
+  Gfx_SetupDL_56Ptr        = 0x80094D28;  /* ROM: 0x00B0BEC8 */
+  Gfx_SetupDL_59Opa        = 0x80094D4C;  /* ROM: 0x00B0BEEC */
   Gfx_BranchTexScroll      = 0x80094DB8;  /* ROM: 0x00B0BF58 */
   func_80094E54            = 0x80094E54;  /* ROM: 0x00B0BFF4 */
   func_80094E78            = 0x80094E78;  /* ROM: 0x00B0C018 */
@@ -2753,63 +2849,63 @@
 
 /* build/src/code/z_scene_table.o */
  /* .text */
-  Scene_SetTransitionForNextEntrance = 0x800994A0;  /* ROM: 0x00B10640 */
-  func_80099550                      = 0x80099550;  /* ROM: 0x00B106F0 */
-  func_800995DC                      = 0x800995DC;  /* ROM: 0x00B1077C */
-  func_80099760                      = 0x80099760;  /* ROM: 0x00B10900 */
-  func_80099878                      = 0x80099878;  /* ROM: 0x00B10A18 */
-  func_80099BD8                      = 0x80099BD8;  /* ROM: 0x00B10D78 */
-  func_8009A45C                      = 0x8009A45C;  /* ROM: 0x00B115FC */
-  func_8009A798                      = 0x8009A798;  /* ROM: 0x00B11938 */
-  func_8009A9DC                      = 0x8009A9DC;  /* ROM: 0x00B11B7C */
-  func_8009AB98                      = 0x8009AB98;  /* ROM: 0x00B11D38 */
-  func_8009ACA8                      = 0x8009ACA8;  /* ROM: 0x00B11E48 */
-  func_8009AE30                      = 0x8009AE30;  /* ROM: 0x00B11FD0 */
-  func_8009AFE0                      = 0x8009AFE0;  /* ROM: 0x00B12180 */
-  func_8009B0FC                      = 0x8009B0FC;  /* ROM: 0x00B1229C */
-  func_8009B86C                      = 0x8009B86C;  /* ROM: 0x00B12A0C */
-  func_8009B9BC                      = 0x8009B9BC;  /* ROM: 0x00B12B5C */
-  func_8009BAA4                      = 0x8009BAA4;  /* ROM: 0x00B12C44 */
-  func_8009BC44                      = 0x8009BC44;  /* ROM: 0x00B12DE4 */
-  func_8009BEEC                      = 0x8009BEEC;  /* ROM: 0x00B1308C */
-  func_8009C0AC                      = 0x8009C0AC;  /* ROM: 0x00B1324C */
-  func_8009C3EC                      = 0x8009C3EC;  /* ROM: 0x00B1358C */
-  func_8009C608                      = 0x8009C608;  /* ROM: 0x00B137A8 */
-  func_8009C8B8                      = 0x8009C8B8;  /* ROM: 0x00B13A58 */
-  func_8009CAC0                      = 0x8009CAC0;  /* ROM: 0x00B13C60 */
-  func_8009CC00                      = 0x8009CC00;  /* ROM: 0x00B13DA0 */
-  Gfx_TwoTexScrollPrimColor          = 0x8009CE1C;  /* ROM: 0x00B13FBC */
-  func_8009CF84                      = 0x8009CF84;  /* ROM: 0x00B14124 */
-  func_8009D0E8                      = 0x8009D0E8;  /* ROM: 0x00B14288 */
-  func_8009D31C                      = 0x8009D31C;  /* ROM: 0x00B144BC */
-  func_8009D438                      = 0x8009D438;  /* ROM: 0x00B145D8 */
-  func_8009D5B4                      = 0x8009D5B4;  /* ROM: 0x00B14754 */
-  func_8009D758                      = 0x8009D758;  /* ROM: 0x00B148F8 */
-  func_8009D974                      = 0x8009D974;  /* ROM: 0x00B14B14 */
-  func_8009DA30                      = 0x8009DA30;  /* ROM: 0x00B14BD0 */
-  func_8009DD5C                      = 0x8009DD5C;  /* ROM: 0x00B14EFC */
-  func_8009DE78                      = 0x8009DE78;  /* ROM: 0x00B15018 */
-  func_8009E0B8                      = 0x8009E0B8;  /* ROM: 0x00B15258 */
-  func_8009E54C                      = 0x8009E54C;  /* ROM: 0x00B156EC */
-  func_8009E730                      = 0x8009E730;  /* ROM: 0x00B158D0 */
-  func_8009E8C0                      = 0x8009E8C0;  /* ROM: 0x00B15A60 */
-  func_8009EAD8                      = 0x8009EAD8;  /* ROM: 0x00B15C78 */
-  func_8009EE44                      = 0x8009EE44;  /* ROM: 0x00B15FE4 */
-  func_8009F074                      = 0x8009F074;  /* ROM: 0x00B16214 */
-  func_8009F1B4                      = 0x8009F1B4;  /* ROM: 0x00B16354 */
-  func_8009F270                      = 0x8009F270;  /* ROM: 0x00B16410 */
-  func_8009F40C                      = 0x8009F40C;  /* ROM: 0x00B165AC */
-  func_8009F5D4                      = 0x8009F5D4;  /* ROM: 0x00B16774 */
-  func_8009F7D4                      = 0x8009F7D4;  /* ROM: 0x00B16974 */
-  func_8009F9D0                      = 0x8009F9D0;  /* ROM: 0x00B16B70 */
-  func_8009FB74                      = 0x8009FB74;  /* ROM: 0x00B16D14 */
-  func_8009FC90                      = 0x8009FC90;  /* ROM: 0x00B16E30 */
-  func_8009FE58                      = 0x8009FE58;  /* ROM: 0x00B16FF8 */
-  func_800A0334                      = 0x800A0334;  /* ROM: 0x00B174D4 */
-  func_800A055C                      = 0x800A055C;  /* ROM: 0x00B176FC */
-  func_800A057C                      = 0x800A057C;  /* ROM: 0x00B1771C */
-  func_800A059C                      = 0x800A059C;  /* ROM: 0x00B1773C */
-  Scene_Draw                         = 0x800A06F8;  /* ROM: 0x00B17898 */
+  Scene_SetTransitionForNextEntrance    = 0x800994A0;  /* ROM: 0x00B10640 */
+  Scene_DrawConfigDefault               = 0x80099550;  /* ROM: 0x00B106F0 */
+  Scene_DrawConfigYdan                  = 0x800995DC;  /* ROM: 0x00B1077C */
+  Scene_DrawConfigYdanBoss              = 0x80099760;  /* ROM: 0x00B10900 */
+  Scene_DrawConfigDdan                  = 0x80099878;  /* ROM: 0x00B10A18 */
+  Scene_DrawConfigTokinoma              = 0x80099BD8;  /* ROM: 0x00B10D78 */
+  Scene_DrawConfigKakusiana             = 0x8009A45C;  /* ROM: 0x00B115FC */
+  Scene_DrawConfigKenjyanoma            = 0x8009A798;  /* ROM: 0x00B11938 */
+  Scene_DrawConfigGreatFairyFountain    = 0x8009A9DC;  /* ROM: 0x00B11B7C */
+  Scene_DrawConfigGraveExitLightShining = 0x8009AB98;  /* ROM: 0x00B11D38 */
+  Scene_DrawConfigFairyFountain         = 0x8009ACA8;  /* ROM: 0x00B11E48 */
+  Scene_DrawConfigHakadan               = 0x8009AE30;  /* ROM: 0x00B11FD0 */
+  Scene_DrawConfigGerudoway             = 0x8009AFE0;  /* ROM: 0x00B12180 */
+  Scene_DrawConfigMizusin               = 0x8009B0FC;  /* ROM: 0x00B1229C */
+  Scene_DrawConfigMizusinBs             = 0x8009B86C;  /* ROM: 0x00B12A0C */
+  Scene_DrawConfigSyatekijyou           = 0x8009B9BC;  /* ROM: 0x00B12B5C */
+  Scene_DrawConfigHairalNiwa            = 0x8009BAA4;  /* ROM: 0x00B12C44 */
+  Scene_DrawConfigGanonCastleExterior   = 0x8009BC44;  /* ROM: 0x00B12DE4 */
+  func_8009BEEC                         = 0x8009BEEC;  /* ROM: 0x00B1308C */
+  Scene_DrawConfigGanonFinal            = 0x8009C0AC;  /* ROM: 0x00B1324C */
+  Scene_DrawConfigIceDoukuto            = 0x8009C3EC;  /* ROM: 0x00B1358C */
+  Scene_DrawConfigHakaanaOuke           = 0x8009C608;  /* ROM: 0x00B137A8 */
+  Scene_DrawConfigHyliaLabo             = 0x8009C8B8;  /* ROM: 0x00B13A58 */
+  Scene_DrawConfigCalmWater             = 0x8009CAC0;  /* ROM: 0x00B13C60 */
+  Scene_DrawConfigMen                   = 0x8009CC00;  /* ROM: 0x00B13DA0 */
+  Gfx_TwoTexScrollPrimColor             = 0x8009CE1C;  /* ROM: 0x00B13FBC */
+  Scene_DrawConfigTuribori              = 0x8009CF84;  /* ROM: 0x00B14124 */
+  Scene_DrawConfigBowling               = 0x8009D0E8;  /* ROM: 0x00B14288 */
+  Scene_DrawConfigSouko                 = 0x8009D31C;  /* ROM: 0x00B144BC */
+  Scene_DrawConfigMiharigoya            = 0x8009D438;  /* ROM: 0x00B145D8 */
+  Scene_DrawConfigMahouya               = 0x8009D5B4;  /* ROM: 0x00B14754 */
+  Scene_DrawConfigBmori1                = 0x8009D758;  /* ROM: 0x00B148F8 */
+  Scene_DrawConfigJyasinzou             = 0x8009D974;  /* ROM: 0x00B14B14 */
+  Scene_DrawConfigSpot00                = 0x8009DA30;  /* ROM: 0x00B14BD0 */
+  Scene_DrawConfigSpot01                = 0x8009DD5C;  /* ROM: 0x00B14EFC */
+  Scene_DrawConfigSpot03                = 0x8009DE78;  /* ROM: 0x00B15018 */
+  Scene_DrawConfigSpot04                = 0x8009E0B8;  /* ROM: 0x00B15258 */
+  Scene_DrawConfigSpot06                = 0x8009E54C;  /* ROM: 0x00B156EC */
+  Scene_DrawConfigSpot07                = 0x8009E730;  /* ROM: 0x00B158D0 */
+  Scene_DrawConfigSpot08                = 0x8009E8C0;  /* ROM: 0x00B15A60 */
+  Scene_DrawConfigSpot09                = 0x8009EAD8;  /* ROM: 0x00B15C78 */
+  Scene_DrawConfigSpot10                = 0x8009EE44;  /* ROM: 0x00B15FE4 */
+  Scene_DrawConfigSpot11                = 0x8009F074;  /* ROM: 0x00B16214 */
+  Scene_DrawConfigSpot12                = 0x8009F1B4;  /* ROM: 0x00B16354 */
+  Scene_DrawConfigSpot13                = 0x8009F270;  /* ROM: 0x00B16410 */
+  Scene_DrawConfigSpot15                = 0x8009F40C;  /* ROM: 0x00B165AC */
+  Scene_DrawConfigSpot16                = 0x8009F5D4;  /* ROM: 0x00B16774 */
+  Scene_DrawConfigSpot17                = 0x8009F7D4;  /* ROM: 0x00B16974 */
+  Scene_DrawConfigSpot18                = 0x8009F9D0;  /* ROM: 0x00B16B70 */
+  Scene_DrawConfigSpot20                = 0x8009FB74;  /* ROM: 0x00B16D14 */
+  Scene_DrawConfigHidan                 = 0x8009FC90;  /* ROM: 0x00B16E30 */
+  Scene_DrawConfigBdan                  = 0x8009FE58;  /* ROM: 0x00B16FF8 */
+  Scene_DrawConfigGanontika             = 0x800A0334;  /* ROM: 0x00B174D4 */
+  Scene_DrawConfigGanontikaSonogo       = 0x800A055C;  /* ROM: 0x00B176FC */
+  Scene_DrawConfigGanonSonogo           = 0x800A057C;  /* ROM: 0x00B1771C */
+  Scene_DrawConfigBesitu                = 0x800A059C;  /* ROM: 0x00B1773C */
+  Scene_Draw                            = 0x800A06F8;  /* ROM: 0x00B17898 */
  /* .data */
   gEntranceTable                  = 0x801281C0;  /* ROM: 0x00B9F360 */
   gSceneTable                     = 0x80129A10;  /* ROM: 0x00BA0BB0 */
@@ -2832,7 +2928,7 @@
   sGoronCityEntranceTextures      = 0x8012A388;  /* ROM: 0x00BA1528 */
   sLonLonRanchWindowTextures      = 0x8012A390;  /* ROM: 0x00BA1530 */
   D_8012A398                      = 0x8012A398;  /* ROM: 0x00BA1538 */
-  sSceneDrawHandlers              = 0x8012A3A4;  /* ROM: 0x00BA1544 */
+  sSceneDrawConfigs               = 0x8012A3A4;  /* ROM: 0x00BA1544 */
 
 /* build/src/code/z_skelanime.o */
  /* .text */
@@ -3504,7 +3600,7 @@
  /* .text */
   func_800C3C80          = 0x800C3C80;  /* ROM: 0x00B3AE20 */
   AudioMgr_HandleRetrace = 0x800C3CB8;  /* ROM: 0x00B3AE58 */
-  AudioMgr_HandlePRENMI  = 0x800C3E40;  /* ROM: 0x00B3AFE0 */
+  AudioMgr_HandlePreNMI  = 0x800C3E40;  /* ROM: 0x00B3AFE0 */
   AudioMgr_ThreadEntry   = 0x800C3E70;  /* ROM: 0x00B3B010 */
   AudioMgr_Unlock        = 0x800C3FC4;  /* ROM: 0x00B3B164 */
   AudioMgr_Init          = 0x800C3FEC;  /* ROM: 0x00B3B18C */
@@ -3600,7 +3696,7 @@
   gSystemHeapSize = 0x8012D278;  /* ROM: 0x00BA4418 */
  /* .bss */
   gAppNmiBufferPtr  = 0x80166660;
-  gSchedContext     = 0x80166668;
+  gScheduler        = 0x80166668;
   gPadMgr           = 0x801668C0;
   gIrqMgr           = 0x80166D28;
   gSegments         = 0x80166FA8;
@@ -3641,24 +3737,24 @@
 
 /* build/src/code/sched.o */
  /* .text */
-  Sched_SwapFrameBuffer = 0x800C82A0;  /* ROM: 0x00B3F440 */
-  func_800C84E4         = 0x800C84E4;  /* ROM: 0x00B3F684 */
-  Sched_HandleReset     = 0x800C8534;  /* ROM: 0x00B3F6D4 */
-  Sched_HandleStart     = 0x800C87CC;  /* ROM: 0x00B3F96C */
-  Sched_QueueTask       = 0x800C87F0;  /* ROM: 0x00B3F990 */
-  Sched_Yield           = 0x800C8910;  /* ROM: 0x00B3FAB0 */
-  func_800C89D4         = 0x800C89D4;  /* ROM: 0x00B3FB74 */
-  Sched_Schedule        = 0x800C8A94;  /* ROM: 0x00B3FC34 */
-  func_800C8BC4         = 0x800C8BC4;  /* ROM: 0x00B3FD64 */
-  Sched_IsComplete      = 0x800C8C40;  /* ROM: 0x00B3FDE0 */
-  Sched_RunTask         = 0x800C8CB8;  /* ROM: 0x00B3FE58 */
-  Sched_HandleEntry     = 0x800C8EDC;  /* ROM: 0x00B4007C */
-  Sched_HandleRetrace   = 0x800C9018;  /* ROM: 0x00B401B8 */
-  Sched_HandleRSPDone   = 0x800C91BC;  /* ROM: 0x00B4035C */
-  Sched_HandleRDPDone   = 0x800C94B4;  /* ROM: 0x00B40654 */
-  Sched_SendEntryMsg    = 0x800C95F8;  /* ROM: 0x00B40798 */
-  Sched_ThreadEntry     = 0x800C9644;  /* ROM: 0x00B407E4 */
-  Sched_Init            = 0x800C9874;  /* ROM: 0x00B40A14 */
+  Sched_SwapFrameBufferImpl        = 0x800C82A0;  /* ROM: 0x00B3F440 */
+  Sched_SwapFrameBuffer            = 0x800C84E4;  /* ROM: 0x00B3F684 */
+  Sched_HandlePreNMI               = 0x800C8534;  /* ROM: 0x00B3F6D4 */
+  Sched_HandleNMI                  = 0x800C87CC;  /* ROM: 0x00B3F96C */
+  Sched_QueueTask                  = 0x800C87F0;  /* ROM: 0x00B3F990 */
+  Sched_Yield                      = 0x800C8910;  /* ROM: 0x00B3FAB0 */
+  Sched_GfxTaskFramebufferValid    = 0x800C89D4;  /* ROM: 0x00B3FB74 */
+  Sched_Schedule                   = 0x800C8A94;  /* ROM: 0x00B3FC34 */
+  Sched_SetNextFramebufferFromTask = 0x800C8BC4;  /* ROM: 0x00B3FD64 */
+  Sched_TaskComplete               = 0x800C8C40;  /* ROM: 0x00B3FDE0 */
+  Sched_RunTask                    = 0x800C8CB8;  /* ROM: 0x00B3FE58 */
+  Sched_HandleNotification         = 0x800C8EDC;  /* ROM: 0x00B4007C */
+  Sched_HandleRetrace              = 0x800C9018;  /* ROM: 0x00B401B8 */
+  Sched_HandleRSPDone              = 0x800C91BC;  /* ROM: 0x00B4035C */
+  Sched_HandleRDPDone              = 0x800C94B4;  /* ROM: 0x00B40654 */
+  Sched_Notify                     = 0x800C95F8;  /* ROM: 0x00B40798 */
+  Sched_ThreadEntry                = 0x800C9644;  /* ROM: 0x00B407E4 */
+  Sched_Init                       = 0x800C9874;  /* ROM: 0x00B40A14 */
  /* .data */
   sLogScheduler = 0x8012D290;  /* ROM: 0x00BA4430 */
  /* .bss */
@@ -3780,7 +3876,7 @@
   Math3D_TriLineIntersect                   = 0x800CE25C;  /* ROM: 0x00B453FC */
   Math3D_TriNorm                            = 0x800CE3C0;  /* ROM: 0x00B45560 */
   Math3D_PointInSph                         = 0x800CE46C;  /* ROM: 0x00B4560C */
-  Math3D_PointDistToLine2D                  = 0x800CE4B8;  /* ROM: 0x00B45658 */
+  Math3D_PointDistSqToLine2D                = 0x800CE4B8;  /* ROM: 0x00B45658 */
   Math3D_LineVsSph                          = 0x800CE600;  /* ROM: 0x00B457A0 */
   Math3D_GetSphVsTriIntersectPoint          = 0x800CE800;  /* ROM: 0x00B459A0 */
   Math3D_TriVsSphIntersect                  = 0x800CE934;  /* ROM: 0x00B45AD4 */
@@ -3883,9 +3979,9 @@
   IrqMgr_JamMesgToClients  = 0x800D3454;  /* ROM: 0x00B4A5F4 */
   IrqMgr_HandlePreNMI      = 0x800D34DC;  /* ROM: 0x00B4A67C */
   IrqMgr_CheckStacks       = 0x800D3574;  /* ROM: 0x00B4A714 */
-  IrqMgr_HandlePRENMI450   = 0x800D35F8;  /* ROM: 0x00B4A798 */
-  IrqMgr_HandlePRENMI480   = 0x800D3674;  /* ROM: 0x00B4A814 */
-  IrqMgr_HandlePRENMI500   = 0x800D3718;  /* ROM: 0x00B4A8B8 */
+  IrqMgr_HandlePreNMI450   = 0x800D35F8;  /* ROM: 0x00B4A798 */
+  IrqMgr_HandlePreNMI480   = 0x800D3674;  /* ROM: 0x00B4A814 */
+  IrqMgr_HandlePreNMI500   = 0x800D3718;  /* ROM: 0x00B4A8B8 */
   IrqMgr_HandleRetrace     = 0x800D3738;  /* ROM: 0x00B4A8D8 */
   IrqMgr_ThreadEntry       = 0x800D37F0;  /* ROM: 0x00B4A990 */
   IrqMgr_Init              = 0x800D3990;  /* ROM: 0x00B4AB30 */
@@ -3995,6 +4091,11 @@
   sFaultDrawer = 0x8016B680;
   D_8016B6C0   = 0x8016B6C0;
 
+/* build/src/code/kanread.o */
+ /* .text */
+  Kanji_OffsetFromShiftJIS = 0x800D71F0;  /* ROM: 0x00B4E390 */
+  sNonKanjiIndices         = 0x800D7288;  /* ROM: 0x00B4E428 */
+
 /* build/src/code/ucode_disas.o */
  /* .text */
   UCodeDisas_TranslateAddr     = 0x800D7CD0;  /* ROM: 0x00B4EE70 */
@@ -4072,7 +4173,7 @@
   AudioSynth_SaveRingBufferPart         = 0x800DC074;  /* ROM: 0x00B53214 */
   AudioSynth_SaveBufferOffset           = 0x800DC0E0;  /* ROM: 0x00B53280 */
   AudioSynth_MaybeLoadRingBuffer2       = 0x800DC124;  /* ROM: 0x00B532C4 */
-  func_800DC164                         = 0x800DC164;  /* ROM: 0x00B53304 */
+  AudioSynth_LoadReverbSamples          = 0x800DC164;  /* ROM: 0x00B53304 */
   AudioSynth_SaveReverbSamples          = 0x800DC1D8;  /* ROM: 0x00B53378 */
   AudioSynth_SaveRingBuffer2            = 0x800DC2DC;  /* ROM: 0x00B5347C */
   AudioSynth_DoOneAudioUpdate           = 0x800DC384;  /* ROM: 0x00B53524 */
@@ -4091,8 +4192,8 @@
 
 /* build/src/code/audio_heap.o */
  /* .text */
-  func_800DDE20                             = 0x800DDE20;  /* ROM: 0x00B54FC0 */
-  func_800DDE3C                             = 0x800DDE3C;  /* ROM: 0x00B54FDC */
+  AudioHeap_CalculateAdsrDecay              = 0x800DDE20;  /* ROM: 0x00B54FC0 */
+  AudioHeap_InitAdsrDecayTable              = 0x800DDE3C;  /* ROM: 0x00B54FDC */
   AudioHeap_ResetLoadStatus                 = 0x800DDF80;  /* ROM: 0x00B55120 */
   AudioHeap_DiscardFont                     = 0x800DE048;  /* ROM: 0x00B551E8 */
   AudioHeap_ReleaseNotesForFont             = 0x800DE12C;  /* ROM: 0x00B552CC */
@@ -4124,7 +4225,7 @@
   AudioHeap_LoadFilter                      = 0x800DF688;  /* ROM: 0x00B56828 */
   AudioHeap_UpdateReverb                    = 0x800DF7BC;  /* ROM: 0x00B5695C */
   AudioHeap_UpdateReverbs                   = 0x800DF7C4;  /* ROM: 0x00B56964 */
-  AudioHeap_ClearAiBuffers                  = 0x800DF888;  /* ROM: 0x00B56A28 */
+  AudioHeap_ClearCurrentAiBuffer            = 0x800DF888;  /* ROM: 0x00B56A28 */
   AudioHeap_ResetStep                       = 0x800DF8F4;  /* ROM: 0x00B56A94 */
   AudioHeap_Init                            = 0x800DFBF8;  /* ROM: 0x00B56D98 */
   AudioHeap_SearchPermanentCache            = 0x800E04E8;  /* ROM: 0x00B57688 */
@@ -4371,7 +4472,7 @@
   AudioSeq_InitSequencePlayer              = 0x800EC80C;  /* ROM: 0x00B639AC */
   AudioSeq_InitSequencePlayers             = 0x800EC8DC;  /* ROM: 0x00B63A7C */
  /* .data */
-  D_80130520 = 0x80130520;  /* ROM: 0x00BA76C0 */
+  sSeqInstructionArgsTable = 0x80130520;  /* ROM: 0x00BA76C0 */
 
 /* build/src/code/code_800EC960.o */
  /* .text */
@@ -4430,7 +4531,7 @@
   func_800F3990                              = 0x800F3990;  /* ROM: 0x00B6AB30 */
   Audio_SetSoundProperties                   = 0x800F3A08;  /* ROM: 0x00B6ABA8 */
   Audio_ResetSfxChannelState                 = 0x800F3ED4;  /* ROM: 0x00B6B074 */
-  func_800F3F3C                              = 0x800F3F3C;  /* ROM: 0x00B6B0DC */
+  Audio_PlayCutsceneEffectsSequence          = 0x800F3F3C;  /* ROM: 0x00B6B0DC */
   func_800F3F84                              = 0x800F3F84;  /* ROM: 0x00B6B124 */
   func_800F4010                              = 0x800F4010;  /* ROM: 0x00B6B1B0 */
   func_800F4138                              = 0x800F4138;  /* ROM: 0x00B6B2D8 */
@@ -4836,9 +4937,12 @@
  /* .text */
   Overlay_Relocate = 0x800FC2C0;  /* ROM: 0x00B73460 */
 
+/* build/src/code/load.o */
+ /* .text */
+  Overlay_Load = 0x800FC620;  /* ROM: 0x00B737C0 */
+
 /* build/src/code/code_800FC620.o */
  /* .text */
-  Overlay_Load    = 0x800FC620;  /* ROM: 0x00B737C0 */
   func_800FC800   = 0x800FC800;  /* ROM: 0x00B739A0 */
   func_800FC83C   = 0x800FC83C;  /* ROM: 0x00B739DC */
   func_800FC868   = 0x800FC868;  /* ROM: 0x00B73A08 */
@@ -4893,6 +4997,33 @@
   Math_FAcosF         = 0x800FD368;  /* ROM: 0x00B74508 */
  /* .bss */
   gUseAtanContFrac = 0x80175600;
+
+/* build/src/code/fp.o */
+ /* .text */
+  floorf      = 0x800FD390;  /* ROM: 0x00B74530 */
+  floor       = 0x800FD39C;  /* ROM: 0x00B7453C */
+  lfloorf     = 0x800FD3A8;  /* ROM: 0x00B74548 */
+  lfloor      = 0x800FD3B8;  /* ROM: 0x00B74558 */
+  ceilf       = 0x800FD3C8;  /* ROM: 0x00B74568 */
+  ceil        = 0x800FD3D4;  /* ROM: 0x00B74574 */
+  lceilf      = 0x800FD3E0;  /* ROM: 0x00B74580 */
+  lceil       = 0x800FD3F0;  /* ROM: 0x00B74590 */
+  truncf      = 0x800FD400;  /* ROM: 0x00B745A0 */
+  trunc       = 0x800FD40C;  /* ROM: 0x00B745AC */
+  ltruncf     = 0x800FD418;  /* ROM: 0x00B745B8 */
+  ltrunc      = 0x800FD428;  /* ROM: 0x00B745C8 */
+  nearbyintf  = 0x800FD438;  /* ROM: 0x00B745D8 */
+  nearbyint   = 0x800FD444;  /* ROM: 0x00B745E4 */
+  lnearbyintf = 0x800FD450;  /* ROM: 0x00B745F0 */
+  lnearbyint  = 0x800FD460;  /* ROM: 0x00B74600 */
+  roundf      = 0x800FD470;  /* ROM: 0x00B74610 */
+  round       = 0x800FD48C;  /* ROM: 0x00B7462C */
+  lroundf     = 0x800FD4AC;  /* ROM: 0x00B7464C */
+  lround      = 0x800FD4CC;  /* ROM: 0x00B7466C */
+ /* .data */
+  qNaN0x3FFFFF = 0x801344A0;  /* ROM: 0x00BAB640 */
+  qNaN0x10000  = 0x801344A4;  /* ROM: 0x00BAB644 */
+  sNaN0x3FFFFF = 0x801344A8;  /* ROM: 0x00BAB648 */
 
 /* build/src/code/system_malloc.o */
  /* .text */
@@ -5014,6 +5145,10 @@
  /* .text */
   osPfsFreeBlocks = 0x80100040;  /* ROM: 0x00B771E0 */
 
+/* build/src/libultra/mgu/scale.o */
+ /* .text */
+  guScale = 0x801001E0;  /* ROM: 0x00B77380 */
+
 /* build/src/libultra/gu/sinf.o */
  /* .text */
   sinf = 0x80100290;  /* ROM: 0x00B77430 */
@@ -5100,6 +5235,10 @@
  /* .bss */
   gPifMempakBuf = 0x80175960;
 
+/* build/src/libultra/mgu/mtxidentf.o */
+ /* .text */
+  guMtxIdentF = 0x80101B40;  /* ROM: 0x00B78CE0 */
+
 /* build/src/libultra/gu/lookat.o */
  /* .text */
   guLookAtF = 0x80101B90;  /* ROM: 0x00B78D30 */
@@ -5127,6 +5266,10 @@
   __osPfsInodeCacheChannel = 0x80134CF0;  /* ROM: 0x00BABE90 */
   __osPfsInodeCacheBank    = 0x80134CF4;  /* ROM: 0x00BABE94 */
 
+/* build/src/libultra/mgu/mtxl2f.o */
+ /* .text */
+  guMtxL2F = 0x80102FA0;  /* ROM: 0x00B7A140 */
+
 /* build/src/libultra/io/pfsfindfile.o */
  /* .text */
   osPfsFindFile = 0x80103010;  /* ROM: 0x00B7A1B0 */
@@ -5153,6 +5296,10 @@
  /* .text */
   __osSpDeviceBusy = 0x80103B30;  /* ROM: 0x00B7ACD0 */
 
+/* build/src/libultra/mgu/mtxident.o */
+ /* .text */
+  guMtxIdent = 0x80103B60;  /* ROM: 0x00B7AD00 */
+
 /* build/src/libultra/gu/position.o */
  /* .text */
   guPositionF = 0x80103BB0;  /* ROM: 0x00B7AD50 */
@@ -5174,6 +5321,10 @@
 /* build/src/libultra/os/getactivequeue.o */
  /* .text */
   __osGetActiveQueue = 0x80104140;  /* ROM: 0x00B7B2E0 */
+
+/* build/src/libultra/mgu/normalize.o */
+ /* .text */
+  guNormalize = 0x80104160;  /* ROM: 0x00B7B300 */
 
 /* build/src/libultra/io/dpgetstat.o */
  /* .text */
@@ -5242,6 +5393,10 @@
  /* .text */
   osAiGetLength = 0x80105C00;  /* ROM: 0x00B7CDA0 */
 
+/* build/src/libultra/mgu/translate.o */
+ /* .text */
+  guTranslate = 0x80105C20;  /* ROM: 0x00B7CDC0 */
+
 /* build/src/libultra/io/contramwrite.o */
  /* .text */
   __osContRamWrite = 0x80105CF0;  /* ROM: 0x00B7CE90 */
@@ -5269,9 +5424,17 @@
  /* .text */
   __osSpSetStatus = 0x80106480;  /* ROM: 0x00B7D620 */
 
+/* build/src/libultra/os/writebackdcacheall.o */
+ /* .text */
+  osWritebackDCacheAll = 0x80106490;  /* ROM: 0x00B7D630 */
+
 /* build/src/libultra/os/getcurrfaultedthread.o */
  /* .text */
   __osGetCurrFaultedThread = 0x801064C0;  /* ROM: 0x00B7D660 */
+
+/* build/src/libultra/mgu/mtxf2l.o */
+ /* .text */
+  guMtxF2L = 0x801064E0;  /* ROM: 0x00B7D680 */
 
 /* build/src/libultra/libc/llcvt.o */
  /* .text */
@@ -5443,8 +5606,8 @@
   gHeadsetPanVolume                 = 0x8012FC28;  /* ROM: 0x00BA6DC8 */
   gStereoPanVolume                  = 0x8012FE28;  /* ROM: 0x00BA6FC8 */
   gDefaultPanVolume                 = 0x80130028;  /* ROM: 0x00BA71C8 */
-  sLowPassFilterData                = 0x80130228;  /* ROM: 0x00BA73C8 */
-  sHighPassFilterData               = 0x80130328;  /* ROM: 0x00BA74C8 */
+  gLowPassFilterData                = 0x80130228;  /* ROM: 0x00BA73C8 */
+  gHighPassFilterData               = 0x80130328;  /* ROM: 0x00BA74C8 */
   D_80130418                        = 0x80130418;  /* ROM: 0x00BA75B8 */
 
 /* build/src/code/audio_sound_params.o */
@@ -5474,6 +5637,10 @@
 /* build/src/code/logseverity.o */
  /* .data */
   gOverlayLogSeverity = 0x80133BC0;  /* ROM: 0x00BAAD60 */
+
+/* build/src/libultra/gu/libm_vals.o */
+ /* .rodata */
+  __libm_qnan_f = 0x8014B2D0;  /* ROM: 0x00BC2470 */
 
 /* build/src/buffers/zbuffer.o */
  /* .bss */

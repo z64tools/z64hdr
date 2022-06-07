@@ -1,3 +1,6 @@
+#ifndef OBJECT_MORI_OBJECTS_H
+#define OBJECT_MORI_OBJECTS_H 1
+
 extern u64 gMoriHashiraTLUT[];
 extern u64 gMoriHashiraTex[];
 extern Vtx object_mori_objectsVtx_0004E0[];
@@ -56,3 +59,4 @@ extern CollisionPoly gMoriHashira2ColPolygons[];
 extern Vec3s gMoriHashira2ColVertices[];
 extern CollisionHeader gMoriHashira2Col;
 
+#endif

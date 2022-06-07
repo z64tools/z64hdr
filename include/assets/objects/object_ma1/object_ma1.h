@@ -1,3 +1,6 @@
+#ifndef OBJECT_MA1_H
+#define OBJECT_MA1_H 1
+
 extern s16 sMalonChildRaiseHandsAnimFrameData[];
 extern JointIndex sMalonChildRaiseHandsAnimJointIndices[];
 extern AnimationHeader gMalonChildRaiseHandsAnim;
@@ -65,3 +68,4 @@ extern s16 sMalonChildSingAnimFrameData[];
 extern JointIndex sMalonChildSingAnimJointIndices[];
 extern AnimationHeader gMalonChildSingAnim;
 
+#endif

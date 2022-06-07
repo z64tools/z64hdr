@@ -1,3 +1,6 @@
+#ifndef OBJECT_ST_H
+#define OBJECT_ST_H 1
+
 extern s16 object_st_Anim_000304FrameData[];
 extern JointIndex object_st_Anim_000304JointIndices[];
 extern AnimationHeader object_st_Anim_000304;
@@ -76,3 +79,4 @@ extern s16 object_st_Anim_005B98FrameData[];
 extern JointIndex object_st_Anim_005B98JointIndices[];
 extern AnimationHeader object_st_Anim_005B98;
 
+#endif

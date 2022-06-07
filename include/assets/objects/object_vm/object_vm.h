@@ -1,3 +1,6 @@
+#ifndef OBJECT_VM_H
+#define OBJECT_VM_H 1
+
 extern s16 sBeamosAnimFrameData[];
 extern JointIndex sBeamosAnimJointIndices[];
 extern AnimationHeader gBeamosAnim;
@@ -29,3 +32,4 @@ extern StandardLimb gBeamosBodyLimb;
 extern void* gBeamosSkelLimbs[];
 extern SkeletonHeader gBeamosSkel;
 
+#endif

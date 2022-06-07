@@ -1,3 +1,6 @@
+#ifndef OBJECT_FISH_H
+#define OBJECT_FISH_H 1
+
 extern s16 sFishingFishAnimFrameData[];
 extern JointIndex sFishingFishAnimJointIndices[];
 extern AnimationHeader gFishingFishAnim;
@@ -186,3 +189,4 @@ extern Vtx object_fishVtx_014ED0[];
 extern Gfx gFishingAquariumBottomDL[];
 extern Gfx gFishingAquariumContainerDL[];
 
+#endif

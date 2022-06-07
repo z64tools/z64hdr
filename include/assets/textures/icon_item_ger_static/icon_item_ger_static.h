@@ -1,3 +1,6 @@
+#ifndef ICON_ITEM_GER_STATIC_H
+#define ICON_ITEM_GER_STATIC_H 1
+
 extern u64 gPauseDekuTitleGERTex[];
 extern u64 gPauseDodongoTitleGERTex[];
 extern u64 gPauseJabuTitleGERTex[];
@@ -31,3 +34,4 @@ extern u64 gPauseQuestStatus10GERTex[];
 extern u64 gPauseSave10GERTex[];
 extern u64 gPauseSave20GERTex[];
 
+#endif

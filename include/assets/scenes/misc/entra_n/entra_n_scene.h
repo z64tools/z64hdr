@@ -1,3 +1,6 @@
+#ifndef ENTRA_N_SCENE_H
+#define ENTRA_N_SCENE_H 1
+
 extern SceneCmd entra_n_sceneCommands[];
 extern ActorEntry entra_n_sceneStartPositionList0x000068[];
 extern TransitionActorEntry entra_n_sceneTransitionActorList_000098[];
@@ -14,3 +17,4 @@ extern CollisionPoly entra_n_sceneCollisionHeader_0003F8Polygons[];
 extern Vec3s entra_n_sceneCollisionHeader_0003F8Vertices[];
 extern CollisionHeader entra_n_sceneCollisionHeader_0003F8;
 
+#endif

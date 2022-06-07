@@ -1,3 +1,6 @@
+#ifndef GOLON_SCENE_H
+#define GOLON_SCENE_H 1
+
 extern SceneCmd golon_sceneCommands[];
 extern ActorEntry golon_sceneStartPositionList0x000050[];
 extern RomFile golon_sceneRoomList0x000060[];
@@ -11,3 +14,4 @@ extern CollisionPoly golon_sceneCollisionHeader_000368Polygons[];
 extern Vec3s golon_sceneCollisionHeader_000368Vertices[];
 extern CollisionHeader golon_sceneCollisionHeader_000368;
 
+#endif

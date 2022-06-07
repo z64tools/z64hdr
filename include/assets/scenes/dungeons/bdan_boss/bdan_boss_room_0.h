@@ -1,3 +1,6 @@
+#ifndef BDAN_BOSS_ROOM_0_H
+#define BDAN_BOSS_ROOM_0_H 1
+
 extern SceneCmd bdan_boss_room_0Commands[];
 extern s16 bdan_boss_room_0ObjectList_000038[];
 extern PolygonType0 bdan_boss_room_0PolygonType0_000050;
@@ -14,3 +17,4 @@ extern Gfx bdan_boss_room_0DL_002A00[];
 extern u64 bdan_boss_room_0TLUT_002A10[];
 extern u64 bdan_boss_room_0Tex_002C18[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef MIZUSIN_BS_SCENE_H
+#define MIZUSIN_BS_SCENE_H 1
+
 extern SceneCmd MIZUsin_bs_sceneCommands[];
 extern ActorEntry MIZUsin_bs_sceneStartPositionList0x000060[];
 extern TransitionActorEntry MIZUsin_bs_sceneTransitionActorList_000070[];
@@ -12,3 +15,4 @@ extern Vec3s MIZUsin_bs_sceneCollisionHeader_001A34Vertices[];
 extern WaterBox MIZUsin_bs_sceneCollisionHeader_001A34WaterBoxes[];
 extern CollisionHeader MIZUsin_bs_sceneCollisionHeader_001A34;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef KAKARIKO_SCENE_H
+#define KAKARIKO_SCENE_H 1
+
 extern SceneCmd kakariko_sceneCommands[];
 extern ActorEntry kakariko_sceneStartPositionList0x000068[];
 extern TransitionActorEntry kakariko_sceneTransitionActorList_000078[];
@@ -14,3 +17,4 @@ extern CollisionPoly kakariko_sceneCollisionHeader_000E68Polygons[];
 extern Vec3s kakariko_sceneCollisionHeader_000E68Vertices[];
 extern CollisionHeader kakariko_sceneCollisionHeader_000E68;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OVL_BOSS_GANON_H
+#define OVL_BOSS_GANON_H 1
+
 extern Gfx gDorfShadowSetupDL[];
 extern Gfx gDorfShadowModelDL[];
 extern Gfx gDorfTriforceDL[];
@@ -44,3 +47,4 @@ extern Gfx gDorfLightCoreDL[];
 extern Gfx gDorfShockDL[];
 extern Gfx gDorfVortexDL[];
 
+#endif

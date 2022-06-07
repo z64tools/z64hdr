@@ -1,3 +1,6 @@
+#ifndef SPOT09_SCENE_H
+#define SPOT09_SCENE_H 1
+
 extern SceneCmd spot09_sceneCommands[];
 extern SceneCmd* spot09_sceneAlternateHeaders0x000068[];
 extern ActorEntry spot09_sceneStartPositionList0x000080[];
@@ -14,9 +17,9 @@ extern CollisionPoly spot09_sceneCollisionHeader_002128Polygons[];
 extern Vec3s spot09_sceneCollisionHeader_002128Vertices[];
 extern WaterBox spot09_sceneCollisionHeader_002128WaterBoxes[];
 extern CollisionHeader spot09_sceneCollisionHeader_002128;
-extern CutsceneData spot09_sceneSet_002F70CutsceneData_002160[];
-extern CutsceneData spot09_sceneSet_003060CutsceneData_002410[];
-extern CutsceneData spot09_sceneSet_003140CutsceneData_0028E0[];
+extern CutsceneData spot09_sceneCutsceneData_002160[];
+extern CutsceneData spot09_sceneCutsceneData_002410[];
+extern CutsceneData spot09_sceneCutsceneData_0028E0[];
 extern CutsceneData gGerudoValleyBridgeJumpFieldFortressCs[];
 extern SceneCmd spot09_sceneSet_002C80[];
 extern ActorEntry spot09_sceneStartPositionList0x002CE0[];
@@ -73,3 +76,4 @@ extern u64 spot09_sceneTex_00F160[];
 extern u64 spot09_sceneTex_00F960[];
 extern u64 spot09_sceneTex_010960[];
 
+#endif

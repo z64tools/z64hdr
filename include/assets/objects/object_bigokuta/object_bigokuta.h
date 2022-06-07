@@ -1,3 +1,6 @@
+#ifndef OBJECT_BIGOKUTA_H
+#define OBJECT_BIGOKUTA_H 1
+
 extern s16 object_bigokuta_Anim_000444FrameData[];
 extern JointIndex object_bigokuta_Anim_000444JointIndices[];
 extern AnimationHeader object_bigokuta_Anim_000444;
@@ -65,3 +68,4 @@ extern StandardLimb object_bigokuta_Limb_006B68;
 extern void* object_bigokuta_Skel_006BC0Limbs[];
 extern FlexSkeletonHeader object_bigokuta_Skel_006BC0;
 
+#endif

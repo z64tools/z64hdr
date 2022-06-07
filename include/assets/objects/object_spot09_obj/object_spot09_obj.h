@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT09_OBJ_H
+#define OBJECT_SPOT09_OBJ_H 1
+
 extern Vtx object_spot09_objVtx_000000[];
 extern Gfx gValleyBridgeSidesDL[];
 extern Vtx object_spot09_objVtx_000280[];
@@ -51,3 +54,4 @@ extern u64 object_spot09_objTex_017090[];
 extern u64 object_spot09_objTex_017490[];
 extern u64 object_spot09_objTex_017890[];
 
+#endif

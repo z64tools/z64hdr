@@ -1,3 +1,6 @@
+#ifndef NAKANIWA_ROOM_0_H
+#define NAKANIWA_ROOM_0_H 1
+
 extern SceneCmd nakaniwa_room_0Commands[];
 extern SceneCmd* nakaniwa_room_0AlternateHeaders0x000048[];
 extern s16 nakaniwa_room_0ObjectList_000060[];
@@ -94,3 +97,4 @@ extern u64 nakaniwa_room_0Tex_0156C0[];
 extern u64 nakaniwa_room_0Tex_0166C0[];
 extern u64 nakaniwa_room_0Tex_016EC0[];
 
+#endif

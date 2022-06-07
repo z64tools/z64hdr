@@ -1,3 +1,6 @@
+#ifndef OBJECT_OF1D_MAP_H
+#define OBJECT_OF1D_MAP_H 1
+
 extern s16 sGoronAnim_000750FrameData[];
 extern JointIndex sGoronAnim_000750JointIndices[];
 extern AnimationHeader gGoronAnim_000750;
@@ -97,3 +100,4 @@ extern s16 sGoronAnim_010590FrameData[];
 extern JointIndex sGoronAnim_010590JointIndices[];
 extern AnimationHeader gGoronAnim_010590;
 
+#endif

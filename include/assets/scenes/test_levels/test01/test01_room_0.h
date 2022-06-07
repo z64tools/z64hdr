@@ -1,3 +1,6 @@
+#ifndef TEST01_ROOM_0_H
+#define TEST01_ROOM_0_H 1
+
 extern SceneCmd test01_room_0Commands[];
 extern PolygonType0 test01_room_0PolygonType0_000030;
 extern PolygonDlist test01_room_0PolygonDlist_00003C[1];
@@ -32,3 +35,4 @@ extern Gfx test01_room_0DL_008F90[];
 extern Gfx test01_room_0DL_0090D8[];
 extern u64 test01_room_0Tex_0090E8[];
 
+#endif

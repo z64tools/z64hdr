@@ -1,3 +1,6 @@
+#ifndef SPOT07_SCENE_H
+#define SPOT07_SCENE_H 1
+
 extern SceneCmd spot07_sceneCommands[];
 extern SceneCmd* spot07_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot07_sceneStartPositionList0x000080[];
@@ -16,7 +19,7 @@ extern CollisionPoly spot07_sceneCollisionHeader_003824Polygons[];
 extern Vec3s spot07_sceneCollisionHeader_003824Vertices[];
 extern WaterBox spot07_sceneCollisionHeader_003824WaterBoxes[];
 extern CollisionHeader spot07_sceneCollisionHeader_003824;
-extern CutsceneData spot07_sceneSet_003C60CutsceneData_003850[];
+extern CutsceneData spot07_sceneCutsceneData_003850[];
 extern SceneCmd spot07_sceneSet_003A40[];
 extern ActorEntry spot07_sceneStartPositionList0x003AA8[];
 extern TransitionActorEntry spot07_sceneTransitionActorList_003AF8[];
@@ -54,3 +57,4 @@ extern u64 gZorasDomainNightEntranceTex[];
 extern u64 spot07_sceneTex_009018[];
 extern u64 spot07_sceneTex_009418[];
 
+#endif

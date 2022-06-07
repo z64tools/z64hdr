@@ -1,3 +1,6 @@
+#ifndef OBJECT_DODOJR_H
+#define OBJECT_DODOJR_H 1
+
 extern s16 object_dodojr_Anim_0004A0FrameData[];
 extern JointIndex object_dodojr_Anim_0004A0JointIndices[];
 extern AnimationHeader object_dodojr_Anim_0004A0;
@@ -40,3 +43,4 @@ extern StandardLimb object_dodojr_Limb_00209C;
 extern void* object_dodojr_Skel_0020E0Limbs[];
 extern SkeletonHeader object_dodojr_Skel_0020E0;
 
+#endif

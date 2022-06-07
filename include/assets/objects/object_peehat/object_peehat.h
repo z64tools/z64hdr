@@ -1,3 +1,6 @@
+#ifndef OBJECT_PEEHAT_H
+#define OBJECT_PEEHAT_H 1
+
 extern s16 sPeehatLandingAnimFrameData[];
 extern JointIndex sPeehatLandingAnimJointIndices[];
 extern AnimationHeader gPeehatLandingAnim;
@@ -49,3 +52,4 @@ extern StandardLimb gPeehatTopLimb;
 extern void* gPeehatSkelLimbs[];
 extern SkeletonHeader gPeehatSkel;
 
+#endif

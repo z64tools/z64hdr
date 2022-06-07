@@ -1,3 +1,6 @@
+#ifndef OBJECT_GANON_ANIME1_H
+#define OBJECT_GANON_ANIME1_H 1
+
 extern s16 sDorfBigMagicWindupAnimFrameData[];
 extern JointIndex sDorfBigMagicWindupAnimJointIndices[];
 extern AnimationHeader gDorfBigMagicWindupAnim;
@@ -74,3 +77,4 @@ extern s16 sDorfVolleyRightAnimFrameData[];
 extern JointIndex sDorfVolleyRightAnimJointIndices[];
 extern AnimationHeader gDorfVolleyRightAnim;
 
+#endif

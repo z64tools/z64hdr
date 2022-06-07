@@ -1,3 +1,6 @@
+#ifndef MIZUSIN_ROOM_22_H
+#define MIZUSIN_ROOM_22_H 1
+
 extern SceneCmd MIZUsin_room_22Commands[];
 extern s16 MIZUsin_room_22ObjectList_000038[];
 extern PolygonType2 MIZUsin_room_22PolygonType2_000050;
@@ -34,3 +37,4 @@ extern u64 MIZUsin_room_22Tex_0078E8[];
 extern u64 MIZUsin_room_22Tex_0080E8[];
 extern u64 MIZUsin_room_22Tex_0088E8[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef MAHOUYA_ROOM_0_H
+#define MAHOUYA_ROOM_0_H 1
+
 extern SceneCmd mahouya_room_0Commands[];
 extern s16 mahouya_room_0ObjectList_000040[];
 extern ActorEntry mahouya_room_0ActorList_000044[];
@@ -37,3 +40,4 @@ extern Vtx mahouya_room_0Vtx_0065C0[];
 extern Gfx mahouya_room_0DL_006940[];
 extern Gfx mahouya_room_0DL_006A78[];
 
+#endif

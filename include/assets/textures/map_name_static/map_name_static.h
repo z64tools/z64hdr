@@ -1,3 +1,6 @@
+#ifndef MAP_NAME_STATIC_H
+#define MAP_NAME_STATIC_H 1
+
 extern u64 gHauntedWastelandPointNameENGTex[];
 extern u64 gGerudosFortressPointNameENGTex[];
 extern u64 gGerudoValleyPointNameENGTex[];
@@ -101,3 +104,4 @@ extern u64 gLonLonRanchPositionNameFRATex[];
 extern u64 gQuestionMarkPositionNameFRATex[];
 extern u64 gGanonsCastlePositionNameFRATex[];
 
+#endif

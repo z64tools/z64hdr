@@ -1,3 +1,6 @@
+#ifndef KAKARIKO3_ROOM_0_H
+#define KAKARIKO3_ROOM_0_H 1
+
 extern SceneCmd kakariko3_room_0Commands[];
 extern s16 kakariko3_room_0ObjectList_000040[];
 extern ActorEntry kakariko3_room_0ActorList_00004C[];
@@ -15,3 +18,4 @@ extern Gfx kakariko3_room_0DL_004C68[];
 extern Gfx kakariko3_room_0DL_004D20[];
 extern u64 kakariko3_room_0Background_004D80[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

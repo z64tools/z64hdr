@@ -1,3 +1,6 @@
+#ifndef OBJECT_MS_H
+#define OBJECT_MS_H 1
+
 extern s16 sBeanSalesmanEatingAnimFrameData[];
 extern JointIndex sBeanSalesmanEatingAnimJointIndices[];
 extern AnimationHeader gBeanSalesmanEatingAnim;
@@ -31,3 +34,4 @@ extern StandardLimb gBeanSalesmanBeanbagLimb;
 extern void* gBeanSalesmanSkelLimbs[];
 extern FlexSkeletonHeader gBeanSalesmanSkel;
 
+#endif

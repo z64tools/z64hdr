@@ -1,3 +1,6 @@
+#ifndef OBJECT_OF1S_H
+#define OBJECT_OF1S_H 1
+
 extern StandardLimb object_oF1s_Limb_000000;
 extern StandardLimb object_oF1s_Limb_00000C;
 extern StandardLimb object_oF1s_Limb_000018;
@@ -50,3 +53,4 @@ extern Gfx object_oF1s_DL_0082C8[];
 extern Gfx object_oF1s_DL_008488[];
 extern Gfx object_oF1s_DL_0084E0[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_WOOD02_H
+#define OBJECT_WOOD02_H 1
+
 extern Vtx object_wood02Vtx_000000[];
 extern Gfx object_wood02_DL_000090[];
 extern Vtx object_wood02Vtx_000130[];
@@ -42,3 +45,4 @@ extern Gfx object_wood02_DL_0083E0[];
 extern Gfx object_wood02_DL_0085C0[];
 extern Vtx object_wood02Vtx_0085D0[];
 
+#endif

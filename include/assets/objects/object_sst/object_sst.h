@@ -1,3 +1,6 @@
+#ifndef OBJECT_SST_H
+#define OBJECT_SST_H 1
+
 extern s16 sBongoLeftHandIdleAnimFrameData[];
 extern JointIndex sBongoLeftHandIdleAnimJointIndices[];
 extern AnimationHeader gBongoLeftHandIdleAnim;
@@ -271,3 +274,4 @@ extern u64 object_sstTex_01A730[];
 extern u64 object_sstTex_01A7B0[];
 extern u64 gBongoUnused2Tex[];
 
+#endif

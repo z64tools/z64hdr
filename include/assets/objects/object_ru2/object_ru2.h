@@ -1,3 +1,6 @@
+#ifndef OBJECT_RU2_H
+#define OBJECT_RU2_H 1
+
 extern s16 sAdultRutoCrossingArmsAnimFrameData[];
 extern JointIndex sAdultRutoCrossingArmsAnimJointIndices[];
 extern AnimationHeader gAdultRutoCrossingArmsAnim;
@@ -91,3 +94,4 @@ extern s16 sAdultRutoSwimmingUpAnimFrameData[];
 extern JointIndex sAdultRutoSwimmingUpAnimJointIndices[];
 extern AnimationHeader gAdultRutoSwimmingUpAnim;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT15_OBJ_H
+#define OBJECT_SPOT15_OBJ_H 1
+
 extern Vtx object_spot15_objVtx_000000[];
 extern Gfx gLonLonMilkCrateDL[];
 extern CamData gLonLonMilkCrateColCamDataList[];
@@ -15,3 +18,4 @@ extern CollisionHeader gLonLonCorralFenceCol;
 extern u64 gLonLonCorralFenceTex[];
 extern u64 gLonLonMilkCrateTex[];
 
+#endif

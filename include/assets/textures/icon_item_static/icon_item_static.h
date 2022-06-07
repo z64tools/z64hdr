@@ -1,3 +1,6 @@
+#ifndef ICON_ITEM_STATIC_H
+#define ICON_ITEM_STATIC_H 1
+
 extern u64 gDekuStickIconTex[];
 extern u64 gDekuNutIconTex[];
 extern u64 gBombIconTex[];
@@ -185,3 +188,4 @@ extern Gfx gBButtonIconDL[];
 extern Gfx gPromptCursorLeftDL[];
 extern Gfx gPromptCursorRightDL[];
 
+#endif

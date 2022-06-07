@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT02_OBJECTS_H
+#define OBJECT_SPOT02_OBJECTS_H 1
+
 extern u64 object_spot02_objects_Tex_000000[];
 extern u64 object_spot02_objects_Tex_000800[];
 extern Vtx object_spot02_objectsVtx_001000[];
@@ -58,3 +61,4 @@ extern u64 object_spot02_objects_Tex_014C20[];
 extern u64 object_spot02_objects_Tex_015C20[];
 extern u64 object_spot02_objects_Tex_016420[];
 
+#endif

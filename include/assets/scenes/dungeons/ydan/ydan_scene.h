@@ -1,3 +1,6 @@
+#ifndef YDAN_SCENE_H
+#define YDAN_SCENE_H 1
+
 extern SceneCmd ydan_sceneCommands[];
 extern ActorEntry ydan_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ydan_sceneTransitionActorList_000080[];
@@ -17,3 +20,4 @@ extern u64 ydan_sceneTLUT_00B810[];
 extern u64 gYdanTex_00BA18[];
 extern u64 gYdanTex_00CA18[];
 
+#endif

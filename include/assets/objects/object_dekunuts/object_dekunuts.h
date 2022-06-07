@@ -1,3 +1,6 @@
+#ifndef OBJECT_DEKUNUTS_H
+#define OBJECT_DEKUNUTS_H 1
+
 extern s16 sDekuNutsSpitAnimFrameData[];
 extern JointIndex sDekuNutsSpitAnimJointIndices[];
 extern AnimationHeader gDekuNutsSpitAnim;
@@ -75,3 +78,4 @@ extern s16 sDekuNutsRunAnimFrameData[];
 extern JointIndex sDekuNutsRunAnimJointIndices[];
 extern AnimationHeader gDekuNutsRunAnim;
 
+#endif

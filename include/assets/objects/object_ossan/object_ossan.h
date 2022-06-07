@@ -1,3 +1,6 @@
+#ifndef OBJECT_OSSAN_H
+#define OBJECT_OSSAN_H 1
+
 extern s16 sObjectOssanAnim_000338FrameData[];
 extern JointIndex sObjectOssanAnim_000338JointIndices[];
 extern AnimationHeader gObjectOssanAnim_000338;
@@ -39,3 +42,4 @@ extern StandardLimb gObjectOssanSkelLimbsLimb_009B0C;
 extern void* gObjectOssanSkelLimbs[];
 extern FlexSkeletonHeader gObjectOssanSkel;
 
+#endif

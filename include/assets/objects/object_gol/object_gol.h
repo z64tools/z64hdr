@@ -1,3 +1,6 @@
+#ifndef OBJECT_GOL_H
+#define OBJECT_GOL_H 1
+
 extern s16 sObjectGolLandFromJumpAnimFrameData[];
 extern JointIndex sObjectGolLandFromJumpAnimJointIndices[];
 extern AnimationHeader gObjectGolLandFromJumpAnim;
@@ -82,3 +85,4 @@ extern s16 sObjectGolStartRunningAnimFrameData[];
 extern JointIndex sObjectGolStartRunningAnimJointIndices[];
 extern AnimationHeader gObjectGolStartRunningAnim;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_HATA_H
+#define OBJECT_HATA_H 1
+
 extern CamData gFlagpoleColCamDataList[];
 extern SurfaceType gFlagpoleColSurfaceType[];
 extern CollisionPoly gFlagpoleColPolygons[];
@@ -50,3 +53,4 @@ extern StandardLimb gFlagpoleFlag2HoistEndLimb;
 extern void* gFlagpoleSkelLimbs[];
 extern SkeletonHeader gFlagpoleSkel;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef YDAN_BOSS_ROOM_0_H
+#define YDAN_BOSS_ROOM_0_H 1
+
 extern SceneCmd ydan_boss_room_0Commands[];
 extern s16 ydan_boss_room_0ObjectList_000038[];
 extern PolygonType0 ydan_boss_room_0PolygonType0_000050;
@@ -19,3 +22,4 @@ extern u64 ydan_boss_room_0Tex_004BF0[];
 extern u64 ydan_boss_room_0Tex_005BF0[];
 extern u64 ydan_boss_room_0Tex_005FF0[];
 
+#endif

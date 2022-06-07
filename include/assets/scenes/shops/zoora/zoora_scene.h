@@ -1,3 +1,6 @@
+#ifndef ZOORA_SCENE_H
+#define ZOORA_SCENE_H 1
+
 extern SceneCmd zoora_sceneCommands[];
 extern ActorEntry zoora_sceneStartPositionList0x000050[];
 extern RomFile zoora_sceneRoomList0x000060[];
@@ -11,3 +14,4 @@ extern CollisionPoly zoora_sceneCollisionHeader_000360Polygons[];
 extern Vec3s zoora_sceneCollisionHeader_000360Vertices[];
 extern CollisionHeader zoora_sceneCollisionHeader_000360;
 
+#endif

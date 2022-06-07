@@ -1,3 +1,6 @@
+#ifndef OBJECT_HAKA_OBJECTS_H
+#define OBJECT_HAKA_OBJECTS_H 1
+
 extern Vtx object_haka_objectsVtx_000000[];
 extern Gfx object_haka_objects_DL_000040[];
 extern CamData object_haka_objects_Col_000118CamDataList[];
@@ -195,3 +198,4 @@ extern u64 object_haka_objects_Tex_01C470[];
 extern u64 object_haka_objects_Tex_01C670[];
 extern u64 object_haka_objects_Tex_01CEB0[];
 
+#endif

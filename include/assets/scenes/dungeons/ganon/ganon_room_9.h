@@ -1,3 +1,6 @@
+#ifndef GANON_ROOM_9_H
+#define GANON_ROOM_9_H 1
+
 extern SceneCmd ganon_room_9Commands[];
 extern s16 ganon_room_9ObjectList_000038[];
 extern PolygonType0 ganon_room_9PolygonType0_000040;
@@ -18,3 +21,4 @@ extern u64 ganon_room_9Tex_004520[];
 extern u64 ganon_room_9Tex_004D20[];
 extern u64 ganon_room_9Tex_005120[];
 
+#endif

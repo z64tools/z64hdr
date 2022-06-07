@@ -1,3 +1,6 @@
+#ifndef TITLE_STATIC_H
+#define TITLE_STATIC_H 1
+
 extern u64 gFileSelConnectorTex[];
 extern u64 gFileSelForestMedallionTex[];
 extern u64 gFileSelFireMedallionTex[];
@@ -147,3 +150,4 @@ extern Gfx gFileSelWindow1DL[];
 extern Gfx gFileSelWindow2DL[];
 extern Gfx gFileSelWindow3DL[];
 
+#endif

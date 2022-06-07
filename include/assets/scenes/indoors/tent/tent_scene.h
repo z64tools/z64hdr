@@ -1,3 +1,6 @@
+#ifndef TENT_SCENE_H
+#define TENT_SCENE_H 1
+
 extern SceneCmd tent_sceneCommands[];
 extern ActorEntry tent_sceneStartPositionList0x000058[];
 extern RomFile tent_sceneRoomList0x000068[];
@@ -11,3 +14,4 @@ extern CollisionPoly tent_sceneCollisionHeader_00064CPolygons[];
 extern Vec3s tent_sceneCollisionHeader_00064CVertices[];
 extern CollisionHeader tent_sceneCollisionHeader_00064C;
 
+#endif

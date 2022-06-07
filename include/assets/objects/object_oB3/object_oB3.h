@@ -1,3 +1,6 @@
+#ifndef OBJECT_OB3_H
+#define OBJECT_OB3_H 1
+
 extern StandardLimb object_oB3_Limb_00000000;
 extern StandardLimb object_oB3_Limb_0000000C;
 extern StandardLimb object_oB3_Limb_00000018;
@@ -67,3 +70,4 @@ extern u64 object_oB3_Tex_00004308[];
 extern u64 object_oB3_Tex_00004388[];
 extern u64 object_oB3_Tex_00004408[];
 
+#endif

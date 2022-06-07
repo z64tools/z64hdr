@@ -1,3 +1,6 @@
+#ifndef OBJECT_ICE_OBJECTS_H
+#define OBJECT_ICE_OBJECTS_H 1
+
 extern Vtx object_ice_objectsVtx_000000[];
 extern Gfx object_ice_objects_DL_000190[];
 extern CamData object_ice_objects_Col_0003F0CamDataList[];
@@ -49,3 +52,4 @@ extern u64 object_ice_objects_Tex_005D50[];
 extern u64 object_ice_objects_Tex_006D50[];
 extern u64 object_ice_objects_Tex_007D50[];
 
+#endif

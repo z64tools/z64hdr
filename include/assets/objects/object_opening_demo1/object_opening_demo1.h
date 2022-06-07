@@ -1,3 +1,6 @@
+#ifndef OBJECT_OPENING_DEMO1_H
+#define OBJECT_OPENING_DEMO1_H 1
+
 extern s16 object_opening_demo1_Anim_000450FrameData[];
 extern JointIndex object_opening_demo1_Anim_000450JointIndices[];
 extern AnimationHeader object_opening_demo1_Anim_000450;
@@ -20,3 +23,4 @@ extern s16 object_opening_demo1_Anim_00504CFrameData[];
 extern JointIndex object_opening_demo1_Anim_00504CJointIndices[];
 extern AnimationHeader object_opening_demo1_Anim_00504C;
 
+#endif

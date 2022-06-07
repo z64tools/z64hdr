@@ -1,3 +1,6 @@
+#ifndef OBJECT_SK2_H
+#define OBJECT_SK2_H 1
+
 extern s16 sStalfosFlinchFromHitBehindAnimFrameData[];
 extern JointIndex sStalfosFlinchFromHitBehindAnimJointIndices[];
 extern AnimationHeader gStalfosFlinchFromHitBehindAnim;
@@ -161,3 +164,4 @@ extern s16 sStalfosReleaseAttentionAnimFrameData[];
 extern JointIndex sStalfosReleaseAttentionAnimJointIndices[];
 extern AnimationHeader gStalfosReleaseAttentionAnim;
 
+#endif

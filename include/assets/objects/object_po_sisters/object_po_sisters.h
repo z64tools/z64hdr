@@ -1,3 +1,6 @@
+#ifndef OBJECT_PO_SISTERS_H
+#define OBJECT_PO_SISTERS_H 1
+
 extern s16 sPoeSistersAttackAnimFrameData[];
 extern JointIndex sPoeSistersAttackAnimJointIndices[];
 extern AnimationHeader gPoeSistersAttackAnim;
@@ -98,3 +101,4 @@ extern u64 object_po_sistersTex_00CBC0[];
 extern u64 object_po_sistersTex_00D3C0[];
 extern u64 object_po_sistersTex_00DBC0[];
 
+#endif

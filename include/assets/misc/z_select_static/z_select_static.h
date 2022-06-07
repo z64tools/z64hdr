@@ -1,3 +1,6 @@
+#ifndef Z_SELECT_STATIC_H
+#define Z_SELECT_STATIC_H 1
+
 extern Gfx gSelectStatic1DL[];
 extern Gfx gSelectStatic2DL[];
 extern Gfx gSelectStatic3DL[];
@@ -33,3 +36,4 @@ extern Gfx gSelectStatic32DL[];
 extern Gfx gSelectStaticMasterDL[];
 extern Vtx gSelectStaticVtx[];
 
+#endif

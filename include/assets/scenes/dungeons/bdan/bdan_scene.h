@@ -1,3 +1,6 @@
+#ifndef BDAN_SCENE_H
+#define BDAN_SCENE_H 1
+
 extern SceneCmd bdan_sceneCommands[];
 extern SceneCmd* bdan_sceneAlternateHeaders0x000068[];
 extern ActorEntry bdan_sceneStartPositionList0x000078[];
@@ -12,7 +15,7 @@ extern CollisionPoly bdan_sceneCollisionHeader_013074Polygons[];
 extern Vec3s bdan_sceneCollisionHeader_013074Vertices[];
 extern WaterBox bdan_sceneCollisionHeader_013074WaterBoxes[];
 extern CollisionHeader bdan_sceneCollisionHeader_013074;
-extern CutsceneData bdan_sceneSet_013720CutsceneData_0130A0[];
+extern CutsceneData bdan_sceneCutsceneData_0130A0[];
 extern SceneCmd bdan_sceneSet_013720[];
 extern ActorEntry bdan_sceneStartPositionList0x013788[];
 extern TransitionActorEntry bdan_sceneTransitionActorList_0137A8[];
@@ -28,3 +31,4 @@ extern u64 bdan_sceneTex_014A00[];
 extern u64 bdan_sceneTex_015200[];
 extern CutsceneData gJabuJabuIntroCs[];
 
+#endif

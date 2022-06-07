@@ -1,3 +1,6 @@
+#ifndef DDAN_BOSS_SCENE_H
+#define DDAN_BOSS_SCENE_H 1
+
 extern SceneCmd ddan_boss_sceneCommands[];
 extern ActorEntry ddan_boss_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ddan_boss_sceneTransitionActorList_000070[];
@@ -15,3 +18,4 @@ extern u64 ddan_boss_sceneTex_001058[];
 extern u64 ddan_boss_sceneTex_001858[];
 extern u64 ddan_boss_sceneTex_002058[];
 
+#endif

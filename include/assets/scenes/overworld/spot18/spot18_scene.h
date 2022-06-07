@@ -1,3 +1,6 @@
+#ifndef SPOT18_SCENE_H
+#define SPOT18_SCENE_H 1
+
 extern SceneCmd spot18_sceneCommands[];
 extern SceneCmd* spot18_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot18_sceneStartPositionList0x000084[];
@@ -16,7 +19,7 @@ extern Vec3s spot18_sceneCollisionHeader_0059ACVertices[];
 extern CollisionHeader spot18_sceneCollisionHeader_0059AC;
 extern CutsceneData gGoronCityDaruniaCorrectCs[];
 extern CutsceneData gGoronCityDarunia01Cs[];
-extern CutsceneData spot18_sceneSet_007CF0CutsceneData_007840[];
+extern CutsceneData spot18_sceneCutsceneData_007840[];
 extern SceneCmd spot18_sceneSet_007A30[];
 extern ActorEntry spot18_sceneStartPositionList0x007A98[];
 extern TransitionActorEntry spot18_sceneTransitionActorList_007AD8[];
@@ -51,3 +54,4 @@ extern u64 gGoronCityDayEntranceTex[];
 extern u64 spot18_sceneTex_009848[];
 extern u64 spot18_sceneTex_009C48[];
 
+#endif

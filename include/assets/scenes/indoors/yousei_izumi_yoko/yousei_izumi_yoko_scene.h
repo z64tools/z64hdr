@@ -1,3 +1,6 @@
+#ifndef YOUSEI_IZUMI_YOKO_SCENE_H
+#define YOUSEI_IZUMI_YOKO_SCENE_H 1
+
 extern SceneCmd yousei_izumi_yoko_sceneCommands[];
 extern SceneCmd* yousei_izumi_yoko_sceneAlternateHeaders0x000060[];
 extern ActorEntry yousei_izumi_yoko_sceneStartPositionList0x000078[];
@@ -45,3 +48,4 @@ extern u64 yousei_izumi_yoko_sceneTex_00B5A0[];
 extern u64 yousei_izumi_yoko_sceneTex_00BDA0[];
 extern u64 yousei_izumi_yoko_sceneTex_00C5A0[];
 
+#endif

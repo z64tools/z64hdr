@@ -1,3 +1,6 @@
+#ifndef NIGHT_SHOP_SCENE_H
+#define NIGHT_SHOP_SCENE_H 1
+
 extern SceneCmd night_shop_sceneCommands[];
 extern ActorEntry night_shop_sceneStartPositionList0x000058[];
 extern RomFile night_shop_sceneRoomList0x000078[];
@@ -11,3 +14,4 @@ extern CollisionPoly night_shop_sceneCollisionHeader_000644Polygons[];
 extern Vec3s night_shop_sceneCollisionHeader_000644Vertices[];
 extern CollisionHeader night_shop_sceneCollisionHeader_000644;
 
+#endif

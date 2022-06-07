@@ -1,3 +1,6 @@
+#ifndef BDAN_BOSS_ROOM_1_H
+#define BDAN_BOSS_ROOM_1_H 1
+
 extern SceneCmd bdan_boss_room_1Commands[];
 extern s16 bdan_boss_room_1ObjectList_000040[];
 extern ActorEntry bdan_boss_room_1ActorList_000050[];
@@ -38,3 +41,4 @@ extern u64 bdan_boss_room_1Tex_003CB8[];
 extern u64 bdan_boss_room_1Tex_0044B8[];
 extern u64 bdan_boss_room_1Tex_0048B8[];
 
+#endif

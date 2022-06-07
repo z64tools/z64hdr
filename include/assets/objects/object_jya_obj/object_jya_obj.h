@@ -1,3 +1,6 @@
+#ifndef OBJECT_JYA_OBJ_H
+#define OBJECT_JYA_OBJ_H 1
+
 extern Vtx object_jya_objVtx_000000[];
 extern Gfx g1fliftDL[];
 extern CamData g1fliftColCamDataList[];
@@ -132,3 +135,4 @@ extern u64 object_jya_objTex_01B340[];
 extern u64 object_jya_objTex_01B740[];
 extern u64 g1f1fiftTopTex[];
 
+#endif

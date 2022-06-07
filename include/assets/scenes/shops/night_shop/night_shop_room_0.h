@@ -1,3 +1,6 @@
+#ifndef NIGHT_SHOP_ROOM_0_H
+#define NIGHT_SHOP_ROOM_0_H 1
+
 extern SceneCmd night_shop_room_0Commands[];
 extern s16 night_shop_room_0ObjectList_000040[];
 extern ActorEntry night_shop_room_0ActorList_000048[];
@@ -16,3 +19,4 @@ extern Gfx night_shop_room_0DL_003070[];
 extern Gfx night_shop_room_0DL_003100[];
 extern u64 night_shop_room_0Background_003160[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

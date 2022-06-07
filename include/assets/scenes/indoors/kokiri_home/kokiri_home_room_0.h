@@ -1,3 +1,6 @@
+#ifndef KOKIRI_HOME_ROOM_0_H
+#define KOKIRI_HOME_ROOM_0_H 1
+
 extern SceneCmd kokiri_home_room_0Commands[];
 extern s16 kokiri_home_room_0ObjectList_000040[];
 extern ActorEntry kokiri_home_room_0ActorList_000048[];
@@ -22,3 +25,4 @@ extern Gfx kokiri_home_room_0DL_0062D8[];
 extern Gfx kokiri_home_room_0DL_006398[];
 extern u64 kokiri_home_room_0Background_006430[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

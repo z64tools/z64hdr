@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT00_OBJECTS_H
+#define OBJECT_SPOT00_OBJECTS_H 1
+
 extern Vtx object_spot00_objectsVtx_000000[];
 extern Gfx gHyruleFieldCastleDrawbridgeChainsDL[];
 extern CamData gHyruleFieldCastleDrawbridgeChainsColCamDataList[];
@@ -16,3 +19,4 @@ extern u64 gHyruleFieldCastleDrawbridgeWoodTex[];
 extern u64 gHyruleFieldCastleDrawbridgeChainsTex[];
 extern u64 gHyruleFieldCastleDrawbridgeBoltDL[];
 
+#endif

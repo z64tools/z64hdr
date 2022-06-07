@@ -1,3 +1,6 @@
+#ifndef TOKINOMA_ROOM_1_H
+#define TOKINOMA_ROOM_1_H 1
+
 extern SceneCmd tokinoma_room_1Commands[];
 extern SceneCmd* tokinoma_room_1AlternateHeaders0x000048[];
 extern s16 tokinoma_room_1ObjectList_000080[];
@@ -79,3 +82,4 @@ extern u64 tokinoma_room_1Tex_006488[];
 extern u64 tokinoma_room_1Tex_0064C8[];
 extern u64 tokinoma_room_1Tex_0068C8[];
 
+#endif

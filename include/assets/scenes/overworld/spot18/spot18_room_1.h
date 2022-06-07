@@ -1,3 +1,6 @@
+#ifndef SPOT18_ROOM_1_H
+#define SPOT18_ROOM_1_H 1
+
 extern SceneCmd spot18_room_1Commands[];
 extern SceneCmd* spot18_room_1AlternateHeaders0x000048[];
 extern s16 spot18_room_1ObjectList_00005C[];
@@ -36,3 +39,4 @@ extern Vtx spot18_room_1Vtx_005AC0[];
 extern Gfx spot18_room_1DL_005CC0[];
 extern u64 spot18_room_1Tex_005E00[];
 
+#endif

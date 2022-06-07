@@ -1,3 +1,6 @@
+#ifndef GANON_SONOGO_SCENE_H
+#define GANON_SONOGO_SCENE_H 1
+
 extern SceneCmd ganon_sonogo_sceneCommands[];
 extern ActorEntry ganon_sonogo_sceneStartPositionList0x000068[];
 extern TransitionActorEntry ganon_sonogo_sceneTransitionActorList_0000E8[];
@@ -23,3 +26,4 @@ extern u64 ganon_sonogo_sceneTex_006F10[];
 extern u64 ganon_sonogo_sceneTex_007310[];
 extern u64 ganon_sonogo_sceneTex_007710[];
 
+#endif

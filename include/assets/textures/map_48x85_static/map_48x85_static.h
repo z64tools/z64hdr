@@ -1,3 +1,6 @@
+#ifndef MAP_48X85_STATIC_H
+#define MAP_48X85_STATIC_H 1
+
 extern u64 gDekuTreePauseScreenMapFloor3LeftTex[];
 extern u64 gDekuTreePauseScreenMapFloor3RightTex[];
 extern u64 gDekuTreePauseScreenMapFloor2LeftTex[];
@@ -67,3 +70,4 @@ extern u64 gBottomOfTheWellPauseScreenMapBasement3RightTex[];
 extern u64 gIceCavernPauseScreenMapFloor1LeftTex[];
 extern u64 gIceCavernPauseScreenMapFloor1RightTex[];
 
+#endif

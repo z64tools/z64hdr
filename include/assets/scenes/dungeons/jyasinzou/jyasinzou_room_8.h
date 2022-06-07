@@ -1,3 +1,6 @@
+#ifndef JYASINZOU_ROOM_8_H
+#define JYASINZOU_ROOM_8_H 1
+
 extern SceneCmd jyasinzou_room_8Commands[];
 extern s16 jyasinzou_room_8ObjectList_000040[];
 extern ActorEntry jyasinzou_room_8ActorList_000058[];
@@ -32,3 +35,4 @@ extern u64 jyasinzou_room_8Tex_007250[];
 extern Vtx jyasinzou_room_8Vtx_007A50[];
 extern Gfx jyasinzou_room_8DL_007ED0[];
 
+#endif

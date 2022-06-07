@@ -1,3 +1,6 @@
+#ifndef MARKET_ALLEY_ROOM_0_H
+#define MARKET_ALLEY_ROOM_0_H 1
+
 extern SceneCmd market_alley_room_0Commands[];
 extern s16 market_alley_room_0ObjectList_000040[];
 extern ActorEntry market_alley_room_0ActorList_000058[];
@@ -22,3 +25,4 @@ extern Gfx market_alley_room_0DL_075558[];
 extern Gfx market_alley_room_0DL_0755F0[];
 extern Gfx market_alley_room_0DL_075688[];
 
+#endif

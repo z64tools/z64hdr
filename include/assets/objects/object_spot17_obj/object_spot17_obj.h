@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT17_OBJ_H
+#define OBJECT_SPOT17_OBJ_H 1
+
 extern u64 gCraterRockTLUT[];
 extern u64 gCraterRockTex[];
 extern Vtx object_spot17_objVtx_000820[];
@@ -13,3 +16,4 @@ extern Gfx gCraterSmokeConeDL[];
 extern u64 gCraterSmokeConeTex[];
 extern u64 gCraterBombableWallCracksTex[];
 
+#endif

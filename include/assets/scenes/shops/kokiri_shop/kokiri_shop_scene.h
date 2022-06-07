@@ -1,3 +1,6 @@
+#ifndef KOKIRI_SHOP_SCENE_H
+#define KOKIRI_SHOP_SCENE_H 1
+
 extern SceneCmd kokiri_shop_sceneCommands[];
 extern ActorEntry kokiri_shop_sceneStartPositionList0x000058[];
 extern RomFile kokiri_shop_sceneRoomList0x000068[];
@@ -11,3 +14,4 @@ extern CollisionPoly kokiri_shop_sceneCollisionHeader_000950Polygons[];
 extern Vec3s kokiri_shop_sceneCollisionHeader_000950Vertices[];
 extern CollisionHeader kokiri_shop_sceneCollisionHeader_000950;
 
+#endif

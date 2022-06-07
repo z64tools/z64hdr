@@ -1,3 +1,6 @@
+#ifndef HUT_SCENE_H
+#define HUT_SCENE_H 1
+
 extern SceneCmd hut_sceneCommands[];
 extern ActorEntry hut_sceneStartPositionList0x000060[];
 extern TransitionActorEntry hut_sceneTransitionActorList_000070[];
@@ -12,3 +15,4 @@ extern CollisionPoly hut_sceneCollisionHeader_0004DCPolygons[];
 extern Vec3s hut_sceneCollisionHeader_0004DCVertices[];
 extern CollisionHeader hut_sceneCollisionHeader_0004DC;
 
+#endif

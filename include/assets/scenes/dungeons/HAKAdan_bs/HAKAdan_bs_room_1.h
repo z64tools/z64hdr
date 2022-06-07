@@ -1,3 +1,6 @@
+#ifndef HAKADAN_BS_ROOM_1_H
+#define HAKADAN_BS_ROOM_1_H 1
+
 extern SceneCmd HAKAdan_bs_room_1Commands[];
 extern s16 HAKAdan_bs_room_1ObjectList_000040[];
 extern ActorEntry HAKAdan_bs_room_1ActorList_00004C[];
@@ -21,3 +24,4 @@ extern u64 HAKAdan_bs_room_1Tex_003750[];
 extern u64 HAKAdan_bs_room_1Tex_003F50[];
 extern u64 HAKAdan_bs_room_1Tex_004F50[];
 
+#endif

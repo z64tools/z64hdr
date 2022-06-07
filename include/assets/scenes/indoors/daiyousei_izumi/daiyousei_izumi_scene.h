@@ -1,3 +1,6 @@
+#ifndef DAIYOUSEI_IZUMI_SCENE_H
+#define DAIYOUSEI_IZUMI_SCENE_H 1
+
 extern SceneCmd daiyousei_izumi_sceneCommands[];
 extern SceneCmd* daiyousei_izumi_sceneAlternateHeaders0x000060[];
 extern ActorEntry daiyousei_izumi_sceneStartPositionList0x000078[];
@@ -46,3 +49,4 @@ extern u64 daiyousei_izumi_sceneTex_00C800[];
 extern u64 daiyousei_izumi_sceneTex_00D000[];
 extern u64 daiyousei_izumi_sceneTex_00D800[];
 
+#endif

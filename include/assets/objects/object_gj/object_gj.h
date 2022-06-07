@@ -1,3 +1,6 @@
+#ifndef OBJECT_GJ_H
+#define OBJECT_GJ_H 1
+
 extern Vtx object_gjVtx_000000[];
 extern Gfx gGanonsCastleRubbleAroundArenaDL[];
 extern CamData gGanonsCastleRubbleAroundArenaColCamDataList[];
@@ -68,3 +71,4 @@ extern u64 gGanonsCastleUnusedSpikeVariantTex[];
 extern u64 gGanonsCastleUnusedWallTex[];
 extern u64 gGanonsCastleUnusedTex_00A320[];
 
+#endif

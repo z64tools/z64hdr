@@ -1,3 +1,6 @@
+#ifndef OBJECT_JYA_IRON_H
+#define OBJECT_JYA_IRON_H 1
+
 extern Vtx object_jya_ironVtx_000000[];
 extern Gfx gPillarDL[];
 extern Vtx object_jya_ironVtx_000360[];
@@ -21,3 +24,4 @@ extern CollisionHeader gThroneCol;
 extern u64 gPillarSideTex[];
 extern u64 gPillarTopTex[];
 
+#endif

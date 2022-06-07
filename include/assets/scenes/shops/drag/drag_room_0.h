@@ -1,3 +1,6 @@
+#ifndef DRAG_ROOM_0_H
+#define DRAG_ROOM_0_H 1
+
 extern SceneCmd drag_room_0Commands[];
 extern s16 drag_room_0ObjectList_000040[];
 extern ActorEntry drag_room_0ActorList_000058[];
@@ -13,3 +16,4 @@ extern Gfx drag_room_0DL_005530[];
 extern Gfx drag_room_0DL_006618[];
 extern u64 drag_room_0Background_006660[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_OE4S_H
+#define OBJECT_OE4S_H 1
+
 extern s16 object_oE4s_Anim_00007CFrameData[];
 extern JointIndex object_oE4s_Anim_00007CJointIndices[];
 extern AnimationHeader object_oE4s_Anim_00007C;
@@ -47,3 +50,4 @@ extern Gfx object_oE4s_DL_004B90[];
 extern Gfx object_oE4s_DL_004C48[];
 extern Gfx object_oE4s_DL_004D00[];
 
+#endif

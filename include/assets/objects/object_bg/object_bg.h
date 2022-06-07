@@ -1,3 +1,6 @@
+#ifndef OBJECT_BG_H
+#define OBJECT_BG_H 1
+
 extern s16 sChuGirlWakeUpAnimFrameData[];
 extern JointIndex sChuGirlWakeUpAnimJointIndices[];
 extern AnimationHeader gChuGirlWakeUpAnim;
@@ -39,3 +42,4 @@ extern s16 sChuGirlLeanOverCounterAnimFrameData[];
 extern JointIndex sChuGirlLeanOverCounterAnimJointIndices[];
 extern AnimationHeader gChuGirlLeanOverCounterAnim;
 
+#endif

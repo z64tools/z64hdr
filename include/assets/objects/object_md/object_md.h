@@ -1,3 +1,6 @@
+#ifndef OBJECT_MD_H
+#define OBJECT_MD_H 1
+
 extern s16 sMidoHandsOnHipsIdleAnimFrameData[];
 extern JointIndex sMidoHandsOnHipsIdleAnimJointIndices[];
 extern AnimationHeader gMidoHandsOnHipsIdleAnim;
@@ -96,3 +99,4 @@ extern s16 sMidoWalkingAnimFrameData[];
 extern JointIndex sMidoWalkingAnimJointIndices[];
 extern AnimationHeader gMidoWalkingAnim;
 
+#endif

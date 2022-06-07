@@ -1,3 +1,6 @@
+#ifndef ICE_DOUKUTU_ROOM_4_H
+#define ICE_DOUKUTU_ROOM_4_H 1
+
 extern SceneCmd ice_doukutu_room_4Commands[];
 extern SceneCmd* ice_doukutu_room_4AlternateHeaders0x000048[];
 extern s16 ice_doukutu_room_4ObjectList_000058[];
@@ -28,3 +31,4 @@ extern u64 ice_doukutu_room_4Tex_004650[];
 extern u64 ice_doukutu_room_4Tex_005650[];
 extern u64 ice_doukutu_room_4Tex_006650[];
 
+#endif

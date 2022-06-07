@@ -1,3 +1,6 @@
+#ifndef SHRINE_SCENE_H
+#define SHRINE_SCENE_H 1
+
 extern SceneCmd shrine_sceneCommands[];
 extern ActorEntry shrine_sceneStartPositionList0x000058[];
 extern RomFile shrine_sceneRoomList0x000078[];
@@ -11,3 +14,4 @@ extern CollisionPoly shrine_sceneCollisionHeader_0014ACPolygons[];
 extern Vec3s shrine_sceneCollisionHeader_0014ACVertices[];
 extern CollisionHeader shrine_sceneCollisionHeader_0014AC;
 
+#endif

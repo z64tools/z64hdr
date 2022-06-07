@@ -1,3 +1,6 @@
+#ifndef HIDAN_ROOM_26_H
+#define HIDAN_ROOM_26_H 1
+
 extern SceneCmd HIDAN_room_26Commands[];
 extern s16 HIDAN_room_26ObjectList_000038[];
 extern PolygonType2 HIDAN_room_26PolygonType2_000050;
@@ -29,3 +32,4 @@ extern u64 HIDAN_room_26Tex_005698[];
 extern u64 HIDAN_room_26Tex_005898[];
 extern u64 HIDAN_room_26Tex_006098[];
 
+#endif

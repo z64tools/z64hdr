@@ -1,3 +1,6 @@
+#ifndef OBJECT_JJ_H
+#define OBJECT_JJ_H 1
+
 extern CamData gJabuJabuHeadColCamDataList[];
 extern SurfaceType gJabuJabuHeadColSurfaceType[];
 extern CollisionPoly gJabuJabuHeadColPolygons[];
@@ -71,3 +74,4 @@ extern CollisionPoly gJabuJabuUnusedColPolygons[];
 extern Vec3s gJabuJabuUnusedColVertices[];
 extern CollisionHeader gJabuJabuUnusedCol;
 
+#endif

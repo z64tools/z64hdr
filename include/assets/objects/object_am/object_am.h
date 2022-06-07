@@ -1,3 +1,6 @@
+#ifndef OBJECT_AM_H
+#define OBJECT_AM_H 1
+
 extern CamData gArmosColCamDataList[];
 extern SurfaceType gArmosColSurfaceType[];
 extern CollisionPoly gArmosColPolygons[];
@@ -49,3 +52,4 @@ extern s16 sArmosDamagedAnimFrameData[];
 extern JointIndex sArmosDamagedAnimJointIndices[];
 extern AnimationHeader gArmosDamagedAnim;
 
+#endif

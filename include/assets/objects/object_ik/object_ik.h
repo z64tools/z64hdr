@@ -1,3 +1,6 @@
+#ifndef OBJECT_IK_H
+#define OBJECT_IK_H 1
+
 extern s16 object_ik_Anim_00035CFrameData[];
 extern JointIndex object_ik_Anim_00035CJointIndices[];
 extern AnimationHeader object_ik_Anim_00035C;
@@ -214,3 +217,4 @@ extern StandardLimb object_ik_Skel_0205C0LimbsLimb_020540;
 extern void* object_ik_Skel_0205C0Limbs[];
 extern FlexSkeletonHeader object_ik_Skel_0205C0;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_GT_H
+#define OBJECT_GT_H 1
+
 extern Vtx object_gtVtx_000000[];
 extern Gfx gTowerCollapseCsExteriorStructureDL[];
 extern Gfx gTowerCollapseCsFlameSmokeDL[];
@@ -41,3 +44,4 @@ extern u64 gTowerCollapseCsTex_11FF0[];
 extern u64 gTowerCollapseCsTex_123F0[];
 extern u64 gTowerCollapseCsTex_125F0[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_NB_H
+#define OBJECT_NB_H 1
+
 extern s16 sNabooruPuttingHandsTogetherCastingMagicAnimFrameData[];
 extern JointIndex sNabooruPuttingHandsTogetherCastingMagicAnimJointIndices[];
 extern AnimationHeader gNabooruPuttingHandsTogetherCastingMagicAnim;
@@ -143,3 +146,4 @@ extern StandardLimb gNabooruWaistLimb;
 extern void* gNabooruSkelLimbs[];
 extern FlexSkeletonHeader gNabooruSkel;
 
+#endif

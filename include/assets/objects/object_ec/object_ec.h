@@ -1,3 +1,6 @@
+#ifndef OBJECT_EC_H
+#define OBJECT_EC_H 1
+
 extern s16 sDemoEcCuccoLadyAnimFrameData[];
 extern JointIndex sDemoEcCuccoLadyAnimJointIndices[];
 extern AnimationHeader gDemoEcCuccoLadyAnim;
@@ -65,3 +68,4 @@ extern s16 sDemoEcDancingZoraAnimFrameData[];
 extern JointIndex sDemoEcDancingZoraAnimJointIndices[];
 extern AnimationHeader gDemoEcDancingZoraAnim;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef MEN_ROOM_3_H
+#define MEN_ROOM_3_H 1
+
 extern SceneCmd men_room_3Commands[];
 extern s16 men_room_3ObjectList_000040[];
 extern ActorEntry men_room_3ActorList_000054[];
@@ -19,3 +22,4 @@ extern u64 men_room_3Tex_005C50[];
 extern u64 men_room_3Tex_006450[];
 extern u64 men_room_3Tex_007450[];
 
+#endif

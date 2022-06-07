@@ -1,3 +1,6 @@
+#ifndef GANON_DEMO_SCENE_H
+#define GANON_DEMO_SCENE_H 1
+
 extern SceneCmd ganon_demo_sceneCommands[];
 extern SceneCmd* ganon_demo_sceneAlternateHeaders0x000058[];
 extern ActorEntry ganon_demo_sceneStartPositionList0x000068[];
@@ -5,7 +8,7 @@ extern RomFile ganon_demo_sceneRoomList0x000078[];
 extern EntranceEntry ganon_demo_sceneEntranceList0x000080[];
 extern u16 ganon_demo_sceneExitList_000084[];
 extern LightSettings ganon_demo_sceneLightSettings0x000088[];
-extern CutsceneData ganon_demo_sceneSet_001AD0CutsceneData_0001B0[];
+extern CutsceneData ganon_demo_sceneCutsceneData_0001B0[];
 extern CamData ganon_demo_sceneCollisionHeader_001AA0CamDataList[];
 extern SurfaceType ganon_demo_sceneCollisionHeader_001AA0SurfaceType[];
 extern CollisionPoly ganon_demo_sceneCollisionHeader_001AA0Polygons[];
@@ -29,3 +32,4 @@ extern u64 ganon_demo_sceneTex_008370[];
 extern u64 ganon_demo_sceneTex_008770[];
 extern u64 ganon_demo_sceneTex_008870[];
 
+#endif

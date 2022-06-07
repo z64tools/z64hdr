@@ -1,3 +1,6 @@
+#ifndef SYOTES2_ROOM_0_H
+#define SYOTES2_ROOM_0_H 1
+
 extern SceneCmd syotes2_room_0Commands[];
 extern s16 syotes2_room_0ObjectList_000040[];
 extern ActorEntry syotes2_room_0ActorList_000044[];
@@ -27,3 +30,4 @@ extern u64 syotes2_room_0Tex_006EF8[];
 extern u64 syotes2_room_0Tex_007EF8[];
 extern u64 syotes2_room_0Tex_008EF8[];
 
+#endif

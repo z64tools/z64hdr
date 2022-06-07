@@ -1,3 +1,6 @@
+#ifndef GANON_SONOGO_ROOM_2_H
+#define GANON_SONOGO_ROOM_2_H 1
+
 extern SceneCmd ganon_sonogo_room_2Commands[];
 extern s16 ganon_sonogo_room_2ObjectList_000040[];
 extern ActorEntry ganon_sonogo_room_2ActorList_00004C[];
@@ -22,3 +25,4 @@ extern Vtx ganon_sonogo_room_2Vtx_008A40[];
 extern Gfx ganon_sonogo_room_2DL_008BC0[];
 extern Gfx ganon_sonogo_room_2DL_008C90[];
 
+#endif

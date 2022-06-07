@@ -1,3 +1,6 @@
+#ifndef SPOT13_SCENE_H
+#define SPOT13_SCENE_H 1
+
 extern SceneCmd spot13_sceneCommands[];
 extern ActorEntry spot13_sceneStartPositionList0x000068[];
 extern TransitionActorEntry spot13_sceneTransitionActorList_000088[];
@@ -17,3 +20,4 @@ extern u64 spot13_sceneTex_003A30[];
 extern u64 spot13_sceneTex_003E30[];
 extern u64 spot13_sceneTex_004E30[];
 
+#endif

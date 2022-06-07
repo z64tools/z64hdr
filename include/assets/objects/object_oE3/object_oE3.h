@@ -1,3 +1,6 @@
+#ifndef OBJECT_OE3_H
+#define OBJECT_OE3_H 1
+
 extern StandardLimb object_oE3_Limb_000000;
 extern StandardLimb object_oE3_Limb_00000C;
 extern StandardLimb object_oE3_Limb_000018;
@@ -70,3 +73,4 @@ extern u64 object_oE3_Tex_006EA0[];
 extern u64 object_oE3_Tex_0070A0[];
 extern u64 object_oE3_Tex_0070E0[];
 
+#endif

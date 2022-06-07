@@ -1,3 +1,6 @@
+#ifndef KOKIRI_HOME5_SCENE_H
+#define KOKIRI_HOME5_SCENE_H 1
+
 extern SceneCmd kokiri_home5_sceneCommands[];
 extern ActorEntry kokiri_home5_sceneStartPositionList0x000058[];
 extern RomFile kokiri_home5_sceneRoomList0x000068[];
@@ -11,3 +14,4 @@ extern CollisionPoly kokiri_home5_sceneCollisionHeader_0013DCPolygons[];
 extern Vec3s kokiri_home5_sceneCollisionHeader_0013DCVertices[];
 extern CollisionHeader kokiri_home5_sceneCollisionHeader_0013DC;
 
+#endif

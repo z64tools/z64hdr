@@ -1,3 +1,6 @@
+#ifndef LABO_ROOM_0_H
+#define LABO_ROOM_0_H 1
+
 extern SceneCmd labo_room_0Commands[];
 extern s16 labo_room_0ObjectList_000040[];
 extern ActorEntry labo_room_0ActorList_000058[];
@@ -23,3 +26,4 @@ extern Gfx labo_room_0DL_006BA0[];
 extern Gfx labo_room_0DL_006E50[];
 extern u64 labo_room_0Background_006EF0[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

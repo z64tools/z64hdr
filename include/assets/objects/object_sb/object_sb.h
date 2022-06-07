@@ -1,3 +1,6 @@
+#ifndef OBJECT_SB_H
+#define OBJECT_SB_H 1
+
 extern s16 object_sb_Anim_00004CFrameData[];
 extern JointIndex object_sb_Anim_00004CJointIndices[];
 extern AnimationHeader object_sb_Anim_00004C;
@@ -39,3 +42,4 @@ extern s16 object_sb_Anim_002C8CFrameData[];
 extern JointIndex object_sb_Anim_002C8CJointIndices[];
 extern AnimationHeader object_sb_Anim_002C8C;
 
+#endif

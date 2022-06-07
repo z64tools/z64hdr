@@ -1,3 +1,6 @@
+#ifndef MIHARIGOYA_ROOM_0_H
+#define MIHARIGOYA_ROOM_0_H 1
+
 extern SceneCmd miharigoya_room_0Commands[];
 extern SceneCmd* miharigoya_room_0AlternateHeaders0x000048[];
 extern s16 miharigoya_room_0ObjectList_000054[];
@@ -37,3 +40,4 @@ extern Vtx miharigoya_room_0Vtx_003940[];
 extern Gfx miharigoya_room_0DL_003C40[];
 extern Gfx gMiharigoyaDL_003DA0[];
 
+#endif

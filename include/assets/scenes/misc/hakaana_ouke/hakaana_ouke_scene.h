@@ -1,3 +1,6 @@
+#ifndef HAKAANA_OUKE_SCENE_H
+#define HAKAANA_OUKE_SCENE_H 1
+
 extern SceneCmd hakaana_ouke_sceneCommands[];
 extern SceneCmd* hakaana_ouke_sceneAlternateHeaders0x000060[];
 extern ActorEntry hakaana_ouke_sceneStartPositionList0x000074[];
@@ -35,3 +38,4 @@ extern u64 hakaana_ouke_sceneTex_0032E0[];
 extern u64 hakaana_ouke_sceneTex_003AE0[];
 extern u64 hakaana_ouke_sceneTex_0042E0[];
 
+#endif

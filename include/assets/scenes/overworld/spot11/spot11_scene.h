@@ -1,3 +1,6 @@
+#ifndef SPOT11_SCENE_H
+#define SPOT11_SCENE_H 1
+
 extern SceneCmd spot11_sceneCommands[];
 extern SceneCmd* spot11_sceneAlternateHeaders0x000060[];
 extern ActorEntry spot11_sceneStartPositionList0x000074[];
@@ -12,8 +15,8 @@ extern CollisionPoly spot11_sceneCollisionHeader_004EE4Polygons[];
 extern Vec3s spot11_sceneCollisionHeader_004EE4Vertices[];
 extern WaterBox spot11_sceneCollisionHeader_004EE4WaterBoxes[];
 extern CollisionHeader spot11_sceneCollisionHeader_004EE4;
-extern CutsceneData spot11_sceneSet_0077D0CutsceneData_004F10[];
-extern CutsceneData spot11_sceneSet_0078B0CutsceneData_0065F0[];
+extern CutsceneData spot11_sceneCutsceneData_004F10[];
+extern CutsceneData spot11_sceneCutsceneData_0065F0[];
 extern SceneCmd spot11_sceneSet_007530[];
 extern ActorEntry spot11_sceneStartPositionList0x007590[];
 extern RomFile spot11_sceneRoomList0x007620[];
@@ -68,3 +71,4 @@ extern u64 spot11_sceneTex_017CE0[];
 extern u64 spot11_sceneTex_0184E0[];
 extern u64 spot11_sceneTex_018CE0[];
 
+#endif

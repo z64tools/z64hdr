@@ -1,3 +1,6 @@
+#ifndef OBJECT_YDAN_OBJECTS_H
+#define OBJECT_YDAN_OBJECTS_H 1
+
 extern u64 gYdanHasiFloatingBlockSideTex[];
 extern u64 gYdanHasiFloatingBlockBottomTex[];
 extern u64 gYdanWebTex[];
@@ -58,3 +61,4 @@ extern u64 gYdanMarutaUnused2Tex[];
 extern Vtx object_ydan_objectsVtx_0081D8[];
 extern Gfx gDTRollingSpikeTrapDL[];
 
+#endif

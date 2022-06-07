@@ -1,3 +1,6 @@
+#ifndef TAKARAYA_SCENE_H
+#define TAKARAYA_SCENE_H 1
+
 extern SceneCmd takaraya_sceneCommands[];
 extern ActorEntry takaraya_sceneStartPositionList0x000060[];
 extern TransitionActorEntry takaraya_sceneTransitionActorList_000070[];
@@ -16,3 +19,4 @@ extern u64 takaraya_sceneTex_0059B0[];
 extern u64 takaraya_sceneTex_0061B0[];
 extern u64 takaraya_sceneTex_0069B0[];
 
+#endif

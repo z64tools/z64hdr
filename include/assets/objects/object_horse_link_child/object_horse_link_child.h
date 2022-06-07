@@ -1,3 +1,6 @@
+#ifndef OBJECT_HORSE_LINK_CHILD_H
+#define OBJECT_HORSE_LINK_CHILD_H 1
+
 extern Vtx object_horse_link_childVtx_000000[];
 extern Gfx gChildEponaSkelLimbsLimb_007858DL_000C70[];
 extern Gfx gChildEponaSkelLimbsLimb_0079D8DL_001028[];
@@ -342,3 +345,4 @@ extern Gfx gChildEponaSkelLimbsLimb_0077D8SkinLimbDL_007B30[];
 extern u64 object_horse_link_childTex_008120[];
 extern u64 object_horse_link_childTex_008320[];
 
+#endif

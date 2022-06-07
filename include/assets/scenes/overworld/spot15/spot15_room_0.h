@@ -1,3 +1,6 @@
+#ifndef SPOT15_ROOM_0_H
+#define SPOT15_ROOM_0_H 1
+
 extern SceneCmd spot15_room_0Commands[];
 extern s16 spot15_room_0ObjectList_000040[];
 extern ActorEntry spot15_room_0ActorList_000054[];
@@ -79,3 +82,4 @@ extern Gfx spot15_room_0DL_00CE90[];
 extern Vtx spot15_room_0Vtx_00CF98[];
 extern Gfx spot15_room_0DL_00D098[];
 
+#endif

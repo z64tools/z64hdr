@@ -1,3 +1,6 @@
+#ifndef HAKADAN_SCENE_H
+#define HAKADAN_SCENE_H 1
+
 extern SceneCmd HAKAdan_sceneCommands[];
 extern ActorEntry HAKAdan_sceneStartPositionList0x000060[];
 extern TransitionActorEntry HAKAdan_sceneTransitionActorList_000080[];
@@ -15,3 +18,4 @@ extern u64 HAKAdan_sceneTex_016BC0[];
 extern u64 HAKAdan_sceneTex_0173C0[];
 extern u64 HAKAdan_sceneTex_017BC0[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef SASATEST_SCENE_H
+#define SASATEST_SCENE_H 1
+
 extern SceneCmd sasatest_sceneCommands[];
 extern SceneCmd* sasatest_sceneAlternateHeaders0x000058[];
 extern ActorEntry sasatest_sceneStartPositionList0x000064[];
@@ -25,3 +28,4 @@ extern RomFile sasatest_sceneRoomList0x002AB8[];
 extern EntranceEntry sasatest_sceneEntranceList0x002AC0[];
 extern LightSettings sasatest_sceneLightSettings0x002AC4[];
 
+#endif

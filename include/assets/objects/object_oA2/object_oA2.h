@@ -1,3 +1,6 @@
+#ifndef OBJECT_OA2_H
+#define OBJECT_OA2_H 1
+
 extern StandardLimb object_oA2_Limb_00000000;
 extern StandardLimb object_oA2_Limb_0000000C;
 extern StandardLimb object_oA2_Limb_00000018;
@@ -69,3 +72,4 @@ extern Gfx object_oA2_DL_00004B70[];
 extern Vtx object_oA2Vtx_004C58[];
 extern Gfx object_oA2_DL_000054F8[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_SSH_H
+#define OBJECT_SSH_H 1
+
 extern s16 object_ssh_Anim_000304FrameData[];
 extern JointIndex object_ssh_Anim_000304JointIndices[];
 extern AnimationHeader object_ssh_Anim_000304;
@@ -64,3 +67,4 @@ extern s16 object_ssh_Anim_005BE8FrameData[];
 extern JointIndex object_ssh_Anim_005BE8JointIndices[];
 extern AnimationHeader object_ssh_Anim_005BE8;
 
+#endif

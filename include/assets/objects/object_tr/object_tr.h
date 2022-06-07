@@ -1,3 +1,6 @@
+#ifndef OBJECT_TR_H
+#define OBJECT_TR_H 1
+
 extern s16 object_tr_Anim_000BFCFrameData[];
 extern JointIndex object_tr_Anim_000BFCJointIndices[];
 extern AnimationHeader object_tr_Anim_000BFC;
@@ -172,3 +175,4 @@ extern s16 object_tr_Anim_012E1CFrameData[];
 extern JointIndex object_tr_Anim_012E1CJointIndices[];
 extern AnimationHeader object_tr_Anim_012E1C;
 
+#endif

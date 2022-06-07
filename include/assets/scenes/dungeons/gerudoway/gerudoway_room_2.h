@@ -1,3 +1,6 @@
+#ifndef GERUDOWAY_ROOM_2_H
+#define GERUDOWAY_ROOM_2_H 1
+
 extern SceneCmd gerudoway_room_2Commands[];
 extern s16 gerudoway_room_2ObjectList_000040[];
 extern ActorEntry gerudoway_room_2ActorList_000050[];
@@ -23,3 +26,4 @@ extern Gfx gerudoway_room_2DL_003690[];
 extern Vtx gerudoway_room_2Vtx_0037A8[];
 extern Gfx gerudoway_room_2DL_003CC8[];
 
+#endif

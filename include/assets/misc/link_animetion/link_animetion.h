@@ -1,3 +1,6 @@
+#ifndef LINK_ANIMETION_H
+#define LINK_ANIMETION_H 1
+
 extern s16 gPlayerAnimData_000000[];
 extern s16 gPlayerAnimData_000A80[];
 extern s16 gPlayerAnimData_001500[];
@@ -572,3 +575,4 @@ extern s16 gPlayerAnimData_261AB0[];
 extern s16 gPlayerAnimData_262A70[];
 extern s16 gPlayerAnimData_2644A0[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_MU_H
+#define OBJECT_MU_H 1
+
 extern s16 object_mu_Anim_0003F4FrameData[];
 extern JointIndex object_mu_Anim_0003F4JointIndices[];
 extern AnimationHeader object_mu_Anim_0003F4;
@@ -99,3 +102,4 @@ extern StandardLimb object_mu_Limb_00ADE4;
 extern void* gDancingCoupleSkelLimbs[];
 extern FlexSkeletonHeader gDancingCoupleSkel;
 
+#endif

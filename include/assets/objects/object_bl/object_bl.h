@@ -1,3 +1,6 @@
+#ifndef OBJECT_BL_H
+#define OBJECT_BL_H 1
+
 extern s16 sBiriDischargeLightningAnimFrameData[];
 extern JointIndex sBiriDischargeLightningAnimJointIndices[];
 extern AnimationHeader gBiriDischargeLightningAnim;
@@ -28,3 +31,4 @@ extern StandardLimb gBiriTentaclesLimb;
 extern void* gBiriSkelLimbs[];
 extern SkeletonHeader gBiriSkel;
 
+#endif

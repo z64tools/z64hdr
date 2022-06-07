@@ -1,3 +1,6 @@
+#ifndef OBJECT_ANUBICE_H
+#define OBJECT_ANUBICE_H 1
+
 extern s16 sAnubiceLaughingAnimFrameData[];
 extern JointIndex sAnubiceLaughingAnimJointIndices[];
 extern AnimationHeader gAnubiceLaughingAnim;
@@ -60,3 +63,4 @@ extern StandardLimb gAnubiceSkelLimbsLimb_003948;
 extern void* gAnubiceSkelLimbs[];
 extern SkeletonHeader gAnubiceSkel;
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef HUT_ROOM_0_H
+#define HUT_ROOM_0_H 1
+
 extern SceneCmd hut_room_0Commands[];
 extern s16 hut_room_0ObjectList_000048[];
 extern ActorEntry hut_room_0ActorList_00004C[];
@@ -12,3 +15,4 @@ extern Gfx hut_room_0DL_0032C0[];
 extern Gfx hut_room_0DL_003D58[];
 extern u64 hut_room_0Background_003DA0[SCREEN_WIDTH * SCREEN_HEIGHT / 4];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_OA11_H
+#define OBJECT_OA11_H 1
+
 extern StandardLimb object_oA11_Limb_000000;
 extern StandardLimb object_oA11_Limb_00000C;
 extern StandardLimb object_oA11_Limb_000018;
@@ -41,3 +44,4 @@ extern u64 object_oA11_Tex_001100[];
 extern u64 object_oA11_Tex_001140[];
 extern u64 object_oA11_Tex_001540[];
 
+#endif

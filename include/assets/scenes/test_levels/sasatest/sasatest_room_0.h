@@ -1,3 +1,6 @@
+#ifndef SASATEST_ROOM_0_H
+#define SASATEST_ROOM_0_H 1
+
 extern SceneCmd sasatest_room_0Commands[];
 extern SceneCmd* sasatest_room_0AlternateHeaders0x000050[];
 extern s16 sasatest_room_0ObjectList_00005C[];
@@ -23,3 +26,4 @@ extern Vtx sasatest_room_0Vtx_001110[];
 extern Vtx sasatest_room_0Vtx_001290[];
 extern Gfx sasatest_room_0DL_001580[];
 
+#endif

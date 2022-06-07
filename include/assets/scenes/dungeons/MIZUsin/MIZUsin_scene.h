@@ -1,3 +1,6 @@
+#ifndef MIZUSIN_SCENE_H
+#define MIZUSIN_SCENE_H 1
+
 extern SceneCmd MIZUsin_sceneCommands[];
 extern ActorEntry MIZUsin_sceneStartPositionList0x000068[];
 extern TransitionActorEntry MIZUsin_sceneTransitionActorList_000078[];
@@ -20,3 +23,4 @@ extern u64 gWaterTempleDayEntranceTex[];
 extern u64 MIZUsin_sceneTex_015030[];
 extern u64 gWaterTempleNightEntranceTex[];
 
+#endif

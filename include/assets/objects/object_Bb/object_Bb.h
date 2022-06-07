@@ -1,3 +1,6 @@
+#ifndef OBJECT_BB_H
+#define OBJECT_BB_H 1
+
 extern s16 object_Bb_Anim_000184FrameData[];
 extern JointIndex object_Bb_Anim_000184JointIndices[];
 extern AnimationHeader object_Bb_Anim_000184;
@@ -40,3 +43,4 @@ extern StandardLimb object_Bb_Limb_0019E8;
 extern void* object_Bb_Skel_001A30Limbs[];
 extern SkeletonHeader object_Bb_Skel_001A30;
 
+#endif

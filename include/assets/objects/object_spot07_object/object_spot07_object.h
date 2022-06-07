@@ -1,3 +1,6 @@
+#ifndef OBJECT_SPOT07_OBJECT_H
+#define OBJECT_SPOT07_OBJECT_H 1
+
 extern Vtx object_spot07_objectVtx_000000[];
 extern Gfx object_spot07_object_DL_000460[];
 extern Vtx object_spot07_objectVtx_000700[];
@@ -30,3 +33,4 @@ extern u64 object_spot07_object_Tex_005530[];
 extern u64 object_spot07_object_Tex_005D30[];
 extern u64 object_spot07_object_Tex_006530[];
 
+#endif

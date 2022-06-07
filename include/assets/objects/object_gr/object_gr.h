@@ -1,3 +1,6 @@
+#ifndef OBJECT_GR_H
+#define OBJECT_GR_H 1
+
 extern s16 sNiwGirlRunAnimFrameData[];
 extern JointIndex sNiwGirlRunAnimJointIndices[];
 extern AnimationHeader gNiwGirlRunAnim;
@@ -59,3 +62,4 @@ extern s16 sNiwGirlJumpAnimFrameData[];
 extern JointIndex sNiwGirlJumpAnimJointIndices[];
 extern AnimationHeader gNiwGirlJumpAnim;
 
+#endif

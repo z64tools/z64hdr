@@ -1,3 +1,6 @@
+#ifndef DRAG_SCENE_H
+#define DRAG_SCENE_H 1
+
 extern SceneCmd drag_sceneCommands[];
 extern ActorEntry drag_sceneStartPositionList0x000058[];
 extern RomFile drag_sceneRoomList0x000088[];
@@ -11,3 +14,4 @@ extern CollisionPoly drag_sceneCollisionHeader_0003C0Polygons[];
 extern Vec3s drag_sceneCollisionHeader_0003C0Vertices[];
 extern CollisionHeader drag_sceneCollisionHeader_0003C0;
 
+#endif

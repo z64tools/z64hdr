@@ -1,3 +1,6 @@
+#ifndef MARKET_DAY_SCENE_H
+#define MARKET_DAY_SCENE_H 1
+
 extern SceneCmd market_day_sceneCommands[];
 extern ActorEntry market_day_sceneStartPositionList0x000068[];
 extern TransitionActorEntry market_day_sceneTransitionActorList_000118[];
@@ -17,3 +20,4 @@ extern CollisionPoly market_day_sceneCollisionHeader_002640Polygons[];
 extern Vec3s market_day_sceneCollisionHeader_002640Vertices[];
 extern CollisionHeader market_day_sceneCollisionHeader_002640;
 
+#endif

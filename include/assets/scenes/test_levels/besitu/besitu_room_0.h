@@ -1,3 +1,6 @@
+#ifndef BESITU_ROOM_0_H
+#define BESITU_ROOM_0_H 1
+
 extern SceneCmd besitu_room_0Commands[];
 extern PolygonType0 besitu_room_0PolygonType0_000030;
 extern PolygonDlist besitu_room_0PolygonDlist_00003C[1];
@@ -23,3 +26,4 @@ extern u64 besitu_room_0Tex_003CD8[];
 extern u64 besitu_room_0Tex_0044D8[];
 extern u64 besitu_room_0Tex_004CD8[];
 
+#endif

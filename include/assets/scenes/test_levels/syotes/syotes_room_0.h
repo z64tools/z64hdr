@@ -1,3 +1,6 @@
+#ifndef SYOTES_ROOM_0_H
+#define SYOTES_ROOM_0_H 1
+
 extern PolygonType0 syotes_room_0PolygonType0_000000[];
 extern PolygonDlist syotes_room_0PolygonDlist_00000C[1];
 extern s32 syotes_room_0_terminatorMaybe_000014;
@@ -23,3 +26,4 @@ extern Gfx syotes_room_0DL_00BCF0[];
 extern Gfx syotes_room_0DL_00BF70[];
 extern u64 syotes_room_0Tex_00BF80[];
 
+#endif

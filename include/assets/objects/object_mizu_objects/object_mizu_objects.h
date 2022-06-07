@@ -1,3 +1,6 @@
+#ifndef OBJECT_MIZU_OBJECTS_H
+#define OBJECT_MIZU_OBJECTS_H 1
+
 extern Vtx object_mizu_objectsVtx_000000[];
 extern Gfx gObjectMizuObjectsMovebgDL_000190[];
 extern CamData gObjectMizuObjectsMovebgCol_0003F0CamDataList[];
@@ -103,3 +106,4 @@ extern u64 object_mizu_objectsTex_009F20[];
 extern u64 object_mizu_objectsTex_00A720[];
 extern u64 object_mizu_objectsTex_00AB20[];
 
+#endif

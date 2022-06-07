@@ -1,3 +1,6 @@
+#ifndef OBJECT_GND_H
+#define OBJECT_GND_H 1
+
 extern s16 sPhantomGanonDeathBlowAnimFrameData[];
 extern JointIndex sPhantomGanonDeathBlowAnimJointIndices[];
 extern AnimationHeader gPhantomGanonDeathBlowAnim;
@@ -161,3 +164,4 @@ extern CollisionPoly gPhantomGanonBarsColPolygons[];
 extern Vec3s gPhantomGanonBarsColVertices[];
 extern CollisionHeader gPhantomGanonBarsCol;
 
+#endif

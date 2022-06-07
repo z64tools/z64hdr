@@ -1,3 +1,6 @@
+#ifndef FIRE_BS_ROOM_1_H
+#define FIRE_BS_ROOM_1_H 1
+
 extern SceneCmd FIRE_bs_room_1Commands[];
 extern s16 FIRE_bs_room_1ObjectList_000040[];
 extern ActorEntry FIRE_bs_room_1ActorList_000050[];
@@ -36,3 +39,4 @@ extern u64 FIRE_bs_room_1Tex_0061D8[];
 extern u64 FIRE_bs_room_1Tex_0065D8[];
 extern u64 FIRE_bs_room_1Tex_006DD8[];
 
+#endif

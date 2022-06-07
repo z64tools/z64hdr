@@ -1,3 +1,6 @@
+#ifndef OBJECT_TW_H
+#define OBJECT_TW_H 1
+
 extern s16 object_tw_Anim_0004A4FrameData[];
 extern JointIndex object_tw_Anim_0004A4JointIndices[];
 extern AnimationHeader object_tw_Anim_0004A4;
@@ -415,3 +418,4 @@ extern Vtx object_twVtx_03A2E0[];
 extern Gfx object_tw_DL_03A680[];
 extern u64 object_tw_Tex_03A7B0[];
 
+#endif

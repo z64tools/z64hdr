@@ -1,3 +1,6 @@
+#ifndef OBJECT_OE5_H
+#define OBJECT_OE5_H 1
+
 extern Vtx object_oE5Vtx_000268[];
 extern Gfx object_oE5_DL_0024E8[];
 extern Gfx object_oE5_DL_002690[];
@@ -21,3 +24,4 @@ extern u64 object_oE5_Tex_004BC0[];
 extern u64 object_oE5_Tex_0053C0[];
 extern u64 object_oE5_Tex_0054C0[];
 
+#endif

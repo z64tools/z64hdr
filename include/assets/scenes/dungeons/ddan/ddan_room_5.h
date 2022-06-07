@@ -1,3 +1,6 @@
+#ifndef DDAN_ROOM_5_H
+#define DDAN_ROOM_5_H 1
+
 extern SceneCmd ddan_room_5Commands[];
 extern s16 ddan_room_5ObjectList_000040[];
 extern ActorEntry ddan_room_5ActorList_000050[];
@@ -14,3 +17,4 @@ extern u64 ddan_room_5Tex_004AB8[];
 extern u64 ddan_room_5Tex_004EB8[];
 extern u64 ddan_room_5Tex_0056B8[];
 
+#endif

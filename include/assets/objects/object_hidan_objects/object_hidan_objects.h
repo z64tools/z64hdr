@@ -1,3 +1,6 @@
+#ifndef OBJECT_HIDAN_OBJECTS_H
+#define OBJECT_HIDAN_OBJECTS_H 1
+
 extern u64 object_hidan_objectsTLUT_000000[];
 extern u64 object_hidan_objectsTLUT_000020[];
 extern u64 object_hidan_objectsTex_000040[];
@@ -174,3 +177,4 @@ extern u64 gFireTempleFireball5Tex[];
 extern u64 gFireTempleFireball6Tex[];
 extern u64 gFireTempleFireball7Tex[];
 
+#endif

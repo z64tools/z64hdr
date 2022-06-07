@@ -1,3 +1,6 @@
+#ifndef OBJECT_WALLMASTER_H
+#define OBJECT_WALLMASTER_H 1
+
 extern s16 sWallmasterDamageAnimFrameData[];
 extern JointIndex sWallmasterDamageAnimJointIndices[];
 extern AnimationHeader gWallmasterDamageAnim;
@@ -85,3 +88,4 @@ extern s16 sWallmasterStandUpAnimFrameData[];
 extern JointIndex sWallmasterStandUpAnimJointIndices[];
 extern AnimationHeader gWallmasterStandUpAnim;
 
+#endif

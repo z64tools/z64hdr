@@ -1,3 +1,6 @@
+#ifndef OBJECT_GI_LIQUID_H
+#define OBJECT_GI_LIQUID_H 1
+
 extern u64 object_gi_liquidTex_000000[];
 extern u64 object_gi_liquidTex_000200[];
 extern u64 object_gi_liquidTex_000400[];
@@ -15,3 +18,4 @@ extern Gfx gGiPotionPotDL[];
 extern Gfx gGiPotionLiquidDL[];
 extern Gfx gGiPotionPatternDL[];
 
+#endif

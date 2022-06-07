@@ -1,3 +1,6 @@
+#ifndef HAIRAL_NIWA2_ROOM_0_H
+#define HAIRAL_NIWA2_ROOM_0_H 1
+
 extern SceneCmd hairal_niwa2_room_0Commands[];
 extern PolygonType0 hairal_niwa2_room_0PolygonType0_000030;
 extern PolygonDlist hairal_niwa2_room_0PolygonDlist_00003C[1];
@@ -53,3 +56,4 @@ extern u64 hairal_niwa2_room_0Tex_0163F8[];
 extern u64 hairal_niwa2_room_0Tex_016BF8[];
 extern u64 hairal_niwa2_room_0Tex_0173F8[];
 
+#endif

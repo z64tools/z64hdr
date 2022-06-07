@@ -1,3 +1,6 @@
+#ifndef KAKUSIANA_ROOM_2_H
+#define KAKUSIANA_ROOM_2_H 1
+
 extern SceneCmd kakusiana_room_2Commands[];
 extern s16 kakusiana_room_2ObjectList_000040[];
 extern ActorEntry kakusiana_room_2ActorList_000048[];
@@ -19,3 +22,4 @@ extern Gfx kakusiana_room_2DL_002650[];
 extern Vtx kakusiana_room_2Vtx_002738[];
 extern Gfx kakusiana_room_2DL_002818[];
 
+#endif

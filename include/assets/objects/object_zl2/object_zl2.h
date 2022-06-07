@@ -1,3 +1,6 @@
+#ifndef OBJECT_ZL2_H
+#define OBJECT_ZL2_H 1
+
 extern u64 gZelda2_0TLUT[];
 extern u64 gZelda2_1TLUT[];
 extern u64 gZelda2_2TLUT[];
@@ -91,3 +94,4 @@ extern StandardLimb gZelda2SkelLimbsLimb_010D2C;
 extern void* gZelda2SkelLimbs[];
 extern FlexSkeletonHeader gZelda2Skel;
 
+#endif

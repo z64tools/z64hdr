@@ -1,3 +1,6 @@
+#ifndef OBJECT_TORYO_H
+#define OBJECT_TORYO_H 1
+
 extern s16 object_toryo_Anim_000E50FrameData[];
 extern JointIndex object_toryo_Anim_000E50JointIndices[];
 extern AnimationHeader object_toryo_Anim_000E50;
@@ -52,3 +55,4 @@ extern StandardLimb object_toryo_Limb_007104;
 extern void* object_toryo_Skel_007150Limbs[];
 extern FlexSkeletonHeader object_toryo_Skel_007150;
 
+#endif

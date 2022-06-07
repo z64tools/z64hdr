@@ -1,3 +1,6 @@
+#ifndef DDAN_SCENE_H
+#define DDAN_SCENE_H 1
+
 extern SceneCmd ddan_sceneCommands[];
 extern ActorEntry ddan_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ddan_sceneTransitionActorList_000080[];
@@ -23,3 +26,4 @@ extern u64 gDCLavaFloor2Tex[];
 extern u64 gDCLavaFloor5Tex[];
 extern CutsceneData gDcOpeningCs[];
 
+#endif

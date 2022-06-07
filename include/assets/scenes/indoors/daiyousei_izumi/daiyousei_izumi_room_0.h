@@ -1,3 +1,6 @@
+#ifndef DAIYOUSEI_IZUMI_ROOM_0_H
+#define DAIYOUSEI_IZUMI_ROOM_0_H 1
+
 extern SceneCmd daiyousei_izumi_room_0Commands[];
 extern SceneCmd* daiyousei_izumi_room_0AlternateHeaders0x000048[];
 extern s16 daiyousei_izumi_room_0ObjectList_000060[];
@@ -21,3 +24,4 @@ extern Vtx daiyousei_izumi_room_0Vtx_002BD0[];
 extern Gfx daiyousei_izumi_room_0DL_0034A0[];
 extern Gfx daiyousei_izumi_room_0DL_0038F8[];
 
+#endif

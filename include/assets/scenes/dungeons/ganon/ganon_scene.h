@@ -1,3 +1,6 @@
+#ifndef GANON_SCENE_H
+#define GANON_SCENE_H 1
+
 extern SceneCmd ganon_sceneCommands[];
 extern ActorEntry ganon_sceneStartPositionList0x000060[];
 extern TransitionActorEntry ganon_sceneTransitionActorList_000090[];
@@ -21,3 +24,4 @@ extern u64 ganon_sceneTex_00F7A8[];
 extern u64 ganon_sceneTex_00FBA8[];
 extern u64 ganon_sceneTex_00FFA8[];
 
+#endif

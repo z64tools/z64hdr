@@ -1,3 +1,6 @@
+#ifndef HAKASITARELAY_ROOM_0_H
+#define HAKASITARELAY_ROOM_0_H 1
+
 extern SceneCmd hakasitarelay_room_0Commands[];
 extern s16 hakasitarelay_room_0ObjectList_000040[];
 extern ActorEntry hakasitarelay_room_0ActorList_000050[];
@@ -26,3 +29,4 @@ extern Gfx hakasitarelay_room_0DL_0061D0[];
 extern Gfx hakasitarelay_room_0DL_0062A8[];
 extern u64 hakasitarelay_room_0Tex_0062B8[];
 
+#endif

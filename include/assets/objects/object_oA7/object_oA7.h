@@ -1,3 +1,6 @@
+#ifndef OBJECT_OA7_H
+#define OBJECT_OA7_H 1
+
 extern StandardLimb object_oA7_Limb_00000000;
 extern StandardLimb object_oA7_Limb_0000000C;
 extern StandardLimb object_oA7_Limb_00000018;
@@ -73,3 +76,4 @@ extern u64 object_oA7_Tex_00001348[];
 extern u64 object_oA7_Tex_000013C8[];
 extern u64 object_oA7_Tex_000014C8[];
 
+#endif

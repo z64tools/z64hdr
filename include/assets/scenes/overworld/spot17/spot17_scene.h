@@ -1,3 +1,6 @@
+#ifndef SPOT17_SCENE_H
+#define SPOT17_SCENE_H 1
+
 extern SceneCmd spot17_sceneCommands[];
 extern SceneCmd* spot17_sceneAlternateHeaders0x000068[];
 extern ActorEntry spot17_sceneStartPositionList0x00007C[];
@@ -13,7 +16,7 @@ extern CollisionPoly spot17_sceneCollisionHeader_0045A4Polygons[];
 extern Vec3s spot17_sceneCollisionHeader_0045A4Vertices[];
 extern CollisionHeader spot17_sceneCollisionHeader_0045A4;
 extern CutsceneData gDeathMountainCraterBoleroCs[];
-extern CutsceneData spot17_sceneSet_0075D0CutsceneData_0068B0[];
+extern CutsceneData spot17_sceneCutsceneData_0068B0[];
 extern SceneCmd spot17_sceneSet_007220[];
 extern ActorEntry spot17_sceneStartPositionList0x007288[];
 extern TransitionActorEntry spot17_sceneTransitionActorList_0072E8[];
@@ -60,3 +63,4 @@ extern u64 spot17_sceneTex_00F0D8[];
 extern u64 spot17_sceneTex_00F8D8[];
 extern u64 spot17_sceneTex_00FCD8[];
 
+#endif

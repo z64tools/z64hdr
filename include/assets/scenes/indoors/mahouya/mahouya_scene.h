@@ -1,3 +1,6 @@
+#ifndef MAHOUYA_SCENE_H
+#define MAHOUYA_SCENE_H 1
+
 extern SceneCmd mahouya_sceneCommands[];
 extern ActorEntry mahouya_sceneStartPositionList0x000060[];
 extern TransitionActorEntry mahouya_sceneTransitionActorList_000070[];
@@ -25,3 +28,4 @@ extern u64 mahouya_sceneTex_008A20[];
 extern u64 mahouya_sceneTex_009220[];
 extern u64 mahouya_sceneTex_009A20[];
 
+#endif

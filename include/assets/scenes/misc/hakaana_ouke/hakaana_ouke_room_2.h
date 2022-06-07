@@ -1,3 +1,6 @@
+#ifndef HAKAANA_OUKE_ROOM_2_H
+#define HAKAANA_OUKE_ROOM_2_H 1
+
 extern SceneCmd hakaana_ouke_room_2Commands[];
 extern SceneCmd* hakaana_ouke_room_2AlternateHeaders0x000048[];
 extern s16 hakaana_ouke_room_2ObjectList_00005C[];
@@ -36,3 +39,4 @@ extern Gfx hakaana_ouke_room_2DL_005040[];
 extern Gfx hakaana_ouke_room_2DL_0050F8[];
 extern u64 hakaana_ouke_room_2Tex_005108[];
 
+#endif

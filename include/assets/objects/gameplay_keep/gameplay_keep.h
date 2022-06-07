@@ -1,3 +1,6 @@
+#ifndef GAMEPLAY_KEEP_H
+#define GAMEPLAY_KEEP_H 1
+
 extern u64 gHilite1Tex[];
 extern u64 gHilite2Tex[];
 extern u64 gHylianShieldDesignTex[];
@@ -1130,3 +1133,4 @@ extern u64 gEffSpark2Tex[];
 extern u64 gEffSpark3Tex[];
 extern u64 gEffSpark4Tex[];
 
+#endif

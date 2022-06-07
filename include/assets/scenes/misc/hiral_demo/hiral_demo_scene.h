@@ -1,18 +1,21 @@
+#ifndef HIRAL_DEMO_SCENE_H
+#define HIRAL_DEMO_SCENE_H 1
+
 extern SceneCmd hiral_demo_sceneCommands[];
 extern SceneCmd* hiral_demo_sceneAlternateHeaders0x000050[];
 extern ActorEntry hiral_demo_sceneStartPositionList0x000080[];
 extern RomFile hiral_demo_sceneRoomList0x000090[];
 extern EntranceEntry hiral_demo_sceneEntranceList0x000098[];
 extern LightSettings hiral_demo_sceneLightSettings0x00009C[];
-extern CutsceneData hiral_demo_sceneSet_0037C0CutsceneData_000100[];
-extern CutsceneData hiral_demo_sceneSet_003890CutsceneData_000E50[];
-extern CutsceneData hiral_demo_sceneSet_003920CutsceneData_001260[];
-extern CutsceneData hiral_demo_sceneSet_0039B0CutsceneData_001A60[];
-extern CutsceneData hiral_demo_sceneSet_003A60CutsceneData_001F00[];
-extern CutsceneData hiral_demo_sceneSet_003AF0CutsceneData_002310[];
-extern CutsceneData hiral_demo_sceneSet_003B80CutsceneData_002490[];
-extern CutsceneData hiral_demo_sceneSet_003C10CutsceneData_002890[];
-extern CutsceneData hiral_demo_sceneSet_003CA0CutsceneData_002FE0[];
+extern CutsceneData hiral_demo_sceneCutsceneData_000100[];
+extern CutsceneData hiral_demo_sceneCutsceneData_000E50[];
+extern CutsceneData hiral_demo_sceneCutsceneData_001260[];
+extern CutsceneData hiral_demo_sceneCutsceneData_001A60[];
+extern CutsceneData hiral_demo_sceneCutsceneData_001F00[];
+extern CutsceneData hiral_demo_sceneCutsceneData_002310[];
+extern CutsceneData hiral_demo_sceneCutsceneData_002490[];
+extern CutsceneData hiral_demo_sceneCutsceneData_002890[];
+extern CutsceneData hiral_demo_sceneCutsceneData_002FE0[];
 extern CamData hiral_demo_sceneCollisionHeader_003548CamDataList[];
 extern SurfaceType hiral_demo_sceneCollisionHeader_003548SurfaceType[];
 extern CollisionPoly hiral_demo_sceneCollisionHeader_003548Polygons[];
@@ -64,3 +67,4 @@ extern RomFile hiral_demo_sceneRoomList0x003D00[];
 extern EntranceEntry hiral_demo_sceneEntranceList0x003D08[];
 extern LightSettings hiral_demo_sceneLightSettings0x003D0C[];
 
+#endif

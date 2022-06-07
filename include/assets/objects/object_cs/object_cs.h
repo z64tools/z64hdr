@@ -1,3 +1,6 @@
+#ifndef OBJECT_CS_H
+#define OBJECT_CS_H 1
+
 extern s16 sGraveyardKidWalkAnimFrameData[];
 extern JointIndex sGraveyardKidWalkAnimJointIndices[];
 extern AnimationHeader gGraveyardKidWalkAnim;
@@ -60,3 +63,4 @@ extern StandardLimb gGraveyardKidHeadLimb;
 extern void* gGraveyardKidSkelLimbs[];
 extern FlexSkeletonHeader gGraveyardKidSkel;
 
+#endif

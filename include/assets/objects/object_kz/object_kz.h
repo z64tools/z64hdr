@@ -1,3 +1,6 @@
+#ifndef OBJECT_KZ_H
+#define OBJECT_KZ_H 1
+
 extern s16 sKzMweepAnimFrameData[];
 extern JointIndex sKzMweepAnimJointIndices[];
 extern AnimationHeader gKzMweepAnim;
@@ -44,3 +47,4 @@ extern StandardLimb gKzHeadLimb;
 extern void* gKzSkelLimbs[];
 extern FlexSkeletonHeader gKzSkel;
 
+#endif

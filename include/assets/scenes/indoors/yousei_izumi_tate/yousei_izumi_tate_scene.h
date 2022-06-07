@@ -1,3 +1,6 @@
+#ifndef YOUSEI_IZUMI_TATE_SCENE_H
+#define YOUSEI_IZUMI_TATE_SCENE_H 1
+
 extern SceneCmd yousei_izumi_tate_sceneCommands[];
 extern ActorEntry yousei_izumi_tate_sceneStartPositionList0x000058[];
 extern RomFile yousei_izumi_tate_sceneRoomList0x000068[];
@@ -21,3 +24,4 @@ extern u64 yousei_izumi_tate_sceneTex_007010[];
 extern u64 yousei_izumi_tate_sceneTex_007810[];
 extern u64 yousei_izumi_tate_sceneTex_008010[];
 
+#endif

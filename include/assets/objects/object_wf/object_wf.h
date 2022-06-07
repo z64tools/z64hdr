@@ -1,3 +1,6 @@
+#ifndef OBJECT_WF_H
+#define OBJECT_WF_H 1
+
 extern u64 gWolfosWhiteFurTex[];
 extern u64 gWolfosWhiteToothClawTex[];
 extern u64 gWolfosWhiteMouthTex[];
@@ -133,3 +136,4 @@ extern JointIndex sWolfosWaitingAnimJointIndices[];
 extern AnimationHeader gWolfosWaitingAnim;
 extern u8 object_wf_zeroes_Blob_00A4BC[];
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef OBJECT_BBA_H
+#define OBJECT_BBA_H 1
+
 extern StandardLimb object_bba_Limb_000000;
 extern StandardLimb object_bba_Limb_00000C;
 extern StandardLimb object_bba_Limb_000018;
@@ -42,3 +45,4 @@ extern Gfx object_bba_DL_003FC0[];
 extern Gfx object_bba_DL_004090[];
 extern Gfx object_bba_DL_004160[];
 
+#endif

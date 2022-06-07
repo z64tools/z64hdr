@@ -1,3 +1,6 @@
+#ifndef MARKET_ALLEY_SCENE_H
+#define MARKET_ALLEY_SCENE_H 1
+
 extern SceneCmd market_alley_sceneCommands[];
 extern ActorEntry market_alley_sceneStartPositionList0x000060[];
 extern TransitionActorEntry market_alley_sceneTransitionActorList_0000B0[];
@@ -12,3 +15,4 @@ extern CollisionPoly market_alley_sceneCollisionHeader_001218Polygons[];
 extern Vec3s market_alley_sceneCollisionHeader_001218Vertices[];
 extern CollisionHeader market_alley_sceneCollisionHeader_001218;
 
+#endif

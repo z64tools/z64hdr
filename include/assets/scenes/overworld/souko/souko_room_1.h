@@ -1,3 +1,6 @@
+#ifndef SOUKO_ROOM_1_H
+#define SOUKO_ROOM_1_H 1
+
 extern SceneCmd souko_room_1Commands[];
 extern s16 souko_room_1ObjectList_000040[];
 extern ActorEntry souko_room_1ActorList_000044[];
@@ -43,3 +46,4 @@ extern u64 souko_room_1Tex_009F28[];
 extern u64 souko_room_1Tex_00A128[];
 extern u64 souko_room_1Tex_00A228[];
 
+#endif

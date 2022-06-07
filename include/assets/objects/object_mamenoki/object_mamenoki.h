@@ -1,3 +1,6 @@
+#ifndef OBJECT_MAMENOKI_H
+#define OBJECT_MAMENOKI_H 1
+
 extern Vtx object_mamenokiVtx_000000[];
 extern Gfx gMagicBeanSeedlingDL[];
 extern Vtx object_mamenokiVtx_000130[];
@@ -18,3 +21,4 @@ extern u64 gMagicBeanPlatformStemTex[];
 extern u64 gMagicBeanPlatformRootsTex[];
 extern u64 gMagicBeanStemTex[];
 
+#endif

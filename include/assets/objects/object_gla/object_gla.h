@@ -1,3 +1,6 @@
+#ifndef OBJECT_GLA_H
+#define OBJECT_GLA_H 1
+
 extern s16 sGerudoPurpleUnusedHorizontalSlashAnimFrameData[];
 extern JointIndex sGerudoPurpleUnusedHorizontalSlashAnimJointIndices[];
 extern AnimationHeader gGerudoPurpleUnusedHorizontalSlashAnim;
@@ -85,3 +88,4 @@ extern s16 sGerudoPurpleWalkingAnimFrameData[];
 extern JointIndex sGerudoPurpleWalkingAnimJointIndices[];
 extern AnimationHeader gGerudoPurpleWalkingAnim;
 
+#endif

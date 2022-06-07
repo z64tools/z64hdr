@@ -1,3 +1,6 @@
+#ifndef OBJECT_GELDB_H
+#define OBJECT_GELDB_H 1
+
 extern s16 sGerudoRedSlashAnimFrameData[];
 extern JointIndex sGerudoRedSlashAnimJointIndices[];
 extern AnimationHeader gGerudoRedSlashAnim;
@@ -99,3 +102,4 @@ extern s16 sGerudoRedNeutralAnimFrameData[];
 extern JointIndex sGerudoRedNeutralAnimJointIndices[];
 extern AnimationHeader gGerudoRedNeutralAnim;
 
+#endif

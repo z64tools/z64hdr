@@ -1,3 +1,6 @@
+#ifndef SPOT20_SCENE_H
+#define SPOT20_SCENE_H 1
+
 extern SceneCmd spot20_sceneCommands[];
 extern SceneCmd* spot20_sceneAlternateHeaders0x000070[];
 extern ActorEntry spot20_sceneStartPositionList0x00009C[];
@@ -14,14 +17,14 @@ extern SurfaceType spot20_sceneCollisionHeader_002948SurfaceType[];
 extern CollisionPoly spot20_sceneCollisionHeader_002948Polygons[];
 extern Vec3s spot20_sceneCollisionHeader_002948Vertices[];
 extern CollisionHeader spot20_sceneCollisionHeader_002948;
-extern CutsceneData spot20_sceneSet_0051D0CutsceneData_002980[];
-extern CutsceneData spot20_sceneSet_0052F0CutsceneData_002B40[];
-extern CutsceneData spot20_sceneSet_0054B0CutsceneData_002F84[];
-extern CutsceneData spot20_sceneSet_0055D0CutsceneData_0031E4[];
-extern CutsceneData spot20_sceneSet_0056D0CutsceneData_003474[];
-extern CutsceneData spot20_sceneSet_005860CutsceneData_003764[];
-extern CutsceneData spot20_sceneSet_005960CutsceneData_0039C4[];
-extern CutsceneData spot20_sceneSet_005AE0CutsceneData_0044B4[];
+extern CutsceneData spot20_sceneCutsceneData_002980[];
+extern CutsceneData spot20_sceneCutsceneData_002B40[];
+extern CutsceneData spot20_sceneCutsceneData_002F84[];
+extern CutsceneData spot20_sceneCutsceneData_0031E4[];
+extern CutsceneData spot20_sceneCutsceneData_003474[];
+extern CutsceneData spot20_sceneCutsceneData_003764[];
+extern CutsceneData spot20_sceneCutsceneData_0039C4[];
+extern CutsceneData spot20_sceneCutsceneData_0044B4[];
 extern SceneCmd spot20_sceneSet_004A50[];
 extern ActorEntry spot20_sceneStartPositionList0x004AB0[];
 extern TransitionActorEntry spot20_sceneTransitionActorList_004B60[];
@@ -122,3 +125,4 @@ extern u64 gLonLonRangeNightWindowsTex[];
 extern u64 spot20_sceneTex_010BE0[];
 extern u64 spot20_sceneTex_010E20[];
 
+#endif

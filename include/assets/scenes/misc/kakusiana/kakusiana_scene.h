@@ -1,3 +1,6 @@
+#ifndef KAKUSIANA_SCENE_H
+#define KAKUSIANA_SCENE_H 1
+
 extern SceneCmd kakusiana_sceneCommands[];
 extern ActorEntry kakusiana_sceneStartPositionList0x000058[];
 extern RomFile kakusiana_sceneRoomList0x000138[];
@@ -14,3 +17,4 @@ extern u64 kakusiana_sceneTex_00B820[];
 extern u64 kakusiana_sceneTex_00C020[];
 extern u64 kakusiana_sceneTex_00D020[];
 
+#endif

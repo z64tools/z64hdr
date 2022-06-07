@@ -1,3 +1,6 @@
+#ifndef OBJECT_RD_H
+#define OBJECT_RD_H 1
+
 extern u64 gGibdoWrappingTex[];
 extern u64 gGibdoEyeTex[];
 extern Vtx object_rdVtx_001400[];
@@ -127,3 +130,4 @@ extern s16 sGibdoRedeadWalkAnimFrameData[];
 extern JointIndex sGibdoRedeadWalkAnimJointIndices[];
 extern AnimationHeader gGibdoRedeadWalkAnim;
 
+#endif

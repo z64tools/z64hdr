@@ -1,3 +1,6 @@
+#ifndef MARKET_NIGHT_ROOM_0_H
+#define MARKET_NIGHT_ROOM_0_H 1
+
 extern SceneCmd market_night_room_0Commands[];
 extern s16 market_night_room_0ObjectList_000040[];
 extern ActorEntry market_night_room_0ActorList_000050[];
@@ -40,3 +43,4 @@ extern Vtx market_night_room_0Vtx_005580[];
 extern Gfx market_night_room_0DL_005680[];
 extern Gfx market_night_room_0DL_005708[];
 
+#endif
