@@ -35,6 +35,6 @@ void Scene_CommandMiscSettings(PlayState* play, SceneCmd* cmd);
 
 extern RomFile sNaviMsgFiles[3];
 
-u32 gObjectTableSize = ARRAY_COUNT(gObjectTable);
+extern u32 gObjectTableSize;
 
 #endif // __Z_SCENE__

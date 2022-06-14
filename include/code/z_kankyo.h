@@ -21,7 +21,7 @@ typedef struct {
 
 extern ZBufValConversionEntry sZBufValConversionTable[1];
 
-u16 sSunScreenDepth = GPACK_ZDZ(G_MAXFBZ, 0);
+extern u16 sSunScreenDepth;
 
 typedef struct {
     /* 0x00 */ u16 startTime;
