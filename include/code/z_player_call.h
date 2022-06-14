@@ -3,10 +3,10 @@
 
 #include "global.h"
 
-void (*sPlayerCallInitFunc);
-void (*sPlayerCallDestroyFunc);
-void (*sPlayerCallUpdateFunc);
-void (*sPlayerCallDrawFunc);
+extern void (*sPlayerCallInitFunc);
+extern void (*sPlayerCallDestroyFunc);
+extern void (*sPlayerCallUpdateFunc);
+extern void (*sPlayerCallDrawFunc);
 void PlayerCall_Destroy(Actor* thisx, PlayState* play);
 void PlayerCall_Update(Actor* thisx, PlayState* play);
 void PlayerCall_Draw(Actor* thisx, PlayState* play);

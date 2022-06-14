@@ -30,9 +30,7 @@ typedef struct {
 extern s16 sOREGInit[53];
 extern s16 sOREGInitCnt;
 extern s16 sCamDataRegsInit[28];
-
-s16 sCamDataRegsInitCount = ARRAY_COUNT(sCamDataRegsInit);
-
+extern s16 sCamDataRegsInitCount;
 extern char sCameraSettingNames[][12];
 extern char sCameraModeNames[][12];
 extern CameraModeValue sSetNormal0ModeNormalData[10];
@@ -354,8 +352,7 @@ s32 Camera_Special6(Camera* camera);
 s32 Camera_Special7(Camera* camera);
 s32 Camera_Special8(Camera* camera);
 s32 Camera_Special9(Camera* camera);
-s32 (*sCameraFunctions[71]);
-
+extern s32 (*sCameraFunctions[71]);
 extern s32 sInitRegs;
 extern s32 sDbgModeIdx;
 extern s16 sNextUID;

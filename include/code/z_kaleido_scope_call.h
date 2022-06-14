@@ -4,8 +4,8 @@
 #include "global.h"
 #include "vt.h"
 
-void (*sKaleidoScopeUpdateFunc);
-void (*sKaleidoScopeDrawFunc);
+extern void (*sKaleidoScopeUpdateFunc);
+extern void (*sKaleidoScopeDrawFunc);
 
 extern u32 D_8016139C;
 

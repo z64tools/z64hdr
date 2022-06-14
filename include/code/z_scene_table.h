@@ -130,6 +130,7 @@ void Scene_DrawConfigGanontika(PlayState* play);
 void Scene_DrawConfigGanontikaSonogo(PlayState* play);
 void Scene_DrawConfigGanonSonogo(PlayState* play);
 void Scene_DrawConfigBesitu(PlayState* play);
-void (*sSceneDrawConfigs[SDC_MAX]);
+
+extern void (*sSceneDrawConfigs[SDC_MAX]);
 
 #endif // __Z_SCENE_TABLE__

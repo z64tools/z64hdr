@@ -11,7 +11,8 @@ void Room_Draw1(PlayState* play, Room* room, u32 flags);
 extern Vec3f D_801270A0;
 extern Gfx D_801270B0[19];
 
-void (*sRoomDrawHandlers[3]);
+extern void (*sRoomDrawHandlers[3]);
+
 void Room_Draw0(PlayState* play, Room* room, u32 flags);
 
 #define SHAPE_SORT_MAX 64

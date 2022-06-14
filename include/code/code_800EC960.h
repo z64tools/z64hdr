@@ -138,9 +138,7 @@ extern u8 sSeqModeInput;
 extern u8 sSeqFlags[0];
 extern s8 sSpecReverbs[20];
 extern NatureAmbienceDataIO sNatureAmbienceDataIO[20];
-
-u32 sOcarinaAllowedButtonMask = (BTN_A | BTN_CRIGHT | BTN_CLEFT | BTN_CDOWN | BTN_CUP);
-
+extern u32 sOcarinaAllowedButtonMask;
 extern s32 sOcarinaAButtonMap;
 extern s32 sOcarinaCUpButtonMap;
 extern s32 sOcarinaCDownButtonMap;
