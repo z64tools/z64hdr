@@ -16,7 +16,7 @@ void IChain_Apply_f32div1000(u8* ptr, InitChainEntry* ichain);
 void IChain_Apply_Vec3f(u8* ptr, InitChainEntry* ichain);
 void IChain_Apply_Vec3fdiv1000(u8* ptr, InitChainEntry* ichain);
 void IChain_Apply_Vec3s(u8* ptr, InitChainEntry* ichain);
-void (*sInitChainHandlers[]);
+void (*sInitChainHandlers[11]);
 void IChain_Apply_u8(u8* ptr, InitChainEntry* ichain);
 void IChain_Apply_s8(u8* ptr, InitChainEntry* ichain);
 void IChain_Apply_u16(u8* ptr, InitChainEntry* ichain);
