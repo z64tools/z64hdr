@@ -8,6 +8,6 @@ extern QuakeRequest sQuakeRequest[4];
 extern s16 D_80126250;
 extern s16 sQuakeRequestCount;
 
-s16 (*sQuakeCallbacks[]);
+s16 (*sQuakeCallbacks[7]);
 
 #endif // __Z_QUAKE__

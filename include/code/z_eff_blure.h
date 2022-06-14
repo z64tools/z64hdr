@@ -13,7 +13,7 @@ void EffectBlure_DrawElemHermiteInterpolation(EffectBlure* this, EffectBlureElem
 void EffectBlure_DrawSmooth(EffectBlure* this2, GraphicsContext* gfxCtx);
 void EffectBlure_SetupSimple(GraphicsContext* gfxCtx, EffectBlure* this, Vtx* vtx);
 void EffectBlure_SetupSimpleAlt(GraphicsContext* gfxCtx, EffectBlure* this, Vtx* vtx);
-void (*sSetupHandlers[]);
+void (*sSetupHandlers[2]);
 
 extern s32 D_80115788;
 

@@ -1,5 +1,5 @@
-#ifndef __MTXUTY-CVT__
-#define __MTXUTY-CVT__
+#ifndef __MTXUTY_CVT__
+#define __MTXUTY_CVT__
 
 #include "global.h"
 
