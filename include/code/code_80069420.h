@@ -3,4 +3,6 @@
 
 #include "global.h"
 
+void* MemSet(void* dest, s32 val, s32 len);
+
 #endif // __CODE_80069420__

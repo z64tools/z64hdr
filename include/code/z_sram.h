@@ -42,7 +42,7 @@ typedef struct {
 	/* 0x0EAC */ char unk_EAC[0x0C];
 	/* 0x0EB8 */ u16  eventChkInf[14]; // "event_chk_inf"
 	/* 0x0ED4 */ u16  itemGetInf[4]; // "item_get_inf"
-	/* 0x0EDC */ u16  infTable[30];  // "inf_table"
+	/* 0x0EDC */ u16  infTable[30]; // "inf_table"
 	/* 0x0F18 */ char unk_F18[0x04];
 	/* 0x0F1C */ u32  worldMapAreaData; // "area_arrival"
 	/* 0x0F20 */ char unk_F20[0x4];
@@ -67,6 +67,7 @@ typedef struct {
 	/* 0x1C */ SaveInfo info; // "information"
 } Save;
 
+#ifdef __Z_SRAM_MACRO__
 #define SAVE_PLAYER_DATA (*((SavePlayerData*)&gSaveContext.newf))
 #define SAVE_INFO        (*((SaveInfo*)&gSaveContext.newf))
 #define SLOT_SIZE        (sizeof(SaveContext) + 0x28)
@@ -79,6 +80,7 @@ typedef struct {
 #define DEFENSE          offsetof(SaveContext, inventory.defenseHearts)
 #define HEALTH           offsetof(SaveContext, health)
 #define SLOT_OFFSET(index) (SRAM_HEADER_SIZE + 0x10 + (index * SLOT_SIZE))
+#endif
 
 extern Inventory sNewSaveInventory;
 extern SavePlayerData sDebugSavePlayerData;
