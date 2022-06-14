@@ -1,8 +1,3 @@
-#ifndef ____OSMALLOC__
-#define ____OSMALLOC__
-
-#include "global.h"
-#include "vt.h"
 #define FILL_ALLOCBLOCK (1 << 0)
 #define FILL_FREEBLOCK (1 << 1)
 #define CHECK_FREE_BLOCK (1 << 2)
@@ -15,5 +10,3 @@
 #define BLOCK_FREE_MAGIC_32 (0xEFEFEFEF)
 
 extern OSMesg sArenaLockMsg;
-
-#endif // ____OSMALLOC__

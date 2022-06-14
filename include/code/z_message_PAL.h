@@ -1,10 +1,9 @@
-#ifndef __Z_MESSAGE_PAL__
-#define __Z_MESSAGE_PAL__
-
-#include "global.h"
-#include "message_data_static.h"
-#include "vt.h"
-#include "assets/textures/parameter_static/parameter_static.h"
+#ifdef __MESSAGE_H__
+extern MessageTableEntry sNesMessageEntryTable[];
+extern MessageTableEntry sStaffMessageEntryTable[];
+extern MessageTableEntry* sNesMessageEntryTablePtr;
+extern MessageTableEntry* sStaffMessageEntryTablePtr;
+#endif
 
 extern s16 sTextFade;
 extern u8 D_8014B2F4;
@@ -17,16 +16,12 @@ extern s16 sLastPlayedSong;
 extern s16 sHasSunsSong;
 extern s16 sMessageHasSetSfx;
 extern u16 sOcarinaSongBitFlags;
-extern MessageTableEntry sNesMessageEntryTable[];
 
 extern const char* sGerMessageEntryTable[];
 extern const char* sFraMessageEntryTable[];
-extern MessageTableEntry sStaffMessageEntryTable[];
 
-extern MessageTableEntry* sNesMessageEntryTablePtr;
 extern const char** sGerMessageEntryTablePtr;
 extern const char** sFraMessageEntryTablePtr;
-extern MessageTableEntry* sStaffMessageEntryTablePtr;
 extern s16 sTextboxBackgroundForePrimColors[8][3];
 extern s16 sTextboxBackgroundBackPrimColors[4][3];
 extern s16 sTextboxBackgroundYOffsets[2];
@@ -75,5 +70,3 @@ void Message_DrawDebugVariableChanged(s16* var, GraphicsContext* gfxCtx);
 void Message_DrawDebugText(PlayState* play, Gfx** p);
 
 extern s16 gGameOverTimer;
-
-#endif // __Z_MESSAGE_PAL__

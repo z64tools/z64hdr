@@ -1,8 +1,3 @@
-#ifndef __Z_DEBUG__
-#define __Z_DEBUG__
-
-#include "global.h"
-
 typedef struct {
     u8 x;
     u8 y;
@@ -20,5 +15,3 @@ extern PrintTextBuffer D_8015FA98[0x16];
 extern s16 D_8011E0B0;
 extern InputCombo inputCombos[29];
 extern char regChar[];
-
-#endif // __Z_DEBUG__

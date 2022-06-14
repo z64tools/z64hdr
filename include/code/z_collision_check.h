@@ -1,10 +1,3 @@
-#ifndef __Z_COLLISION_CHECK__
-#define __Z_COLLISION_CHECK__
-
-#include "global.h"
-#include "vt.h"
-#include "overlays/effects/ovl_Effect_Ss_HitMark/z_eff_ss_hitmark.h"
-
 typedef s32 (*ColChkResetFunc)(PlayState*, Collider*);
 
 typedef void (*ColChkBloodFunc)(PlayState*, Collider*, Vec3f*);
@@ -142,5 +135,3 @@ void CollisionCheck_ApplyDamageTris(PlayState* play, CollisionCheckContext* colC
 void CollisionCheck_ApplyDamageQuad(PlayState* play, CollisionCheckContext* colChkCtx, Collider* collider);
 s32 CollisionCheck_LineOC_JntSph(PlayState* play, CollisionCheckContext* colChkCtx, Collider* collider, Vec3f* a, Vec3f* b);
 s32 CollisionCheck_LineOC_Cyl(PlayState* play, CollisionCheckContext* colChkCtx, Collider* collider, Vec3f* a, Vec3f* b);
-
-#endif // __Z_COLLISION_CHECK__

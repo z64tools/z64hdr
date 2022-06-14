@@ -1,10 +1,3 @@
-#ifndef __Z_MAP_MARK__
-#define __Z_MAP_MARK__
-
-#include "global.h"
-#include "vt.h"
-#include "assets/textures/parameter_static/parameter_static.h"
-
 typedef struct {
     /* 0x00 */ void* texture;
     /* 0x04 */ u32 imageFormat;
@@ -34,5 +27,3 @@ typedef struct {
 #define G_IM_SIZ_MARK_LINE_BYTES sLineBytesImageSizes[markInfo->imageSize]
 
 void MapMark_DrawForDungeon(PlayState* play);
-
-#endif // __Z_MAP_MARK__

@@ -1,9 +1,3 @@
-#ifndef __Z_FCURVE_DATA_SKELANIME__
-#define __Z_FCURVE_DATA_SKELANIME__
-
-#include "global.h"
-#include "z64curve.h"
-
 void SkelCurve_Clear(SkelCurve* skelCurve);
 s32 SkelCurve_Init(PlayState* play, SkelCurve* skelCurve, CurveSkeletonHeader* skeletonHeaderSeg, CurveAnimationHeader* animation);
 void SkelCurve_Destroy(PlayState* play, SkelCurve* skelCurve);
@@ -22,5 +16,3 @@ typedef enum {
 s32 SkelCurve_Update(PlayState* play, SkelCurve* skelCurve);
 void SkelCurve_DrawLimb(PlayState* play, s32 limbIndex, SkelCurve* skelCurve, OverrideCurveLimbDraw overrideLimbDraw, PostCurveLimbDraw postLimbDraw, s32 lod, void* data);
 void SkelCurve_Draw(Actor* actor, PlayState* play, SkelCurve* skelCurve, OverrideCurveLimbDraw overrideLimbDraw, PostCurveLimbDraw postLimbDraw, s32 lod, void* data);
-
-#endif // __Z_FCURVE_DATA_SKELANIME__

@@ -1,34 +1,3 @@
-#ifndef __Z_DEMO__
-#define __Z_DEMO__
-
-#include "global.h"
-#include "z64camera.h"
-#include "assets/scenes/indoors/tokinoma/tokinoma_scene.h"
-#include "assets/scenes/overworld/spot00/spot00_scene.h"
-#include "assets/scenes/overworld/spot01/spot01_scene.h"
-#include "assets/scenes/overworld/spot02/spot02_scene.h"
-#include "assets/scenes/overworld/spot04/spot04_scene.h"
-#include "assets/scenes/overworld/spot05/spot05_scene.h"
-#include "assets/scenes/overworld/spot06/spot06_scene.h"
-#include "assets/scenes/overworld/spot07/spot07_scene.h"
-#include "assets/scenes/overworld/spot08/spot08_scene.h"
-#include "assets/scenes/overworld/spot09/spot09_scene.h"
-#include "assets/scenes/overworld/spot11/spot11_scene.h"
-#include "assets/scenes/overworld/spot12/spot12_scene.h"
-#include "assets/scenes/overworld/spot15/spot15_scene.h"
-#include "assets/scenes/overworld/spot16/spot16_scene.h"
-#include "assets/scenes/overworld/spot17/spot17_scene.h"
-#include "assets/scenes/overworld/spot18/spot18_scene.h"
-#include "assets/scenes/overworld/spot20/spot20_scene.h"
-#include "assets/scenes/dungeons/bdan/bdan_scene.h"
-#include "assets/scenes/dungeons/ddan/ddan_scene.h"
-#include "assets/scenes/dungeons/ydan/ydan_scene.h"
-#include "assets/scenes/dungeons/ganontika/ganontika_scene.h"
-#include "assets/scenes/dungeons/ganon_tou/ganon_tou_scene.h"
-#include "assets/scenes/dungeons/jyasinboss/jyasinboss_scene.h"
-#include "assets/scenes/dungeons/ice_doukutu/ice_doukutu_scene.h"
-#include "assets/scenes/misc/hakaana_ouke/hakaana_ouke_scene.h"
-
 extern u16 D_8011E1C0;
 extern u16 D_8011E1C4;
 
@@ -79,5 +48,3 @@ void func_80068DC0(PlayState* play, CutsceneContext* csCtx);
 void func_80068ECC(PlayState* play, CutsceneContext* csCtx);
 void func_80069048(PlayState* play);
 void func_8006907C(PlayState* play);
-
-#endif // __Z_DEMO__

@@ -1,8 +1,3 @@
-#ifndef __Z_SKELANIME__
-#define __Z_SKELANIME__
-
-#include "global.h"
-#include "vt.h"
 #define ANIM_INTERP 1
 
 s32 LinkAnimation_Loop(PlayState* play, SkelAnime* skelAnime);
@@ -34,5 +29,3 @@ void SkelAnime_AnimateFrame(SkelAnime* skelAnime);
 s32 SkelAnime_LoopFull(SkelAnime* skelAnime);
 s32 SkelAnime_LoopPartial(SkelAnime* skelAnime);
 s32 SkelAnime_Once(SkelAnime* skelAnime);
-
-#endif // __Z_SKELANIME__

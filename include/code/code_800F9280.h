@@ -1,10 +1,3 @@
-#ifndef __CODE_800F9280__
-#define __CODE_800F9280__
-
-#include "ultra64.h"
-#include "global.h"
-#include "ultra64/abi.h"
-
 typedef struct {
     u8 unk_0;
     u8 unk_1; // importance?
@@ -41,5 +34,3 @@ typedef enum {
     CMDE,
     CMDF
 } SeqCmdType;
-
-#endif // __CODE_800F9280__

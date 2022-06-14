@@ -1,12 +1,3 @@
-#ifndef __Z_KANKYO__
-#define __Z_KANKYO__
-
-#include "global.h"
-#include "ultra64.h"
-#include "vt.h"
-#include "assets/objects/gameplay_keep/gameplay_keep.h"
-#include "assets/objects/gameplay_field_keep/gameplay_field_keep.h"
-
 typedef enum {
     /* 0x00 */ LIGHTNING_BOLT_START,
     /* 0x01 */ LIGHTNING_BOLT_WAIT,
@@ -77,5 +68,3 @@ f32 Environment_RandCentered(void);
 void Environment_DrawLightningFlash(PlayState* play, u8 red, u8 green, u8 blue, u8 alpha);
 void Environment_PlayTimeBasedSequence(PlayState* play);
 void Environment_UpdateRain(PlayState* play);
-
-#endif // __Z_KANKYO__

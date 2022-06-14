@@ -1,8 +1,3 @@
-#ifndef __Z_BGCHECK__
-#define __Z_BGCHECK__
-
-#include "global.h"
-#include "vt.h"
 #define SS_NULL 0xFFFF
 #define BGCHECK_CHECK_WALL (1 << 0)
 #define BGCHECK_CHECK_FLOOR (1 << 1)
@@ -127,5 +122,3 @@ void BgCheck_DrawDynaPolyList(PlayState* play, CollisionContext* colCtx, DynaCol
 void BgCheck_DrawBgActor(PlayState* play, CollisionContext* colCtx, s32 bgId);
 void BgCheck_DrawStaticPoly(PlayState* play, CollisionContext* colCtx, CollisionPoly* poly, u8 r, u8 g, u8 b);
 void BgCheck_DrawStaticPolyList(PlayState* play, CollisionContext* colCtx, SSList* ssList, u8 r, u8 g, u8 b);
-
-#endif // __Z_BGCHECK__

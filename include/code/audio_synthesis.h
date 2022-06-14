@@ -1,8 +1,3 @@
-#ifndef __AUDIO_SYNTHESIS__
-#define __AUDIO_SYNTHESIS__
-
-#include "ultra64.h"
-#include "global.h"
 #define DEFAULT_LEN_1CH 0x1A0
 #define DEFAULT_LEN_2CH 0x340
 #define DMEM_TEMP 0x3C0
@@ -99,5 +94,3 @@ Acmd* AudioSynth_FinalResample(Acmd* cmd, NoteSynthesisState* synthState, s32 co
 Acmd* AudioSynth_ProcessEnvelope(Acmd* cmd, NoteSubEu* noteSubEu, NoteSynthesisState* synthState, s32 aiBufLen, u16 inBuf, s32 headsetPanSettings, s32 flags);
 Acmd* AudioSynth_LoadWaveSamples(Acmd* cmd, NoteSubEu* noteSubEu, NoteSynthesisState* synthState, s32 nSamplesToLoad);
 Acmd* AudioSynth_NoteApplyHeadsetPanEffects(Acmd* cmd, NoteSubEu* noteSubEu, NoteSynthesisState* synthState, s32 bufLen, s32 flags, s32 side);
-
-#endif // __AUDIO_SYNTHESIS__

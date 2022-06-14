@@ -1,7 +1,3 @@
-#ifndef __UCODE_DISAS__
-#define __UCODE_DISAS__
-
-#include "global.h"
 #define F3DZEX_CONST(name) \
 	{ name, #name }
 #define F3DZEX_FLAG(set, unset) \
@@ -29,5 +25,3 @@ void UCodeDisas_SetCurUCodeImpl(UCodeDisas* this, void* ptr);
 void UCodeDisas_ParseGeometryMode(UCodeDisas* this, u32 mode);
 void UCodeDisas_ParseRenderMode(UCodeDisas* this, u32 mode);
 void UCodeDisas_PrintVertices(UCodeDisas* this, Vtx* vtx, s32 count, s32 start);
-
-#endif // __UCODE_DISAS__

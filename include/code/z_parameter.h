@@ -1,11 +1,3 @@
-#ifndef __Z_PARAMETER__
-#define __Z_PARAMETER__
-
-#include "global.h"
-#include "vt.h"
-#include "assets/textures/parameter_static/parameter_static.h"
-#include "assets/textures/do_action_static/do_action_static.h"
-#include "assets/textures/icon_item_static/icon_item_static.h"
 #define DO_ACTION_TEX_WIDTH 48
 #define DO_ACTION_TEX_HEIGHT 16
 #define DO_ACTION_TEX_SIZE ((DO_ACTION_TEX_WIDTH * DO_ACTION_TEX_HEIGHT) / 2) // (sizeof(gCheckDoActionENGTex))
@@ -35,5 +27,3 @@ void Interface_DrawActionButton(PlayState* play);
 void Interface_InitVertices(PlayState* play);
 void func_8008A8B8(PlayState* play, s32 topY, s32 bottomY, s32 leftX, s32 rightX);
 void func_8008A994(InterfaceContext* interfaceCtx);
-
-#endif // __Z_PARAMETER__

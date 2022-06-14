@@ -1,10 +1,3 @@
-#ifndef __Z_VR_BOX__
-#define __Z_VR_BOX__
-
-#include "global.h"
-#include "vt.h"
-#include "z64environment.h"
-
 extern u32 D_8012AC90[4];
 extern u16 D_8012ACA0[2][0];
 extern s16 D_8012AD20[5];
@@ -30,5 +23,3 @@ s32 func_800AE2C0(SkyboxContext* skyboxCtx, Vtx* roomVtx, s32 arg2, s32 arg3, s3
 void func_800AEFC8(SkyboxContext* skyboxCtx, s16 skyboxId);
 void func_800AF178(SkyboxContext* skyboxCtx, s32 arg1);
 void Skybox_Setup(PlayState* play, SkyboxContext* skyboxCtx, s16 skyboxId);
-
-#endif // __Z_VR_BOX__

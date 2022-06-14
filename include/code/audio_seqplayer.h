@@ -1,8 +1,3 @@
-#ifndef __AUDIO_SEQPLAYER__
-#define __AUDIO_SEQPLAYER__
-
-#include "ultra64.h"
-#include "global.h"
 #define PORTAMENTO_IS_SPECIAL(x) ((x).mode & 0x80)
 #define PORTAMENTO_MODE(x) ((x).mode & ~0x80)
 #define PORTAMENTO_MODE_1 1
@@ -54,5 +49,3 @@ void AudioSeq_SetInstrument(SequenceChannel* channel, u8 instId);
 void AudioSeq_SequenceChannelSetVolume(SequenceChannel* channel, u8 volume);
 void AudioSeq_SequenceChannelProcessScript(SequenceChannel* channel);
 void AudioSeq_SequencePlayerProcessSequence(SequencePlayer* seqPlayer);
-
-#endif // __AUDIO_SEQPLAYER__

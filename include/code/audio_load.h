@@ -1,8 +1,3 @@
-#ifndef __AUDIO_LOAD__
-#define __AUDIO_LOAD__
-
-#include "ultra64.h"
-#include "global.h"
 #define MK_ASYNC_MSG(retData, tableType, id, loadStatus) \
     (((retData) << 24) | ((tableType) << 16) | ((id) << 8) | (loadStatus))
 #define ASYNC_TBLTYPE(v) ((u8)(v >> 16))
@@ -113,5 +108,3 @@ void AudioLoad_PreloadSamplesForFont(s32 fontId, s32 async, RelocInfo* relocInfo
 void AudioLoad_Unused3(void);
 void AudioLoad_Unused4(void);
 void AudioLoad_Unused5(void);
-
-#endif // __AUDIO_LOAD__
