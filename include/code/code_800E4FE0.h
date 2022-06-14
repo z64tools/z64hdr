@@ -1,3 +1,7 @@
+#ifndef __CODE_800E4FE0__
+#define __CODE_800E4FE0__
+
+#include "global.h"
 #define SAMPLES_TO_OVERPRODUCE 0x10
 #define EXTRA_BUFFERED_AI_SAMPLES_TARGET 0x80
 
@@ -53,3 +57,5 @@ void Audio_WaitForAudioTask(void);
 s32 func_800E6590(s32 playerIdx, s32 arg1, s32 arg2);
 void func_800E66A0(void);
 s32 func_800E66C0(s32 arg0);
+
+#endif // __CODE_800E4FE0__

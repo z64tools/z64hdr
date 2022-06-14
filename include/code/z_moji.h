@@ -1,3 +1,7 @@
+#ifndef __Z_MOJI__
+#define __Z_MOJI__
+
+#include "global.h"
 #define DISP_CHAR_WIDTH 8
 #define DISP_CHAR_HEIGHT 8
 #define TEX_CHAR_WIDTH 8
@@ -20,3 +24,5 @@ void Moji_SetColor(u32 red, u32 green, u32 blue, u32 alpha);
 void Moji_SetPosition(s32 gridX, s32 gridY);
 void Moji_DrawChar(GraphicsContext* gfxCtx, char c);
 void Moji_DrawString(GraphicsContext* gfxCtx, const char* str);
+
+#endif // __Z_MOJI__

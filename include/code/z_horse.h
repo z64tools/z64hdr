@@ -1,3 +1,9 @@
+#ifndef __Z_HORSE__
+#define __Z_HORSE__
+
+#include "global.h"
+#include "vt.h"
+
 typedef struct {
     /* 0x00 */ s16 scene;
     /* 0x02 */ Vec3s pos;
@@ -12,3 +18,5 @@ typedef struct {
     /* 0x0E */ s16 angle;
     /* 0x10 */ s16 type;
 } struct_8011F9B8;
+
+#endif // __Z_HORSE__

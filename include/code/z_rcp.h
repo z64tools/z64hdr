@@ -1,3 +1,8 @@
+#ifndef __Z_RCP__
+#define __Z_RCP__
+
+#include "global.h"
+
 extern Gfx sSetupDL[71][6];
 extern Gfx sFillSetupDL[22];
 extern Gfx D_80127030[15];
@@ -29,3 +34,5 @@ void Gfx_SetupDL_49Xlu(GraphicsContext* gfxCtx);
 void Gfx_SetupDL_56Opa(GraphicsContext* gfxCtx);
 void Gfx_SetupDL_59Opa(GraphicsContext* gfxCtx);
 Gfx* func_80094E54(Gfx** gfxp, u32 x, u32 y);
+
+#endif // __Z_RCP__

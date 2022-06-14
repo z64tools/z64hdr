@@ -1,3 +1,9 @@
+#ifndef __FAULT_DRAWER__
+#define __FAULT_DRAWER__
+
+#include "global.h"
+#include "vt.h"
+
 typedef struct {
 	/* 0x00 */ u16* fb;
 	/* 0x04 */ u16  w;
@@ -49,3 +55,5 @@ void FaultDrawer_SetDrawerFB(void* fb, u16 w, u16 h);
 void FaultDrawer_SetInputCallback(void (*callback)(void));
 void FaultDrawer_WritebackFBDCache(void);
 void FaultDrawer_Init(void);
+
+#endif // __FAULT_DRAWER__

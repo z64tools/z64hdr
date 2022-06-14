@@ -1,3 +1,9 @@
+#ifndef __Z_SRAM__
+#define __Z_SRAM__
+
+#include "global.h"
+#include "vt.h"
+
 typedef struct {
 	/* 0x00 */ char newf[6]; // string "ZELDAZ"
 	/* 0x06 */ s16  deaths;
@@ -80,3 +86,5 @@ extern Inventory sNewSaveInventory;
 extern SavePlayerData sDebugSavePlayerData;
 extern ItemEquips sDebugSaveEquips;
 extern Inventory sDebugSaveInventory;
+
+#endif // __Z_SRAM__

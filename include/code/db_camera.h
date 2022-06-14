@@ -1,3 +1,9 @@
+#ifndef __DB_CAMERA__
+#define __DB_CAMERA__
+
+#include "ultra64.h"
+#include "global.h"
+
 extern char* D_8012CEE0[];
 extern char* D_8012CEE4;
 extern char* D_8012CEE8;
@@ -82,3 +88,5 @@ extern char D_8012D13C[];
 void func_800BB03C(Camera* cam);
 void func_800BB060(void);
 s32 func_800BB06C(void);
+
+#endif // __DB_CAMERA__

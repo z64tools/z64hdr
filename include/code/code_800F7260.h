@@ -1,3 +1,10 @@
+#ifndef __CODE_800F7260__
+#define __CODE_800F7260__
+
+#include "ultra64.h"
+#include "global.h"
+#include "vt.h"
+
 typedef struct {
     /* 0x00 */ u16 sfxId;
     /* 0x04 */ Vec3f* pos;
@@ -41,3 +48,5 @@ void Audio_RemoveMatchingSoundRequests(u8 aspect, SoundBankEntry* cmp);
 void Audio_RemoveSoundBankEntry(u8 bankId, u8 entryIndex);
 void Audio_SetUnusedBankLerp(u8 bankId, u8 target, u16 delay);
 void Audio_StepUnusedBankLerp(u8 bankId);
+
+#endif // __CODE_800F7260__

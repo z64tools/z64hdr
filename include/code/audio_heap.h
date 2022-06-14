@@ -1,3 +1,9 @@
+#ifndef __AUDIO_HEAP__
+#define __AUDIO_HEAP__
+
+#include "ultra64.h"
+#include "global.h"
+
 void AudioHeap_InitSampleCaches(u32 persistentSampleCacheSize, u32 temporarySampleCacheSize);
 SampleCacheEntry* AudioHeap_AllocTemporarySampleCacheEntry(u32 size);
 SampleCacheEntry* AudioHeap_AllocPersistentSampleCacheEntry(u32 size);
@@ -23,6 +29,9 @@ void AudioHeap_UpdateReverb(SynthesisReverb* reverb);
 void AudioHeap_UpdateReverbs(void);
 void AudioHeap_ClearCurrentAiBuffer(void);
 
+#ifdef AVOID_UB
+#endif
+
 void AudioHeap_InitSampleCaches(u32 persistentSampleCacheSize, u32 temporarySampleCacheSize);
 SampleCacheEntry* AudioHeap_AllocTemporarySampleCacheEntry(u32 size);
 void AudioHeap_UnapplySampleCacheForFont(SampleCacheEntry* entry, s32 fontId);
@@ -44,3 +53,5 @@ void AudioHeap_ApplySampleBankCacheInternal(s32 apply, s32 id);
 void AudioHeap_DiscardSampleBank(s32 sampleBankId);
 void AudioHeap_ApplySampleBankCacheInternal(s32 apply, s32 sampleBankId);
 void AudioHeap_DiscardSampleBanks(void);
+
+#endif // __AUDIO_HEAP__

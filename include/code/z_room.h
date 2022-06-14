@@ -1,3 +1,9 @@
+#ifndef __Z_ROOM__
+#define __Z_ROOM__
+
+#include "global.h"
+#include "vt.h"
+
 void Room_Draw0(PlayState* play, Room* room, u32 flags);
 void Room_Draw2(PlayState* play, Room* room, u32 flags);
 void Room_Draw1(PlayState* play, Room* room, u32 flags);
@@ -27,3 +33,5 @@ void Room_Draw1Single(PlayState* play, Room* room, u32 flags);
 BgImage* func_80096A74(MeshHeader1Multi* meshHeader1Multi, PlayState* play);
 void Room_Draw1Multi(PlayState* play, Room* room, u32 flags);
 void Room_Draw1(PlayState* play, Room* room, u32 flags);
+
+#endif // __Z_ROOM__

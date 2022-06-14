@@ -1,3 +1,9 @@
+#ifndef __Z_SCENE__
+#define __Z_SCENE__
+
+#include "global.h"
+#include "vt.h"
+
 extern RomFile sNaviMsgFiles[];
 
 void* func_800982FC(ObjectContext* objectCtx, s32 bankIndex, s16 objectId);
@@ -30,3 +36,5 @@ void Scene_CommandMiscSettings(PlayState* play, SceneCmd* cmd);
 extern RomFile sNaviMsgFiles[3];
 
 extern u32 gObjectTableSize;
+
+#endif // __Z_SCENE__

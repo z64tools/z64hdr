@@ -1,3 +1,9 @@
+#ifndef __IRQMGR__
+#define __IRQMGR__
+
+#include "global.h"
+#include "vt.h"
+
 extern volatile OSTime sIrqMgrResetTime;
 extern u32 sIrqMgrRetraceCount;
 
@@ -19,3 +25,5 @@ void IrqMgr_HandlePreNMI500(IrqMgr* irqMgr);
 void IrqMgr_HandleRetrace(IrqMgr* irqMgr);
 void IrqMgr_ThreadEntry(void* arg);
 void IrqMgr_Init(IrqMgr* irqMgr, void* stack, OSPri pri, u8 retraceCount);
+
+#endif // __IRQMGR__

@@ -1,3 +1,9 @@
+#ifndef __Z_CAMERA_DATA__
+#define __Z_CAMERA_DATA__
+
+#include "ultra64.h"
+#include "global.h"
+
 typedef struct {
     s16 val;
     s16 dataType;
@@ -381,3 +387,5 @@ extern s16 D_8011DAFC[6];
 extern PlayState* D_8015BD7C;
 extern DbCamera D_8015BD80;
 extern CollisionPoly* playerFloorPoly;
+
+#endif // __Z_CAMERA_DATA__

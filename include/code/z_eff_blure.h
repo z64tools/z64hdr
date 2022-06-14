@@ -1,3 +1,9 @@
+#ifndef __Z_EFF_BLURE__
+#define __Z_EFF_BLURE__
+
+#include "global.h"
+#include "assets/objects/gameplay_keep/gameplay_keep.h"
+
 void EffectBlure_InitElements(EffectBlure* this);
 void EffectBlure_UpdateFlags(EffectBlureElement* elem);
 void EffectBlure_GetComputedValues(EffectBlure* this, s32 index, f32 ratio, Vec3s* vec1, Vec3s* vec2, Color_RGBA8* color1, Color_RGBA8* color2);
@@ -13,3 +19,5 @@ extern s32 D_80115788;
 
 void EffectBlure_DrawSimpleVertices(GraphicsContext* gfxCtx, EffectBlure* this, Vtx* vtx);
 void EffectBlure_DrawSimple(EffectBlure* this2, GraphicsContext* gfxCtx);
+
+#endif // __Z_EFF_BLURE__

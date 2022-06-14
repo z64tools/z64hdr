@@ -1,3 +1,11 @@
+#ifndef __Z_CAMERA__
+#define __Z_CAMERA__
+
+#include "ultra64.h"
+#include "global.h"
+#include "vt.h"
+#include "overlays/actors/ovl_En_Horse/z_en_horse.h"
+
 s16 Camera_ChangeSettingFlags(Camera* camera, s16 setting, s16 flags);
 s32 Camera_ChangeModeFlags(Camera* camera, s16 mode, u8 flags);
 s32 Camera_QRegInit(void);
@@ -160,3 +168,5 @@ s16 Camera_GetInputDirPitch(Camera* camera);
 s32 Camera_UnsetParam(Camera* camera, s16 param);
 s32 Camera_GetDbgCamEnabled();
 s32 Camera_QRegInit(void);
+
+#endif // __Z_CAMERA__

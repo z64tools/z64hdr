@@ -1,3 +1,8 @@
+#ifndef __GFXPRINT__
+#define __GFXPRINT__
+
+#include "global.h"
+
 extern u16 sGfxPrintFontTLUT[64];
 extern u16 sGfxPrintRainbowTLUT[16];
 extern u8 sGfxPrintRainbowData[8];
@@ -10,3 +15,5 @@ void GfxPrint_PrintStringWithSize(GfxPrint* this, const void* buffer, u32 charSi
 void GfxPrint_PrintString(GfxPrint* this, const char* str);
 void* GfxPrint_Callback(void* arg, const char* str, u32 size);
 s32 GfxPrint_VPrintf(GfxPrint* this, const char* fmt, va_list args);
+
+#endif // __GFXPRINT__

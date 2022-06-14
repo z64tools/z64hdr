@@ -1,3 +1,8 @@
+#ifndef __Z_JPEG__
+#define __Z_JPEG__
+
+#include "global.h"
+#include "vt.h"
 #define MARKER_ESCAPE 0x00
 #define MARKER_SOI 0xD8
 #define MARKER_SOF 0xC0
@@ -15,3 +20,5 @@ void Jpeg_ScheduleDecoderTask(JpegContext* ctx);
 void Jpeg_CopyToZbuffer(u16* src, u16* zbuffer, s32 x, s32 y);
 u16 Jpeg_GetUnalignedU16(u8* ptr);
 void Jpeg_ParseMarkers(u8* ptr, JpegContext* ctx);
+
+#endif // __Z_JPEG__

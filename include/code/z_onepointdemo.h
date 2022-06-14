@@ -1,3 +1,10 @@
+#ifndef __Z_ONEPOINTDEMO__
+#define __Z_ONEPOINTDEMO__
+
+#include "global.h"
+#include "vt.h"
+#include "overlays/actors/ovl_En_Sw/z_en_sw.h"
+
 void OnePointCutscene_AddVecSphToVec3f(Vec3f* dst, Vec3f* src, VecSph* vecSph);
 s16 OnePointCutscene_Vec3fYaw(Vec3f* vec1, Vec3f* vec2);
 void OnePointCutscene_Vec3sToVec3f(Vec3f* src, Vec3s* dst);
@@ -16,3 +23,5 @@ s32 OnePointCutscene_RemoveCamera(PlayState* play, s16 subCamId);
 #define vParentCamId temp1
 #define vLastHigherCat temp2
 #define vSubCamId temp2
+
+#endif // __Z_ONEPOINTDEMO__

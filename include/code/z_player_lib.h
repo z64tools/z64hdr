@@ -1,3 +1,11 @@
+#ifndef __Z_PLAYER_LIB__
+#define __Z_PLAYER_LIB__
+
+#include "global.h"
+#include "assets/objects/gameplay_keep/gameplay_keep.h"
+#include "assets/objects/object_link_boy/object_link_boy.h"
+#include "assets/objects/object_link_child/object_link_child.h"
+
 typedef struct {
     /* 0x00 */ u8 flag;
     /* 0x02 */ u16 textId;
@@ -58,6 +66,13 @@ extern void* sMouthTextures[2][4];
 
 extern Gfx* sBootDListGroups[3][2];
 
+#ifndef AVOID_UB
+#else
+#endif
+#ifndef AVOID_UB
+#else
+#endif
+
 extern Vec3f sZeroVec;
 extern Vec3f D_80126038[2];
 extern f32 D_80126050[2];
@@ -95,3 +110,5 @@ extern u8 sPauseModelGroupBySword[4];
 
 s32 Player_OverrideLimbDrawPause(PlayState* play, s32 limbIndex, Gfx** dList, Vec3f* pos, Vec3s* rot, void* arg);
 void Player_DrawPauseImpl(PlayState* play, void* gameplayKeep, void* linkObject, SkelAnime* skelAnime, Vec3f* pos, Vec3s* rot, f32 scale, s32 sword, s32 tunic, s32 shield, s32 boots, s32 width, s32 height, Vec3f* eye, Vec3f* at, f32 fovy, void* colorFrameBuffer, void* depthFrameBuffer);
+
+#endif // __Z_PLAYER_LIB__

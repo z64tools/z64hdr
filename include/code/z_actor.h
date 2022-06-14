@@ -1,3 +1,14 @@
+#ifndef __Z_ACTOR__
+#define __Z_ACTOR__
+
+#include "global.h"
+#include "vt.h"
+#include "overlays/actors/ovl_Arms_Hook/z_arms_hook.h"
+#include "overlays/actors/ovl_En_Part/z_en_part.h"
+#include "assets/objects/gameplay_keep/gameplay_keep.h"
+#include "assets/objects/gameplay_dangeon_keep/gameplay_dangeon_keep.h"
+#include "assets/objects/object_bdoor/object_bdoor.h"
+
 void ActorShadow_DrawFoot(PlayState* play, Light* light, MtxF* arg2, s32 arg3, f32 arg4, f32 arg5, f32 arg6);
 
 typedef struct {
@@ -136,3 +147,5 @@ s32 func_80037CB8(PlayState* play, Actor* actor, s16 arg2);
 s32 Actor_TrackNone(Vec3s* headRot, Vec3s* torsoRot);
 s32 Actor_TrackPoint(Actor* actor, Vec3f* target, Vec3s* headRot, Vec3s* torsoRot);
 s32 Actor_TrackPlayerSetFocusHeight(PlayState* play, Actor* actor, Vec3s* headRot, Vec3s* torsoRot, f32 focusHeight);
+
+#endif // __Z_ACTOR__

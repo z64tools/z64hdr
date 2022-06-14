@@ -1,3 +1,7 @@
+#ifndef __SCHED__
+#define __SCHED__
+
+#include "global.h"
 #define RSP_DONE_MSG 667
 #define RDP_DONE_MSG 668
 #define NOTIFY_MSG 670 // original name: ENTRY_MSG
@@ -26,3 +30,5 @@ void Sched_HandleRDPDone(Scheduler* sc);
 void Sched_Notify(Scheduler* sc);
 void Sched_ThreadEntry(void* arg);
 void Sched_Init(Scheduler* sc, void* stack, OSPri priority, UNK_TYPE arg3, UNK_TYPE arg4, IrqMgr* irqMgr);
+
+#endif // __SCHED__

@@ -1,3 +1,8 @@
+#ifndef __CODE_800EC960__
+#define __CODE_800EC960__
+
+#include "ultra64.h"
+#include "global.h"
 #define Audio_DisableSeq(playerIdx, fadeOut) Audio_QueueCmdS32(0x83000000 | ((u8)playerIdx << 16), fadeOut)
 #define Audio_StartSeq(playerIdx, fadeTimer, seqId) \
 	Audio_QueueSeqCmd(0x00000000 | ((u8)playerIdx << 24) | ((u8)(fadeTimer) << 0x10) | (u16)seqId)
@@ -345,3 +350,5 @@ void func_800F6B3C(void);
 void func_800F6BDC(void);
 void Audio_StartNatureAmbienceSequence(u16 playerIO, u16 channelMask);
 void func_800F7208(void);
+
+#endif // __CODE_800EC960__

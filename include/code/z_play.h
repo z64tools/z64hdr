@@ -1,3 +1,9 @@
+#ifndef __Z_PLAY__
+#define __Z_PLAY__
+
+#include "global.h"
+#include "vt.h"
+
 extern Input* D_8012D1F8;
 extern TransitionUnk sTrnsnUnk;
 extern VisMono D_80161498;
@@ -19,3 +25,5 @@ s16 Play_CameraGetUID(PlayState* this, s16 camId);
 s16 func_800C09D8(PlayState* this, s16 camId, s16 arg2);
 void Play_SetRespawnData(PlayState* this, s32 respawnMode, s16 entranceIndex, s32 roomIndex, s32 playerParams, Vec3f* pos, s16 yaw);
 void Play_LoadToLastEntrance(PlayState* this);
+
+#endif // __Z_PLAY__

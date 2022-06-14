@@ -1,3 +1,10 @@
+#ifndef __FAULT__
+#define __FAULT__
+
+#include "global.h"
+#include "vt.h"
+#include "alloca.h"
+
 void FaultDrawer_Init(void);
 void FaultDrawer_SetOsSyncPrintfEnabled(u32 enabled);
 void FaultDrawer_DrawRecImpl(s32 xStart, s32 yStart, s32 xEnd, s32 yEnd, u16 color);
@@ -68,3 +75,5 @@ void Fault_Init(void);
 void Fault_HungupFaultClient(const char* exp1, const char* exp2);
 void Fault_AddHungupAndCrashImpl(const char* exp1, const char* exp2);
 void Fault_AddHungupAndCrash(const char* file, s32 line);
+
+#endif // __FAULT__
