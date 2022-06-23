@@ -11,7 +11,7 @@ void Room_Draw1(PlayState* play, Room* room, u32 flags);
 extern Vec3f D_801270A0;
 extern Gfx D_801270B0[19];
 
-extern void (*sRoomDrawHandlers[3]);
+extern void (*sRoomDrawHandlers[3])(PlayState*,Room*,u32);
 
 void Room_Draw0(PlayState* play, Room* room, u32 flags);
 
