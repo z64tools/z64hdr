@@ -24,12 +24,12 @@ s32 DmaMgr_SendRequestImpl(DmaRequest* req, u32 ram, u32 vrom, u32 size, u32 unk
 s32 DmaMgr_SendRequest0(u32 ram, u32 vrom, u32 size);
 void DmaMgr_Init(void);
 s32 DmaMgr_SendRequest2(DmaRequest* req, u32 ram, u32 vrom, u32 size, u32 unk5, OSMesgQueue* queue, OSMesg msg
-#ifdef _Z64HDR_MQ_DEBUG_
+#ifdef _Z64HDR_OOT_MQ_DEBUG_H_
                         , const char* file, s32 line
 #endif
 );
 s32 DmaMgr_SendRequest1(void* ram0, u32 vrom, u32 size
-#ifdef _Z64HDR_MQ_DEBUG_
+#ifdef _Z64HDR_OOT_MQ_DEBUG_H_
                         , const char* file, s32 line
 #endif
 );

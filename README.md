@@ -65,7 +65,7 @@ Addresses from:
     ```
     void* bcopy(const void* __src, void* __dest, u32 __n);
     ```
-- functions.h: add `#ifdef _Z64HDR_MQ_DEBUG_` around `, const char* file, s32 line` in
+- functions.h: add `#ifdef _Z64HDR_OOT_MQ_DEBUG_H_` around `, const char* file, s32 line` in
     ```
     DmaMgr_SendRequest2
     DmaMgr_SendRequest1

@@ -140,6 +140,8 @@ typedef struct {
 #define BGCHECKFLAG_CRUSHED (1 << 8) // Crushed between a floor and ceiling (triggers a void for player)
 #define BGCHECKFLAG_PLAYER_WALL_INTERACT (1 << 9) // Only set/used by player, related to interacting with walls
 
+#include "z64bgcheck.h"
+
 typedef struct Actor {
     /* 0x000 */ s16 id; // Actor ID
     /* 0x002 */ u8 category; // Actor category. Refer to the corresponding enum for values
@@ -196,7 +198,7 @@ typedef struct Actor {
     /* 0x130 */ ActorFunc update; // Update Routine. Called by `Actor_UpdateAll`
     /* 0x134 */ ActorFunc draw; // Draw Routine. Called by `Actor_Draw`
     /* 0x138 */ ActorOverlay* overlayEntry; // Pointer to the overlay table entry for this actor
-    #ifdef _Z64HDR_MQ_DEBUG_
+    #ifdef _Z64HDR_OOT_MQ_DEBUG_H_
     /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
     #endif
 } Actor; // size = 0x14C
