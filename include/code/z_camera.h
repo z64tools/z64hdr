@@ -54,6 +54,7 @@ s32 Camera_GetWaterBoxDataIdx(Camera* camera, f32* waterY);
 f32 Camera_GetWaterSurface(Camera* camera, Vec3f* chkPos, s32* envProp);
 s16 Camera_XZAngle(Vec3f* to, Vec3f* from);
 s16 func_80044ADC(Camera* camera, s16 yaw, s16 arg2);
+Vec3f* Camera_CalcUpFromPitchYawRoll(Vec3f* dest, s16 pitch, s16 yaw, s16 roll);
 f32 Camera_ClampLERPScale(Camera* camera, f32 maxLERPScale);
 void Camera_CopyDataToRegs(Camera* camera, s16 mode);
 s32 Camera_CopyPREGToModeValues(Camera* camera);

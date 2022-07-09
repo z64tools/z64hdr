@@ -352,7 +352,7 @@ s32 Camera_Special6(Camera* camera);
 s32 Camera_Special7(Camera* camera);
 s32 Camera_Special8(Camera* camera);
 s32 Camera_Special9(Camera* camera);
-extern s32 (*sCameraFunctions[71]);
+extern s32 (*sCameraFunctions[71])(Camera*);
 extern s32 sInitRegs;
 extern s32 sDbgModeIdx;
 extern s16 sNextUID;
