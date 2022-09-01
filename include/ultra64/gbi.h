@@ -2598,7 +2598,7 @@ typedef struct {
 typedef struct {
   _Alignas(8)
   Light_t         l;
-  LightPos_t      lpos;
+  LightPos_t      lPos;
 } Light;
 
 typedef struct {
