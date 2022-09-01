@@ -2862,4 +2862,70 @@ typedef struct {
         gsSPLoadUcode(OS_K0_TO_PHYSICAL(& ucode##TextStart),       \
               OS_K0_TO_PHYSICAL(& ucode##DataStart))
 
+/*
+ * DMA macros
+ */
+
+#define _DW(macro) do {macro} while (0)
+
+#define gDma0p(pkt, c, s, l) \
+	_DW( \
+	{ \
+		Gfx* _g = (Gfx*)(pkt); \
+ \
+		_g->words.w0 = _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24); \
+		_g->words.w1 = (unsigned int)(s); \
+	} \
+	)
+
+#define gsDma0p(c, s, l) \
+	{ \
+		_SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24), (unsigned int)(s) \
+	}
+
+#define gDma1p(pkt, c, s, l, p) \
+	_DW( \
+	{ \
+		Gfx* _g = (Gfx*)(pkt); \
+ \
+		_g->words.w0 = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
+		_SHIFTL((l), 0, 16)); \
+		_g->words.w1 = (unsigned int)(s); \
+	} \
+	)
+
+#define gsDma1p(c, s, l, p) \
+	{ \
+		(_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
+		_SHIFTL((l), 0, 16)), \
+		(unsigned int)(s) \
+	}
+
+#define gDma2p(pkt, c, adrs, len, idx, ofs) \
+	_DW( \
+	{ \
+		Gfx* _g = (Gfx*)(pkt); \
+		_g->words.w0 = (_SHIFTL((c), 24, 8) | _SHIFTL(((len) - 1) / 8, 19, 5) | \
+		_SHIFTL((ofs) / 8, 8, 8) | _SHIFTL((idx), 0, 8)); \
+		_g->words.w1 = (unsigned int)(adrs); \
+	} \
+	)
+#define gsDma2p(c, adrs, len, idx, ofs) \
+	{ \
+		(_SHIFTL((c), 24, 8) | _SHIFTL(((len) - 1) / 8, 19, 5) | \
+		_SHIFTL((ofs) / 8, 8, 8) | _SHIFTL((idx), 0, 8)), \
+		(unsigned int)(adrs) \
+	}
+
+#define gDPNoOpHere(pkt, file, line)        gDma1p(pkt, G_NOOP, file, line, 1)
+#define gDPNoOpString(pkt, data, n)         gDma1p(pkt, G_NOOP, data, n, 2)
+#define gDPNoOpWord(pkt, data, n)           gDma1p(pkt, G_NOOP, data, n, 3)
+#define gDPNoOpFloat(pkt, data, n)          gDma1p(pkt, G_NOOP, data, n, 4)
+#define gDPNoOpQuiet(pkt)                   gDma1p(pkt, G_NOOP, 0, 0, 5)
+#define gDPNoOpVerbose(pkt, n)              gDma1p(pkt, G_NOOP, 0, n, 5)
+#define gDPNoOpCallBack(pkt, callback, arg) gDma1p(pkt, G_NOOP, callback, arg, 6)
+#define gDPNoOpOpenDisp(pkt, file, line)    gDma1p(pkt, G_NOOP, file, line, 7)
+#define gDPNoOpCloseDisp(pkt, file, line)   gDma1p(pkt, G_NOOP, file, line, 8)
+#define gDPNoOpTag3(pkt, type, data, n)     gDma1p(pkt, G_NOOP, data, n, type)
+
 #endif
