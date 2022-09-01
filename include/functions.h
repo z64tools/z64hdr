@@ -4,7 +4,11 @@
 #include "z64.h"
 #include "macros.h"
 
+#ifdef OOT_MQ_DEBUG_PAL
 f32 fabsf(f32 f);
+f32 sqrtf(f32 f);
+f64 sqrt(f64 f);
+#else
 #ifndef __sgi
 #define fabsf(f) __builtin_fabsf((f32)(f))
 #else
@@ -14,6 +18,7 @@ f32 sqrtf(f32 f);
 #pragma intrinsic(sqrtf)
 f64 sqrt(f64 f);
 #pragma intrinsic(sqrt)
+#endif
 
 void cleararena(void);
 void bootproc(void);

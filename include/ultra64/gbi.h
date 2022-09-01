@@ -2855,4 +2855,11 @@ typedef struct {
 #define gO_(opc,hi,lo)                ((Gfx){gF_(opc,8,24)|gI_(hi),gI_(lo)})
 #define gD_(gdl,m,...)                gDisplayListPut(gdl,m(__VA_ARGS__))
 
+#define gSPLoadUcodeL(pkt, ucode)                   \
+        gSPLoadUcode((pkt), OS_K0_TO_PHYSICAL(& ucode##TextStart), \
+                    OS_K0_TO_PHYSICAL(& ucode##DataStart))
+#define gsSPLoadUcodeL(ucode)                       \
+        gsSPLoadUcode(OS_K0_TO_PHYSICAL(& ucode##TextStart),       \
+              OS_K0_TO_PHYSICAL(& ucode##DataStart))
+
 #endif
