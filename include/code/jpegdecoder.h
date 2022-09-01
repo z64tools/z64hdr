@@ -1,5 +1,5 @@
-#ifndef JPEGDECODER_H
-#define JPEGDECODER_H
+#ifndef Z64_JPEGDECODER_H
+#define Z64_JPEGDECODER_H
 
 #include "global.h"
 

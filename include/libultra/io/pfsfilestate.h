@@ -1,5 +1,5 @@
-#ifndef PFSFILESTATE_H
-#define PFSFILESTATE_H
+#ifndef Z64_PFSFILESTATE_H
+#define Z64_PFSFILESTATE_H
 
 #include "ultra64.h"
 #include "global.h"

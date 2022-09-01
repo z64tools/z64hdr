@@ -1,5 +1,5 @@
-#ifndef SLEEP_H
-#define SLEEP_H
+#ifndef Z64_SLEEP_H
+#define Z64_SLEEP_H
 
 #include "global.h"
 

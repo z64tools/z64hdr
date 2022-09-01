@@ -1,5 +1,5 @@
-#ifndef Z_PLAY_H
-#define Z_PLAY_H
+#ifndef Z64_PLAY_H
+#define Z64_PLAY_H
 
 #include "global.h"
 #include "vt.h"

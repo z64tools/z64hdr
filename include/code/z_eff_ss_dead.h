@@ -1,5 +1,5 @@
-#ifndef Z_EFF_SS_DEAD_H
-#define Z_EFF_SS_DEAD_H
+#ifndef Z64_EFF_SS_DEAD_H
+#define Z64_EFF_SS_DEAD_H
 
 #include "global.h"
 

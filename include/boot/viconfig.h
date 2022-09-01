@@ -1,5 +1,5 @@
-#ifndef VICONFIG_H
-#define VICONFIG_H
+#ifndef Z64_VICONFIG_H
+#define Z64_VICONFIG_H
 
 #include "global.h"
 #include "vt.h"

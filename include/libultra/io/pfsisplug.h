@@ -1,5 +1,5 @@
-#ifndef PFSISPLUG_H
-#define PFSISPLUG_H
+#ifndef Z64_PFSISPLUG_H
+#define Z64_PFSISPLUG_H
 
 #include "ultra64.h"
 #include "global.h"

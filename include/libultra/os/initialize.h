@@ -1,5 +1,5 @@
-#ifndef INITIALIZE_H
-#define INITIALIZE_H
+#ifndef Z64_INITIALIZE_H
+#define Z64_INITIALIZE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef GETTIME_H
-#define GETTIME_H
+#ifndef Z64_GETTIME_H
+#define Z64_GETTIME_H
 
 #include "global.h"
 

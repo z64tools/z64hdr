@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef Z64_MAIN_H
+#define Z64_MAIN_H
 
 #include "global.h"
 #include "vt.h"

@@ -1,5 +1,5 @@
-#ifndef AUDIO_PLAYBACK_H
-#define AUDIO_PLAYBACK_H
+#ifndef Z64_AUDIO_PLAYBACK_H
+#define Z64_AUDIO_PLAYBACK_H
 
 #include "global.h"
 

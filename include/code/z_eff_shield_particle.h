@@ -1,5 +1,5 @@
-#ifndef Z_EFF_SHIELD_PARTICLE_H
-#define Z_EFF_SHIELD_PARTICLE_H
+#ifndef Z64_EFF_SHIELD_PARTICLE_H
+#define Z64_EFF_SHIELD_PARTICLE_H
 
 #include "global.h"
 #include "vt.h"

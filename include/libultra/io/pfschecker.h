@@ -1,5 +1,5 @@
-#ifndef PFSCHECKER_H
-#define PFSCHECKER_H
+#ifndef Z64_PFSCHECKER_H
+#define Z64_PFSCHECKER_H
 
 #include "ultra64.h"
 #include "global.h"

@@ -1,5 +1,5 @@
-#ifndef SPTASKYIELD_H
-#define SPTASKYIELD_H
+#ifndef Z64_SPTASKYIELD_H
+#define Z64_SPTASKYIELD_H
 
 #include "global.h"
 

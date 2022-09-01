@@ -1,5 +1,5 @@
-#ifndef TWOHEADARENA_H
-#define TWOHEADARENA_H
+#ifndef Z64_TWOHEADARENA_H
+#define Z64_TWOHEADARENA_H
 
 #include "global.h"
 

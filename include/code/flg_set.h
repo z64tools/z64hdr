@@ -1,5 +1,5 @@
-#ifndef FLG_SET_H
-#define FLG_SET_H
+#ifndef Z64_FLG_SET_H
+#define Z64_FLG_SET_H
 
 #include "global.h"
 

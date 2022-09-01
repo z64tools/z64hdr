@@ -1,5 +1,5 @@
-#ifndef CODE_80043480_H
-#define CODE_80043480_H
+#ifndef Z64_CODE_80043480_H
+#define Z64_CODE_80043480_H
 
 #include "global.h"
 

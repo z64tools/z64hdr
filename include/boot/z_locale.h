@@ -1,5 +1,5 @@
-#ifndef Z_LOCALE_H
-#define Z_LOCALE_H
+#ifndef Z64_LOCALE_H
+#define Z64_LOCALE_H
 
 #include "global.h"
 #include "vt.h"

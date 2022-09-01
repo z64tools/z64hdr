@@ -1,5 +1,5 @@
-#ifndef CODE_800E4FE0_H
-#define CODE_800E4FE0_H
+#ifndef Z64_CODE_800E4FE0_H
+#define Z64_CODE_800E4FE0_H
 
 #include "global.h"
 

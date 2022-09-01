@@ -1,5 +1,5 @@
-#ifndef __OSMEMMOVE_H
-#define __OSMEMMOVE_H
+#ifndef Z64___OSMEMMOVE_H
+#define Z64___OSMEMMOVE_H
 
 #include "global.h"
 

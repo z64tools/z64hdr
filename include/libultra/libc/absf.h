@@ -1,5 +1,5 @@
-#ifndef ABSF_H
-#define ABSF_H
+#ifndef Z64_ABSF_H
+#define Z64_ABSF_H
 
 #include "global.h"
 

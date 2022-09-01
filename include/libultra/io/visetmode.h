@@ -1,5 +1,5 @@
-#ifndef VISETMODE_H
-#define VISETMODE_H
+#ifndef Z64_VISETMODE_H
+#define Z64_VISETMODE_H
 
 #include "global.h"
 

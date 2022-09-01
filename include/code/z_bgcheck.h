@@ -1,5 +1,5 @@
-#ifndef Z_BGCHECK_H
-#define Z_BGCHECK_H
+#ifndef Z64_BGCHECK_H
+#define Z64_BGCHECK_H
 
 #include "global.h"
 #include "vt.h"

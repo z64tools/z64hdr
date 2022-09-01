@@ -1,5 +1,5 @@
-#ifndef CODE_800F9280_H
-#define CODE_800F9280_H
+#ifndef Z64_CODE_800F9280_H
+#define Z64_CODE_800F9280_H
 
 #include "ultra64.h"
 #include "global.h"

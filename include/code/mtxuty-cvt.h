@@ -1,5 +1,5 @@
-#ifndef MTXUTY-CVT_H
-#define MTXUTY-CVT_H
+#ifndef Z64_MTXUTY-CVT_H
+#define Z64_MTXUTY-CVT_H
 
 #include "global.h"
 

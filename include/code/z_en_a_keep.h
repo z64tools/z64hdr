@@ -1,5 +1,5 @@
-#ifndef Z_EN_A_KEEP_H
-#define Z_EN_A_KEEP_H
+#ifndef Z64_EN_A_KEEP_H
+#define Z64_EN_A_KEEP_H
 
 #include "global.h"
 #include "vt.h"

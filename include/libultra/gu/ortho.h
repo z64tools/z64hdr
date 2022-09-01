@@ -1,5 +1,5 @@
-#ifndef ORTHO_H
-#define ORTHO_H
+#ifndef Z64_ORTHO_H
+#define Z64_ORTHO_H
 
 #include "global.h"
 

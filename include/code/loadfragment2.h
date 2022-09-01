@@ -1,5 +1,5 @@
-#ifndef LOADFRAGMENT2_H
-#define LOADFRAGMENT2_H
+#ifndef Z64_LOADFRAGMENT2_H
+#define Z64_LOADFRAGMENT2_H
 
 #include "global.h"
 

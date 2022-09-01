@@ -1,5 +1,5 @@
-#ifndef DEVMGR_H
-#define DEVMGR_H
+#ifndef Z64_DEVMGR_H
+#define Z64_DEVMGR_H
 
 #include "global.h"
 #include "ultra64/internal.h"

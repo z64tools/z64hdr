@@ -1,5 +1,5 @@
-#ifndef EPIDMA_H
-#define EPIDMA_H
+#ifndef Z64_EPIDMA_H
+#define Z64_EPIDMA_H
 
 #include "global.h"
 #include "ultra64/internal.h"

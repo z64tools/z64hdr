@@ -1,5 +1,5 @@
-#ifndef PFSFREEBLOCKS_H
-#define PFSFREEBLOCKS_H
+#ifndef Z64_PFSFREEBLOCKS_H
+#define Z64_PFSFREEBLOCKS_H
 
 #include "ultra64.h"
 #include "global.h"

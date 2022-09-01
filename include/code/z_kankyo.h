@@ -1,5 +1,5 @@
-#ifndef Z_KANKYO_H
-#define Z_KANKYO_H
+#ifndef Z64_KANKYO_H
+#define Z64_KANKYO_H
 
 #include "global.h"
 #include "ultra64.h"

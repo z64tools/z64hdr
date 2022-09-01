@@ -1,5 +1,5 @@
-#ifndef Z_DEBUG_DISPLAY_H
-#define Z_DEBUG_DISPLAY_H
+#ifndef Z64_DEBUG_DISPLAY_H
+#define Z64_DEBUG_DISPLAY_H
 
 #include "global.h"
 #include "assets/objects/gameplay_keep/gameplay_keep.h"

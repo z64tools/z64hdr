@@ -1,5 +1,5 @@
-#ifndef Z_FBDEMO_TRIFORCE_H
-#define Z_FBDEMO_TRIFORCE_H
+#ifndef Z64_FBDEMO_TRIFORCE_H
+#define Z64_FBDEMO_TRIFORCE_H
 
 #include "global.h"
 

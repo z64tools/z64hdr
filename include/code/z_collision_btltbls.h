@@ -1,5 +1,5 @@
-#ifndef Z_COLLISION_BTLTBLS_H
-#define Z_COLLISION_BTLTBLS_H
+#ifndef Z64_COLLISION_BTLTBLS_H
+#define Z64_COLLISION_BTLTBLS_H
 
 #include "global.h"
 

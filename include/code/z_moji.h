@@ -1,5 +1,5 @@
-#ifndef Z_MOJI_H
-#define Z_MOJI_H
+#ifndef Z64_MOJI_H
+#define Z64_MOJI_H
 
 /**
  * Unused. A very simple utility for drawing text on screen.

@@ -1,5 +1,5 @@
-#ifndef AUDIO_INIT_PARAMS_H
-#define AUDIO_INIT_PARAMS_H
+#ifndef Z64_AUDIO_INIT_PARAMS_H
+#define Z64_AUDIO_INIT_PARAMS_H
 
 #include "global.h"
 

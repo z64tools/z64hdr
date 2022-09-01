@@ -1,5 +1,5 @@
-#ifndef AUDIO_EFFECTS_H
-#define AUDIO_EFFECTS_H
+#ifndef Z64_AUDIO_EFFECTS_H
+#define Z64_AUDIO_EFFECTS_H
 
 #include "ultra64.h"
 #include "global.h"

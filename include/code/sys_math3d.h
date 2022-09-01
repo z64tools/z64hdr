@@ -1,5 +1,5 @@
-#ifndef SYS_MATH3D_H
-#define SYS_MATH3D_H
+#ifndef Z64_SYS_MATH3D_H
+#define Z64_SYS_MATH3D_H
 
 #include "global.h"
 #include "vt.h"

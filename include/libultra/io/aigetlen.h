@@ -1,5 +1,5 @@
-#ifndef AIGETLEN_H
-#define AIGETLEN_H
+#ifndef Z64_AIGETLEN_H
+#define Z64_AIGETLEN_H
 
 #include "global.h"
 

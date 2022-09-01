@@ -1,5 +1,5 @@
-#ifndef Z_LIGHTS_H
-#define Z_LIGHTS_H
+#ifndef Z64_LIGHTS_H
+#define Z64_LIGHTS_H
 
 #include "global.h"
 #include "assets/objects/gameplay_keep/gameplay_keep.h"

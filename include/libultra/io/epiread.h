@@ -1,5 +1,5 @@
-#ifndef EPIREAD_H
-#define EPIREAD_H
+#ifndef Z64_EPIREAD_H
+#define Z64_EPIREAD_H
 
 #include "global.h"
 

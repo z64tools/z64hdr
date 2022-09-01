@@ -1,5 +1,5 @@
-#ifndef Z_EFFECT_H
-#define Z_EFFECT_H
+#ifndef Z64_EFFECT_H
+#define Z64_EFFECT_H
 
 #include "global.h"
 

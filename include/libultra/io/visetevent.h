@@ -1,5 +1,5 @@
-#ifndef VISETEVENT_H
-#define VISETEVENT_H
+#ifndef Z64_VISETEVENT_H
+#define Z64_VISETEVENT_H
 
 #include "global.h"
 

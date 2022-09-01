@@ -1,5 +1,5 @@
-#ifndef BUILD_H
-#define BUILD_H
+#ifndef Z64_BUILD_H
+#define Z64_BUILD_H
 
 extern const char gBuildTeam[];
 extern const char gBuildDate[];

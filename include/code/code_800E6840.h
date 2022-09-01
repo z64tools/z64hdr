@@ -1,5 +1,5 @@
-#ifndef CODE_800E6840_H
-#define CODE_800E6840_H
+#ifndef Z64_CODE_800E6840_H
+#define Z64_CODE_800E6840_H
 
 #include "global.h"
 

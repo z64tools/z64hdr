@@ -1,5 +1,5 @@
-#ifndef GETACTIVEQUEUE_H
-#define GETACTIVEQUEUE_H
+#ifndef Z64_GETACTIVEQUEUE_H
+#define Z64_GETACTIVEQUEUE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_LIFEMETER_H
-#define Z_LIFEMETER_H
+#ifndef Z64_LIFEMETER_H
+#define Z64_LIFEMETER_H
 
 #include "global.h"
 #include "assets/textures/parameter_static/parameter_static.h"

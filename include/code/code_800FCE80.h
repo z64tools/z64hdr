@@ -1,5 +1,5 @@
-#ifndef CODE_800FCE80_H
-#define CODE_800FCE80_H
+#ifndef Z64_CODE_800FCE80_H
+#define Z64_CODE_800FCE80_H
 
 #include "global.h"
 #include "fp.h"

@@ -1,5 +1,5 @@
-#ifndef Z_PATH_H
-#define Z_PATH_H
+#ifndef Z64_PATH_H
+#define Z64_PATH_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef FAULT_DRAWER_H
-#define FAULT_DRAWER_H
+#ifndef Z64_FAULT_DRAWER_H
+#define Z64_FAULT_DRAWER_H
 
 /**
  * @file fault_drawer.c

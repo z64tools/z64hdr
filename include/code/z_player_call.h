@@ -1,5 +1,5 @@
-#ifndef Z_PLAYER_CALL_H
-#define Z_PLAYER_CALL_H
+#ifndef Z64_PLAYER_CALL_H
+#define Z64_PLAYER_CALL_H
 
 #include "global.h"
 

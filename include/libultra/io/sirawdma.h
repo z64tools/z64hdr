@@ -1,5 +1,5 @@
-#ifndef SIRAWDMA_H
-#define SIRAWDMA_H
+#ifndef Z64_SIRAWDMA_H
+#define Z64_SIRAWDMA_H
 
 #include "global.h"
 

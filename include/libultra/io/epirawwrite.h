@@ -1,5 +1,5 @@
-#ifndef EPIRAWWRITE_H
-#define EPIRAWWRITE_H
+#ifndef Z64_EPIRAWWRITE_H
+#define Z64_EPIRAWWRITE_H
 
 #include "global.h"
 

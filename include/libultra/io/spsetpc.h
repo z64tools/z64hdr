@@ -1,5 +1,5 @@
-#ifndef SPSETPC_H
-#define SPSETPC_H
+#ifndef Z64_SPSETPC_H
+#define Z64_SPSETPC_H
 
 #include "global.h"
 

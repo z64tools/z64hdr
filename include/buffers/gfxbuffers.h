@@ -1,5 +1,5 @@
-#ifndef GFXBUFFERS_H
-#define GFXBUFFERS_H
+#ifndef Z64_GFXBUFFERS_H
+#define Z64_GFXBUFFERS_H
 
 #include "z64.h"
 

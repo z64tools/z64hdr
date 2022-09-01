@@ -1,5 +1,5 @@
-#ifndef Z_CHEAP_PROC_H
-#define Z_CHEAP_PROC_H
+#ifndef Z64_CHEAP_PROC_H
+#define Z64_CHEAP_PROC_H
 
 #include "global.h"
 

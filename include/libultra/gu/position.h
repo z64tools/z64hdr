@@ -1,5 +1,5 @@
-#ifndef POSITION_H
-#define POSITION_H
+#ifndef Z64_POSITION_H
+#define Z64_POSITION_H
 
 #include "global.h"
 

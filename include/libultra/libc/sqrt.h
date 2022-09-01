@@ -1,5 +1,5 @@
-#ifndef SQRT_H
-#define SQRT_H
+#ifndef Z64_SQRT_H
+#define Z64_SQRT_H
 
 #include "global.h"
 

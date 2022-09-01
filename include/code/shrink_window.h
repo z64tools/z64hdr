@@ -1,5 +1,5 @@
-#ifndef SHRINK_WINDOW_H
-#define SHRINK_WINDOW_H
+#ifndef Z64_SHRINK_WINDOW_H
+#define Z64_SHRINK_WINDOW_H
 
 #include "global.h"
 

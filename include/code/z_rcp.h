@@ -1,5 +1,5 @@
-#ifndef Z_RCP_H
-#define Z_RCP_H
+#ifndef Z64_RCP_H
+#define Z64_RCP_H
 
 #include "global.h"
 

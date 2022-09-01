@@ -1,5 +1,5 @@
-#ifndef SYSTEM_MALLOC_H
-#define SYSTEM_MALLOC_H
+#ifndef Z64_SYSTEM_MALLOC_H
+#define Z64_SYSTEM_MALLOC_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef COSS_H
-#define COSS_H
+#ifndef Z64_COSS_H
+#define Z64_COSS_H
 
 #include "global.h"
 

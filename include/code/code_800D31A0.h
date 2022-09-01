@@ -1,5 +1,5 @@
-#ifndef CODE_800D31A0_H
-#define CODE_800D31A0_H
+#ifndef Z64_CODE_800D31A0_H
+#define Z64_CODE_800D31A0_H
 
 #include "global.h"
 #include "vt.h"

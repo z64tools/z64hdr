@@ -1,5 +1,5 @@
-#ifndef EPIRAWDMA_H
-#define EPIRAWDMA_H
+#ifndef Z64_EPIRAWDMA_H
+#define Z64_EPIRAWDMA_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_MAP_DATA_H
-#define Z_MAP_DATA_H
+#ifndef Z64_MAP_DATA_H
+#define Z64_MAP_DATA_H
 
 #include "global.h"
 

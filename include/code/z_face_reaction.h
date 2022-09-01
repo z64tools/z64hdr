@@ -1,5 +1,5 @@
-#ifndef Z_FACE_REACTION_H
-#define Z_FACE_REACTION_H
+#ifndef Z64_FACE_REACTION_H
+#define Z64_FACE_REACTION_H
 
 #include "global.h"
 

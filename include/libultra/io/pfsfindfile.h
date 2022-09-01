@@ -1,5 +1,5 @@
-#ifndef PFSFINDFILE_H
-#define PFSFINDFILE_H
+#ifndef Z64_PFSFINDFILE_H
+#define Z64_PFSFINDFILE_H
 
 #include "ultra64.h"
 #include "global.h"

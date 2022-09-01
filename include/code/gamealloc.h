@@ -1,5 +1,5 @@
-#ifndef GAMEALLOC_H
-#define GAMEALLOC_H
+#ifndef Z64_GAMEALLOC_H
+#define Z64_GAMEALLOC_H
 
 #include "global.h"
 

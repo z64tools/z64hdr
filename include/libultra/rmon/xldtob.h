@@ -1,5 +1,5 @@
-#ifndef XLDTOB_H
-#define XLDTOB_H
+#ifndef Z64_XLDTOB_H
+#define Z64_XLDTOB_H
 
 #include "global.h"
 

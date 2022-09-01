@@ -1,5 +1,5 @@
-#ifndef Z_FBDEMO_WIPE1_H
-#define Z_FBDEMO_WIPE1_H
+#ifndef Z64_FBDEMO_WIPE1_H
+#define Z64_FBDEMO_WIPE1_H
 
 #include "global.h"
 

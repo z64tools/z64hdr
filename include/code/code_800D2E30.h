@@ -1,5 +1,5 @@
-#ifndef CODE_800D2E30_H
-#define CODE_800D2E30_H
+#ifndef Z64_CODE_800D2E30_H
+#define Z64_CODE_800D2E30_H
 
 #include "global.h"
 

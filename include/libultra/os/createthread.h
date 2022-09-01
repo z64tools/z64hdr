@@ -1,5 +1,5 @@
-#ifndef CREATETHREAD_H
-#define CREATETHREAD_H
+#ifndef Z64_CREATETHREAD_H
+#define Z64_CREATETHREAD_H
 
 #include "global.h"
 #include "ultra64/asm.h"

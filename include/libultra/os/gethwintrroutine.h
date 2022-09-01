@@ -1,5 +1,5 @@
-#ifndef GETHWINTRROUTINE_H
-#define GETHWINTRROUTINE_H
+#ifndef Z64_GETHWINTRROUTINE_H
+#define Z64_GETHWINTRROUTINE_H
 
 #include "global.h"
 #include "ultra64/internal.h"

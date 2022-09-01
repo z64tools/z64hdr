@@ -1,5 +1,5 @@
-#ifndef Z_ACTOR_H
-#define Z_ACTOR_H
+#ifndef Z64_ACTOR_H
+#define Z64_ACTOR_H
 
 #include "global.h"
 #include "vt.h"

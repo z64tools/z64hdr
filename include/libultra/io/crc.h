@@ -1,5 +1,5 @@
-#ifndef CRC_H
-#define CRC_H
+#ifndef Z64_CRC_H
+#define Z64_CRC_H
 
 #include "global.h"
 

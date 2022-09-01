@@ -1,5 +1,5 @@
-#ifndef Z_EN_ITEM00_H
-#define Z_EN_ITEM00_H
+#ifndef Z64_EN_ITEM00_H
+#define Z64_EN_ITEM00_H
 
 #include "global.h"
 #include "overlays/actors/ovl_En_Elf/z_en_elf.h"

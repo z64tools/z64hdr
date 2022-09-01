@@ -1,5 +1,5 @@
-#ifndef Z_PLAYER_LIB_H
-#define Z_PLAYER_LIB_H
+#ifndef Z64_PLAYER_LIB_H
+#define Z64_PLAYER_LIB_H
 
 #include "global.h"
 #include "assets/objects/gameplay_keep/gameplay_keep.h"

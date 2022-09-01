@@ -1,5 +1,5 @@
-#ifndef JPEGUTILS_H
-#define JPEGUTILS_H
+#ifndef Z64_JPEGUTILS_H
+#define Z64_JPEGUTILS_H
 
 #include "global.h"
 

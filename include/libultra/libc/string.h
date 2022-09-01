@@ -1,5 +1,5 @@
-#ifndef STRING_H
-#define STRING_H
+#ifndef Z64_STRING_H
+#define Z64_STRING_H
 
 #include "global.h"
 

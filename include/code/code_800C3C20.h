@@ -1,5 +1,5 @@
-#ifndef CODE_800C3C20_H
-#define CODE_800C3C20_H
+#ifndef Z64_CODE_800C3C20_H
+#define Z64_CODE_800C3C20_H
 
 #include "global.h"
 

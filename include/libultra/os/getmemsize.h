@@ -1,5 +1,5 @@
-#ifndef GETMEMSIZE_H
-#define GETMEMSIZE_H
+#ifndef Z64_GETMEMSIZE_H
+#define Z64_GETMEMSIZE_H
 
 #include "global.h"
 

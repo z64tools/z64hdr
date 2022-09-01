@@ -1,5 +1,5 @@
-#ifndef VIRTUALTOPHYSICAL_H
-#define VIRTUALTOPHYSICAL_H
+#ifndef Z64_VIRTUALTOPHYSICAL_H
+#define Z64_VIRTUALTOPHYSICAL_H
 
 #include "global.h"
 

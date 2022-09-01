@@ -1,5 +1,5 @@
-#ifndef CONTPFS_H
-#define CONTPFS_H
+#ifndef Z64_CONTPFS_H
+#define Z64_CONTPFS_H
 
 #include "ultra64.h"
 #include "global.h"

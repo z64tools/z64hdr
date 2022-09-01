@@ -1,5 +1,5 @@
-#ifndef US2DEX_H
-#define US2DEX_H
+#ifndef Z64_US2DEX_H
+#define Z64_US2DEX_H
 
 #include "global.h"
 

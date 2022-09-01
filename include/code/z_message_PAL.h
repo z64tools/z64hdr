@@ -1,5 +1,5 @@
-#ifndef Z_MESSAGE_PAL_H
-#define Z_MESSAGE_PAL_H
+#ifndef Z64_MESSAGE_PAL_H
+#define Z64_MESSAGE_PAL_H
 
 #include "global.h"
 #include "message_data_static.h"

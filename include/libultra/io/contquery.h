@@ -1,5 +1,5 @@
-#ifndef CONTQUERY_H
-#define CONTQUERY_H
+#ifndef Z64_CONTQUERY_H
+#define Z64_CONTQUERY_H
 
 #include "global.h"
 

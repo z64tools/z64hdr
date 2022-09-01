@@ -1,5 +1,5 @@
-#ifndef CODE_80069420_H
-#define CODE_80069420_H
+#ifndef Z64_CODE_80069420_H
+#define Z64_CODE_80069420_H
 
 #include "global.h"
 

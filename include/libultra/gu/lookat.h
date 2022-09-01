@@ -1,5 +1,5 @@
-#ifndef LOOKAT_H
-#define LOOKAT_H
+#ifndef Z64_LOOKAT_H
+#define Z64_LOOKAT_H
 
 #include "global.h"
 

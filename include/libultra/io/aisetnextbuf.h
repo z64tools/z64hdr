@@ -1,5 +1,5 @@
-#ifndef AISETNEXTBUF_H
-#define AISETNEXTBUF_H
+#ifndef Z64_AISETNEXTBUF_H
+#define Z64_AISETNEXTBUF_H
 
 #include "global.h"
 

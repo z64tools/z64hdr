@@ -1,5 +1,5 @@
-#ifndef SPGETSTAT_H
-#define SPGETSTAT_H
+#ifndef Z64_SPGETSTAT_H
+#define Z64_SPGETSTAT_H
 
 #include "global.h"
 

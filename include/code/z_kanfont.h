@@ -1,5 +1,5 @@
-#ifndef Z_KANFONT_H
-#define Z_KANFONT_H
+#ifndef Z64_KANFONT_H
+#define Z64_KANFONT_H
 
 #include "global.h"
 #include "message_data_static.h"

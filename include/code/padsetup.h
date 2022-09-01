@@ -1,5 +1,5 @@
-#ifndef PADSETUP_H
-#define PADSETUP_H
+#ifndef Z64_PADSETUP_H
+#define Z64_PADSETUP_H
 
 #include "global.h"
 

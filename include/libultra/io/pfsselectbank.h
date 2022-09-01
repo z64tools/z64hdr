@@ -1,5 +1,5 @@
-#ifndef PFSSELECTBANK_H
-#define PFSSELECTBANK_H
+#ifndef Z64_PFSSELECTBANK_H
+#define Z64_PFSSELECTBANK_H
 
 #include "ultra64/pfs.h"
 #include "global.h"

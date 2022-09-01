@@ -1,5 +1,5 @@
-#ifndef SI_H
-#define SI_H
+#ifndef Z64_SI_H
+#define Z64_SI_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef MOTOR_H
-#define MOTOR_H
+#ifndef Z64_MOTOR_H
+#define Z64_MOTOR_H
 
 #include "global.h"
 

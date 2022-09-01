@@ -1,5 +1,5 @@
-#ifndef CODE_80097A00_H
-#define CODE_80097A00_H
+#ifndef Z64_CODE_80097A00_H
+#define Z64_CODE_80097A00_H
 
 #include "global.h"
 #include "assets/textures/icon_item_static/icon_item_static.h"

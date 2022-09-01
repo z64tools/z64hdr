@@ -1,5 +1,5 @@
-#ifndef PFSDELETEFILE_H
-#define PFSDELETEFILE_H
+#ifndef Z64_PFSDELETEFILE_H
+#define Z64_PFSDELETEFILE_H
 
 #include "ultra64/pfs.h"
 #include "global.h"

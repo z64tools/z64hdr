@@ -1,5 +1,5 @@
-#ifndef Z_KALEIDO_SCOPE_CALL_H
-#define Z_KALEIDO_SCOPE_CALL_H
+#ifndef Z64_KALEIDO_SCOPE_CALL_H
+#define Z64_KALEIDO_SCOPE_CALL_H
 
 #include "global.h"
 #include "vt.h"

@@ -1,5 +1,5 @@
-#ifndef Z_ONEPOINTDEMO_H
-#define Z_ONEPOINTDEMO_H
+#ifndef Z64_ONEPOINTDEMO_H
+#define Z64_ONEPOINTDEMO_H
 
 #include "global.h"
 #include "vt.h"

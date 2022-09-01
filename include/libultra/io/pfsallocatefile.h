@@ -1,5 +1,5 @@
-#ifndef PFSALLOCATEFILE_H
-#define PFSALLOCATEFILE_H
+#ifndef Z64_PFSALLOCATEFILE_H
+#define Z64_PFSALLOCATEFILE_H
 
 #include "ultra64.h"
 #include "global.h"

@@ -1,5 +1,5 @@
-#ifndef IRQMGR_H
-#define IRQMGR_H
+#ifndef Z64_IRQMGR_H
+#define Z64_IRQMGR_H
 
 /**
  * @file irqmgr.c

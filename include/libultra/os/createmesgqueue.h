@@ -1,5 +1,5 @@
-#ifndef CREATEMESGQUEUE_H
-#define CREATEMESGQUEUE_H
+#ifndef Z64_CREATEMESGQUEUE_H
+#define Z64_CREATEMESGQUEUE_H
 
 #include "global.h"
 

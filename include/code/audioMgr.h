@@ -1,5 +1,5 @@
-#ifndef AUDIOMGR_H
-#define AUDIOMGR_H
+#ifndef Z64_AUDIOMGR_H
+#define Z64_AUDIOMGR_H
 
 #include "global.h"
 

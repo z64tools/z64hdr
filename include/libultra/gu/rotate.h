@@ -1,5 +1,5 @@
-#ifndef ROTATE_H
-#define ROTATE_H
+#ifndef Z64_ROTATE_H
+#define Z64_ROTATE_H
 
 #include "global.h"
 

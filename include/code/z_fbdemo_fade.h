@@ -1,5 +1,5 @@
-#ifndef Z_FBDEMO_FADE_H
-#define Z_FBDEMO_FADE_H
+#ifndef Z64_FBDEMO_FADE_H
+#define Z64_FBDEMO_FADE_H
 
 #include "global.h"
 #include "vt.h"

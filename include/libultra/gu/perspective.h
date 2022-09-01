@@ -1,5 +1,5 @@
-#ifndef PERSPECTIVE_H
-#define PERSPECTIVE_H
+#ifndef Z64_PERSPECTIVE_H
+#define Z64_PERSPECTIVE_H
 
 #include "global.h"
 

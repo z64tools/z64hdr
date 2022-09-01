@@ -1,5 +1,5 @@
-#ifndef GETTHREADID_H
-#define GETTHREADID_H
+#ifndef Z64_GETTHREADID_H
+#define Z64_GETTHREADID_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef VIGETCURRCONTEXT_H
-#define VIGETCURRCONTEXT_H
+#ifndef Z64_VIGETCURRCONTEXT_H
+#define Z64_VIGETCURRCONTEXT_H
 
 #include "global.h"
 

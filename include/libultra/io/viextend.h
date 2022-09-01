@@ -1,5 +1,5 @@
-#ifndef VIEXTEND_H
-#define VIEXTEND_H
+#ifndef Z64_VIEXTEND_H
+#define Z64_VIEXTEND_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef SYS_MATH_ATAN_H
-#define SYS_MATH_ATAN_H
+#ifndef Z64_SYS_MATH_ATAN_H
+#define Z64_SYS_MATH_ATAN_H
 
 #include "global.h"
 

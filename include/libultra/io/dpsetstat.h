@@ -1,5 +1,5 @@
-#ifndef DPSETSTAT_H
-#define DPSETSTAT_H
+#ifndef Z64_DPSETSTAT_H
+#define Z64_DPSETSTAT_H
 
 #include "global.h"
 

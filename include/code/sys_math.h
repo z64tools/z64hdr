@@ -1,5 +1,5 @@
-#ifndef SYS_MATH_H
-#define SYS_MATH_H
+#ifndef Z64_SYS_MATH_H
+#define Z64_SYS_MATH_H
 
 #include "global.h"
 

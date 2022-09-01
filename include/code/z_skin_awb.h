@@ -1,5 +1,5 @@
-#ifndef Z_SKIN_AWB_H
-#define Z_SKIN_AWB_H
+#ifndef Z64_SKIN_AWB_H
+#define Z64_SKIN_AWB_H
 
 #include "global.h"
 #include "overlays/actors/ovl_En_fHG/z_en_fhg.h"

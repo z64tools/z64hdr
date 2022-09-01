@@ -1,5 +1,5 @@
-#ifndef PADMGR_H
-#define PADMGR_H
+#ifndef Z64_PADMGR_H
+#define Z64_PADMGR_H
 
 #include "global.h"
 #include "vt.h"

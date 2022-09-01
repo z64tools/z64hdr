@@ -1,5 +1,5 @@
-#ifndef Z_VIEW_H
-#define Z_VIEW_H
+#ifndef Z64_VIEW_H
+#define Z64_VIEW_H
 
 #include "global.h"
 #include "vt.h"

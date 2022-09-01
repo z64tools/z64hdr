@@ -1,5 +1,5 @@
-#ifndef CODE_800FD970_H
-#define CODE_800FD970_H
+#ifndef Z64_CODE_800FD970_H
+#define Z64_CODE_800FD970_H
 
 #include "global.h"
 

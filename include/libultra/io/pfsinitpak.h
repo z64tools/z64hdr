@@ -1,5 +1,5 @@
-#ifndef PFSINITPAK_H
-#define PFSINITPAK_H
+#ifndef Z64_PFSINITPAK_H
+#define Z64_PFSINITPAK_H
 
 #include "ultra64.h"
 #include "global.h"

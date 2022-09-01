@@ -1,5 +1,5 @@
-#ifndef PFSREADWRITEFILE_H
-#define PFSREADWRITEFILE_H
+#ifndef Z64_PFSREADWRITEFILE_H
+#define Z64_PFSREADWRITEFILE_H
 
 #include "ultra64.h"
 #include "global.h"

@@ -1,5 +1,5 @@
-#ifndef Z_VIMODE_H
-#define Z_VIMODE_H
+#ifndef Z64_VIMODE_H
+#define Z64_VIMODE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef SYS_UCODE_H
-#define SYS_UCODE_H
+#ifndef Z64_SYS_UCODE_H
+#define Z64_SYS_UCODE_H
 
 #include "global.h"
 

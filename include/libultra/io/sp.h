@@ -1,5 +1,5 @@
-#ifndef SP_H
-#define SP_H
+#ifndef Z64_SP_H
+#define Z64_SP_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef VISWAPBUF_H
-#define VISWAPBUF_H
+#ifndef Z64_VISWAPBUF_H
+#define Z64_VISWAPBUF_H
 
 #include "global.h"
 

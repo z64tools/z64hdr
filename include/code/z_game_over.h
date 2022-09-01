@@ -1,5 +1,5 @@
-#ifndef Z_GAME_OVER_H
-#define Z_GAME_OVER_H
+#ifndef Z64_GAME_OVER_H
+#define Z64_GAME_OVER_H
 
 #include "global.h"
 

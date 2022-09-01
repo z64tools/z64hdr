@@ -1,5 +1,5 @@
-#ifndef LOOKATHIL_H
-#define LOOKATHIL_H
+#ifndef Z64_LOOKATHIL_H
+#define Z64_LOOKATHIL_H
 
 #include "global.h"
 

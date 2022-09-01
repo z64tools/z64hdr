@@ -1,5 +1,5 @@
-#ifndef CONTREADDATA_H
-#define CONTREADDATA_H
+#ifndef Z64_CONTREADDATA_H
+#define Z64_CONTREADDATA_H
 
 #include "global.h"
 

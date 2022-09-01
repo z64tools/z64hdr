@@ -1,5 +1,5 @@
-#ifndef LL_H
-#define LL_H
+#ifndef Z64_LL_H
+#define Z64_LL_H
 
 #include "global.h"
 

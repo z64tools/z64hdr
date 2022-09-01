@@ -1,5 +1,5 @@
-#ifndef Z_PARAMETER_H
-#define Z_PARAMETER_H
+#ifndef Z64_PARAMETER_H
+#define Z64_PARAMETER_H
 
 #include "global.h"
 #include "vt.h"

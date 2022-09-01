@@ -1,5 +1,5 @@
-#ifndef MEMPAK_H
-#define MEMPAK_H
+#ifndef Z64_MEMPAK_H
+#define Z64_MEMPAK_H
 
 #include "global.h"
 

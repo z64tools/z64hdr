@@ -1,5 +1,5 @@
-#ifndef __OSMEMSET_H
-#define __OSMEMSET_H
+#ifndef Z64___OSMEMSET_H
+#define Z64___OSMEMSET_H
 
 #include "global.h"
 

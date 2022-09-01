@@ -1,5 +1,5 @@
-#ifndef SPTASK_H
-#define SPTASK_H
+#ifndef Z64_SPTASK_H
+#define Z64_SPTASK_H
 
 #include "global.h"
 

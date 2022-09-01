@@ -1,5 +1,5 @@
-#ifndef Z_EFFECT_SOFT_SPRITE_H
-#define Z_EFFECT_SOFT_SPRITE_H
+#ifndef Z64_EFFECT_SOFT_SPRITE_H
+#define Z64_EFFECT_SOFT_SPRITE_H
 
 #include "global.h"
 #include "vt.h"

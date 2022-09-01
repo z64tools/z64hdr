@@ -1,5 +1,5 @@
-#ifndef CARTROMINIT_H
-#define CARTROMINIT_H
+#ifndef Z64_CARTROMINIT_H
+#define Z64_CARTROMINIT_H
 
 #include "global.h"
 

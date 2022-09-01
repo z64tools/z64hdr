@@ -1,5 +1,5 @@
-#ifndef Z_NULLTASK_H
-#define Z_NULLTASK_H
+#ifndef Z64_NULLTASK_H
+#define Z64_NULLTASK_H
 
 #include "global.h"
 

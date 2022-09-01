@@ -1,5 +1,5 @@
-#ifndef Z_FBDEMO_CIRCLE_H
-#define Z_FBDEMO_CIRCLE_H
+#ifndef Z64_FBDEMO_CIRCLE_H
+#define Z64_FBDEMO_CIRCLE_H
 
 #include "global.h"
 

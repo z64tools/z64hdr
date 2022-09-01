@@ -1,5 +1,5 @@
-#ifndef PIACS_H
-#define PIACS_H
+#ifndef Z64_PIACS_H
+#define Z64_PIACS_H
 
 #include "global.h"
 

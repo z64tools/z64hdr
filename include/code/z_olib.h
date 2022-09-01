@@ -1,5 +1,5 @@
-#ifndef Z_OLIB_H
-#define Z_OLIB_H
+#ifndef Z64_OLIB_H
+#define Z64_OLIB_H
 
 #include "global.h"
 

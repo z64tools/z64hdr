@@ -1,5 +1,5 @@
-#ifndef CODE_800EC960_H
-#define CODE_800EC960_H
+#ifndef Z64_CODE_800EC960_H
+#define Z64_CODE_800EC960_H
 
 #include "ultra64.h"
 #include "global.h"

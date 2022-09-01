@@ -1,5 +1,5 @@
-#ifndef VIGETCURRFRAMEBUF_H
-#define VIGETCURRFRAMEBUF_H
+#ifndef Z64_VIGETCURRFRAMEBUF_H
+#define Z64_VIGETCURRFRAMEBUF_H
 
 #include "global.h"
 

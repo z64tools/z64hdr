@@ -1,5 +1,5 @@
-#ifndef Z_JPEG_H
-#define Z_JPEG_H
+#ifndef Z64_JPEG_H
+#define Z64_JPEG_H
 
 #include "global.h"
 #include "vt.h"

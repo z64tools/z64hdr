@@ -1,5 +1,5 @@
-#ifndef RECVMESG_H
-#define RECVMESG_H
+#ifndef Z64_RECVMESG_H
+#define Z64_RECVMESG_H
 
 #include "global.h"
 

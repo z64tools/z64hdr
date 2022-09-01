@@ -1,5 +1,5 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef Z64_GRAPH_H
+#define Z64_GRAPH_H
 
 #include "global.h"
 #include "vt.h"

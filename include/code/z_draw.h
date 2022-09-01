@@ -1,5 +1,5 @@
-#ifndef Z_DRAW_H
-#define Z_DRAW_H
+#ifndef Z64_DRAW_H
+#define Z64_DRAW_H
 
 #include "global.h"
 #include "assets/objects/object_gi_key/object_gi_key.h"

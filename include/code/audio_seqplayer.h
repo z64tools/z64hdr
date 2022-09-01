@@ -1,5 +1,5 @@
-#ifndef AUDIO_SEQPLAYER_H
-#define AUDIO_SEQPLAYER_H
+#ifndef Z64_AUDIO_SEQPLAYER_H
+#define Z64_AUDIO_SEQPLAYER_H
 
 #include "ultra64.h"
 #include "global.h"

@@ -1,5 +1,5 @@
-#ifndef AUDIO_SOUND_PARAMS_H
-#define AUDIO_SOUND_PARAMS_H
+#ifndef Z64_AUDIO_SOUND_PARAMS_H
+#define Z64_AUDIO_SOUND_PARAMS_H
 
 #include "ultra64.h"
 #include "global.h"

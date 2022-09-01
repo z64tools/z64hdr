@@ -1,5 +1,5 @@
-#ifndef TIMERINTR_H
-#define TIMERINTR_H
+#ifndef Z64_TIMERINTR_H
+#define Z64_TIMERINTR_H
 
 #include "global.h"
 

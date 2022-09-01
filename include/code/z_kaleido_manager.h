@@ -1,5 +1,5 @@
-#ifndef Z_KALEIDO_MANAGER_H
-#define Z_KALEIDO_MANAGER_H
+#ifndef Z64_KALEIDO_MANAGER_H
+#define Z64_KALEIDO_MANAGER_H
 
 #include "global.h"
 #include "vt.h"

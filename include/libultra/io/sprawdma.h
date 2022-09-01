@@ -1,5 +1,5 @@
-#ifndef SPRAWDMA_H
-#define SPRAWDMA_H
+#ifndef Z64_SPRAWDMA_H
+#define Z64_SPRAWDMA_H
 
 #include "global.h"
 

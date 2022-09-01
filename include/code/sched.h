@@ -1,5 +1,5 @@
-#ifndef SCHED_H
-#define SCHED_H
+#ifndef Z64_SCHED_H
+#define Z64_SCHED_H
 
 /**
  * @file sched.c

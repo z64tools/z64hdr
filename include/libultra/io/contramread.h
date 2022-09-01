@@ -1,5 +1,5 @@
-#ifndef CONTRAMREAD_H
-#define CONTRAMREAD_H
+#ifndef Z64_CONTRAMREAD_H
+#define Z64_CONTRAMREAD_H
 
 #include "global.h"
 

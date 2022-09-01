@@ -1,5 +1,5 @@
-#ifndef Z_GAME_DLFTBLS_H
-#define Z_GAME_DLFTBLS_H
+#ifndef Z64_GAME_DLFTBLS_H
+#define Z64_GAME_DLFTBLS_H
 
 #include "global.h"
 

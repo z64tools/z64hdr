@@ -1,5 +1,5 @@
-#ifndef PFSGETSTATUS_H
-#define PFSGETSTATUS_H
+#ifndef Z64_PFSGETSTATUS_H
+#define Z64_PFSGETSTATUS_H
 
 #include "ultra64.h"
 #include "global.h"

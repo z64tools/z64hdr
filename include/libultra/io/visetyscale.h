@@ -1,5 +1,5 @@
-#ifndef VISETYSCALE_H
-#define VISETYSCALE_H
+#ifndef Z64_VISETYSCALE_H
+#define Z64_VISETYSCALE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_QUAKE_H
-#define Z_QUAKE_H
+#ifndef Z64_QUAKE_H
+#define Z64_QUAKE_H
 
 #include "global.h"
 #include "vt.h"

@@ -1,5 +1,5 @@
-#ifndef Z_ROOM_H
-#define Z_ROOM_H
+#ifndef Z64_ROOM_H
+#define Z64_ROOM_H
 
 #include "global.h"
 #include "vt.h"

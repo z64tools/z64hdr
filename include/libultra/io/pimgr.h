@@ -1,5 +1,5 @@
-#ifndef PIMGR_H
-#define PIMGR_H
+#ifndef Z64_PIMGR_H
+#define Z64_PIMGR_H
 
 #include "global.h"
 #include "ultra64/internal.h"

@@ -1,5 +1,5 @@
-#ifndef LISTALLOC_H
-#define LISTALLOC_H
+#ifndef Z64_LISTALLOC_H
+#define Z64_LISTALLOC_H
 
 #include "global.h"
 

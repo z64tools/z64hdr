@@ -1,5 +1,5 @@
-#ifndef DB_CAMERA_H
-#define DB_CAMERA_H
+#ifndef Z64_DB_CAMERA_H
+#define Z64_DB_CAMERA_H
 
 #include "ultra64.h"
 #include "global.h"

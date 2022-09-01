@@ -1,5 +1,5 @@
-#ifndef Z_FCURVE_DATA_H
-#define Z_FCURVE_DATA_H
+#ifndef Z64_FCURVE_DATA_H
+#define Z64_FCURVE_DATA_H
 
 /**
  * File: z_fcurve_data.c

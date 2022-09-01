@@ -1,5 +1,5 @@
-#ifndef VIMODENTSCLAN1_H
-#define VIMODENTSCLAN1_H
+#ifndef Z64_VIMODENTSCLAN1_H
+#define Z64_VIMODENTSCLAN1_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef LOAD_H
-#define LOAD_H
+#ifndef Z64_LOAD_H
+#define Z64_LOAD_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef PADUTILS_H
-#define PADUTILS_H
+#ifndef Z64_PADUTILS_H
+#define Z64_PADUTILS_H
 
 #include "global.h"
 

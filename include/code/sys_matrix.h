@@ -1,5 +1,5 @@
-#ifndef SYS_MATRIX_H
-#define SYS_MATRIX_H
+#ifndef Z64_SYS_MATRIX_H
+#define Z64_SYS_MATRIX_H
 
 #include "global.h"
 

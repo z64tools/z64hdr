@@ -1,5 +1,5 @@
-#ifndef Z_SOUND_SOURCE_H
-#define Z_SOUND_SOURCE_H
+#ifndef Z64_SOUND_SOURCE_H
+#define Z64_SOUND_SOURCE_H
 
 #include "global.h"
 

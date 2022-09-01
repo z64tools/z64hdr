@@ -1,5 +1,5 @@
-#ifndef SPEED_METER_H
-#define SPEED_METER_H
+#ifndef Z64_SPEED_METER_H
+#define Z64_SPEED_METER_H
 
 #include "global.h"
 #include "vt.h"

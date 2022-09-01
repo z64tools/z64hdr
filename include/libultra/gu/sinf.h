@@ -1,5 +1,5 @@
-#ifndef SINF_H
-#define SINF_H
+#ifndef Z64_SINF_H
+#define Z64_SINF_H
 
 #include "global.h"
 #include "ultra64.h"

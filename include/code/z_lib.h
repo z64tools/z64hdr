@@ -1,5 +1,5 @@
-#ifndef Z_LIB_H
-#define Z_LIB_H
+#ifndef Z64_LIB_H
+#define Z64_LIB_H
 
 #include "global.h"
 

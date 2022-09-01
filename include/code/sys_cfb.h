@@ -1,5 +1,5 @@
-#ifndef SYS_CFB_H
-#define SYS_CFB_H
+#ifndef Z64_SYS_CFB_H
+#define Z64_SYS_CFB_H
 
 #include "global.h"
 

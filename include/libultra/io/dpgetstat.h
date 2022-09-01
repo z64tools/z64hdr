@@ -1,5 +1,5 @@
-#ifndef DPGETSTAT_H
-#define DPGETSTAT_H
+#ifndef Z64_DPGETSTAT_H
+#define Z64_DPGETSTAT_H
 
 #include "global.h"
 

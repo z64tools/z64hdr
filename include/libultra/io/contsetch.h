@@ -1,5 +1,5 @@
-#ifndef CONTSETCH_H
-#define CONTSETCH_H
+#ifndef Z64_CONTSETCH_H
+#define Z64_CONTSETCH_H
 
 #include "ultra64.h"
 #include "global.h"

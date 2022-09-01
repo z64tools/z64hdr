@@ -1,5 +1,5 @@
-#ifndef FAULT_H
-#define FAULT_H
+#ifndef Z64_FAULT_H
+#define Z64_FAULT_H
 
 /**
  * @file fault.c

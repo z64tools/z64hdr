@@ -1,5 +1,5 @@
-#ifndef AUDIO_SYNTHESIS_H
-#define AUDIO_SYNTHESIS_H
+#ifndef Z64_AUDIO_SYNTHESIS_H
+#define Z64_AUDIO_SYNTHESIS_H
 
 #include "ultra64.h"
 #include "global.h"

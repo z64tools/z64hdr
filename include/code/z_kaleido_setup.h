@@ -1,5 +1,5 @@
-#ifndef Z_KALEIDO_SETUP_H
-#define Z_KALEIDO_SETUP_H
+#ifndef Z64_KALEIDO_SETUP_H
+#define Z64_KALEIDO_SETUP_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_EFF_BLURE_H
-#define Z_EFF_BLURE_H
+#ifndef Z64_EFF_BLURE_H
+#define Z64_EFF_BLURE_H
 
 #include "global.h"
 #include "assets/objects/gameplay_keep/gameplay_keep.h"

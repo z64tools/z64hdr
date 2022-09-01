@@ -1,5 +1,5 @@
-#ifndef STARTTHREAD_H
-#define STARTTHREAD_H
+#ifndef Z64_STARTTHREAD_H
+#define Z64_STARTTHREAD_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef PRERENDER_H
-#define PRERENDER_H
+#ifndef Z64_PRERENDER_H
+#define Z64_PRERENDER_H
 
 #include "global.h"
 #include "alloca.h"

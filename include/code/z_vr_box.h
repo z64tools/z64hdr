@@ -1,5 +1,5 @@
-#ifndef Z_VR_BOX_H
-#define Z_VR_BOX_H
+#ifndef Z64_VR_BOX_H
+#define Z64_VR_BOX_H
 
 #include "global.h"
 #include "vt.h"

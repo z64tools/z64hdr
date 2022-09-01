@@ -1,5 +1,5 @@
-#ifndef XPRINTF_H
-#define XPRINTF_H
+#ifndef Z64_XPRINTF_H
+#define Z64_XPRINTF_H
 
 #include "global.h"
 

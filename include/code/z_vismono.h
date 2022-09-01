@@ -1,5 +1,5 @@
-#ifndef Z_VISMONO_H
-#define Z_VISMONO_H
+#ifndef Z64_VISMONO_H
+#define Z64_VISMONO_H
 
 /**
  * Color frame buffer effect to desaturate the colors.

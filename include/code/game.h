@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef Z64_GAME_H
+#define Z64_GAME_H
 
 #include "global.h"
 #include "vt.h"

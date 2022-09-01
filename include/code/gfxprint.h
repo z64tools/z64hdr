@@ -1,5 +1,5 @@
-#ifndef GFXPRINT_H
-#define GFXPRINT_H
+#ifndef Z64_GFXPRINT_H
+#define Z64_GFXPRINT_H
 
 #include "global.h"
 

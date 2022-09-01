@@ -1,5 +1,5 @@
-#ifndef VISETSPECIAL_H
-#define VISETSPECIAL_H
+#ifndef Z64_VISETSPECIAL_H
+#define Z64_VISETSPECIAL_H
 
 #include "global.h"
 

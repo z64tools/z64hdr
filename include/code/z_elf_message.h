@@ -1,5 +1,5 @@
-#ifndef Z_ELF_MESSAGE_H
-#define Z_ELF_MESSAGE_H
+#ifndef Z64_ELF_MESSAGE_H
+#define Z64_ELF_MESSAGE_H
 
 #include "global.h"
 #include "z64elf_message.h"

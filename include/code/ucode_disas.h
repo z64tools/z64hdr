@@ -1,5 +1,5 @@
-#ifndef UCODE_DISAS_H
-#define UCODE_DISAS_H
+#ifndef Z64_UCODE_DISAS_H
+#define Z64_UCODE_DISAS_H
 
 #include "global.h"
 

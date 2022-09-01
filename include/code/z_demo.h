@@ -1,5 +1,5 @@
-#ifndef Z_DEMO_H
-#define Z_DEMO_H
+#ifndef Z64_DEMO_H
+#define Z64_DEMO_H
 
 #include "global.h"
 #include "z64camera.h"

@@ -1,5 +1,5 @@
-#ifndef Z_MAP_EXP_H
-#define Z_MAP_EXP_H
+#ifndef Z64_MAP_EXP_H
+#define Z64_MAP_EXP_H
 
 #include "global.h"
 #include "vt.h"

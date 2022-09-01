@@ -1,5 +1,5 @@
-#ifndef LOGUTILS_H
-#define LOGUTILS_H
+#ifndef Z64_LOGUTILS_H
+#define Z64_LOGUTILS_H
 
 #include "global.h"
 #include "vt.h"

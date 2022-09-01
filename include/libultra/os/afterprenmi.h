@@ -1,5 +1,5 @@
-#ifndef AFTERPRENMI_H
-#define AFTERPRENMI_H
+#ifndef Z64_AFTERPRENMI_H
+#define Z64_AFTERPRENMI_H
 
 #include "ultra64.h"
 #include "global.h"

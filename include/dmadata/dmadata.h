@@ -1,5 +1,5 @@
-#ifndef DMADATA_H
-#define DMADATA_H
+#ifndef Z64_DMADATA_H
+#define Z64_DMADATA_H
 
 #include "z64dma.h"
 

@@ -1,5 +1,5 @@
-#ifndef CONTRAMWRITE_H
-#define CONTRAMWRITE_H
+#ifndef Z64_CONTRAMWRITE_H
+#define Z64_CONTRAMWRITE_H
 
 #include "ultra64.h"
 #include "global.h"

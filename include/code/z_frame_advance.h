@@ -1,5 +1,5 @@
-#ifndef Z_FRAME_ADVANCE_H
-#define Z_FRAME_ADVANCE_H
+#ifndef Z64_FRAME_ADVANCE_H
+#define Z64_FRAME_ADVANCE_H
 
 #include "global.h"
 

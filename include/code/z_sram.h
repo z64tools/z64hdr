@@ -1,5 +1,5 @@
-#ifndef Z_SRAM_H
-#define Z_SRAM_H
+#ifndef Z64_SRAM_H
+#define Z64_SRAM_H
 
 #include "global.h"
 #include "vt.h"

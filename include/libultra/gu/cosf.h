@@ -1,5 +1,5 @@
-#ifndef COSF_H
-#define COSF_H
+#ifndef Z64_COSF_H
+#define Z64_COSF_H
 
 #include "ultra64.h"
 #include "global.h"

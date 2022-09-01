@@ -1,5 +1,5 @@
-#ifndef STACKCHECK_H
-#define STACKCHECK_H
+#ifndef Z64_STACKCHECK_H
+#define Z64_STACKCHECK_H
 
 #include "global.h"
 #include "vt.h"

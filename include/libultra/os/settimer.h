@@ -1,5 +1,5 @@
-#ifndef SETTIMER_H
-#define SETTIMER_H
+#ifndef Z64_SETTIMER_H
+#define Z64_SETTIMER_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef ASSERT_H
-#define ASSERT_H
+#ifndef Z64_ASSERT_H
+#define Z64_ASSERT_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_SS_SRAM_H
-#define Z_SS_SRAM_H
+#ifndef Z64_SS_SRAM_H
+#define Z64_SS_SRAM_H
 
 #include "ultra64.h"
 #include "global.h"

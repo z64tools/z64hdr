@@ -1,5 +1,5 @@
-#ifndef AUDIO_LOAD_H
-#define AUDIO_LOAD_H
+#ifndef Z64_AUDIO_LOAD_H
+#define Z64_AUDIO_LOAD_H
 
 #include "ultra64.h"
 #include "global.h"

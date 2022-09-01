@@ -1,5 +1,5 @@
-#ifndef DRIVEROMINIT_H
-#define DRIVEROMINIT_H
+#ifndef Z64_DRIVEROMINIT_H
+#define Z64_DRIVEROMINIT_H
 
 #include "global.h"
 

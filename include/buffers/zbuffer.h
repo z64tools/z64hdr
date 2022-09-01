@@ -1,5 +1,5 @@
-#ifndef ZBUFFER_H
-#define ZBUFFER_H
+#ifndef Z64_ZBUFFER_H
+#define Z64_ZBUFFER_H
 
 #include "z64.h"
 

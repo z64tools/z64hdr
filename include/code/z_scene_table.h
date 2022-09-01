@@ -1,5 +1,5 @@
-#ifndef Z_SCENE_TABLE_H
-#define Z_SCENE_TABLE_H
+#ifndef Z64_SCENE_TABLE_H
+#define Z64_SCENE_TABLE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_SAMPLE_H
-#define Z_SAMPLE_H
+#ifndef Z64_SAMPLE_H
+#define Z64_SAMPLE_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef CONTROLLER_H
-#define CONTROLLER_H
+#ifndef Z64_CONTROLLER_H
+#define Z64_CONTROLLER_H
 
 #include "global.h"
 

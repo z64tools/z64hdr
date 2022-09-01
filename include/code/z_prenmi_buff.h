@@ -1,5 +1,5 @@
-#ifndef Z_PRENMI_BUFF_H
-#define Z_PRENMI_BUFF_H
+#ifndef Z64_PRENMI_BUFF_H
+#define Z64_PRENMI_BUFF_H
 
 #include "global.h"
 

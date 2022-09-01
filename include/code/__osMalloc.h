@@ -1,5 +1,5 @@
-#ifndef __OSMALLOC_H
-#define __OSMALLOC_H
+#ifndef Z64___OSMALLOC_H
+#define Z64___OSMALLOC_H
 
 #include "global.h"
 #include "vt.h"

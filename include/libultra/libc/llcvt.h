@@ -1,5 +1,5 @@
-#ifndef LLCVT_H
-#define LLCVT_H
+#ifndef Z64_LLCVT_H
+#define Z64_LLCVT_H
 
 #include "global.h"
 

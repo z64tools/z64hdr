@@ -1,5 +1,5 @@
-#ifndef Z_SKIN_H
-#define Z_SKIN_H
+#ifndef Z64_SKIN_H
+#define Z64_SKIN_H
 
 #include "global.h"
 

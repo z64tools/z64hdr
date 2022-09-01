@@ -1,5 +1,5 @@
-#ifndef VISWAPCONTEXT_H
-#define VISWAPCONTEXT_H
+#ifndef Z64_VISWAPCONTEXT_H
+#define Z64_VISWAPCONTEXT_H
 
 #include "global.h"
 

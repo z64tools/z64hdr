@@ -1,5 +1,5 @@
-#ifndef SPRINTF_H
-#define SPRINTF_H
+#ifndef Z64_SPRINTF_H
+#define Z64_SPRINTF_H
 
 #include "global.h"
 

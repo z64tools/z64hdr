@@ -1,5 +1,5 @@
-#ifndef SIACS_H
-#define SIACS_H
+#ifndef Z64_SIACS_H
+#define Z64_SIACS_H
 
 #include "global.h"
 

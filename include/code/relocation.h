@@ -1,5 +1,5 @@
-#ifndef RELOCATION_H
-#define RELOCATION_H
+#ifndef Z64_RELOCATION_H
+#define Z64_RELOCATION_H
 
 #include "global.h"
 

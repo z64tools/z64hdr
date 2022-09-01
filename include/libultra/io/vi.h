@@ -1,5 +1,5 @@
-#ifndef VI_H
-#define VI_H
+#ifndef Z64_VI_H
+#define Z64_VI_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_FCURVE_DATA_SKELANIME_H
-#define Z_FCURVE_DATA_SKELANIME_H
+#ifndef Z64_FCURVE_DATA_SKELANIME_H
+#define Z64_FCURVE_DATA_SKELANIME_H
 
 /**
  * @file z_fcurve_data_skelanime.c

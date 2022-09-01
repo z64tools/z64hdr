@@ -1,5 +1,5 @@
-#ifndef Z_COLLISION_CHECK_H
-#define Z_COLLISION_CHECK_H
+#ifndef Z64_COLLISION_CHECK_H
+#define Z64_COLLISION_CHECK_H
 
 #include "global.h"
 #include "vt.h"

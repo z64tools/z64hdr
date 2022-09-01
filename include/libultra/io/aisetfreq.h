@@ -1,5 +1,5 @@
-#ifndef AISETFREQ_H
-#define AISETFREQ_H
+#ifndef Z64_AISETFREQ_H
+#define Z64_AISETFREQ_H
 
 #include "global.h"
 

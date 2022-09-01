@@ -1,5 +1,5 @@
-#ifndef SENDMESG_H
-#define SENDMESG_H
+#ifndef Z64_SENDMESG_H
+#define Z64_SENDMESG_H
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-#ifndef Z_SKIN_MATRIX_H
-#define Z_SKIN_MATRIX_H
+#ifndef Z64_SKIN_MATRIX_H
+#define Z64_SKIN_MATRIX_H
 
 #include "global.h"
 #include "vt.h"

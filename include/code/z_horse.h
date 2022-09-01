@@ -1,5 +1,5 @@
-#ifndef Z_HORSE_H
-#define Z_HORSE_H
+#ifndef Z64_HORSE_H
+#define Z64_HORSE_H
 
 #include "global.h"
 #include "vt.h"

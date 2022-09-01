@@ -1,5 +1,5 @@
-#ifndef VIMODEPALLAN1_H
-#define VIMODEPALLAN1_H
+#ifndef Z64_VIMODEPALLAN1_H
+#define Z64_VIMODEPALLAN1_H
 
 #include "global.h"
 

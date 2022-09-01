@@ -1,5 +1,5 @@
-#ifndef Z_STD_DMA_H
-#define Z_STD_DMA_H
+#ifndef Z64_STD_DMA_H
+#define Z64_STD_DMA_H
 
 #include "global.h"
 #include "vt.h"

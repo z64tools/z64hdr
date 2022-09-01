@@ -1,5 +1,5 @@
-#ifndef Z_SKELANIME_H
-#define Z_SKELANIME_H
+#ifndef Z64_SKELANIME_H
+#define Z64_SKELANIME_H
 
 #include "global.h"
 #include "vt.h"

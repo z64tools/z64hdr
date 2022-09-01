@@ -1,5 +1,5 @@
-#ifndef Z_CONSTRUCT_H
-#define Z_CONSTRUCT_H
+#ifndef Z64_CONSTRUCT_H
+#define Z64_CONSTRUCT_H
 
 #include "global.h"
 

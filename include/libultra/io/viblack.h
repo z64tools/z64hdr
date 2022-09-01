@@ -1,5 +1,5 @@
-#ifndef VIBLACK_H
-#define VIBLACK_H
+#ifndef Z64_VIBLACK_H
+#define Z64_VIBLACK_H
 
 #include "global.h"
 

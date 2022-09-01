@@ -1,5 +1,5 @@
-#ifndef SETGLOBALINTMASK_H
-#define SETGLOBALINTMASK_H
+#ifndef Z64_SETGLOBALINTMASK_H
+#define Z64_SETGLOBALINTMASK_H
 
 #include "global.h"
 

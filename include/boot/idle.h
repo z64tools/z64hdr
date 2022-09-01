@@ -1,5 +1,5 @@
-#ifndef IDLE_H
-#define IDLE_H
+#ifndef Z64_IDLE_H
+#define Z64_IDLE_H
 
 #include "global.h"
 #include "vt.h"

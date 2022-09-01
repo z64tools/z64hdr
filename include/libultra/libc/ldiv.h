@@ -1,5 +1,5 @@
-#ifndef LDIV_H
-#define LDIV_H
+#ifndef Z64_LDIV_H
+#define Z64_LDIV_H
 
 #include "global.h"
 

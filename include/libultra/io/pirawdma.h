@@ -1,5 +1,5 @@
-#ifndef PIRAWDMA_H
-#define PIRAWDMA_H
+#ifndef Z64_PIRAWDMA_H
+#define Z64_PIRAWDMA_H
 
 #include "global.h"
 

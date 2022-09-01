@@ -1,5 +1,5 @@
-#ifndef Z_ACTOR_DLFTBLS_H
-#define Z_ACTOR_DLFTBLS_H
+#ifndef Z64_ACTOR_DLFTBLS_H
+#define Z64_ACTOR_DLFTBLS_H
 
 #include "global.h"
 

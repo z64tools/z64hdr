@@ -1,5 +1,5 @@
-#ifndef BOOT_MAIN_H
-#define BOOT_MAIN_H
+#ifndef Z64_BOOT_MAIN_H
+#define Z64_BOOT_MAIN_H
 
 #include "global.h"
 #include "boot.h"

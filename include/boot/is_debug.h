@@ -1,5 +1,5 @@
-#ifndef IS_DEBUG_H
-#define IS_DEBUG_H
+#ifndef Z64_IS_DEBUG_H
+#define Z64_IS_DEBUG_H
 
 #include "global.h"
 

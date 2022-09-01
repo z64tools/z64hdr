@@ -1,5 +1,5 @@
-#ifndef Z_EFFECT_SOFT_SPRITE_OLD_INIT_H
-#define Z_EFFECT_SOFT_SPRITE_OLD_INIT_H
+#ifndef Z64_EFFECT_SOFT_SPRITE_OLD_INIT_H
+#define Z64_EFFECT_SOFT_SPRITE_OLD_INIT_H
 
 #include "global.h"
 #include "overlays/effects/ovl_Effect_Ss_Dust/z_eff_ss_dust.h"

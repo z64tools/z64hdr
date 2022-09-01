@@ -1,5 +1,5 @@
-#ifndef FMODF_H
-#define FMODF_H
+#ifndef Z64_FMODF_H
+#define Z64_FMODF_H
 
 #include "global.h"
 

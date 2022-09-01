@@ -1,5 +1,5 @@
-#ifndef HEAPS_H
-#define HEAPS_H
+#ifndef Z64_HEAPS_H
+#define Z64_HEAPS_H
 
 #include "z64.h"
 

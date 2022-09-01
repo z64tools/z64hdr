@@ -1,5 +1,5 @@
-#ifndef SETEVENTMESG_H
-#define SETEVENTMESG_H
+#ifndef Z64_SETEVENTMESG_H
+#define Z64_SETEVENTMESG_H
 
 #include "global.h"
 #include "ultra64/internal.h"

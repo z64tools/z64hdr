@@ -1,5 +1,5 @@
-#ifndef JAMMESG_H
-#define JAMMESG_H
+#ifndef Z64_JAMMESG_H
+#define Z64_JAMMESG_H
 
 #include "global.h"
 

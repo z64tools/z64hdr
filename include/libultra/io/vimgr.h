@@ -1,5 +1,5 @@
-#ifndef VIMGR_H
-#define VIMGR_H
+#ifndef Z64_VIMGR_H
+#define Z64_VIMGR_H
 
 #include "global.h"
 #include "ultra64/internal.h"

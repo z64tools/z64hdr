@@ -1,5 +1,5 @@
-#ifndef DEQUEUETHREAD_H
-#define DEQUEUETHREAD_H
+#ifndef Z64_DEQUEUETHREAD_H
+#define Z64_DEQUEUETHREAD_H
 
 #include "global.h"
 
