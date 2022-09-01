@@ -1,6 +1,8 @@
-#ifndef __VIGETCURRCONTEXT__
-#define __VIGETCURRCONTEXT__
+#ifndef VIGETCURRCONTEXT_H
+#define VIGETCURRCONTEXT_H
 
 #include "global.h"
 
-#endif // __VIGETCURRCONTEXT__
+OSViContext* __osViGetCurrentContext(void);
+
+#endif

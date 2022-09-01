@@ -1,6 +1,8 @@
-#ifndef __LOGSEVERITY__
-#define __LOGSEVERITY__
+#ifndef LOGSEVERITY_H
+#define LOGSEVERITY_H
 
 #include "global.h"
 
-#endif // __LOGSEVERITY__
+extern s32 gOverlayLogSeverity;
+
+#endif

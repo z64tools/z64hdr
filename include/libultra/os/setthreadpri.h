@@ -1,6 +1,8 @@
-#ifndef __SETTHREADPRI__
-#define __SETTHREADPRI__
+#ifndef SETTHREADPRI_H
+#define SETTHREADPRI_H
 
 #include "global.h"
 
-#endif // __SETTHREADPRI__
+void osSetThreadPri(OSThread* thread, OSPri pri);
+
+#endif

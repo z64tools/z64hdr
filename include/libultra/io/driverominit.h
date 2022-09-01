@@ -1,8 +1,10 @@
-#ifndef __DRIVEROMINIT__
-#define __DRIVEROMINIT__
+#ifndef DRIVEROMINIT_H
+#define DRIVEROMINIT_H
 
 #include "global.h"
 
 extern OSPiHandle __DriveRomHandle;
 
-#endif // __DRIVEROMINIT__
+OSPiHandle* osDriveRomInit(void);
+
+#endif

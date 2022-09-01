@@ -1,6 +1,8 @@
-#ifndef __JAMMESG__
-#define __JAMMESG__
+#ifndef JAMMESG_H
+#define JAMMESG_H
 
 #include "global.h"
 
-#endif // __JAMMESG__
+s32 osJamMesg(OSMesgQueue* mq, OSMesg msg, s32 flag);
+
+#endif

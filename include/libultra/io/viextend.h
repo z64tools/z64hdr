@@ -1,6 +1,8 @@
-#ifndef __VIEXTEND__
-#define __VIEXTEND__
+#ifndef VIEXTEND_H
+#define VIEXTEND_H
 
 #include "global.h"
 
-#endif // __VIEXTEND__
+void osViExtendVStart(u32 arg0);
+
+#endif

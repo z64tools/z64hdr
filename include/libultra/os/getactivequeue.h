@@ -1,6 +1,8 @@
-#ifndef __GETACTIVEQUEUE__
-#define __GETACTIVEQUEUE__
+#ifndef GETACTIVEQUEUE_H
+#define GETACTIVEQUEUE_H
 
 #include "global.h"
 
-#endif // __GETACTIVEQUEUE__
+OSThread* __osGetActiveQueue(void);
+
+#endif

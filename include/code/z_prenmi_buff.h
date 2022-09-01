@@ -1,8 +1,15 @@
-#ifndef __Z_PRENMI_BUFF__
-#define __Z_PRENMI_BUFF__
+#ifndef Z_PRENMI_BUFF_H
+#define Z_PRENMI_BUFF_H
 
 #include "global.h"
+
 #define COLD_RESET 0
 #define NMI 1
 
-#endif // __Z_PRENMI_BUFF__
+void PreNmiBuff_Init(PreNmiBuff* this);
+
+void PreNmiBuff_SetReset(PreNmiBuff* this);
+
+u32 PreNmiBuff_IsResetting(PreNmiBuff* this);
+
+#endif

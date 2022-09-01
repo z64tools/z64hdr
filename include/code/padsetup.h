@@ -1,6 +1,8 @@
-#ifndef __PADSETUP__
-#define __PADSETUP__
+#ifndef PADSETUP_H
+#define PADSETUP_H
 
 #include "global.h"
 
-#endif // __PADSETUP__
+s32 PadSetup_Init(OSMesgQueue* mq, u8* outMask, OSContStatus* status);
+
+#endif

@@ -1,7 +1,9 @@
-#ifndef __AFTERPRENMI__
-#define __AFTERPRENMI__
+#ifndef AFTERPRENMI_H
+#define AFTERPRENMI_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __AFTERPRENMI__
+s32 osAfterPreNMI(void);
+
+#endif

@@ -1,7 +1,15 @@
-#ifndef __PFSGETSTATUS__
-#define __PFSGETSTATUS__
+#ifndef PFSGETSTATUS_H
+#define PFSGETSTATUS_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __PFSGETSTATUS__
+extern OSPifRam gPifMempakBuf;
+
+s32 __osPfsGetStatus(OSMesgQueue* queue, s32 channel);
+
+void __osPfsRequestOneChannel(s32 channel, u8 poll);
+
+void __osPfsGetOneChannelData(s32 channel, OSContStatus* contData);
+
+#endif

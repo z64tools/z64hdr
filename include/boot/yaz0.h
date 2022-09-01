@@ -1,12 +1,20 @@
-#ifndef __YAZ0__
-#define __YAZ0__
+#ifndef YAZ0_H
+#define YAZ0_H
 
 #include "global.h"
 
 extern u8 sYaz0DataBuffer[0x400];
-extern u8* sYaz0DataBufferEnd;
+extern u32 sYaz0CurDataEnd;
 extern u32 sYaz0CurRomStart;
 extern u32 sYaz0CurSize;
-extern u8* sYaz0MaxPtr;
+extern u32 sYaz0MaxPtr;
 
-#endif // __YAZ0__
+void* Yaz0_FirstDMA(void);
+
+void* Yaz0_NextDMA(void* curSrcPos);
+
+void Yaz0_DecompressImpl(Yaz0Header* hdr, u8* dst);
+
+void Yaz0_Decompress(u32 romStart, void* dst, u32 size);
+
+#endif

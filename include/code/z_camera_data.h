@@ -1,5 +1,5 @@
-#ifndef __Z_CAMERA_DATA__
-#define __Z_CAMERA_DATA__
+#ifndef Z_CAMERA_DATA_H
+#define Z_CAMERA_DATA_H
 
 #include "ultra64.h"
 #include "global.h"
@@ -27,260 +27,851 @@ typedef struct {
     CameraMode* cameraModes;
 } CameraSetting;
 
-extern s16 sOREGInit[53];
+/*==================================================================*/
+// Data
+extern s16 sOREGInit[];
+
 extern s16 sOREGInitCnt;
-extern s16 sCamDataRegsInit[28];
+
+extern s16 sCamDataRegsInit[CAM_DATA_MAX];
+
 extern s16 sCamDataRegsInitCount;
+
 extern char sCameraSettingNames[][12];
+
 extern char sCameraModeNames[][12];
-extern CameraModeValue sSetNormal0ModeNormalData[10];
-extern CameraModeValue sSetNormal0ModeTargetData[11];
-extern CameraModeValue sSetNormal0ModeFollowTargetData[13];
-extern CameraModeValue sSetNormal0ModeTalkData[12];
-extern CameraModeValue sSetNormal0ModeBattleData[12];
-extern CameraModeValue sSetNormal0ModeClimbData[9];
-extern CameraModeValue sSetNormal0ModeFirstPersonData[9];
-extern CameraModeValue sSetNormal0ModeBowArrowData[9];
-extern CameraModeValue sSetNormal0ModeBowArrowZData[9];
-extern CameraModeValue sSetNormal0ModeHookshotData[8];
-extern CameraModeValue sSetNormal0ModeBoomerangData[9];
-extern CameraModeValue sSetNormal0ModeSlingshotData[9];
-extern CameraModeValue sSetNormal0ModeClimbZData[9];
-extern CameraModeValue sSetNormal0ModeJumpData[8];
-extern CameraModeValue sSetNormal0ModeHangData[7];
-extern CameraModeValue sSetNormal0ModeHangZData[7];
-extern CameraModeValue sSetNormal0ModeFreeFallData[8];
-extern CameraModeValue sSetNormal0ModeChargeData[7];
-extern CameraModeValue sSetNormal0ModeStillData[10];
-extern CameraModeValue sSetNormal0ModePushPullData[11];
-extern CameraModeValue sSetNormal0ModeFollowBoomerangData[13];
-extern CameraModeValue sSetNormal1ModeNormalData[10];
-extern CameraModeValue sSetNormal1ModeTargetData[11];
-extern CameraModeValue sSetNormal1ModeFollowTargetData[13];
-extern CameraModeValue sSetNormal1ModeBattleData[12];
-extern CameraModeValue sSetNormal1ModeHookshotData[8];
-extern CameraModeValue sSetNormal1ModeJumpData[8];
-extern CameraModeValue sSetNormal1ModeFreeFallData[8];
-extern CameraModeValue sSetNormal1ModeClimbData[9];
-extern CameraModeValue sSetNormal1ModeClimbZData[9];
-extern CameraModeValue sSetNormal1ModeChargeData[7];
-extern CameraModeValue sSetNormal1ModeHangData[7];
-extern CameraModeValue sSetNormal1ModeHangZData[7];
-extern CameraModeValue sSetNormal1ModeStillData[10];
-extern CameraModeValue sSetDungeon0ModeNormalData[10];
-extern CameraModeValue sSetDungeon0ModeTargetData[11];
-extern CameraModeValue sSetDungeon0ModeFollowTargetData[13];
-extern CameraModeValue sSetDungeon0ModeBattleData[12];
-extern CameraModeValue sSetDungeon0ModeJumpData[8];
-extern CameraModeValue sSetDungeon0ModeFreeFallData[8];
-extern CameraModeValue sSetDungeon0ModeClimbData[9];
-extern CameraModeValue sSetDungeon0ModeClimbZData[9];
-extern CameraModeValue sSetDungeon0ModeChargeData[7];
-extern CameraModeValue sSetDungeon0ModeHangData[7];
-extern CameraModeValue sSetDungeon0ModeHangZData[7];
-extern CameraModeValue sSetDungeon0ModeStillData[10];
-extern CameraModeValue sSetDungeon1ModeNormalData[10];
-extern CameraModeValue sSetDungeon1ModeTalkData[12];
-extern CameraModeValue sSetDungeon1ModeJumpData[8];
-extern CameraModeValue sSetDungeon1ModeFreeFallData[8];
-extern CameraModeValue sSetDungeon1ModeClimbData[9];
-extern CameraModeValue sSetDungeon1ModeClimbZData[9];
-extern CameraModeValue sSetDungeon1ModeChargeData[7];
-extern CameraModeValue sSetDungeon1ModeHangData[7];
-extern CameraModeValue sSetDungeon1ModeHangZData[7];
-extern CameraModeValue sSetDungeon1ModeStillData[10];
-extern CameraModeValue sSetDungeon1ModePushPullData[11];
-extern CameraModeValue sSetNormal3ModeNormalData[10];
-extern CameraModeValue sSetNormal3ModeTargetData[11];
-extern CameraModeValue sSetNormal3ModeTalkData[12];
-extern CameraModeValue sSetNormal3ModeBoomerangData[10];
-extern CameraModeValue sSetHorseModeNormalData[9];
-extern CameraModeValue sSetHorseModeTargetData[9];
-extern CameraModeValue sSetHorseModeBowArrowData[9];
-extern CameraModeValue sSetHorseModeFollowTargetData[13];
-extern CameraModeValue sSetHorseModeTalkData[12];
-extern CameraModeValue sSetBossGohmaModeNormalData[10];
-extern CameraModeValue sSetBossGohmaModeBattleData[12];
-extern CameraModeValue sSetBossDodongoModeNormalData[10];
-extern CameraModeValue sSetBossDodongoModeBattleData[12];
-extern CameraModeValue sSetBossBarinadeModeNormalData[10];
-extern CameraModeValue sSetBossBarinadeModeBattleData[12];
-extern CameraModeValue sSetBossPhantomGanonModeNormalData[10];
-extern CameraModeValue sSetBossPhantomGanonModeBattleData[12];
-extern CameraModeValue sSetBossVolvagiaModeNormalData[10];
-extern CameraModeValue sSetBossVolvagiaModeBattleData[12];
-extern CameraModeValue sSetBossBongoModeNormalData[10];
-extern CameraModeValue sSetBossBongoModeBattleData[12];
-extern CameraModeValue sSetBossBongoModeJumpData[10];
-extern CameraModeValue sSetBossMorphaModeNormalData[10];
-extern CameraModeValue sSetBossMorphaModeBattleData[12];
-extern CameraModeValue sSetBossTwinrovaPlatformModeNormalData[10];
-extern CameraModeValue sSetBossTwinrovaModeBattleData[12];
-extern CameraModeValue sSetBossTwinrovaFloorModeNormalData[10];
-extern CameraModeValue sSetBossGanondorfModeNormalData[10];
-extern CameraModeValue sSetBossGanondorfModeChargeData[7];
-extern CameraModeValue sSetBossGanonModeNormalData[10];
-extern CameraModeValue sSetBossGanonModeBattleData[12];
-extern CameraModeValue sSetTowerClimbModeNormalData[9];
-extern CameraModeValue sSetTowerClimbModeJumpData[9];
-extern CameraModeValue sSetTowerUnusedModeNormalData[9];
-extern CameraModeValue sSetTowerUnusedModeJumpData[9];
-extern CameraModeValue sSetMarketBalconyModeNormalData[4];
-extern CameraModeValue sSetMarketBalconyModeFollowTargetData[4];
-extern CameraModeValue sSetMarketBalconyModeTalkData[4];
-extern CameraModeValue sSetChuBowlingModeNormalData[4];
-extern CameraModeValue sSetPivotCrawlspaceModeNormalData[5];
-extern CameraModeValue sSetPivotShopBrowsingModeNormalData[3];
-extern CameraModeValue sSetPivotInFrontAndFromSideModeNormalData[5];
-extern CameraModeValue sDataOnlyNullFlags[1];
-extern CameraModeValue sSetPrerendFixedModeFollowTargetData[1];
-extern CameraModeValue sSetPrerendPivotModeNormalData[2];
-extern CameraModeValue sSetPrerendPivotModeFollowTargetData[2];
-extern CameraModeValue sSetPrerendPivotModeTalkData[4];
-extern CameraModeValue sSetDoor0ModeNormalData[3];
-extern CameraModeValue sSetDoorCModeNormalData[3];
-extern CameraModeValue sSetDoorCModeTargetData[3];
-extern CameraModeValue sSetCrawlspaceModeNormalData[6];
-extern CameraModeValue sSetStart1ModeNormalData[1];
-extern CameraModeValue sSetFree0ModeNormalData[1];
-extern CameraModeValue sSetFree1ModeNormalData[1];
-extern CameraModeValue sSetPivotCornerModeNormalData[5];
-extern CameraModeValue sSetPivotWaterSurfaceModeNormalData[4];
-extern CameraModeValue sSetPivotWaterSurfaceModeTargetData[4];
-extern CameraModeValue sDataOnlyInterfaceFlags[1];
-extern CameraModeValue sSetForestBirdsEyeModeNormalData[11];
-extern CameraModeValue sSetForestBirdsEyeModeTalkData[1];
-extern CameraModeValue sSetSlowChestCsModeNormalData[3];
-extern CameraModeValue sSetCs3ModeNormalData[1];
-extern CameraModeValue sSetBeanGenericModeNormalData[10];
-extern CameraModeValue sSetBeanGenericModeTargetData[11];
-extern CameraModeValue sSetBeanGenericModeJumpData[8];
-extern CameraModeValue sSetBeanGenericModeHangData[7];
-extern CameraModeValue sSetBeanGenericModeHangZData[7];
-extern CameraModeValue sSetBeanGenericModeStillData[10];
-extern CameraModeValue sSetBeanLostWoodsModeNormalData[10];
-extern CameraModeValue sSetBeanLostWoodsModeTargetData[11];
-extern CameraModeValue sSetBeanLostWoodsModeJumpData[8];
-extern CameraModeValue sSetBeanLostWoodsModeHangData[7];
-extern CameraModeValue sSetBeanLostWoodsModeHangZData[7];
-extern CameraModeValue sSetBeanLostWoodsModeStillData[10];
-extern CameraModeValue sSetSceneUnusedModeNormalData[3];
-extern CameraModeValue sSetSceneTransitionModeNormalData[4];
-extern CameraModeValue sSetBigOctoModeNormalData[10];
-extern CameraModeValue sSetBigOctoModeBattleData[12];
-extern CameraModeValue sSetBigOctoModeStillData[10];
-extern CameraModeValue sSetMeadowBirdsEyeModeNormalData[10];
-extern CameraModeValue sSetMeadowBirdsEyeModeTargetData[11];
-extern CameraModeValue sSetMeadowBirdsEyeModeBattleData[11];
-extern CameraModeValue sSetMeadowBirdsEyeModeClimbData[10];
-extern CameraModeValue sSetMeadowUnusedModeNormalData[10];
-extern CameraModeValue sSetMeadowUnusedModeTargetData[11];
-extern CameraModeValue sSetMeadowUnusedModeBattleData[11];
-extern CameraModeValue sSetMeadowUnusedModeClimbData[10];
-extern CameraModeValue sSetFireBirdsEyeModeNormalData[10];
-extern CameraModeValue sSetFireBirdsEyeModeTargetData[11];
-extern CameraModeValue sSetFireBirdsEyeModeBattleData[11];
-extern CameraModeValue sSetFireBirdsEyeModeClimbData[10];
-extern CameraModeValue sSetTurnAroundModeNormalData[9];
-extern CameraModeValue sSetPivotVerticalModeNormalData[2];
-extern CameraModeValue sSetNormal2and4ModeNormalData[10];
-extern CameraModeValue sSetFishingModeNormalData[10];
-extern CameraModeValue sSetFishingModeTargetData[11];
-extern CameraModeValue sSetFishingModeFollowTargetData[12];
-extern CameraModeValue sSetFishingModeTalkData[12];
-extern CameraModeValue sSetFishingModeFirstPersonData[9];
-extern CameraModeValue sSetFishingModeJumpData[8];
-extern CameraModeValue sSetFishingModeFreeFallData[8];
-extern CameraModeValue sSetFishingModeHangData[7];
-extern CameraModeValue sSetFishingModeHangZData[7];
-extern CameraModeValue sSetCsCModeNormalData[1];
-extern CameraModeValue sSetJabuTentacleModeNormalData[10];
-extern CameraModeValue sSetJabuTentacleModeBattleData[12];
-extern CameraModeValue sSetDungeon2ModeNormalData[10];
-extern CameraModeValue sSetDungeon2ModeTargetData[11];
-extern CameraModeValue sSetDungeon2ModeBattleData[12];
-extern CameraModeValue sSetDungeon2ModeJumpData[8];
-extern CameraModeValue sSetDungeon2ModeFreeFallData[8];
-extern CameraModeValue sSetDungeon2ModeClimbData[9];
-extern CameraModeValue sSetDungeon2ModeClimbZData[9];
-extern CameraModeValue sSetDungeon2ModeHangData[7];
-extern CameraModeValue sSetDungeon2ModeHangZData[7];
-extern CameraModeValue sSetDungeon2ModeStillData[10];
-extern CameraModeValue sSetDungeon2ModePushPullData[11];
-extern CameraModeValue sSetDirectedYawModeNormalData[10];
-extern CameraModeValue sSetDirectedYawModeFollowTargetData[13];
-extern CameraModeValue sSetDirectedYawModeTalkData[12];
-extern CameraModeValue sNormal4ModeTalkData[12];
+
+/**
+ *=====================================================================
+ *                   General Data: NORMAL0 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetNormal0ModeNormalData[];
+
+extern CameraModeValue sSetNormal0ModeTargetData[];
+
+extern CameraModeValue sSetNormal0ModeFollowTargetData[];
+
+extern CameraModeValue sSetNormal0ModeTalkData[];
+
+extern CameraModeValue sSetNormal0ModeBattleData[];
+
+extern CameraModeValue sSetNormal0ModeClimbData[];
+
+extern CameraModeValue sSetNormal0ModeFirstPersonData[];
+
+extern CameraModeValue sSetNormal0ModeBowArrowData[];
+
+extern CameraModeValue sSetNormal0ModeBowArrowZData[];
+
+extern CameraModeValue sSetNormal0ModeHookshotData[];
+
+extern CameraModeValue sSetNormal0ModeBoomerangData[];
+
+extern CameraModeValue sSetNormal0ModeSlingshotData[];
+
+extern CameraModeValue sSetNormal0ModeClimbZData[];
+
+extern CameraModeValue sSetNormal0ModeJumpData[];
+
+extern CameraModeValue sSetNormal0ModeHangData[];
+
+extern CameraModeValue sSetNormal0ModeHangZData[];
+
+extern CameraModeValue sSetNormal0ModeFreeFallData[];
+
+extern CameraModeValue sSetNormal0ModeChargeData[];
+
+extern CameraModeValue sSetNormal0ModeStillData[];
+
+extern CameraModeValue sSetNormal0ModePushPullData[];
+
+extern CameraModeValue sSetNormal0ModeFollowBoomerangData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: NORMAL1 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetNormal1ModeNormalData[];
+
+extern CameraModeValue sSetNormal1ModeTargetData[];
+
+extern CameraModeValue sSetNormal1ModeFollowTargetData[];
+
+extern CameraModeValue sSetNormal1ModeBattleData[];
+
+extern CameraModeValue sSetNormal1ModeHookshotData[];
+
+extern CameraModeValue sSetNormal1ModeJumpData[];
+
+extern CameraModeValue sSetNormal1ModeFreeFallData[];
+
+extern CameraModeValue sSetNormal1ModeClimbData[];
+
+extern CameraModeValue sSetNormal1ModeClimbZData[];
+
+extern CameraModeValue sSetNormal1ModeChargeData[];
+
+extern CameraModeValue sSetNormal1ModeHangData[];
+
+extern CameraModeValue sSetNormal1ModeHangZData[];
+
+extern CameraModeValue sSetNormal1ModeStillData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: DUNGEON0 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDungeon0ModeNormalData[];
+
+extern CameraModeValue sSetDungeon0ModeTargetData[];
+
+extern CameraModeValue sSetDungeon0ModeFollowTargetData[];
+
+extern CameraModeValue sSetDungeon0ModeBattleData[];
+
+extern CameraModeValue sSetDungeon0ModeJumpData[];
+
+extern CameraModeValue sSetDungeon0ModeFreeFallData[];
+
+extern CameraModeValue sSetDungeon0ModeClimbData[];
+
+extern CameraModeValue sSetDungeon0ModeClimbZData[];
+
+extern CameraModeValue sSetDungeon0ModeChargeData[];
+
+extern CameraModeValue sSetDungeon0ModeHangData[];
+
+extern CameraModeValue sSetDungeon0ModeHangZData[];
+
+extern CameraModeValue sSetDungeon0ModeStillData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: DUNGEON1 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDungeon1ModeNormalData[];
+
+extern CameraModeValue sSetDungeon1ModeTalkData[];
+
+extern CameraModeValue sSetDungeon1ModeJumpData[];
+
+extern CameraModeValue sSetDungeon1ModeFreeFallData[];
+
+extern CameraModeValue sSetDungeon1ModeClimbData[];
+
+extern CameraModeValue sSetDungeon1ModeClimbZData[];
+
+extern CameraModeValue sSetDungeon1ModeChargeData[];
+
+extern CameraModeValue sSetDungeon1ModeHangData[];
+
+extern CameraModeValue sSetDungeon1ModeHangZData[];
+
+extern CameraModeValue sSetDungeon1ModeStillData[];
+
+extern CameraModeValue sSetDungeon1ModePushPullData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: NORMAL3 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetNormal3ModeNormalData[];
+
+extern CameraModeValue sSetNormal3ModeTargetData[];
+
+extern CameraModeValue sSetNormal3ModeTalkData[];
+
+/* These values are for when the eye
+ * >= OREG(45) units below the surface of the water.
+ */
+extern CameraModeValue sSetNormal3ModeBoomerangData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: HORSE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetHorseModeNormalData[];
+
+extern CameraModeValue sSetHorseModeTargetData[];
+
+extern CameraModeValue sSetHorseModeBowArrowData[];
+
+extern CameraModeValue sSetHorseModeFollowTargetData[];
+
+extern CameraModeValue sSetHorseModeTalkData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: BOSS_GOHMA Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossGohmaModeNormalData[];
+
+extern CameraModeValue sSetBossGohmaModeBattleData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: BOSS_DODONGO Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossDodongoModeNormalData[];
+
+extern CameraModeValue sSetBossDodongoModeBattleData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: BOSS_BARINADE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossBarinadeModeNormalData[];
+
+extern CameraModeValue sSetBossBarinadeModeBattleData[];
+
+/**
+ *=====================================================================
+ *              Custom Data: BOSS_PHANTOM_GANON Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossPhantomGanonModeNormalData[];
+
+extern CameraModeValue sSetBossPhantomGanonModeBattleData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: BOSS_VOLVAGIA Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossVolvagiaModeNormalData[];
+
+extern CameraModeValue sSetBossVolvagiaModeBattleData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: BOSS_BONGO Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossBongoModeNormalData[];
+
+extern CameraModeValue sSetBossBongoModeBattleData[];
+
+extern CameraModeValue sSetBossBongoModeJumpData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: BOSS_MORPHA Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossMorphaModeNormalData[];
+
+extern CameraModeValue sSetBossMorphaModeBattleData[];
+
+/**
+ *=====================================================================
+ *                  Custom Data: TWINROVA Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossTwinrovaPlatformModeNormalData[];
+
+extern CameraModeValue sSetBossTwinrovaModeBattleData[];
+
+extern CameraModeValue sSetBossTwinrovaFloorModeNormalData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: BOSS_GANONDORF Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossGanondorfModeNormalData[];
+
+extern CameraModeValue sSetBossGanondorfModeChargeData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: BOSS_GANON Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBossGanonModeNormalData[];
+
+extern CameraModeValue sSetBossGanonModeBattleData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: TOWER_CLIMB Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetTowerClimbModeNormalData[];
+
+extern CameraModeValue sSetTowerClimbModeJumpData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: TOWER_UNUSED Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetTowerUnusedModeNormalData[];
+
+extern CameraModeValue sSetTowerUnusedModeJumpData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: MARKET_BALCONY Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetMarketBalconyModeNormalData[];
+
+extern CameraModeValue sSetMarketBalconyModeFollowTargetData[];
+
+extern CameraModeValue sSetMarketBalconyModeTalkData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: CHU_BOWLING Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetChuBowlingModeNormalData[];
+
+/**
+ *=====================================================================
+ *               Custom Data: PIVOT_CRAWLSPACE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotCrawlspaceModeNormalData[];
+
+/**
+ *=====================================================================
+ *              Custom Data: PIVOT_SHOP_BROWSING Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotShopBrowsingModeNormalData[];
+
+/**
+ *=====================================================================
+ *          Custom Data: PIVOT_IN_FRONT and PIVOT_FROM_SIDE
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotInFrontAndFromSideModeNormalData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: No data, all flags off
+ *=====================================================================
+ */
+
+extern CameraModeValue sDataOnlyNullFlags[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: PREREND_FIXED Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPrerendFixedModeFollowTargetData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: PREREND_PIVOT Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPrerendPivotModeNormalData[];
+
+extern CameraModeValue sSetPrerendPivotModeFollowTargetData[];
+
+extern CameraModeValue sSetPrerendPivotModeTalkData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: DOOR0 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDoor0ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: DOORC Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDoorCModeNormalData[];
+
+extern CameraModeValue sSetDoorCModeTargetData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: CRAWLSPACE Setting
+ *=====================================================================
+ */
+
+// Camera_Subj4 only reads one setting which is used for flags
+extern CameraModeValue sSetCrawlspaceModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: START1 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetStart1ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: FREE0 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetFree0ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: FREE1 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetFree1ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: PIVOT_CORNER Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotCornerModeNormalData[];
+
+/**
+ *=====================================================================
+ *              Custom Data: PIVOT_WATER_SURFACE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotWaterSurfaceModeNormalData[];
+
+extern CameraModeValue sSetPivotWaterSurfaceModeTargetData[];
+
+/**
+ *=====================================================================
+ *               Custom Data: Various cutscene settings
+ *=====================================================================
+ */
+
+extern CameraModeValue sDataOnlyInterfaceFlags[];
+
+/**
+ *=====================================================================
+ *                Custom Data: FOREST_BIRDS_EYE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetForestBirdsEyeModeNormalData[];
+
+extern CameraModeValue sSetForestBirdsEyeModeTalkData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: SLOW_CHEST_CS Setting
+ *=====================================================================
+ */
+
+// Also set to but unused by function Demo4
+extern CameraModeValue sSetSlowChestCsModeNormalData[];
+
+/**
+ *=====================================================================
+ *                     Custom Data: CS_3 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetCs3ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: BEAN_GENERIC Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBeanGenericModeNormalData[];
+
+extern CameraModeValue sSetBeanGenericModeTargetData[];
+
+extern CameraModeValue sSetBeanGenericModeJumpData[];
+
+extern CameraModeValue sSetBeanGenericModeHangData[];
+
+extern CameraModeValue sSetBeanGenericModeHangZData[];
+
+extern CameraModeValue sSetBeanGenericModeStillData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: BEAN_LOST_WOODS Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBeanLostWoodsModeNormalData[];
+
+extern CameraModeValue sSetBeanLostWoodsModeTargetData[];
+
+extern CameraModeValue sSetBeanLostWoodsModeJumpData[];
+
+extern CameraModeValue sSetBeanLostWoodsModeHangData[];
+
+extern CameraModeValue sSetBeanLostWoodsModeHangZData[];
+
+extern CameraModeValue sSetBeanLostWoodsModeStillData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: SCENE_UNUSED Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetSceneUnusedModeNormalData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: SCENE_TRANSITION Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetSceneTransitionModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: BIG_OCTO Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetBigOctoModeNormalData[];
+
+extern CameraModeValue sSetBigOctoModeBattleData[];
+
+extern CameraModeValue sSetBigOctoModeStillData[];
+
+/**
+ *=====================================================================
+ *               Custom Data: MEADOW_BIRDS_EYE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetMeadowBirdsEyeModeNormalData[];
+
+extern CameraModeValue sSetMeadowBirdsEyeModeTargetData[];
+
+extern CameraModeValue sSetMeadowBirdsEyeModeBattleData[];
+
+extern CameraModeValue sSetMeadowBirdsEyeModeClimbData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: MEADOW_UNUSED Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetMeadowUnusedModeNormalData[];
+
+extern CameraModeValue sSetMeadowUnusedModeTargetData[];
+
+extern CameraModeValue sSetMeadowUnusedModeBattleData[];
+
+extern CameraModeValue sSetMeadowUnusedModeClimbData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: FIRE_BIRDS_EYE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetFireBirdsEyeModeNormalData[];
+
+extern CameraModeValue sSetFireBirdsEyeModeTargetData[];
+
+extern CameraModeValue sSetFireBirdsEyeModeBattleData[];
+
+extern CameraModeValue sSetFireBirdsEyeModeClimbData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: TURN_AROUND Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetTurnAroundModeNormalData[];
+
+/**
+ *=====================================================================
+ *                Custom Data: PIVOT_VERTICAL Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetPivotVerticalModeNormalData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: NORMAL2/4 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetNormal2and4ModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: FISHING Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetFishingModeNormalData[];
+
+extern CameraModeValue sSetFishingModeTargetData[];
+
+extern CameraModeValue sSetFishingModeFollowTargetData[];
+
+extern CameraModeValue sSetFishingModeTalkData[];
+
+extern CameraModeValue sSetFishingModeFirstPersonData[];
+
+extern CameraModeValue sSetFishingModeJumpData[];
+
+extern CameraModeValue sSetFishingModeFreeFallData[];
+
+extern CameraModeValue sSetFishingModeHangData[];
+
+extern CameraModeValue sSetFishingModeHangZData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: CS_C Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetCsCModeNormalData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: JABU_TENTACLE Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetJabuTentacleModeNormalData[];
+
+extern CameraModeValue sSetJabuTentacleModeBattleData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: DUNGEON2 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDungeon2ModeNormalData[];
+
+extern CameraModeValue sSetDungeon2ModeTargetData[];
+
+extern CameraModeValue sSetDungeon2ModeBattleData[];
+
+extern CameraModeValue sSetDungeon2ModeJumpData[];
+
+extern CameraModeValue sSetDungeon2ModeFreeFallData[];
+
+extern CameraModeValue sSetDungeon2ModeClimbData[];
+
+extern CameraModeValue sSetDungeon2ModeClimbZData[];
+
+extern CameraModeValue sSetDungeon2ModeHangData[];
+
+extern CameraModeValue sSetDungeon2ModeHangZData[];
+
+extern CameraModeValue sSetDungeon2ModeStillData[];
+
+extern CameraModeValue sSetDungeon2ModePushPullData[];
+
+/**
+ *=====================================================================
+ *                 Custom Data: DIRECTED_YAW Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sSetDirectedYawModeNormalData[];
+
+extern CameraModeValue sSetDirectedYawModeFollowTargetData[];
+
+extern CameraModeValue sSetDirectedYawModeTalkData[];
+
+/**
+ *=====================================================================
+ *                   Custom Data: NORMAL4 Setting
+ *=====================================================================
+ */
+
+extern CameraModeValue sNormal4ModeTalkData[];
+
+/**
+ * =====================================================================
+ *    CAMERA SETTINGS: USAGE OF FUNCTIONS AND DATA FOR SPECIFIC MODES
+ * =====================================================================
+ */
 
 #define CAM_SETTING_MODE_ENTRY(func, data) \
     { func, ARRAY_COUNT(data), data }
 
-extern CameraMode sCamSetNormal0Modes[42];
-extern CameraMode sCamSetNormal1Modes[42];
-extern CameraMode sCamSetDungeon0Modes[42];
-extern CameraMode sCamSetDungeon1Modes[42];
-extern CameraMode sCamSetNormal3Modes[39];
-extern CameraMode sCamSetHorseModes[15];
-extern CameraMode sCamSetBossGohmaModes[42];
-extern CameraMode sCamSetBossDodongoModes[42];
-extern CameraMode sCamSetBossBarinadeModes[42];
-extern CameraMode sCamSetBossPhantomGanonModes[42];
-extern CameraMode sCamSetBossVolvagiaModes[42];
-extern CameraMode sCamSetBossBongoModes[42];
-extern CameraMode sCamSetBossMorphaModes[42];
-extern CameraMode sCamSetBossTwinrovaPlatformModes[42];
-extern CameraMode sCamSetBossTwinrovaFloorModes[42];
-extern CameraMode sCamSetBossGanondorfModes[42];
-extern CameraMode sCamSetBossGanonModes[42];
-extern CameraMode sCamSetTowerClimbModes[42];
-extern CameraMode sCamSetTowerUnusedModes[42];
-extern CameraMode sCamSetMarketBalconyModes[7];
-extern CameraMode sCamSetChuBowlingModes[2];
-extern CameraMode sCamSetPivotCrawlspaceModes[2];
-extern CameraMode sCamSetPivotShopBrowsingModes[2];
-extern CameraMode sCamSetPivotInFrontModes[38];
-extern CameraMode sCamSetPreRendFixedModes[7];
-extern CameraMode sCamSetPreRendPivotModes[7];
-extern CameraMode sCamSetPreRendSideScrollModes[2];
-extern CameraMode sCamSetDoor0Modes[2];
-extern CameraMode sCamSetDoorCModes[4];
-extern CameraMode sCamSetCrawlspaceModes[2];
-extern CameraMode sCamSetStart0Modes[2];
-extern CameraMode sCamSetStart1Modes[2];
-extern CameraMode sCamSetFree0Modes[2];
-extern CameraMode sCamSetFree1Modes[2];
-extern CameraMode sCamSetPivotCornerModes[2];
-extern CameraMode sCamSetPivotDivingModes[4];
-extern CameraMode sCamSetCs0Modes[2];
-extern CameraMode sCamSetCsTwistedHallwayModes[2];
-extern CameraMode sCamSetForestBirdsEyeModes[6];
-extern CameraMode sCamSetSlowChestCsModes[2];
-extern CameraMode sCamSetItemUnusedModes[2];
-extern CameraMode sCamSetCs3Modes[2];
-extern CameraMode sCamSetCsAttentionModes[2];
-extern CameraMode sCamSetBeanGenericModes[42];
-extern CameraMode sCamSetBeanLostWoodsModes[42];
-extern CameraMode sCamSetSceneUnusedModes[2];
-extern CameraMode sCamSetSceneTransitionModes[2];
-extern CameraMode sCamSetFirePlatformModes[2];
-extern CameraMode sCamSetFireStaircaseModes[2];
-extern CameraMode sCamSetForestUnusedModes[2];
-extern CameraMode sCamSetForestDefeatPoeModes[2];
-extern CameraMode sCamSetBigOctoModes[42];
-extern CameraMode sCamSetMeadowBirdsEyeModes[10];
-extern CameraMode sCamSetMeadowUnusedModes[10];
-extern CameraMode sCamSetFireBirdsEyeModes[10];
-extern CameraMode sCamSetTurnAroundModes[2];
-extern CameraMode sCamSetPivotVerticalModes[2];
-extern CameraMode sCamSetNorm2Modes[42];
-extern CameraMode sCamSetFishingModes[27];
-extern CameraMode sCamSetCsCModes[2];
-extern CameraMode sCamSetJabuTentacleModes[42];
-extern CameraMode sCamSetDungeon2Modes[42];
-extern CameraMode sCamSetDirectedYawModes[42];
-extern CameraMode sCamSetPivotFromSideModes[20];
-extern CameraMode sCamSetNormal4Modes[42];
-extern CameraSetting sCameraSettings[66];
+extern CameraMode sCamSetNormal0Modes[];
+
+extern CameraMode sCamSetNormal1Modes[];
+
+extern CameraMode sCamSetDungeon0Modes[];
+
+extern CameraMode sCamSetDungeon1Modes[];
+
+extern CameraMode sCamSetNormal3Modes[];
+
+extern CameraMode sCamSetHorseModes[];
+
+extern CameraMode sCamSetBossGohmaModes[];
+
+extern CameraMode sCamSetBossDodongoModes[];
+
+extern CameraMode sCamSetBossBarinadeModes[];
+
+extern CameraMode sCamSetBossPhantomGanonModes[];
+
+extern CameraMode sCamSetBossVolvagiaModes[];
+
+extern CameraMode sCamSetBossBongoModes[];
+
+extern CameraMode sCamSetBossMorphaModes[];
+
+extern CameraMode sCamSetBossTwinrovaPlatformModes[];
+
+extern CameraMode sCamSetBossTwinrovaFloorModes[];
+
+extern CameraMode sCamSetBossGanondorfModes[];
+
+extern CameraMode sCamSetBossGanonModes[];
+
+extern CameraMode sCamSetTowerClimbModes[];
+
+extern CameraMode sCamSetTowerUnusedModes[];
+
+extern CameraMode sCamSetMarketBalconyModes[];
+
+extern CameraMode sCamSetChuBowlingModes[];
+
+extern CameraMode sCamSetPivotCrawlspaceModes[];
+
+extern CameraMode sCamSetPivotShopBrowsingModes[];
+
+extern CameraMode sCamSetPivotInFrontModes[];
+
+extern CameraMode sCamSetPreRendFixedModes[];
+
+extern CameraMode sCamSetPreRendPivotModes[];
+
+extern CameraMode sCamSetPreRendSideScrollModes[];
+
+extern CameraMode sCamSetDoor0Modes[];
+
+extern CameraMode sCamSetDoorCModes[];
+
+extern CameraMode sCamSetCrawlspaceModes[];
+
+extern CameraMode sCamSetStart0Modes[];
+
+extern CameraMode sCamSetStart1Modes[];
+
+extern CameraMode sCamSetFree0Modes[];
+
+extern CameraMode sCamSetFree1Modes[];
+
+extern CameraMode sCamSetPivotCornerModes[];
+
+extern CameraMode sCamSetPivotDivingModes[];
+
+extern CameraMode sCamSetCs0Modes[];
+
+extern CameraMode sCamSetCsTwistedHallwayModes[];
+
+extern CameraMode sCamSetForestBirdsEyeModes[];
+
+extern CameraMode sCamSetSlowChestCsModes[];
+
+extern CameraMode sCamSetItemUnusedModes[];
+
+extern CameraMode sCamSetCs3Modes[];
+
+extern CameraMode sCamSetCsAttentionModes[];
+
+extern CameraMode sCamSetBeanGenericModes[];
+
+extern CameraMode sCamSetBeanLostWoodsModes[];
+
+extern CameraMode sCamSetSceneUnusedModes[];
+
+extern CameraMode sCamSetSceneTransitionModes[];
+
+extern CameraMode sCamSetFirePlatformModes[];
+
+extern CameraMode sCamSetFireStaircaseModes[];
+
+extern CameraMode sCamSetForestUnusedModes[];
+
+extern CameraMode sCamSetForestDefeatPoeModes[];
+
+extern CameraMode sCamSetBigOctoModes[];
+
+extern CameraMode sCamSetMeadowBirdsEyeModes[];
+
+extern CameraMode sCamSetMeadowUnusedModes[];
+
+extern CameraMode sCamSetFireBirdsEyeModes[];
+
+extern CameraMode sCamSetTurnAroundModes[];
+
+extern CameraMode sCamSetPivotVerticalModes[];
+
+extern CameraMode sCamSetNorm2Modes[];
+
+extern CameraMode sCamSetFishingModes[];
+
+extern CameraMode sCamSetCsCModes[];
+
+extern CameraMode sCamSetJabuTentacleModes[];
+
+extern CameraMode sCamSetDungeon2Modes[];
+
+extern CameraMode sCamSetDirectedYawModes[];
+
+extern CameraMode sCamSetPivotFromSideModes[];
+
+extern CameraMode sCamSetNormal4Modes[];
+
+extern CameraSetting sCameraSettings[];
 
 s32 Camera_Normal0(Camera* camera);
 s32 Camera_Normal1(Camera* camera);
@@ -352,40 +943,82 @@ s32 Camera_Special6(Camera* camera);
 s32 Camera_Special7(Camera* camera);
 s32 Camera_Special8(Camera* camera);
 s32 Camera_Special9(Camera* camera);
-extern s32 (*sCameraFunctions[71])(Camera*);
+
+extern s32 (*sCameraFunctions[])(Camera*);
+
 extern s32 sInitRegs;
+
+extern s32 gDbgCamEnabled;
 extern s32 sDbgModeIdx;
 extern s16 sNextUID;
+
 extern s32 sCameraInterfaceFlags;
+
 extern s32 sCameraInterfaceAlpha;
 extern s32 sCameraShrinkWindowVal;
 extern s32 D_8011D3AC;
-extern s16 D_8011D3B0[14];
-extern s16 D_8011D3CC[14];
+
+extern s16 D_8011D3B0[];
+
+extern s16 D_8011D3CC[];
+
 extern s32 sUpdateCameraDirection;
 extern s32 D_8011D3EC;
 extern s32 D_8011D3F0;
+
 extern s32 sDemo5PrevAction12Frame;
+
 extern char sCameraFunctionNames[][8];
-extern VecSph D_8011D658[4];
-extern Vec3f D_8011D678[4];
+
+extern VecSph D_8011D658[];
+
+extern Vec3f D_8011D678[];
+
+/*******************************************************
+ * OnePoint initalization values for Demo5
+ ********************************************************/
 extern s32 sDemo5PrevSfxFrame;
-extern OnePointCsFull D_8011D6AC[3];
-extern OnePointCsFull D_8011D724[3];
-extern OnePointCsFull D_8011D79C[4];
-extern OnePointCsFull D_8011D83C[2];
-extern OnePointCsFull D_8011D88C[2];
-extern OnePointCsFull D_8011D8DC[3];
-extern OnePointCsFull D_8011D954[4];
-extern OnePointCsFull D_8011D9F4[3];
-extern Vec3f D_8011DA6C[4];
-extern Vec3f D_8011DA9C[4];
-extern f32 D_8011DACC[4];
-extern f32 D_8011DADC[4];
-extern s16 D_8011DAEC[8];
-extern s16 D_8011DAFC[6];
+
+// target is player, far from eye
+extern OnePointCsFull D_8011D6AC[];
+
+// target is player close to current eye
+extern OnePointCsFull D_8011D724[];
+
+// target is close to player
+extern OnePointCsFull D_8011D79C[];
+
+// target is within 300 units of eye, and player is within 30 units of eye
+extern OnePointCsFull D_8011D83C[];
+
+// target is within 700 units of eye, angle between player/eye and target/eye is less than
+// 76.9 degrees.  The x/y coordinates of the target on screen is between (21, 41) and (300, 200),
+// and the player is farther than 30 units of the eye
+extern OnePointCsFull D_8011D88C[];
+
+// same as above, but the target is NOT within the screen area.
+extern OnePointCsFull D_8011D8DC[];
+
+// target is a door.
+extern OnePointCsFull D_8011D954[];
+
+// otherwise
+extern OnePointCsFull D_8011D9F4[];
+
+extern Vec3f D_8011DA6C[];
+
+extern Vec3f D_8011DA9C[];
+
+extern f32 D_8011DACC[];
+
+extern f32 D_8011DADC[];
+
+extern s16 D_8011DAEC[];
+
+extern s16 D_8011DAFC[];
+
 extern PlayState* D_8015BD7C;
 extern DbCamera D_8015BD80;
 extern CollisionPoly* playerFloorPoly;
 
-#endif // __Z_CAMERA_DATA__
+#endif

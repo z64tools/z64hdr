@@ -1,6 +1,10 @@
-#ifndef __MTXUTY_CVT__
-#define __MTXUTY_CVT__
+#ifndef MTXUTY-CVT_H
+#define MTXUTY-CVT_H
 
 #include "global.h"
 
-#endif // __MTXUTY-CVT__
+void MtxConv_F2L(Mtx* m1, MtxF* m2);
+
+void MtxConv_L2F(MtxF* m1, Mtx* m2);
+
+#endif

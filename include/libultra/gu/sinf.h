@@ -1,7 +1,19 @@
-#ifndef __SINF__
-#define __SINF__
+#ifndef SINF_H
+#define SINF_H
 
 #include "global.h"
 #include "ultra64.h"
 
-#endif // __SINF__
+extern const du P[];
+
+extern const du rpi;
+
+extern const du pihi;
+
+extern const du pilo;
+
+extern const fu zero;
+
+f32 sinf(f32 x);
+
+#endif

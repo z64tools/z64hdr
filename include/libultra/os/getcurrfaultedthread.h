@@ -1,6 +1,8 @@
-#ifndef __GETCURRFAULTEDTHREAD__
-#define __GETCURRFAULTEDTHREAD__
+#ifndef GETCURRFAULTEDTHREAD_H
+#define GETCURRFAULTEDTHREAD_H
 
 #include "global.h"
 
-#endif // __GETCURRFAULTEDTHREAD__
+OSThread* __osGetCurrFaultedThread(void);
+
+#endif

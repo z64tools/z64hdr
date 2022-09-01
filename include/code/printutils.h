@@ -1,6 +1,10 @@
-#ifndef __PRINTUTILS__
-#define __PRINTUTILS__
+#ifndef PRINTUTILS_H
+#define PRINTUTILS_H
 
 #include "global.h"
 
-#endif // __PRINTUTILS__
+s32 PrintUtils_VPrintf(PrintCallback* pfn, const char* fmt, va_list args);
+
+s32 PrintUtils_Printf(PrintCallback* pfn, const char* fmt, ...);
+
+#endif

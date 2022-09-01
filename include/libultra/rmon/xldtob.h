@@ -1,14 +1,16 @@
-#ifndef __XLDTOB__
-#define __XLDTOB__
+#ifndef XLDTOB_H
+#define XLDTOB_H
 
 #include "global.h"
+
 #define BUFF_LEN 0x20
 
 s16 _Ldunscale(s16*, _Pft*);
 void _Genld(_Pft*, u8, u8*, s16, s16);
 
-extern const f64 D_800122E0[9];
+extern const f64 D_800122E0[];
 
+/* float properties */
 #define _D0 0
 #define _DBIAS 0x3FF
 #define _DLONG 1
@@ -18,6 +20,7 @@ extern const f64 D_800122E0[9];
 #define _FRND 1
 #define _LBIAS 0x3FFE
 #define _LOFF 15
+/* integer properties */
 #define _C2 1
 #define _CSIGN 1
 #define _ILONG 0
@@ -40,7 +43,10 @@ extern const f64 D_800122E0[9];
 #define _D3 3
 #endif
 
+void _Ldtob(_Pft* args, u8 type);
+
 s16 _Ldunscale(s16* pex, _Pft* px);
+
 void _Genld(_Pft* px, u8 code, u8* p, s16 nsig, s16 xexp);
 
-#endif // __XLDTOB__
+#endif

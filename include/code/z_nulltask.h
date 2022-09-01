@@ -1,6 +1,11 @@
-#ifndef __Z_NULLTASK__
-#define __Z_NULLTASK__
+#ifndef Z_NULLTASK_H
+#define Z_NULLTASK_H
 
 #include "global.h"
 
-#endif // __Z_NULLTASK__
+/**
+ * Blocks the current thread until all queued scheduler tasks have completed.
+ */
+void Sched_FlushTaskQueue(void);
+
+#endif

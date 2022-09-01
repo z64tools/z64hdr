@@ -1,6 +1,10 @@
-#ifndef __Z_CHEAP_PROC__
-#define __Z_CHEAP_PROC__
+#ifndef Z_CHEAP_PROC_H
+#define Z_CHEAP_PROC_H
 
 #include "global.h"
 
-#endif // __Z_CHEAP_PROC__
+void Gfx_DrawDListOpa(PlayState* play, Gfx* dlist);
+
+void Gfx_DrawDListXlu(PlayState* play, Gfx* dlist);
+
+#endif

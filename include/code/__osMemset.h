@@ -1,6 +1,19 @@
-#ifndef ____OSMEMSET__
-#define ____OSMEMSET__
+#ifndef __OSMEMSET_H
+#define __OSMEMSET_H
 
 #include "global.h"
 
-#endif // ____OSMEMSET__
+/**
+ * memset: sets `len` bytes to `val` starting at address `dest`.
+ *
+ * @see There are two other memsets in this codebase, Lib_MemSet(), MemSet()
+ *
+ * @param dest address to start at
+ * @param val value to write (s32, but interpreted as u8)
+ * @param len number of bytes to write
+ *
+ * @return dest
+ */
+void* __osMemset(void* dest, s32 val, size_t len);
+
+#endif

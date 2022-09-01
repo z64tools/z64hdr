@@ -1,6 +1,8 @@
-#ifndef __COSS__
-#define __COSS__
+#ifndef COSS_H
+#define COSS_H
 
 #include "global.h"
 
-#endif // __COSS__
+s16 coss(u16 angle);
+
+#endif

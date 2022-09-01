@@ -1,7 +1,11 @@
-#ifndef __Z_DLF__
-#define __Z_DLF__
+#ifndef Z_DLF_H
+#define Z_DLF_H
 
 #include "global.h"
 #include "vt.h"
 
-#endif // __Z_DLF__
+void Overlay_LoadGameState(GameStateOverlay* overlayEntry);
+
+void Overlay_FreeGameState(GameStateOverlay* overlayEntry);
+
+#endif

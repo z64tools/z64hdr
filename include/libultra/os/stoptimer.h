@@ -1,6 +1,8 @@
-#ifndef __STOPTIMER__
-#define __STOPTIMER__
+#ifndef STOPTIMER_H
+#define STOPTIMER_H
 
 #include "global.h"
 
-#endif // __STOPTIMER__
+s32 osStopTimer(OSTimer* timer);
+
+#endif

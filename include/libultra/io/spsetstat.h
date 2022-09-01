@@ -1,6 +1,8 @@
-#ifndef __SPSETSTAT__
-#define __SPSETSTAT__
+#ifndef SPSETSTAT_H
+#define SPSETSTAT_H
 
 #include "global.h"
 
-#endif // __SPSETSTAT__
+void __osSpSetStatus(u32 status);
+
+#endif

@@ -1,9 +1,13 @@
-#ifndef __SETEVENTMESG__
-#define __SETEVENTMESG__
+#ifndef SETEVENTMESG_H
+#define SETEVENTMESG_H
 
 #include "global.h"
 #include "ultra64/internal.h"
 
+extern __OSEventState __osEventStateTab[OS_NUM_EVENTS + 1];
+
 extern u32 __osPreNMI;
 
-#endif // __SETEVENTMESG__
+void osSetEventMesg(OSEvent e, OSMesgQueue* mq, OSMesg msg);
+
+#endif

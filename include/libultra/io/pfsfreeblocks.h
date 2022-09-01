@@ -1,8 +1,10 @@
-#ifndef __PFSFREEBLOCKS__
-#define __PFSFREEBLOCKS__
+#ifndef PFSFREEBLOCKS_H
+#define PFSFREEBLOCKS_H
 
 #include "ultra64.h"
 #include "global.h"
 #include "ultra64/pfs.h"
 
-#endif // __PFSFREEBLOCKS__
+s32 osPfsFreeBlocks(OSPfs* pfs, s32* leftoverBytes);
+
+#endif

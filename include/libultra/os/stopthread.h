@@ -1,6 +1,8 @@
-#ifndef __STOPTHREAD__
-#define __STOPTHREAD__
+#ifndef STOPTHREAD_H
+#define STOPTHREAD_H
 
 #include "global.h"
 
-#endif // __STOPTHREAD__
+void osStopThread(OSThread* thread);
+
+#endif

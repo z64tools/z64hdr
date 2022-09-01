@@ -1,6 +1,8 @@
-#ifndef __YIELDTHREAD__
-#define __YIELDTHREAD__
+#ifndef YIELDTHREAD_H
+#define YIELDTHREAD_H
 
 #include "global.h"
 
-#endif // __YIELDTHREAD__
+void osYieldThread(void);
+
+#endif

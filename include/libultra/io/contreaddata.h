@@ -1,6 +1,12 @@
-#ifndef __CONTREADDATA__
-#define __CONTREADDATA__
+#ifndef CONTREADDATA_H
+#define CONTREADDATA_H
 
 #include "global.h"
 
-#endif // __CONTREADDATA__
+s32 osContStartReadData(OSMesgQueue* mq);
+
+void osContGetReadData(OSContPad* contData);
+
+void __osPackReadData(void);
+
+#endif

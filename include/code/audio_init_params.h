@@ -1,11 +1,19 @@
-#ifndef __AUDIO_INIT_PARAMS__
-#define __AUDIO_INIT_PARAMS__
+#ifndef AUDIO_INIT_PARAMS_H
+#define AUDIO_INIT_PARAMS_H
 
 #include "global.h"
 
-extern u8 D_8016F0E0[0xA0];
+extern u8 D_8016F0E0[0xA0]; // unused
+extern AudioContext gAudioContext;
+extern void (*D_801755D0)(void);
+extern s32 D_801755D8[3]; // unused
 
-extern s32 D_801755D8[3];
-extern ReverbSettings D_80133420[13][3];
+extern const s16 D_8014A6C0[];
 
-#endif // __AUDIO_INIT_PARAMS__
+extern const AudioContextInitSizes D_8014A6C4;
+
+extern ReverbSettings D_80133420[][3];
+
+extern AudioSpec gAudioSpecs[18];
+
+#endif

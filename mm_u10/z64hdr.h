@@ -1,7 +1,8 @@
-#ifndef _Z64HDR_MM_U10_H_
-#define _Z64HDR_MM_U10_H_
-#define _Z64HDR_MM_U10_
+#ifndef Z64HDR_H
+#define Z64HDR_H
 
-#include "../z64hdr.h"
+#define MM_U10
+
+extern struct GraphicsContext* __gfxCtx;
 
 #endif

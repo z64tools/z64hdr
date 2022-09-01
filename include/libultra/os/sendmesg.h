@@ -1,6 +1,8 @@
-#ifndef __SENDMESG__
-#define __SENDMESG__
+#ifndef SENDMESG_H
+#define SENDMESG_H
 
 #include "global.h"
 
-#endif // __SENDMESG__
+s32 osSendMesg(OSMesgQueue* mq, OSMesg msg, s32 flag);
+
+#endif

@@ -1,7 +1,9 @@
-#ifndef __PFSSELECTBANK__
-#define __PFSSELECTBANK__
+#ifndef PFSSELECTBANK_H
+#define PFSSELECTBANK_H
 
 #include "ultra64/pfs.h"
 #include "global.h"
 
-#endif // __PFSSELECTBANK__
+s32 __osPfsSelectBank(OSPfs* pfs, u8 bank);
+
+#endif

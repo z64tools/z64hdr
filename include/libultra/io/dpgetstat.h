@@ -1,6 +1,8 @@
-#ifndef __DPGETSTAT__
-#define __DPGETSTAT__
+#ifndef DPGETSTAT_H
+#define DPGETSTAT_H
 
 #include "global.h"
 
-#endif // __DPGETSTAT__
+u32 osDpGetStatus(void);
+
+#endif

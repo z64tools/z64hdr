@@ -1,8 +1,12 @@
-#ifndef __SPRINTF__
-#define __SPRINTF__
+#ifndef SPRINTF_H
+#define SPRINTF_H
 
 #include "global.h"
 
 void* proutSprintf(void* dst, const char* fmt, u32 size);
 
-#endif // __SPRINTF__
+s32 vsprintf(char* dst, const char* fmt, va_list args);
+
+s32 sprintf(char* dst, const char* fmt, ...);
+
+#endif

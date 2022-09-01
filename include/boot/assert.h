@@ -1,6 +1,8 @@
-#ifndef __ASSERT__
-#define __ASSERT__
+#ifndef ASSERT_H
+#define ASSERT_H
 
 #include "global.h"
 
-#endif // __ASSERT__
+void __assert(const char* exp, const char* file, s32 line);
+
+#endif

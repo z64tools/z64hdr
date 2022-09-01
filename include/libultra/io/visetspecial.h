@@ -1,6 +1,8 @@
-#ifndef __VISETSPECIAL__
-#define __VISETSPECIAL__
+#ifndef VISETSPECIAL_H
+#define VISETSPECIAL_H
 
 #include "global.h"
 
-#endif // __VISETSPECIAL__
+void osViSetSpecialFeatures(u32 func);
+
+#endif

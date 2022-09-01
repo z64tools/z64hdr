@@ -1,7 +1,9 @@
-#ifndef __PFSFINDFILE__
-#define __PFSFINDFILE__
+#ifndef PFSFINDFILE_H
+#define PFSFINDFILE_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __PFSFINDFILE__
+s32 osPfsFindFile(OSPfs* pfs, u16 companyCode, u32 gameCode, u8* gameName, u8* extName, s32* fileNo);
+
+#endif

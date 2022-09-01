@@ -1,6 +1,8 @@
-#ifndef __GETTIME__
-#define __GETTIME__
+#ifndef GETTIME_H
+#define GETTIME_H
 
 #include "global.h"
 
-#endif // __GETTIME__
+OSTime osGetTime(void);
+
+#endif

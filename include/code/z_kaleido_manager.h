@@ -1,14 +1,30 @@
-#ifndef __Z_KALEIDO_MANAGER__
-#define __Z_KALEIDO_MANAGER__
+#ifndef Z_KALEIDO_MANAGER_H
+#define Z_KALEIDO_MANAGER_H
 
 #include "global.h"
 #include "vt.h"
+
 #define KALEIDO_OVERLAY(name, nameString)                                                                    \
     {                                                                                                        \
         NULL, (u32)_ovl_##name##SegmentRomStart, (u32)_ovl_##name##SegmentRomEnd, _ovl_##name##SegmentStart, \
             _ovl_##name##SegmentEnd, 0, nameString,                                                          \
     }
 
-extern void* sKaleidoAreaPtr;
+extern KaleidoMgrOverlay gKaleidoMgrOverlayTable[];
 
-#endif // __Z_KALEIDO_MANAGER__
+extern void* sKaleidoAreaPtr;
+extern KaleidoMgrOverlay* gKaleidoMgrCurOvl;
+extern u8 gBossMarkState;
+
+void KaleidoManager_LoadOvl(KaleidoMgrOverlay* ovl);
+
+void KaleidoManager_ClearOvl(KaleidoMgrOverlay* ovl);
+
+void KaleidoManager_Init(PlayState* play);
+
+void KaleidoManager_Destroy(void);
+
+// NOTE: this function looks messed up and probably doesn't work how it was intended to
+void* KaleidoManager_GetRamAddr(void* vram);
+
+#endif

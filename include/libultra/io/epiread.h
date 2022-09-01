@@ -1,6 +1,8 @@
-#ifndef __EPIREAD__
-#define __EPIREAD__
+#ifndef EPIREAD_H
+#define EPIREAD_H
 
 #include "global.h"
 
-#endif // __EPIREAD__
+s32 osEPiReadIo(OSPiHandle* handle, u32 devAddr, u32* data);
+
+#endif

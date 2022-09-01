@@ -1,6 +1,8 @@
-#ifndef __EPIWRITE__
-#define __EPIWRITE__
+#ifndef EPIWRITE_H
+#define EPIWRITE_H
 
 #include "global.h"
 
-#endif // __EPIWRITE__
+s32 osEPiWriteIo(OSPiHandle* handle, u32 devAddr, u32 data);
+
+#endif

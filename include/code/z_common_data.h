@@ -1,9 +1,13 @@
-#ifndef __Z_COMMON_DATA__
-#define __Z_COMMON_DATA__
+#ifndef Z_COMMON_DATA_H
+#define Z_COMMON_DATA_H
 
 #include "global.h"
 
+// The use of ALIGNED8 here is just a temporary solution until the SaveContext is re-structured
+ALIGNED8 SaveContext gSaveContext;
 extern u32 D_8015FA88;
 extern u32 D_8015FA8C;
 
-#endif // __Z_COMMON_DATA__
+void SaveContext_Init(void);
+
+#endif

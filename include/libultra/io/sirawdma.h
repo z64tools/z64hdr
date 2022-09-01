@@ -1,6 +1,8 @@
-#ifndef __SIRAWDMA__
-#define __SIRAWDMA__
+#ifndef SIRAWDMA_H
+#define SIRAWDMA_H
 
 #include "global.h"
 
-#endif // __SIRAWDMA__
+s32 __osSiRawStartDma(s32 dir, void* addr);
+
+#endif

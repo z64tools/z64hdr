@@ -1,6 +1,8 @@
-#ifndef __GETTHREADID__
-#define __GETTHREADID__
+#ifndef GETTHREADID_H
+#define GETTHREADID_H
 
 #include "global.h"
 
-#endif // __GETTHREADID__
+OSId osGetThreadId(OSThread* thread);
+
+#endif

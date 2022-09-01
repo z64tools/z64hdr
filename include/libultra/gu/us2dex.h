@@ -1,6 +1,8 @@
-#ifndef __US2DEX__
-#define __US2DEX__
+#ifndef US2DEX_H
+#define US2DEX_H
 
 #include "global.h"
 
-#endif // __US2DEX__
+void guS2DInitBg(uObjBg* bg);
+
+#endif

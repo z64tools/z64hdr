@@ -1,5 +1,5 @@
-#ifndef __Z_LOCALE__
-#define __Z_LOCALE__
+#ifndef Z_LOCALE_H
+#define Z_LOCALE_H
 
 #include "global.h"
 #include "vt.h"
@@ -7,4 +7,15 @@
 extern u32 gCurrentRegion;
 extern LocaleCartInfo sCartInfo;
 
-#endif // __Z_LOCALE__
+void Locale_Init(void);
+
+void Locale_ResetRegion(void);
+
+u32 func_80001F48(void);
+
+u32 func_80001F8C(void);
+
+// This function appears to be unused?
+u32 Locale_IsRegionNative(void);
+
+#endif

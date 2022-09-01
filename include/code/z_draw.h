@@ -1,5 +1,5 @@
-#ifndef __Z_DRAW__
-#define __Z_DRAW__
+#ifndef Z_DRAW_H
+#define Z_DRAW_H
 
 #include "global.h"
 #include "assets/objects/object_gi_key/object_gi_key.h"
@@ -81,6 +81,7 @@
 #include "assets/objects/object_gi_sword_1/object_gi_sword_1.h"
 #include "assets/objects/object_st/object_st.h"
 
+// "Get Item" Model Draw Functions
 void GetItem_DrawMaskOrBombchu(PlayState* play, s16 drawId);
 void GetItem_DrawSoldOut(PlayState* play, s16 drawId);
 void GetItem_DrawBlueFire(PlayState* play, s16 drawId);
@@ -111,35 +112,68 @@ void GetItem_DrawWallet(PlayState* play, s16 drawId);
 typedef struct {
     /* 0x00 */ void (*drawFunc)(PlayState*, s16);
     /* 0x04 */ Gfx* dlists[8];
-} DrawItemTableEntry;
+} DrawItemTableEntry; // size = 0x24
 
-extern DrawItemTableEntry sDrawItemTable[233];
+extern DrawItemTableEntry sDrawItemTable[];
+
+/**
+ * Draw "Get Item" Model
+ * Calls the corresponding draw function for the given draw ID
+ */
+void GetItem_Draw(PlayState* play, s16 drawId);
+
+// All remaining functions in this file are draw functions referenced in the table and called by the function above
 
 void GetItem_DrawMaskOrBombchu(PlayState* play, s16 drawId);
+
 void GetItem_DrawSoldOut(PlayState* play, s16 drawId);
+
 void GetItem_DrawBlueFire(PlayState* play, s16 drawId);
+
 void GetItem_DrawPoes(PlayState* play, s16 drawId);
+
 void GetItem_DrawFairy(PlayState* play, s16 drawId);
+
 void GetItem_DrawMirrorShield(PlayState* play, s16 drawId);
+
 void GetItem_DrawSkullToken(PlayState* play, s16 drawId);
+
 void GetItem_DrawEggOrMedallion(PlayState* play, s16 drawId);
+
 void GetItem_DrawCompass(PlayState* play, s16 drawId);
+
 void GetItem_DrawPotion(PlayState* play, s16 drawId);
+
 void GetItem_DrawGoronSword(PlayState* play, s16 drawId);
+
 void GetItem_DrawDekuNuts(PlayState* play, s16 drawId);
+
 void GetItem_DrawRecoveryHeart(PlayState* play, s16 drawId);
+
 void GetItem_DrawFish(PlayState* play, s16 drawId);
+
 void GetItem_DrawOpa0(PlayState* play, s16 drawId);
+
 void GetItem_DrawOpa0Xlu1(PlayState* play, s16 drawId);
+
 void GetItem_DrawXlu01(PlayState* play, s16 drawId);
+
 void GetItem_DrawOpa10Xlu2(PlayState* play, s16 drawId);
+
 void GetItem_DrawMagicArrow(PlayState* play, s16 drawId);
+
 void GetItem_DrawMagicSpell(PlayState* play, s16 drawId);
+
 void GetItem_DrawOpa1023(PlayState* play, s16 drawId);
+
 void GetItem_DrawOpa10Xlu32(PlayState* play, s16 drawId);
+
 void GetItem_DrawSmallRupee(PlayState* play, s16 drawId);
+
 void GetItem_DrawScale(PlayState* play, s16 drawId);
+
 void GetItem_DrawBulletBag(PlayState* play, s16 drawId);
+
 void GetItem_DrawWallet(PlayState* play, s16 drawId);
 
-#endif // __Z_DRAW__
+#endif

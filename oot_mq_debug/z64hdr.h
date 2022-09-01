@@ -1,6 +1,8 @@
-#ifndef _Z64HDR_OOT_MQ_DEBUG_H_
-#define _Z64HDR_OOT_MQ_DEBUG_H_
+#ifndef Z64HDR_H
+#define Z64HDR_H
 
-#include "../z64hdr.h"
+#define OOT_MQ_DEBUG_PAL
+
+extern struct GraphicsContext* __gfxCtx;
 
 #endif

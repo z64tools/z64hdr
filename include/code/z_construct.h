@@ -1,8 +1,16 @@
-#ifndef __Z_CONSTRUCT__
-#define __Z_CONSTRUCT__
+#ifndef Z_CONSTRUCT_H
+#define Z_CONSTRUCT_H
 
 #include "global.h"
 
+void func_80110990(PlayState* play);
+
+void func_801109B0(PlayState* play);
+
+void Message_Init(PlayState* play);
+
 void func_80111070(void);
 
-#endif // __Z_CONSTRUCT__
+void func_80112098(PlayState* play);
+
+#endif

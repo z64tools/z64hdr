@@ -1,6 +1,8 @@
-#ifndef __RECVMESG__
-#define __RECVMESG__
+#ifndef RECVMESG_H
+#define RECVMESG_H
 
 #include "global.h"
 
-#endif // __RECVMESG__
+s32 osRecvMesg(OSMesgQueue* mq, OSMesg* msg, s32 flag);
+
+#endif

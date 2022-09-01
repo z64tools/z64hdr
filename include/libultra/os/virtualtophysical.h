@@ -1,6 +1,8 @@
-#ifndef __VIRTUALTOPHYSICAL__
-#define __VIRTUALTOPHYSICAL__
+#ifndef VIRTUALTOPHYSICAL_H
+#define VIRTUALTOPHYSICAL_H
 
 #include "global.h"
 
-#endif // __VIRTUALTOPHYSICAL__
+u32 osVirtualToPhysical(void* vaddr);
+
+#endif

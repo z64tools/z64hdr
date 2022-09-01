@@ -1,6 +1,12 @@
-#ifndef __VI__
-#define __VI__
+#ifndef VI_H
+#define VI_H
 
 #include "global.h"
 
-#endif // __VI__
+extern OSViContext vi[2];
+extern OSViContext* __osViCurr;
+extern OSViContext* __osViNext;
+
+void __osViInit(void);
+
+#endif

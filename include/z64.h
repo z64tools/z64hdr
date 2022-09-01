@@ -1,8 +1,9 @@
 #ifndef Z64_H
 #define Z64_H
 
+#include "z64hdr.h"
 #include "ultra64.h"
-#include "ultra64/gs2dex.h"
+// #include "ultra64/gs2dex.h"
 #include "z64save.h"
 #include "z64light.h"
 #include "z64bgcheck.h"

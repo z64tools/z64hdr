@@ -1,6 +1,8 @@
-#ifndef __SIRAWWRITE__
-#define __SIRAWWRITE__
+#ifndef SIRAWWRITE_H
+#define SIRAWWRITE_H
 
 #include "global.h"
 
-#endif // __SIRAWWRITE__
+s32 __osSiRawWriteIo(void* devAddr, u32 val);
+
+#endif

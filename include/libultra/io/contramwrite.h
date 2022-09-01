@@ -1,7 +1,9 @@
-#ifndef __CONTRAMWRITE__
-#define __CONTRAMWRITE__
+#ifndef CONTRAMWRITE_H
+#define CONTRAMWRITE_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __CONTRAMWRITE__
+s32 __osContRamWrite(OSMesgQueue* mq, s32 channel, u16 address, u8* buffer, s32 force);
+
+#endif

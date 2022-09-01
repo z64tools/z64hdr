@@ -1,6 +1,12 @@
-#ifndef __TITLE_SETUP__
-#define __TITLE_SETUP__
+#ifndef TITLE_SETUP_H
+#define TITLE_SETUP_H
 
 #include "global.h"
 
-#endif // __TITLE_SETUP__
+void TitleSetup_InitImpl(GameState* gameState);
+
+void TitleSetup_Destroy(GameState* gameState);
+
+void TitleSetup_Init(GameState* gameState);
+
+#endif

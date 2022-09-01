@@ -1,6 +1,8 @@
-#ifndef __CREATEMESGQUEUE__
-#define __CREATEMESGQUEUE__
+#ifndef CREATEMESGQUEUE_H
+#define CREATEMESGQUEUE_H
 
 #include "global.h"
 
-#endif // __CREATEMESGQUEUE__
+void osCreateMesgQueue(OSMesgQueue* mq, OSMesg* msg, s32 count);
+
+#endif

@@ -1,7 +1,11 @@
-#ifndef __PFSDELETEFILE__
-#define __PFSDELETEFILE__
+#ifndef PFSDELETEFILE_H
+#define PFSDELETEFILE_H
 
 #include "ultra64/pfs.h"
 #include "global.h"
 
-#endif // __PFSDELETEFILE__
+s32 osPfsDeleteFile(OSPfs* pfs, u16 companyCode, u32 gameCode, u8* gameName, u8* extName);
+
+s32 __osPfsReleasePages(OSPfs* pfs, __OSInode* inode, u8 initialPage, u8 bank, __OSInodeUnit* finalPage);
+
+#endif

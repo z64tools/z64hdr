@@ -1,7 +1,9 @@
-#ifndef __EPIDMA__
-#define __EPIDMA__
+#ifndef EPIDMA_H
+#define EPIDMA_H
 
 #include "global.h"
 #include "ultra64/internal.h"
 
-#endif // __EPIDMA__
+s32 osEPiStartDma(OSPiHandle* handle, OSIoMesg* mb, s32 direction);
+
+#endif

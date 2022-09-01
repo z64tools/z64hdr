@@ -1,7 +1,14 @@
-#ifndef __VICONFIG__
-#define __VICONFIG__
+#ifndef VICONFIG_H
+#define VICONFIG_H
 
 #include "global.h"
 #include "vt.h"
 
-#endif // __VICONFIG__
+// this should probably go elsewhere but right now viconfig.o is the only object between idle and z_std_dma
+extern OSPiHandle* gCartHandle;
+
+void ViConfig_UpdateVi(u32 black);
+
+void ViConfig_UpdateBlack(void);
+
+#endif

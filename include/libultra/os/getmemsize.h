@@ -1,7 +1,10 @@
-#ifndef __GETMEMSIZE__
-#define __GETMEMSIZE__
+#ifndef GETMEMSIZE_H
+#define GETMEMSIZE_H
 
 #include "global.h"
+
 #define STEP 0x100000
 
-#endif // __GETMEMSIZE__
+u32 osGetMemSize(void);
+
+#endif

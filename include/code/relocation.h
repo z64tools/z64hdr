@@ -1,6 +1,8 @@
-#ifndef __RELOCATION__
-#define __RELOCATION__
+#ifndef RELOCATION_H
+#define RELOCATION_H
 
 #include "global.h"
 
-#endif // __RELOCATION__
+void Overlay_Relocate(void* allocatedVRamAddress, OverlayRelocationSection* overlayInfo, void* vRamStart);
+
+#endif

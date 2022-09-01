@@ -1,6 +1,8 @@
-#ifndef __AISETFREQ__
-#define __AISETFREQ__
+#ifndef AISETFREQ_H
+#define AISETFREQ_H
 
 #include "global.h"
 
-#endif // __AISETFREQ__
+s32 osAiSetFrequency(u32 frequency);
+
+#endif

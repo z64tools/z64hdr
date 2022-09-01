@@ -1,6 +1,8 @@
-#ifndef __VISWAPBUF__
-#define __VISWAPBUF__
+#ifndef VISWAPBUF_H
+#define VISWAPBUF_H
 
 #include "global.h"
 
-#endif // __VISWAPBUF__
+void osViSwapBuffer(void* vaddr);
+
+#endif

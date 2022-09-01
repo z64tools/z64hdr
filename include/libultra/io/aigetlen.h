@@ -1,6 +1,8 @@
-#ifndef __AIGETLEN__
-#define __AIGETLEN__
+#ifndef AIGETLEN_H
+#define AIGETLEN_H
 
 #include "global.h"
 
-#endif // __AIGETLEN__
+u32 osAiGetLength(void);
+
+#endif

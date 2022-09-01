@@ -1,6 +1,19 @@
-#ifndef __CONTQUERY__
-#define __CONTQUERY__
+#ifndef CONTQUERY_H
+#define CONTQUERY_H
 
 #include "global.h"
 
-#endif // __CONTQUERY__
+/**
+ * osContStartQuery:
+ * Starts to read the values for SI device status and type which are connected to the controller port and joyport
+ * connector.
+ */
+s32 osContStartQuery(OSMesgQueue* mq);
+
+/**
+ * osContGetQuery:
+ * Returns the values from osContStartQuery to status. Both functions must be paired for use.
+ */
+void osContGetQuery(OSContStatus* data);
+
+#endif

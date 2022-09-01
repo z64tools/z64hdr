@@ -140,8 +140,6 @@ typedef struct {
 #define BGCHECKFLAG_CRUSHED (1 << 8) // Crushed between a floor and ceiling (triggers a void for player)
 #define BGCHECKFLAG_PLAYER_WALL_INTERACT (1 << 9) // Only set/used by player, related to interacting with walls
 
-#include "z64bgcheck.h"
-
 typedef struct Actor {
     /* 0x000 */ s16 id; // Actor ID
     /* 0x002 */ u8 category; // Actor category. Refer to the corresponding enum for values
@@ -152,7 +150,13 @@ typedef struct Actor {
     /* 0x01E */ s8 objBankIndex; // Object bank index of the actor's object dependency; original name: "bank"
     /* 0x01F */ s8 targetMode; // Controls how far the actor can be targeted from and how far it can stay locked on
     /* 0x020 */ u16 sfx; // SFX ID to play. Sound plays when value is set, then is cleared the following update cycle
-    /* 0x024 */ PosRot world; // Position/rotation in the world
+    /* 0x024 */ union {
+                    PosRot world; // Position/rotation in the world
+                    struct {
+                        Vec3f pos;
+                        Vec3s dir;
+                    };
+                };
     /* 0x038 */ PosRot focus; // Target reticle focuses on this position. For player this represents head pos and rot
     /* 0x04C */ f32 targetArrowOffset; // Height offset of the target arrow relative to `focus` position
     /* 0x050 */ Vec3f scale; // Scale of the actor in each axis
@@ -172,8 +176,22 @@ typedef struct Actor {
     /* 0x08C */ f32 xyzDistToPlayerSq; // Squared distance between the actor and the player
     /* 0x090 */ f32 xzDistToPlayer; // Distance between the actor and the player in the XZ plane
     /* 0x094 */ f32 yDistToPlayer; // Dist is negative if the actor is above the player
-    /* 0x098 */ CollisionCheckInfo colChkInfo; // Variables related to the Collision Check system
-    /* 0x0B4 */ ActorShape shape; // Variables related to the physical shape of the actor
+    /* 0x098 */ union {
+                    CollisionCheckInfo colChkInfo; // Variables related to the Collision Check system
+                    struct {
+                        char __pad[0x16];
+                        u8 mass; // Used to compute displacement for OC collisions
+                        u8 health; // Note: some actors may use their own health variable instead of this one
+                        u8 damage; // Amount to decrement health by
+                        u8 damageEffect; // Stores what effect should occur when hit by a weapon
+                    };
+                };
+    /* 0x0B4 */ union {
+                    ActorShape shape; // Variables related to the physical shape of the actor
+                    struct {
+                        Vec3s rot;
+                    };
+                };
     /* 0x0E4 */ Vec3f projectedPos; // Position of the actor in projected space
     /* 0x0F0 */ f32 projectedW; // w component of the projected actor position
     /* 0x0F4 */ f32 uncullZoneForward; // Amount to increase the uncull zone forward by (in projected space)
@@ -198,9 +216,9 @@ typedef struct Actor {
     /* 0x130 */ ActorFunc update; // Update Routine. Called by `Actor_UpdateAll`
     /* 0x134 */ ActorFunc draw; // Draw Routine. Called by `Actor_Draw`
     /* 0x138 */ ActorOverlay* overlayEntry; // Pointer to the overlay table entry for this actor
-    #ifdef _Z64HDR_OOT_MQ_DEBUG_H_
+#ifdef OOT_MQ_DEBUG_PAL
     /* 0x13C */ char dbgPad[0x10]; // Padding that only exists in the debug rom
-    #endif
+#endif
 } Actor; // size = 0x14C
 
 typedef enum {

@@ -1,9 +1,13 @@
-#ifndef __XLITOB__
-#define __XLITOB__
+#ifndef XLITOB_H
+#define XLITOB_H
 
 #include "global.h"
+
+#define BUFF_LEN 0x18
 
 extern u8 D_8000AF70[];
 extern u8 D_8000AF84[];
 
-#endif // __XLITOB__
+void _Litob(_Pft* args, u8 type);
+
+#endif

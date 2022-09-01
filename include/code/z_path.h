@@ -1,6 +1,12 @@
-#ifndef __Z_PATH__
-#define __Z_PATH__
+#ifndef Z_PATH_H
+#define Z_PATH_H
 
 #include "global.h"
 
-#endif // __Z_PATH__
+Path* Path_GetByIndex(PlayState* play, s16 index, s16 max);
+
+f32 Path_OrientAndGetDistSq(Actor* actor, Path* path, s16 waypoint, s16* yaw);
+
+void Path_CopyLastPoint(Path* path, Vec3f* dest);
+
+#endif

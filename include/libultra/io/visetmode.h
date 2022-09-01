@@ -1,6 +1,8 @@
-#ifndef __VISETMODE__
-#define __VISETMODE__
+#ifndef VISETMODE_H
+#define VISETMODE_H
 
 #include "global.h"
 
-#endif // __VISETMODE__
+void osViSetMode(OSViMode* mode);
+
+#endif

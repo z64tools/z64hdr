@@ -1,6 +1,8 @@
-#ifndef __VIGETCURRFRAMEBUF__
-#define __VIGETCURRFRAMEBUF__
+#ifndef VIGETCURRFRAMEBUF_H
+#define VIGETCURRFRAMEBUF_H
 
 #include "global.h"
 
-#endif // __VIGETCURRFRAMEBUF__
+void* osViGetCurrentFramebuffer(void);
+
+#endif

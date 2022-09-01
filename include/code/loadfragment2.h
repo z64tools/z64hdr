@@ -1,6 +1,8 @@
-#ifndef __LOADFRAGMENT2__
-#define __LOADFRAGMENT2__
+#ifndef LOADFRAGMENT2_H
+#define LOADFRAGMENT2_H
 
 #include "global.h"
 
-#endif // __LOADFRAGMENT2__
+void* Overlay_AllocateAndLoad(uintptr_t vRomStart, uintptr_t vRomEnd, void* vRamStart, void* vRamEnd);
+
+#endif

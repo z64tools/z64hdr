@@ -1,5 +1,5 @@
-#ifndef __Z_MAP_MARK__
-#define __Z_MAP_MARK__
+#ifndef Z_MAP_MARK_H
+#define Z_MAP_MARK_H
 
 #include "global.h"
 #include "vt.h"
@@ -15,7 +15,7 @@ typedef struct {
     /* 0x18 */ u32 rectHeight;
     /* 0x1C */ u32 dsdx;
     /* 0x20 */ u32 dtdy;
-} MapMarkInfo;
+} MapMarkInfo; // size = 0x24
 
 typedef struct {
     /* 0x00 */ void* loadedRamAddr; // original name: "allocp"
@@ -24,7 +24,14 @@ typedef struct {
     /* 0x0C */ void* vramStart;
     /* 0x10 */ void* vramEnd;
     /* 0x14 */ void* vramTable;
-} MapMarkDataOverlay;
+} MapMarkDataOverlay; // size = 0x18
+
+extern u32 sBaseImageSizes[];
+extern u32 sLoadBlockImageSizes[];
+extern u32 sIncrImageSizes[];
+extern u32 sShiftImageSizes[];
+extern u32 sBytesImageSizes[];
+extern u32 sLineBytesImageSizes[];
 
 #define G_IM_SIZ_MARK sBaseImageSizes[markInfo->imageSize]
 #define G_IM_SIZ_MARK_LOAD_BLOCK sLoadBlockImageSizes[markInfo->imageSize]
@@ -33,6 +40,18 @@ typedef struct {
 #define G_IM_SIZ_MARK_BYTES sBytesImageSizes[markInfo->imageSize]
 #define G_IM_SIZ_MARK_LINE_BYTES sLineBytesImageSizes[markInfo->imageSize]
 
+extern MapMarkInfo sMapMarkInfoTable[];
+
+extern MapMarkDataOverlay sMapMarkDataOvl;
+
+extern MapMarkData** sLoadedMarkDataTable;
+
+void MapMark_Init(PlayState* play);
+
+void MapMark_ClearPointers(PlayState* play);
+
 void MapMark_DrawForDungeon(PlayState* play);
 
-#endif // __Z_MAP_MARK__
+void MapMark_Draw(PlayState* play);
+
+#endif

@@ -1,7 +1,19 @@
-#ifndef __COSF__
-#define __COSF__
+#ifndef COSF_H
+#define COSF_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __COSF__
+extern const du P[];
+
+extern const du rpi;
+
+extern const du pihi;
+
+extern const du pilo;
+
+extern const fu zero;
+
+f32 cosf(f32 x);
+
+#endif

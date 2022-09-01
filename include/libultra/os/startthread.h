@@ -1,6 +1,8 @@
-#ifndef __STARTTHREAD__
-#define __STARTTHREAD__
+#ifndef STARTTHREAD_H
+#define STARTTHREAD_H
 
 #include "global.h"
 
-#endif // __STARTTHREAD__
+void osStartThread(OSThread* thread);
+
+#endif

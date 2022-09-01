@@ -1,6 +1,8 @@
-#ifndef __SPTASKYIELDED__
-#define __SPTASKYIELDED__
+#ifndef SPTASKYIELDED_H
+#define SPTASKYIELDED_H
 
 #include "global.h"
 
-#endif // __SPTASKYIELDED__
+u32 osSpTaskYielded(OSTask* task);
+
+#endif

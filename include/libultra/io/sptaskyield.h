@@ -1,6 +1,8 @@
-#ifndef __SPTASKYIELD__
-#define __SPTASKYIELD__
+#ifndef SPTASKYIELD_H
+#define SPTASKYIELD_H
 
 #include "global.h"
 
-#endif // __SPTASKYIELD__
+void osSpTaskYield(void);
+
+#endif

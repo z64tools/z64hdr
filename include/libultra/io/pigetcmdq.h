@@ -1,7 +1,9 @@
-#ifndef __PIGETCMDQ__
-#define __PIGETCMDQ__
+#ifndef PIGETCMDQ_H
+#define PIGETCMDQ_H
 
 #include "global.h"
 #include "ultra64/internal.h"
 
-#endif // __PIGETCMDQ__
+OSMesgQueue* osPiGetCmdQueue(void);
+
+#endif

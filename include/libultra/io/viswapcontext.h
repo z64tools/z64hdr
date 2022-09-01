@@ -1,6 +1,8 @@
-#ifndef __VISWAPCONTEXT__
-#define __VISWAPCONTEXT__
+#ifndef VISWAPCONTEXT_H
+#define VISWAPCONTEXT_H
 
 #include "global.h"
 
-#endif // __VISWAPCONTEXT__
+void __osViSwapContext(void);
+
+#endif

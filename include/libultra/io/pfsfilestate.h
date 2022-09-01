@@ -1,7 +1,9 @@
-#ifndef __PFSFILESTATE__
-#define __PFSFILESTATE__
+#ifndef PFSFILESTATE_H
+#define PFSFILESTATE_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __PFSFILESTATE__
+s32 osPfsFileState(OSPfs* pfs, s32 fileNo, OSPfsState* state);
+
+#endif

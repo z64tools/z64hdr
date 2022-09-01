@@ -1,6 +1,12 @@
-#ifndef __CODE_800D2E30__
-#define __CODE_800D2E30__
+#ifndef CODE_800D2E30_H
+#define CODE_800D2E30_H
 
 #include "global.h"
 
-#endif // __CODE_800D2E30__
+void func_800D2E30(UnkRumbleStruct* arg0);
+
+void func_800D3140(UnkRumbleStruct* arg0);
+
+void func_800D3178(UnkRumbleStruct* arg0);
+
+#endif

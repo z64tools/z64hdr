@@ -1,6 +1,8 @@
-#ifndef __SIRAWREAD__
-#define __SIRAWREAD__
+#ifndef SIRAWREAD_H
+#define SIRAWREAD_H
 
 #include "global.h"
 
-#endif // __SIRAWREAD__
+s32 __osSiRawReadIo(void* devAddr, u32* dst);
+
+#endif

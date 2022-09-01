@@ -1,6 +1,8 @@
-#ifndef __DESTROYTHREAD__
-#define __DESTROYTHREAD__
+#ifndef DESTROYTHREAD_H
+#define DESTROYTHREAD_H
 
 #include "global.h"
 
-#endif // __DESTROYTHREAD__
+void osDestroyThread(OSThread* thread);
+
+#endif

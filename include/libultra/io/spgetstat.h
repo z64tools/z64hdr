@@ -1,6 +1,8 @@
-#ifndef __SPGETSTAT__
-#define __SPGETSTAT__
+#ifndef SPGETSTAT_H
+#define SPGETSTAT_H
 
 #include "global.h"
 
-#endif // __SPGETSTAT__
+u32 __osSpGetStatus(void);
+
+#endif

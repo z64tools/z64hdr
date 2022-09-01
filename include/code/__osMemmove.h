@@ -1,6 +1,19 @@
-#ifndef ____OSMEMMOVE__
-#define ____OSMEMMOVE__
+#ifndef __OSMEMMOVE_H
+#define __OSMEMMOVE_H
 
 #include "global.h"
 
-#endif // ____OSMEMMOVE__
+/**
+ * memmove: copies `len` bytes from memory starting at `src` to memory starting at `dest`.
+ *
+ * Unlike memcpy(), the regions of memory may overlap.
+ *
+ * @param dest address of start of buffer to write to
+ * @param src address of start of buffer to read from
+ * @param len number of bytes to copy.
+ *
+ * @return dest
+ */
+void* __osMemmove(void* dest, const void* src, size_t len);
+
+#endif

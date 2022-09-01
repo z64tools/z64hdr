@@ -1,6 +1,10 @@
-#ifndef __LDIV__
-#define __LDIV__
+#ifndef LDIV_H
+#define LDIV_H
 
 #include "global.h"
 
-#endif // __LDIV__
+ldiv_t ldiv(s32 num, s32 denom);
+
+lldiv_t lldiv(s64 num, s64 denom);
+
+#endif

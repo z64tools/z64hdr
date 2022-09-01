@@ -1,10 +1,31 @@
-#ifndef __Z_FBDEMO_CIRCLE__
-#define __Z_FBDEMO_CIRCLE__
+#ifndef Z_FBDEMO_CIRCLE_H
+#define Z_FBDEMO_CIRCLE_H
 
 #include "global.h"
 
-extern Gfx sCircleEmptyDList[1];
+// unused
+extern Gfx sCircleEmptyDList[];
 
-extern Gfx sCircleDList[96][31];
+#include "assets/code/fbdemo_circle/z_fbdemo_circle.h"
 
-#endif // __Z_FBDEMO_CIRCLE__
+extern Gfx sCircleDList[];
+
+void TransitionCircle_Start(void* thisx);
+
+void* TransitionCircle_Init(void* thisx);
+
+void TransitionCircle_Destroy(void* thisx);
+
+void TransitionCircle_Update(void* thisx, s32 updateRate);
+
+void TransitionCircle_Draw(void* thisx, Gfx** gfxP);
+
+s32 TransitionCircle_IsDone(void* thisx);
+
+void TransitionCircle_SetType(void* thisx, s32 type);
+
+void TransitionCircle_SetColor(void* thisx, u32 color);
+
+void TransitionCircle_SetUnkColor(void* thisx, u32 unkColor);
+
+#endif

@@ -1,6 +1,8 @@
-#ifndef __GETTHREADPRI__
-#define __GETTHREADPRI__
+#ifndef GETTHREADPRI_H
+#define GETTHREADPRI_H
 
 #include "global.h"
 
-#endif // __GETTHREADPRI__
+OSPri osGetThreadPri(OSThread* thread);
+
+#endif

@@ -1,6 +1,8 @@
-#ifndef __VIMODEMPALLAN1__
-#define __VIMODEMPALLAN1__
+#ifndef VIMODEMPALLAN1_H
+#define VIMODEMPALLAN1_H
 
 #include "global.h"
 
-#endif // __VIMODEMPALLAN1__
+extern OSViMode osViModeMpalLan1;
+
+#endif

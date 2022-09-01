@@ -1,5 +1,5 @@
-#ifndef __SIACS__
-#define __SIACS__
+#ifndef SIACS_H
+#define SIACS_H
 
 #include "global.h"
 
@@ -7,4 +7,10 @@ extern OSMesg siAccessBuf[1];
 extern OSMesgQueue __osSiAccessQueue;
 extern u32 __osSiAccessQueueEnabled;
 
-#endif // __SIACS__
+void __osSiCreateAccessQueue(void);
+
+void __osSiGetAccess(void);
+
+void __osSiRelAccess(void);
+
+#endif

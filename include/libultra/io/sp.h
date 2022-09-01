@@ -1,6 +1,8 @@
-#ifndef __SP__
-#define __SP__
+#ifndef SP_H
+#define SP_H
 
 #include "global.h"
 
-#endif // __SP__
+u32 __osSpDeviceBusy(void);
+
+#endif

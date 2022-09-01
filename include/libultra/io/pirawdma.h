@@ -1,6 +1,8 @@
-#ifndef __PIRAWDMA__
-#define __PIRAWDMA__
+#ifndef PIRAWDMA_H
+#define PIRAWDMA_H
 
 #include "global.h"
 
-#endif // __PIRAWDMA__
+s32 __osPiRawStartDma(s32 dir, u32 cartAddr, void* dramAddr, size_t size);
+
+#endif

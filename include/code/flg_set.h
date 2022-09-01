@@ -1,6 +1,8 @@
-#ifndef __FLG_SET__
-#define __FLG_SET__
+#ifndef FLG_SET_H
+#define FLG_SET_H
 
 #include "global.h"
 
-#endif // __FLG_SET__
+void FlagSet_Update(PlayState* play);
+
+#endif

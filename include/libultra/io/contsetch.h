@@ -1,7 +1,14 @@
-#ifndef __CONTSETCH__
-#define __CONTSETCH__
+#ifndef CONTSETCH_H
+#define CONTSETCH_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __CONTSETCH__
+/*
+ * s32 osContSetCh(u8 ch)
+ * This function specifies the number of devices for the functions to access when those functions access to multiple
+ * direct SI devices.
+ */
+s32 osContSetCh(u8 ch);
+
+#endif

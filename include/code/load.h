@@ -1,6 +1,8 @@
-#ifndef __LOAD__
-#define __LOAD__
+#ifndef LOAD_H
+#define LOAD_H
 
 #include "global.h"
 
-#endif // __LOAD__
+s32 Overlay_Load(uintptr_t vRomStart, uintptr_t vRomEnd, void* vRamStart, void* vRamEnd, void* allocatedVRamAddr);
+
+#endif

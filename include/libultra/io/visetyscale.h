@@ -1,6 +1,8 @@
-#ifndef __VISETYSCALE__
-#define __VISETYSCALE__
+#ifndef VISETYSCALE_H
+#define VISETYSCALE_H
 
 #include "global.h"
 
-#endif // __VISETYSCALE__
+void osViSetYScale(f32 scale);
+
+#endif

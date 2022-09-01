@@ -1,6 +1,8 @@
-#ifndef __VISETEVENT__
-#define __VISETEVENT__
+#ifndef VISETEVENT_H
+#define VISETEVENT_H
 
 #include "global.h"
 
-#endif // __VISETEVENT__
+void osViSetEvent(OSMesgQueue* mq, OSMesg msg, u32 retraceCount);
+
+#endif

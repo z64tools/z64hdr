@@ -1,12 +1,20 @@
-#ifndef __Z_SAMPLE__
-#define __Z_SAMPLE__
+#ifndef Z_SAMPLE_H
+#define Z_SAMPLE_H
 
 #include "global.h"
 
 void Sample_HandleStateChange(SampleContext* this);
+
 void Sample_Draw(SampleContext* this);
+
 void Sample_Main(GameState* thisx);
+
+void Sample_Destroy(GameState* thisx);
+
 void Sample_SetupView(SampleContext* this);
+
 void Sample_LoadTitleStatic(SampleContext* this);
 
-#endif // __Z_SAMPLE__
+void Sample_Init(GameState* thisx);
+
+#endif

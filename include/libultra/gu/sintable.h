@@ -1,6 +1,8 @@
-#ifndef __SINTABLE__
-#define __SINTABLE__
+#ifndef SINTABLE_H
+#define SINTABLE_H
 
 #include "ultra64/types.h"
 
-#endif // __SINTABLE__
+extern s16 sintable[0x400];
+
+#endif

@@ -1,6 +1,8 @@
-#ifndef __SI__
-#define __SI__
+#ifndef SI_H
+#define SI_H
 
 #include "global.h"
 
-#endif // __SI__
+s32 __osSiDeviceBusy(void);
+
+#endif

@@ -1,6 +1,8 @@
-#ifndef __DPSETSTAT__
-#define __DPSETSTAT__
+#ifndef DPSETSTAT_H
+#define DPSETSTAT_H
 
 #include "global.h"
 
-#endif // __DPSETSTAT__
+void osDpSetStatus(u32 status);
+
+#endif

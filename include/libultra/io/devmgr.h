@@ -1,7 +1,9 @@
-#ifndef __DEVMGR__
-#define __DEVMGR__
+#ifndef DEVMGR_H
+#define DEVMGR_H
 
 #include "global.h"
 #include "ultra64/internal.h"
 
-#endif // __DEVMGR__
+void __osDevMgrMain(void* arg);
+
+#endif

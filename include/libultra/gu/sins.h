@@ -1,6 +1,9 @@
-#ifndef __SINS__
-#define __SINS__
+#ifndef SINS_H
+#define SINS_H
 
 #include "ultra64.h"
+#include "sintable.h"
 
-#endif // __SINS__
+s16 sins(u16 x);
+
+#endif

@@ -1,8 +1,8 @@
-#ifndef __RESETGLOBALINTMASK__
-#define __RESETGLOBALINTMASK__
+#ifndef RESETGLOBALINTMASK_H
+#define RESETGLOBALINTMASK_H
 
 #include "global.h"
 
 void __osResetGlobalIntMask(OSHWIntr mask);
 
-#endif // __RESETGLOBALINTMASK__
+#endif

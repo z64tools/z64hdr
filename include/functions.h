@@ -4,7 +4,16 @@
 #include "z64.h"
 #include "macros.h"
 
-#include "common/intrinsics.h"
+f32 fabsf(f32 f);
+#ifndef __sgi
+#define fabsf(f) __builtin_fabsf((f32)(f))
+#else
+#pragma intrinsic(fabsf)
+#endif
+f32 sqrtf(f32 f);
+#pragma intrinsic(sqrtf)
+f64 sqrt(f64 f);
+#pragma intrinsic(sqrt)
 
 void cleararena(void);
 void bootproc(void);
@@ -24,13 +33,13 @@ s32 DmaMgr_SendRequestImpl(DmaRequest* req, u32 ram, u32 vrom, u32 size, u32 unk
 s32 DmaMgr_SendRequest0(u32 ram, u32 vrom, u32 size);
 void DmaMgr_Init(void);
 s32 DmaMgr_SendRequest2(DmaRequest* req, u32 ram, u32 vrom, u32 size, u32 unk5, OSMesgQueue* queue, OSMesg msg
-#ifdef _Z64HDR_OOT_MQ_DEBUG_H_
-                        , const char* file, s32 line
+#ifdef OOT_MQ_DEBUG_PAL
+  , const char* file, s32 line
 #endif
 );
 s32 DmaMgr_SendRequest1(void* ram0, u32 vrom, u32 size
-#ifdef _Z64HDR_OOT_MQ_DEBUG_H_
-                        , const char* file, s32 line
+#ifdef OOT_MQ_DEBUG_PAL
+  , const char* file, s32 line
 #endif
 );
 void* Yaz0_FirstDMA(void);

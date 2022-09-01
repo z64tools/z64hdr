@@ -1,10 +1,19 @@
-#ifndef __SPTASK__
-#define __SPTASK__
+#ifndef SPTASK_H
+#define SPTASK_H
 
 #include "global.h"
+
 #define _osVirtualToPhysical(ptr)              \
     if (ptr != NULL) {                         \
         ptr = (void*)osVirtualToPhysical(ptr); \
     }
 
-#endif // __SPTASK__
+extern OSTask sTmpTask;
+
+OSTask* _VirtualToPhysicalTask(OSTask* intp);
+
+void osSpTaskLoad(OSTask* intp);
+
+void osSpTaskStartGo(OSTask* tp);
+
+#endif

@@ -1,11 +1,24 @@
-#ifndef __MAIN__
-#define __MAIN__
+#ifndef MAIN_H
+#define MAIN_H
 
 #include "global.h"
 #include "vt.h"
 
+extern s32 gScreenWidth;
+extern s32 gScreenHeight;
 extern u32 gSystemHeapSize;
+
+extern PreNmiBuff* gAppNmiBufferPtr;
+extern Scheduler gScheduler;
+extern PadMgr gPadMgr;
+extern IrqMgr gIrqMgr;
+extern u32 gSegments[NUM_SEGMENTS];
 extern OSThread sGraphThread;
+STACK(sGraphStack, 0x1800);
+STACK(sSchedStack, 0x600);
+STACK(sAudioStack, 0x800);
+STACK(sPadMgrStack, 0x500);
+STACK(sIrqMgrStack, 0x500);
 extern StackEntry sGraphStackInfo;
 extern StackEntry sSchedStackInfo;
 extern StackEntry sAudioStackInfo;
@@ -15,4 +28,8 @@ extern AudioMgr gAudioMgr;
 extern OSMesgQueue sSerialEventQueue;
 extern OSMesg sSerialMsgBuf[1];
 
-#endif // __MAIN__
+void Main_LogSystemHeap(void);
+
+void Main(void* arg);
+
+#endif

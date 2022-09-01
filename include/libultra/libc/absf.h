@@ -1,6 +1,8 @@
-#ifndef __ABSF__
-#define __ABSF__
+#ifndef ABSF_H
+#define ABSF_H
 
 #include "global.h"
 
-#endif // __ABSF__
+f32 absf(f32 a);
+
+#endif

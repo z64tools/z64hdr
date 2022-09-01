@@ -1,6 +1,8 @@
-#ifndef __VIMODENTSCLAN1__
-#define __VIMODENTSCLAN1__
+#ifndef VIMODENTSCLAN1_H
+#define VIMODENTSCLAN1_H
 
 #include "global.h"
 
-#endif // __VIMODENTSCLAN1__
+extern OSViMode osViModeNtscLan1;
+
+#endif

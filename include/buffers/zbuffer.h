@@ -1,6 +1,9 @@
-#ifndef __ZBUFFER__
-#define __ZBUFFER__
+#ifndef ZBUFFER_H
+#define ZBUFFER_H
 
 #include "z64.h"
 
-#endif // __ZBUFFER__
+// 0x25800 bytes
+extern u16 gZBuffer[SCREEN_HEIGHT][SCREEN_WIDTH];
+
+#endif

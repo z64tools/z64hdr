@@ -1,8 +1,10 @@
-#ifndef __CARTROMINIT__
-#define __CARTROMINIT__
+#ifndef CARTROMINIT_H
+#define CARTROMINIT_H
 
 #include "global.h"
 
 extern OSPiHandle __CartRomHandle;
 
-#endif // __CARTROMINIT__
+OSPiHandle* osCartRomInit(void);
+
+#endif

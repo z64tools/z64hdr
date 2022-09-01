@@ -1,9 +1,17 @@
-#ifndef __SYS_UCODE__
-#define __SYS_UCODE__
+#ifndef SYS_UCODE_H
+#define SYS_UCODE_H
 
 #include "global.h"
 
 extern u64* sDefaultGSPUCodeText;
 extern u64* sDefaultGSPUCodeData;
 
-#endif // __SYS_UCODE__
+u64* SysUcode_GetUCodeBoot(void);
+
+size_t SysUcode_GetUCodeBootSize(void);
+
+u64* SysUcode_GetUCode(void);
+
+u64* SysUcode_GetUCodeData(void);
+
+#endif

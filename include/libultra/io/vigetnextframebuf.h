@@ -1,6 +1,8 @@
-#ifndef __VIGETNEXTFRAMEBUF__
-#define __VIGETNEXTFRAMEBUF__
+#ifndef VIGETNEXTFRAMEBUF_H
+#define VIGETNEXTFRAMEBUF_H
 
 #include "global.h"
 
-#endif // __VIGETNEXTFRAMEBUF__
+void* osViGetNextFramebuffer(void);
+
+#endif

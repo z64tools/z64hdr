@@ -1,6 +1,8 @@
-#ifndef __DEQUEUETHREAD__
-#define __DEQUEUETHREAD__
+#ifndef DEQUEUETHREAD_H
+#define DEQUEUETHREAD_H
 
 #include "global.h"
 
-#endif // __DEQUEUETHREAD__
+void __osDequeueThread(OSThread** queue, OSThread* thread);
+
+#endif

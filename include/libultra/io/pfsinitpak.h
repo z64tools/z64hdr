@@ -1,7 +1,11 @@
-#ifndef __PFSINITPAK__
-#define __PFSINITPAK__
+#ifndef PFSINITPAK_H
+#define PFSINITPAK_H
 
 #include "ultra64.h"
 #include "global.h"
 
-#endif // __PFSINITPAK__
+s32 osPfsInitPak(OSMesgQueue* queue, OSPfs* pfs, s32 channel);
+
+s32 __osPfsCheckRamArea(OSPfs* pfs);
+
+#endif
