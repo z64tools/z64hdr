@@ -424,6 +424,8 @@
 
 /* Audiobank */
 		_AudiobankSegmentStart           = 0x00000010;
+
+/* code */
 	/* code/z_en_a_keep.c */
 		EnAObj_SetupAction               = 0x8001CE60;
 		EnAObj_Init                      = 0x8001CE68;
