@@ -29,8 +29,8 @@
 #define _SHIFTR(v, s, w)    \
     ((u32)(((u32)(v) >> (s)) & ((0x01 << (w)) - 1)))
 
-// #define G_ON    (1)
-// #define G_OFF   (0)
+#define G_ON    (1)
+#define G_OFF   (0)
 
 #include "gbi.h"
 #include "abi.h"
