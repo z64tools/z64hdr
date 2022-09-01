@@ -2873,8 +2873,8 @@ typedef struct {
 	{ \
 		Gfx* _g = (Gfx*)(pkt); \
  \
-		_g->words.w0 = _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24); \
-		_g->words.w1 = (unsigned int)(s); \
+		_g->hi = _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24); \
+		_g->lo = (unsigned int)(s); \
 	} \
 	)
 
@@ -2888,9 +2888,9 @@ typedef struct {
 	{ \
 		Gfx* _g = (Gfx*)(pkt); \
  \
-		_g->words.w0 = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
+		_g->hi = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
 		_SHIFTL((l), 0, 16)); \
-		_g->words.w1 = (unsigned int)(s); \
+		_g->lo = (unsigned int)(s); \
 	} \
 	)
 
@@ -2905,9 +2905,9 @@ typedef struct {
 	_DW( \
 	{ \
 		Gfx* _g = (Gfx*)(pkt); \
-		_g->words.w0 = (_SHIFTL((c), 24, 8) | _SHIFTL(((len) - 1) / 8, 19, 5) | \
+		_g->hi = (_SHIFTL((c), 24, 8) | _SHIFTL(((len) - 1) / 8, 19, 5) | \
 		_SHIFTL((ofs) / 8, 8, 8) | _SHIFTL((idx), 0, 8)); \
-		_g->words.w1 = (unsigned int)(adrs); \
+		_g->lo = (unsigned int)(adrs); \
 	} \
 	)
 #define gsDma2p(c, adrs, len, idx, ofs) \
