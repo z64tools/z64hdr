@@ -268,6 +268,7 @@
 	/* libultra/os/setwatchlo.c */
 		__osSetWatchLo                   = 0x80009310;
 	/* boot/idle.c */
+		D_80009430                       = 0x80009430;
 		gViConfigBlack                   = 0x80009434;
 		gViConfigAdditionalScanLines     = 0x80009438;
 		gViConfigFeatures                = 0x8000943C;
@@ -324,11 +325,16 @@
 		__osViNext                       = 0x8000AF04;
 	/* libultra/io/vimodefpallan1.c */
 		osViModeFpalLan1                 = 0x8000AF20;
+	/* libultra/rmon/xlitob.c */
+		D_8000AF70                       = 0x8000AF70;
+		D_8000AF84                       = 0x8000AF84;
 	/* libultra/io/vimgr.c */
 		__osViDevMgr                     = 0x8000AFA0;
 		__additional_scanline            = 0x8000AFBC;
 	/* libultra/os/setintmask.c */
 		__osRcpImTable                   = 0x80012160;
+	/* libultra/rmon/xldtob.c */
+		D_800122E0                       = 0x800122E0;
 	/* boot/build.c */
 		gBuildTeam                       = 0x80012340;
 		gBuildDate                       = 0x80012350;
@@ -348,6 +354,7 @@
 		sPiMgrCmdBuff                    = 0x80013830;
 		gPiMgrCmdQueue                   = 0x800138F8;
 		gViConfigMode                    = 0x80013910;
+		D_80013960                       = 0x80013960;
 	/* boot/z_std_dma.c */
 		sDmaMgrStackInfo                 = 0x80013970;
 		sDmaMgrMsgQueue                  = 0x80013990;
@@ -371,6 +378,8 @@
 	/* libultra/io/piacs.c */
 		piAccessBuf                      = 0x800145A0;
 		__osPiAccessQueue                = 0x800145A8;
+	/* libultra/os/initialize.c */
+		D_800145C0                       = 0x800145C0;
 	/* libultra/io/pimgr.c */
 		__Dom1SpeedParam                 = 0x800145D0;
 		__Dom2SpeedParam                 = 0x80014648;
@@ -3779,6 +3788,9 @@
 		En_Item00_InitVars               = 0x801154C0;
 	/* code/z_eff_blure.c */
 		sSetupHandlers                   = 0x80115780;
+		D_80115788                       = 0x80115788;
+		D_8011578C                       = 0x8011578C;
+		D_801157CC                       = 0x801157CC;
 	/* code/z_effect.c */
 		sEffectInfoTable                 = 0x80115860;
 	/* code/z_effect_soft_sprite.c */
@@ -3787,11 +3799,20 @@
 		gEffectSsOverlayTable            = 0x801159B0;
 	/* code/z_actor.c */
 		sNaviColorList                   = 0x80115F84;
+		D_80115FF0                       = 0x80115FF0;
+		D_80115FF8                       = 0x80115FF8;
+		D_80116068                       = 0x80116068;
 		sEnemyActorCategories            = 0x8011609C;
+		D_801160A0                       = 0x801160A0;
+		D_80116268                       = 0x80116268;
+		D_80116274                       = 0x80116274;
+		D_80116280                       = 0x80116280;
 	/* code/z_actor_dlftbls.c */
 		gActorOverlayTable               = 0x801162A0;
 		gMaxActorId                      = 0x80119D80;
 	/* code/z_bgcheck.c */
+		D_80119D90                       = 0x80119D90;
+		D_80119E10                       = 0x80119E10;
 		zdWaterBox                       = 0x80119EAC;
 		zdWaterBoxMinX                   = 0x80119EBC;
 		zdWaterBoxMinY                   = 0x80119EC0;
@@ -4058,19 +4079,44 @@
 		sCameraInterfaceFlags            = 0x8011D3A0;
 		sCameraInterfaceAlpha            = 0x8011D3A4;
 		sCameraShrinkWindowVal           = 0x8011D3A8;
+		D_8011D3AC                       = 0x8011D3AC;
+		D_8011D3B0                       = 0x8011D3B0;
+		D_8011D3CC                       = 0x8011D3CC;
 		sUpdateCameraDirection           = 0x8011D3E8;
+		D_8011D3EC                       = 0x8011D3EC;
+		D_8011D3F0                       = 0x8011D3F0;
 		sDemo5PrevAction12Frame          = 0x8011D3F4;
 		sCameraFunctionNames             = 0x8011D3F8;
+		D_8011D658                       = 0x8011D658;
+		D_8011D678                       = 0x8011D678;
 		sDemo5PrevSfxFrame               = 0x8011D6A8;
+		D_8011D6AC                       = 0x8011D6AC;
+		D_8011D724                       = 0x8011D724;
+		D_8011D79C                       = 0x8011D79C;
+		D_8011D83C                       = 0x8011D83C;
+		D_8011D88C                       = 0x8011D88C;
+		D_8011D8DC                       = 0x8011D8DC;
+		D_8011D954                       = 0x8011D954;
+		D_8011D9F4                       = 0x8011D9F4;
+		D_8011DA6C                       = 0x8011DA6C;
+		D_8011DA9C                       = 0x8011DA9C;
+		D_8011DACC                       = 0x8011DACC;
+		D_8011DADC                       = 0x8011DADC;
+		D_8011DAEC                       = 0x8011DAEC;
+		D_8011DAFC                       = 0x8011DAFC;
 	/* code/z_debug.c */
+		D_8011E0B0                       = 0x8011E0B0;
 		printTextColors                  = 0x8011E0B4;
 		inputCombos                      = 0x8011E0D4;
 		regChar                          = 0x8011E148;
 	/* code/z_demo.c */
+		D_8011E1C0                       = 0x8011E1C0;
+		D_8011E1C4                       = 0x8011E1C4;
 		sCsStateHandlers1                = 0x8011E1C8;
 		sCsStateHandlers2                = 0x8011E1DC;
 		sTitleCsState                    = 0x8011E1F0;
 		sEntranceCutsceneTable           = 0x8011E1F4;
+		D_8011E304                       = 0x8011E304;
 	/* code/z_draw.c */
 		sDrawItemTable                   = 0x8011E320;
 	/* code/z_elf_message.c */
@@ -4132,6 +4178,8 @@
 		sTextTriggers                    = 0x80125C88;
 		gPlayerModelTypes                = 0x80125C98;
 		sPlayerRightHandShieldDLs        = 0x80125CE8;
+		D_80125D28                       = 0x80125D28;
+		D_80125D88                       = 0x80125D88;
 		gPlayerLeftHandBgsDLs            = 0x80125DE8;
 		gPlayerLeftHandOpenDLs           = 0x80125E08;
 		gPlayerLeftHandClosedDLs         = 0x80125E18;
@@ -4140,6 +4188,8 @@
 		sPlayerRightHandOpenDLs          = 0x80125E48;
 		sPlayerRightHandClosedDLs        = 0x80125E58;
 		sPlayerRightHandBowSlingshotDLs  = 0x80125E68;
+		D_80125E78                       = 0x80125E78;
+		D_80125E88                       = 0x80125E88;
 		sPlayerWaistDLs                  = 0x80125E98;
 		sPlayerRightHandBowSlingshotDLs2 = 0x80125EA8;
 		sPlayerRightHandOcarinaDLs       = 0x80125EB8;
@@ -4163,25 +4213,43 @@
 		sGauntletColors                  = 0x80126014;
 		sBootDListGroups                 = 0x8012601C;
 		sZeroVec                         = 0x8012602C;
+		D_80126038                       = 0x80126038;
+		D_80126050                       = 0x80126050;
+		D_80126058                       = 0x80126058;
+		D_80126060                       = 0x80126060;
+		D_80126068                       = 0x80126068;
+		D_80126070                       = 0x80126070;
+		D_80126080                       = 0x80126080;
+		D_8012608C                       = 0x8012608C;
+		D_80126098                       = 0x80126098;
+		D_801260A4                       = 0x801260A4;
 		sPlayerFocusHeadLimbModelPos     = 0x801260D4;
 		sMeleeWeaponLengths              = 0x801260E0;
 		sBottleDLists                    = 0x801260F8;
 		sBottleColors                    = 0x80126100;
+		D_80126128                       = 0x80126128;
 		sBowSlingshotStringData          = 0x80126134;
 		sRightHandLimbModelShieldQuadVertices = 0x80126154;
+		D_80126184                       = 0x80126184;
+		D_80126190                       = 0x80126190;
 		sSheathLimbModelShieldQuadVertices = 0x8012619C;
 		sSheathLimbModelShieldOnBackPos  = 0x801261CC;
 		sSheathLimbModelShieldOnBackZyxRot = 0x801261D8;
 		sLeftRightFootLimbModelFootPos   = 0x801261E0;
 		sPauseModelGroupBySword          = 0x801261F8;
 	/* code/z_quake.c */
+		D_80126250                       = 0x80126250;
 		sQuakeRequestCount               = 0x80126254;
 		sQuakeCallbacks                  = 0x80126258;
 	/* code/z_rcp.c */
 		sSetupDL                         = 0x80126280;
 		sFillSetupDL                     = 0x80126FD0;
+		D_80127030                       = 0x80127030;
+		D_80127060                       = 0x80127060;
 		gEmptyDL                         = 0x80127098;
 	/* code/z_room.c */
+		D_801270A0                       = 0x801270A0;
+		D_801270B0                       = 0x801270B0;
 		sRoomDrawHandlers                = 0x80127110;
 	/* code/code_80097A00.c */
 		gBitFlags                        = 0x80127120;
@@ -4206,9 +4274,11 @@
 		gEntranceTable                   = 0x801281C0;
 		gSceneTable                      = 0x80129A10;
 		sDefaultDisplayList              = 0x8012A2A8;
+		D_8012A2F8                       = 0x8012A2F8;
 		gDCEntranceTextures              = 0x8012A300;
 		sDCLavaFloorTextures             = 0x8012A308;
 		sThievesHideoutEntranceTextures  = 0x8012A328;
+		D_8012A330                       = 0x8012A330;
 		sIceCavernEntranceTextures       = 0x8012A338;
 		sGTGEntranceTextures             = 0x8012A340;
 		sLonLonHouseEntranceTextures     = 0x8012A348;
@@ -4218,8 +4288,10 @@
 		sSpiritTempleEntranceTextures    = 0x8012A368;
 		sKakarikoWindowTextures          = 0x8012A370;
 		sZorasDomainEntranceTextures     = 0x8012A378;
+		D_8012A380                       = 0x8012A380;
 		sGoronCityEntranceTextures       = 0x8012A388;
 		sLonLonRanchWindowTextures       = 0x8012A390;
+		D_8012A398                       = 0x8012A398;
 		sSceneDrawConfigs                = 0x8012A3A4;
 	/* code/z_skin_matrix.c */
 		sMtxFClear                       = 0x8012A4A0;
@@ -4229,8 +4301,30 @@
 		sSsSramContext                   = 0x8012A690;
 	/* code/z_view.c */
 		sLogOnNextViewInit               = 0x8012ABF0;
+	/* code/code_800ACE70.c */
+		D_8012AC00                       = 0x8012AC00;
+		D_8012AC28                       = 0x8012AC28;
+		D_8012AC40                       = 0x8012AC40;
+		D_8012AC58                       = 0x8012AC58;
+	/* code/z_vr_box.c */
+		D_8012AC90                       = 0x8012AC90;
+		D_8012ACA0                       = 0x8012ACA0;
+		D_8012AD20                       = 0x8012AD20;
+		D_8012AD2C                       = 0x8012AD2C;
+		D_8012AD40                       = 0x8012AD40;
+		D_8012ADC0                       = 0x8012ADC0;
+		D_8012ADD8                       = 0x8012ADD8;
+		D_8012AE18                       = 0x8012AE18;
+		D_8012AE24                       = 0x8012AE24;
+		D_8012AE30                       = 0x8012AE30;
+		D_8012AE3C                       = 0x8012AE3C;
+		D_8012AEBC                       = 0x8012AEBC;
+		D_8012AF0C                       = 0x8012AF0C;
 	/* code/z_player_call.c */
 		Player_InitVars                  = 0x8012AF90;
+	/* code/z_fbdemo.c */
+		D_8012AFB0                       = 0x8012AFB0;
+		D_8012B000                       = 0x8012B000;
 	/* code/z_fbdemo_triforce.c */
 		sTriforceWipeDL                  = 0x8012B030;
 		sTriforceWipeVtx                 = 0x8012B060;
@@ -4248,8 +4342,72 @@
 		sCircleWipeVtx                   = 0x8012CBA8;
 		sCircleDList                     = 0x8012CDC8;
 	/* code/shrink_window.c */
+		D_8012CED0                       = 0x8012CED0;
 		sShrinkWindowVal                 = 0x8012CED4;
 		sShrinkWindowCurrentVal          = 0x8012CED8;
+	/* code/db_camera.c */
+		D_8012CEE0                       = 0x8012CEE0;
+		D_8012CEE4                       = 0x8012CEE4;
+		D_8012CEE8                       = 0x8012CEE8;
+		D_8012CEEC                       = 0x8012CEEC;
+		D_8012CEF0                       = 0x8012CEF0;
+		D_8012CEF4                       = 0x8012CEF4;
+		D_8012CEF8                       = 0x8012CEF8;
+		D_8012CF04                       = 0x8012CF04;
+		D_8012CF08                       = 0x8012CF08;
+		D_8012CF0C                       = 0x8012CF0C;
+		D_8012CF10                       = 0x8012CF10;
+		D_8012CF14                       = 0x8012CF14;
+		D_8012CF18                       = 0x8012CF18;
+		D_8012CF24                       = 0x8012CF24;
+		D_8012CF30                       = 0x8012CF30;
+		D_8012CF34                       = 0x8012CF34;
+		D_8012CF38                       = 0x8012CF38;
+		D_8012CF3C                       = 0x8012CF3C;
+		D_8012CF40                       = 0x8012CF40;
+		D_8012CF44                       = 0x8012CF44;
+		D_8012CF48                       = 0x8012CF48;
+		D_8012CF4C                       = 0x8012CF4C;
+		D_8012CF50                       = 0x8012CF50;
+		D_8012CF60                       = 0x8012CF60;
+		D_8012CF64                       = 0x8012CF64;
+		D_8012CF68                       = 0x8012CF68;
+		D_8012CF6C                       = 0x8012CF6C;
+		D_8012CF70                       = 0x8012CF70;
+		D_8012CF74                       = 0x8012CF74;
+		D_8012CF78                       = 0x8012CF78;
+		D_8012CF7C                       = 0x8012CF7C;
+		D_8012CF80                       = 0x8012CF80;
+		D_8012CF84                       = 0x8012CF84;
+		D_8012CF88                       = 0x8012CF88;
+		D_8012CF94                       = 0x8012CF94;
+		D_8012CF98                       = 0x8012CF98;
+		D_8012CF9C                       = 0x8012CF9C;
+		D_8012CFA4                       = 0x8012CFA4;
+		D_8012CFA8                       = 0x8012CFA8;
+		D_8012CFAC                       = 0x8012CFAC;
+		D_8012CFB0                       = 0x8012CFB0;
+		D_8012CFB4                       = 0x8012CFB4;
+		D_8012CFC4                       = 0x8012CFC4;
+		D_8012CFD0                       = 0x8012CFD0;
+		D_8012CFE4                       = 0x8012CFE4;
+		D_8012CFF8                       = 0x8012CFF8;
+		D_8012D00C                       = 0x8012D00C;
+		D_8012D020                       = 0x8012D020;
+		D_8012D034                       = 0x8012D034;
+		D_8012D048                       = 0x8012D048;
+		D_8012D05C                       = 0x8012D05C;
+		D_8012D070                       = 0x8012D070;
+		D_8012D084                       = 0x8012D084;
+		D_8012D098                       = 0x8012D098;
+		D_8012D0AC                       = 0x8012D0AC;
+		D_8012D0C0                       = 0x8012D0C0;
+		D_8012D0D4                       = 0x8012D0D4;
+		D_8012D0E4                       = 0x8012D0E4;
+		D_8012D0F8                       = 0x8012D0F8;
+		D_8012D114                       = 0x8012D114;
+		D_8012D128                       = 0x8012D128;
+		D_8012D13C                       = 0x8012D13C;
 	/* code/mempak.c */
 		sMempakCompanyCode               = 0x8012D180;
 		sMempakGameCode                  = 0x8012D184;
@@ -4260,10 +4418,21 @@
 		sKaleidoAreaPtr                  = 0x8012D1D8;
 		gKaleidoMgrCurOvl                = 0x8012D1DC;
 		gBossMarkState                   = 0x8012D1E0;
+	/* code/z_play.c */
+		D_8012D1F0                       = 0x8012D1F0;
+		D_8012D1F4                       = 0x8012D1F4;
+		D_8012D1F8                       = 0x8012D1F8;
+	/* code/code_800C3C20.c */
+		D_8012D200                       = 0x8012D200;
+	/* code/graph.c */
+		D_8012D230                       = 0x8012D230;
+		D_8012D248                       = 0x8012D248;
 	/* code/main.c */
 		gScreenWidth                     = 0x8012D270;
 		gScreenHeight                    = 0x8012D274;
 		gSystemHeapSize                  = 0x8012D278;
+	/* code/padmgr.c */
+		D_8012D280                       = 0x8012D280;
 	/* code/sched.c */
 		sLogScheduler                    = 0x8012D290;
 	/* code/speed_meter.c */
@@ -4299,6 +4468,7 @@
 		gSineWaveSample                  = 0x8012E490;
 		gSquareWaveSample                = 0x8012E690;
 		gWhiteNoiseSample                = 0x8012E890;
+		D_8012EA90                       = 0x8012EA90;
 		gEighthPulseWaveSample           = 0x8012EC90;
 		gQuarterPulseWaveSample          = 0x8012EE90;
 		gWaveSamples                     = 0x8012F090;
@@ -4311,11 +4481,21 @@
 		gZeroNoteSub                     = 0x8012FAE4;
 		gDefaultNoteSub                  = 0x8012FB04;
 		gHeadsetPanQuantization          = 0x8012FB24;
+		D_8012FBA4                       = 0x8012FBA4;
+		D_8012FBA8                       = 0x8012FBA8;
 		gHeadsetPanVolume                = 0x8012FC28;
 		gStereoPanVolume                 = 0x8012FE28;
 		gDefaultPanVolume                = 0x80130028;
 		gLowPassFilterData               = 0x80130228;
 		gHighPassFilterData              = 0x80130328;
+		D_80130418                       = 0x80130418;
+	/* code/audio_synthesis.c */
+		D_801304A0                       = 0x801304A0;
+		D_801304A4                       = 0x801304A4;
+		D_801304A8                       = 0x801304A8;
+		D_801304AC                       = 0x801304AC;
+		D_801304B0                       = 0x801304B0;
+		D_801304C0                       = 0x801304C0;
 	/* code/audio_load.c */
 		sDmaHandler                      = 0x801304D0;
 		sUnusedHandler                   = 0x801304D4;
@@ -4326,12 +4506,21 @@
 		gIsLargeSoundBank                = 0x80130570;
 		gChannelsPerBank                 = 0x80130578;
 		gUsedChannelsPerBank             = 0x80130594;
+		D_801305B0                       = 0x801305B0;
+		D_801305B4                       = 0x801305B4;
+		D_801305B8                       = 0x801305B8;
+		D_801305BC                       = 0x801305BC;
+		D_801305C0                       = 0x801305C0;
 		sBehindScreenZ                   = 0x801305C4;
 		sAudioIncreasingTranspose        = 0x801305CC;
 		gMorphaTransposeTable            = 0x801305D0;
 		sPrevChargeLevel                 = 0x801305E0;
+		D_801305E4                       = 0x801305E4;
+		D_801305F4                       = 0x801305F4;
 		sGanonsTowerLevelsVol            = 0x801305F8;
 		sEnterGanonsTowerTimer           = 0x80130600;
+		D_80130604                       = 0x80130604;
+		D_80130608                       = 0x80130608;
 		sAudioCutsceneFlag               = 0x8013060C;
 		sSpecReverb                      = 0x80130610;
 		sAudioEnvReverb                  = 0x80130614;
@@ -4340,6 +4529,8 @@
 		sAudioEnemyDist                  = 0x80130620;
 		sAudioEnemyVol                   = 0x80130624;
 		sPrevMainBgmSeqId                = 0x80130628;
+		D_8013062C                       = 0x8013062C;
+		D_80130630                       = 0x80130630;
 		sNumFramesStill                  = 0x80130634;
 		sNumFramesMoving                 = 0x80130638;
 		sAudioBaseFilter                 = 0x8013063C;
@@ -4347,6 +4538,7 @@
 		sAudioBaseFilter2                = 0x80130644;
 		sAudioExtraFilter2               = 0x80130648;
 		sSariaBgmPtr                     = 0x8013064C;
+		D_80130650                       = 0x80130650;
 		sSeqModeInput                    = 0x80130654;
 		sSeqFlags                        = 0x80130658;
 		sSpecReverbs                     = 0x801306C8;
@@ -4404,6 +4596,7 @@
 		sMemoryGameSongPtr               = 0x80131BEC;
 		sPitchToButtonMap                = 0x80131BF0;
 		gOcarinaSongButtons              = 0x80131C00;
+		D_80131C8C                       = 0x80131C8C;
 		sAudioUpdateDuration             = 0x80131C90;
 		sAudioUpdateDurationMax          = 0x80131C94;
 		sAudioDebugEverOpened            = 0x80131C98;
@@ -4454,20 +4647,35 @@
 		sVoiceBankParams                 = 0x8013311C;
 		gSoundParams                     = 0x8013331C;
 	/* code/code_800F7260.c */
+		D_80133340                       = 0x80133340;
+		D_80133344                       = 0x80133344;
+		D_8013338C                       = 0x8013338C;
+		D_80133390                       = 0x80133390;
+		D_80133398                       = 0x80133398;
 		sSoundRequestWriteIndex          = 0x801333A0;
 		sSoundRequestReadIndex           = 0x801333A4;
 		gSoundBanks                      = 0x801333A8;
 		sBankSizes                       = 0x801333C4;
 		gSfxChannelLayout                = 0x801333CC;
+		D_801333D0                       = 0x801333D0;
 		gSfxDefaultPos                   = 0x801333D4;
 		gSfxDefaultFreqAndVolScale       = 0x801333E0;
+		D_801333E4                       = 0x801333E4;
 		gSfxDefaultReverb                = 0x801333E8;
+		D_801333EC                       = 0x801333EC;
+		D_801333F0                       = 0x801333F0;
 		gAudioSfxSwapOff                 = 0x801333F4;
+		D_801333F8                       = 0x801333F8;
 	/* code/code_800F9280.c */
 		sSeqCmdWrPos                     = 0x80133400;
 		sSeqCmdRdPos                     = 0x80133404;
+		D_80133408                       = 0x80133408;
+		D_8013340C                       = 0x8013340C;
+		D_80133410                       = 0x80133410;
 		gAudioSpecId                     = 0x80133414;
+		D_80133418                       = 0x80133418;
 	/* code/audio_init_params.c */
+		D_80133420                       = 0x80133420;
 		gAudioSpecs                      = 0x801337C8;
 	/* code/logseverity.c */
 		gOverlayLogSeverity              = 0x80133BC0;
@@ -4479,6 +4687,7 @@
 	/* code/code_800FC620.c */
 		sInitFuncs                       = 0x80134480;
 		sNew                             = 0x80134484;
+		D_80134488                       = 0x80134488;
 	/* code/fp.c */
 		qNaN0x3FFFFF                     = 0x801344A0;
 		qNaN0x10000                      = 0x801344A4;
@@ -4496,15 +4705,20 @@
 		__osPfsLastChannel               = 0x80134D20;
 	/* code/fault_drawer.c */
 		sFaultDrawerFont                 = 0x80147570;
+	/* code/audio_init_params.c */
+		D_8014A6C0                       = 0x8014A6C0;
+		D_8014A6C4                       = 0x8014A6C4;
 	/* libultra/gu/libm_vals.c */
 		__libm_qnan_f                    = 0x8014B2D0;
 	/* code/z_message_PAL.c */
 		sTextFade                        = 0x8014B2F0;
+		D_8014B2F4                       = 0x8014B2F4;
 		sOcarinaButtonIndexBufPos        = 0x8014B2F8;
 		sOcarinaButtonIndexBufLen        = 0x8014B2FC;
 		sTextboxSkipped                  = 0x8014B300;
 		sNextTextId                      = 0x8014B304;
 		sTextIsCredits                   = 0x8014B308;
+		D_8014B30C                       = 0x8014B30C;
 		sLastPlayedSong                  = 0x8014B310;
 		sHasSunsSong                     = 0x8014B314;
 		sMessageHasSetSfx                = 0x8014B318;
@@ -4524,22 +4738,46 @@
 		sOcarinaButtonAlphaValues        = 0x80153958;
 		gOcarinaSongItemMap              = 0x8015396C;
 		sFontWidths                      = 0x80153A00;
+		D_80153D7C                       = 0x80153D7C;
 		gGameOverTimer                   = 0x80153D80;
 
 /* code.bss */
 	/* code/z_effect.c */
 		sEffectContext                   = 0x80157DA0;
 	/* code/z_actor.c */
+		D_8015BBA8                       = 0x8015BBA8;
+		D_8015BBE8                       = 0x8015BBE8;
+		D_8015BBEC                       = 0x8015BBEC;
+		D_8015BBF0                       = 0x8015BBF0;
 		sbgmEnemyDistSq                  = 0x8015BBF4;
+		D_8015BBF8                       = 0x8015BBF8;
+		D_8015BBFC                       = 0x8015BBFC;
+		D_8015BC00                       = 0x8015BC00;
+		D_8015BC10                       = 0x8015BC10;
+		D_8015BC14                       = 0x8015BC14;
+		D_8015BC18                       = 0x8015BC18;
 	/* code/z_camera.c */
+		D_8015BD7C                       = 0x8015BD7C;
+		D_8015BD80                       = 0x8015BD80;
 		playerFloorPoly                  = 0x8015CE4C;
 	/* code/z_common_data.c */
 		gSaveContext                     = 0x8015E660;
+		D_8015FA88                       = 0x8015FA88;
+		D_8015FA8C                       = 0x8015FA8C;
 	/* code/z_debug.c */
 		gGameInfo                        = 0x8015FA90;
+		D_8015FA94                       = 0x8015FA94;
+		D_8015FA98                       = 0x8015FA98;
 	/* code/z_demo.c */
+		D_8015FCC0                       = 0x8015FCC0;
+		D_8015FCC2                       = 0x8015FCC2;
+		D_8015FCC4                       = 0x8015FCC4;
 		sReturnToCamId                   = 0x8015FCC6;
+		D_8015FCC8                       = 0x8015FCC8;
 		sQuakeIndex                      = 0x8015FCCA;
+		D_8015FCCC                       = 0x8015FCCC;
+		D_8015FCD0                       = 0x8015FCD0;
+		D_8015FCE4                       = 0x8015FCE4;
 	/* code/z_kankyo.c */
 		gCustomLensFlareOn               = 0x8015FCF0;
 		gCustomLensFlarePos              = 0x8015FCF8;
@@ -4581,6 +4819,8 @@
 		sQuakeRequest                    = 0x80160020;
 	/* code/z_skin.c */
 		gSkinLimbMatrices                = 0x801600C0;
+	/* code/code_800A9F30.c */
+		D_80160FD0                       = 0x80160FD0;
 	/* code/z_vr_box_draw.c */
 		sSkyboxDrawMatrix                = 0x801610E0;
 	/* code/z_player_call.c */
@@ -4596,12 +4836,20 @@
 		sKaleidoScopeUpdateFunc          = 0x80161390;
 		sKaleidoScopeDrawFunc            = 0x80161394;
 		gBossMarkScale                   = 0x80161398;
+		D_8016139C                       = 0x8016139C;
 		gLoadedPauseMarkDataTable        = 0x801613A0;
 	/* code/z_play.c */
 		sTrnsnUnk                        = 0x801613B0;
 		gTrnsnUnkState                   = 0x80161490;
+		D_80161498                       = 0x80161498;
+		D_801614B0                       = 0x801614B0;
+		D_801614B8                       = 0x801614B8;
 		sTransitionFillTimer             = 0x801614C8;
+		D_801614D0                       = 0x801614D0;
 	/* code/game.c */
+		D_801664D0                       = 0x801664D0;
+		D_801664F0                       = 0x801664F0;
+		D_80166500                       = 0x80166500;
 		sMonoColors                      = 0x80166510;
 		sViMode                          = 0x80166528;
 		sGameFaultClient                 = 0x801665B0;
@@ -4638,9 +4886,18 @@
 		sRSPOtherStartTime               = 0x8016A510;
 		sRDPStartTime                    = 0x8016A518;
 	/* code/speed_meter.c */
+		D_8016A520                       = 0x8016A520;
+		D_8016A528                       = 0x8016A528;
+		D_8016A530                       = 0x8016A530;
+		D_8016A538                       = 0x8016A538;
+		D_8016A540                       = 0x8016A540;
+		D_8016A548                       = 0x8016A548;
+		D_8016A550                       = 0x8016A550;
+		D_8016A558                       = 0x8016A558;
 		gRSPAudioTotalTime               = 0x8016A560;
 		gRSPGFXTotalTime                 = 0x8016A568;
 		gRSPOtherTotalTime               = 0x8016A570;
+		D_8016A578                       = 0x8016A578;
 		gRDPTotalTime                    = 0x8016A580;
 		sSpeedMeterTimeEntryPtr          = 0x8016A588;
 	/* code/sys_cfb.c */
@@ -4653,17 +4910,27 @@
 		sDebugArena                      = 0x8016A7D0;
 	/* code/fault_drawer.c */
 		sFaultDrawer                     = 0x8016B680;
+		D_8016B6C0                       = 0x8016B6C0;
 	/* code/audio_load.c */
 		sScriptLoadQueue                 = 0x8016B6E0;
 		sScriptLoadMsgBuf                = 0x8016B6F8;
 		sScriptLoadDonePointers          = 0x8016B738;
 		sAudioLoadPad1                   = 0x8016B778;
+		D_8016B780                       = 0x8016B780;
 		sAudioLoadPad2                   = 0x8016B788;
 	/* code/code_800EC960.c */
 		sAudioUpdateStartTime            = 0x8016B7A0;
 		sAudioUpdateEndTime              = 0x8016B7A4;
+		D_8016B7A8                       = 0x8016B7A8;
+		D_8016B7AC                       = 0x8016B7AC;
+		D_8016B7B0                       = 0x8016B7B0;
+		D_8016B7B4                       = 0x8016B7B4;
 		sRiverFreqScaleLerp              = 0x8016B7B8;
 		sWaterfallFreqScaleLerp          = 0x8016B7C8;
+		D_8016B7D8                       = 0x8016B7D8;
+		D_8016B7DC                       = 0x8016B7DC;
+		D_8016B7E0                       = 0x8016B7E0;
+		D_8016B7E4                       = 0x8016B7E4;
 		sAudioScrPrtBuf                  = 0x8016B7E8;
 		sRiverSoundMainBgmVol            = 0x8016B8B0;
 		sRiverSoundMainBgmCurrentVol     = 0x8016B8B1;
@@ -4672,7 +4939,12 @@
 		sGanonsTowerVol                  = 0x8016B8B4;
 		sSfxChannelState                 = 0x8016B8B8;
 		sBinToStrBuf                     = 0x8016B9B8;
+		D_8016B9D8                       = 0x8016B9D8;
 		sAudioSpecPeakNumNotes           = 0x8016B9E0;
+		D_8016B9F2                       = 0x8016B9F2;
+		D_8016B9F3                       = 0x8016B9F3;
+		D_8016B9F4                       = 0x8016B9F4;
+		D_8016B9F6                       = 0x8016B9F6;
 		sPlayingStaff                    = 0x8016B9F8;
 		sPlaybackStaff                   = 0x8016B9FC;
 		sRecordingStaff                  = 0x8016BA00;
@@ -4703,6 +4975,13 @@
 		sAudioUpdateTaskStart            = 0x8016BABC;
 		sAudioUpdateTaskEnd              = 0x8016BAC0;
 	/* code/code_800F7260.c */
+		D_8016BAD0                       = 0x8016BAD0;
+		D_8016BC80                       = 0x8016BC80;
+		D_8016BEC0                       = 0x8016BEC0;
+		D_8016C2E0                       = 0x8016C2E0;
+		D_8016C6A0                       = 0x8016C6A0;
+		D_8016C820                       = 0x8016C820;
+		D_8016C8B0                       = 0x8016C8B0;
 		sSoundRequests                   = 0x8016C9A0;
 		sSoundBankListEnd                = 0x8016E1A0;
 		sSoundBankFreeListStart          = 0x8016E1A8;
@@ -4715,9 +4994,15 @@
 		gAudioSfxSwapTarget              = 0x8016E2F8;
 		gAudioSfxSwapMode                = 0x8016E310;
 	/* code/code_800F9280.c */
+		D_8016E320                       = 0x8016E320;
+		D_8016E348                       = 0x8016E348;
 		sAudioSeqCmds                    = 0x8016E350;
+		D_8016E750                       = 0x8016E750;
 	/* code/audio_init_params.c */
+		D_8016F0E0                       = 0x8016F0E0;
 		gAudioContext                    = 0x8016F180;
+		D_801755D0                       = 0x801755D0;
+		D_801755D8                       = 0x801755D8;
 	/* code/code_800FCE80.c */
 		gUseAtanContFrac                 = 0x80175600;
 	/* code/system_malloc.c */
