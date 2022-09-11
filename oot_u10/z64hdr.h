@@ -1,6 +1,9 @@
 #ifndef Z64HDR_H
 #define Z64HDR_H
 
+#define F3DEX_GBI_2
+#define GS2DEX_H
+
 #define OOT_U10
 
 #ifndef GLOBAL_H
