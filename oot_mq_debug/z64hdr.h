@@ -12,6 +12,5 @@
 #endif
 
 extern struct GraphicsContext* __gfxCtx;
-asm("__gfxCtx = 0x80212020;");
 
 #endif
