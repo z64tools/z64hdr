@@ -1,6 +1,9 @@
 #ifndef ULTRA64_H
 #define ULTRA64_H
 
+#define F3DEX_GBI_2
+#define GS2DEX_H
+
 #include "ultra64/types.h"
 #include "unk.h"
 
