@@ -226,7 +226,7 @@ extern f32 D_8016B7D8;
 extern s8 D_8016B7DC;
 extern f32 D_8016B7E0;
 extern u16 D_8016B7E4;
-struct {
+extern struct{
     s8 str[5];
     u16 num;
 } sAudioScrPrtBuf[SCROLL_PRINT_BUF_SIZE];
