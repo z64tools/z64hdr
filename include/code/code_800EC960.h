@@ -96,7 +96,7 @@ typedef struct {
     s8 y;
 } OcarinaStick;
 
-extern u8 gIsLargeSfxBank[7];
+extern u8 gIsLargeSoundBank[7];
 
 // Only the first row of these is supported by sequence 0. (gSfxChannelLayout is always 0.)
 extern u8 gChannelsPerBank[4][7];
@@ -115,7 +115,7 @@ extern f32 D_801305E4[4]; // 2**({0, 2, 5, 5}/12)
 extern f32 D_801305F4;
 extern u8 sGanonsTowerLevelsVol[8];
 extern u8 sEnterGanonsTowerTimer;
-extern s8 sSoundMode;
+extern s8 D_80130604;
 extern s8 D_80130608;
 extern s8 sAudioCutsceneFlag;
 extern s8 sSpecReverb;
@@ -227,7 +227,7 @@ extern s8 D_8016B7DC;
 extern f32 D_8016B7E0;
 extern u16 D_8016B7E4;
 extern struct{
-    char str[5];
+    s8 str[5];
     u16 num;
 } sAudioScrPrtBuf[SCROLL_PRINT_BUF_SIZE];
 extern u8 sRiverSoundMainBgmVol;
@@ -248,7 +248,7 @@ extern OcarinaStaff sPlayingStaff;
 extern OcarinaStaff sPlaybackStaff;
 extern OcarinaStaff sRecordingStaff;
 extern u32 sOcarinaUpdateTaskStart;
-extern OcarinaStick sOcarinaInputStickAdj;
+extern OcarinaStick sOcarinaInputStickRel;
 extern u32 sOcarinaInputButtonCur;
 extern u32 sOcarinaInputButtonStart;
 extern u32 sOcarinaInputButtonPrev;
@@ -269,8 +269,7 @@ extern OcarinaNote sScarecrowsLongSongSecondNote;
 extern u8 sAudioHasMalonBgm;
 extern f32 sAudioMalonBgmDist;
 
-void PadMgr_RequestPadData(PadMgr* padMgr, Input* inputs, s32 gameRequest);
-
+void PadMgr_RequestPadData(PadMgr* padmgr, Input* inputs, s32 mode);
 void Audio_StepFreqLerp(FreqLerp* lerp);
 void func_800F56A8(void);
 void Audio_PlayNatureAmbienceSequence(u8 natureAmbienceId);
@@ -414,7 +413,7 @@ extern u8 sAudioDebugTextColor;
 extern char sAudioDebugPageNames[15][23];
 extern u16 sAudioSndContWork[11];
 extern u16 sAudioSndContWorkLims[11];
-extern char sSfxBankNames[7][11];
+extern char sSoundBankNames[7][11];
 extern char sSoundModeNames[5][10];
 extern s8 sAudioIntInfoX;
 extern s8 sAudioIntInfoY;
@@ -469,7 +468,7 @@ void AudioDebug_ProcessInput_OcaTest(void);
 
 void AudioDebug_ProcessInput_SfxParamChg(void);
 
-void AudioDebug_ScrPrt(const char* str, u16 num);
+void AudioDebug_ScrPrt(const s8* str, u16 num);
 
 void AudioDebug_ProcessInput(void);
 
@@ -487,19 +486,19 @@ void func_800F3140(UNK_TYPE arg0, UNK_TYPE arg1);
 
 void func_800F314C(s8 arg0);
 
-f32 Audio_ComputeSfxVolume(u8 bankId, u8 entryIdx);
+f32 Audio_ComputeSoundVolume(u8 bankId, u8 entryIdx);
 
-s8 Audio_ComputeSfxReverb(u8 bankId, u8 entryIdx, u8 channelIdx);
+s8 Audio_ComputeSoundReverb(u8 bankId, u8 entryIdx, u8 channelIdx);
 
-s8 Audio_ComputeSfxPanSigned(f32 x, f32 z, u8 token);
+s8 Audio_ComputeSoundPanSigned(f32 x, f32 z, u8 token);
 
-f32 Audio_ComputeSfxFreqScale(u8 bankId, u8 entryIdx);
+f32 Audio_ComputeSoundFreqScale(u8 bankId, u8 entryIdx);
 
-u8 func_800F37B8(f32 behindScreenZ, SfxBankEntry* arg1, s8 arg2);
+u8 func_800F37B8(f32 behindScreenZ, SoundBankEntry* arg1, s8 arg2);
 
 s8 func_800F3990(f32 arg0, u16 sfxParams);
 
-void Audio_SetSfxProperties(u8 bankId, u8 entryIdx, u8 channelIdx);
+void Audio_SetSoundProperties(u8 bankId, u8 entryIdx, u8 channelIdx);
 
 void Audio_ResetSfxChannelState(void);
 
@@ -512,7 +511,7 @@ void func_800F4010(Vec3f* pos, u16 sfxId, f32 arg2);
 void func_800F4138(Vec3f* pos, u16 sfxId, f32 arg2);
 
 void func_800F4190(Vec3f* pos, u16 sfxId);
-void Audio_PlaySfxRandom(Vec3f* pos, u16 baseSfxId, u8 randLim);
+void Audio_PlaySoundRandom(Vec3f* pos, u16 baseSfxId, u8 randLim);
 
 void func_800F4254(Vec3f* pos, u8 level);
 
@@ -528,9 +527,9 @@ void func_800F4578(Vec3f* pos, u16 sfxId, f32 arg2);
 
 void func_800F45D0(f32 arg0);
 
-void Audio_PlaySfxRiver(Vec3f* pos, f32 freqScale);
+void Audio_PlaySoundRiver(Vec3f* pos, f32 freqScale);
 
-void Audio_PlaySfxWaterfall(Vec3f* pos, f32 freqScale);
+void Audio_PlaySoundWaterfall(Vec3f* pos, f32 freqScale);
 
 void Audio_StepFreqLerp(FreqLerp* lerp);
 
@@ -559,11 +558,11 @@ void Audio_LowerMainBgmVolume(u8 volume);
 
 void Audio_UpdateRiverSoundVolumes(void);
 
-void Audio_PlaySfxIncreasinglyTransposed(Vec3f* pos, s16 sfxId, u8* semitones);
+void Audio_PlaySoundIncreasinglyTransposed(Vec3f* pos, s16 sfxId, u8* semitones);
 
 void Audio_ResetIncreasingTranspose(void);
 
-void Audio_PlaySfxTransposed(Vec3f* pos, u16 sfxId, s8 semitone);
+void Audio_PlaySoundTransposed(Vec3f* pos, u16 sfxId, s8 semitone);
 
 void func_800F4C58(Vec3f* pos, u16 sfxId, u8 arg2);
 
@@ -642,7 +641,7 @@ void Audio_SetEnvReverb(s8 reverb);
 
 void Audio_SetCodeReverb(s8 reverb);
 
-void func_800F6700(s8 audioSetting);
+void func_800F6700(s8 arg0);
 
 void Audio_SetBaseFilter(u8 filter);
 
@@ -650,9 +649,9 @@ void Audio_SetExtraFilter(u8 filter);
 
 void Audio_SetCutsceneFlag(s8 flag);
 
-void Audio_PlaySfxGeneralIfNotInCutscene(u16 sfxId, Vec3f* pos, u8 arg2, f32* freqScale, f32* arg4, s8* reverbAdd);
+void Audio_PlaySoundGeneralIfNotInCutscene(u16 sfxId, Vec3f* pos, u8 arg2, f32* freqScale, f32* arg4, s8* reverbAdd);
 
-void Audio_PlaySfxIfNotInCutscene(u16 sfxId);
+void Audio_PlaySoundIfNotInCutscene(u16 sfxId);
 
 void func_800F6964(u16 arg0);
 

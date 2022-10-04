@@ -48,7 +48,7 @@ void Lights_BindDirectional(Lights* lights, LightParams* params, Vec3f* vec);
  */
 void Lights_BindAll(Lights* lights, LightNode* listHead, Vec3f* vec);
 
-LightNode* Lights_FindBufSlot(void);
+LightNode* Lights_FindBufSlot();
 
 // return type must not be void to match
 s32 Lights_FreeNode(LightNode* light);

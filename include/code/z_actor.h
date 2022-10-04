@@ -280,7 +280,7 @@ s32 Actor_ActorAIsFacingAndNearActorB(Actor* actorA, Actor* actorB, f32 range, s
 
 s32 func_8002E234(Actor* actor, f32 arg1, s32 arg2);
 
-s32 func_8002E2AC(PlayState* play, Actor* actor, Vec3f* pos, s32 arg3);
+s32 func_8002E2AC(PlayState* play, Actor* actor, Vec3f* arg2, s32 arg3);
 
 void Actor_UpdateBgCheckInfo(PlayState* play, Actor* actor, f32 wallCheckHeight, f32 wallCheckRadius,
                              f32 ceilingCheckHeight, s32 flags);
@@ -367,7 +367,7 @@ void func_8002F7A0(PlayState* play, Actor* actor, f32 arg2, s16 arg3, f32 arg4);
 
 void func_8002F7DC(Actor* actor, u16 sfxId);
 
-void Audio_PlayActorSfx2(Actor* actor, u16 sfxId);
+void Audio_PlayActorSound2(Actor* actor, u16 sfxId);
 
 void func_8002F850(PlayState* play, Actor* actor);
 
@@ -675,7 +675,7 @@ void func_80035844(Vec3f* arg0, Vec3f* arg1, Vec3s* arg2, s32 arg3);
  * Spawns En_Part (Dissipating Flames) actor as a child of the given actor.
  */
 Actor* func_800358DC(Actor* actor, Vec3f* spawnPos, Vec3s* spawnRot, f32* arg3, s32 timer, s16* unused, PlayState* play,
-                     s16 params, Gfx* dList);
+                     s16 params, s32 arg8);
 
 void func_800359B8(Actor* actor, s16 arg1, Vec3s* arg2);
 
@@ -692,12 +692,12 @@ s32 Flags_GetEventChkInf(s32 flag);
 void Flags_SetEventChkInf(s32 flag);
 
 /**
- * Tests if inf_table flag is set.
+ * Tests if "inf_table flag is set.
  */
 s32 Flags_GetInfTable(s32 flag);
 
 /**
- * Sets inf_table flag.
+ * Sets "inf_table" flag.
  */
 void Flags_SetInfTable(s32 flag);
 

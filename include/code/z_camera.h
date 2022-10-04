@@ -27,6 +27,11 @@ s32 Camera_UpdateWater(Camera* camera);
 // Load the next value and scale down from camera read-only data stored in CameraModeValue
 #define GET_NEXT_SCALED_RO_DATA(values) CAM_DATA_SCALED(GET_NEXT_RO_DATA(values))
 
+#define BGCAM_POS(v) ((v)[0])
+#define BGCAM_ROT(v) ((v)[1])
+#define BGCAM_FOV(v) ((v)[2].x)
+#define BGCAM_JFIFID(v) ((v)[2].y)
+
 #define FLG_ADJSLOPE (1 << 0)
 #define FLG_OFFGROUND (1 << 7)
 
@@ -47,32 +52,32 @@ s32 Camera_UpdateWater(Camera* camera);
 f32 Camera_InterpolateCurve(f32 a, f32 b);
 
 /*
- * Performs linear interpolation between `cur` and `target`.  If `cur` is within
- * `minDiff` units, the result is rounded up to `target`
+ * Performs linear interpoloation between `cur` and `target`.  If `cur` is within
+ * `minDiff` units, The result is rounded up to `target`
  */
 f32 Camera_LERPCeilF(f32 target, f32 cur, f32 stepScale, f32 minDiff);
 
 /*
- * Performs linear interpolation between `cur` and `target`.  If `cur` is within
- * `minDiff` units, the result is rounded down to `cur`
+ * Performs linear interpoloation between `cur` and `target`.  If `cur` is within
+ * `minDiff` units, The result is rounded down to `cur`
  */
 f32 Camera_LERPFloorF(f32 target, f32 cur, f32 stepScale, f32 minDiff);
 
 /*
- * Performs linear interpolation between `cur` and `target`.  If `cur` is within
- * `minDiff` units, the result is rounded up to `target`
+ * Performs linear interpoloation between `cur` and `target`.  If `cur` is within
+ * `minDiff` units, The result is rounded up to `target`
  */
 s16 Camera_LERPCeilS(s16 target, s16 cur, f32 stepScale, s16 minDiff);
 
 /*
- * Performs linear interpolation between `cur` and `target`.  If `cur` is within
- * `minDiff` units, the result is rounded down to `cur`
+ * Performs linear interpoloation between `cur` and `target`.  If `cur` is within
+ * `minDiff` units, The result is rounded down to `cur`
  */
 s16 Camera_LERPFloorS(s16 target, s16 cur, f32 stepScale, s16 minDiff);
 
 /*
- * Performs linear interpolation between `cur` and `target`.  If `cur` is within
- * `minDiff` units, the result is rounded up to `target`
+ * Performs linear interpoloation between `cur` and `target`.  If `cur` is within
+ * `minDiff` units, The result is rounded up to `target`
  */
 void Camera_LERPCeilVec3f(Vec3f* target, Vec3f* cur, f32 yStepScale, f32 xzStepScale, f32 minDiff);
 
@@ -123,27 +128,27 @@ f32 Camera_GetFloorY(Camera* camera, Vec3f* pos);
 f32 Camera_GetFloorYLayer(Camera* camera, Vec3f* norm, Vec3f* pos, s32* bgId);
 
 /**
- * Returns the CameraSettingType of the camera at index `bgCamIndex`
+ * Returns the CameraSettingType of the camera at index `camDataIdx`
  */
-s16 Camera_GetBgCamSetting(Camera* camera, s32 bgCamIndex);
+s16 Camera_GetCamDataSetting(Camera* camera, s32 camDataIdx);
 
 /**
- * Returns the bgCamFuncData using the current bgCam index
+ * Returns the scene camera info for the current camera data index
  */
-Vec3s* Camera_GetBgCamFuncData(Camera* camera);
+Vec3s* Camera_GetCamBGData(Camera* camera);
 
 /**
- * Gets the bgCam index for the poly `poly`, returns -1 if
+ * Gets the scene's camera index for the poly `poly`, returns -1 if
  * there is no camera data for that poly.
  */
-s32 Camera_GetBgCamIndex(Camera* camera, s32* bgId, CollisionPoly* poly);
+s32 Camera_GetDataIdxForPoly(Camera* camera, s32* bgId, CollisionPoly* poly);
 
 /**
- * Returns the bgCamFuncData for the floor under the player.
- * Also returns the number of pieces of data there are in `bgCamCount`.
- * If there is no floor, then return NULL
+ * Returns the scene camera info for the floor under the player.
+ * If there is no floor then there is no camera data, returns the number of
+ * pieces of data there are in `dataCnt`
  */
-Vec3s* Camera_GetBgCamFuncDataUnderPlayer(Camera* camera, u16* bgCamCount);
+Vec3s* Camera_GetCamBgDataUnderPlayer(Camera* camera, u16* dataCnt);
 
 /**
  * Gets the Camera information for the water box the player is in.
@@ -151,26 +156,23 @@ Vec3s* Camera_GetBgCamFuncDataUnderPlayer(Camera* camera, u16* bgCamCount);
  * Returns -2 if there is no camera index for the water box.
  * Returns the camera data index otherwise.
  */
-s32 Camera_GetWaterBoxBgCamIndex(Camera* camera, f32* waterY);
+s32 Camera_GetWaterBoxDataIdx(Camera* camera, f32* waterY);
 
 /**
- * Checks if `chkPos` is inside a waterbox.
- * If there is no water box below `chkPos` or if `chkPos` is above the water surface, return BGCHECK_Y_MIN.
- * If `chkPos` is inside the waterbox, output light index to `lightIndex`.
+ * Checks if `chkPos` is inside a waterbox. If there is no water box below `chkPos`
+ * or if `chkPos` is above the water surface, return BGCHECK_Y_MIN, output
+ * environment properites to `envProp` if `chkPos` is inside the waterbox.
  */
-f32 Camera_GetWaterSurface(Camera* camera, Vec3f* chkPos, s32* lightIndex);
+f32 Camera_GetWaterSurface(Camera* camera, Vec3f* chkPos, s32* envProp);
 
 /**
  * Calculates the angle between points `from` and `to`
  */
 s16 Camera_XZAngle(Vec3f* to, Vec3f* from);
 
-s16 Camera_GetPitchAdjFromFloorHeightDiffs(Camera* camera, s16 viewYaw, s16 initAndReturnZero);
+s16 func_80044ADC(Camera* camera, s16 yaw, s16 arg2);
 
-/**
- * Calculates a new Up vector from the pitch, yaw, roll
- */
-Vec3f* Camera_CalcUpFromPitchYawRoll(Vec3f* viewUp, s16 pitch, s16 yaw, s16 roll);
+Vec3f* Camera_CalcUpFromPitchYawRoll(Vec3f* dest, s16 pitch, s16 yaw, s16 roll);
 
 f32 Camera_ClampLERPScale(Camera* camera, f32 maxLERPScale);
 
@@ -178,9 +180,9 @@ void Camera_CopyDataToRegs(Camera* camera, s16 mode);
 
 s32 Camera_CopyPREGToModeValues(Camera* camera);
 
-#define LETTERBOX_MASK (0xF000)
-#define LETTERBOX_SIZE_MASK (0x7000)
-#define LETTERBOX_INSTANT (0x8000)
+#define SHRINKWIN_MASK (0xF000)
+#define SHRINKWINVAL_MASK (0x7000)
+#define SHRINKWIN_CURVAL (0x8000)
 #define IFACE_ALPHA_MASK (0x0F00)
 
 void Camera_UpdateInterface(s16 flags);
@@ -332,19 +334,6 @@ s32 Camera_Subj2(Camera* camera);
  */
 s32 Camera_Subj3(Camera* camera);
 
-/**
- * Crawlspaces
- * Moves the camera from third person to first person when entering a crawlspace
- * While in the crawlspace, link remains fixed in a single direction
- * The camera is what swings up and down while crawling forward or backwards
- *
- * Note:
- * Subject 4 uses bgCamFuncData.data differently than other functions:
- * All Vec3s data are points along the crawlspace
- * The second point represents the entrance, and the second to last point represents the exit
- * All other points are unused
- * All instances of crawlspaces have 6 points, except for the Testroom scene which has 9 points
- */
 s32 Camera_Subj4(Camera* camera);
 
 s32 Camera_Subj0(Camera* camera);
@@ -529,7 +518,7 @@ s16 Camera_ChangeSettingFlags(Camera* camera, s16 setting, s16 flags);
 
 s32 Camera_ChangeSetting(Camera* camera, s16 setting);
 
-s32 Camera_ChangeBgCamIndex(Camera* camera, s32 bgCamIndex);
+s32 Camera_ChangeDataIdx(Camera* camera, s32 camDataIdx);
 
 Vec3s* Camera_GetInputDir(Vec3s* dst, Camera* camera);
 
@@ -560,17 +549,12 @@ s16 func_8005ACFC(Camera* camera, s16 arg1);
 
 s16 func_8005AD1C(Camera* camera, s16 arg1);
 
-/**
- * A bgCamIndex of -99 will save the door params without changing the camera setting
- * A bgCamIndex of -1 uses the default door camera setting (CAM_SET_DOORC)
- * Otherwise, change the door camera setting by reading the bgCam indexed at bgCamIndex
- */
-s32 Camera_ChangeDoorCam(Camera* camera, Actor* doorActor, s16 bgCamIndex, f32 arg3, s16 timer1, s16 timer2,
+s32 Camera_ChangeDoorCam(Camera* camera, Actor* doorActor, s16 camDataIdx, f32 arg3, s16 timer1, s16 timer2,
                          s16 timer3);
 
 s32 Camera_Copy(Camera* dstCamera, Camera* srcCamera);
 
-s32 Camera_GetDbgCamEnabled(void);
+s32 Camera_GetDbgCamEnabled();
 
 Vec3f* Camera_GetSkyboxOffset(Vec3f* dst, Camera* camera);
 

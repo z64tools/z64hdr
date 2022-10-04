@@ -3,8 +3,8 @@
 
 #include "global.h"
 
-extern u8 sSfxBankIds[];
+extern u8 D_8012D200[];
 
-void AudioMgr_StopAllSfx(void);
+void func_800C3C20(void);
 
 #endif

@@ -18976,7 +18976,7 @@
 		daiyousei_izumi_scene_possiblePadding_00012C = 0x0200012C; /* ROM:0x02F4412C */
 		gGreatFairyMagicCs               = 0x02000130; /* ROM:0x02F44130 */
 		gGreatFairyDoubleMagicCs         = 0x020013E0; /* ROM:0x02F453E0 */
-		gGreatFairyDoubleDefenseCs       = 0x020025D0; /* ROM:0x02F465D0 */
+		gGreatFairyDoubleDefenceCs       = 0x020025D0; /* ROM:0x02F465D0 */
 		daiyousei_izumi_sceneCollisionHeader_0043A4CamDataList = 0x02003790; /* ROM:0x02F47790 */
 		daiyousei_izumi_sceneCollisionHeader_0043A4SurfaceType = 0x020037A8; /* ROM:0x02F477A8 */
 		daiyousei_izumi_sceneCollisionHeader_0043A4Polygons = 0x020037E8; /* ROM:0x02F477E8 */

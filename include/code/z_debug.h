@@ -6,41 +6,43 @@
 typedef struct {
     u8 x;
     u8 y;
-    u8 colorIndex;
-    char text[21];
-} PrintTextBufferEntry; // size = 0x18
+    u8 colorId;
+    char text[0x15];
+} PrintTextBuffer;
 
 typedef struct {
-    u16 hold;
-    u16 press;
-} InputCombo; // size = 0x4
+    u16 push;
+    u16 held;
+} InputCombo;
 
 extern GameInfo* gGameInfo;
+extern s32 D_8015FA94; // no known symbols
+extern PrintTextBuffer D_8015FA98[0x16];
 
-extern PrintTextBufferEntry sDebugPrintTextBuffer[22];
-extern s16 sDebugPrintTextBufferNumUsed;
-extern Color_RGBA8 sDebugPrintTextColors[];
+extern s16 D_8011E0B0; // PrintTextBuffer index
+extern Color_RGBA8 printTextColors[];
 
-extern InputCombo sRegGroupInputCombos[REG_GROUPS];
+extern InputCombo inputCombos[REG_GROUPS];
 
-extern char sRegGroupChars[REG_GROUPS];
+extern char regChar[];
 
-// Initialize GameInfo
+// initialize GameInfo
 void func_800636C0(void);
 
 // Called when free movement is active.
+// 8011D394 to enable camera debugger
 void func_8006375C(s32 arg0, s32 arg1, const char* text);
 
-// Store text during Update, to be drawn later during Draw
-void func_8006376C(u8 x, u8 y, u8 colorIndex, const char* text);
+// Copy Camera Debugger Text
+void func_8006376C(u8 x, u8 y, u8 colorId, const char* text);
 
-// Draw text previously stored by calls to `func_8006376C`
+// Draw Text
 void func_80063828(GfxPrint* printer);
 
-// Process inputs to control the reg editor
+// Edit REG
 void func_8006390C(Input* input);
 
-// Draw the reg editor
+// Draw Memory Viewer
 void func_80063C04(GfxPrint* printer);
 
 void func_80063D7C(GraphicsContext* gfxCtx);

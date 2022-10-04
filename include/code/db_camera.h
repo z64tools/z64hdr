@@ -4,8 +4,6 @@
 #include "ultra64.h"
 #include "global.h"
 
-#define DBCAM_CONTROLLER_PORT 2
-
 extern PlayState* sPlay;
 
 // TODO: cleanup these arrays and UB access
@@ -167,7 +165,7 @@ s32 DbCamera_SaveCallback(char* c);
 
 s32 DbCamera_ClearCallback(char* c);
 
-void DbCamera_DrawSlotLetters(char* str, s16 y, s16 x, s32 colorIndex);
+void DbCamera_DrawSlotLetters(char* str, s16 y, s16 x, s32 colorId);
 
 void DbCamera_PrintAllCuts(Camera* cam);
 

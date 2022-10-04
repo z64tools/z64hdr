@@ -8,7 +8,7 @@ void AudioHeap_InitSampleCaches(u32 persistentSampleCacheSize, u32 temporarySamp
 SampleCacheEntry* AudioHeap_AllocTemporarySampleCacheEntry(u32 size);
 SampleCacheEntry* AudioHeap_AllocPersistentSampleCacheEntry(u32 size);
 void AudioHeap_DiscardSampleCacheEntry(SampleCacheEntry* entry);
-void AudioHeap_UnapplySampleCache(SampleCacheEntry* entry, Sample* sample);
+void AudioHeap_UnapplySampleCache(SampleCacheEntry* entry, SoundFontSample* sample);
 void AudioHeap_DiscardSampleCaches(void);
 void AudioHeap_DiscardSampleBank(s32 sampleBankId);
 void AudioHeap_DiscardSampleBanks(void);
@@ -62,25 +62,25 @@ void* AudioHeap_Alloc(AudioAllocPool* pool, u32 size);
  * Initialize a pool to allocate memory from the specified address, up to the specified size.
  * Store the metadata of this pool in AudioAllocPool* pool
  */
-void AudioHeap_InitPool(AudioAllocPool* pool, void* ramAddr, u32 size);
+void AudioHeap_AllocPoolInit(AudioAllocPool* pool, void* ramAddr, u32 size);
 
-void AudioHeap_InitPersistentCache(AudioPersistentCache* persistent);
+void AudioHeap_PersistentCacheClear(AudioPersistentCache* persistent);
 
-void AudioHeap_InitTemporaryCache(AudioTemporaryCache* temporary);
+void AudioHeap_TemporaryCacheClear(AudioTemporaryCache* temporary);
 
 void AudioHeap_ResetPool(AudioAllocPool* pool);
 
-void AudioHeap_PopPersistentCache(s32 tableType);
+void AudioHeap_PopCache(s32 tableType);
 
 void AudioHeap_InitMainPools(s32 initPoolSize);
 
-void AudioHeap_InitSessionPools(AudioSessionPoolSplit* split);
+void AudioHeap_SessionPoolsInit(AudioSessionPoolSplit* split);
 
-void AudioHeap_InitCachePools(AudioCachePoolSplit* split);
+void AudioHeap_CachePoolInit(AudioCachePoolSplit* split);
 
-void AudioHeap_InitPersistentPoolsAndCaches(AudioCommonPoolSplit* split);
+void AudioHeap_PersistentCachesInit(AudioCommonPoolSplit* split);
 
-void AudioHeap_InitTemporaryPoolsAndCaches(AudioCommonPoolSplit* split);
+void AudioHeap_TemporaryCachesInit(AudioCommonPoolSplit* split);
 
 void* AudioHeap_AllocCached(s32 tableType, s32 size, s32 cache, s32 id);
 
@@ -129,7 +129,7 @@ void AudioHeap_UnapplySampleCacheForFont(SampleCacheEntry* entry, s32 fontId);
 
 void AudioHeap_DiscardSampleCacheEntry(SampleCacheEntry* entry);
 
-void AudioHeap_UnapplySampleCache(SampleCacheEntry* entry, Sample* sample);
+void AudioHeap_UnapplySampleCache(SampleCacheEntry* entry, SoundFontSample* sample);
 
 SampleCacheEntry* AudioHeap_AllocPersistentSampleCacheEntry(u32 size);
 
@@ -144,9 +144,9 @@ typedef struct {
     u8 newMedium;
 } StorageChange;
 
-void AudioHeap_ChangeStorage(StorageChange* change, Sample* sample);
+void AudioHeap_ChangeStorage(StorageChange* change, SoundFontSample* sample);
 
-void AudioHeap_ApplySampleBankCacheInternal(s32 apply, s32 sampleBankId);
+void AudioHeap_ApplySampleBankCacheInternal(s32 apply, s32 id);
 
 void AudioHeap_DiscardSampleBank(s32 sampleBankId);
 

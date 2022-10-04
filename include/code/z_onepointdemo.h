@@ -19,7 +19,7 @@ void OnePointCutscene_Vec3sToVec3f(Vec3f* src, Vec3s* dst);
 
 s32 OnePointCutscene_BgCheckLineTest(CollisionContext* colCtx, Vec3f* vec1, Vec3f* vec2);
 
-f32 OnePointCutscene_RaycastDown(CollisionContext* colCtx, Vec3f* pos);
+f32 OnePointCutscene_RaycastFloor(CollisionContext* colCtx, Vec3f* pos);
 
 void OnePointCutscene_SetCsCamPoints(Camera* camera, s16 actionParameters, s16 initTimer, CutsceneCameraPoint* atPoints,
                                      CutsceneCameraPoint* eyePoints);

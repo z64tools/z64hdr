@@ -3,15 +3,15 @@
 
 #include "global.h"
 
-extern uintptr_t sSysCfbFbPtr[2];
-extern uintptr_t sSysCfbEnd;
+extern u32 sSysCfbFbPtr[2];
+extern u32 sSysCfbEnd;
 
 void SysCfb_Init(s32 n64dd);
 
-void SysCfb_Reset(void);
+void SysCfb_Reset();
 
-void* SysCfb_GetFbPtr(s32 idx);
+u32 SysCfb_GetFbPtr(s32 idx);
 
-void* SysCfb_GetFbEnd(void);
+u32 SysCfb_GetFbEnd(void);
 
 #endif

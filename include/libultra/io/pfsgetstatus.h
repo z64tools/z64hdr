@@ -4,11 +4,11 @@
 #include "ultra64.h"
 #include "global.h"
 
-extern OSPifRam __osPfsPifRam;
+extern OSPifRam gPifMempakBuf;
 
 s32 __osPfsGetStatus(OSMesgQueue* queue, s32 channel);
 
-void __osPfsRequestOneChannel(s32 channel, u8 cmd);
+void __osPfsRequestOneChannel(s32 channel, u8 poll);
 
 void __osPfsGetOneChannelData(s32 channel, OSContStatus* contData);
 

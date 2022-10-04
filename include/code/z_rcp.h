@@ -159,14 +159,7 @@ Gfx* Gfx_TwoTexScrollEnvColor(GraphicsContext* gfxCtx, s32 tile1, u32 x1, u32 y1
 
 Gfx* Gfx_EnvColor(GraphicsContext* gfxCtx, s32 r, s32 g, s32 b, s32 a);
 
-/**
- * Sets up the frame for drawing.
- * Initializes the scissor region to full screen.
- * Set up the framebuffer and z-buffer.
- * The whole screen is filled with the color supplied as arguments.
- * Letterbox is also applied here, and will share the color of the screen base.
- */
-void Gfx_SetupFrame(GraphicsContext* gfxCtx, u8 r, u8 g, u8 b);
+void func_80095248(GraphicsContext* gfxCtx, u8 r, u8 g, u8 b);
 
 void func_80095974(GraphicsContext* gfxCtx);
 

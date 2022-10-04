@@ -47,7 +47,7 @@ extern Gfx object_ahg_DL_004280[];
 extern Gfx object_ahg_DL_0043C0[];
 extern Gfx object_ahg_DL_0044F0[];
 extern Gfx object_ahg_DL_004628[];
-extern u64 object_ahg_TLUT_0047C8[];
+extern u64 object_ahgTLUT_0047C8[];
 extern u64 object_ahg_Tex_004948[];
 extern u64 object_ahg_Tex_004988[];
 extern u64 object_ahg_Tex_004B88[];

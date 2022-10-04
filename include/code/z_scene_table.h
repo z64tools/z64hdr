@@ -27,12 +27,9 @@
 #include "overlays/actors/ovl_Bg_Dodoago/z_bg_dodoago.h"
 
 // Entrance Table definition
-#define DEFINE_ENTRANCE(_0, sceneId, spawn, continueBgm, displayTitleCard, endTransType, startTransType) \
-    { sceneId, spawn,                                                                                    \
-      (((continueBgm) ? ENTRANCE_INFO_CONTINUE_BGM_FLAG : 0) |                                           \
-       ((displayTitleCard) ? ENTRANCE_INFO_DISPLAY_TITLE_CARD_FLAG : 0) |                                \
-       (((endTransType) << ENTRANCE_INFO_END_TRANS_TYPE_SHIFT) & ENTRANCE_INFO_END_TRANS_TYPE_MASK) |    \
-       (((startTransType) << ENTRANCE_INFO_START_TRANS_TYPE_SHIFT) & ENTRANCE_INFO_START_TRANS_TYPE_MASK)) },
+#define DEFINE_ENTRANCE(_0, scene, spawn, continueBgm, displayTitleCard, fadeIn, fadeOut) \
+    { scene, spawn,                                                                       \
+      ((continueBgm & 1) << 15) | ((displayTitleCard & 1) << 14) | ((fadeIn & 0x7F) << 7) | (fadeOut & 0x7F) },
 
 extern EntranceInfo gEntranceTable[];
 

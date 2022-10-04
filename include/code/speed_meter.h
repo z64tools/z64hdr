@@ -21,11 +21,11 @@ extern SpeedMeterTimeEntry* sSpeedMeterTimeEntryPtr;
 
 extern SpeedMeterTimeEntry sSpeedMeterTimeEntryArray[];
 
-#define gDrawRect(gfx, color, ulx, uly, lrx, lry)      \
+#define DrawRec(gfx, color, ulx, uly, lrx, lry)        \
     gDPPipeSync(gfx);                                  \
     gDPSetFillColor(gfx, ((color) << 16) | (color));   \
     gDPFillRectangle(gfx, (ulx), (uly), (lrx), (lry)); \
-    gDPPipeSync(gfx)
+    gDPPipeSync(gfx);
 
 void SpeedMeter_InitImpl(SpeedMeter* this, u32 arg1, u32 y);
 

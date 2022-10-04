@@ -19,9 +19,6 @@ extern UCodeInfo D_8012D248[3];
 
 void Graph_FaultClient(void);
 
-// TODO: merge Gfx and GfxMod to make this function's arguments consistent
-void UCodeDisas_Disassemble(UCodeDisas*, Gfx*);
-
 void Graph_DisassembleUCode(Gfx* workBuf);
 
 void Graph_UCodeFaultClient(Gfx* workBuf);

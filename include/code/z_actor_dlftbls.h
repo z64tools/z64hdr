@@ -27,8 +27,8 @@
 
 // Actor Overlay Table definition
 #define DEFINE_ACTOR(name, _1, allocType, nameString) \
-    { (uintptr_t)_ovl_##name##SegmentRomStart,        \
-      (uintptr_t)_ovl_##name##SegmentRomEnd,          \
+    { (u32)_ovl_##name##SegmentRomStart,              \
+      (u32)_ovl_##name##SegmentRomEnd,                \
       _ovl_##name##SegmentStart,                      \
       _ovl_##name##SegmentEnd,                        \
       NULL,                                           \

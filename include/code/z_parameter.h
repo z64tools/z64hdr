@@ -13,11 +13,11 @@
 #define DO_ACTION_TEX_SIZE ((DO_ACTION_TEX_WIDTH * DO_ACTION_TEX_HEIGHT) / 2) // (sizeof(gCheckDoActionENGTex))
 
 typedef struct {
-    /* 0x00 */ u8 sceneId;
+    /* 0x00 */ u8 scene;
     /* 0x01 */ u8 flags1;
     /* 0x02 */ u8 flags2;
     /* 0x03 */ u8 flags3;
-} RestrictionFlags; // size = 0x4
+} RestrictionFlags;
 
 extern RestrictionFlags sRestrictionFlags[];
 

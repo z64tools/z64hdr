@@ -20,7 +20,7 @@ void Audio_NoteVibratoInit(Note* note);
 
 void Audio_NotePortamentoInit(Note* note);
 
-void Audio_AdsrInit(AdsrState* adsr, EnvelopePoint* envelope, s16* volOut);
+void Audio_AdsrInit(AdsrState* adsr, AdsrEnvelope* envelope, s16* volOut);
 
 f32 Audio_AdsrUpdate(AdsrState* adsr);
 

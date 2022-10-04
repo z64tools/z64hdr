@@ -40,6 +40,6 @@ void SystemArena_Init(void* start, u32 size);
 
 void SystemArena_Cleanup(void);
 
-u8 SystemArena_IsInitialized(void);
+u8 SystemArena_IsInitalized(void);
 
 #endif

@@ -54,7 +54,7 @@ void ArenaImpl_RemoveAllBlocks(Arena* arena);
 
 void __osMallocCleanup(Arena* arena);
 
-u8 __osMallocIsInitialized(Arena* arena);
+u8 __osMallocIsInitalized(Arena* arena);
 
 void __osMalloc_FreeBlockTest(Arena* arena, ArenaNode* node);
 

@@ -20,7 +20,7 @@
     if (this->enableLog) \
     osSyncPrintf
 
-void* UCodeDisas_TranslateAddr(UCodeDisas* this, u32 addr);
+u32 UCodeDisas_TranslateAddr(UCodeDisas* this, u32 addr);
 
 extern F3dzexConst sUCodeDisasGeometryModes[];
 

@@ -126,12 +126,12 @@ f32 Math3D_Dist2DSq(f32 x0, f32 y0, f32 x1, f32 y1);
 f32 Math3D_Dist2D(f32 x0, f32 y0, f32 x1, f32 y1);
 
 /**
- * Returns the magnitude (length) squared of `vec`
+ * Returns the magntiude (length) squared of `vec`
  */
 f32 Math3D_Vec3fMagnitudeSq(Vec3f* vec);
 
 /**
- * Returns the magnitude (length) of `vec`
+ * Returns the magnitude(length) of `vec`
  */
 f32 Math3D_Vec3fMagnitude(Vec3f* vec);
 

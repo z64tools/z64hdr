@@ -76,7 +76,7 @@ u32 func_800E5E20(u32* out);
 
 u8* func_800E5E84(s32 arg0, u32* arg1);
 
-void Audio_GetSampleBankIdsOfFont(s32 fontId, u32* sampleBankId1, u32* sampleBankId2);
+void func_800E5EA4(s32 arg0, u32* arg1, u32* arg2);
 
 s32 func_800E5EDC(void);
 

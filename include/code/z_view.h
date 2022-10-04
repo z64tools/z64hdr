@@ -45,7 +45,7 @@ void View_SetViewport(View* view, Viewport* viewport);
 
 void View_GetViewport(View* view, Viewport* viewport);
 
-void View_ApplyLetterbox(View* view);
+void View_ApplyShrinkWindow(View* view);
 
 void View_SetDistortionOrientation(View* view, f32 rotX, f32 rotY, f32 rotZ);
 

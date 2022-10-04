@@ -24,28 +24,27 @@ typedef struct {
     /* 0x0C */ s32 baseAddr2;
     /* 0x10 */ u32 medium1;
     /* 0x14 */ u32 medium2;
-} SampleBankRelocInfo; // size = 0x18
+} RelocInfo; // size = 0x18
 
-// opaque type for soundfont data loaded into ram (should maybe get rid of this?)
+// opaque type for unpatched sound font data (should maybe get rid of this?)
 typedef void SoundFontData;
 
 /* forward declarations */
-s32 AudioLoad_SyncInitSeqPlayerInternal(s32 playerIdx, s32 seqId, s32 arg2);
+s32 AudioLoad_SyncInitSeqPlayerInternal(s32 playerIdx, s32 seqId, s32 skipTicks);
 SoundFontData* AudioLoad_SyncLoadFont(u32 fontId);
-Sample* AudioLoad_GetFontSample(s32 fontId, s32 instId);
+SoundFontSample* AudioLoad_GetFontSample(s32 fontId, s32 instId);
 void AudioLoad_ProcessAsyncLoads(s32 resetStatus);
 void AudioLoad_ProcessAsyncLoadUnkMedium(AudioAsyncLoad* asyncLoad, s32 resetStatus);
 void AudioLoad_ProcessAsyncLoad(AudioAsyncLoad* asyncLoad, s32 resetStatus);
-void AudioLoad_RelocateFontAndPreloadSamples(s32 fontId, SoundFontData* fontData, SampleBankRelocInfo* sampleBankReloc,
-                                             s32 isAsync);
-void AudioLoad_RelocateSample(TunedSample* tunedSample, SoundFontData* fontData, SampleBankRelocInfo* sampleBankReloc);
+void AudioLoad_RelocateFontAndPreloadSamples(s32 fontId, SoundFontData* mem, RelocInfo* relocInfo, s32 async);
+void AudioLoad_RelocateSample(SoundFontSound* sound, SoundFontData* mem, RelocInfo* relocInfo);
 void AudioLoad_DiscardFont(s32 fontId);
 u32 AudioLoad_TrySyncLoadSampleBank(u32 sampleBankId, u32* outMedium, s32 noLoad);
-void* AudioLoad_SyncLoad(u32 tableType, u32 id, s32* didAllocate);
-u32 AudioLoad_GetRealTableIndex(s32 tableType, u32 id);
+void* AudioLoad_SyncLoad(u32 tableType, u32 tableId, s32* didAllocate);
+u32 AudioLoad_GetRealTableIndex(s32 tableType, u32 tableId);
 void* AudioLoad_SearchCaches(s32 tableType, s32 id);
 AudioTable* AudioLoad_GetLoadTable(s32 tableType);
-void AudioLoad_SyncDma(u32 devAddr, u8* ramAddr, u32 size, s32 medium);
+void AudioLoad_SyncDma(u32 devAddr, u8* addr, u32 size, s32 medium);
 void AudioLoad_SyncDmaUnkMedium(u32 devAddr, u8* addr, u32 size, s32 unkMediumParam);
 s32 AudioLoad_Dma(OSIoMesg* mesg, u32 priority, s32 direction, u32 devAddr, void* ramAddr, u32 size,
                   OSMesgQueue* reqQueue, s32 medium, const char* dmaFuncType);
@@ -73,7 +72,7 @@ extern s32 sAudioLoadPad2[4]; // double file padding?
 extern DmaHandler sDmaHandler;
 extern void* sUnusedHandler;
 
-extern s32 gAudioContextInitialized;
+extern s32 gAudioContextInitalized;
 
 void AudioLoad_DecreaseSampleDmaTtls(void);
 
@@ -101,7 +100,7 @@ SoundFontData* AudioLoad_SyncLoadSeqFonts(s32 seqId, u32* outDefaultFontId);
 
 void AudioLoad_SyncLoadSeqParts(s32 seqId, s32 arg1);
 
-s32 AudioLoad_SyncLoadSample(Sample* sample, s32 fontId);
+s32 AudioLoad_SyncLoadSample(SoundFontSample* sample, s32 fontId);
 
 s32 AudioLoad_SyncLoadInstrument(s32 fontId, s32 instId, s32 drumId);
 
@@ -141,15 +140,7 @@ void* AudioLoad_SearchCaches(s32 tableType, s32 id);
 
 AudioTable* AudioLoad_GetLoadTable(s32 tableType);
 
-/**
- * Read and extract information from soundFont binary loaded into ram.
- * Also relocate offsets into pointers within this loaded soundFont
- *
- * @param fontId index of font being processed
- * @param fontData ram address of raw soundfont binary loaded into cache
- * @param sampleBankReloc information on the sampleBank containing raw audio samples
- */
-void AudioLoad_RelocateFont(s32 fontId, SoundFontData* fontDataStartAddr, SampleBankRelocInfo* sampleBankReloc);
+void AudioLoad_RelocateFont(s32 fontId, SoundFontData* mem, RelocInfo* relocInfo);
 
 void AudioLoad_SyncDma(u32 devAddr, u8* ramAddr, u32 size, s32 medium);
 
@@ -170,7 +161,7 @@ void AudioLoad_SetDmaHandler(DmaHandler callback);
 
 void AudioLoad_SetUnusedHandler(void* callback);
 
-void AudioLoad_InitSoundFont(s32 fontId);
+void AudioLoad_InitSoundFontMeta(s32 fontId);
 
 void AudioLoad_Init(void* heap, u32 heapSize);
 
@@ -178,7 +169,7 @@ void AudioLoad_InitSlowLoads(void);
 
 s32 AudioLoad_SlowLoadSample(s32 fontId, s32 instId, s8* status);
 
-Sample* AudioLoad_GetFontSample(s32 fontId, s32 instId);
+SoundFontSample* AudioLoad_GetFontSample(s32 fontId, s32 instId);
 
 void AudioLoad_Unused2(void);
 
@@ -212,36 +203,23 @@ void AudioLoad_AsyncDma(AudioAsyncLoad* asyncLoad, u32 size);
 
 void AudioLoad_AsyncDmaUnkMedium(u32 devAddr, void* ramAddr, u32 size, s16 arg3);
 
-/**
- * Read and extract information from TunedSample and its Sample
- * contained in the soundFont binary loaded into ram
- * TunedSample contains metadata on a sample used by a particular instrument/drum/sfx
- * Also relocate offsets into pointers within this loaded TunedSample
- *
- * @param fontId index of font being processed
- * @param fontData ram address of raw soundfont binary loaded into cache
- * @param sampleBankReloc information on the sampleBank containing raw audio samples
- */
-void AudioLoad_RelocateSample(TunedSample* tunedSample, SoundFontData* fontData, SampleBankRelocInfo* sampleBankReloc);
+#define RELOC(v, base) (reloc = (void*)((u32)(v) + (u32)(base)))
 
-/**
- * @param fontId index of font being processed
- * @param fontData ram address of raw soundfont binary loaded into cache
- * @param sampleBankReloc information on the sampleBank containing raw audio samples
- * @param isAsync bool for whether this is an asynchronous load or not
- */
-void AudioLoad_RelocateFontAndPreloadSamples(s32 fontId, SoundFontData* fontData, SampleBankRelocInfo* sampleBankReloc,
-                                             s32 isAsync);
+void AudioLoad_RelocateSample(SoundFontSound* sound, SoundFontData* mem, RelocInfo* relocInfo);
+
+#undef RELOC
+
+void AudioLoad_RelocateFontAndPreloadSamples(s32 fontId, SoundFontData* mem, RelocInfo* relocInfo, s32 async);
 
 s32 AudioLoad_ProcessSamplePreloads(s32 resetStatus);
 
-s32 AudioLoad_AddToSampleSet(Sample* sample, s32 numSamples, Sample** sampleSet);
+s32 AudioLoad_AddToSampleSet(SoundFontSample* sample, s32 numSamples, SoundFontSample** sampleSet);
 
-s32 AudioLoad_GetSamplesForFont(s32 fontId, Sample** sampleSet);
+s32 AudioLoad_GetSamplesForFont(s32 fontId, SoundFontSample** sampleSet);
 
-void AudioLoad_AddUsedSample(TunedSample* tunedSample);
+void AudioLoad_AddUsedSample(SoundFontSound* sound);
 
-void AudioLoad_PreloadSamplesForFont(s32 fontId, s32 async, SampleBankRelocInfo* sampleBankReloc);
+void AudioLoad_PreloadSamplesForFont(s32 fontId, s32 async, RelocInfo* relocInfo);
 
 void AudioLoad_LoadPermanentSamples(void);
 

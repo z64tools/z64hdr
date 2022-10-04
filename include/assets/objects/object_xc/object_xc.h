@@ -23,7 +23,7 @@ extern s16 sSheikIdleAnimFrameData[];
 extern JointIndex sSheikIdleAnimJointIndices[];
 extern AnimationHeader gSheikIdleAnim;
 extern u64 object_xcTLUT_004840[];
-extern u64 object_xc_TLUT_004A40[];
+extern u64 object_xcTLUT_004A40[];
 extern u64 object_xcTex_004C40[];
 extern u64 object_xcTex_004C80[];
 extern u64 gSheikEyeOpenTex[];

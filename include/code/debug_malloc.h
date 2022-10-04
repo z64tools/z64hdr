@@ -40,6 +40,6 @@ void DebugArena_Init(void* start, u32 size);
 
 void DebugArena_Cleanup(void);
 
-u8 DebugArena_IsInitialized(void);
+u8 DebugArena_IsInitalized(void);
 
 #endif

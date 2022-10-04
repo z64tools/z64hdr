@@ -21,7 +21,7 @@ extern StandardLimb object_oF1s_Limb_0000C0;
 extern void* object_oF1s_Skel_000110Limbs[];
 extern FlexSkeletonHeader object_oF1s_Skel_000110;
 extern u32 object_oF1s_TLUT_00011C[];
-extern u32 object_oF1s_TLUT_0002CC[];
+extern u32 object_oF1sTLUT_0002CC[];
 extern u32 object_oF1s_Tex_0004BC[];
 extern u32 object_oF1s_Tex_0008BC[];
 extern u32 object_oF1s_Tex_0018BC[];
