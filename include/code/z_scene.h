@@ -38,7 +38,7 @@ void Scene_CommandSpecialFiles(PlayState* play, SceneCmd* cmd);
 
 void Scene_CommandRoomBehavior(PlayState* play, SceneCmd* cmd);
 
-void Scene_CommandMeshHeader(PlayState* play, SceneCmd* cmd);
+void Scene_CommandRoomShape(PlayState* play, SceneCmd* cmd);
 
 void Scene_CommandObjectList(PlayState* play, SceneCmd* cmd);
 

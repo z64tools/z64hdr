@@ -40,6 +40,6 @@ void ZeldaArena_Init(void* start, u32 size);
 
 void ZeldaArena_Cleanup(void);
 
-u8 ZeldaArena_IsInitalized(void);
+u8 ZeldaArena_IsInitialized(void);
 
 #endif

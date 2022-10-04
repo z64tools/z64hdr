@@ -3,9 +3,9 @@
 
 #include "global.h"
 
-void func_80110990(PlayState* play);
+void Interface_Destroy(PlayState* play);
 
-void func_801109B0(PlayState* play);
+void Interface_Init(PlayState* play);
 
 void Message_Init(PlayState* play);
 

@@ -124,7 +124,7 @@
 		__osDequeueThread                = 0x80004300; /* ROM:0x00004F00 */
 	/* libultra/os/destroythread.c */
 		osDestroyThread                  = 0x80004340; /* ROM:0x00004F40 */
-	/* libultra/libc//bzero.c */
+	/* libultra/libc/bzero.c */
 		bzero                            = 0x80004450; /* ROM:0x00005050 */
 	/* libultra/os/createthread.c */
 		osCreateThread                   = 0x80004550; /* ROM:0x00005150 */
@@ -365,7 +365,7 @@
 		sDmaMgrCurFileLine               = 0x800140DC; /* ROM:0x00014CDC */
 	/* boot/yaz0.c */
 		sYaz0DataBuffer                  = 0x800140E0; /* ROM:0x00014CE0 */
-		sYaz0CurDataEnd                  = 0x800144E0; /* ROM:0x000150E0 */
+		sYaz0DataBufferEnd               = 0x800144E0; /* ROM:0x000150E0 */
 		sYaz0CurRomStart                 = 0x800144E4; /* ROM:0x000150E4 */
 		sYaz0CurSize                     = 0x800144E8; /* ROM:0x000150E8 */
 		sYaz0MaxPtr                      = 0x800144EC; /* ROM:0x000150EC */
@@ -448,7 +448,7 @@
 		func_8001DFC8                    = 0x8001DFC8; /* ROM:0x00A95168 */
 		func_8001E1C8                    = 0x8001E1C8; /* ROM:0x00A95368 */
 		func_8001E304                    = 0x8001E304; /* ROM:0x00A954A4 */
-		func_8001E5C8                    = 0x8001E5C8; /* ROM:0x00A95768 */
+		EnItem00_Collected               = 0x8001E5C8; /* ROM:0x00A95768 */
 		EnItem00_Update                  = 0x8001E71C; /* ROM:0x00A958BC */
 		EnItem00_Draw                    = 0x8001ED9C; /* ROM:0x00A95F3C */
 		EnItem00_DrawRupee               = 0x8001EF30; /* ROM:0x00A960D0 */
@@ -735,7 +735,7 @@
 		func_8002F758                    = 0x8002F758; /* ROM:0x00AA68F8 */
 		func_8002F7A0                    = 0x8002F7A0; /* ROM:0x00AA6940 */
 		func_8002F7DC                    = 0x8002F7DC; /* ROM:0x00AA697C */
-		Audio_PlayActorSound2            = 0x8002F828; /* ROM:0x00AA69C8 */
+		Audio_PlayActorSfx2              = 0x8002F828; /* ROM:0x00AA69C8 */
 		func_8002F850                    = 0x8002F850; /* ROM:0x00AA69F0 */
 		func_8002F8F0                    = 0x8002F8F0; /* ROM:0x00AA6A90 */
 		func_8002F91C                    = 0x8002F91C; /* ROM:0x00AA6ABC */
@@ -878,8 +878,8 @@
 		CollisionPoly_SphVsPoly          = 0x8003937C; /* ROM:0x00AB051C */
 		StaticLookup_AddPolyToSSList     = 0x80039448; /* ROM:0x00AB05E8 */
 		StaticLookup_AddPoly             = 0x8003965C; /* ROM:0x00AB07FC */
-		BgCheck_RaycastFloorStaticList   = 0x800396F0; /* ROM:0x00AB0890 */
-		BgCheck_RaycastFloorStatic       = 0x8003992C; /* ROM:0x00AB0ACC */
+		BgCheck_RaycastDownStaticList    = 0x800396F0; /* ROM:0x00AB0890 */
+		BgCheck_RaycastDownStatic        = 0x8003992C; /* ROM:0x00AB0ACC */
 		BgCheck_ComputeWallDisplacement  = 0x80039A3C; /* ROM:0x00AB0BDC */
 		BgCheck_SphVsStaticWall          = 0x80039AEC; /* ROM:0x00AB0C8C */
 		BgCheck_CheckStaticCeiling       = 0x8003A3E0; /* ROM:0x00AB1580 */
@@ -901,20 +901,20 @@
 		BgCheck_Allocate                 = 0x8003C078; /* ROM:0x00AB3218 */
 		BgCheck_GetCollisionHeader       = 0x8003C4C4; /* ROM:0x00AB3664 */
 		BgCheck_PosInStaticBoundingBox   = 0x8003C55C; /* ROM:0x00AB36FC */
-		BgCheck_RaycastFloorImpl         = 0x8003C614; /* ROM:0x00AB37B4 */
-		BgCheck_CameraRaycastFloor1      = 0x8003C834; /* ROM:0x00AB39D4 */
-		BgCheck_EntityRaycastFloor1      = 0x8003C890; /* ROM:0x00AB3A30 */
-		BgCheck_EntityRaycastFloor2      = 0x8003C8EC; /* ROM:0x00AB3A8C */
-		BgCheck_EntityRaycastFloor3      = 0x8003C940; /* ROM:0x00AB3AE0 */
-		BgCheck_EntityRaycastFloor4      = 0x8003C9A4; /* ROM:0x00AB3B44 */
-		BgCheck_EntityRaycastFloor5      = 0x8003CA0C; /* ROM:0x00AB3BAC */
-		BgCheck_EntityRaycastFloor6      = 0x8003CA64; /* ROM:0x00AB3C04 */
-		BgCheck_EntityRaycastFloor7      = 0x8003CAC8; /* ROM:0x00AB3C68 */
-		BgCheck_AnyRaycastFloor1         = 0x8003CB30; /* ROM:0x00AB3CD0 */
-		BgCheck_AnyRaycastFloor2         = 0x8003CBE8; /* ROM:0x00AB3D88 */
-		BgCheck_CameraRaycastFloor2      = 0x8003CCA4; /* ROM:0x00AB3E44 */
-		BgCheck_EntityRaycastFloor8      = 0x8003CD08; /* ROM:0x00AB3EA8 */
-		BgCheck_EntityRaycastFloor9      = 0x8003CD70; /* ROM:0x00AB3F10 */
+		BgCheck_RaycastDownImpl          = 0x8003C614; /* ROM:0x00AB37B4 */
+		BgCheck_CameraRaycastDown1       = 0x8003C834; /* ROM:0x00AB39D4 */
+		BgCheck_EntityRaycastDown1       = 0x8003C890; /* ROM:0x00AB3A30 */
+		BgCheck_EntityRaycastDown2       = 0x8003C8EC; /* ROM:0x00AB3A8C */
+		BgCheck_EntityRaycastDown3       = 0x8003C940; /* ROM:0x00AB3AE0 */
+		BgCheck_EntityRaycastDown4       = 0x8003C9A4; /* ROM:0x00AB3B44 */
+		BgCheck_EntityRaycastDown5       = 0x8003CA0C; /* ROM:0x00AB3BAC */
+		BgCheck_EntityRaycastDown6       = 0x8003CA64; /* ROM:0x00AB3C04 */
+		BgCheck_EntityRaycastDown7       = 0x8003CAC8; /* ROM:0x00AB3C68 */
+		BgCheck_AnyRaycastDown1          = 0x8003CB30; /* ROM:0x00AB3CD0 */
+		BgCheck_AnyRaycastDown2          = 0x8003CBE8; /* ROM:0x00AB3D88 */
+		BgCheck_CameraRaycastDown2       = 0x8003CCA4; /* ROM:0x00AB3E44 */
+		BgCheck_EntityRaycastDownWalls   = 0x8003CD08; /* ROM:0x00AB3EA8 */
+		BgCheck_EntityRaycastDown9       = 0x8003CD70; /* ROM:0x00AB3F10 */
 		BgCheck_CheckWallImpl            = 0x8003CDD4; /* ROM:0x00AB3F74 */
 		BgCheck_EntitySphVsWall1         = 0x8003D464; /* ROM:0x00AB4604 */
 		BgCheck_EntitySphVsWall2         = 0x8003D4C8; /* ROM:0x00AB4668 */
@@ -960,18 +960,18 @@
 		DynaPoly_Alloc                   = 0x8003E9A0; /* ROM:0x00AB5B40 */
 		DynaPoly_SetBgActor              = 0x8003EA74; /* ROM:0x00AB5C14 */
 		DynaPoly_GetActor                = 0x8003EB84; /* ROM:0x00AB5D24 */
-		func_8003EBF8                    = 0x8003EBF8; /* ROM:0x00AB5D98 */
-		func_8003EC50                    = 0x8003EC50; /* ROM:0x00AB5DF0 */
-		func_8003ECA8                    = 0x8003ECA8; /* ROM:0x00AB5E48 */
-		func_8003ED00                    = 0x8003ED00; /* ROM:0x00AB5EA0 */
+		DynaPoly_DisableCollision        = 0x8003EBF8; /* ROM:0x00AB5D98 */
+		DynaPoly_EnableCollision         = 0x8003EC50; /* ROM:0x00AB5DF0 */
+		DynaPoly_DisableCeilingCollision = 0x8003ECA8; /* ROM:0x00AB5E48 */
+		DynaPoly_EnableCeilingCollision  = 0x8003ED00; /* ROM:0x00AB5EA0 */
 		DynaPoly_DeleteBgActor           = 0x8003ED58; /* ROM:0x00AB5EF8 */
-		func_8003EE6C                    = 0x8003EE6C; /* ROM:0x00AB600C */
-		DynaPoly_ExpandSRT               = 0x8003EE80; /* ROM:0x00AB6020 */
-		func_8003F8EC                    = 0x8003F8EC; /* ROM:0x00AB6A8C */
-		DynaPoly_Setup                   = 0x8003F984; /* ROM:0x00AB6B24 */
+		DynaPoly_InvalidateLookup        = 0x8003EE6C; /* ROM:0x00AB600C */
+		DynaPoly_AddBgActorToLookup      = 0x8003EE80; /* ROM:0x00AB6020 */
+		DynaPoly_UnsetAllInteractFlags   = 0x8003F8EC; /* ROM:0x00AB6A8C */
+		DynaPoly_UpdateContext           = 0x8003F984; /* ROM:0x00AB6B24 */
 		DynaPoly_UpdateBgActorTransforms = 0x8003FB64; /* ROM:0x00AB6D04 */
-		BgCheck_RaycastFloorDynaList     = 0x8003FBF4; /* ROM:0x00AB6D94 */
-		BgCheck_RaycastFloorDyna         = 0x8003FDDC; /* ROM:0x00AB6F7C */
+		BgCheck_RaycastDownDynaList      = 0x8003FBF4; /* ROM:0x00AB6D94 */
+		BgCheck_RaycastDownDyna          = 0x8003FDDC; /* ROM:0x00AB6F7C */
 		BgCheck_SphVsDynaWallInBgActor   = 0x80040284; /* ROM:0x00AB7424 */
 		BgCheck_SphVsDynaWall            = 0x800409A8; /* ROM:0x00AB7B48 */
 		BgCheck_CheckDynaCeilingList     = 0x80040BE4; /* ROM:0x00AB7D84 */
@@ -987,43 +987,43 @@
 		func_800418D0                    = 0x800418D0; /* ROM:0x00AB8A70 */
 		BgCheck_ResetPolyCheckTbl        = 0x80041978; /* ROM:0x00AB8B18 */
 		SurfaceType_GetData              = 0x800419B0; /* ROM:0x00AB8B50 */
-		SurfaceType_GetCamDataIndex      = 0x80041A28; /* ROM:0x00AB8BC8 */
-		func_80041A4C                    = 0x80041A4C; /* ROM:0x00AB8BEC */
-		SurfaceType_GetCameraSType       = 0x80041A94; /* ROM:0x00AB8C34 */
-		func_80041B24                    = 0x80041B24; /* ROM:0x00AB8CC4 */
-		SurfaceType_GetNumCameras        = 0x80041B80; /* ROM:0x00AB8D20 */
-		func_80041C10                    = 0x80041C10; /* ROM:0x00AB8DB0 */
-		SurfaceType_GetCamPosData        = 0x80041C98; /* ROM:0x00AB8E38 */
-		SurfaceType_GetSceneExitIndex    = 0x80041D28; /* ROM:0x00AB8EC8 */
-		func_80041D4C                    = 0x80041D4C; /* ROM:0x00AB8EEC */
+		SurfaceType_GetBgCamIndex        = 0x80041A28; /* ROM:0x00AB8BC8 */
+		BgCheck_GetBgCamSettingImpl      = 0x80041A4C; /* ROM:0x00AB8BEC */
+		BgCheck_GetBgCamSetting          = 0x80041A94; /* ROM:0x00AB8C34 */
+		BgCheck_GetBgCamCountImpl        = 0x80041B24; /* ROM:0x00AB8CC4 */
+		BgCheck_GetBgCamCount            = 0x80041B80; /* ROM:0x00AB8D20 */
+		BgCheck_GetBgCamFuncDataImpl     = 0x80041C10; /* ROM:0x00AB8DB0 */
+		BgCheck_GetBgCamFuncData         = 0x80041C98; /* ROM:0x00AB8E38 */
+		SurfaceType_GetExitIndex         = 0x80041D28; /* ROM:0x00AB8EC8 */
+		SurfaceType_GetFloorType         = 0x80041D4C; /* ROM:0x00AB8EEC */
 		func_80041D70                    = 0x80041D70; /* ROM:0x00AB8F10 */
-		func_80041D94                    = 0x80041D94; /* ROM:0x00AB8F34 */
-		func_80041DB8                    = 0x80041DB8; /* ROM:0x00AB8F58 */
-		func_80041DE4                    = 0x80041DE4; /* ROM:0x00AB8F84 */
-		func_80041E18                    = 0x80041E18; /* ROM:0x00AB8FB8 */
-		func_80041E4C                    = 0x80041E4C; /* ROM:0x00AB8FEC */
-		func_80041E80                    = 0x80041E80; /* ROM:0x00AB9020 */
-		func_80041EA4                    = 0x80041EA4; /* ROM:0x00AB9044 */
-		func_80041EC8                    = 0x80041EC8; /* ROM:0x00AB9068 */
+		SurfaceType_GetWallType          = 0x80041D94; /* ROM:0x00AB8F34 */
+		SurfaceType_GetWallFlags         = 0x80041DB8; /* ROM:0x00AB8F58 */
+		SurfaceType_CheckWallFlag0       = 0x80041DE4; /* ROM:0x00AB8F84 */
+		SurfaceType_CheckWallFlag1       = 0x80041E18; /* ROM:0x00AB8FB8 */
+		SurfaceType_CheckWallFlag2       = 0x80041E4C; /* ROM:0x00AB8FEC */
+		SurfaceType_GetFloorProperty2    = 0x80041E80; /* ROM:0x00AB9020 */
+		SurfaceType_GetFloorProperty     = 0x80041EA4; /* ROM:0x00AB9044 */
+		SurfaceType_IsSoft               = 0x80041EC8; /* ROM:0x00AB9068 */
 		SurfaceType_IsHorseBlocked       = 0x80041EEC; /* ROM:0x00AB908C */
-		func_80041F10                    = 0x80041F10; /* ROM:0x00AB90B0 */
-		SurfaceType_GetSfx               = 0x80041F34; /* ROM:0x00AB90D4 */
-		SurfaceType_GetSlope             = 0x80041F7C; /* ROM:0x00AB911C */
-		SurfaceType_GetLightSettingIndex = 0x80041FA0; /* ROM:0x00AB9140 */
+		SurfaceType_GetSfxType           = 0x80041F10; /* ROM:0x00AB90B0 */
+		SurfaceType_GetSfxId             = 0x80041F34; /* ROM:0x00AB90D4 */
+		SurfaceType_GetFloorEffect       = 0x80041F7C; /* ROM:0x00AB911C */
+		SurfaceType_GetLightSetting      = 0x80041FA0; /* ROM:0x00AB9140 */
 		SurfaceType_GetEcho              = 0x80041FC4; /* ROM:0x00AB9164 */
-		SurfaceType_IsHookshotSurface    = 0x80041FE8; /* ROM:0x00AB9188 */
+		SurfaceType_CanHookshot          = 0x80041FE8; /* ROM:0x00AB9188 */
 		SurfaceType_IsIgnoredByEntities  = 0x8004200C; /* ROM:0x00AB91AC */
 		SurfaceType_IsIgnoredByProjectiles = 0x80042048; /* ROM:0x00AB91E8 */
 		SurfaceType_IsFloorConveyor      = 0x80042084; /* ROM:0x00AB9224 */
 		SurfaceType_GetConveyorSpeed     = 0x800420C0; /* ROM:0x00AB9260 */
 		SurfaceType_GetConveyorDirection = 0x800420E4; /* ROM:0x00AB9284 */
-		SurfaceType_IsWallDamage         = 0x80042108; /* ROM:0x00AB92A8 */
+		func_80042108                    = 0x80042108; /* ROM:0x00AB92A8 */
 		WaterBox_GetSurface1             = 0x8004213C; /* ROM:0x00AB92DC */
 		WaterBox_GetSurfaceImpl          = 0x80042244; /* ROM:0x00AB93E4 */
 		WaterBox_GetSurface2             = 0x8004239C; /* ROM:0x00AB953C */
-		WaterBox_GetCamDataIndex         = 0x80042538; /* ROM:0x00AB96D8 */
-		WaterBox_GetCameraSType          = 0x80042548; /* ROM:0x00AB96E8 */
-		WaterBox_GetLightSettingIndex    = 0x8004259C; /* ROM:0x00AB973C */
+		WaterBox_GetBgCamIndex           = 0x80042538; /* ROM:0x00AB96D8 */
+		WaterBox_GetBgCamSetting         = 0x80042548; /* ROM:0x00AB96E8 */
+		WaterBox_GetLightIndex           = 0x8004259C; /* ROM:0x00AB973C */
 		func_800425B0                    = 0x800425B0; /* ROM:0x00AB9750 */
 		func_80042708                    = 0x80042708; /* ROM:0x00AB98A8 */
 		func_800427B4                    = 0x800427B4; /* ROM:0x00AB9954 */
@@ -1040,16 +1040,16 @@
 		func_800433A4                    = 0x800433A4; /* ROM:0x00ABA544 */
 	/* code/code_80043480.c */
 		DynaPolyActor_Init               = 0x80043480; /* ROM:0x00ABA620 */
-		func_800434A0                    = 0x800434A0; /* ROM:0x00ABA640 */
-		func_800434A8                    = 0x800434A8; /* ROM:0x00ABA648 */
-		func_800434B8                    = 0x800434B8; /* ROM:0x00ABA658 */
-		func_800434C8                    = 0x800434C8; /* ROM:0x00ABA668 */
-		func_800434F8                    = 0x800434F8; /* ROM:0x00ABA698 */
-		func_80043508                    = 0x80043508; /* ROM:0x00ABA6A8 */
+		DynaPolyActor_UnsetAllInteractFlags = 0x800434A0; /* ROM:0x00ABA640 */
+		DynaPolyActor_SetActorOnTop      = 0x800434A8; /* ROM:0x00ABA648 */
+		DynaPolyActor_SetPlayerOnTop     = 0x800434B8; /* ROM:0x00ABA658 */
+		DynaPoly_SetPlayerOnTop          = 0x800434C8; /* ROM:0x00ABA668 */
+		DynaPolyActor_SetPlayerAbove     = 0x800434F8; /* ROM:0x00ABA698 */
+		DynaPoly_SetPlayerAbove          = 0x80043508; /* ROM:0x00ABA6A8 */
 		func_80043538                    = 0x80043538; /* ROM:0x00ABA6D8 */
-		func_80043548                    = 0x80043548; /* ROM:0x00ABA6E8 */
-		func_8004356C                    = 0x8004356C; /* ROM:0x00ABA70C */
-		func_80043590                    = 0x80043590; /* ROM:0x00ABA730 */
+		DynaPolyActor_IsActorOnTop       = 0x80043548; /* ROM:0x00ABA6E8 */
+		DynaPolyActor_IsPlayerOnTop      = 0x8004356C; /* ROM:0x00ABA70C */
+		DynaPolyActor_IsPlayerAbove      = 0x80043590; /* ROM:0x00ABA730 */
 		func_800435B4                    = 0x800435B4; /* ROM:0x00ABA754 */
 		func_800435D8                    = 0x800435D8; /* ROM:0x00ABA778 */
 	/* code/z_camera.c */
@@ -1072,14 +1072,14 @@
 		Camera_GetFloorYNorm             = 0x80044434; /* ROM:0x00ABB5D4 */
 		Camera_GetFloorY                 = 0x80044510; /* ROM:0x00ABB6B0 */
 		Camera_GetFloorYLayer            = 0x80044568; /* ROM:0x00ABB708 */
-		Camera_GetCamDataSetting         = 0x80044740; /* ROM:0x00ABB8E0 */
-		Camera_GetCamBGData              = 0x8004476C; /* ROM:0x00ABB90C */
-		Camera_GetDataIdxForPoly         = 0x8004479C; /* ROM:0x00ABB93C */
-		Camera_GetCamBgDataUnderPlayer   = 0x8004481C; /* ROM:0x00ABB9BC */
-		Camera_GetWaterBoxDataIdx        = 0x800448CC; /* ROM:0x00ABBA6C */
+		Camera_GetBgCamSetting           = 0x80044740; /* ROM:0x00ABB8E0 */
+		Camera_GetBgCamFuncData          = 0x8004476C; /* ROM:0x00ABB90C */
+		Camera_GetBgCamIndex             = 0x8004479C; /* ROM:0x00ABB93C */
+		Camera_GetBgCamFuncDataUnderPlayer = 0x8004481C; /* ROM:0x00ABB9BC */
+		Camera_GetWaterBoxBgCamIndex     = 0x800448CC; /* ROM:0x00ABBA6C */
 		Camera_GetWaterSurface           = 0x800449AC; /* ROM:0x00ABBB4C */
 		Camera_XZAngle                   = 0x80044A74; /* ROM:0x00ABBC14 */
-		func_80044ADC                    = 0x80044ADC; /* ROM:0x00ABBC7C */
+		Camera_GetPitchAdjFromFloorHeightDiffs = 0x80044ADC; /* ROM:0x00ABBC7C */
 		Camera_CalcUpFromPitchYawRoll    = 0x80044E68; /* ROM:0x00ABC008 */
 		Camera_ClampLERPScale            = 0x800450A4; /* ROM:0x00ABC244 */
 		Camera_CopyDataToRegs            = 0x80045128; /* ROM:0x00ABC2C8 */
@@ -1193,7 +1193,7 @@
 		Camera_CheckValidMode            = 0x8005A470; /* ROM:0x00AD1610 */
 		Camera_ChangeSettingFlags        = 0x8005A548; /* ROM:0x00AD16E8 */
 		Camera_ChangeSetting             = 0x8005A77C; /* ROM:0x00AD191C */
-		Camera_ChangeDataIdx             = 0x8005A7A8; /* ROM:0x00AD1948 */
+		Camera_ChangeBgCamIndex          = 0x8005A7A8; /* ROM:0x00AD1948 */
 		Camera_GetInputDir               = 0x8005A8C4; /* ROM:0x00AD1A64 */
 		Camera_GetInputDirPitch          = 0x8005A920; /* ROM:0x00AD1AC0 */
 		Camera_GetInputDirYaw            = 0x8005A948; /* ROM:0x00AD1AE8 */
@@ -1396,7 +1396,7 @@
 		CollisionCheck_SpawnWaterDroplets = 0x80062B80; /* ROM:0x00AD9D20 */
 		CollisionCheck_SpawnShieldParticles = 0x80062CD4; /* ROM:0x00AD9E74 */
 		CollisionCheck_SpawnShieldParticlesMetal = 0x80062D60; /* ROM:0x00AD9F00 */
-		CollisionCheck_SpawnShieldParticlesMetalSound = 0x80062DAC; /* ROM:0x00AD9F4C */
+		CollisionCheck_SpawnShieldParticlesMetalSfx = 0x80062DAC; /* ROM:0x00AD9F4C */
 		CollisionCheck_SpawnShieldParticlesMetal2 = 0x80062DF4; /* ROM:0x00AD9F94 */
 		CollisionCheck_SpawnShieldParticlesWood = 0x80062E14; /* ROM:0x00AD9FB4 */
 		CollisionCheck_CylSideVsLineSeg  = 0x80062ECC; /* ROM:0x00ADA06C */
@@ -1483,10 +1483,10 @@
 		GetItem_DrawScale                = 0x8006B54C; /* ROM:0x00AE26EC */
 		GetItem_DrawBulletBag            = 0x8006B6E4; /* ROM:0x00AE2884 */
 		GetItem_DrawWallet               = 0x8006B870; /* ROM:0x00AE2A10 */
-	/* code/z_sound_source.c */
-		SoundSource_InitAll              = 0x8006BA00; /* ROM:0x00AE2BA0 */
-		SoundSource_UpdateAll            = 0x8006BA30; /* ROM:0x00AE2BD0 */
-		SoundSource_PlaySfxAtFixedWorldPos = 0x8006BAD8; /* ROM:0x00AE2C78 */
+	/* code/z_sfx_source.c */
+		SfxSource_InitAll                = 0x8006BA00; /* ROM:0x00AE2BA0 */
+		SfxSource_UpdateAll              = 0x8006BA30; /* ROM:0x00AE2BD0 */
+		SfxSource_PlaySfxAtFixedWorldPos = 0x8006BAD8; /* ROM:0x00AE2C78 */
 	/* code/z_elf_message.c */
 		ElfMessage_CheckCondition        = 0x8006BBC0; /* ROM:0x00AE2D60 */
 		func_8006BE88                    = 0x8006BE88; /* ROM:0x00AE3028 */
@@ -1679,7 +1679,7 @@
 		ZeldaArena_Check                 = 0x8007B1E0; /* ROM:0x00AF2380 */
 		ZeldaArena_Init                  = 0x8007B204; /* ROM:0x00AF23A4 */
 		ZeldaArena_Cleanup               = 0x8007B23C; /* ROM:0x00AF23DC */
-		ZeldaArena_IsInitalized          = 0x8007B268; /* ROM:0x00AF2408 */
+		ZeldaArena_IsInitialized         = 0x8007B268; /* ROM:0x00AF2408 */
 	/* code/z_map_mark.c */
 		MapMark_Init                     = 0x8007B290; /* ROM:0x00AF2430 */
 		MapMark_ClearPointers            = 0x8007B364; /* ROM:0x00AF2504 */
@@ -1717,7 +1717,7 @@
 		OnePointCutscene_Vec3fYaw        = 0x8007C704; /* ROM:0x00AF38A4 */
 		OnePointCutscene_Vec3sToVec3f    = 0x8007C76C; /* ROM:0x00AF390C */
 		OnePointCutscene_BgCheckLineTest = 0x8007C7A8; /* ROM:0x00AF3948 */
-		OnePointCutscene_RaycastFloor    = 0x8007C7F8; /* ROM:0x00AF3998 */
+		OnePointCutscene_RaycastDown     = 0x8007C7F8; /* ROM:0x00AF3998 */
 		OnePointCutscene_SetCsCamPoints  = 0x8007C820; /* ROM:0x00AF39C0 */
 		OnePointCutscene_SetInfo         = 0x8007C850; /* ROM:0x00AF39F0 */
 		OnePointCutscene_SetAsChild      = 0x8007FFE0; /* ROM:0x00AF7180 */
@@ -1956,18 +1956,18 @@
 		Gfx_TwoTexScroll                 = 0x80094F40; /* ROM:0x00B0C0E0 */
 		Gfx_TwoTexScrollEnvColor         = 0x80095068; /* ROM:0x00B0C208 */
 		Gfx_EnvColor                     = 0x800951D0; /* ROM:0x00B0C370 */
-		func_80095248                    = 0x80095248; /* ROM:0x00B0C3E8 */
+		Gfx_SetupFrame                   = 0x80095248; /* ROM:0x00B0C3E8 */
 		func_80095974                    = 0x80095974; /* ROM:0x00B0CB14 */
 	/* code/z_room.c */
 		func_80095AA0                    = 0x80095AA0; /* ROM:0x00B0CC40 */
-		func_80095AB4                    = 0x80095AB4; /* ROM:0x00B0CC54 */
-		func_80095D04                    = 0x80095D04; /* ROM:0x00B0CEA4 */
-		func_80096238                    = 0x80096238; /* ROM:0x00B0D3D8 */
-		func_8009638C                    = 0x8009638C; /* ROM:0x00B0D52C */
-		func_80096680                    = 0x80096680; /* ROM:0x00B0D820 */
-		func_80096A74                    = 0x80096A74; /* ROM:0x00B0DC14 */
-		func_80096B6C                    = 0x80096B6C; /* ROM:0x00B0DD0C */
-		func_80096F6C                    = 0x80096F6C; /* ROM:0x00B0E10C */
+		Room_DrawNormal                  = 0x80095AB4; /* ROM:0x00B0CC54 */
+		Room_DrawCullable                = 0x80095D04; /* ROM:0x00B0CEA4 */
+		Room_DecodeJpeg                  = 0x80096238; /* ROM:0x00B0D3D8 */
+		Room_DrawBackground2D            = 0x8009638C; /* ROM:0x00B0D52C */
+		Room_DrawImageSingle             = 0x80096680; /* ROM:0x00B0D820 */
+		Room_GetImageMultiBgEntry        = 0x80096A74; /* ROM:0x00B0DC14 */
+		Room_DrawImageMulti              = 0x80096B6C; /* ROM:0x00B0DD0C */
+		Room_DrawImage                   = 0x80096F6C; /* ROM:0x00B0E10C */
 		func_80096FD4                    = 0x80096FD4; /* ROM:0x00B0E174 */
 		func_80096FE8                    = 0x80096FE8; /* ROM:0x00B0E188 */
 		func_8009728C                    = 0x8009728C; /* ROM:0x00B0E42C */
@@ -2003,7 +2003,7 @@
 		Scene_CommandEntranceList        = 0x800987F8; /* ROM:0x00B0F998 */
 		Scene_CommandSpecialFiles        = 0x8009883C; /* ROM:0x00B0F9DC */
 		Scene_CommandRoomBehavior        = 0x80098904; /* ROM:0x00B0FAA4 */
-		Scene_CommandMeshHeader          = 0x80098958; /* ROM:0x00B0FAF8 */
+		Scene_CommandRoomShape           = 0x80098958; /* ROM:0x00B0FAF8 */
 		Scene_CommandObjectList          = 0x8009899C; /* ROM:0x00B0FB3C */
 		Scene_CommandLightList           = 0x80098B74; /* ROM:0x00B0FD14 */
 		Scene_CommandPathList            = 0x80098C24; /* ROM:0x00B0FDC4 */
@@ -2222,16 +2222,16 @@
 		SsSram_Init                      = 0x800A9D40; /* ROM:0x00B20EE0 */
 		SsSram_Dma                       = 0x800A9E14; /* ROM:0x00B20FB4 */
 		SsSram_ReadWrite                 = 0x800A9EA0; /* ROM:0x00B21040 */
-	/* code/code_800A9F30.c */
-		func_800A9F30                    = 0x800A9F30; /* ROM:0x00B210D0 */
-		func_800A9F6C                    = 0x800A9F6C; /* ROM:0x00B2110C */
-		func_800AA000                    = 0x800AA000; /* ROM:0x00B211A0 */
-		func_800AA0B4                    = 0x800AA0B4; /* ROM:0x00B21254 */
-		func_800AA0F0                    = 0x800AA0F0; /* ROM:0x00B21290 */
-		func_800AA148                    = 0x800AA148; /* ROM:0x00B212E8 */
-		func_800AA15C                    = 0x800AA15C; /* ROM:0x00B212FC */
-		func_800AA16C                    = 0x800AA16C; /* ROM:0x00B2130C */
-		func_800AA178                    = 0x800AA178; /* ROM:0x00B21318 */
+	/* code/z_rumble.c */
+		Rumble_Update                    = 0x800A9F30; /* ROM:0x00B210D0 */
+		Rumble_Override                  = 0x800A9F6C; /* ROM:0x00B2110C */
+		Rumble_Request                   = 0x800AA000; /* ROM:0x00B211A0 */
+		Rumble_Init                      = 0x800AA0B4; /* ROM:0x00B21254 */
+		Rumble_Destroy                   = 0x800AA0F0; /* ROM:0x00B21290 */
+		Rumble_Controller1HasRumblePak   = 0x800AA148; /* ROM:0x00B212E8 */
+		Rumble_Reset                     = 0x800AA15C; /* ROM:0x00B212FC */
+		Rumble_ClearRequests             = 0x800AA16C; /* ROM:0x00B2130C */
+		Rumble_SetUpdateEnabled          = 0x800AA178; /* ROM:0x00B21318 */
 	/* code/z_view.c */
 		View_ViewportToVp                = 0x800AA190; /* ROM:0x00B21330 */
 		View_New                         = 0x800AA1F8; /* ROM:0x00B21398 */
@@ -2247,7 +2247,7 @@
 		View_GetOrtho                    = 0x800AA4E0; /* ROM:0x00B21680 */
 		View_SetViewport                 = 0x800AA4FC; /* ROM:0x00B2169C */
 		View_GetViewport                 = 0x800AA52C; /* ROM:0x00B216CC */
-		View_ApplyShrinkWindow           = 0x800AA550; /* ROM:0x00B216F0 */
+		View_ApplyLetterbox              = 0x800AA550; /* ROM:0x00B216F0 */
 		View_SetDistortionOrientation    = 0x800AA76C; /* ROM:0x00B2190C */
 		View_SetDistortionScale          = 0x800AA78C; /* ROM:0x00B2192C */
 		View_SetDistortionSpeed          = 0x800AA7AC; /* ROM:0x00B2194C */
@@ -2354,13 +2354,13 @@
 		TransitionFade_SetColor          = 0x800B37E4; /* ROM:0x00B2A984 */
 		TransitionFade_SetType           = 0x800B37EC; /* ROM:0x00B2A98C */
 	/* code/shrink_window.c */
-		ShrinkWindow_SetVal              = 0x800B3840; /* ROM:0x00B2A9E0 */
-		ShrinkWindow_GetVal              = 0x800B3898; /* ROM:0x00B2AA38 */
-		ShrinkWindow_SetCurrentVal       = 0x800B38A4; /* ROM:0x00B2AA44 */
-		ShrinkWindow_GetCurrentVal       = 0x800B38FC; /* ROM:0x00B2AA9C */
-		ShrinkWindow_Init                = 0x800B3908; /* ROM:0x00B2AAA8 */
-		ShrinkWindow_Destroy             = 0x800B3968; /* ROM:0x00B2AB08 */
-		ShrinkWindow_Update              = 0x800B39B8; /* ROM:0x00B2AB58 */
+		Letterbox_SetSizeTarget          = 0x800B3840; /* ROM:0x00B2A9E0 */
+		Letterbox_GetSizeTarget          = 0x800B3898; /* ROM:0x00B2AA38 */
+		Letterbox_SetSize                = 0x800B38A4; /* ROM:0x00B2AA44 */
+		Letterbox_GetSize                = 0x800B38FC; /* ROM:0x00B2AA9C */
+		Letterbox_Init                   = 0x800B3908; /* ROM:0x00B2AAA8 */
+		Letterbox_Destroy                = 0x800B3968; /* ROM:0x00B2AB08 */
+		Letterbox_Update                 = 0x800B39B8; /* ROM:0x00B2AB58 */
 	/* code/db_camera.c */
 		DbCamera_AddVecSph               = 0x800B3B50; /* ROM:0x00B2ACF0 */
 		DbCamera_CalcUpFromPitchYawRoll  = 0x800B3BD4; /* ROM:0x00B2AD74 */
@@ -2426,10 +2426,10 @@
 		KaleidoScopeCall_Update          = 0x800BC168; /* ROM:0x00B33308 */
 		KaleidoScopeCall_Draw            = 0x800BC3D0; /* ROM:0x00B33570 */
 	/* code/z_play.c */
-		func_800BC450                    = 0x800BC450; /* ROM:0x00B335F0 */
-		func_800BC490                    = 0x800BC490; /* ROM:0x00B33630 */
-		func_800BC56C                    = 0x800BC56C; /* ROM:0x00B3370C */
-		func_800BC590                    = 0x800BC590; /* ROM:0x00B33730 */
+		Play_ChangeViewpointBgCamIndex   = 0x800BC450; /* ROM:0x00B335F0 */
+		Play_SetViewpoint                = 0x800BC490; /* ROM:0x00B33630 */
+		Play_CheckViewpoint              = 0x800BC56C; /* ROM:0x00B3370C */
+		Play_SetShopBrowsingViewpoint    = 0x800BC590; /* ROM:0x00B33730 */
 		Play_SetupTransition             = 0x800BC5E0; /* ROM:0x00B33780 */
 		func_800BC88C                    = 0x800BC88C; /* ROM:0x00B33A2C */
 		Play_SetFog                      = 0x800BC8A0; /* ROM:0x00B33A40 */
@@ -2468,7 +2468,7 @@
 		Play_TriggerVoidOut              = 0x800C0B60; /* ROM:0x00B37D00 */
 		Play_LoadToLastEntrance          = 0x800C0BB4; /* ROM:0x00B37D54 */
 		Play_TriggerRespawn              = 0x800C0C88; /* ROM:0x00B37E28 */
-		func_800C0CB8                    = 0x800C0CB8; /* ROM:0x00B37E58 */
+		Play_CamIsNotFixed               = 0x800C0CB8; /* ROM:0x00B37E58 */
 		FrameAdvance_IsEnabled           = 0x800C0D28; /* ROM:0x00B37EC8 */
 		func_800C0D34                    = 0x800C0D34; /* ROM:0x00B37ED4 */
 		func_800C0DB4                    = 0x800C0DB4; /* ROM:0x00B37F54 */
@@ -2477,22 +2477,22 @@
 		PreRender_Init                   = 0x800C0EA8; /* ROM:0x00B38048 */
 		PreRender_SetValues              = 0x800C0ED8; /* ROM:0x00B38078 */
 		PreRender_Destroy                = 0x800C0F08; /* ROM:0x00B380A8 */
-		func_800C0F28                    = 0x800C0F28; /* ROM:0x00B380C8 */
-		func_800C1258                    = 0x800C1258; /* ROM:0x00B383F8 */
+		PreRender_CopyImage              = 0x800C0F28; /* ROM:0x00B380C8 */
+		PreRender_CopyImageRegionImpl    = 0x800C1258; /* ROM:0x00B383F8 */
 		func_800C170C                    = 0x800C170C; /* ROM:0x00B388AC */
 		func_800C1AE8                    = 0x800C1AE8; /* ROM:0x00B38C88 */
-		func_800C1B24                    = 0x800C1B24; /* ROM:0x00B38CC4 */
-		func_800C1E9C                    = 0x800C1E9C; /* ROM:0x00B3903C */
-		func_800C1F20                    = 0x800C1F20; /* ROM:0x00B390C0 */
-		func_800C1FA4                    = 0x800C1FA4; /* ROM:0x00B39144 */
-		func_800C20B4                    = 0x800C20B4; /* ROM:0x00B39254 */
-		func_800C2118                    = 0x800C2118; /* ROM:0x00B392B8 */
+		PreRender_CoverageRgba16ToI8     = 0x800C1B24; /* ROM:0x00B38CC4 */
+		PreRender_SaveZBuffer            = 0x800C1E9C; /* ROM:0x00B3903C */
+		PreRender_SaveFramebuffer        = 0x800C1F20; /* ROM:0x00B390C0 */
+		PreRender_FetchFbufCoverage      = 0x800C1FA4; /* ROM:0x00B39144 */
+		PreRender_DrawCoverage           = 0x800C20B4; /* ROM:0x00B39254 */
+		PreRender_RestoreZBuffer         = 0x800C2118; /* ROM:0x00B392B8 */
 		func_800C213C                    = 0x800C213C; /* ROM:0x00B392DC */
-		func_800C24BC                    = 0x800C24BC; /* ROM:0x00B3965C */
-		func_800C24E0                    = 0x800C24E0; /* ROM:0x00B39680 */
-		func_800C2500                    = 0x800C2500; /* ROM:0x00B396A0 */
-		func_800C2FE4                    = 0x800C2FE4; /* ROM:0x00B3A184 */
-		PreRender_Calc                   = 0x800C3770; /* ROM:0x00B3A910 */
+		PreRender_RestoreFramebuffer     = 0x800C24BC; /* ROM:0x00B3965C */
+		PreRender_CopyImageRegion        = 0x800C24E0; /* ROM:0x00B39680 */
+		PreRender_AntiAliasFilter        = 0x800C2500; /* ROM:0x00B396A0 */
+		PreRender_DivotFilter            = 0x800C2FE4; /* ROM:0x00B3A184 */
+		PreRender_ApplyFilters           = 0x800C3770; /* ROM:0x00B3A910 */
 	/* code/TwoHeadArena.c */
 		THGA_Ct                          = 0x800C3880; /* ROM:0x00B3AA20 */
 		THGA_Dt                          = 0x800C38A0; /* ROM:0x00B3AA40 */
@@ -2524,7 +2524,7 @@
 		THA_Ct                           = 0x800C3BD4; /* ROM:0x00B3AD74 */
 		THA_Dt                           = 0x800C3BF8; /* ROM:0x00B3AD98 */
 	/* code/code_800C3C20.c */
-		func_800C3C20                    = 0x800C3C20; /* ROM:0x00B3ADC0 */
+		AudioMgr_StopAllSfx              = 0x800C3C20; /* ROM:0x00B3ADC0 */
 	/* code/audioMgr.c */
 		func_800C3C80                    = 0x800C3C80; /* ROM:0x00B3AE20 */
 		AudioMgr_HandleRetrace           = 0x800C3CB8; /* ROM:0x00B3AE58 */
@@ -2533,9 +2533,9 @@
 		AudioMgr_Unlock                  = 0x800C3FC4; /* ROM:0x00B3B164 */
 		AudioMgr_Init                    = 0x800C3FEC; /* ROM:0x00B3B18C */
 	/* code/title_setup.c */
-		TitleSetup_InitImpl              = 0x800C40B0; /* ROM:0x00B3B250 */
-		TitleSetup_Destroy               = 0x800C40FC; /* ROM:0x00B3B29C */
-		TitleSetup_Init                  = 0x800C4104; /* ROM:0x00B3B2A4 */
+		Setup_InitImpl                   = 0x800C40B0; /* ROM:0x00B3B250 */
+		Setup_Destroy                    = 0x800C40FC; /* ROM:0x00B3B29C */
+		Setup_Init                       = 0x800C4104; /* ROM:0x00B3B2A4 */
 	/* code/game.c */
 		GameState_FaultPrint             = 0x800C4130; /* ROM:0x00B3B2D0 */
 		GameState_SetFBFilter            = 0x800C41F0; /* ROM:0x00B3B390 */
@@ -2590,17 +2590,17 @@
 		Main_LogSystemHeap               = 0x800C6DD0; /* ROM:0x00B3DF70 */
 		Main                             = 0x800C6E20; /* ROM:0x00B3DFC0 */
 	/* code/padmgr.c */
-		PadMgr_LockSerialMesgQueue       = 0x800C7250; /* ROM:0x00B3E3F0 */
-		PadMgr_UnlockSerialMesgQueue     = 0x800C72FC; /* ROM:0x00B3E49C */
+		PadMgr_AcquireSerialEventQueue   = 0x800C7250; /* ROM:0x00B3E3F0 */
+		PadMgr_ReleaseSerialEventQueue   = 0x800C72FC; /* ROM:0x00B3E49C */
 		PadMgr_LockPadData               = 0x800C73BC; /* ROM:0x00B3E55C */
 		PadMgr_UnlockPadData             = 0x800C73E4; /* ROM:0x00B3E584 */
-		PadMgr_RumbleControl             = 0x800C740C; /* ROM:0x00B3E5AC */
+		PadMgr_UpdateRumble              = 0x800C740C; /* ROM:0x00B3E5AC */
 		PadMgr_RumbleStop                = 0x800C7818; /* ROM:0x00B3E9B8 */
 		PadMgr_RumbleReset               = 0x800C7928; /* ROM:0x00B3EAC8 */
 		PadMgr_RumbleSetSingle           = 0x800C7934; /* ROM:0x00B3EAD4 */
 		PadMgr_RumbleSet                 = 0x800C7948; /* ROM:0x00B3EAE8 */
-		PadMgr_ProcessInputs             = 0x800C7974; /* ROM:0x00B3EB14 */
-		PadMgr_HandleRetraceMsg          = 0x800C7C14; /* ROM:0x00B3EDB4 */
+		PadMgr_UpdateInputs              = 0x800C7974; /* ROM:0x00B3EB14 */
+		PadMgr_HandleRetrace             = 0x800C7C14; /* ROM:0x00B3EDB4 */
 		PadMgr_HandlePreNMI              = 0x800C7DD0; /* ROM:0x00B3EF70 */
 		PadMgr_RequestPadData            = 0x800C7E08; /* ROM:0x00B3EFA8 */
 		PadMgr_ThreadEntry               = 0x800C7F80; /* ROM:0x00B3F120 */
@@ -2773,10 +2773,10 @@
 		SysUcode_GetUCodeBootSize        = 0x800D2DFC; /* ROM:0x00B49F9C */
 		SysUcode_GetUCode                = 0x800D2E14; /* ROM:0x00B49FB4 */
 		SysUcode_GetUCodeData            = 0x800D2E20; /* ROM:0x00B49FC0 */
-	/* code/code_800D2E30.c */
-		func_800D2E30                    = 0x800D2E30; /* ROM:0x00B49FD0 */
-		func_800D3140                    = 0x800D3140; /* ROM:0x00B4A2E0 */
-		func_800D3178                    = 0x800D3178; /* ROM:0x00B4A318 */
+	/* code/sys_rumble.c */
+		RumbleMgr_Update                 = 0x800D2E30; /* ROM:0x00B49FD0 */
+		RumbleMgr_Init                   = 0x800D3140; /* ROM:0x00B4A2E0 */
+		RumbleMgr_Destroy                = 0x800D3178; /* ROM:0x00B4A318 */
 	/* code/code_800D31A0.c */
 		func_800D31A0                    = 0x800D31A0; /* ROM:0x00B4A340 */
 		func_800D31F0                    = 0x800D31F0; /* ROM:0x00B4A390 */
@@ -2810,7 +2810,7 @@
 		DebugArena_Check                 = 0x800D3E60; /* ROM:0x00B4B000 */
 		DebugArena_Init                  = 0x800D3E84; /* ROM:0x00B4B024 */
 		DebugArena_Cleanup               = 0x800D3EBC; /* ROM:0x00B4B05C */
-		DebugArena_IsInitalized          = 0x800D3EE8; /* ROM:0x00B4B088 */
+		DebugArena_IsInitialized         = 0x800D3EE8; /* ROM:0x00B4B088 */
 	/* code/fault.c */
 		Fault_SleepImpl                  = 0x800D3F20; /* ROM:0x00B4B0C0 */
 		Fault_ClientProcessThread        = 0x800D3F90; /* ROM:0x00B4B130 */
@@ -2940,8 +2940,8 @@
 		func_800DBE5C                    = 0x800DBE5C; /* ROM:0x00B52FFC */
 		func_800DBE64                    = 0x800DBE64; /* ROM:0x00B53004 */
 		func_800DBE6C                    = 0x800DBE6C; /* ROM:0x00B5300C */
-		AudioSynth_LoadFilter            = 0x800DBE74; /* ROM:0x00B53014 */
-		AudioSynth_LoadFilterCount       = 0x800DBE98; /* ROM:0x00B53038 */
+		AudioSynth_LoadFilterBuffer      = 0x800DBE74; /* ROM:0x00B53014 */
+		AudioSynth_LoadFilterSize        = 0x800DBE98; /* ROM:0x00B53038 */
 		AudioSynth_LoadRingBuffer1       = 0x800DBEB0; /* ROM:0x00B53050 */
 		AudioSynth_LoadRingBuffer2       = 0x800DBF5C; /* ROM:0x00B530FC */
 		AudioSynth_LoadRingBufferPart    = 0x800DC008; /* ROM:0x00B531A8 */
@@ -2956,7 +2956,7 @@
 		AudioSynth_FinalResample         = 0x800DD62C; /* ROM:0x00B547CC */
 		AudioSynth_ProcessEnvelope       = 0x800DD6CC; /* ROM:0x00B5486C */
 		AudioSynth_LoadWaveSamples       = 0x800DD9F4; /* ROM:0x00B54B94 */
-		AudioSynth_NoteApplyHeadsetPanEffects = 0x800DDB64; /* ROM:0x00B54D04 */
+		AudioSynth_ApplyHaasEffect       = 0x800DDB64; /* ROM:0x00B54D04 */
 	/* code/audio_heap.c */
 		AudioHeap_CalculateAdsrDecay     = 0x800DDE20; /* ROM:0x00B54FC0 */
 		AudioHeap_InitAdsrDecayTable     = 0x800DDE3C; /* ROM:0x00B54FDC */
@@ -2971,16 +2971,16 @@
 		AudioHeap_AllocDmaMemoryZeroed   = 0x800DE344; /* ROM:0x00B554E4 */
 		AudioHeap_AllocZeroed            = 0x800DE380; /* ROM:0x00B55520 */
 		AudioHeap_Alloc                  = 0x800DE3DC; /* ROM:0x00B5557C */
-		AudioHeap_AllocPoolInit          = 0x800DE434; /* ROM:0x00B555D4 */
-		AudioHeap_PersistentCacheClear   = 0x800DE45C; /* ROM:0x00B555FC */
-		AudioHeap_TemporaryCacheClear    = 0x800DE470; /* ROM:0x00B55610 */
+		AudioHeap_InitPool               = 0x800DE434; /* ROM:0x00B555D4 */
+		AudioHeap_InitPersistentCache    = 0x800DE45C; /* ROM:0x00B555FC */
+		AudioHeap_InitTemporaryCache     = 0x800DE470; /* ROM:0x00B55610 */
 		AudioHeap_ResetPool              = 0x800DE4A0; /* ROM:0x00B55640 */
-		AudioHeap_PopCache               = 0x800DE4B0; /* ROM:0x00B55650 */
+		AudioHeap_PopPersistentCache     = 0x800DE4B0; /* ROM:0x00B55650 */
 		AudioHeap_InitMainPools          = 0x800DE5F0; /* ROM:0x00B55790 */
-		AudioHeap_SessionPoolsInit       = 0x800DE650; /* ROM:0x00B557F0 */
-		AudioHeap_CachePoolInit          = 0x800DE6D4; /* ROM:0x00B55874 */
-		AudioHeap_PersistentCachesInit   = 0x800DE758; /* ROM:0x00B558F8 */
-		AudioHeap_TemporaryCachesInit    = 0x800DE81C; /* ROM:0x00B559BC */
+		AudioHeap_InitSessionPools       = 0x800DE650; /* ROM:0x00B557F0 */
+		AudioHeap_InitCachePools         = 0x800DE6D4; /* ROM:0x00B55874 */
+		AudioHeap_InitPersistentPoolsAndCaches = 0x800DE758; /* ROM:0x00B558F8 */
+		AudioHeap_InitTemporaryPoolsAndCaches = 0x800DE81C; /* ROM:0x00B559BC */
 		AudioHeap_AllocCached            = 0x800DE8E0; /* ROM:0x00B55A80 */
 		AudioHeap_SearchCaches           = 0x800DF074; /* ROM:0x00B56214 */
 		AudioHeap_SearchRegularCaches    = 0x800DF0CC; /* ROM:0x00B5626C */
@@ -3054,7 +3054,7 @@
 		AudioLoad_ProcessLoads           = 0x800E2FEC; /* ROM:0x00B5A18C */
 		AudioLoad_SetDmaHandler          = 0x800E301C; /* ROM:0x00B5A1BC */
 		AudioLoad_SetUnusedHandler       = 0x800E3028; /* ROM:0x00B5A1C8 */
-		AudioLoad_InitSoundFontMeta      = 0x800E3034; /* ROM:0x00B5A1D4 */
+		AudioLoad_InitSoundFont          = 0x800E3034; /* ROM:0x00B5A1D4 */
 		AudioLoad_Init                   = 0x800E3094; /* ROM:0x00B5A234 */
 		AudioLoad_InitSlowLoads          = 0x800E3400; /* ROM:0x00B5A5A0 */
 		AudioLoad_SlowLoadSample         = 0x800E3414; /* ROM:0x00B5A5B4 */
@@ -3106,7 +3106,7 @@
 		Audio_ProcessCmds                = 0x800E5D6C; /* ROM:0x00B5CF0C */
 		func_800E5E20                    = 0x800E5E20; /* ROM:0x00B5CFC0 */
 		func_800E5E84                    = 0x800E5E84; /* ROM:0x00B5D024 */
-		func_800E5EA4                    = 0x800E5EA4; /* ROM:0x00B5D044 */
+		Audio_GetSampleBankIdsOfFont     = 0x800E5EA4; /* ROM:0x00B5D044 */
 		func_800E5EDC                    = 0x800E5EDC; /* ROM:0x00B5D07C */
 		func_800E5F34                    = 0x800E5F34; /* ROM:0x00B5D0D4 */
 		func_800E5F88                    = 0x800E5F88; /* ROM:0x00B5D128 */
@@ -3138,10 +3138,10 @@
 		Audio_NoteInit                   = 0x800E6E68; /* ROM:0x00B5E008 */
 		Audio_NoteDisable                = 0x800E6F28; /* ROM:0x00B5E0C8 */
 		Audio_ProcessNotes               = 0x800E6F8C; /* ROM:0x00B5E12C */
-		Audio_InstrumentGetSound         = 0x800E745C; /* ROM:0x00B5E5FC */
+		Audio_GetInstrumentTunedSample   = 0x800E745C; /* ROM:0x00B5E5FC */
 		Audio_GetInstrumentInner         = 0x800E7498; /* ROM:0x00B5E638 */
 		Audio_GetDrum                    = 0x800E756C; /* ROM:0x00B5E70C */
-		Audio_GetSfx                     = 0x800E7650; /* ROM:0x00B5E7F0 */
+		Audio_GetSoundEffect             = 0x800E7650; /* ROM:0x00B5E7F0 */
 		Audio_SetFontInstrument          = 0x800E7744; /* ROM:0x00B5E8E4 */
 		Audio_SeqLayerDecayRelease       = 0x800E7888; /* ROM:0x00B5EA28 */
 		Audio_SeqLayerNoteDecay          = 0x800E7B60; /* ROM:0x00B5ED00 */
@@ -3260,20 +3260,20 @@
 		func_800F3138                    = 0x800F3138; /* ROM:0x00B6A2D8 */
 		func_800F3140                    = 0x800F3140; /* ROM:0x00B6A2E0 */
 		func_800F314C                    = 0x800F314C; /* ROM:0x00B6A2EC */
-		Audio_ComputeSoundVolume         = 0x800F3188; /* ROM:0x00B6A328 */
-		Audio_ComputeSoundReverb         = 0x800F32F0; /* ROM:0x00B6A490 */
-		Audio_ComputeSoundPanSigned      = 0x800F3468; /* ROM:0x00B6A608 */
-		Audio_ComputeSoundFreqScale      = 0x800F35EC; /* ROM:0x00B6A78C */
+		Audio_ComputeSfxVolume           = 0x800F3188; /* ROM:0x00B6A328 */
+		Audio_ComputeSfxReverb           = 0x800F32F0; /* ROM:0x00B6A490 */
+		Audio_ComputeSfxPanSigned        = 0x800F3468; /* ROM:0x00B6A608 */
+		Audio_ComputeSfxFreqScale        = 0x800F35EC; /* ROM:0x00B6A78C */
 		func_800F37B8                    = 0x800F37B8; /* ROM:0x00B6A958 */
 		func_800F3990                    = 0x800F3990; /* ROM:0x00B6AB30 */
-		Audio_SetSoundProperties         = 0x800F3A08; /* ROM:0x00B6ABA8 */
+		Audio_SetSfxProperties           = 0x800F3A08; /* ROM:0x00B6ABA8 */
 		Audio_ResetSfxChannelState       = 0x800F3ED4; /* ROM:0x00B6B074 */
 		Audio_PlayCutsceneEffectsSequence = 0x800F3F3C; /* ROM:0x00B6B0DC */
 		func_800F3F84                    = 0x800F3F84; /* ROM:0x00B6B124 */
 		func_800F4010                    = 0x800F4010; /* ROM:0x00B6B1B0 */
 		func_800F4138                    = 0x800F4138; /* ROM:0x00B6B2D8 */
 		func_800F4190                    = 0x800F4190; /* ROM:0x00B6B330 */
-		Audio_PlaySoundRandom            = 0x800F41E0; /* ROM:0x00B6B380 */
+		Audio_PlaySfxRandom              = 0x800F41E0; /* ROM:0x00B6B380 */
 		func_800F4254                    = 0x800F4254; /* ROM:0x00B6B3F4 */
 		func_800F436C                    = 0x800F436C; /* ROM:0x00B6B50C */
 		func_800F4414                    = 0x800F4414; /* ROM:0x00B6B5B4 */
@@ -3281,8 +3281,8 @@
 		func_800F4524                    = 0x800F4524; /* ROM:0x00B6B6C4 */
 		func_800F4578                    = 0x800F4578; /* ROM:0x00B6B718 */
 		func_800F45D0                    = 0x800F45D0; /* ROM:0x00B6B770 */
-		Audio_PlaySoundRiver             = 0x800F4634; /* ROM:0x00B6B7D4 */
-		Audio_PlaySoundWaterfall         = 0x800F46E0; /* ROM:0x00B6B880 */
+		Audio_PlaySfxRiver               = 0x800F4634; /* ROM:0x00B6B7D4 */
+		Audio_PlaySfxWaterfall           = 0x800F46E0; /* ROM:0x00B6B880 */
 		Audio_StepFreqLerp               = 0x800F4784; /* ROM:0x00B6B924 */
 		func_800F47BC                    = 0x800F47BC; /* ROM:0x00B6B95C */
 		func_800F47FC                    = 0x800F47FC; /* ROM:0x00B6B99C */
@@ -3291,9 +3291,9 @@
 		Audio_SetGanonsTowerBgmVolume    = 0x800F491C; /* ROM:0x00B6BABC */
 		Audio_LowerMainBgmVolume         = 0x800F4A54; /* ROM:0x00B6BBF4 */
 		Audio_UpdateRiverSoundVolumes    = 0x800F4A70; /* ROM:0x00B6BC10 */
-		Audio_PlaySoundIncreasinglyTransposed = 0x800F4B58; /* ROM:0x00B6BCF8 */
+		Audio_PlaySfxIncreasinglyTransposed = 0x800F4B58; /* ROM:0x00B6BCF8 */
 		Audio_ResetIncreasingTranspose   = 0x800F4BE8; /* ROM:0x00B6BD88 */
-		Audio_PlaySoundTransposed        = 0x800F4BF4; /* ROM:0x00B6BD94 */
+		Audio_PlaySfxTransposed          = 0x800F4BF4; /* ROM:0x00B6BD94 */
 		func_800F4C58                    = 0x800F4C58; /* ROM:0x00B6BDF8 */
 		func_800F4E30                    = 0x800F4E30; /* ROM:0x00B6BFD0 */
 		Audio_ClearSariaBgm              = 0x800F50CC; /* ROM:0x00B6C26C */
@@ -3328,8 +3328,8 @@
 		Audio_SetBaseFilter              = 0x800F67A0; /* ROM:0x00B6D940 */
 		Audio_SetExtraFilter             = 0x800F6828; /* ROM:0x00B6D9C8 */
 		Audio_SetCutsceneFlag            = 0x800F68BC; /* ROM:0x00B6DA5C */
-		Audio_PlaySoundGeneralIfNotInCutscene = 0x800F68D4; /* ROM:0x00B6DA74 */
-		Audio_PlaySoundIfNotInCutscene   = 0x800F691C; /* ROM:0x00B6DABC */
+		Audio_PlaySfxGeneralIfNotInCutscene = 0x800F68D4; /* ROM:0x00B6DA74 */
+		Audio_PlaySfxIfNotInCutscene     = 0x800F691C; /* ROM:0x00B6DABC */
 		func_800F6964                    = 0x800F6964; /* ROM:0x00B6DB04 */
 		func_800F6AB0                    = 0x800F6AB0; /* ROM:0x00B6DC50 */
 		func_800F6B3C                    = 0x800F6B3C; /* ROM:0x00B6DCDC */
@@ -3347,15 +3347,15 @@
 		func_800F71BC                    = 0x800F71BC; /* ROM:0x00B6E35C */
 		func_800F7208                    = 0x800F7208; /* ROM:0x00B6E3A8 */
 	/* code/code_800F7260.c */
-		Audio_SetSoundBanksMute          = 0x800F7260; /* ROM:0x00B6E400 */
+		Audio_SetSfxBanksMute            = 0x800F7260; /* ROM:0x00B6E400 */
 		Audio_QueueSeqCmdMute            = 0x800F72B8; /* ROM:0x00B6E458 */
 		Audio_ClearBGMMute               = 0x800F731C; /* ROM:0x00B6E4BC */
-		Audio_PlaySoundGeneral           = 0x800F738C; /* ROM:0x00B6E52C */
-		Audio_RemoveMatchingSoundRequests = 0x800F74E0; /* ROM:0x00B6E680 */
-		Audio_ProcessSoundRequest        = 0x800F7680; /* ROM:0x00B6E820 */
-		Audio_RemoveSoundBankEntry       = 0x800F7B54; /* ROM:0x00B6ECF4 */
-		Audio_ChooseActiveSounds         = 0x800F7CEC; /* ROM:0x00B6EE8C */
-		Audio_PlayActiveSounds           = 0x800F8480; /* ROM:0x00B6F620 */
+		Audio_PlaySfxGeneral             = 0x800F738C; /* ROM:0x00B6E52C */
+		Audio_RemoveMatchingSfxRequests  = 0x800F74E0; /* ROM:0x00B6E680 */
+		Audio_ProcessSfxRequest          = 0x800F7680; /* ROM:0x00B6E820 */
+		Audio_RemoveSfxBankEntry         = 0x800F7B54; /* ROM:0x00B6ECF4 */
+		Audio_ChooseActiveSfx            = 0x800F7CEC; /* ROM:0x00B6EE8C */
+		Audio_PlayActiveSfx              = 0x800F8480; /* ROM:0x00B6F620 */
 		Audio_StopSfxByBank              = 0x800F87A0; /* ROM:0x00B6F940 */
 		func_800F8884                    = 0x800F8884; /* ROM:0x00B6FA24 */
 		Audio_StopSfxByPosAndBank        = 0x800F89A0; /* ROM:0x00B6FB40 */
@@ -3363,12 +3363,12 @@
 		Audio_StopSfxByPosAndId          = 0x800F8A44; /* ROM:0x00B6FBE4 */
 		Audio_StopSfxByTokenAndId        = 0x800F8BA0; /* ROM:0x00B6FD40 */
 		Audio_StopSfxById                = 0x800F8D04; /* ROM:0x00B6FEA4 */
-		Audio_ProcessSoundRequests       = 0x800F8E3C; /* ROM:0x00B6FFDC */
+		Audio_ProcessSfxRequests         = 0x800F8E3C; /* ROM:0x00B6FFDC */
 		Audio_SetUnusedBankLerp          = 0x800F8EA0; /* ROM:0x00B70040 */
 		Audio_StepUnusedBankLerp         = 0x800F8F34; /* ROM:0x00B700D4 */
 		func_800F8F88                    = 0x800F8F88; /* ROM:0x00B70128 */
 		Audio_IsSfxPlaying               = 0x800F8FF4; /* ROM:0x00B70194 */
-		Audio_ResetSounds                = 0x800F905C; /* ROM:0x00B701FC */
+		Audio_ResetSfx                   = 0x800F905C; /* ROM:0x00B701FC */
 	/* code/code_800F9280.c */
 		func_800F9280                    = 0x800F9280; /* ROM:0x00B70420 */
 		func_800F9474                    = 0x800F9474; /* ROM:0x00B70614 */
@@ -3493,7 +3493,7 @@
 		SystemArena_Check                = 0x800FD8C0; /* ROM:0x00B74A60 */
 		SystemArena_Init                 = 0x800FD8E4; /* ROM:0x00B74A84 */
 		SystemArena_Cleanup              = 0x800FD91C; /* ROM:0x00B74ABC */
-		SystemArena_IsInitalized         = 0x800FD948; /* ROM:0x00B74AE8 */
+		SystemArena_IsInitialized        = 0x800FD948; /* ROM:0x00B74AE8 */
 	/* code/code_800FD970.c */
 		Rand_Next                        = 0x800FD970; /* ROM:0x00B74B10 */
 		Rand_Seed                        = 0x800FD9A0; /* ROM:0x00B74B40 */
@@ -3524,7 +3524,7 @@
 		__osMallocAddBlock               = 0x800FDDF4; /* ROM:0x00B74F94 */
 		ArenaImpl_RemoveAllBlocks        = 0x800FDEB4; /* ROM:0x00B75054 */
 		__osMallocCleanup                = 0x800FDF20; /* ROM:0x00B750C0 */
-		__osMallocIsInitalized           = 0x800FDF4C; /* ROM:0x00B750EC */
+		__osMallocIsInitialized          = 0x800FDF4C; /* ROM:0x00B750EC */
 		__osMalloc_FreeBlockTest         = 0x800FDF54; /* ROM:0x00B750F4 */
 		__osMalloc_NoLockDebug           = 0x800FDFF4; /* ROM:0x00B75194 */
 		__osMallocDebug                  = 0x800FE144; /* ROM:0x00B752E4 */
@@ -3779,8 +3779,8 @@
 		GameOver_FadeInLights            = 0x80110460; /* ROM:0x00B87600 */
 		GameOver_Update                  = 0x801104C8; /* ROM:0x00B87668 */
 	/* code/z_construct.c */
-		func_80110990                    = 0x80110990; /* ROM:0x00B87B30 */
-		func_801109B0                    = 0x801109B0; /* ROM:0x00B87B50 */
+		Interface_Destroy                = 0x80110990; /* ROM:0x00B87B30 */
+		Interface_Init                   = 0x801109B0; /* ROM:0x00B87B50 */
 		Message_Init                     = 0x80110F68; /* ROM:0x00B88108 */
 		func_80111070                    = 0x80111070; /* ROM:0x00B88210 */
 		func_80112098                    = 0x80112098; /* ROM:0x00B89238 */
@@ -3815,13 +3815,13 @@
 	/* code/z_bgcheck.c */
 		D_80119D90                       = 0x80119D90; /* ROM:0x00B90F30 */
 		D_80119E10                       = 0x80119E10; /* ROM:0x00B90FB0 */
-		zdWaterBox                       = 0x80119EAC; /* ROM:0x00B9104C */
-		zdWaterBoxMinX                   = 0x80119EBC; /* ROM:0x00B9105C */
-		zdWaterBoxMinY                   = 0x80119EC0; /* ROM:0x00B91060 */
-		zdWaterBoxMinZ                   = 0x80119EC4; /* ROM:0x00B91064 */
-		zdWaterBoxMaxX                   = 0x80119EC8; /* ROM:0x00B91068 */
-		zdWaterBoxMaxY                   = 0x80119ECC; /* ROM:0x00B9106C */
-		zdWaterBoxMaxZ                   = 0x80119ED0; /* ROM:0x00B91070 */
+		sZorasDomainWaterBox             = 0x80119EAC; /* ROM:0x00B9104C */
+		sZorasDomainWaterBoxMinX         = 0x80119EBC; /* ROM:0x00B9105C */
+		sZorasDomainWaterBoxMinY         = 0x80119EC0; /* ROM:0x00B91060 */
+		sZorasDomainWaterBoxMinZ         = 0x80119EC4; /* ROM:0x00B91064 */
+		sZorasDomainWaterBoxMaxX         = 0x80119EC8; /* ROM:0x00B91068 */
+		sZorasDomainWaterBoxMaxY         = 0x80119ECC; /* ROM:0x00B9106C */
+		sZorasDomainWaterBoxMaxZ         = 0x80119ED0; /* ROM:0x00B91070 */
 	/* code/z_camera.c */
 		sOREGInit                        = 0x80119EE0; /* ROM:0x00B91080 */
 		sOREGInitCnt                     = 0x80119F4C; /* ROM:0x00B910EC */
@@ -4080,7 +4080,7 @@
 		sNextUID                         = 0x8011D39C; /* ROM:0x00B9453C */
 		sCameraInterfaceFlags            = 0x8011D3A0; /* ROM:0x00B94540 */
 		sCameraInterfaceAlpha            = 0x8011D3A4; /* ROM:0x00B94544 */
-		sCameraShrinkWindowVal           = 0x8011D3A8; /* ROM:0x00B94548 */
+		sCameraLetterboxSize             = 0x8011D3A8; /* ROM:0x00B94548 */
 		D_8011D3AC                       = 0x8011D3AC; /* ROM:0x00B9454C */
 		D_8011D3B0                       = 0x8011D3B0; /* ROM:0x00B94550 */
 		D_8011D3CC                       = 0x8011D3CC; /* ROM:0x00B9456C */
@@ -4107,10 +4107,10 @@
 		D_8011DAEC                       = 0x8011DAEC; /* ROM:0x00B94C8C */
 		D_8011DAFC                       = 0x8011DAFC; /* ROM:0x00B94C9C */
 	/* code/z_debug.c */
-		D_8011E0B0                       = 0x8011E0B0; /* ROM:0x00B95250 */
-		printTextColors                  = 0x8011E0B4; /* ROM:0x00B95254 */
-		inputCombos                      = 0x8011E0D4; /* ROM:0x00B95274 */
-		regChar                          = 0x8011E148; /* ROM:0x00B952E8 */
+		sDebugPrintTextBufferNumUsed     = 0x8011E0B0; /* ROM:0x00B95250 */
+		sDebugPrintTextColors            = 0x8011E0B4; /* ROM:0x00B95254 */
+		sRegGroupInputCombos             = 0x8011E0D4; /* ROM:0x00B95274 */
+		sRegGroupChars                   = 0x8011E148; /* ROM:0x00B952E8 */
 	/* code/z_demo.c */
 		D_8011E1C0                       = 0x8011E1C0; /* ROM:0x00B95360 */
 		D_8011E1C4                       = 0x8011E1C4; /* ROM:0x00B95364 */
@@ -4344,9 +4344,9 @@
 		sCircleWipeVtx                   = 0x8012CBA8; /* ROM:0x00BA3D48 */
 		sCircleDList                     = 0x8012CDC8; /* ROM:0x00BA3F68 */
 	/* code/shrink_window.c */
-		D_8012CED0                       = 0x8012CED0; /* ROM:0x00BA4070 */
-		sShrinkWindowVal                 = 0x8012CED4; /* ROM:0x00BA4074 */
-		sShrinkWindowCurrentVal          = 0x8012CED8; /* ROM:0x00BA4078 */
+		sLetterboxState                  = 0x8012CED0; /* ROM:0x00BA4070 */
+		sLetterboxSizeTarget             = 0x8012CED4; /* ROM:0x00BA4074 */
+		sLetterboxSize                   = 0x8012CED8; /* ROM:0x00BA4078 */
 	/* code/db_camera.c */
 		D_8012CEE0                       = 0x8012CEE0; /* ROM:0x00BA4080 */
 		D_8012CEE4                       = 0x8012CEE4; /* ROM:0x00BA4084 */
@@ -4425,7 +4425,7 @@
 		D_8012D1F4                       = 0x8012D1F4; /* ROM:0x00BA4394 */
 		D_8012D1F8                       = 0x8012D1F8; /* ROM:0x00BA4398 */
 	/* code/code_800C3C20.c */
-		D_8012D200                       = 0x8012D200; /* ROM:0x00BA43A0 */
+		sSfxBankIds                      = 0x8012D200; /* ROM:0x00BA43A0 */
 	/* code/graph.c */
 		D_8012D230                       = 0x8012D230; /* ROM:0x00BA43D0 */
 		D_8012D248                       = 0x8012D248; /* ROM:0x00BA43E8 */
@@ -4434,7 +4434,7 @@
 		gScreenHeight                    = 0x8012D274; /* ROM:0x00BA4414 */
 		gSystemHeapSize                  = 0x8012D278; /* ROM:0x00BA4418 */
 	/* code/padmgr.c */
-		D_8012D280                       = 0x8012D280; /* ROM:0x00BA4420 */
+		gPadMgrLogSeverity               = 0x8012D280; /* ROM:0x00BA4420 */
 	/* code/sched.c */
 		sLogScheduler                    = 0x8012D290; /* ROM:0x00BA4430 */
 	/* code/speed_meter.c */
@@ -4482,7 +4482,7 @@
 		gDefaultEnvelope                 = 0x8012FAD4; /* ROM:0x00BA6C74 */
 		gZeroNoteSub                     = 0x8012FAE4; /* ROM:0x00BA6C84 */
 		gDefaultNoteSub                  = 0x8012FB04; /* ROM:0x00BA6CA4 */
-		gHeadsetPanQuantization          = 0x8012FB24; /* ROM:0x00BA6CC4 */
+		gHaasEffectDelaySizes            = 0x8012FB24; /* ROM:0x00BA6CC4 */
 		D_8012FBA4                       = 0x8012FBA4; /* ROM:0x00BA6D44 */
 		D_8012FBA8                       = 0x8012FBA8; /* ROM:0x00BA6D48 */
 		gHeadsetPanVolume                = 0x8012FC28; /* ROM:0x00BA6DC8 */
@@ -4492,20 +4492,20 @@
 		gHighPassFilterData              = 0x80130328; /* ROM:0x00BA74C8 */
 		D_80130418                       = 0x80130418; /* ROM:0x00BA75B8 */
 	/* code/audio_synthesis.c */
-		D_801304A0                       = 0x801304A0; /* ROM:0x00BA7640 */
-		D_801304A4                       = 0x801304A4; /* ROM:0x00BA7644 */
-		D_801304A8                       = 0x801304A8; /* ROM:0x00BA7648 */
-		D_801304AC                       = 0x801304AC; /* ROM:0x00BA764C */
+		sEnvMixerOp                      = 0x801304A0; /* ROM:0x00BA7640 */
+		sEnvMixerLeftHaasDmemDests       = 0x801304A4; /* ROM:0x00BA7644 */
+		sEnvMixerRightHaasDmemDests      = 0x801304A8; /* ROM:0x00BA7648 */
+		sEnvMixerDefaultDmemDests        = 0x801304AC; /* ROM:0x00BA764C */
 		D_801304B0                       = 0x801304B0; /* ROM:0x00BA7650 */
-		D_801304C0                       = 0x801304C0; /* ROM:0x00BA7660 */
+		sNumSamplesPerWavePeriod         = 0x801304C0; /* ROM:0x00BA7660 */
 	/* code/audio_load.c */
 		sDmaHandler                      = 0x801304D0; /* ROM:0x00BA7670 */
 		sUnusedHandler                   = 0x801304D4; /* ROM:0x00BA7674 */
-		gAudioContextInitalized          = 0x801304D8; /* ROM:0x00BA7678 */
+		gAudioContextInitialized         = 0x801304D8; /* ROM:0x00BA7678 */
 	/* code/audio_seqplayer.c */
 		sSeqInstructionArgsTable         = 0x80130520; /* ROM:0x00BA76C0 */
 	/* code/code_800EC960.c */
-		gIsLargeSoundBank                = 0x80130570; /* ROM:0x00BA7710 */
+		gIsLargeSfxBank                  = 0x80130570; /* ROM:0x00BA7710 */
 		gChannelsPerBank                 = 0x80130578; /* ROM:0x00BA7718 */
 		gUsedChannelsPerBank             = 0x80130594; /* ROM:0x00BA7734 */
 		D_801305B0                       = 0x801305B0; /* ROM:0x00BA7750 */
@@ -4521,7 +4521,7 @@
 		D_801305F4                       = 0x801305F4; /* ROM:0x00BA7794 */
 		sGanonsTowerLevelsVol            = 0x801305F8; /* ROM:0x00BA7798 */
 		sEnterGanonsTowerTimer           = 0x80130600; /* ROM:0x00BA77A0 */
-		D_80130604                       = 0x80130604; /* ROM:0x00BA77A4 */
+		sSoundMode                       = 0x80130604; /* ROM:0x00BA77A4 */
 		D_80130608                       = 0x80130608; /* ROM:0x00BA77A8 */
 		sAudioCutsceneFlag               = 0x8013060C; /* ROM:0x00BA77AC */
 		sSpecReverb                      = 0x80130610; /* ROM:0x00BA77B0 */
@@ -4609,7 +4609,7 @@
 		sAudioDebugPageNames             = 0x80131CAC; /* ROM:0x00BA8E4C */
 		sAudioSndContWork                = 0x80131E08; /* ROM:0x00BA8FA8 */
 		sAudioSndContWorkLims            = 0x80131E20; /* ROM:0x00BA8FC0 */
-		sSoundBankNames                  = 0x80131E38; /* ROM:0x00BA8FD8 */
+		sSfxBankNames                    = 0x80131E38; /* ROM:0x00BA8FD8 */
 		sSoundModeNames                  = 0x80131E88; /* ROM:0x00BA9028 */
 		sAudioIntInfoX                   = 0x80131EBC; /* ROM:0x00BA905C */
 		sAudioIntInfoY                   = 0x80131EC0; /* ROM:0x00BA9060 */
@@ -4639,7 +4639,7 @@
 		sBoolStrs                        = 0x80131F54; /* ROM:0x00BA90F4 */
 		sAudioNatureFailed               = 0x80131F64; /* ROM:0x00BA9104 */
 		sPeakNumNotes                    = 0x80131F68; /* ROM:0x00BA9108 */
-	/* code/audio_sound_params.c */
+	/* code/audio_sfx_params.c */
 		sEnemyBankParams                 = 0x80131F70; /* ROM:0x00BA9110 */
 		sPlayerBankParams                = 0x8013273C; /* ROM:0x00BA98DC */
 		sItemBankParams                  = 0x80132ABC; /* ROM:0x00BA9C5C */
@@ -4647,17 +4647,12 @@
 		sSystemBankParams                = 0x80132FDC; /* ROM:0x00BAA17C */
 		sOcarinaBankParams               = 0x801330FC; /* ROM:0x00BAA29C */
 		sVoiceBankParams                 = 0x8013311C; /* ROM:0x00BAA2BC */
-		gSoundParams                     = 0x8013331C; /* ROM:0x00BAA4BC */
-	/* code/code_800F7260.c */
-		D_80133340                       = 0x80133340; /* ROM:0x00BAA4E0 */
-		D_80133344                       = 0x80133344; /* ROM:0x00BAA4E4 */
-		D_8013338C                       = 0x8013338C; /* ROM:0x00BAA52C */
-		D_80133390                       = 0x80133390; /* ROM:0x00BAA530 */
-		D_80133398                       = 0x80133398; /* ROM:0x00BAA538 */
-		sSoundRequestWriteIndex          = 0x801333A0; /* ROM:0x00BAA540 */
-		sSoundRequestReadIndex           = 0x801333A4; /* ROM:0x00BAA544 */
-		gSoundBanks                      = 0x801333A8; /* ROM:0x00BAA548 */
-		sBankSizes                       = 0x801333C4; /* ROM:0x00BAA564 */
+		gSfxParams                       = 0x8013331C; /* ROM:0x00BAA4BC */
+	/* code/audio_external_data.c */
+		gSfxRequestWriteIndex            = 0x801333A0; /* ROM:0x00BAA540 */
+		gSfxRequestReadIndex             = 0x801333A4; /* ROM:0x00BAA544 */
+		gSfxBanks                        = 0x801333A8; /* ROM:0x00BAA548 */
+		gSfxBankSizes                    = 0x801333C4; /* ROM:0x00BAA564 */
 		gSfxChannelLayout                = 0x801333CC; /* ROM:0x00BAA56C */
 		D_801333D0                       = 0x801333D0; /* ROM:0x00BAA570 */
 		gSfxDefaultPos                   = 0x801333D4; /* ROM:0x00BAA574 */
@@ -4668,16 +4663,16 @@
 		D_801333F0                       = 0x801333F0; /* ROM:0x00BAA590 */
 		gAudioSfxSwapOff                 = 0x801333F4; /* ROM:0x00BAA594 */
 		D_801333F8                       = 0x801333F8; /* ROM:0x00BAA598 */
-	/* code/code_800F9280.c */
-		sSeqCmdWrPos                     = 0x80133400; /* ROM:0x00BAA5A0 */
-		sSeqCmdRdPos                     = 0x80133404; /* ROM:0x00BAA5A4 */
+		D_801333FC                       = 0x801333FC; /* ROM:0x00BAA59C */
+		gSeqCmdWrPos                     = 0x80133400; /* ROM:0x00BAA5A0 */
+		gSeqCmdRdPos                     = 0x80133404; /* ROM:0x00BAA5A4 */
 		D_80133408                       = 0x80133408; /* ROM:0x00BAA5A8 */
 		D_8013340C                       = 0x8013340C; /* ROM:0x00BAA5AC */
-		D_80133410                       = 0x80133410; /* ROM:0x00BAA5B0 */
+		gSoundModeList                   = 0x80133410; /* ROM:0x00BAA5B0 */
 		gAudioSpecId                     = 0x80133414; /* ROM:0x00BAA5B4 */
 		D_80133418                       = 0x80133418; /* ROM:0x00BAA5B8 */
 	/* code/audio_init_params.c */
-		D_80133420                       = 0x80133420; /* ROM:0x00BAA5C0 */
+		sReverbSettings                  = 0x80133420; /* ROM:0x00BAA5C0 */
 		gAudioSpecs                      = 0x801337C8; /* ROM:0x00BAA968 */
 	/* code/logseverity.c */
 		gOverlayLogSeverity              = 0x80133BC0; /* ROM:0x00BAAD60 */
@@ -4699,7 +4694,7 @@
 	/* libultra/io/siacs.c */
 		__osSiAccessQueueEnabled         = 0x80134CD0; /* ROM:0x00BABE70 */
 	/* libultra/io/controller.c */
-		gOSContInitialized               = 0x80134CE0; /* ROM:0x00BABE80 */
+		__osContInitialized              = 0x80134CE0; /* ROM:0x00BABE80 */
 	/* libultra/io/contpfs.c */
 		__osPfsInodeCacheChannel         = 0x80134CF0; /* ROM:0x00BABE90 */
 		__osPfsInodeCacheBank            = 0x80134CF4; /* ROM:0x00BABE94 */
@@ -4709,7 +4704,7 @@
 		sFaultDrawerFont                 = 0x80147570; /* ROM:0x00BBE710 */
 	/* code/audio_init_params.c */
 		D_8014A6C0                       = 0x8014A6C0; /* ROM:0x00BC1860 */
-		D_8014A6C4                       = 0x8014A6C4; /* ROM:0x00BC1864 */
+		gAudioHeapInitSizes              = 0x8014A6C4; /* ROM:0x00BC1864 */
 	/* libultra/gu/libm_vals.c */
 		__libm_qnan_f                    = 0x8014B2D0; /* ROM:0x00BC2470 */
 	/* code/z_message_PAL.c */
@@ -4768,8 +4763,7 @@
 		D_8015FA8C                       = 0x8015FA8C; /* ROM:0x00BD6C2C */
 	/* code/z_debug.c */
 		gGameInfo                        = 0x8015FA90; /* ROM:0x00BD6C30 */
-		D_8015FA94                       = 0x8015FA94; /* ROM:0x00BD6C34 */
-		D_8015FA98                       = 0x8015FA98; /* ROM:0x00BD6C38 */
+		sDebugPrintTextBuffer            = 0x8015FA98; /* ROM:0x00BD6C38 */
 	/* code/z_demo.c */
 		D_8015FCC0                       = 0x8015FCC0; /* ROM:0x00BD6E60 */
 		D_8015FCC2                       = 0x8015FCC2; /* ROM:0x00BD6E62 */
@@ -4821,8 +4815,8 @@
 		sQuakeRequest                    = 0x80160020; /* ROM:0x00BD71C0 */
 	/* code/z_skin.c */
 		gSkinLimbMatrices                = 0x801600C0; /* ROM:0x00BD7260 */
-	/* code/code_800A9F30.c */
-		D_80160FD0                       = 0x80160FD0; /* ROM:0x00BD8170 */
+	/* code/z_rumble.c */
+		sRumbleMgr                       = 0x80160FD0; /* ROM:0x00BD8170 */
 	/* code/z_vr_box_draw.c */
 		sSkyboxDrawMatrix                = 0x801610E0; /* ROM:0x00BD8280 */
 	/* code/z_player_call.c */
@@ -4910,9 +4904,6 @@
 		sCurrentMatrix                   = 0x8016A7C4; /* ROM:0x00BE1964 */
 	/* code/debug_malloc.c */
 		sDebugArena                      = 0x8016A7D0; /* ROM:0x00BE1970 */
-	/* code/fault_drawer.c */
-		sFaultDrawer                     = 0x8016B680; /* ROM:0x00BE2820 */
-		D_8016B6C0                       = 0x8016B6C0; /* ROM:0x00BE2860 */
 	/* code/audio_load.c */
 		sScriptLoadQueue                 = 0x8016B6E0; /* ROM:0x00BE2880 */
 		sScriptLoadMsgBuf                = 0x8016B6F8; /* ROM:0x00BE2898 */
@@ -4951,7 +4942,7 @@
 		sPlaybackStaff                   = 0x8016B9FC; /* ROM:0x00BE2B9C */
 		sRecordingStaff                  = 0x8016BA00; /* ROM:0x00BE2BA0 */
 		sOcarinaUpdateTaskStart          = 0x8016BA04; /* ROM:0x00BE2BA4 */
-		sOcarinaInputStickRel            = 0x8016BA08; /* ROM:0x00BE2BA8 */
+		sOcarinaInputStickAdj            = 0x8016BA08; /* ROM:0x00BE2BA8 */
 		sOcarinaInputButtonCur           = 0x8016BA0C; /* ROM:0x00BE2BAC */
 		sOcarinaInputButtonStart         = 0x8016BA10; /* ROM:0x00BE2BB0 */
 		sOcarinaInputButtonPrev          = 0x8016BA14; /* ROM:0x00BE2BB4 */
@@ -4984,13 +4975,13 @@
 		D_8016C6A0                       = 0x8016C6A0; /* ROM:0x00BE3840 */
 		D_8016C820                       = 0x8016C820; /* ROM:0x00BE39C0 */
 		D_8016C8B0                       = 0x8016C8B0; /* ROM:0x00BE3A50 */
-		sSoundRequests                   = 0x8016C9A0; /* ROM:0x00BE3B40 */
-		sSoundBankListEnd                = 0x8016E1A0; /* ROM:0x00BE5340 */
-		sSoundBankFreeListStart          = 0x8016E1A8; /* ROM:0x00BE5348 */
-		sSoundBankUnused                 = 0x8016E1B0; /* ROM:0x00BE5350 */
-		gActiveSounds                    = 0x8016E1B8; /* ROM:0x00BE5358 */
+		sSfxRequests                     = 0x8016C9A0; /* ROM:0x00BE3B40 */
+		sSfxBankListEnd                  = 0x8016E1A0; /* ROM:0x00BE5340 */
+		sSfxBankFreeListStart            = 0x8016E1A8; /* ROM:0x00BE5348 */
+		sSfxBankUnused                   = 0x8016E1B0; /* ROM:0x00BE5350 */
+		gActiveSfx                       = 0x8016E1B8; /* ROM:0x00BE5358 */
 		sCurSfxPlayerChannelIdx          = 0x8016E260; /* ROM:0x00BE5400 */
-		gSoundBankMuted                  = 0x8016E264; /* ROM:0x00BE5404 */
+		gSfxBankMuted                    = 0x8016E264; /* ROM:0x00BE5404 */
 		sUnusedBankLerp                  = 0x8016E270; /* ROM:0x00BE5410 */
 		gAudioSfxSwapSource              = 0x8016E2E0; /* ROM:0x00BE5480 */
 		gAudioSfxSwapTarget              = 0x8016E2F8; /* ROM:0x00BE5498 */
@@ -5019,13 +5010,13 @@
 		sJpegBitStreamDontSkip           = 0x80175669; /* ROM:0x00BEC809 */
 		sJpegBitStreamCurWord            = 0x8017566C; /* ROM:0x00BEC80C */
 	/* libultra/io/motor.c */
-		osPifBuffers                     = 0x801756B0; /* ROM:0x00BEC850 */
+		__MotorDataBuf                   = 0x801756B0; /* ROM:0x00BEC850 */
 	/* libultra/io/siacs.c */
 		siAccessBuf                      = 0x801757B0; /* ROM:0x00BEC950 */
 		__osSiAccessQueue                = 0x801757B8; /* ROM:0x00BEC958 */
 	/* libultra/io/controller.c */
-		__osPifInternalBuff              = 0x801757D0; /* ROM:0x00BEC970 */
-		__osContLastPoll                 = 0x80175810; /* ROM:0x00BEC9B0 */
+		__osContPifRam                   = 0x801757D0; /* ROM:0x00BEC970 */
+		__osContLastCmd                  = 0x80175810; /* ROM:0x00BEC9B0 */
 		__osMaxControllers               = 0x80175811; /* ROM:0x00BEC9B1 */
 		__osEepromTimer                  = 0x80175818; /* ROM:0x00BEC9B8 */
 		__osEepromTimerMsgQueue          = 0x80175838; /* ROM:0x00BEC9D8 */
@@ -5033,7 +5024,7 @@
 	/* libultra/io/pfsreadwritefile.c */
 		__osPfsInodeCache                = 0x80175860; /* ROM:0x00BECA00 */
 	/* libultra/io/pfsgetstatus.c */
-		gPifMempakBuf                    = 0x80175960; /* ROM:0x00BECB00 */
+		__osPfsPifRam                    = 0x80175960; /* ROM:0x00BECB00 */
 	/* code/z_message_PAL.c */
 		sCharTexSize                     = 0x801759A0; /* ROM:0x00BECB40 */
 		sCharTexScale                    = 0x801759A4; /* ROM:0x00BECB44 */

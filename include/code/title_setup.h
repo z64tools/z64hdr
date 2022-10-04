@@ -3,10 +3,10 @@
 
 #include "global.h"
 
-void TitleSetup_InitImpl(GameState* gameState);
+void Setup_InitImpl(SetupState* this);
 
-void TitleSetup_Destroy(GameState* gameState);
+void Setup_Destroy(GameState* thisx);
 
-void TitleSetup_Init(GameState* gameState);
+void Setup_Init(GameState* thisx);
 
 #endif

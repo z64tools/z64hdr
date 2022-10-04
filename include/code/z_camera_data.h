@@ -191,8 +191,8 @@ extern CameraModeValue sSetNormal3ModeTargetData[];
 
 extern CameraModeValue sSetNormal3ModeTalkData[];
 
-/* These values are for when the eye
- * >= OREG(45) units below the surface of the water.
+/*
+ * These values are for when the eye is >= OREG(45) units below the surface of the water.
  */
 extern CameraModeValue sSetNormal3ModeBoomerangData[];
 
@@ -955,7 +955,7 @@ extern s16 sNextUID;
 extern s32 sCameraInterfaceFlags;
 
 extern s32 sCameraInterfaceAlpha;
-extern s32 sCameraShrinkWindowVal;
+extern s32 sCameraLetterboxSize;
 extern s32 D_8011D3AC;
 
 extern s16 D_8011D3B0[];

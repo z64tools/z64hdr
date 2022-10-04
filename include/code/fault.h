@@ -121,9 +121,11 @@ uintptr_t Fault_ConvertAddress(uintptr_t addr);
 
 void Fault_Sleep(u32 msec);
 
-void PadMgr_RequestPadData(Input* input, s32 mode);
+#ifndef AVOID_UB
+void PadMgr_RequestPadData(Input* inputs, s32 gameRequest);
+#endif
 
-void Fault_PadCallback(Input* input);
+void Fault_PadCallback(Input* inputs);
 
 void Fault_UpdatePadImpl(void);
 

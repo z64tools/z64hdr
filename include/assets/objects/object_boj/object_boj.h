@@ -46,7 +46,7 @@ extern Gfx object_boj_DL_003680[];
 extern Gfx object_boj_DL_003798[];
 extern Gfx object_boj_DL_0038A8[];
 extern Gfx object_boj_DL_0039B0[];
-extern u64 object_bojTLUT_003B98[];
+extern u64 object_boj_TLUT_003B98[];
 extern u64 object_boj_Tex_003D90[];
 extern u64 object_boj_Tex_003DD0[];
 extern u64 object_boj_Tex_003ED0[];

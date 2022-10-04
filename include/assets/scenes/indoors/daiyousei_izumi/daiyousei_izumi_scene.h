@@ -10,7 +10,7 @@ extern u16 daiyousei_izumi_sceneExitList_0000B8[];
 extern LightSettings daiyousei_izumi_sceneLightSettings0x0000BC[];
 extern CutsceneData gGreatFairyMagicCs[];
 extern CutsceneData gGreatFairyDoubleMagicCs[];
-extern CutsceneData gGreatFairyDoubleDefenceCs[];
+extern CutsceneData gGreatFairyDoubleDefenseCs[];
 extern CamData daiyousei_izumi_sceneCollisionHeader_0043A4CamDataList[];
 extern SurfaceType daiyousei_izumi_sceneCollisionHeader_0043A4SurfaceType[];
 extern CollisionPoly daiyousei_izumi_sceneCollisionHeader_0043A4Polygons[];

@@ -23,14 +23,14 @@ typedef struct {
     /* 0x1E */ u8 isMagicAcquired;
     /* 0x1F */ u8 unk_1F;
     /* 0x20 */ u8 isDoubleMagicAcquired;
-    /* 0x21 */ u8 doubleDefense;
+    /* 0x21 */ u8 isDoubleDefenseAcquired;
     /* 0x22 */ u8 bgsFlag;
     /* 0x23 */ u8 ocarinaGameRoundNum;
     /* 0x24 */ ItemEquips childEquips;
     /* 0x2E */ ItemEquips adultEquips;
     /* 0x38 */ u32 unk_38; // this may be incorrect, currently used for alignement
     /* 0x3C */ char unk_3C[0x0E];
-    /* 0x4A */ s16 savedSceneNum;
+    /* 0x4A */ s16 savedSceneId;
 } SavePlayerData; // size = 0x4C
 
 typedef struct {
@@ -150,13 +150,13 @@ void Sram_WriteSave(SramContext* sramCtx);
  *
  *  After verifying all 3 saves, pass relevant data to File Select to be displayed.
  */
-void Sram_VerifyAndLoadAllSaves(FileChooseContext* fileChooseCtx, SramContext* sramCtx);
+void Sram_VerifyAndLoadAllSaves(FileSelectState* fileSelect, SramContext* sramCtx);
 
-void Sram_InitSave(FileChooseContext* fileChooseCtx, SramContext* sramCtx);
+void Sram_InitSave(FileSelectState* fileSelect, SramContext* sramCtx);
 
-void Sram_EraseSave(FileChooseContext* fileChooseCtx, SramContext* sramCtx);
+void Sram_EraseSave(FileSelectState* fileSelect, SramContext* sramCtx);
 
-void Sram_CopySave(FileChooseContext* fileChooseCtx, SramContext* sramCtx);
+void Sram_CopySave(FileSelectState* fileSelect, SramContext* sramCtx);
 
 /**
  *  Write the first 16 bytes of the read buffer to the SRAM header

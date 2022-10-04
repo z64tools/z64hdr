@@ -6,7 +6,7 @@
 
 s32 osPfsIsPlug(OSMesgQueue* mq, u8* pattern);
 
-void __osPfsRequestData(u8 poll);
+void __osPfsRequestData(u8 cmd);
 
 void __osPfsGetInitData(u8* pattern, OSContStatus* contData);
 

@@ -4,6 +4,29 @@
 #include "global.h"
 #include "vt.h"
 
+u16 DynaSSNodeList_GetNextNodeIdx(DynaSSNodeList* nodeList);
+void BgCheck_GetStaticLookupIndicesFromPos(CollisionContext* colCtx, Vec3f* pos, Vec3i* sector);
+s32 BgCheck_PosInStaticBoundingBox(CollisionContext* colCtx, Vec3f* pos);
+s32 BgCheck_CheckLineImpl(CollisionContext* colCtx, u16 xpFlags1, u16 xpFlags2, Vec3f* posA, Vec3f* posB,
+                          Vec3f* posResult, CollisionPoly** outPoly, s32* outBgId, Actor* actor, f32 chkDist,
+                          u32 bccFlags);
+void SSNodeList_Initialize(SSNodeList* this);
+void SSNodeList_Alloc(PlayState* play, SSNodeList* this, s32 tblMax, s32 numPolys);
+u16 SSNodeList_GetNextNodeIdx(SSNodeList* this);
+void DynaPoly_Init(PlayState* play, DynaCollisionContext* dyna);
+void DynaPoly_Alloc(PlayState* play, DynaCollisionContext* dyna);
+f32 BgCheck_RaycastDownDyna(DynaRaycastDown* dynaRaycastDown);
+s32 BgCheck_SphVsDynaWall(CollisionContext* colCtx, u16 xpFlags, f32* outX, f32* outZ, Vec3f* pos, f32 radius,
+                          CollisionPoly** outPoly, s32* outBgId, Actor* actor);
+s32 BgCheck_CheckDynaCeiling(CollisionContext* colCtx, u16 xpFlags, f32* outY, Vec3f* pos, f32 chkDist,
+                             CollisionPoly** outPoly, s32* outBgId, Actor* actor);
+s32 BgCheck_CheckLineAgainstDyna(CollisionContext* colCtx, u16 xpFlags, Vec3f* posA, Vec3f* posB, Vec3f* posResult,
+                                 CollisionPoly** outPoly, f32* distSq, s32* outBgId, Actor* actor, f32 chkDist,
+                                 s32 bccFlags);
+s32 BgCheck_SphVsFirstDynaPoly(CollisionContext* colCtx, u16 xpFlags, CollisionPoly** outPoly, s32* outBgId,
+                               Vec3f* center, f32 radius, Actor* actor, u16 bciFlags);
+void BgCheck_ResetPolyCheckTbl(SSNodeList* nodeList, s32 numPolys);
+
 #define SS_NULL 0xFFFF
 
 // bccFlags
@@ -27,11 +50,19 @@
 #define COLPOLY_IGNORE_ENTITY (1 << 1)
 #define COLPOLY_IGNORE_PROJECTILES (1 << 2)
 
-// func_80041DB8, SurfaceType wall properties
-extern s32 D_80119D90[32];
+// raycast down flags (downChkFlags)
+#define BGCHECK_RAYCAST_DOWN_CHECK_CEILINGS (1 << 0)
+#define BGCHECK_RAYCAST_DOWN_CHECK_WALLS (1 << 1)
+#define BGCHECK_RAYCAST_DOWN_CHECK_FLOORS (1 << 2)
+#define BGCHECK_RAYCAST_DOWN_CHECK_WALLS_SIMPLE (1 << 3) // stops checking dyna walls on finding first candidate result
+#define BGCHECK_RAYCAST_DOWN_CHECK_GROUND_ONLY (1 << 4)  // skips walls and ceilings with normal.y < 0
 
-// SurfaceType_GetSfx
-extern u16 D_80119E10[14];
+// raycast down groundChk flag. When enabled, search range is limited to floors and walls with a normal.y >= 0
+#define BGCHECK_GROUND_CHECK_ON (1 << 0)
+
+extern s32 D_80119D90[WALL_TYPE_MAX];
+
+extern u16 D_80119E10[SURFACE_SFX_TYPE_MAX];
 
 /**
  * original name: T_BGCheck_PosErrorCheck
@@ -187,22 +218,22 @@ void StaticLookup_AddPoly(StaticLookup* lookup, CollisionContext* colCtx, Collis
  * Locates the closest static poly directly underneath `pos`, starting at list `ssList`
  * returns yIntersect of the closest poly, or `yIntersectMin`
  * stores the pointer of the closest poly to `outPoly`
- * if (flags & 1), ignore polys with a normal.y < 0 (from vertical walls to ceilings)
+ * if BGCHECK_GROUND_CHECK_ON is set, ignore polys with a normal.y < 0 (from vertical walls to ceilings)
  */
-f32 BgCheck_RaycastFloorStaticList(CollisionContext* colCtx, u16 xpFlags, SSList* ssList, CollisionPoly** outPoly,
-                                   Vec3f* pos, f32 yIntersectMin, f32 chkDist, s32 flags);
+f32 BgCheck_RaycastDownStaticList(CollisionContext* colCtx, u16 xpFlags, SSList* ssList, CollisionPoly** outPoly,
+                                  Vec3f* pos, f32 yIntersectMin, f32 chkDist, s32 groundChk);
 
 /**
  * Locates the closest static poly directly underneath `pos` within `lookup`.
  * returns yIntersect of the closest poly, or `yIntersectMin`
  * stores the pointer of the closest poly to `outPoly`
  */
-f32 BgCheck_RaycastFloorStatic(StaticLookup* lookup, CollisionContext* colCtx, u16 xpFlags, CollisionPoly** poly,
-                               Vec3f* pos, u32 arg5, f32 chkDist, f32 yIntersectMin);
+f32 BgCheck_RaycastDownStatic(StaticLookup* lookup, CollisionContext* colCtx, u16 xpFlags, CollisionPoly** poly,
+                              Vec3f* pos, u32 downChkFlags, f32 chkDist, f32 yIntersectMin);
 
 /**
  * Compute wall displacement on `posX` and `posZ`
- * sets `wallPolyPtr` to `poly` if `wallPolyPtr` is NULL or not a damage wall
+ * sets `wallPolyPtr` to `poly` if `wallPolyPtr` is NULL or doesn't have `surfaceData[0] & 0x08000000` set
  * returns true if `wallPolyPtr` was changed
  * `invXZlength` is 1 / sqrt( sq(poly.normal.x) + sq(poly.normal.z) )
  */
@@ -292,7 +323,7 @@ void BgCheck_GetSubdivisionMinBounds(CollisionContext* colCtx, Vec3f* pos, s32* 
 
 /**
  * Get positive bias subdivision indices
- * increments indicies if `pos` is within BGCHECK_SUBDIV_OVERLAP units of the postive subdivision boundary
+ * increments indices if `pos` is within BGCHECK_SUBDIV_OVERLAP units of the positive subdivision boundary
  * `sx`, `sy`, `sz` returns the subdivision x, y, z indices
  */
 void BgCheck_GetSubdivisionMaxBounds(CollisionContext* colCtx, Vec3f* pos, s32* sx, s32* sy, s32* sz);
@@ -361,95 +392,103 @@ CollisionHeader* BgCheck_GetCollisionHeader(CollisionContext* colCtx, s32 bgId);
 s32 BgCheck_PosInStaticBoundingBox(CollisionContext* colCtx, Vec3f* pos);
 
 /**
- * Raycast Toward Floor
+ * Raycast Downward
+ * If `actor` != null, bgcheck will be skipped for that actor
  * returns the yIntersect of the nearest poly found directly below `pos`, or BGCHECK_Y_MIN if no floor detected
  * returns the poly found in `outPoly`, and the bgId of the entity in `outBgId`
  */
-f32 BgCheck_RaycastFloorImpl(PlayState* play, CollisionContext* colCtx, u16 xpFlags, CollisionPoly** outPoly,
-                             s32* outBgId, Vec3f* pos, Actor* actor, u32 arg7, f32 chkDist);
+f32 BgCheck_RaycastDownImpl(PlayState* play, CollisionContext* colCtx, u16 xpFlags, CollisionPoly** outPoly,
+                            s32* outBgId, Vec3f* pos, Actor* actor, u32 downChkFlags, f32 chkDist);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check (UNUSED)
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_CameraRaycastFloor1(CollisionContext* colCtx, CollisionPoly** outPoly, Vec3f* pos);
+f32 BgCheck_CameraRaycastDown1(CollisionContext* colCtx, CollisionPoly** outGroundPoly, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor1(CollisionContext* colCtx, CollisionPoly** outPoly, Vec3f* pos);
+f32 BgCheck_EntityRaycastDown1(CollisionContext* colCtx, CollisionPoly** outGroundPoly, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor2(PlayState* play, CollisionContext* colCtx, CollisionPoly** outPoly, Vec3f* pos);
+f32 BgCheck_EntityRaycastDown2(PlayState* play, CollisionContext* colCtx, CollisionPoly** outGroundPoly, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor3(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Vec3f* pos);
+f32 BgCheck_EntityRaycastDown3(CollisionContext* colCtx, CollisionPoly** outGroundPoly, s32* bgId, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
+ * If `actor` != null, bgcheck will be skipped for that actor
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor4(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor,
-                                Vec3f* pos);
+f32 BgCheck_EntityRaycastDown4(CollisionContext* colCtx, CollisionPoly** outGroundPoly, s32* bgId, Actor* actor,
+                               Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
+ * If `actor` != null, bgcheck will be skipped for that actor
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor5(PlayState* play, CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId,
-                                Actor* actor, Vec3f* pos);
+f32 BgCheck_EntityRaycastDown5(PlayState* play, CollisionContext* colCtx, CollisionPoly** outGroundPoly, s32* bgId,
+                               Actor* actor, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
+ * If `actor` != null, bgcheck will be skipped for that actor
+ * `chkDist` is the distance beyond the poly's boundary where the check will still pass
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor6(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor, Vec3f* pos,
-                                f32 chkDist);
+f32 BgCheck_EntityRaycastDown6(CollisionContext* colCtx, CollisionPoly** outGroundPoly, s32* bgId, Actor* actor,
+                               Vec3f* pos, f32 chkDist);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, floor and exhaustive wall check (UNUSED)
+ * If `actor` != null, bgcheck will be skipped for that actor
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor7(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor,
-                                Vec3f* pos);
+f32 BgCheck_EntityRaycastDown7(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check
+ * `outGroundPoly` returns original value if no poly detected
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_AnyRaycastFloor1(CollisionContext* colCtx, CollisionPoly* outPoly, Vec3f* pos);
+f32 BgCheck_AnyRaycastDown1(CollisionContext* colCtx, CollisionPoly* outGroundPoly, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, ground check (UNUSED)
+ * `outGroundPoly` returns original value if no poly detected
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_AnyRaycastFloor2(CollisionContext* colCtx, CollisionPoly* outPoly, s32* bgId, Vec3f* pos);
+f32 BgCheck_AnyRaycastDown2(CollisionContext* colCtx, CollisionPoly* outGroundPoly, s32* bgId, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, floor and exhaustive wall check
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_CameraRaycastFloor2(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Vec3f* pos);
+f32 BgCheck_CameraRaycastDown2(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, exhaustive wall check (UNUSED)
+ * If `actor` != null, bgcheck will be skipped for that actor
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor8(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor,
-                                Vec3f* pos);
+f32 BgCheck_EntityRaycastDownWalls(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Actor* actor,
+                                   Vec3f* pos);
 
 /**
- * Public raycast toward floor
+ * Public raycast downward, floor and exhaustive wall check (UNUSED)
  * returns yIntersect of the poly found, or BGCHECK_Y_MIN if no poly detected
  */
-f32 BgCheck_EntityRaycastFloor9(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Vec3f* pos);
+f32 BgCheck_EntityRaycastDown9(CollisionContext* colCtx, CollisionPoly** outPoly, s32* bgId, Vec3f* pos);
 
 /**
  * Tests if moving from `posPrev` to `posNext` will collide with a "wall"
@@ -754,33 +793,33 @@ s32 DynaPoly_SetBgActor(PlayState* play, DynaCollisionContext* dyna, Actor* acto
  */
 DynaPolyActor* DynaPoly_GetActor(CollisionContext* colCtx, s32 bgId);
 
-void func_8003EBF8(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
+void DynaPoly_DisableCollision(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
 
-void func_8003EC50(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
+void DynaPoly_EnableCollision(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
 
-void func_8003ECA8(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
+void DynaPoly_DisableCeilingCollision(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
 
-void func_8003ED00(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
+void DynaPoly_EnableCeilingCollision(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
 
 /**
  * original name: DynaPolyInfo_delReserve
  */
 void DynaPoly_DeleteBgActor(PlayState* play, DynaCollisionContext* dyna, s32 bgId);
 
-void func_8003EE6C(PlayState* play, DynaCollisionContext* dyna);
+void DynaPoly_InvalidateLookup(PlayState* play, DynaCollisionContext* dyna);
 
 /**
  * original name: DynaPolyInfo_expandSRT
  */
-void DynaPoly_ExpandSRT(PlayState* play, DynaCollisionContext* dyna, s32 bgId, s32* vtxStartIndex,
-                        s32* polyStartIndex);
+void DynaPoly_AddBgActorToLookup(PlayState* play, DynaCollisionContext* dyna, s32 bgId, s32* vtxStartIndex,
+                                 s32* polyStartIndex);
 
-void func_8003F8EC(PlayState* play, DynaCollisionContext* dyna, Actor* actor);
+void DynaPoly_UnsetAllInteractFlags(PlayState* play, DynaCollisionContext* dyna, Actor* actor);
 
 /**
- * DynaPolyInfo_setup
+ * Original name: "DynaPolyInfo_setup"
  */
-void DynaPoly_Setup(PlayState* play, DynaCollisionContext* dyna);
+void DynaPoly_UpdateContext(PlayState* play, DynaCollisionContext* dyna);
 
 /**
  * Update all BgActor's previous ScaleRotPos
@@ -792,16 +831,16 @@ void DynaPoly_UpdateBgActorTransforms(PlayState* play, DynaCollisionContext* dyn
 #define DYNA_RAYCAST_CEILINGS 4
 
 /**
- * Perform dyna poly raycast toward floor on a list of floor, wall, or ceiling polys
+ * Performs a downward raycast check on a list of floor, wall, or ceiling dyna polys
  * `listType` specifies the poly list type (e.g. DYNA_RAYCAST_FLOORS)
  */
-f32 BgCheck_RaycastFloorDynaList(DynaRaycast* dynaRaycast, u32 listType);
+f32 BgCheck_RaycastDownDynaList(DynaRaycastDown* dynaRaycastDown, u32 listType);
 
 /**
- * Perform dyna poly raycast toward floor
+ * Performs a downward raycast check on dyna polys
  * returns the yIntersect of the poly found, or BGCHECK_Y_MIN if no poly is found
  */
-f32 BgCheck_RaycastFloorDyna(DynaRaycast* dynaRaycast);
+f32 BgCheck_RaycastDownDyna(DynaRaycastDown* dynaRaycastDown);
 
 /**
  * Performs collision detection on a BgActor's wall polys on sphere `pos`, `radius`
@@ -919,127 +958,76 @@ void BgCheck_ResetPolyCheckTbl(SSNodeList* nodeList, s32 numPolys);
  */
 u32 SurfaceType_GetData(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId, s32 dataIdx);
 
-/**
- * SurfaceType return CamData Index
- */
-u32 SurfaceType_GetCamDataIndex(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetBgCamIndex(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
- * CamData return cameraSType
+ * BgCam get setting of bgCam
  */
-u16 func_80041A4C(CollisionContext* colCtx, u32 camId, s32 bgId);
+u16 BgCheck_GetBgCamSettingImpl(CollisionContext* colCtx, u32 bgCamIndex, s32 bgId);
 
 /**
- * SurfaceType return cameraSType
+ * BgCam Get the camera setting of bgCam
  */
-u16 SurfaceType_GetCameraSType(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u16 BgCheck_GetBgCamSetting(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
- * CamData Get number of cameras
+ * BgCam Get the total count of Vec3s data from bgCamFuncData
  */
-u16 func_80041B24(CollisionContext* colCtx, u32 camId, s32 bgId);
+u16 BgCheck_GetBgCamCountImpl(CollisionContext* colCtx, u32 bgCamIndex, s32 bgId);
 
 /**
- * SurfaceType Get number of cameras
+ * BgCam Get the total count of Vec3s data from bgCamFuncData
  */
-u16 SurfaceType_GetNumCameras(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u16 BgCheck_GetBgCamCount(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
- * CamData Get camPosData
+ * BgCam Get Vec3s data from bgCamFuncData
  */
-Vec3s* func_80041C10(CollisionContext* colCtx, s32 camId, s32 bgId);
+Vec3s* BgCheck_GetBgCamFuncDataImpl(CollisionContext* colCtx, s32 bgCamIndex, s32 bgId);
 
 /**
- * SurfaceType Get camPosData
+ * BgCam Get Vec3s data from bgCamFuncData
  */
-Vec3s* SurfaceType_GetCamPosData(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+Vec3s* BgCheck_GetBgCamFuncData(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Scene Exit Index
- */
-u32 SurfaceType_GetSceneExitIndex(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetExitIndex(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get ? Property (& 0x0003 E000)
- */
-u32 func_80041D4C(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetFloorType(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
  * SurfaceType Get ? Property (& 0x001C 0000)
  */
 u32 func_80041D70(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Wall Property (Internal)
- */
-u32 func_80041D94(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetWallType(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Wall Flags
- */
-s32 func_80041DB8(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+s32 SurfaceType_GetWallFlags(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Wall Flag (1 << 0) Set
- */
-s32 func_80041DE4(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+s32 SurfaceType_CheckWallFlag0(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Wall Flag (1 << 1) Set
- */
-s32 func_80041E18(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+s32 SurfaceType_CheckWallFlag1(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Wall Flag (1 << 2) Set
- */
-s32 func_80041E4C(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+s32 SurfaceType_CheckWallFlag2(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * unused
- */
-u32 func_80041E80(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetFloorProperty2(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Floor Property
- */
-u32 func_80041EA4(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetFloorProperty(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Floor Minus 1
- */
-u32 func_80041EC8(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_IsSoft(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Horse Blocked
- */
 u32 SurfaceType_IsHorseBlocked(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-u32 func_80041F10(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetSfxType(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Poly Sfx
- */
-u16 SurfaceType_GetSfx(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u16 SurfaceType_GetSfxId(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType get terrain slope surface
- */
-u32 SurfaceType_GetSlope(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetFloorEffect(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType get surface lighting setting
- */
-u32 SurfaceType_GetLightSettingIndex(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_GetLightSetting(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType get echo
- */
 u32 SurfaceType_GetEcho(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Is Hookshot Surface
- */
-u32 SurfaceType_IsHookshotSurface(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 SurfaceType_CanHookshot(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
  * CollisionPoly is ignored by entities
@@ -1064,36 +1052,29 @@ s32 SurfaceType_IsIgnoredByProjectiles(CollisionContext* colCtx, CollisionPoly* 
  */
 s32 SurfaceType_IsFloorConveyor(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType Get Conveyor Surface Speed
- */
 u32 SurfaceType_GetConveyorSpeed(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
- * SurfaceType Get Conveyor Direction
  * returns a value between 0-63, representing 360 / 64 degrees of rotation
  */
 u32 SurfaceType_GetConveyorDirection(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
-/**
- * SurfaceType is Wall Damage
- */
-u32 SurfaceType_IsWallDamage(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
+u32 func_80042108(CollisionContext* colCtx, CollisionPoly* poly, s32 bgId);
 
 /**
  * Zora's Domain WaterBox in King Zora's Room
  */
-extern WaterBox zdWaterBox;
+extern WaterBox sZorasDomainWaterBox;
 
 /**
  * WaterBox's effective bounding box
  */
-extern f32 zdWaterBoxMinX;
-extern f32 zdWaterBoxMinY;
-extern f32 zdWaterBoxMinZ;
-extern f32 zdWaterBoxMaxX;
-extern f32 zdWaterBoxMaxY;
-extern f32 zdWaterBoxMaxZ;
+extern f32 sZorasDomainWaterBoxMinX;
+extern f32 sZorasDomainWaterBoxMinY;
+extern f32 sZorasDomainWaterBoxMinZ;
+extern f32 sZorasDomainWaterBoxMaxX;
+extern f32 sZorasDomainWaterBoxMaxY;
+extern f32 sZorasDomainWaterBoxMaxZ;
 
 /**
  * Public. Get the water surface at point (`x`, `ySurface`, `z`). `ySurface` doubles as position y input
@@ -1112,7 +1093,7 @@ s32 WaterBox_GetSurfaceImpl(PlayState* play, CollisionContext* colCtx, f32 x, f3
                             WaterBox** outWaterBox);
 
 /**
- * Gets the first active WaterBox at `pos` where WaterBox.properties & 0x80000 == 0
+ * Gets the first active WaterBox at `pos` with WATERBOX_FLAG_19 not set
  * `surfaceChkDist` is the absolute y distance from the water surface to check
  * returns the index of the waterbox found, or -1 if no waterbox is found
  * `outWaterBox` returns the pointer to the waterbox found, or NULL if none is found
@@ -1121,23 +1102,23 @@ s32 WaterBox_GetSurface2(PlayState* play, CollisionContext* colCtx, Vec3f* pos, 
                          WaterBox** outWaterBox);
 
 /**
- * WaterBox get CamData index
+ * WaterBox get BgCam index
  */
-u32 WaterBox_GetCamDataIndex(CollisionContext* colCtx, WaterBox* waterBox);
+u32 WaterBox_GetBgCamIndex(CollisionContext* colCtx, WaterBox* waterBox);
 
 /**
- * WaterBox get CamData cameraSType
+ * WaterBox get BgCam setting
  */
-u16 WaterBox_GetCameraSType(CollisionContext* colCtx, WaterBox* waterBox);
+u16 WaterBox_GetBgCamSetting(CollisionContext* colCtx, WaterBox* waterBox);
 
 /**
  * WaterBox get lighting settings
  */
-u32 WaterBox_GetLightSettingIndex(CollisionContext* colCtx, WaterBox* waterBox);
+u32 WaterBox_GetLightIndex(CollisionContext* colCtx, WaterBox* waterBox);
 
 /**
  * Get the water surface at point (`x`, `ySurface`, `z`). `ySurface` doubles as position y input
- * same as WaterBox_GetSurfaceImpl, but tests if WaterBox properties & 0x80000 != 0
+ * same as WaterBox_GetSurfaceImpl, but tests if WATERBOX_FLAG_19 is set
  * returns true if point is within the xz boundaries of an active water box, else false
  * `ySurface` returns the water box's surface, while `outWaterBox` returns a pointer to the WaterBox
  */

@@ -16,16 +16,31 @@ extern FaultClient D_801614B8;
 extern s16 sTransitionFillTimer;
 extern u64 D_801614D0[0xA00];
 
-void Play_SpawnScene(PlayState* this, s32 sceneNum, s32 spawn);
+void Play_SpawnScene(PlayState* this, s32 sceneId, s32 spawn);
 
-void func_800BC450(PlayState* this);
+// This macro prints the number "1" with a file and line number if R_ENABLE_PLAY_LOGS is enabled.
+// For example, it can be used to trace the play state execution at a high level.
+#define PLAY_LOG(line)                            \
+    do {                                          \
+        if (R_ENABLE_PLAY_LOGS) {                 \
+            LOG_NUM("1", 1, "../z_play.c", line); \
+        }                                         \
+    } while (0)
 
-void func_800BC490(PlayState* this, s16 point);
+void Play_ChangeViewpointBgCamIndex(PlayState* this);
 
-s32 func_800BC56C(PlayState* this, s16 arg1);
+void Play_SetViewpoint(PlayState* this, s16 viewpoint);
 
-// original name: "Game_play_shop_pr_vr_switch_set"
-void func_800BC590(PlayState* this);
+/**
+ * @return true if the currently set viewpoint is the same as the one provided in the argument
+ */
+s32 Play_CheckViewpoint(PlayState* this, s16 viewpoint);
+
+/**
+ * If the scene is a shop, set the viewpoint that will set the bgCamIndex
+ * to toggle the camera into a "browsing item selection" setting.
+ */
+void Play_SetShopBrowsingViewpoint(PlayState* this);
 
 void Play_SetupTransition(PlayState* this, s32 transitionType);
 
@@ -48,7 +63,7 @@ void Play_Main(GameState* thisx);
 // original name: "Game_play_demo_mode_check"
 s32 Play_InCsMode(PlayState* this);
 
-f32 func_800BFCB8(PlayState* this, MtxF* mf, Vec3f* vec);
+f32 func_800BFCB8(PlayState* this, MtxF* mf, Vec3f* pos);
 
 void* Play_LoadFile(PlayState* this, RomFile* file);
 
@@ -56,7 +71,7 @@ void Play_InitEnvironment(PlayState* this, s16 skyboxId);
 
 void Play_InitScene(PlayState* this, s32 spawn);
 
-void Play_SpawnScene(PlayState* this, s32 sceneNum, s32 spawn);
+void Play_SpawnScene(PlayState* this, s32 sceneId, s32 spawn);
 
 void Play_GetScreenPos(PlayState* this, Vec3f* src, Vec3f* dest);
 
@@ -105,7 +120,7 @@ void Play_LoadToLastEntrance(PlayState* this);
 
 void Play_TriggerRespawn(PlayState* this);
 
-s32 func_800C0CB8(PlayState* this);
+s32 Play_CamIsNotFixed(PlayState* this);
 
 s32 FrameAdvance_IsEnabled(PlayState* this);
 
