@@ -21,7 +21,7 @@ extern u64 object_link_boyTLUT_005400[];
 extern u64 gLinkAdultBootFarTex[];
 extern u64 object_link_boyTLUT_005800[];
 extern u64 object_link_boyTLUT_005A00[];
-extern u64 gLinkAdultHeadTlut[];
+extern u64 gLinkAdultHeadTLUT[];
 extern u64 gLinkAdultTlut_005E00[];
 extern u64 gLinkAdultBootTex[];
 extern u64 gLinkAdultLegTex[];

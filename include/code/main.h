@@ -12,7 +12,7 @@ extern PreNmiBuff* gAppNmiBufferPtr;
 extern Scheduler gScheduler;
 extern PadMgr gPadMgr;
 extern IrqMgr gIrqMgr;
-extern u32 gSegments[NUM_SEGMENTS];
+extern uintptr_t gSegments[NUM_SEGMENTS];
 extern OSThread sGraphThread;
 STACK(sGraphStack, 0x1800);
 STACK(sSchedStack, 0x600);

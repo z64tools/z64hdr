@@ -25,25 +25,26 @@ extern const char* sDmaMgrFileNames[];
 
 s32 DmaMgr_CompareName(const char* name1, const char* name2);
 
-s32 DmaMgr_DmaRomToRam(u32 rom, u32 ram, u32 size);
+s32 DmaMgr_DmaRomToRam(uintptr_t rom, void* ram, u32 size);
 
 s32 DmaMgr_DmaHandler(OSPiHandle* pihandle, OSIoMesg* mb, s32 direction);
 
-void DmaMgr_DmaFromDriveRom(u32 ram, u32 rom, u32 size);
+void DmaMgr_DmaFromDriveRom(void* ram, uintptr_t rom, u32 size);
 
 void DmaMgr_Error(DmaRequest* req, const char* file, const char* errorName, const char* errorDesc);
 
-extern const char* DmaMgr_GetFileNameImpl(u32 vrom);
+extern const char* DmaMgr_GetFileNameImpl(uintptr_t vrom);
 
-extern const char* DmaMgr_GetFileName(u32 vrom);
+extern const char* DmaMgr_GetFileName(uintptr_t vrom);
 
 void DmaMgr_ProcessMsg(DmaRequest* req);
 
 void DmaMgr_ThreadEntry(void* arg);
 
-s32 DmaMgr_SendRequestImpl(DmaRequest* req, u32 ram, u32 vrom, u32 size, u32 unk, OSMesgQueue* queue, OSMesg msg);
+s32 DmaMgr_SendRequestImpl(DmaRequest* req, void* ram, uintptr_t vrom, u32 size, u32 unk, OSMesgQueue* queue,
+                           OSMesg msg);
 
-s32 DmaMgr_SendRequest0(u32 ram, u32 vrom, u32 size);
+s32 DmaMgr_SendRequest0(void* ram, uintptr_t vrom, u32 size);
 
 void DmaMgr_Init(void);
 

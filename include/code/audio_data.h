@@ -36,13 +36,13 @@ extern u8 gDefaultShortNoteVelocityTable[];
 
 extern u8 gDefaultShortNoteGateTimeTable[];
 
-extern AdsrEnvelope gDefaultEnvelope[];
+extern EnvelopePoint gDefaultEnvelope[];
 
 extern NoteSubEu gZeroNoteSub;
 
 extern NoteSubEu gDefaultNoteSub;
 
-extern u16 gHeadsetPanQuantization[64];
+extern u16 gHaasEffectDelaySizes[64];
 
 extern s32 D_8012FBA4;
 

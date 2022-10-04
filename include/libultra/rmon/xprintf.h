@@ -8,13 +8,13 @@
         if (i < 999)                         \
             i = *a + i * 10 - '0';
 
-#define _PROUT(fmt, _size)                 \
-    if (_size > 0) {                       \
-        arg = (void*)pfn(arg, fmt, _size); \
-        if (arg != 0)                      \
-            x.nchar += _size;              \
-        else                               \
-            return x.nchar;                \
+#define _PROUT(fmt, _size)          \
+    if (_size > 0) {                \
+        arg = pfn(arg, fmt, _size); \
+        if (arg != NULL)            \
+            x.nchar += _size;       \
+        else                        \
+            return x.nchar;         \
     }
 #define _PAD(m, src, extracond)      \
     if (extracond && m > 0) {        \

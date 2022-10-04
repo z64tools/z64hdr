@@ -13,13 +13,13 @@ void Audio_NoteDisable(Note* note);
 
 void Audio_ProcessNotes(void);
 
-SoundFontSound* Audio_InstrumentGetSound(Instrument* instrument, s32 semitone);
+TunedSample* Audio_GetInstrumentTunedSample(Instrument* instrument, s32 semitone);
 
 Instrument* Audio_GetInstrumentInner(s32 fontId, s32 instId);
 
 Drum* Audio_GetDrum(s32 fontId, s32 drumId);
 
-SoundFontSound* Audio_GetSfx(s32 fontId, s32 sfxId);
+SoundEffect* Audio_GetSoundEffect(s32 fontId, s32 sfxId);
 
 s32 Audio_SetFontInstrument(s32 instrumentType, s32 fontId, s32 index, void* value);
 
@@ -29,6 +29,14 @@ void Audio_SeqLayerNoteDecay(SequenceLayer* layer);
 
 void Audio_SeqLayerNoteRelease(SequenceLayer* layer);
 
+/**
+ * Extract the synthetic wave to use from gWaveSamples and update corresponding frequencies
+ *
+ * @param note
+ * @param layer
+ * @param waveId the index of the type of synthetic wave to use, offset by 128
+ * @return harmonicIndex, the index of the harmonic for the synthetic wave contained in gWaveSamples
+ */
 s32 Audio_BuildSyntheticWave(Note* note, SequenceLayer* layer, s32 waveId);
 
 void Audio_InitSyntheticWave(Note* note, SequenceLayer* layer);

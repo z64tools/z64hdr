@@ -2,579 +2,579 @@
 	/* misc/link_animetion/link_animetion.o */
 		_link_animetionSegmentDataStart  = 0x07000000; /* ROM:0x004E5C00 */
 	/* misc/link_animetion/link_animetion.o */
-		gPlayerAnimData_000000           = 0x07000000; /* ROM:0x004E5C00 */
-		gPlayerAnimData_000A80           = 0x07000A80; /* ROM:0x004E6680 */
-		gPlayerAnimData_001500           = 0x07001500; /* ROM:0x004E7100 */
-		gPlayerAnimData_001CE0           = 0x07001CE0; /* ROM:0x004E78E0 */
-		gPlayerAnimData_002970           = 0x07002970; /* ROM:0x004E8570 */
-		gPlayerAnimData_003150           = 0x07003150; /* ROM:0x004E8D50 */
-		gPlayerAnimData_003EF0           = 0x07003EF0; /* ROM:0x004E9AF0 */
-		gPlayerAnimData_004970           = 0x07004970; /* ROM:0x004EA570 */
-		gPlayerAnimData_0053F0           = 0x070053F0; /* ROM:0x004EAFF0 */
-		gPlayerAnimData_005930           = 0x07005930; /* ROM:0x004EB530 */
-		gPlayerAnimData_0068F0           = 0x070068F0; /* ROM:0x004EC4F0 */
-		gPlayerAnimData_0078B0           = 0x070078B0; /* ROM:0x004ED4B0 */
-		gPlayerAnimData_008B10           = 0x07008B10; /* ROM:0x004EE710 */
-		gPlayerAnimData_00A000           = 0x0700A000; /* ROM:0x004EFC00 */
-		gPlayerAnimData_00AA80           = 0x0700AA80; /* ROM:0x004F0680 */
-		gPlayerAnimData_00B7A0           = 0x0700B7A0; /* ROM:0x004F13A0 */
-		gPlayerAnimData_00C220           = 0x0700C220; /* ROM:0x004F1E20 */
-		gPlayerAnimData_00D710           = 0x0700D710; /* ROM:0x004F3310 */
-		gPlayerAnimData_00F1D0           = 0x0700F1D0; /* ROM:0x004F4DD0 */
-		gPlayerAnimData_013770           = 0x07013770; /* ROM:0x004F9370 */
-		gPlayerAnimData_0148C0           = 0x070148C0; /* ROM:0x004FA4C0 */
-		gPlayerAnimData_016590           = 0x07016590; /* ROM:0x004FC190 */
-		gPlayerAnimData_0199F0           = 0x070199F0; /* ROM:0x004FF5F0 */
-		gPlayerAnimData_01CE50           = 0x0701CE50; /* ROM:0x00502A50 */
-		gPlayerAnimData_01E340           = 0x0701E340; /* ROM:0x00503F40 */
-		gPlayerAnimData_01F830           = 0x0701F830; /* ROM:0x00505430 */
-		gPlayerAnimData_0202B0           = 0x070202B0; /* ROM:0x00505EB0 */
-		gPlayerAnimData_020D30           = 0x07020D30; /* ROM:0x00506930 */
-		gPlayerAnimData_0246D0           = 0x070246D0; /* ROM:0x0050A2D0 */
-		gPlayerAnimData_025930           = 0x07025930; /* ROM:0x0050B530 */
-		gPlayerAnimData_026650           = 0x07026650; /* ROM:0x0050C250 */
-		gPlayerAnimData_0270D0           = 0x070270D0; /* ROM:0x0050CCD0 */
-		gPlayerAnimData_0278B0           = 0x070278B0; /* ROM:0x0050D4B0 */
-		gPlayerAnimData_029580           = 0x07029580; /* ROM:0x0050F180 */
-		gPlayerAnimData_02A540           = 0x0702A540; /* ROM:0x00510140 */
-		gPlayerAnimData_02B500           = 0x0702B500; /* ROM:0x00511100 */
-		gPlayerAnimData_02C4C0           = 0x0702C4C0; /* ROM:0x005120C0 */
-		gPlayerAnimData_02DF80           = 0x0702DF80; /* ROM:0x00513B80 */
-		gPlayerAnimData_030860           = 0x07030860; /* ROM:0x00516460 */
-		gPlayerAnimData_031820           = 0x07031820; /* ROM:0x00517420 */
-		gPlayerAnimData_032A80           = 0x07032A80; /* ROM:0x00518680 */
-		gPlayerAnimData_033D60           = 0x07033D60; /* ROM:0x00519960 */
-		gPlayerAnimData_034FC0           = 0x07034FC0; /* ROM:0x0051ABC0 */
-		gPlayerAnimData_0362A0           = 0x070362A0; /* ROM:0x0051BEA0 */
-		gPlayerAnimData_037260           = 0x07037260; /* ROM:0x0051CE60 */
-		gPlayerAnimData_038C90           = 0x07038C90; /* ROM:0x0051E890 */
-		gPlayerAnimData_039790           = 0x07039790; /* ROM:0x0051F390 */
-		gPlayerAnimData_03A290           = 0x0703A290; /* ROM:0x0051FE90 */
-		gPlayerAnimData_03A530           = 0x0703A530; /* ROM:0x00520130 */
-		gPlayerAnimData_03C200           = 0x0703C200; /* ROM:0x00521E00 */
-		gPlayerAnimData_048110           = 0x07048110; /* ROM:0x0052DD10 */
-		gPlayerAnimData_04BAB0           = 0x0704BAB0; /* ROM:0x005316B0 */
-		gPlayerAnimData_04E490           = 0x0704E490; /* ROM:0x00534090 */
-		gPlayerAnimData_04F450           = 0x0704F450; /* ROM:0x00535050 */
-		gPlayerAnimData_050410           = 0x07050410; /* ROM:0x00536010 */
-		gPlayerAnimData_050E90           = 0x07050E90; /* ROM:0x00536A90 */
-		gPlayerAnimData_052E00           = 0x07052E00; /* ROM:0x00538A00 */
-		gPlayerAnimData_054590           = 0x07054590; /* ROM:0x0053A190 */
-		gPlayerAnimData_055D20           = 0x07055D20; /* ROM:0x0053B920 */
-		gPlayerAnimData_058C40           = 0x07058C40; /* ROM:0x0053E840 */
-		gPlayerAnimData_05BB60           = 0x0705BB60; /* ROM:0x00541760 */
-		gPlayerAnimData_05D2F0           = 0x0705D2F0; /* ROM:0x00542EF0 */
-		gPlayerAnimData_05F260           = 0x0705F260; /* ROM:0x00544E60 */
-		gPlayerAnimData_05F830           = 0x0705F830; /* ROM:0x00545430 */
-		gPlayerAnimData_060090           = 0x07060090; /* ROM:0x00545C90 */
-		gPlayerAnimData_060660           = 0x07060660; /* ROM:0x00546260 */
-		gPlayerAnimData_060FD0           = 0x07060FD0; /* ROM:0x00546BD0 */
-		gPlayerAnimData_061510           = 0x07061510; /* ROM:0x00547110 */
-		gPlayerAnimData_061AE0           = 0x07061AE0; /* ROM:0x005476E0 */
-		gPlayerAnimData_061FA0           = 0x07061FA0; /* ROM:0x00547BA0 */
-		gPlayerAnimData_062670           = 0x07062670; /* ROM:0x00548270 */
-		gPlayerAnimData_062CC0           = 0x07062CC0; /* ROM:0x005488C0 */
-		gPlayerAnimData_0630F0           = 0x070630F0; /* ROM:0x00548CF0 */
-		gPlayerAnimData_0638D0           = 0x070638D0; /* ROM:0x005494D0 */
-		gPlayerAnimData_064240           = 0x07064240; /* ROM:0x00549E40 */
-		gPlayerAnimData_064C40           = 0x07064C40; /* ROM:0x0054A840 */
-		gPlayerAnimData_065E10           = 0x07065E10; /* ROM:0x0054BA10 */
-		gPlayerAnimData_066780           = 0x07066780; /* ROM:0x0054C380 */
-		gPlayerAnimData_066FE0           = 0x07066FE0; /* ROM:0x0054CBE0 */
-		gPlayerAnimData_067840           = 0x07067840; /* ROM:0x0054D440 */
-		gPlayerAnimData_0680A0           = 0x070680A0; /* ROM:0x0054DCA0 */
-		gPlayerAnimData_068900           = 0x07068900; /* ROM:0x0054E500 */
-		gPlayerAnimData_068D30           = 0x07068D30; /* ROM:0x0054E930 */
-		gPlayerAnimData_069160           = 0x07069160; /* ROM:0x0054ED60 */
-		gPlayerAnimData_069510           = 0x07069510; /* ROM:0x0054F110 */
-		gPlayerAnimData_069D70           = 0x07069D70; /* ROM:0x0054F970 */
-		gPlayerAnimData_06A440           = 0x0706A440; /* ROM:0x00550040 */
-		gPlayerAnimData_06AF40           = 0x0706AF40; /* ROM:0x00550B40 */
-		gPlayerAnimData_06B940           = 0x0706B940; /* ROM:0x00551540 */
-		gPlayerAnimData_06BE00           = 0x0706BE00; /* ROM:0x00551A00 */
-		gPlayerAnimData_06CEC0           = 0x0706CEC0; /* ROM:0x00552AC0 */
-		gPlayerAnimData_06D6A0           = 0x0706D6A0; /* ROM:0x005532A0 */
-		gPlayerAnimData_06DE00           = 0x0706DE00; /* ROM:0x00553A00 */
-		gPlayerAnimData_06E660           = 0x0706E660; /* ROM:0x00554260 */
-		gPlayerAnimData_06EEC0           = 0x0706EEC0; /* ROM:0x00554AC0 */
+		gPlayerAnim_L_1kyoro_Data        = 0x07000000; /* ROM:0x004E5C00 */
+		gPlayerAnim_L_2kyoro_Data        = 0x07000A80; /* ROM:0x004E6680 */
+		gPlayerAnim_L_bouzen_Data        = 0x07001500; /* ROM:0x004E7100 */
+		gPlayerAnim_L_hajikareru_Data    = 0x07001CE0; /* ROM:0x004E78E0 */
+		gPlayerAnim_L_kamaeru_Data       = 0x07002970; /* ROM:0x004E8570 */
+		gPlayerAnim_L_ken_miru_Data      = 0x07003150; /* ROM:0x004E8D50 */
+		gPlayerAnim_L_kennasi_w_Data     = 0x07003EF0; /* ROM:0x004E9AF0 */
+		gPlayerAnim_L_kw_Data            = 0x07004970; /* ROM:0x004EA570 */
+		gPlayerAnim_L_mukinaoru_Data     = 0x070053F0; /* ROM:0x004EAFF0 */
+		gPlayerAnim_L_okarina_get_Data   = 0x07005930; /* ROM:0x004EB530 */
+		gPlayerAnim_L_sagaru_Data        = 0x070068F0; /* ROM:0x004EC4F0 */
+		gPlayerAnim_Link_ha_Data         = 0x070078B0; /* ROM:0x004ED4B0 */
+		gPlayerAnim_Link_m_wait_Data     = 0x07008B10; /* ROM:0x004EE710 */
+		gPlayerAnim_Link_miageru_Data    = 0x0700A000; /* ROM:0x004EFC00 */
+		gPlayerAnim_Link_muku_Data       = 0x0700AA80; /* ROM:0x004F0680 */
+		gPlayerAnim_Link_otituku_w_Data  = 0x0700B7A0; /* ROM:0x004F13A0 */
+		gPlayerAnim_Link_ue_wait_Data    = 0x0700C220; /* ROM:0x004F1E20 */
+		gPlayerAnim_clink_demo_DDbox_open_Data = 0x0700D710; /* ROM:0x004F3310 */
+		gPlayerAnim_clink_demo_Tbox_open_Data = 0x0700F1D0; /* ROM:0x004F4DD0 */
+		gPlayerAnim_clink_demo_atozusari_Data = 0x07013770; /* ROM:0x004F9370 */
+		gPlayerAnim_clink_demo_bashi_Data = 0x070148C0; /* ROM:0x004FA4C0 */
+		gPlayerAnim_clink_demo_doorA_link_Data = 0x07016590; /* ROM:0x004FC190 */
+		gPlayerAnim_clink_demo_doorB_link_Data = 0x070199F0; /* ROM:0x004FF5F0 */
+		gPlayerAnim_clink_demo_futtobi_Data = 0x0701CE50; /* ROM:0x00502A50 */
+		gPlayerAnim_clink_demo_get1_Data = 0x0701E340; /* ROM:0x00503F40 */
+		gPlayerAnim_clink_demo_get2_Data = 0x0701F830; /* ROM:0x00505430 */
+		gPlayerAnim_clink_demo_get3_Data = 0x070202B0; /* ROM:0x00505EB0 */
+		gPlayerAnim_clink_demo_goto_future_Data = 0x07020D30; /* ROM:0x00506930 */
+		gPlayerAnim_clink_demo_koutai_Data = 0x070246D0; /* ROM:0x0050A2D0 */
+		gPlayerAnim_clink_demo_koutai_kennuki_Data = 0x07025930; /* ROM:0x0050B530 */
+		gPlayerAnim_clink_demo_koutai_wait_Data = 0x07026650; /* ROM:0x0050C250 */
+		gPlayerAnim_clink_demo_mimawasi_Data = 0x070270D0; /* ROM:0x0050CCD0 */
+		gPlayerAnim_clink_demo_mimawasi_wait_Data = 0x070278B0; /* ROM:0x0050D4B0 */
+		gPlayerAnim_clink_demo_miokuri_Data = 0x07029580; /* ROM:0x0050F180 */
+		gPlayerAnim_clink_demo_miokuri_wait_Data = 0x0702A540; /* ROM:0x00510140 */
+		gPlayerAnim_clink_demo_nozoki_Data = 0x0702B500; /* ROM:0x00511100 */
+		gPlayerAnim_clink_demo_return_to_future_Data = 0x0702C4C0; /* ROM:0x005120C0 */
+		gPlayerAnim_clink_demo_standup_Data = 0x0702DF80; /* ROM:0x00513B80 */
+		gPlayerAnim_clink_demo_standup_wait_Data = 0x07030860; /* ROM:0x00516460 */
+		gPlayerAnim_clink_normal_climb_endAL_Data = 0x07031820; /* ROM:0x00517420 */
+		gPlayerAnim_clink_normal_climb_endAR_Data = 0x07032A80; /* ROM:0x00518680 */
+		gPlayerAnim_clink_normal_climb_endBL_Data = 0x07033D60; /* ROM:0x00519960 */
+		gPlayerAnim_clink_normal_climb_endBR_Data = 0x07034FC0; /* ROM:0x0051ABC0 */
+		gPlayerAnim_clink_normal_climb_startA_Data = 0x070362A0; /* ROM:0x0051BEA0 */
+		gPlayerAnim_clink_normal_climb_startB_Data = 0x07037260; /* ROM:0x0051CE60 */
+		gPlayerAnim_clink_normal_climb_upL_Data = 0x07038C90; /* ROM:0x0051E890 */
+		gPlayerAnim_clink_normal_climb_upR_Data = 0x07039790; /* ROM:0x0051F390 */
+		gPlayerAnim_clink_normal_defense_ALL_Data = 0x0703A290; /* ROM:0x0051FE90 */
+		gPlayerAnim_clink_op3_negaeri_Data = 0x0703A530; /* ROM:0x00520130 */
+		gPlayerAnim_clink_op3_okiagari_Data = 0x0703C200; /* ROM:0x00521E00 */
+		gPlayerAnim_clink_op3_tatiagari_Data = 0x07048110; /* ROM:0x0052DD10 */
+		gPlayerAnim_clink_op3_wait1_Data = 0x0704BAB0; /* ROM:0x005316B0 */
+		gPlayerAnim_clink_op3_wait2_Data = 0x0704E490; /* ROM:0x00534090 */
+		gPlayerAnim_clink_op3_wait3_Data = 0x0704F450; /* ROM:0x00535050 */
+		gPlayerAnim_d_link_imanodare_Data = 0x07050410; /* ROM:0x00536010 */
+		gPlayerAnim_d_link_orooro_Data   = 0x07050E90; /* ROM:0x00536A90 */
+		gPlayerAnim_d_link_orowait_Data  = 0x07052E00; /* ROM:0x00538A00 */
+		gPlayerAnim_demo_link_nwait_Data = 0x07054590; /* ROM:0x0053A190 */
+		gPlayerAnim_demo_link_orosuu_Data = 0x07055D20; /* ROM:0x0053B920 */
+		gPlayerAnim_demo_link_tewatashi_Data = 0x07058C40; /* ROM:0x0053E840 */
+		gPlayerAnim_demo_link_twait_Data = 0x0705BB60; /* ROM:0x00541760 */
+		gPlayerAnim_kolink_odoroki_demo_Data = 0x0705D2F0; /* ROM:0x00542EF0 */
+		gPlayerAnim_link_anchor_LLside_kiru_endL_Data = 0x0705F260; /* ROM:0x00544E60 */
+		gPlayerAnim_link_anchor_LLside_kiru_finsh_endR_Data = 0x0705F830; /* ROM:0x00545430 */
+		gPlayerAnim_link_anchor_LRside_kiru_endR_Data = 0x07060090; /* ROM:0x00545C90 */
+		gPlayerAnim_link_anchor_LRside_kiru_finsh_endL_Data = 0x07060660; /* ROM:0x00546260 */
+		gPlayerAnim_link_anchor_Lnormal_kiru_endR_Data = 0x07060FD0; /* ROM:0x00546BD0 */
+		gPlayerAnim_link_anchor_Lnormal_kiru_finsh_endR_Data = 0x07061510; /* ROM:0x00547110 */
+		gPlayerAnim_link_anchor_Lpierce_kiru_endL_Data = 0x07061AE0; /* ROM:0x005476E0 */
+		gPlayerAnim_link_anchor_Lpierce_kiru_finsh_endR_Data = 0x07061FA0; /* ROM:0x00547BA0 */
+		gPlayerAnim_link_anchor_Lrolling_kiru_endR_Data = 0x07062670; /* ROM:0x00548270 */
+		gPlayerAnim_link_anchor_Lside_kiru_endR_Data = 0x07062CC0; /* ROM:0x005488C0 */
+		gPlayerAnim_link_anchor_Lside_kiru_finsh_endR_Data = 0x070630F0; /* ROM:0x00548CF0 */
+		gPlayerAnim_link_anchor_Rside_kiru_endR_Data = 0x070638D0; /* ROM:0x005494D0 */
+		gPlayerAnim_link_anchor_Rside_kiru_finsh_endR_Data = 0x07064240; /* ROM:0x00549E40 */
+		gPlayerAnim_link_anchor_anchor2fighter_Data = 0x07064C40; /* ROM:0x0054A840 */
+		gPlayerAnim_link_anchor_back_brake_Data = 0x07065E10; /* ROM:0x0054BA10 */
+		gPlayerAnim_link_anchor_back_hitR_Data = 0x07066780; /* ROM:0x0054C380 */
+		gPlayerAnim_link_anchor_back_walk_Data = 0x07066FE0; /* ROM:0x0054CBE0 */
+		gPlayerAnim_link_anchor_bom_side_walkL_Data = 0x07067840; /* ROM:0x0054D440 */
+		gPlayerAnim_link_anchor_bom_side_walkR_Data = 0x070680A0; /* ROM:0x0054DCA0 */
+		gPlayerAnim_link_anchor_defense_hit_Data = 0x07068900; /* ROM:0x0054E500 */
+		gPlayerAnim_link_anchor_defense_long_hitL_Data = 0x07068D30; /* ROM:0x0054E930 */
+		gPlayerAnim_link_anchor_defense_long_hitR_Data = 0x07069160; /* ROM:0x0054ED60 */
+		gPlayerAnim_link_anchor_front_hitR_Data = 0x07069510; /* ROM:0x0054F110 */
+		gPlayerAnim_link_anchor_jump_kiru_finsh_endR_Data = 0x07069D70; /* ROM:0x0054F970 */
+		gPlayerAnim_link_anchor_landingR_Data = 0x0706A440; /* ROM:0x00550040 */
+		gPlayerAnim_link_anchor_normal_kiru_finsh_endR_Data = 0x0706AF40; /* ROM:0x00550B40 */
+		gPlayerAnim_link_anchor_pierce_kiru_endR_Data = 0x0706B940; /* ROM:0x00551540 */
+		gPlayerAnim_link_anchor_pierce_kiru_finsh_endR_Data = 0x0706BE00; /* ROM:0x00551A00 */
+		gPlayerAnim_link_anchor_power_kiru_wait_endR_Data = 0x0706CEC0; /* ROM:0x00552AC0 */
+		gPlayerAnim_link_anchor_rolling_kiru_endR_Data = 0x0706D6A0; /* ROM:0x005532A0 */
+		gPlayerAnim_link_anchor_side_walkL_Data = 0x0706DE00; /* ROM:0x00553A00 */
+		gPlayerAnim_link_anchor_side_walkR_Data = 0x0706E660; /* ROM:0x00554260 */
+		gPlayerAnim_link_anchor_waitL_Data = 0x0706EEC0; /* ROM:0x00554AC0 */
 		gPlayerAnimData_06FDF0           = 0x0706FDF0; /* ROM:0x005559F0 */
-		gPlayerAnimData_06FF90           = 0x0706FF90; /* ROM:0x00555B90 */
-		gPlayerAnimData_070130           = 0x07070130; /* ROM:0x00555D30 */
-		gPlayerAnimData_0702D0           = 0x070702D0; /* ROM:0x00555ED0 */
-		gPlayerAnimData_070570           = 0x07070570; /* ROM:0x00556170 */
+		gPlayerAnim_link_anchor_waitL2defense_Data = 0x0706FF90; /* ROM:0x00555B90 */
+		gPlayerAnim_link_anchor_waitL2defense_long_Data = 0x07070130; /* ROM:0x00555D30 */
+		gPlayerAnim_link_anchor_waitL_defense_Data = 0x070702D0; /* ROM:0x00555ED0 */
+		gPlayerAnim_link_anchor_waitL_defense_wait_Data = 0x07070570; /* ROM:0x00556170 */
 		gPlayerAnimData_0715B0           = 0x070715B0; /* ROM:0x005571B0 */
-		gPlayerAnimData_071E10           = 0x07071E10; /* ROM:0x00557A10 */
-		gPlayerAnimData_0722D0           = 0x070722D0; /* ROM:0x00557ED0 */
+		gPlayerAnim_link_anchor_waitL_pierce_kiru_Data = 0x07071E10; /* ROM:0x00557A10 */
+		gPlayerAnim_link_anchor_waitR_Data = 0x070722D0; /* ROM:0x00557ED0 */
 		gPlayerAnimData_073200           = 0x07073200; /* ROM:0x00558E00 */
-		gPlayerAnimData_0733A0           = 0x070733A0; /* ROM:0x00558FA0 */
-		gPlayerAnimData_073540           = 0x07073540; /* ROM:0x00559140 */
-		gPlayerAnimData_0736E0           = 0x070736E0; /* ROM:0x005592E0 */
-		gPlayerAnimData_073980           = 0x07073980; /* ROM:0x00559580 */
+		gPlayerAnim_link_anchor_waitR2defense_Data = 0x070733A0; /* ROM:0x00558FA0 */
+		gPlayerAnim_link_anchor_waitR2defense_long_Data = 0x07073540; /* ROM:0x00559140 */
+		gPlayerAnim_link_anchor_waitR_defense_Data = 0x070736E0; /* ROM:0x005592E0 */
+		gPlayerAnim_link_anchor_waitR_defense_wait_Data = 0x07073980; /* ROM:0x00559580 */
 		gPlayerAnimData_0749C0           = 0x070749C0; /* ROM:0x0055A5C0 */
-		gPlayerAnimData_075220           = 0x07075220; /* ROM:0x0055AE20 */
-		gPlayerAnimData_0756E0           = 0x070756E0; /* ROM:0x0055B2E0 */
+		gPlayerAnim_link_anchor_waitR_pierce_kiru_Data = 0x07075220; /* ROM:0x0055AE20 */
+		gPlayerAnim_link_boom_catch_Data = 0x070756E0; /* ROM:0x0055B2E0 */
 		gPlayerAnimData_076160           = 0x07076160; /* ROM:0x0055BD60 */
-		gPlayerAnimData_076AD0           = 0x07076AD0; /* ROM:0x0055C6D0 */
-		gPlayerAnimData_077550           = 0x07077550; /* ROM:0x0055D150 */
-		gPlayerAnimData_077FD0           = 0x07077FD0; /* ROM:0x0055DBD0 */
-		gPlayerAnimData_078830           = 0x07078830; /* ROM:0x0055E430 */
-		gPlayerAnimData_079090           = 0x07079090; /* ROM:0x0055EC90 */
-		gPlayerAnimData_0793C0           = 0x070793C0; /* ROM:0x0055EFC0 */
-		gPlayerAnimData_07A2F0           = 0x0707A2F0; /* ROM:0x0055FEF0 */
-		gPlayerAnimData_07B220           = 0x0707B220; /* ROM:0x00560E20 */
-		gPlayerAnimData_07C930           = 0x0707C930; /* ROM:0x00562530 */
-		gPlayerAnimData_07D000           = 0x0707D000; /* ROM:0x00562C00 */
-		gPlayerAnimData_0814A0           = 0x070814A0; /* ROM:0x005670A0 */
-		gPlayerAnimData_0856A0           = 0x070856A0; /* ROM:0x0056B2A0 */
-		gPlayerAnimData_0870D0           = 0x070870D0; /* ROM:0x0056CCD0 */
-		gPlayerAnimData_088970           = 0x07088970; /* ROM:0x0056E570 */
-		gPlayerAnimData_088E30           = 0x07088E30; /* ROM:0x0056EA30 */
-		gPlayerAnimData_08A540           = 0x0708A540; /* ROM:0x00570140 */
-		gPlayerAnimData_08B040           = 0x0708B040; /* ROM:0x00570C40 */
-		gPlayerAnimData_08EF10           = 0x0708EF10; /* ROM:0x00574B10 */
-		gPlayerAnimData_092370           = 0x07092370; /* ROM:0x00577F70 */
-		gPlayerAnimData_092DF0           = 0x07092DF0; /* ROM:0x005789F0 */
-		gPlayerAnimData_0932B0           = 0x070932B0; /* ROM:0x00578EB0 */
-		gPlayerAnimData_093450           = 0x07093450; /* ROM:0x00579050 */
-		gPlayerAnimData_093CB0           = 0x07093CB0; /* ROM:0x005798B0 */
-		gPlayerAnimData_0940E0           = 0x070940E0; /* ROM:0x00579CE0 */
-		gPlayerAnimData_096370           = 0x07096370; /* ROM:0x0057BF70 */
-		gPlayerAnimData_096610           = 0x07096610; /* ROM:0x0057C210 */
-		gPlayerAnimData_097650           = 0x07097650; /* ROM:0x0057D250 */
-		gPlayerAnimData_097FC0           = 0x07097FC0; /* ROM:0x0057DBC0 */
-		gPlayerAnimData_0989C0           = 0x070989C0; /* ROM:0x0057E5C0 */
-		gPlayerAnimData_099650           = 0x07099650; /* ROM:0x0057F250 */
-		gPlayerAnimData_099B10           = 0x07099B10; /* ROM:0x0057F710 */
-		gPlayerAnimData_09CF70           = 0x0709CF70; /* ROM:0x00582B70 */
-		gPlayerAnimData_09F4A0           = 0x0709F4A0; /* ROM:0x005850A0 */
-		gPlayerAnimData_0A1E80           = 0x070A1E80; /* ROM:0x00587A80 */
-		gPlayerAnimData_0A3940           = 0x070A3940; /* ROM:0x00589540 */
-		gPlayerAnimData_0A7EE0           = 0x070A7EE0; /* ROM:0x0058DAE0 */
-		gPlayerAnimData_0AAE00           = 0x070AAE00; /* ROM:0x00590A00 */
-		gPlayerAnimData_0AC060           = 0x070AC060; /* ROM:0x00591C60 */
-		gPlayerAnimData_0AD550           = 0x070AD550; /* ROM:0x00593150 */
-		gPlayerAnimData_0AE270           = 0x070AE270; /* ROM:0x00593E70 */
-		gPlayerAnimData_0AECF0           = 0x070AECF0; /* ROM:0x005948F0 */
-		gPlayerAnimData_0B2150           = 0x070B2150; /* ROM:0x00597D50 */
-		gPlayerAnimData_0B55B0           = 0x070B55B0; /* ROM:0x0059B1B0 */
-		gPlayerAnimData_0B8A10           = 0x070B8A10; /* ROM:0x0059E610 */
-		gPlayerAnimData_0BBE70           = 0x070BBE70; /* ROM:0x005A1A70 */
-		gPlayerAnimData_0BE850           = 0x070BE850; /* ROM:0x005A4450 */
-		gPlayerAnimData_0BFFE0           = 0x070BFFE0; /* ROM:0x005A5BE0 */
-		gPlayerAnimData_0C0FA0           = 0x070C0FA0; /* ROM:0x005A6BA0 */
-		gPlayerAnimData_0C1B30           = 0x070C1B30; /* ROM:0x005A7730 */
-		gPlayerAnimData_0C26C0           = 0x070C26C0; /* ROM:0x005A82C0 */
-		gPlayerAnimData_0C3EE0           = 0x070C3EE0; /* ROM:0x005A9AE0 */
-		gPlayerAnimData_0C4960           = 0x070C4960; /* ROM:0x005AA560 */
-		gPlayerAnimData_0C4EA0           = 0x070C4EA0; /* ROM:0x005AAAA0 */
-		gPlayerAnimData_0C8300           = 0x070C8300; /* ROM:0x005ADF00 */
-		gPlayerAnimData_0C8D80           = 0x070C8D80; /* ROM:0x005AE980 */
-		gPlayerAnimData_0CBA00           = 0x070CBA00; /* ROM:0x005B1600 */
-		gPlayerAnimData_0CC720           = 0x070CC720; /* ROM:0x005B2320 */
-		gPlayerAnimData_0CD1A0           = 0x070CD1A0; /* ROM:0x005B2DA0 */
-		gPlayerAnimData_0CDC20           = 0x070CDC20; /* ROM:0x005B3820 */
-		gPlayerAnimData_0CE400           = 0x070CE400; /* ROM:0x005B4000 */
-		gPlayerAnimData_0CEE80           = 0x070CEE80; /* ROM:0x005B4A80 */
-		gPlayerAnimData_0CF3C0           = 0x070CF3C0; /* ROM:0x005B4FC0 */
-		gPlayerAnimData_0CFE40           = 0x070CFE40; /* ROM:0x005B5A40 */
-		gPlayerAnimData_0D10A0           = 0x070D10A0; /* ROM:0x005B6CA0 */
-		gPlayerAnimData_0D1880           = 0x070D1880; /* ROM:0x005B7480 */
-		gPlayerAnimData_0D2300           = 0x070D2300; /* ROM:0x005B7F00 */
-		gPlayerAnimData_0D31B0           = 0x070D31B0; /* ROM:0x005B8DB0 */
-		gPlayerAnimData_0D4410           = 0x070D4410; /* ROM:0x005BA010 */
-		gPlayerAnimData_0D4E90           = 0x070D4E90; /* ROM:0x005BAA90 */
-		gPlayerAnimData_0D7340           = 0x070D7340; /* ROM:0x005BCF40 */
-		gPlayerAnimData_0D85A0           = 0x070D85A0; /* ROM:0x005BE1A0 */
+		gPlayerAnim_link_boom_throwL_Data = 0x07076AD0; /* ROM:0x0055C6D0 */
+		gPlayerAnim_link_boom_throwR_Data = 0x07077550; /* ROM:0x0055D150 */
+		gPlayerAnim_link_boom_throw_side_walkL_Data = 0x07077FD0; /* ROM:0x0055DBD0 */
+		gPlayerAnim_link_boom_throw_side_walkR_Data = 0x07078830; /* ROM:0x0055E430 */
+		gPlayerAnim_link_boom_throw_wait2waitR_Data = 0x07079090; /* ROM:0x0055EC90 */
+		gPlayerAnim_link_boom_throw_waitL_Data = 0x070793C0; /* ROM:0x0055EFC0 */
+		gPlayerAnim_link_boom_throw_waitR_Data = 0x0707A2F0; /* ROM:0x0055FEF0 */
+		gPlayerAnim_link_bottle_bug_in_Data = 0x0707B220; /* ROM:0x00560E20 */
+		gPlayerAnim_link_bottle_bug_miss_Data = 0x0707C930; /* ROM:0x00562530 */
+		gPlayerAnim_link_bottle_bug_out_Data = 0x0707D000; /* ROM:0x00562C00 */
+		gPlayerAnim_link_bottle_drink_demo_Data = 0x070814A0; /* ROM:0x005670A0 */
+		gPlayerAnim_link_bottle_drink_demo_end_Data = 0x070856A0; /* ROM:0x0056B2A0 */
+		gPlayerAnim_link_bottle_drink_demo_start_Data = 0x070870D0; /* ROM:0x0056CCD0 */
+		gPlayerAnim_link_bottle_drink_demo_wait_Data = 0x07088970; /* ROM:0x0056E570 */
+		gPlayerAnim_link_bottle_fish_in_Data = 0x07088E30; /* ROM:0x0056EA30 */
+		gPlayerAnim_link_bottle_fish_miss_Data = 0x0708A540; /* ROM:0x00570140 */
+		gPlayerAnim_link_bottle_fish_out_Data = 0x0708B040; /* ROM:0x00570C40 */
+		gPlayerAnim_link_bottle_read_Data = 0x0708EF10; /* ROM:0x00574B10 */
+		gPlayerAnim_link_bottle_read_end_Data = 0x07092370; /* ROM:0x00577F70 */
+		gPlayerAnim_link_bow_bow_ready_Data = 0x07092DF0; /* ROM:0x005789F0 */
+		gPlayerAnim_link_bow_bow_shoot_Data = 0x070932B0; /* ROM:0x00578EB0 */
+		gPlayerAnim_link_bow_bow_shoot_end_Data = 0x07093450; /* ROM:0x00579050 */
+		gPlayerAnim_link_bow_bow_shoot_next_Data = 0x07093CB0; /* ROM:0x005798B0 */
+		gPlayerAnim_link_bow_bow_wait_Data = 0x070940E0; /* ROM:0x00579CE0 */
+		gPlayerAnim_link_bow_defense_Data = 0x07096370; /* ROM:0x0057BF70 */
+		gPlayerAnim_link_bow_defense_wait_Data = 0x07096610; /* ROM:0x0057C210 */
+		gPlayerAnim_link_bow_side_runL_Data = 0x07097650; /* ROM:0x0057D250 */
+		gPlayerAnim_link_bow_side_runR_Data = 0x07097FC0; /* ROM:0x0057DBC0 */
+		gPlayerAnim_link_bow_side_walk_Data = 0x070989C0; /* ROM:0x0057E5C0 */
+		gPlayerAnim_link_bow_walk2ready_Data = 0x07099650; /* ROM:0x0057F250 */
+		gPlayerAnim_link_child_tunnel_door_Data = 0x07099B10; /* ROM:0x0057F710 */
+		gPlayerAnim_link_child_tunnel_end_Data = 0x0709CF70; /* ROM:0x00582B70 */
+		gPlayerAnim_link_child_tunnel_start_Data = 0x0709F4A0; /* ROM:0x005850A0 */
+		gPlayerAnim_link_demo_DDbox_open_Data = 0x070A1E80; /* ROM:0x00587A80 */
+		gPlayerAnim_link_demo_Tbox_open_Data = 0x070A3940; /* ROM:0x00589540 */
+		gPlayerAnim_link_demo_back_to_past_Data = 0x070A7EE0; /* ROM:0x0058DAE0 */
+		gPlayerAnim_link_demo_baru_op1_Data = 0x070AAE00; /* ROM:0x00590A00 */
+		gPlayerAnim_link_demo_baru_op2_Data = 0x070AC060; /* ROM:0x00591C60 */
+		gPlayerAnim_link_demo_baru_op3_Data = 0x070AD550; /* ROM:0x00593150 */
+		gPlayerAnim_link_demo_bikkuri_Data = 0x070AE270; /* ROM:0x00593E70 */
+		gPlayerAnim_link_demo_doorA_link_Data = 0x070AECF0; /* ROM:0x005948F0 */
+		gPlayerAnim_link_demo_doorA_link_free_Data = 0x070B2150; /* ROM:0x00597D50 */
+		gPlayerAnim_link_demo_doorB_link_Data = 0x070B55B0; /* ROM:0x0059B1B0 */
+		gPlayerAnim_link_demo_doorB_link_free_Data = 0x070B8A10; /* ROM:0x0059E610 */
+		gPlayerAnim_link_demo_furimuki_Data = 0x070BBE70; /* ROM:0x005A1A70 */
+		gPlayerAnim_link_demo_furimuki2_Data = 0x070BE850; /* ROM:0x005A4450 */
+		gPlayerAnim_link_demo_furimuki2_wait_Data = 0x070BFFE0; /* ROM:0x005A5BE0 */
+		gPlayerAnim_link_demo_get_itemA_Data = 0x070C0FA0; /* ROM:0x005A6BA0 */
+		gPlayerAnim_link_demo_get_itemB_Data = 0x070C1B30; /* ROM:0x005A7730 */
+		gPlayerAnim_link_demo_goma_furimuki_Data = 0x070C26C0; /* ROM:0x005A82C0 */
+		gPlayerAnim_link_demo_gurad_Data = 0x070C3EE0; /* ROM:0x005A9AE0 */
+		gPlayerAnim_link_demo_gurad_wait_Data = 0x070C4960; /* ROM:0x005AA560 */
+		gPlayerAnim_link_demo_jibunmiru_Data = 0x070C4EA0; /* ROM:0x005AAAA0 */
+		gPlayerAnim_link_demo_kakeyori_Data = 0x070C8300; /* ROM:0x005ADF00 */
+		gPlayerAnim_link_demo_kakeyori_mimawasi_Data = 0x070C8D80; /* ROM:0x005AE980 */
+		gPlayerAnim_link_demo_kakeyori_miokuri_Data = 0x070CBA00; /* ROM:0x005B1600 */
+		gPlayerAnim_link_demo_kakeyori_miokuri_wait_Data = 0x070CC720; /* ROM:0x005B2320 */
+		gPlayerAnim_link_demo_kakeyori_wait_Data = 0x070CD1A0; /* ROM:0x005B2DA0 */
+		gPlayerAnim_link_demo_kaoage_Data = 0x070CDC20; /* ROM:0x005B3820 */
+		gPlayerAnim_link_demo_kaoage_wait_Data = 0x070CE400; /* ROM:0x005B4000 */
+		gPlayerAnim_link_demo_kenmiru1_Data = 0x070CEE80; /* ROM:0x005B4A80 */
+		gPlayerAnim_link_demo_kenmiru1_wait_Data = 0x070CF3C0; /* ROM:0x005B4FC0 */
+		gPlayerAnim_link_demo_kenmiru2_Data = 0x070CFE40; /* ROM:0x005B5A40 */
+		gPlayerAnim_link_demo_kenmiru2_modori_Data = 0x070D10A0; /* ROM:0x005B6CA0 */
+		gPlayerAnim_link_demo_kenmiru2_wait_Data = 0x070D1880; /* ROM:0x005B7480 */
+		gPlayerAnim_link_demo_kousan_Data = 0x070D2300; /* ROM:0x005B7F00 */
+		gPlayerAnim_link_demo_look_hand_Data = 0x070D31B0; /* ROM:0x005B8DB0 */
+		gPlayerAnim_link_demo_look_hand_wait_Data = 0x070D4410; /* ROM:0x005BA010 */
+		gPlayerAnim_link_demo_nozokikomi_Data = 0x070D4E90; /* ROM:0x005BAA90 */
+		gPlayerAnim_link_demo_nozokikomi_wait_Data = 0x070D7340; /* ROM:0x005BCF40 */
+		gPlayerAnim_link_demo_return_to_past_Data = 0x070D85A0; /* ROM:0x005BE1A0 */
 		gPlayerAnimData_0DAF80           = 0x070DAF80; /* ROM:0x005C0B80 */
-		gPlayerAnimData_0DB550           = 0x070DB550; /* ROM:0x005C1150 */
-		gPlayerAnimData_0DC510           = 0x070DC510; /* ROM:0x005C2110 */
-		gPlayerAnimData_0DCA50           = 0x070DCA50; /* ROM:0x005C2650 */
-		gPlayerAnimData_0DDA10           = 0x070DDA10; /* ROM:0x005C3610 */
-		gPlayerAnimData_0DFEC0           = 0x070DFEC0; /* ROM:0x005C5AC0 */
-		gPlayerAnimData_0E06A0           = 0x070E06A0; /* ROM:0x005C62A0 */
-		gPlayerAnimData_0E13C0           = 0x070E13C0; /* ROM:0x005C6FC0 */
-		gPlayerAnimData_0E8C30           = 0x070E8C30; /* ROM:0x005CE830 */
-		gPlayerAnimData_0E8F60           = 0x070E8F60; /* ROM:0x005CEB60 */
-		gPlayerAnimData_0E9630           = 0x070E9630; /* ROM:0x005CF230 */
-		gPlayerAnimData_0E9AF0           = 0x070E9AF0; /* ROM:0x005CF6F0 */
-		gPlayerAnimData_0EA350           = 0x070EA350; /* ROM:0x005CFF50 */
-		gPlayerAnimData_0EA680           = 0x070EA680; /* ROM:0x005D0280 */
-		gPlayerAnimData_0EAC50           = 0x070EAC50; /* ROM:0x005D0850 */
-		gPlayerAnimData_0EAF80           = 0x070EAF80; /* ROM:0x005D0B80 */
-		gPlayerAnimData_0EB870           = 0x070EB870; /* ROM:0x005D1470 */
-		gPlayerAnimData_0EBB10           = 0x070EBB10; /* ROM:0x005D1710 */
-		gPlayerAnimData_0EBFD0           = 0x070EBFD0; /* ROM:0x005D1BD0 */
-		gPlayerAnimData_0EC400           = 0x070EC400; /* ROM:0x005D2000 */
-		gPlayerAnimData_0EC9D0           = 0x070EC9D0; /* ROM:0x005D25D0 */
-		gPlayerAnimData_0ECB70           = 0x070ECB70; /* ROM:0x005D2770 */
-		gPlayerAnimData_0ED0B0           = 0x070ED0B0; /* ROM:0x005D2CB0 */
-		gPlayerAnimData_0ED570           = 0x070ED570; /* ROM:0x005D3170 */
-		gPlayerAnimData_0EDC40           = 0x070EDC40; /* ROM:0x005D3840 */
-		gPlayerAnimData_0EE180           = 0x070EE180; /* ROM:0x005D3D80 */
-		gPlayerAnimData_0EEB80           = 0x070EEB80; /* ROM:0x005D4780 */
-		gPlayerAnimData_0EF040           = 0x070EF040; /* ROM:0x005D4C40 */
-		gPlayerAnimData_0EFB40           = 0x070EFB40; /* ROM:0x005D5740 */
-		gPlayerAnimData_0F03A0           = 0x070F03A0; /* ROM:0x005D5FA0 */
-		gPlayerAnimData_0F1600           = 0x070F1600; /* ROM:0x005D7200 */
-		gPlayerAnimData_0F1DE0           = 0x070F1DE0; /* ROM:0x005D79E0 */
-		gPlayerAnimData_0F28E0           = 0x070F28E0; /* ROM:0x005D84E0 */
-		gPlayerAnimData_0F3140           = 0x070F3140; /* ROM:0x005D8D40 */
-		gPlayerAnimData_0F3790           = 0x070F3790; /* ROM:0x005D9390 */
-		gPlayerAnimData_0F3B40           = 0x070F3B40; /* ROM:0x005D9740 */
-		gPlayerAnimData_0F3F70           = 0x070F3F70; /* ROM:0x005D9B70 */
-		gPlayerAnimData_0F43A0           = 0x070F43A0; /* ROM:0x005D9FA0 */
-		gPlayerAnimData_0F4640           = 0x070F4640; /* ROM:0x005DA240 */
-		gPlayerAnimData_0F4B00           = 0x070F4B00; /* ROM:0x005DA700 */
-		gPlayerAnimData_0F4FC0           = 0x070F4FC0; /* ROM:0x005DABC0 */
-		gPlayerAnimData_0F57A0           = 0x070F57A0; /* ROM:0x005DB3A0 */
-		gPlayerAnimData_0F5B50           = 0x070F5B50; /* ROM:0x005DB750 */
-		gPlayerAnimData_0F5F80           = 0x070F5F80; /* ROM:0x005DBB80 */
-		gPlayerAnimData_0F63B0           = 0x070F63B0; /* ROM:0x005DBFB0 */
-		gPlayerAnimData_0F6650           = 0x070F6650; /* ROM:0x005DC250 */
-		gPlayerAnimData_0F6CA0           = 0x070F6CA0; /* ROM:0x005DC8A0 */
-		gPlayerAnimData_0F7050           = 0x070F7050; /* ROM:0x005DCC50 */
-		gPlayerAnimData_0F79C0           = 0x070F79C0; /* ROM:0x005DD5C0 */
-		gPlayerAnimData_0F82B0           = 0x070F82B0; /* ROM:0x005DDEB0 */
-		gPlayerAnimData_0F8900           = 0x070F8900; /* ROM:0x005DE500 */
-		gPlayerAnimData_0F90E0           = 0x070F90E0; /* ROM:0x005DECE0 */
-		gPlayerAnimData_0F9490           = 0x070F9490; /* ROM:0x005DF090 */
-		gPlayerAnimData_0F9AE0           = 0x070F9AE0; /* ROM:0x005DF6E0 */
-		gPlayerAnimData_0FA560           = 0x070FA560; /* ROM:0x005E0160 */
-		gPlayerAnimData_0FAFE0           = 0x070FAFE0; /* ROM:0x005E0BE0 */
-		gPlayerAnimData_0FB180           = 0x070FB180; /* ROM:0x005E0D80 */
-		gPlayerAnimData_0FB420           = 0x070FB420; /* ROM:0x005E1020 */
-		gPlayerAnimData_0FB8E0           = 0x070FB8E0; /* ROM:0x005E14E0 */
-		gPlayerAnimData_0FC920           = 0x070FC920; /* ROM:0x005E2520 */
-		gPlayerAnimData_0FD960           = 0x070FD960; /* ROM:0x005E3560 */
-		gPlayerAnimData_0FE3E0           = 0x070FE3E0; /* ROM:0x005E3FE0 */
-		gPlayerAnimData_0FE920           = 0x070FE920; /* ROM:0x005E4520 */
-		gPlayerAnimData_0FF420           = 0x070FF420; /* ROM:0x005E5020 */
-		gPlayerAnimData_0FFF20           = 0x070FFF20; /* ROM:0x005E5B20 */
-		gPlayerAnimData_1009A0           = 0x071009A0; /* ROM:0x005E65A0 */
-		gPlayerAnimData_100EE0           = 0x07100EE0; /* ROM:0x005E6AE0 */
-		gPlayerAnimData_101420           = 0x07101420; /* ROM:0x005E7020 */
-		gPlayerAnimData_101A70           = 0x07101A70; /* ROM:0x005E7670 */
-		gPlayerAnimData_102040           = 0x07102040; /* ROM:0x005E7C40 */
-		gPlayerAnimData_103100           = 0x07103100; /* ROM:0x005E8D00 */
+		gPlayerAnim_link_demo_sita_wait_Data = 0x070DB550; /* ROM:0x005C1150 */
+		gPlayerAnim_link_demo_ue_Data    = 0x070DC510; /* ROM:0x005C2110 */
+		gPlayerAnim_link_demo_ue_wait_Data = 0x070DCA50; /* ROM:0x005C2650 */
+		gPlayerAnim_link_demo_warp_Data  = 0x070DDA10; /* ROM:0x005C3610 */
+		gPlayerAnim_link_demo_zeldamiru_Data = 0x070DFEC0; /* ROM:0x005C5AC0 */
+		gPlayerAnim_link_demo_zeldamiru_wait_Data = 0x070E06A0; /* ROM:0x005C62A0 */
+		gPlayerAnim_link_derth_rebirth_Data = 0x070E13C0; /* ROM:0x005C6FC0 */
+		gPlayerAnim_link_fighter_LLside_kiru_Data = 0x070E8C30; /* ROM:0x005CE830 */
+		gPlayerAnim_link_fighter_LLside_kiru_end_Data = 0x070E8F60; /* ROM:0x005CEB60 */
+		gPlayerAnim_link_fighter_LLside_kiru_finsh_Data = 0x070E9630; /* ROM:0x005CF230 */
+		gPlayerAnim_link_fighter_LLside_kiru_finsh_end_Data = 0x070E9AF0; /* ROM:0x005CF6F0 */
+		gPlayerAnim_link_fighter_LRside_kiru_Data = 0x070EA350; /* ROM:0x005CFF50 */
+		gPlayerAnim_link_fighter_LRside_kiru_end_Data = 0x070EA680; /* ROM:0x005D0280 */
+		gPlayerAnim_link_fighter_LRside_kiru_finsh_Data = 0x070EAC50; /* ROM:0x005D0850 */
+		gPlayerAnim_link_fighter_LRside_kiru_finsh_end_Data = 0x070EAF80; /* ROM:0x005D0B80 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_Data = 0x070EB870; /* ROM:0x005D1470 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_end_Data = 0x070EBB10; /* ROM:0x005D1710 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_finsh_Data = 0x070EBFD0; /* ROM:0x005D1BD0 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_finsh_end_Data = 0x070EC400; /* ROM:0x005D2000 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_Data = 0x070EC9D0; /* ROM:0x005D25D0 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_end_Data = 0x070ECB70; /* ROM:0x005D2770 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_finsh_Data = 0x070ED0B0; /* ROM:0x005D2CB0 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_finsh_end_Data = 0x070ED570; /* ROM:0x005D3170 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru_Data = 0x070EDC40; /* ROM:0x005D3840 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru_end_Data = 0x070EE180; /* ROM:0x005D3D80 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru_hit_Data = 0x070EEB80; /* ROM:0x005D4780 */
+		gPlayerAnim_link_fighter_Lpower_kiru_side_walk_Data = 0x070EF040; /* ROM:0x005D4C40 */
+		gPlayerAnim_link_fighter_Lpower_kiru_start_Data = 0x070EFB40; /* ROM:0x005D5740 */
+		gPlayerAnim_link_fighter_Lpower_kiru_wait_Data = 0x070F03A0; /* ROM:0x005D5FA0 */
+		gPlayerAnim_link_fighter_Lpower_kiru_wait_end_Data = 0x070F1600; /* ROM:0x005D7200 */
+		gPlayerAnim_link_fighter_Lpower_kiru_walk_Data = 0x070F1DE0; /* ROM:0x005D79E0 */
+		gPlayerAnim_link_fighter_Lrolling_kiru_Data = 0x070F28E0; /* ROM:0x005D84E0 */
+		gPlayerAnim_link_fighter_Lrolling_kiru_end_Data = 0x070F3140; /* ROM:0x005D8D40 */
+		gPlayerAnim_link_fighter_Lside_jump_Data = 0x070F3790; /* ROM:0x005D9390 */
+		gPlayerAnim_link_fighter_Lside_jump_end_Data = 0x070F3B40; /* ROM:0x005D9740 */
+		gPlayerAnim_link_fighter_Lside_jump_endL_Data = 0x070F3F70; /* ROM:0x005D9B70 */
+		gPlayerAnim_link_fighter_Lside_kiru_Data = 0x070F43A0; /* ROM:0x005D9FA0 */
+		gPlayerAnim_link_fighter_Lside_kiru_end_Data = 0x070F4640; /* ROM:0x005DA240 */
+		gPlayerAnim_link_fighter_Lside_kiru_finsh_Data = 0x070F4B00; /* ROM:0x005DA700 */
+		gPlayerAnim_link_fighter_Lside_kiru_finsh_end_Data = 0x070F4FC0; /* ROM:0x005DABC0 */
+		gPlayerAnim_link_fighter_Rside_jump_Data = 0x070F57A0; /* ROM:0x005DB3A0 */
+		gPlayerAnim_link_fighter_Rside_jump_end_Data = 0x070F5B50; /* ROM:0x005DB750 */
+		gPlayerAnim_link_fighter_Rside_jump_endR_Data = 0x070F5F80; /* ROM:0x005DBB80 */
+		gPlayerAnim_link_fighter_Rside_kiru_Data = 0x070F63B0; /* ROM:0x005DBFB0 */
+		gPlayerAnim_link_fighter_Rside_kiru_end_Data = 0x070F6650; /* ROM:0x005DC250 */
+		gPlayerAnim_link_fighter_Rside_kiru_finsh_Data = 0x070F6CA0; /* ROM:0x005DC8A0 */
+		gPlayerAnim_link_fighter_Rside_kiru_finsh_end_Data = 0x070F7050; /* ROM:0x005DCC50 */
+		gPlayerAnim_link_fighter_Wrolling_kiru_Data = 0x070F79C0; /* ROM:0x005DD5C0 */
+		gPlayerAnim_link_fighter_Wrolling_kiru_end_Data = 0x070F82B0; /* ROM:0x005DDEB0 */
+		gPlayerAnim_link_fighter_backturn_jump_Data = 0x070F8900; /* ROM:0x005DE500 */
+		gPlayerAnim_link_fighter_backturn_jump_end_Data = 0x070F90E0; /* ROM:0x005DECE0 */
+		gPlayerAnim_link_fighter_backturn_jump_endR_Data = 0x070F9490; /* ROM:0x005DF090 */
+		gPlayerAnim_link_fighter_damage_run_Data = 0x070F9AE0; /* ROM:0x005DF6E0 */
+		gPlayerAnim_link_fighter_damage_run_long_Data = 0x070FA560; /* ROM:0x005E0160 */
+		gPlayerAnim_link_fighter_defense_Data = 0x070FAFE0; /* ROM:0x005E0BE0 */
+		gPlayerAnim_link_fighter_defense_long_Data = 0x070FB180; /* ROM:0x005E0D80 */
+		gPlayerAnim_link_fighter_defense_long_hit_Data = 0x070FB420; /* ROM:0x005E1020 */
+		gPlayerAnim_link_fighter_defense_long_wait_Data = 0x070FB8E0; /* ROM:0x005E14E0 */
+		gPlayerAnim_link_fighter_defense_wait_Data = 0x070FC920; /* ROM:0x005E2520 */
+		gPlayerAnim_link_fighter_fighter2long_Data = 0x070FD960; /* ROM:0x005E3560 */
+		gPlayerAnim_link_fighter_front_jump_Data = 0x070FE3E0; /* ROM:0x005E3FE0 */
+		gPlayerAnim_link_fighter_front_jump_end_Data = 0x070FE920; /* ROM:0x005E4520 */
+		gPlayerAnim_link_fighter_front_jump_endR_Data = 0x070FF420; /* ROM:0x005E5020 */
+		gPlayerAnim_link_fighter_heavy_run_long_Data = 0x070FFF20; /* ROM:0x005E5B20 */
+		gPlayerAnim_link_fighter_jump_kiru_Data = 0x071009A0; /* ROM:0x005E65A0 */
+		gPlayerAnim_link_fighter_jump_kiru_finsh_Data = 0x07100EE0; /* ROM:0x005E6AE0 */
+		gPlayerAnim_link_fighter_jump_kiru_finsh_end_Data = 0x07101420; /* ROM:0x005E7020 */
+		gPlayerAnim_link_fighter_jump_rollkiru_Data = 0x07101A70; /* ROM:0x005E7670 */
+		gPlayerAnim_link_fighter_landing_roll_long_Data = 0x07102040; /* ROM:0x005E7C40 */
+		gPlayerAnim_link_fighter_normal2fighter_Data = 0x07103100; /* ROM:0x005E8D00 */
 		gPlayerAnimData_103B80           = 0x07103B80; /* ROM:0x005E9780 */
-		gPlayerAnimData_104600           = 0x07104600; /* ROM:0x005EA200 */
-		gPlayerAnimData_1048A0           = 0x071048A0; /* ROM:0x005EA4A0 */
-		gPlayerAnimData_104CD0           = 0x07104CD0; /* ROM:0x005EA8D0 */
-		gPlayerAnimData_105190           = 0x07105190; /* ROM:0x005EAD90 */
-		gPlayerAnimData_1054C0           = 0x071054C0; /* ROM:0x005EB0C0 */
-		gPlayerAnimData_105EC0           = 0x07105EC0; /* ROM:0x005EBAC0 */
-		gPlayerAnimData_1060E0           = 0x071060E0; /* ROM:0x005EBCE0 */
-		gPlayerAnimData_1065A0           = 0x071065A0; /* ROM:0x005EC1A0 */
-		gPlayerAnimData_106AE0           = 0x07106AE0; /* ROM:0x005EC6E0 */
-		gPlayerAnimData_1074E0           = 0x071074E0; /* ROM:0x005ED0E0 */
+		gPlayerAnim_link_fighter_normal_kiru_Data = 0x07104600; /* ROM:0x005EA200 */
+		gPlayerAnim_link_fighter_normal_kiru_end_Data = 0x071048A0; /* ROM:0x005EA4A0 */
+		gPlayerAnim_link_fighter_normal_kiru_endR_Data = 0x07104CD0; /* ROM:0x005EA8D0 */
+		gPlayerAnim_link_fighter_normal_kiru_finsh_Data = 0x07105190; /* ROM:0x005EAD90 */
+		gPlayerAnim_link_fighter_normal_kiru_finsh_end_Data = 0x071054C0; /* ROM:0x005EB0C0 */
+		gPlayerAnim_link_fighter_pierce_kiru_Data = 0x07105EC0; /* ROM:0x005EBAC0 */
+		gPlayerAnim_link_fighter_pierce_kiru_end_Data = 0x071060E0; /* ROM:0x005EBCE0 */
+		gPlayerAnim_link_fighter_pierce_kiru_finsh_Data = 0x071065A0; /* ROM:0x005EC1A0 */
+		gPlayerAnim_link_fighter_pierce_kiru_finsh_end_Data = 0x07106AE0; /* ROM:0x005EC6E0 */
+		gPlayerAnim_link_fighter_power_jump_kiru_end_Data = 0x071074E0; /* ROM:0x005ED0E0 */
 		gPlayerAnimData_107F60           = 0x07107F60; /* ROM:0x005EDB60 */
-		gPlayerAnimData_1093D0           = 0x071093D0; /* ROM:0x005EEFD0 */
-		gPlayerAnimData_109ED0           = 0x07109ED0; /* ROM:0x005EFAD0 */
-		gPlayerAnimData_10A4A0           = 0x0710A4A0; /* ROM:0x005F00A0 */
-		gPlayerAnimData_10AA70           = 0x0710AA70; /* ROM:0x005F0670 */
-		gPlayerAnimData_10BC40           = 0x0710BC40; /* ROM:0x005F1840 */
-		gPlayerAnimData_10C420           = 0x0710C420; /* ROM:0x005F2020 */
-		gPlayerAnimData_10CF20           = 0x0710CF20; /* ROM:0x005F2B20 */
-		gPlayerAnimData_10D4F0           = 0x0710D4F0; /* ROM:0x005F30F0 */
-		gPlayerAnimData_10DAC0           = 0x0710DAC0; /* ROM:0x005F36C0 */
-		gPlayerAnimData_10E190           = 0x0710E190; /* ROM:0x005F3D90 */
-		gPlayerAnimData_10E860           = 0x0710E860; /* ROM:0x005F4460 */
-		gPlayerAnimData_10EF30           = 0x0710EF30; /* ROM:0x005F4B30 */
-		gPlayerAnimData_10F790           = 0x0710F790; /* ROM:0x005F5390 */
-		gPlayerAnimData_110210           = 0x07110210; /* ROM:0x005F5E10 */
+		gPlayerAnim_link_fighter_power_kiru_side_walk_Data = 0x071093D0; /* ROM:0x005EEFD0 */
+		gPlayerAnim_link_fighter_power_kiru_start_Data = 0x07109ED0; /* ROM:0x005EFAD0 */
+		gPlayerAnim_link_fighter_power_kiru_startL_Data = 0x0710A4A0; /* ROM:0x005F00A0 */
+		gPlayerAnim_link_fighter_power_kiru_wait_Data = 0x0710AA70; /* ROM:0x005F0670 */
+		gPlayerAnim_link_fighter_power_kiru_wait_end_Data = 0x0710BC40; /* ROM:0x005F1840 */
+		gPlayerAnim_link_fighter_power_kiru_walk_Data = 0x0710C420; /* ROM:0x005F2020 */
+		gPlayerAnim_link_fighter_rebound_Data = 0x0710CF20; /* ROM:0x005F2B20 */
+		gPlayerAnim_link_fighter_reboundR_Data = 0x0710D4F0; /* ROM:0x005F30F0 */
+		gPlayerAnim_link_fighter_rebound_long_Data = 0x0710DAC0; /* ROM:0x005F36C0 */
+		gPlayerAnim_link_fighter_rebound_longR_Data = 0x0710E190; /* ROM:0x005F3D90 */
+		gPlayerAnim_link_fighter_rolling_kiru_Data = 0x0710E860; /* ROM:0x005F4460 */
+		gPlayerAnim_link_fighter_rolling_kiru_end_Data = 0x0710EF30; /* ROM:0x005F4B30 */
+		gPlayerAnim_link_fighter_run_Data = 0x0710F790; /* ROM:0x005F5390 */
+		gPlayerAnim_link_fighter_run_long_Data = 0x07110210; /* ROM:0x005F5E10 */
 		gPlayerAnimData_110C90           = 0x07110C90; /* ROM:0x005F6890 */
 		gPlayerAnimData_111710           = 0x07111710; /* ROM:0x005F7310 */
-		gPlayerAnimData_112190           = 0x07112190; /* ROM:0x005F7D90 */
-		gPlayerAnimData_1129F0           = 0x071129F0; /* ROM:0x005F85F0 */
-		gPlayerAnimData_113250           = 0x07113250; /* ROM:0x005F8E50 */
-		gPlayerAnimData_114180           = 0x07114180; /* ROM:0x005F9D80 */
-		gPlayerAnimData_114420           = 0x07114420; /* ROM:0x005FA020 */
-		gPlayerAnimData_114C80           = 0x07114C80; /* ROM:0x005FA880 */
-		gPlayerAnimData_114FB0           = 0x07114FB0; /* ROM:0x005FABB0 */
-		gPlayerAnimData_115810           = 0x07115810; /* ROM:0x005FB410 */
-		gPlayerAnimData_1163A0           = 0x071163A0; /* ROM:0x005FBFA0 */
-		gPlayerAnimData_116640           = 0x07116640; /* ROM:0x005FC240 */
-		gPlayerAnimData_116DA0           = 0x07116DA0; /* ROM:0x005FC9A0 */
-		gPlayerAnimData_1170D0           = 0x071170D0; /* ROM:0x005FCCD0 */
-		gPlayerAnimData_117400           = 0x07117400; /* ROM:0x005FD000 */
-		gPlayerAnimData_117AD0           = 0x07117AD0; /* ROM:0x005FD6D0 */
-		gPlayerAnimData_118A00           = 0x07118A00; /* ROM:0x005FE600 */
-		gPlayerAnimData_1190D0           = 0x071190D0; /* ROM:0x005FECD0 */
+		gPlayerAnim_link_fighter_side_walkL_long_Data = 0x07112190; /* ROM:0x005F7D90 */
+		gPlayerAnim_link_fighter_side_walkR_long_Data = 0x071129F0; /* ROM:0x005F85F0 */
+		gPlayerAnim_link_fighter_side_walk_long_Data = 0x07113250; /* ROM:0x005F8E50 */
+		gPlayerAnim_link_fighter_turn_kiruL_Data = 0x07114180; /* ROM:0x005F9D80 */
+		gPlayerAnim_link_fighter_turn_kiruL_end_Data = 0x07114420; /* ROM:0x005FA020 */
+		gPlayerAnim_link_fighter_turn_kiruR_Data = 0x07114C80; /* ROM:0x005FA880 */
+		gPlayerAnim_link_fighter_turn_kiruR_end_Data = 0x07114FB0; /* ROM:0x005FABB0 */
+		gPlayerAnim_link_fighter_upper_kiruR_Data = 0x07115810; /* ROM:0x005FB410 */
+		gPlayerAnim_link_fighter_upper_pierce_kiru_Data = 0x071163A0; /* ROM:0x005FBFA0 */
+		gPlayerAnim_link_fighter_upper_pierce_kiru_end_Data = 0x07116640; /* ROM:0x005FC240 */
+		gPlayerAnim_link_fighter_wait2waitL_long_Data = 0x07116DA0; /* ROM:0x005FC9A0 */
+		gPlayerAnim_link_fighter_wait2waitR_long_Data = 0x071170D0; /* ROM:0x005FCCD0 */
+		gPlayerAnim_link_fighter_waitL2wait_long_Data = 0x07117400; /* ROM:0x005FD000 */
+		gPlayerAnim_link_fighter_waitL_long_Data = 0x07117AD0; /* ROM:0x005FD6D0 */
+		gPlayerAnim_link_fighter_waitR2wait_long_Data = 0x07118A00; /* ROM:0x005FE600 */
+		gPlayerAnim_link_fighter_waitR_long_Data = 0x071190D0; /* ROM:0x005FECD0 */
 		gPlayerAnimData_11A000           = 0x0711A000; /* ROM:0x005FFC00 */
-		gPlayerAnimData_11AB90           = 0x0711AB90; /* ROM:0x00600790 */
-		gPlayerAnimData_11DA30           = 0x0711DA30; /* ROM:0x00603630 */
-		gPlayerAnimData_11E000           = 0x0711E000; /* ROM:0x00603C00 */
-		gPlayerAnimData_11E5D0           = 0x0711E5D0; /* ROM:0x006041D0 */
-		gPlayerAnimData_11F500           = 0x0711F500; /* ROM:0x00605100 */
-		gPlayerAnimData_120FC0           = 0x07120FC0; /* ROM:0x00606BC0 */
-		gPlayerAnimData_121500           = 0x07121500; /* ROM:0x00607100 */
-		gPlayerAnimData_121830           = 0x07121830; /* ROM:0x00607430 */
-		gPlayerAnimData_121B60           = 0x07121B60; /* ROM:0x00607760 */
-		gPlayerAnimData_121E90           = 0x07121E90; /* ROM:0x00607A90 */
-		gPlayerAnimData_1221C0           = 0x071221C0; /* ROM:0x00607DC0 */
-		gPlayerAnimData_123BF0           = 0x07123BF0; /* ROM:0x006097F0 */
-		gPlayerAnimData_125170           = 0x07125170; /* ROM:0x0060AD70 */
-		gPlayerAnimData_125740           = 0x07125740; /* ROM:0x0060B340 */
-		gPlayerAnimData_126350           = 0x07126350; /* ROM:0x0060BF50 */
-		gPlayerAnimData_126F60           = 0x07126F60; /* ROM:0x0060CB60 */
-		gPlayerAnimData_1279E0           = 0x071279E0; /* ROM:0x0060D5E0 */
-		gPlayerAnimData_128460           = 0x07128460; /* ROM:0x0060E060 */
-		gPlayerAnimData_128EE0           = 0x07128EE0; /* ROM:0x0060EAE0 */
-		gPlayerAnimData_129530           = 0x07129530; /* ROM:0x0060F130 */
-		gPlayerAnimData_12A140           = 0x0712A140; /* ROM:0x0060FD40 */
-		gPlayerAnimData_12AD50           = 0x0712AD50; /* ROM:0x00610950 */
-		gPlayerAnimData_12D300           = 0x0712D300; /* ROM:0x00612F00 */
-		gPlayerAnimData_12D7C0           = 0x0712D7C0; /* ROM:0x006133C0 */
-		gPlayerAnimData_12E2C0           = 0x0712E2C0; /* ROM:0x00613EC0 */
-		gPlayerAnimData_12E780           = 0x0712E780; /* ROM:0x00614380 */
-		gPlayerAnimData_12F0F0           = 0x0712F0F0; /* ROM:0x00614CF0 */
-		gPlayerAnimData_12FA60           = 0x0712FA60; /* ROM:0x00615660 */
-		gPlayerAnimData_1306F0           = 0x071306F0; /* ROM:0x006162F0 */
-		gPlayerAnimData_132B10           = 0x07132B10; /* ROM:0x00618710 */
-		gPlayerAnimData_132FD0           = 0x07132FD0; /* ROM:0x00618BD0 */
-		gPlayerAnimData_135AC0           = 0x07135AC0; /* ROM:0x0061B6C0 */
-		gPlayerAnimData_136970           = 0x07136970; /* ROM:0x0061C570 */
-		gPlayerAnimData_1388E0           = 0x071388E0; /* ROM:0x0061E4E0 */
-		gPlayerAnimData_139600           = 0x07139600; /* ROM:0x0061F200 */
-		gPlayerAnimData_13B570           = 0x0713B570; /* ROM:0x00621170 */
-		gPlayerAnimData_13D2C0           = 0x0713D2C0; /* ROM:0x00622EC0 */
-		gPlayerAnimData_13D780           = 0x0713D780; /* ROM:0x00623380 */
-		gPlayerAnimData_13E840           = 0x0713E840; /* ROM:0x00624440 */
-		gPlayerAnimData_140380           = 0x07140380; /* ROM:0x00625F80 */
-		gPlayerAnimData_1412B0           = 0x071412B0; /* ROM:0x00626EB0 */
-		gPlayerAnimData_142C60           = 0x07142C60; /* ROM:0x00628860 */
-		gPlayerAnimData_1442F0           = 0x071442F0; /* ROM:0x00629EF0 */
-		gPlayerAnimData_145A00           = 0x07145A00; /* ROM:0x0062B600 */
-		gPlayerAnimData_1468B0           = 0x071468B0; /* ROM:0x0062C4B0 */
-		gPlayerAnimData_148040           = 0x07148040; /* ROM:0x0062DC40 */
+		gPlayerAnim_link_fighter_wait_long_Data = 0x0711AB90; /* ROM:0x00600790 */
+		gPlayerAnim_link_fighter_walk_endL_long_Data = 0x0711DA30; /* ROM:0x00603630 */
+		gPlayerAnim_link_fighter_walk_endR_long_Data = 0x0711E000; /* ROM:0x00603C00 */
+		gPlayerAnim_link_fighter_walk_long_Data = 0x0711E5D0; /* ROM:0x006041D0 */
+		gPlayerAnim_link_fishing_fish_catch_Data = 0x0711F500; /* ROM:0x00605100 */
+		gPlayerAnim_link_fishing_fish_catch_end_Data = 0x07120FC0; /* ROM:0x00606BC0 */
+		gPlayerAnim_link_fishing_reel_down_Data = 0x07121500; /* ROM:0x00607100 */
+		gPlayerAnim_link_fishing_reel_left_Data = 0x07121830; /* ROM:0x00607430 */
+		gPlayerAnim_link_fishing_reel_right_Data = 0x07121B60; /* ROM:0x00607760 */
+		gPlayerAnim_link_fishing_reel_up_Data = 0x07121E90; /* ROM:0x00607A90 */
+		gPlayerAnim_link_fishing_throw_Data = 0x071221C0; /* ROM:0x00607DC0 */
+		gPlayerAnim_link_fishing_wait_Data = 0x07123BF0; /* ROM:0x006097F0 */
+		gPlayerAnim_link_hammer_hit_Data = 0x07125170; /* ROM:0x0060AD70 */
+		gPlayerAnim_link_hammer_hit_end_Data = 0x07125740; /* ROM:0x0060B340 */
+		gPlayerAnim_link_hammer_hit_endR_Data = 0x07126350; /* ROM:0x0060BF50 */
+		gPlayerAnim_link_hammer_long2free_Data = 0x07126F60; /* ROM:0x0060CB60 */
+		gPlayerAnim_link_hammer_long2long_Data = 0x071279E0; /* ROM:0x0060D5E0 */
+		gPlayerAnim_link_hammer_normal2long_Data = 0x07128460; /* ROM:0x0060E060 */
+		gPlayerAnim_link_hammer_side_hit_Data = 0x07128EE0; /* ROM:0x0060EAE0 */
+		gPlayerAnim_link_hammer_side_hit_end_Data = 0x07129530; /* ROM:0x0060F130 */
+		gPlayerAnim_link_hammer_side_hit_endR_Data = 0x0712A140; /* ROM:0x0060FD40 */
+		gPlayerAnim_link_hatto_demo_Data = 0x0712AD50; /* ROM:0x00610950 */
+		gPlayerAnim_link_hook_fly_start_Data = 0x0712D300; /* ROM:0x00612F00 */
+		gPlayerAnim_link_hook_fly_wait_Data = 0x0712D7C0; /* ROM:0x006133C0 */
+		gPlayerAnim_link_hook_shot_ready_Data = 0x0712E2C0; /* ROM:0x00613EC0 */
+		gPlayerAnim_link_hook_side_runL_Data = 0x0712E780; /* ROM:0x00614380 */
+		gPlayerAnim_link_hook_side_runR_Data = 0x0712F0F0; /* ROM:0x00614CF0 */
+		gPlayerAnim_link_hook_side_walk_Data = 0x0712FA60; /* ROM:0x00615660 */
+		gPlayerAnim_link_hook_wait_Data  = 0x071306F0; /* ROM:0x006162F0 */
+		gPlayerAnim_link_hook_walk2ready_Data = 0x07132B10; /* ROM:0x00618710 */
+		gPlayerAnim_link_last_hit_motion1_Data = 0x07132FD0; /* ROM:0x00618BD0 */
+		gPlayerAnim_link_last_hit_motion2_Data = 0x07135AC0; /* ROM:0x0061B6C0 */
+		gPlayerAnim_link_magic_honoo1_Data = 0x07136970; /* ROM:0x0061C570 */
+		gPlayerAnim_link_magic_honoo2_Data = 0x071388E0; /* ROM:0x0061E4E0 */
+		gPlayerAnim_link_magic_honoo3_Data = 0x07139600; /* ROM:0x0061F200 */
+		gPlayerAnim_link_magic_kaze1_Data = 0x0713B570; /* ROM:0x00621170 */
+		gPlayerAnim_link_magic_kaze2_Data = 0x0713D2C0; /* ROM:0x00622EC0 */
+		gPlayerAnim_link_magic_kaze3_Data = 0x0713D780; /* ROM:0x00623380 */
+		gPlayerAnim_link_magic_tamashii1_Data = 0x0713E840; /* ROM:0x00624440 */
+		gPlayerAnim_link_magic_tamashii2_Data = 0x07140380; /* ROM:0x00625F80 */
+		gPlayerAnim_link_magic_tamashii3_Data = 0x071412B0; /* ROM:0x00626EB0 */
+		gPlayerAnim_link_magic_tame_Data = 0x07142C60; /* ROM:0x00628860 */
+		gPlayerAnim_link_magic_tame_kaijyo_Data = 0x071442F0; /* ROM:0x00629EF0 */
+		gPlayerAnim_link_normal_100step_up_Data = 0x07145A00; /* ROM:0x0062B600 */
+		gPlayerAnim_link_normal_150step_up_Data = 0x071468B0; /* ROM:0x0062C4B0 */
+		gPlayerAnim_link_normal_250jump_start_Data = 0x07148040; /* ROM:0x0062DC40 */
 		gPlayerAnimData_148580           = 0x07148580; /* ROM:0x0062E180 */
-		gPlayerAnimData_149FB0           = 0x07149FB0; /* ROM:0x0062FBB0 */
-		gPlayerAnimData_14A4F0           = 0x0714A4F0; /* ROM:0x006300F0 */
-		gPlayerAnimData_14AA30           = 0x0714AA30; /* ROM:0x00630630 */
-		gPlayerAnimData_14B9F0           = 0x0714B9F0; /* ROM:0x006315F0 */
-		gPlayerAnimData_14C4F0           = 0x0714C4F0; /* ROM:0x006320F0 */
-		gPlayerAnimData_14CFF0           = 0x0714CFF0; /* ROM:0x00632BF0 */
-		gPlayerAnimData_14DFB0           = 0x0714DFB0; /* ROM:0x00633BB0 */
-		gPlayerAnimData_14E790           = 0x0714E790; /* ROM:0x00634390 */
-		gPlayerAnimData_14F290           = 0x0714F290; /* ROM:0x00634E90 */
-		gPlayerAnimData_14FD90           = 0x0714FD90; /* ROM:0x00635990 */
-		gPlayerAnimData_1503E0           = 0x071503E0; /* ROM:0x00635FE0 */
-		gPlayerAnimData_150A30           = 0x07150A30; /* ROM:0x00636630 */
-		gPlayerAnimData_150D60           = 0x07150D60; /* ROM:0x00636960 */
-		gPlayerAnimData_1514C0           = 0x071514C0; /* ROM:0x006370C0 */
-		gPlayerAnimData_1527A0           = 0x071527A0; /* ROM:0x006383A0 */
-		gPlayerAnimData_153000           = 0x07153000; /* ROM:0x00638C00 */
-		gPlayerAnimData_153860           = 0x07153860; /* ROM:0x00639460 */
-		gPlayerAnimData_153C90           = 0x07153C90; /* ROM:0x00639890 */
-		gPlayerAnimData_1540C0           = 0x071540C0; /* ROM:0x00639CC0 */
-		gPlayerAnimData_154FF0           = 0x07154FF0; /* ROM:0x0063ABF0 */
-		gPlayerAnimData_1556C0           = 0x071556C0; /* ROM:0x0063B2C0 */
-		gPlayerAnimData_1570F0           = 0x071570F0; /* ROM:0x0063CCF0 */
-		gPlayerAnimData_1583D0           = 0x071583D0; /* ROM:0x0063DFD0 */
-		gPlayerAnimData_158CC0           = 0x07158CC0; /* ROM:0x0063E8C0 */
-		gPlayerAnimData_15A990           = 0x0715A990; /* ROM:0x00640590 */
-		gPlayerAnimData_15B410           = 0x0715B410; /* ROM:0x00641010 */
-		gPlayerAnimData_15B950           = 0x0715B950; /* ROM:0x00641550 */
-		gPlayerAnimData_15BE90           = 0x0715BE90; /* ROM:0x00641A90 */
-		gPlayerAnimData_15C910           = 0x0715C910; /* ROM:0x00642510 */
-		gPlayerAnimData_15E560           = 0x0715E560; /* ROM:0x00644160 */
-		gPlayerAnimData_1601B0           = 0x071601B0; /* ROM:0x00645DB0 */
-		gPlayerAnimData_1610E0           = 0x071610E0; /* ROM:0x00646CE0 */
-		gPlayerAnimData_161F10           = 0x07161F10; /* ROM:0x00647B10 */
-		gPlayerAnimData_162DC0           = 0x07162DC0; /* ROM:0x006489C0 */
-		gPlayerAnimData_164B10           = 0x07164B10; /* ROM:0x0064A710 */
-		gPlayerAnimData_166860           = 0x07166860; /* ROM:0x0064C460 */
-		gPlayerAnimData_167820           = 0x07167820; /* ROM:0x0064D420 */
-		gPlayerAnimData_169570           = 0x07169570; /* ROM:0x0064F170 */
-		gPlayerAnimData_16A4A0           = 0x0716A4A0; /* ROM:0x006500A0 */
-		gPlayerAnimData_16AFA0           = 0x0716AFA0; /* ROM:0x00650BA0 */
-		gPlayerAnimData_16BAA0           = 0x0716BAA0; /* ROM:0x006516A0 */
-		gPlayerAnimData_16C520           = 0x0716C520; /* ROM:0x00652120 */
-		gPlayerAnimData_16C630           = 0x0716C630; /* ROM:0x00652230 */
-		gPlayerAnimData_16C8D0           = 0x0716C8D0; /* ROM:0x006524D0 */
-		gPlayerAnimData_16CB70           = 0x0716CB70; /* ROM:0x00652770 */
-		gPlayerAnimData_16CE10           = 0x0716CE10; /* ROM:0x00652A10 */
-		gPlayerAnimData_16D2D0           = 0x0716D2D0; /* ROM:0x00652ED0 */
-		gPlayerAnimData_16D570           = 0x0716D570; /* ROM:0x00653170 */
-		gPlayerAnimData_16DFF0           = 0x0716DFF0; /* ROM:0x00653BF0 */
-		gPlayerAnimData_16EA70           = 0x0716EA70; /* ROM:0x00654670 */
-		gPlayerAnimData_16EFB0           = 0x0716EFB0; /* ROM:0x00654BB0 */
-		gPlayerAnimData_16F9B0           = 0x0716F9B0; /* ROM:0x006555B0 */
-		gPlayerAnimData_1703B0           = 0x071703B0; /* ROM:0x00655FB0 */
-		gPlayerAnimData_170DB0           = 0x07170DB0; /* ROM:0x006569B0 */
-		gPlayerAnimData_171B50           = 0x07171B50; /* ROM:0x00657750 */
-		gPlayerAnimData_175680           = 0x07175680; /* ROM:0x0065B280 */
-		gPlayerAnimData_1769E0           = 0x071769E0; /* ROM:0x0065C5E0 */
-		gPlayerAnimData_1796F0           = 0x071796F0; /* ROM:0x0065F2F0 */
-		gPlayerAnimData_17B6E0           = 0x0717B6E0; /* ROM:0x006612E0 */
-		gPlayerAnimData_17D6D0           = 0x0717D6D0; /* ROM:0x006632D0 */
-		gPlayerAnimData_17E150           = 0x0717E150; /* ROM:0x00663D50 */
-		gPlayerAnimData_17EBD0           = 0x0717EBD0; /* ROM:0x006647D0 */
-		gPlayerAnimData_17F650           = 0x0717F650; /* ROM:0x00665250 */
-		gPlayerAnimData_1800D0           = 0x071800D0; /* ROM:0x00665CD0 */
-		gPlayerAnimData_180B50           = 0x07180B50; /* ROM:0x00666750 */
-		gPlayerAnimData_180DF0           = 0x07180DF0; /* ROM:0x006669F0 */
-		gPlayerAnimData_181440           = 0x07181440; /* ROM:0x00667040 */
-		gPlayerAnimData_1828B0           = 0x071828B0; /* ROM:0x006684B0 */
-		gPlayerAnimData_183110           = 0x07183110; /* ROM:0x00668D10 */
-		gPlayerAnimData_183540           = 0x07183540; /* ROM:0x00669140 */
-		gPlayerAnimData_183970           = 0x07183970; /* ROM:0x00669570 */
-		gPlayerAnimData_185210           = 0x07185210; /* ROM:0x0066AE10 */
-		gPlayerAnimData_1857E0           = 0x071857E0; /* ROM:0x0066B3E0 */
-		gPlayerAnimData_18DBD0           = 0x0718DBD0; /* ROM:0x006737D0 */
-		gPlayerAnimData_18E5D0           = 0x0718E5D0; /* ROM:0x006741D0 */
-		gPlayerAnimData_18F050           = 0x0718F050; /* ROM:0x00674C50 */
-		gPlayerAnimData_18FAD0           = 0x0718FAD0; /* ROM:0x006756D0 */
-		gPlayerAnimData_190980           = 0x07190980; /* ROM:0x00676580 */
-		gPlayerAnimData_191830           = 0x07191830; /* ROM:0x00677430 */
-		gPlayerAnimData_1926E0           = 0x071926E0; /* ROM:0x006782E0 */
-		gPlayerAnimData_192F40           = 0x07192F40; /* ROM:0x00678B40 */
-		gPlayerAnimData_193400           = 0x07193400; /* ROM:0x00679000 */
-		gPlayerAnimData_193A50           = 0x07193A50; /* ROM:0x00679650 */
-		gPlayerAnimData_1943C0           = 0x071943C0; /* ROM:0x00679FC0 */
-		gPlayerAnimData_194D30           = 0x07194D30; /* ROM:0x0067A930 */
-		gPlayerAnimData_196120           = 0x07196120; /* ROM:0x0067BD20 */
-		gPlayerAnimData_197510           = 0x07197510; /* ROM:0x0067D110 */
-		gPlayerAnimData_199B50           = 0x07199B50; /* ROM:0x0067F750 */
-		gPlayerAnimData_19C100           = 0x0719C100; /* ROM:0x00681D00 */
-		gPlayerAnimData_19D3E0           = 0x0719D3E0; /* ROM:0x00682FE0 */
-		gPlayerAnimData_19DEE0           = 0x0719DEE0; /* ROM:0x00683AE0 */
-		gPlayerAnimData_19E9E0           = 0x0719E9E0; /* ROM:0x006845E0 */
-		gPlayerAnimData_19FAA0           = 0x0719FAA0; /* ROM:0x006856A0 */
-		gPlayerAnimData_1A0B60           = 0x071A0B60; /* ROM:0x00686760 */
-		gPlayerAnimData_1A15E0           = 0x071A15E0; /* ROM:0x006871E0 */
-		gPlayerAnimData_1A1C30           = 0x071A1C30; /* ROM:0x00687830 */
-		gPlayerAnimData_1A2630           = 0x071A2630; /* ROM:0x00688230 */
-		gPlayerAnimData_1A30B0           = 0x071A30B0; /* ROM:0x00688CB0 */
-		gPlayerAnimData_1A3570           = 0x071A3570; /* ROM:0x00689170 */
-		gPlayerAnimData_1A3920           = 0x071A3920; /* ROM:0x00689520 */
-		gPlayerAnimData_1A3BC0           = 0x071A3BC0; /* ROM:0x006897C0 */
-		gPlayerAnimData_1A4640           = 0x071A4640; /* ROM:0x0068A240 */
-		gPlayerAnimData_1A50C0           = 0x071A50C0; /* ROM:0x0068ACC0 */
-		gPlayerAnimData_1A5B40           = 0x071A5B40; /* ROM:0x0068B740 */
-		gPlayerAnimData_1A65C0           = 0x071A65C0; /* ROM:0x0068C1C0 */
-		gPlayerAnimData_1A6C10           = 0x071A6C10; /* ROM:0x0068C810 */
-		gPlayerAnimData_1A7260           = 0x071A7260; /* ROM:0x0068CE60 */
-		gPlayerAnimData_1A9600           = 0x071A9600; /* ROM:0x0068F200 */
-		gPlayerAnimData_1A9E60           = 0x071A9E60; /* ROM:0x0068FA60 */
-		gPlayerAnimData_1AA6C0           = 0x071AA6C0; /* ROM:0x006902C0 */
-		gPlayerAnimData_1AAF20           = 0x071AAF20; /* ROM:0x00690B20 */
-		gPlayerAnimData_1AB780           = 0x071AB780; /* ROM:0x00691380 */
-		gPlayerAnimData_1AC7C0           = 0x071AC7C0; /* ROM:0x006923C0 */
-		gPlayerAnimData_1AD800           = 0x071AD800; /* ROM:0x00693400 */
-		gPlayerAnimData_1AE060           = 0x071AE060; /* ROM:0x00693C60 */
-		gPlayerAnimData_1AEA60           = 0x071AEA60; /* ROM:0x00694660 */
-		gPlayerAnimData_1AF2C0           = 0x071AF2C0; /* ROM:0x00694EC0 */
-		gPlayerAnimData_1AF800           = 0x071AF800; /* ROM:0x00695400 */
-		gPlayerAnimData_1AFDD0           = 0x071AFDD0; /* ROM:0x006959D0 */
-		gPlayerAnimData_1B0E10           = 0x071B0E10; /* ROM:0x00696A10 */
-		gPlayerAnimData_1B1910           = 0x071B1910; /* ROM:0x00697510 */
-		gPlayerAnimData_1B20F0           = 0x071B20F0; /* ROM:0x00697CF0 */
-		gPlayerAnimData_1B25B0           = 0x071B25B0; /* ROM:0x006981B0 */
-		gPlayerAnimData_1B2B80           = 0x071B2B80; /* ROM:0x00698780 */
-		gPlayerAnimData_1B3600           = 0x071B3600; /* ROM:0x00699200 */
-		gPlayerAnimData_1B4080           = 0x071B4080; /* ROM:0x00699C80 */
-		gPlayerAnimData_1B4B00           = 0x071B4B00; /* ROM:0x0069A700 */
-		gPlayerAnimData_1B51D0           = 0x071B51D0; /* ROM:0x0069ADD0 */
-		gPlayerAnimData_1B5BD0           = 0x071B5BD0; /* ROM:0x0069B7D0 */
-		gPlayerAnimData_1B6C10           = 0x071B6C10; /* ROM:0x0069C810 */
-		gPlayerAnimData_1B72E0           = 0x071B72E0; /* ROM:0x0069CEE0 */
-		gPlayerAnimData_1B7B40           = 0x071B7B40; /* ROM:0x0069D740 */
-		gPlayerAnimData_1B83A0           = 0x071B83A0; /* ROM:0x0069DFA0 */
-		gPlayerAnimData_1B92D0           = 0x071B92D0; /* ROM:0x0069EED0 */
-		gPlayerAnimData_1B9B30           = 0x071B9B30; /* ROM:0x0069F730 */
-		gPlayerAnimData_1BA390           = 0x071BA390; /* ROM:0x0069FF90 */
-		gPlayerAnimData_1BB2C0           = 0x071BB2C0; /* ROM:0x006A0EC0 */
-		gPlayerAnimData_1BC6B0           = 0x071BC6B0; /* ROM:0x006A22B0 */
-		gPlayerAnimData_1BCA60           = 0x071BCA60; /* ROM:0x006A2660 */
-		gPlayerAnimData_1BDC30           = 0x071BDC30; /* ROM:0x006A3830 */
-		gPlayerAnimData_1BE410           = 0x071BE410; /* ROM:0x006A4010 */
-		gPlayerAnimData_1BF6F0           = 0x071BF6F0; /* ROM:0x006A52F0 */
-		gPlayerAnimData_1C01F0           = 0x071C01F0; /* ROM:0x006A5DF0 */
-		gPlayerAnimData_1C0CF0           = 0x071C0CF0; /* ROM:0x006A68F0 */
-		gPlayerAnimData_1C1230           = 0x071C1230; /* ROM:0x006A6E30 */
-		gPlayerAnimData_1C1C30           = 0x071C1C30; /* ROM:0x006A7830 */
-		gPlayerAnimData_1C2630           = 0x071C2630; /* ROM:0x006A8230 */
-		gPlayerAnimData_1C3030           = 0x071C3030; /* ROM:0x006A8C30 */
-		gPlayerAnimData_1C5ED0           = 0x071C5ED0; /* ROM:0x006ABAD0 */
-		gPlayerAnimData_1C6200           = 0x071C6200; /* ROM:0x006ABE00 */
-		gPlayerAnimData_1C6530           = 0x071C6530; /* ROM:0x006AC130 */
-		gPlayerAnimData_1CC580           = 0x071CC580; /* ROM:0x006B2180 */
-		gPlayerAnimData_1D2770           = 0x071D2770; /* ROM:0x006B8370 */
-		gPlayerAnimData_1D9020           = 0x071D9020; /* ROM:0x006BEC20 */
-		gPlayerAnimData_1D96F0           = 0x071D96F0; /* ROM:0x006BF2F0 */
-		gPlayerAnimData_1DA620           = 0x071DA620; /* ROM:0x006C0220 */
-		gPlayerAnimData_1DACF0           = 0x071DACF0; /* ROM:0x006C08F0 */
-		gPlayerAnimData_1DBC20           = 0x071DBC20; /* ROM:0x006C1820 */
-		gPlayerAnimData_1DEAC0           = 0x071DEAC0; /* ROM:0x006C46C0 */
-		gPlayerAnimData_1E4B10           = 0x071E4B10; /* ROM:0x006CA710 */
-		gPlayerAnimData_1EAD00           = 0x071EAD00; /* ROM:0x006D0900 */
-		gPlayerAnimData_1F15B0           = 0x071F15B0; /* ROM:0x006D71B0 */
-		gPlayerAnimData_1F5050           = 0x071F5050; /* ROM:0x006DAC50 */
-		gPlayerAnimData_1F5F80           = 0x071F5F80; /* ROM:0x006DBB80 */
-		gPlayerAnimData_1F6550           = 0x071F6550; /* ROM:0x006DC150 */
-		gPlayerAnimData_1F6B20           = 0x071F6B20; /* ROM:0x006DC720 */
-		gPlayerAnimData_1F70F0           = 0x071F70F0; /* ROM:0x006DCCF0 */
-		gPlayerAnimData_1F76C0           = 0x071F76C0; /* ROM:0x006DD2C0 */
-		gPlayerAnimData_1F85F0           = 0x071F85F0; /* ROM:0x006DE1F0 */
-		gPlayerAnimData_1F9D80           = 0x071F9D80; /* ROM:0x006DF980 */
-		gPlayerAnimData_1FC760           = 0x071FC760; /* ROM:0x006E2360 */
-		gPlayerAnimData_1FCE30           = 0x071FCE30; /* ROM:0x006E2A30 */
-		gPlayerAnimData_1FF810           = 0x071FF810; /* ROM:0x006E5410 */
-		gPlayerAnimData_200850           = 0x07200850; /* ROM:0x006E6450 */
-		gPlayerAnimData_202D80           = 0x07202D80; /* ROM:0x006E8980 */
-		gPlayerAnimData_203F50           = 0x07203F50; /* ROM:0x006E9B50 */
-		gPlayerAnimData_205120           = 0x07205120; /* ROM:0x006EAD20 */
-		gPlayerAnimData_206590           = 0x07206590; /* ROM:0x006EC190 */
-		gPlayerAnimData_2073C0           = 0x072073C0; /* ROM:0x006ECFC0 */
-		gPlayerAnimData_2082F0           = 0x072082F0; /* ROM:0x006EDEF0 */
-		gPlayerAnimData_20A580           = 0x0720A580; /* ROM:0x006F0180 */
-		gPlayerAnimData_20B000           = 0x0720B000; /* ROM:0x006F0C00 */
-		gPlayerAnimData_20C0C0           = 0x0720C0C0; /* ROM:0x006F1CC0 */
-		gPlayerAnimData_20DAF0           = 0x0720DAF0; /* ROM:0x006F36F0 */
-		gPlayerAnimData_213820           = 0x07213820; /* ROM:0x006F9420 */
-		gPlayerAnimData_213E70           = 0x07213E70; /* ROM:0x006F9A70 */
-		gPlayerAnimData_2143B0           = 0x072143B0; /* ROM:0x006F9FB0 */
-		gPlayerAnimData_215BD0           = 0x07215BD0; /* ROM:0x006FB7D0 */
-		gPlayerAnimData_216110           = 0x07216110; /* ROM:0x006FBD10 */
-		gPlayerAnimData_216DA0           = 0x07216DA0; /* ROM:0x006FC9A0 */
-		gPlayerAnimData_217A30           = 0x07217A30; /* ROM:0x006FD630 */
-		gPlayerAnimData_218640           = 0x07218640; /* ROM:0x006FE240 */
-		gPlayerAnimData_219600           = 0x07219600; /* ROM:0x006FF200 */
-		gPlayerAnimData_21A530           = 0x0721A530; /* ROM:0x00700130 */
-		gPlayerAnimData_21B460           = 0x0721B460; /* ROM:0x00701060 */
-		gPlayerAnimData_21C5B0           = 0x0721C5B0; /* ROM:0x007021B0 */
-		gPlayerAnimData_21E7C0           = 0x0721E7C0; /* ROM:0x007043C0 */
-		gPlayerAnimData_21FA20           = 0x0721FA20; /* ROM:0x00705620 */
-		gPlayerAnimData_220C80           = 0x07220C80; /* ROM:0x00706880 */
-		gPlayerAnimData_221EE0           = 0x07221EE0; /* ROM:0x00707AE0 */
-		gPlayerAnimData_2240F0           = 0x072240F0; /* ROM:0x00709CF0 */
-		gPlayerAnimData_2265A0           = 0x072265A0; /* ROM:0x0070C1A0 */
-		gPlayerAnimData_227EC0           = 0x07227EC0; /* ROM:0x0070DAC0 */
-		gPlayerAnimData_22A580           = 0x0722A580; /* ROM:0x00710180 */
-		gPlayerAnimData_22CCD0           = 0x0722CCD0; /* ROM:0x007128D0 */
-		gPlayerAnimData_2339B0           = 0x072339B0; /* ROM:0x007195B0 */
-		gPlayerAnimData_239FD0           = 0x07239FD0; /* ROM:0x0071FBD0 */
-		gPlayerAnimData_23AF90           = 0x0723AF90; /* ROM:0x00720B90 */
-		gPlayerAnimData_23C270           = 0x0723C270; /* ROM:0x00721E70 */
-		gPlayerAnimData_23CF00           = 0x0723CF00; /* ROM:0x00722B00 */
-		gPlayerAnimData_23FE20           = 0x0723FE20; /* ROM:0x00725A20 */
-		gPlayerAnimData_243280           = 0x07243280; /* ROM:0x00728E80 */
-		gPlayerAnimData_247AC0           = 0x07247AC0; /* ROM:0x0072D6C0 */
-		gPlayerAnimData_248D20           = 0x07248D20; /* ROM:0x0072E920 */
-		gPlayerAnimData_249A40           = 0x07249A40; /* ROM:0x0072F640 */
-		gPlayerAnimData_24C960           = 0x0724C960; /* ROM:0x00732560 */
-		gPlayerAnimData_24FDC0           = 0x0724FDC0; /* ROM:0x007359C0 */
-		gPlayerAnimData_252E70           = 0x07252E70; /* ROM:0x00738A70 */
-		gPlayerAnimData_255320           = 0x07255320; /* ROM:0x0073AF20 */
-		gPlayerAnimData_258BB0           = 0x07258BB0; /* ROM:0x0073E7B0 */
-		gPlayerAnimData_25D3F0           = 0x0725D3F0; /* ROM:0x00742FF0 */
-		gPlayerAnimData_25EB80           = 0x0725EB80; /* ROM:0x00744780 */
-		gPlayerAnimData_25F600           = 0x0725F600; /* ROM:0x00745200 */
-		gPlayerAnimData_260080           = 0x07260080; /* ROM:0x00745C80 */
-		gPlayerAnimData_261AB0           = 0x07261AB0; /* ROM:0x007476B0 */
-		gPlayerAnimData_262A70           = 0x07262A70; /* ROM:0x00748670 */
-		gPlayerAnimData_2644A0           = 0x072644A0; /* ROM:0x0074A0A0 */
+		gPlayerAnim_link_normal_45_turn_Data = 0x07149FB0; /* ROM:0x0062FBB0 */
+		gPlayerAnim_link_normal_45_turn_free_Data = 0x0714A4F0; /* ROM:0x006300F0 */
+		gPlayerAnim_link_normal_Fclimb_hold2upL_Data = 0x0714AA30; /* ROM:0x00630630 */
+		gPlayerAnim_link_normal_Fclimb_sideL_Data = 0x0714B9F0; /* ROM:0x006315F0 */
+		gPlayerAnim_link_normal_Fclimb_sideR_Data = 0x0714C4F0; /* ROM:0x006320F0 */
+		gPlayerAnim_link_normal_Fclimb_startA_Data = 0x0714CFF0; /* ROM:0x00632BF0 */
+		gPlayerAnim_link_normal_Fclimb_startB_Data = 0x0714DFB0; /* ROM:0x00633BB0 */
+		gPlayerAnim_link_normal_Fclimb_upL_Data = 0x0714E790; /* ROM:0x00634390 */
+		gPlayerAnim_link_normal_Fclimb_upR_Data = 0x0714F290; /* ROM:0x00634E90 */
+		gPlayerAnim_link_normal_back_brake_Data = 0x0714FD90; /* ROM:0x00635990 */
+		gPlayerAnim_link_normal_back_brake_end_Data = 0x071503E0; /* ROM:0x00635FE0 */
+		gPlayerAnim_link_normal_back_downA_Data = 0x07150A30; /* ROM:0x00636630 */
+		gPlayerAnim_link_normal_back_downB_Data = 0x07150D60; /* ROM:0x00636960 */
+		gPlayerAnim_link_normal_back_down_wake_Data = 0x071514C0; /* ROM:0x006370C0 */
+		gPlayerAnim_link_normal_back_hit_Data = 0x071527A0; /* ROM:0x006383A0 */
+		gPlayerAnim_link_normal_back_run_Data = 0x07153000; /* ROM:0x00638C00 */
+		gPlayerAnim_link_normal_back_shit_Data = 0x07153860; /* ROM:0x00639460 */
+		gPlayerAnim_link_normal_back_shitR_Data = 0x07153C90; /* ROM:0x00639890 */
+		gPlayerAnim_link_normal_back_walk_Data = 0x071540C0; /* ROM:0x00639CC0 */
+		gPlayerAnim_link_normal_backspace_Data = 0x07154FF0; /* ROM:0x0063ABF0 */
+		gPlayerAnim_link_normal_box_kick_Data = 0x071556C0; /* ROM:0x0063B2C0 */
+		gPlayerAnim_link_normal_carryB_Data = 0x071570F0; /* ROM:0x0063CCF0 */
+		gPlayerAnim_link_normal_carryB_free_Data = 0x071583D0; /* ROM:0x0063DFD0 */
+		gPlayerAnim_link_normal_carryB_wait_Data = 0x07158CC0; /* ROM:0x0063E8C0 */
+		gPlayerAnim_link_normal_check_Data = 0x0715A990; /* ROM:0x00640590 */
+		gPlayerAnim_link_normal_check_end_Data = 0x0715B410; /* ROM:0x00641010 */
+		gPlayerAnim_link_normal_check_end_free_Data = 0x0715B950; /* ROM:0x00641550 */
+		gPlayerAnim_link_normal_check_free_Data = 0x0715BE90; /* ROM:0x00641A90 */
+		gPlayerAnim_link_normal_check_wait_Data = 0x0715C910; /* ROM:0x00642510 */
+		gPlayerAnim_link_normal_check_wait_free_Data = 0x0715E560; /* ROM:0x00644160 */
+		gPlayerAnim_link_normal_climb_down_Data = 0x071601B0; /* ROM:0x00645DB0 */
+		gPlayerAnim_link_normal_climb_endAL_Data = 0x071610E0; /* ROM:0x00646CE0 */
+		gPlayerAnim_link_normal_climb_endAR_Data = 0x07161F10; /* ROM:0x00647B10 */
+		gPlayerAnim_link_normal_climb_endBL_Data = 0x07162DC0; /* ROM:0x006489C0 */
+		gPlayerAnim_link_normal_climb_endBR_Data = 0x07164B10; /* ROM:0x0064A710 */
+		gPlayerAnim_link_normal_climb_startA_Data = 0x07166860; /* ROM:0x0064C460 */
+		gPlayerAnim_link_normal_climb_startB_Data = 0x07167820; /* ROM:0x0064D420 */
+		gPlayerAnim_link_normal_climb_up_Data = 0x07169570; /* ROM:0x0064F170 */
+		gPlayerAnim_link_normal_climb_upL_Data = 0x0716A4A0; /* ROM:0x006500A0 */
+		gPlayerAnim_link_normal_climb_upR_Data = 0x0716AFA0; /* ROM:0x00650BA0 */
+		gPlayerAnim_link_normal_damage_run_free_Data = 0x0716BAA0; /* ROM:0x006516A0 */
+		gPlayerAnim_link_normal_defense_Data = 0x0716C520; /* ROM:0x00652120 */
+		gPlayerAnim_link_normal_defense_end_Data = 0x0716C630; /* ROM:0x00652230 */
+		gPlayerAnim_link_normal_defense_end_free_Data = 0x0716C8D0; /* ROM:0x006524D0 */
+		gPlayerAnim_link_normal_defense_free_Data = 0x0716CB70; /* ROM:0x00652770 */
+		gPlayerAnim_link_normal_defense_hit_Data = 0x0716CE10; /* ROM:0x00652A10 */
+		gPlayerAnim_link_normal_defense_kiru_Data = 0x0716D2D0; /* ROM:0x00652ED0 */
+		gPlayerAnim_link_normal_defense_wait_Data = 0x0716D570; /* ROM:0x00653170 */
+		gPlayerAnim_link_normal_defense_wait_free_Data = 0x0716DFF0; /* ROM:0x00653BF0 */
+		gPlayerAnim_link_normal_down_slope_slip_Data = 0x0716EA70; /* ROM:0x00654670 */
+		gPlayerAnim_link_normal_down_slope_slip_end_Data = 0x0716EFB0; /* ROM:0x00654BB0 */
+		gPlayerAnim_link_normal_down_slope_slip_end_free_Data = 0x0716F9B0; /* ROM:0x006555B0 */
+		gPlayerAnim_link_normal_down_slope_slip_end_long_Data = 0x071703B0; /* ROM:0x00655FB0 */
+		gPlayerAnim_link_normal_electric_shock_Data = 0x07170DB0; /* ROM:0x006569B0 */
+		gPlayerAnim_link_normal_electric_shock_end_Data = 0x07171B50; /* ROM:0x00657750 */
+		gPlayerAnim_link_normal_fall_Data = 0x07175680; /* ROM:0x0065B280 */
+		gPlayerAnim_link_normal_fall_up_Data = 0x071769E0; /* ROM:0x0065C5E0 */
+		gPlayerAnim_link_normal_fall_up_free_Data = 0x071796F0; /* ROM:0x0065F2F0 */
+		gPlayerAnim_link_normal_fall_wait_Data = 0x0717B6E0; /* ROM:0x006612E0 */
+		gPlayerAnim_link_normal_fighter2free_Data = 0x0717D6D0; /* ROM:0x006632D0 */
+		gPlayerAnim_link_normal_free2bom_Data = 0x0717E150; /* ROM:0x00663D50 */
+		gPlayerAnim_link_normal_free2fighter_free_Data = 0x0717EBD0; /* ROM:0x006647D0 */
+		gPlayerAnim_link_normal_free2free_Data = 0x0717F650; /* ROM:0x00665250 */
+		gPlayerAnim_link_normal_free2freeB_Data = 0x071800D0; /* ROM:0x00665CD0 */
+		gPlayerAnim_link_normal_front_downA_Data = 0x07180B50; /* ROM:0x00666750 */
+		gPlayerAnim_link_normal_front_downB_Data = 0x07180DF0; /* ROM:0x006669F0 */
+		gPlayerAnim_link_normal_front_down_wake_Data = 0x07181440; /* ROM:0x00667040 */
+		gPlayerAnim_link_normal_front_hit_Data = 0x071828B0; /* ROM:0x006684B0 */
+		gPlayerAnim_link_normal_front_shit_Data = 0x07183110; /* ROM:0x00668D10 */
+		gPlayerAnim_link_normal_front_shitR_Data = 0x07183540; /* ROM:0x00669140 */
+		gPlayerAnim_link_normal_give_other_Data = 0x07183970; /* ROM:0x00669570 */
+		gPlayerAnim_link_normal_hang_up_down_Data = 0x07185210; /* ROM:0x0066AE10 */
+		gPlayerAnim_link_normal_heavy_carry_Data = 0x071857E0; /* ROM:0x0066B3E0 */
+		gPlayerAnim_link_normal_heavy_carry_end_Data = 0x0718DBD0; /* ROM:0x006737D0 */
+		gPlayerAnim_link_normal_heavy_run_Data = 0x0718E5D0; /* ROM:0x006741D0 */
+		gPlayerAnim_link_normal_heavy_run_free_Data = 0x0718F050; /* ROM:0x00674C50 */
+		gPlayerAnim_link_normal_hip_down_Data = 0x0718FAD0; /* ROM:0x006756D0 */
+		gPlayerAnim_link_normal_hip_down_free_Data = 0x07190980; /* ROM:0x00676580 */
+		gPlayerAnim_link_normal_hip_down_long_Data = 0x07191830; /* ROM:0x00677430 */
+		gPlayerAnim_link_normal_ice_down_Data = 0x071926E0; /* ROM:0x006782E0 */
+		gPlayerAnim_link_normal_jump_Data = 0x07192F40; /* ROM:0x00678B40 */
+		gPlayerAnim_link_normal_jump2landing_Data = 0x07193400; /* ROM:0x00679000 */
+		gPlayerAnim_link_normal_jump_climb_hold_Data = 0x07193A50; /* ROM:0x00679650 */
+		gPlayerAnim_link_normal_jump_climb_hold_free_Data = 0x071943C0; /* ROM:0x00679FC0 */
+		gPlayerAnim_link_normal_jump_climb_up_Data = 0x07194D30; /* ROM:0x0067A930 */
+		gPlayerAnim_link_normal_jump_climb_up_free_Data = 0x07196120; /* ROM:0x0067BD20 */
+		gPlayerAnim_link_normal_jump_climb_wait_Data = 0x07197510; /* ROM:0x0067D110 */
+		gPlayerAnim_link_normal_jump_climb_wait_free_Data = 0x07199B50; /* ROM:0x0067F750 */
+		gPlayerAnim_link_normal_jump_up_Data = 0x0719C100; /* ROM:0x00681D00 */
+		gPlayerAnim_link_normal_landing_Data = 0x0719D3E0; /* ROM:0x00682FE0 */
+		gPlayerAnim_link_normal_landing_free_Data = 0x0719DEE0; /* ROM:0x00683AE0 */
+		gPlayerAnim_link_normal_landing_roll_Data = 0x0719E9E0; /* ROM:0x006845E0 */
+		gPlayerAnim_link_normal_landing_roll_free_Data = 0x0719FAA0; /* ROM:0x006856A0 */
+		gPlayerAnim_link_normal_landing_wait_Data = 0x071A0B60; /* ROM:0x00686760 */
+		gPlayerAnim_link_normal_light_bom_Data = 0x071A15E0; /* ROM:0x006871E0 */
+		gPlayerAnim_link_normal_light_bom_end_Data = 0x071A1C30; /* ROM:0x00687830 */
+		gPlayerAnim_link_normal_long2bom_Data = 0x071A2630; /* ROM:0x00688230 */
+		gPlayerAnim_link_normal_nocarry_free_Data = 0x071A30B0; /* ROM:0x00688CB0 */
+		gPlayerAnim_link_normal_nocarry_free_end_Data = 0x071A3570; /* ROM:0x00689170 */
+		gPlayerAnim_link_normal_nocarry_free_wait_Data = 0x071A3920; /* ROM:0x00689520 */
+		gPlayerAnim_link_normal_normal2bom_Data = 0x071A3BC0; /* ROM:0x006897C0 */
+		gPlayerAnim_link_normal_normal2fighter_Data = 0x071A4640; /* ROM:0x0068A240 */
+		gPlayerAnim_link_normal_normal2fighter_free_Data = 0x071A50C0; /* ROM:0x0068ACC0 */
+		gPlayerAnim_link_normal_normal2free_Data = 0x071A5B40; /* ROM:0x0068B740 */
+		gPlayerAnim_link_normal_okarina_end_Data = 0x071A65C0; /* ROM:0x0068C1C0 */
+		gPlayerAnim_link_normal_okarina_start_Data = 0x071A6C10; /* ROM:0x0068C810 */
+		gPlayerAnim_link_normal_okarina_swing_Data = 0x071A7260; /* ROM:0x0068CE60 */
+		gPlayerAnim_link_normal_pull_end_Data = 0x071A9600; /* ROM:0x0068F200 */
+		gPlayerAnim_link_normal_pull_end_free_Data = 0x071A9E60; /* ROM:0x0068FA60 */
+		gPlayerAnim_link_normal_pull_start_Data = 0x071AA6C0; /* ROM:0x006902C0 */
+		gPlayerAnim_link_normal_pull_start_free_Data = 0x071AAF20; /* ROM:0x00690B20 */
+		gPlayerAnim_link_normal_pulling_Data = 0x071AB780; /* ROM:0x00691380 */
+		gPlayerAnim_link_normal_pulling_free_Data = 0x071AC7C0; /* ROM:0x006923C0 */
+		gPlayerAnim_link_normal_push_end_Data = 0x071AD800; /* ROM:0x00693400 */
+		gPlayerAnim_link_normal_push_fall_Data = 0x071AE060; /* ROM:0x00693C60 */
+		gPlayerAnim_link_normal_push_start_Data = 0x071AEA60; /* ROM:0x00694660 */
+		gPlayerAnim_link_normal_push_wait_Data = 0x071AF2C0; /* ROM:0x00694EC0 */
+		gPlayerAnim_link_normal_push_wait_end_Data = 0x071AF800; /* ROM:0x00695400 */
+		gPlayerAnim_link_normal_pushing_Data = 0x071AFDD0; /* ROM:0x006959D0 */
+		gPlayerAnim_link_normal_put_Data = 0x071B0E10; /* ROM:0x00696A10 */
+		gPlayerAnim_link_normal_put_free_Data = 0x071B1910; /* ROM:0x00697510 */
+		gPlayerAnim_link_normal_re_dead_attack_Data = 0x071B20F0; /* ROM:0x00697CF0 */
+		gPlayerAnim_link_normal_re_dead_attack_wait_Data = 0x071B25B0; /* ROM:0x006981B0 */
+		gPlayerAnim_link_normal_rebound_Data = 0x071B2B80; /* ROM:0x00698780 */
+		gPlayerAnim_link_normal_run_Data = 0x071B3600; /* ROM:0x00699200 */
+		gPlayerAnim_link_normal_run_free_Data = 0x071B4080; /* ROM:0x00699C80 */
+		gPlayerAnim_link_normal_run_jump_Data = 0x071B4B00; /* ROM:0x0069A700 */
+		gPlayerAnim_link_normal_run_jump_end_Data = 0x071B51D0; /* ROM:0x0069ADD0 */
+		gPlayerAnim_link_normal_run_jump_water_fall_Data = 0x071B5BD0; /* ROM:0x0069B7D0 */
+		gPlayerAnim_link_normal_run_jump_water_fall_wait_Data = 0x071B6C10; /* ROM:0x0069C810 */
+		gPlayerAnim_link_normal_short_landing_Data = 0x071B72E0; /* ROM:0x0069CEE0 */
+		gPlayerAnim_link_normal_short_landing_free_Data = 0x071B7B40; /* ROM:0x0069D740 */
+		gPlayerAnim_link_normal_side_walk_Data = 0x071B83A0; /* ROM:0x0069DFA0 */
+		gPlayerAnim_link_normal_side_walkL_free_Data = 0x071B92D0; /* ROM:0x0069EED0 */
+		gPlayerAnim_link_normal_side_walkR_free_Data = 0x071B9B30; /* ROM:0x0069F730 */
+		gPlayerAnim_link_normal_side_walk_free_Data = 0x071BA390; /* ROM:0x0069FF90 */
+		gPlayerAnim_link_normal_take_out_Data = 0x071BB2C0; /* ROM:0x006A0EC0 */
+		gPlayerAnim_link_normal_talk_free_Data = 0x071BC6B0; /* ROM:0x006A22B0 */
+		gPlayerAnim_link_normal_talk_free_wait_Data = 0x071BCA60; /* ROM:0x006A2660 */
+		gPlayerAnim_link_normal_talk_navi_Data = 0x071BDC30; /* ROM:0x006A3830 */
+		gPlayerAnim_link_normal_talk_navi_wait_Data = 0x071BE410; /* ROM:0x006A4010 */
+		gPlayerAnim_link_normal_throw_Data = 0x071BF6F0; /* ROM:0x006A52F0 */
+		gPlayerAnim_link_normal_throw_free_Data = 0x071C01F0; /* ROM:0x006A5DF0 */
+		gPlayerAnim_link_normal_up_slope_slip_Data = 0x071C0CF0; /* ROM:0x006A68F0 */
+		gPlayerAnim_link_normal_up_slope_slip_end_Data = 0x071C1230; /* ROM:0x006A6E30 */
+		gPlayerAnim_link_normal_up_slope_slip_end_free_Data = 0x071C1C30; /* ROM:0x006A7830 */
+		gPlayerAnim_link_normal_up_slope_slip_end_long_Data = 0x071C2630; /* ROM:0x006A8230 */
+		gPlayerAnim_link_normal_wait_Data = 0x071C3030; /* ROM:0x006A8C30 */
+		gPlayerAnim_link_normal_wait2waitL_Data = 0x071C5ED0; /* ROM:0x006ABAD0 */
+		gPlayerAnim_link_normal_wait2waitR_Data = 0x071C6200; /* ROM:0x006ABE00 */
+		gPlayerAnim_link_normal_waitF_typeA_20f_Data = 0x071C6530; /* ROM:0x006AC130 */
+		gPlayerAnim_link_normal_waitF_typeB_20f_Data = 0x071CC580; /* ROM:0x006B2180 */
+		gPlayerAnim_link_normal_waitF_typeC_20f_Data = 0x071D2770; /* ROM:0x006B8370 */
+		gPlayerAnim_link_normal_waitL2wait_Data = 0x071D9020; /* ROM:0x006BEC20 */
+		gPlayerAnim_link_normal_waitL_free_Data = 0x071D96F0; /* ROM:0x006BF2F0 */
+		gPlayerAnim_link_normal_waitR2wait_Data = 0x071DA620; /* ROM:0x006C0220 */
+		gPlayerAnim_link_normal_waitR_free_Data = 0x071DACF0; /* ROM:0x006C08F0 */
+		gPlayerAnim_link_normal_wait_free_Data = 0x071DBC20; /* ROM:0x006C1820 */
+		gPlayerAnim_link_normal_wait_typeA_20f_Data = 0x071DEAC0; /* ROM:0x006C46C0 */
+		gPlayerAnim_link_normal_wait_typeB_20f_Data = 0x071E4B10; /* ROM:0x006CA710 */
+		gPlayerAnim_link_normal_wait_typeC_20f_Data = 0x071EAD00; /* ROM:0x006D0900 */
+		gPlayerAnim_link_normal_wakeup_Data = 0x071F15B0; /* ROM:0x006D71B0 */
+		gPlayerAnim_link_normal_walk_Data = 0x071F5050; /* ROM:0x006DAC50 */
+		gPlayerAnim_link_normal_walk_endL_Data = 0x071F5F80; /* ROM:0x006DBB80 */
+		gPlayerAnim_link_normal_walk_endL_free_Data = 0x071F6550; /* ROM:0x006DC150 */
+		gPlayerAnim_link_normal_walk_endR_Data = 0x071F6B20; /* ROM:0x006DC720 */
+		gPlayerAnim_link_normal_walk_endR_free_Data = 0x071F70F0; /* ROM:0x006DCCF0 */
+		gPlayerAnim_link_normal_walk_free_Data = 0x071F76C0; /* ROM:0x006DD2C0 */
+		gPlayerAnim_link_okarina_warp_goal_Data = 0x071F85F0; /* ROM:0x006DE1F0 */
+		gPlayerAnim_link_okiru_demo_Data = 0x071F9D80; /* ROM:0x006DF980 */
+		gPlayerAnim_link_shagamu_demo_Data = 0x071FC760; /* ROM:0x006E2360 */
+		gPlayerAnim_link_silver_carry_Data = 0x071FCE30; /* ROM:0x006E2A30 */
+		gPlayerAnim_link_silver_throw_Data = 0x071FF810; /* ROM:0x006E5410 */
+		gPlayerAnim_link_silver_wait_Data = 0x07200850; /* ROM:0x006E6450 */
+		gPlayerAnim_link_swimer_Lside_swim_Data = 0x07202D80; /* ROM:0x006E8980 */
+		gPlayerAnim_link_swimer_Rside_swim_Data = 0x07203F50; /* ROM:0x006E9B50 */
+		gPlayerAnim_link_swimer_back_swim_Data = 0x07205120; /* ROM:0x006EAD20 */
+		gPlayerAnim_link_swimer_land2swim_wait_Data = 0x07206590; /* ROM:0x006EC190 */
+		gPlayerAnim_link_swimer_swim_Data = 0x072073C0; /* ROM:0x006ECFC0 */
+		gPlayerAnim_link_swimer_swim_15step_up_Data = 0x072082F0; /* ROM:0x006EDEF0 */
+		gPlayerAnim_link_swimer_swim_dead_Data = 0x0720A580; /* ROM:0x006F0180 */
+		gPlayerAnim_link_swimer_swim_deep_end_Data = 0x0720B000; /* ROM:0x006F0C00 */
+		gPlayerAnim_link_swimer_swim_deep_start_Data = 0x0720C0C0; /* ROM:0x006F1CC0 */
+		gPlayerAnim_link_swimer_swim_down_Data = 0x0720DAF0; /* ROM:0x006F36F0 */
+		gPlayerAnim_link_swimer_swim_get_Data = 0x07213820; /* ROM:0x006F9420 */
+		gPlayerAnim_link_swimer_swim_hit_Data = 0x07213E70; /* ROM:0x006F9A70 */
+		gPlayerAnim_link_swimer_swim_wait_Data = 0x072143B0; /* ROM:0x006F9FB0 */
+		gPlayerAnim_link_swimer_wait2swim_wait_Data = 0x07215BD0; /* ROM:0x006FB7D0 */
+		gPlayerAnim_link_uma_anim_fastrun_Data = 0x07216110; /* ROM:0x006FBD10 */
+		gPlayerAnim_link_uma_anim_fastrun_muti_Data = 0x07216DA0; /* ROM:0x006FC9A0 */
+		gPlayerAnim_link_uma_anim_jump100_Data = 0x07217A30; /* ROM:0x006FD630 */
+		gPlayerAnim_link_uma_anim_jump200_Data = 0x07218640; /* ROM:0x006FE240 */
+		gPlayerAnim_link_uma_anim_slowrun_Data = 0x07219600; /* ROM:0x006FF200 */
+		gPlayerAnim_link_uma_anim_slowrun_muti_Data = 0x0721A530; /* ROM:0x00700130 */
+		gPlayerAnim_link_uma_anim_stand_Data = 0x0721B460; /* ROM:0x00701060 */
+		gPlayerAnim_link_uma_anim_stop_Data = 0x0721C5B0; /* ROM:0x007021B0 */
+		gPlayerAnim_link_uma_anim_walk_Data = 0x0721E7C0; /* ROM:0x007043C0 */
+		gPlayerAnim_link_uma_anim_walk2_Data = 0x0721FA20; /* ROM:0x00705620 */
+		gPlayerAnim_link_uma_anim_walk_muti_Data = 0x07220C80; /* ROM:0x00706880 */
+		gPlayerAnim_link_uma_left_down_Data = 0x07221EE0; /* ROM:0x00707AE0 */
+		gPlayerAnim_link_uma_left_up_Data = 0x072240F0; /* ROM:0x00709CF0 */
+		gPlayerAnim_link_uma_right_down_Data = 0x072265A0; /* ROM:0x0070C1A0 */
+		gPlayerAnim_link_uma_right_up_Data = 0x07227EC0; /* ROM:0x0070DAC0 */
+		gPlayerAnim_link_uma_stop_muti_Data = 0x0722A580; /* ROM:0x00710180 */
+		gPlayerAnim_link_uma_wait_1_Data = 0x0722CCD0; /* ROM:0x007128D0 */
+		gPlayerAnim_link_uma_wait_2_Data = 0x072339B0; /* ROM:0x007195B0 */
+		gPlayerAnim_link_uma_wait_3_Data = 0x07239FD0; /* ROM:0x0071FBD0 */
+		gPlayerAnim_link_waitF_heat1_20f_Data = 0x0723AF90; /* ROM:0x00720B90 */
+		gPlayerAnim_link_waitF_heat2_20f_Data = 0x0723C270; /* ROM:0x00721E70 */
+		gPlayerAnim_link_waitF_itemA_20f_Data = 0x0723CF00; /* ROM:0x00722B00 */
+		gPlayerAnim_link_waitF_itemB_20f_Data = 0x0723FE20; /* ROM:0x00725A20 */
+		gPlayerAnim_link_waitF_typeD_20f_Data = 0x07243280; /* ROM:0x00728E80 */
+		gPlayerAnim_link_wait_heat1_20f_Data = 0x07247AC0; /* ROM:0x0072D6C0 */
+		gPlayerAnim_link_wait_heat2_20f_Data = 0x07248D20; /* ROM:0x0072E920 */
+		gPlayerAnim_link_wait_itemA_20f_Data = 0x07249A40; /* ROM:0x0072F640 */
+		gPlayerAnim_link_wait_itemB_20f_Data = 0x0724C960; /* ROM:0x00732560 */
+		gPlayerAnim_link_wait_itemC_20f_Data = 0x0724FDC0; /* ROM:0x007359C0 */
+		gPlayerAnim_link_wait_itemD1_20f_Data = 0x07252E70; /* ROM:0x00738A70 */
+		gPlayerAnim_link_wait_itemD2_20f_Data = 0x07255320; /* ROM:0x0073AF20 */
+		gPlayerAnim_link_wait_typeD_20f_Data = 0x07258BB0; /* ROM:0x0073E7B0 */
+		gPlayerAnim_lkt_nwait_Data       = 0x0725D3F0; /* ROM:0x00742FF0 */
+		gPlayerAnim_nw_modoru_Data       = 0x0725EB80; /* ROM:0x00744780 */
+		gPlayerAnim_o_get_ato_Data       = 0x0725F600; /* ROM:0x00745200 */
+		gPlayerAnim_o_get_mae_Data       = 0x07260080; /* ROM:0x00745C80 */
+		gPlayerAnim_om_get_Data          = 0x07261AB0; /* ROM:0x007476B0 */
+		gPlayerAnim_om_get_mae_Data      = 0x07262A70; /* ROM:0x00748670 */
+		gPlayerAnim_sude_nwait_Data      = 0x072644A0; /* ROM:0x0074A0A0 */
 		_link_animetionSegmentDataEnd    = 0x07265C30; /* ROM:0x0074B830 */
 		_link_animetionSegmentDataSize   = 0x00265C30; /* ROM:0xF974B830 */
 	/* misc/link_animetion/link_animetion.o */
@@ -8714,579 +8714,579 @@
 		gLinkPauseAdultBgsJointTable     = 0x04002160; /* ROM:0x00F60160 */
 		gLinkPauseAdultJointTable        = 0x040021F0; /* ROM:0x00F601F0 */
 		gLinkPauseAdultShieldJointTable  = 0x04002280; /* ROM:0x00F60280 */
-		gPlayerAnim_002310               = 0x04002310; /* ROM:0x00F60310 */
-		gPlayerAnim_002318               = 0x04002318; /* ROM:0x00F60318 */
-		gPlayerAnim_002320               = 0x04002320; /* ROM:0x00F60320 */
-		gPlayerAnim_002328               = 0x04002328; /* ROM:0x00F60328 */
-		gPlayerAnim_002330               = 0x04002330; /* ROM:0x00F60330 */
-		gPlayerAnim_002338               = 0x04002338; /* ROM:0x00F60338 */
-		gPlayerAnim_002340               = 0x04002340; /* ROM:0x00F60340 */
-		gPlayerAnim_002348               = 0x04002348; /* ROM:0x00F60348 */
-		gPlayerAnim_002350               = 0x04002350; /* ROM:0x00F60350 */
-		gPlayerAnim_002358               = 0x04002358; /* ROM:0x00F60358 */
-		gPlayerAnim_002360               = 0x04002360; /* ROM:0x00F60360 */
-		gPlayerAnim_002368               = 0x04002368; /* ROM:0x00F60368 */
-		gPlayerAnim_002370               = 0x04002370; /* ROM:0x00F60370 */
-		gPlayerAnim_002378               = 0x04002378; /* ROM:0x00F60378 */
-		gPlayerAnim_002380               = 0x04002380; /* ROM:0x00F60380 */
-		gPlayerAnim_002388               = 0x04002388; /* ROM:0x00F60388 */
-		gPlayerAnim_002390               = 0x04002390; /* ROM:0x00F60390 */
-		gPlayerAnim_002398               = 0x04002398; /* ROM:0x00F60398 */
-		gPlayerAnim_0023A0               = 0x040023A0; /* ROM:0x00F603A0 */
-		gPlayerAnim_0023A8               = 0x040023A8; /* ROM:0x00F603A8 */
-		gPlayerAnim_0023B0               = 0x040023B0; /* ROM:0x00F603B0 */
-		gPlayerAnim_0023B8               = 0x040023B8; /* ROM:0x00F603B8 */
-		gPlayerAnim_0023C0               = 0x040023C0; /* ROM:0x00F603C0 */
-		gPlayerAnim_0023C8               = 0x040023C8; /* ROM:0x00F603C8 */
-		gPlayerAnim_0023D0               = 0x040023D0; /* ROM:0x00F603D0 */
-		gPlayerAnim_0023D8               = 0x040023D8; /* ROM:0x00F603D8 */
-		gPlayerAnim_0023E0               = 0x040023E0; /* ROM:0x00F603E0 */
-		gPlayerAnim_0023E8               = 0x040023E8; /* ROM:0x00F603E8 */
-		gPlayerAnim_0023F0               = 0x040023F0; /* ROM:0x00F603F0 */
-		gPlayerAnim_0023F8               = 0x040023F8; /* ROM:0x00F603F8 */
-		gPlayerAnim_002400               = 0x04002400; /* ROM:0x00F60400 */
-		gPlayerAnim_002408               = 0x04002408; /* ROM:0x00F60408 */
-		gPlayerAnim_002410               = 0x04002410; /* ROM:0x00F60410 */
-		gPlayerAnim_002418               = 0x04002418; /* ROM:0x00F60418 */
-		gPlayerAnim_002420               = 0x04002420; /* ROM:0x00F60420 */
-		gPlayerAnim_002428               = 0x04002428; /* ROM:0x00F60428 */
-		gPlayerAnim_002430               = 0x04002430; /* ROM:0x00F60430 */
-		gPlayerAnim_002438               = 0x04002438; /* ROM:0x00F60438 */
-		gPlayerAnim_002440               = 0x04002440; /* ROM:0x00F60440 */
-		gPlayerAnim_002448               = 0x04002448; /* ROM:0x00F60448 */
-		gPlayerAnim_002450               = 0x04002450; /* ROM:0x00F60450 */
-		gPlayerAnim_002458               = 0x04002458; /* ROM:0x00F60458 */
-		gPlayerAnim_002460               = 0x04002460; /* ROM:0x00F60460 */
-		gPlayerAnim_002468               = 0x04002468; /* ROM:0x00F60468 */
-		gPlayerAnim_002470               = 0x04002470; /* ROM:0x00F60470 */
-		gPlayerAnim_002478               = 0x04002478; /* ROM:0x00F60478 */
-		gPlayerAnim_002480               = 0x04002480; /* ROM:0x00F60480 */
-		gPlayerAnim_002488               = 0x04002488; /* ROM:0x00F60488 */
-		gPlayerAnim_002490               = 0x04002490; /* ROM:0x00F60490 */
-		gPlayerAnim_002498               = 0x04002498; /* ROM:0x00F60498 */
-		gPlayerAnim_0024A0               = 0x040024A0; /* ROM:0x00F604A0 */
-		gPlayerAnim_0024A8               = 0x040024A8; /* ROM:0x00F604A8 */
-		gPlayerAnim_0024B0               = 0x040024B0; /* ROM:0x00F604B0 */
-		gPlayerAnim_0024B8               = 0x040024B8; /* ROM:0x00F604B8 */
-		gPlayerAnim_0024C0               = 0x040024C0; /* ROM:0x00F604C0 */
-		gPlayerAnim_0024C8               = 0x040024C8; /* ROM:0x00F604C8 */
-		gPlayerAnim_0024D0               = 0x040024D0; /* ROM:0x00F604D0 */
-		gPlayerAnim_0024D8               = 0x040024D8; /* ROM:0x00F604D8 */
-		gPlayerAnim_0024E0               = 0x040024E0; /* ROM:0x00F604E0 */
-		gPlayerAnim_0024E8               = 0x040024E8; /* ROM:0x00F604E8 */
-		gPlayerAnim_0024F0               = 0x040024F0; /* ROM:0x00F604F0 */
-		gPlayerAnim_0024F8               = 0x040024F8; /* ROM:0x00F604F8 */
-		gPlayerAnim_002500               = 0x04002500; /* ROM:0x00F60500 */
-		gPlayerAnim_002508               = 0x04002508; /* ROM:0x00F60508 */
-		gPlayerAnim_002510               = 0x04002510; /* ROM:0x00F60510 */
-		gPlayerAnim_002518               = 0x04002518; /* ROM:0x00F60518 */
-		gPlayerAnim_002520               = 0x04002520; /* ROM:0x00F60520 */
-		gPlayerAnim_002528               = 0x04002528; /* ROM:0x00F60528 */
-		gPlayerAnim_002530               = 0x04002530; /* ROM:0x00F60530 */
-		gPlayerAnim_002538               = 0x04002538; /* ROM:0x00F60538 */
-		gPlayerAnim_002540               = 0x04002540; /* ROM:0x00F60540 */
-		gPlayerAnim_002548               = 0x04002548; /* ROM:0x00F60548 */
-		gPlayerAnim_002550               = 0x04002550; /* ROM:0x00F60550 */
-		gPlayerAnim_002558               = 0x04002558; /* ROM:0x00F60558 */
-		gPlayerAnim_002560               = 0x04002560; /* ROM:0x00F60560 */
-		gPlayerAnim_002568               = 0x04002568; /* ROM:0x00F60568 */
-		gPlayerAnim_002570               = 0x04002570; /* ROM:0x00F60570 */
+		gPlayerAnim_clink_demo_DDbox_open = 0x04002310; /* ROM:0x00F60310 */
+		gPlayerAnim_clink_demo_Tbox_open = 0x04002318; /* ROM:0x00F60318 */
+		gPlayerAnim_clink_demo_atozusari = 0x04002320; /* ROM:0x00F60320 */
+		gPlayerAnim_clink_demo_bashi     = 0x04002328; /* ROM:0x00F60328 */
+		gPlayerAnim_clink_demo_doorA_link = 0x04002330; /* ROM:0x00F60330 */
+		gPlayerAnim_clink_demo_doorB_link = 0x04002338; /* ROM:0x00F60338 */
+		gPlayerAnim_clink_demo_futtobi   = 0x04002340; /* ROM:0x00F60340 */
+		gPlayerAnim_clink_demo_get1      = 0x04002348; /* ROM:0x00F60348 */
+		gPlayerAnim_clink_demo_get2      = 0x04002350; /* ROM:0x00F60350 */
+		gPlayerAnim_clink_demo_get3      = 0x04002358; /* ROM:0x00F60358 */
+		gPlayerAnim_clink_demo_goto_future = 0x04002360; /* ROM:0x00F60360 */
+		gPlayerAnim_clink_demo_koutai    = 0x04002368; /* ROM:0x00F60368 */
+		gPlayerAnim_clink_demo_koutai_kennuki = 0x04002370; /* ROM:0x00F60370 */
+		gPlayerAnim_clink_demo_koutai_wait = 0x04002378; /* ROM:0x00F60378 */
+		gPlayerAnim_clink_demo_mimawasi  = 0x04002380; /* ROM:0x00F60380 */
+		gPlayerAnim_clink_demo_mimawasi_wait = 0x04002388; /* ROM:0x00F60388 */
+		gPlayerAnim_clink_demo_miokuri   = 0x04002390; /* ROM:0x00F60390 */
+		gPlayerAnim_clink_demo_miokuri_wait = 0x04002398; /* ROM:0x00F60398 */
+		gPlayerAnim_clink_demo_nozoki    = 0x040023A0; /* ROM:0x00F603A0 */
+		gPlayerAnim_clink_demo_return_to_future = 0x040023A8; /* ROM:0x00F603A8 */
+		gPlayerAnim_clink_demo_standup   = 0x040023B0; /* ROM:0x00F603B0 */
+		gPlayerAnim_clink_demo_standup_wait = 0x040023B8; /* ROM:0x00F603B8 */
+		gPlayerAnim_clink_normal_climb_endAL = 0x040023C0; /* ROM:0x00F603C0 */
+		gPlayerAnim_clink_normal_climb_endAR = 0x040023C8; /* ROM:0x00F603C8 */
+		gPlayerAnim_clink_normal_climb_endBL = 0x040023D0; /* ROM:0x00F603D0 */
+		gPlayerAnim_clink_normal_climb_endBR = 0x040023D8; /* ROM:0x00F603D8 */
+		gPlayerAnim_clink_normal_climb_startA = 0x040023E0; /* ROM:0x00F603E0 */
+		gPlayerAnim_clink_normal_climb_startB = 0x040023E8; /* ROM:0x00F603E8 */
+		gPlayerAnim_clink_normal_climb_upL = 0x040023F0; /* ROM:0x00F603F0 */
+		gPlayerAnim_clink_normal_climb_upR = 0x040023F8; /* ROM:0x00F603F8 */
+		gPlayerAnim_clink_normal_defense_ALL = 0x04002400; /* ROM:0x00F60400 */
+		gPlayerAnim_clink_op3_negaeri    = 0x04002408; /* ROM:0x00F60408 */
+		gPlayerAnim_clink_op3_okiagari   = 0x04002410; /* ROM:0x00F60410 */
+		gPlayerAnim_clink_op3_tatiagari  = 0x04002418; /* ROM:0x00F60418 */
+		gPlayerAnim_clink_op3_wait1      = 0x04002420; /* ROM:0x00F60420 */
+		gPlayerAnim_clink_op3_wait2      = 0x04002428; /* ROM:0x00F60428 */
+		gPlayerAnim_clink_op3_wait3      = 0x04002430; /* ROM:0x00F60430 */
+		gPlayerAnim_d_link_imanodare     = 0x04002438; /* ROM:0x00F60438 */
+		gPlayerAnim_d_link_orooro        = 0x04002440; /* ROM:0x00F60440 */
+		gPlayerAnim_d_link_orowait       = 0x04002448; /* ROM:0x00F60448 */
+		gPlayerAnim_demo_link_nwait      = 0x04002450; /* ROM:0x00F60450 */
+		gPlayerAnim_demo_link_orosuu     = 0x04002458; /* ROM:0x00F60458 */
+		gPlayerAnim_demo_link_tewatashi  = 0x04002460; /* ROM:0x00F60460 */
+		gPlayerAnim_demo_link_twait      = 0x04002468; /* ROM:0x00F60468 */
+		gPlayerAnim_kolink_odoroki_demo  = 0x04002470; /* ROM:0x00F60470 */
+		gPlayerAnim_link_anchor_LLside_kiru_endL = 0x04002478; /* ROM:0x00F60478 */
+		gPlayerAnim_link_anchor_LLside_kiru_finsh_endR = 0x04002480; /* ROM:0x00F60480 */
+		gPlayerAnim_link_anchor_LRside_kiru_endR = 0x04002488; /* ROM:0x00F60488 */
+		gPlayerAnim_link_anchor_LRside_kiru_finsh_endL = 0x04002490; /* ROM:0x00F60490 */
+		gPlayerAnim_link_anchor_Lnormal_kiru_endR = 0x04002498; /* ROM:0x00F60498 */
+		gPlayerAnim_link_anchor_Lnormal_kiru_finsh_endR = 0x040024A0; /* ROM:0x00F604A0 */
+		gPlayerAnim_link_anchor_Lpierce_kiru_endL = 0x040024A8; /* ROM:0x00F604A8 */
+		gPlayerAnim_link_anchor_Lpierce_kiru_finsh_endR = 0x040024B0; /* ROM:0x00F604B0 */
+		gPlayerAnim_link_anchor_Lrolling_kiru_endR = 0x040024B8; /* ROM:0x00F604B8 */
+		gPlayerAnim_link_anchor_Lside_kiru_endR = 0x040024C0; /* ROM:0x00F604C0 */
+		gPlayerAnim_link_anchor_Lside_kiru_finsh_endR = 0x040024C8; /* ROM:0x00F604C8 */
+		gPlayerAnim_link_anchor_Rside_kiru_endR = 0x040024D0; /* ROM:0x00F604D0 */
+		gPlayerAnim_link_anchor_Rside_kiru_finsh_endR = 0x040024D8; /* ROM:0x00F604D8 */
+		gPlayerAnim_link_anchor_anchor2fighter = 0x040024E0; /* ROM:0x00F604E0 */
+		gPlayerAnim_link_anchor_back_brake = 0x040024E8; /* ROM:0x00F604E8 */
+		gPlayerAnim_link_anchor_back_hitR = 0x040024F0; /* ROM:0x00F604F0 */
+		gPlayerAnim_link_anchor_back_walk = 0x040024F8; /* ROM:0x00F604F8 */
+		gPlayerAnim_link_anchor_bom_side_walkL = 0x04002500; /* ROM:0x00F60500 */
+		gPlayerAnim_link_anchor_bom_side_walkR = 0x04002508; /* ROM:0x00F60508 */
+		gPlayerAnim_link_anchor_defense_hit = 0x04002510; /* ROM:0x00F60510 */
+		gPlayerAnim_link_anchor_defense_long_hitL = 0x04002518; /* ROM:0x00F60518 */
+		gPlayerAnim_link_anchor_defense_long_hitR = 0x04002520; /* ROM:0x00F60520 */
+		gPlayerAnim_link_anchor_front_hitR = 0x04002528; /* ROM:0x00F60528 */
+		gPlayerAnim_link_anchor_jump_kiru_finsh_endR = 0x04002530; /* ROM:0x00F60530 */
+		gPlayerAnim_link_anchor_landingR = 0x04002538; /* ROM:0x00F60538 */
+		gPlayerAnim_link_anchor_normal_kiru_finsh_endR = 0x04002540; /* ROM:0x00F60540 */
+		gPlayerAnim_link_anchor_pierce_kiru_endR = 0x04002548; /* ROM:0x00F60548 */
+		gPlayerAnim_link_anchor_pierce_kiru_finsh_endR = 0x04002550; /* ROM:0x00F60550 */
+		gPlayerAnim_link_anchor_power_kiru_wait_endR = 0x04002558; /* ROM:0x00F60558 */
+		gPlayerAnim_link_anchor_rolling_kiru_endR = 0x04002560; /* ROM:0x00F60560 */
+		gPlayerAnim_link_anchor_side_walkL = 0x04002568; /* ROM:0x00F60568 */
+		gPlayerAnim_link_anchor_side_walkR = 0x04002570; /* ROM:0x00F60570 */
 		gPlayerAnim_002578               = 0x04002578; /* ROM:0x00F60578 */
-		gPlayerAnim_002580               = 0x04002580; /* ROM:0x00F60580 */
-		gPlayerAnim_002588               = 0x04002588; /* ROM:0x00F60588 */
-		gPlayerAnim_002590               = 0x04002590; /* ROM:0x00F60590 */
-		gPlayerAnim_002598               = 0x04002598; /* ROM:0x00F60598 */
-		gPlayerAnim_0025A0               = 0x040025A0; /* ROM:0x00F605A0 */
+		gPlayerAnim_link_anchor_waitL2defense = 0x04002580; /* ROM:0x00F60580 */
+		gPlayerAnim_link_anchor_waitL2defense_long = 0x04002588; /* ROM:0x00F60588 */
+		gPlayerAnim_link_anchor_waitL    = 0x04002590; /* ROM:0x00F60590 */
+		gPlayerAnim_link_anchor_waitL_defense = 0x04002598; /* ROM:0x00F60598 */
+		gPlayerAnim_link_anchor_waitL_defense_wait = 0x040025A0; /* ROM:0x00F605A0 */
 		gPlayerAnim_0025A8               = 0x040025A8; /* ROM:0x00F605A8 */
-		gPlayerAnim_0025B0               = 0x040025B0; /* ROM:0x00F605B0 */
+		gPlayerAnim_link_anchor_waitL_pierce_kiru = 0x040025B0; /* ROM:0x00F605B0 */
 		gPlayerAnim_0025B8               = 0x040025B8; /* ROM:0x00F605B8 */
-		gPlayerAnim_0025C0               = 0x040025C0; /* ROM:0x00F605C0 */
-		gPlayerAnim_0025C8               = 0x040025C8; /* ROM:0x00F605C8 */
-		gPlayerAnim_0025D0               = 0x040025D0; /* ROM:0x00F605D0 */
-		gPlayerAnim_0025D8               = 0x040025D8; /* ROM:0x00F605D8 */
-		gPlayerAnim_0025E0               = 0x040025E0; /* ROM:0x00F605E0 */
+		gPlayerAnim_link_anchor_waitR2defense = 0x040025C0; /* ROM:0x00F605C0 */
+		gPlayerAnim_link_anchor_waitR2defense_long = 0x040025C8; /* ROM:0x00F605C8 */
+		gPlayerAnim_link_anchor_waitR    = 0x040025D0; /* ROM:0x00F605D0 */
+		gPlayerAnim_link_anchor_waitR_defense = 0x040025D8; /* ROM:0x00F605D8 */
+		gPlayerAnim_link_anchor_waitR_defense_wait = 0x040025E0; /* ROM:0x00F605E0 */
 		gPlayerAnim_0025E8               = 0x040025E8; /* ROM:0x00F605E8 */
-		gPlayerAnim_0025F0               = 0x040025F0; /* ROM:0x00F605F0 */
-		gPlayerAnim_0025F8               = 0x040025F8; /* ROM:0x00F605F8 */
-		gPlayerAnim_002600               = 0x04002600; /* ROM:0x00F60600 */
-		gPlayerAnim_002608               = 0x04002608; /* ROM:0x00F60608 */
+		gPlayerAnim_link_anchor_waitR_pierce_kiru = 0x040025F0; /* ROM:0x00F605F0 */
+		gPlayerAnim_link_boom_catch      = 0x040025F8; /* ROM:0x00F605F8 */
+		gPlayerAnim_link_boom_throwL     = 0x04002600; /* ROM:0x00F60600 */
+		gPlayerAnim_link_boom_throwR     = 0x04002608; /* ROM:0x00F60608 */
 		gPlayerAnim_002610               = 0x04002610; /* ROM:0x00F60610 */
-		gPlayerAnim_002618               = 0x04002618; /* ROM:0x00F60618 */
-		gPlayerAnim_002620               = 0x04002620; /* ROM:0x00F60620 */
-		gPlayerAnim_002628               = 0x04002628; /* ROM:0x00F60628 */
-		gPlayerAnim_002630               = 0x04002630; /* ROM:0x00F60630 */
-		gPlayerAnim_002638               = 0x04002638; /* ROM:0x00F60638 */
-		gPlayerAnim_002640               = 0x04002640; /* ROM:0x00F60640 */
-		gPlayerAnim_002648               = 0x04002648; /* ROM:0x00F60648 */
-		gPlayerAnim_002650               = 0x04002650; /* ROM:0x00F60650 */
-		gPlayerAnim_002658               = 0x04002658; /* ROM:0x00F60658 */
-		gPlayerAnim_002660               = 0x04002660; /* ROM:0x00F60660 */
-		gPlayerAnim_002668               = 0x04002668; /* ROM:0x00F60668 */
-		gPlayerAnim_002670               = 0x04002670; /* ROM:0x00F60670 */
-		gPlayerAnim_002678               = 0x04002678; /* ROM:0x00F60678 */
-		gPlayerAnim_002680               = 0x04002680; /* ROM:0x00F60680 */
-		gPlayerAnim_002688               = 0x04002688; /* ROM:0x00F60688 */
-		gPlayerAnim_002690               = 0x04002690; /* ROM:0x00F60690 */
-		gPlayerAnim_002698               = 0x04002698; /* ROM:0x00F60698 */
-		gPlayerAnim_0026A0               = 0x040026A0; /* ROM:0x00F606A0 */
-		gPlayerAnim_0026A8               = 0x040026A8; /* ROM:0x00F606A8 */
-		gPlayerAnim_0026B0               = 0x040026B0; /* ROM:0x00F606B0 */
-		gPlayerAnim_0026B8               = 0x040026B8; /* ROM:0x00F606B8 */
-		gPlayerAnim_0026C0               = 0x040026C0; /* ROM:0x00F606C0 */
-		gPlayerAnim_0026C8               = 0x040026C8; /* ROM:0x00F606C8 */
-		gPlayerAnim_0026D0               = 0x040026D0; /* ROM:0x00F606D0 */
-		gPlayerAnim_0026D8               = 0x040026D8; /* ROM:0x00F606D8 */
-		gPlayerAnim_0026E0               = 0x040026E0; /* ROM:0x00F606E0 */
-		gPlayerAnim_0026E8               = 0x040026E8; /* ROM:0x00F606E8 */
-		gPlayerAnim_0026F0               = 0x040026F0; /* ROM:0x00F606F0 */
-		gPlayerAnim_0026F8               = 0x040026F8; /* ROM:0x00F606F8 */
-		gPlayerAnim_002700               = 0x04002700; /* ROM:0x00F60700 */
-		gPlayerAnim_002708               = 0x04002708; /* ROM:0x00F60708 */
-		gPlayerAnim_002710               = 0x04002710; /* ROM:0x00F60710 */
-		gPlayerAnim_002718               = 0x04002718; /* ROM:0x00F60718 */
-		gPlayerAnim_002720               = 0x04002720; /* ROM:0x00F60720 */
-		gPlayerAnim_002728               = 0x04002728; /* ROM:0x00F60728 */
-		gPlayerAnim_002730               = 0x04002730; /* ROM:0x00F60730 */
-		gPlayerAnim_002738               = 0x04002738; /* ROM:0x00F60738 */
-		gPlayerAnim_002740               = 0x04002740; /* ROM:0x00F60740 */
-		gPlayerAnim_002748               = 0x04002748; /* ROM:0x00F60748 */
-		gPlayerAnim_002750               = 0x04002750; /* ROM:0x00F60750 */
-		gPlayerAnim_002758               = 0x04002758; /* ROM:0x00F60758 */
-		gPlayerAnim_002760               = 0x04002760; /* ROM:0x00F60760 */
-		gPlayerAnim_002768               = 0x04002768; /* ROM:0x00F60768 */
-		gPlayerAnim_002770               = 0x04002770; /* ROM:0x00F60770 */
-		gPlayerAnim_002778               = 0x04002778; /* ROM:0x00F60778 */
-		gPlayerAnim_002780               = 0x04002780; /* ROM:0x00F60780 */
-		gPlayerAnim_002788               = 0x04002788; /* ROM:0x00F60788 */
-		gPlayerAnim_002790               = 0x04002790; /* ROM:0x00F60790 */
-		gPlayerAnim_002798               = 0x04002798; /* ROM:0x00F60798 */
-		gPlayerAnim_0027A0               = 0x040027A0; /* ROM:0x00F607A0 */
-		gPlayerAnim_0027A8               = 0x040027A8; /* ROM:0x00F607A8 */
-		gPlayerAnim_0027B0               = 0x040027B0; /* ROM:0x00F607B0 */
-		gPlayerAnim_0027B8               = 0x040027B8; /* ROM:0x00F607B8 */
-		gPlayerAnim_0027C0               = 0x040027C0; /* ROM:0x00F607C0 */
-		gPlayerAnim_0027C8               = 0x040027C8; /* ROM:0x00F607C8 */
-		gPlayerAnim_0027D0               = 0x040027D0; /* ROM:0x00F607D0 */
-		gPlayerAnim_0027D8               = 0x040027D8; /* ROM:0x00F607D8 */
-		gPlayerAnim_0027E0               = 0x040027E0; /* ROM:0x00F607E0 */
-		gPlayerAnim_0027E8               = 0x040027E8; /* ROM:0x00F607E8 */
-		gPlayerAnim_0027F0               = 0x040027F0; /* ROM:0x00F607F0 */
-		gPlayerAnim_0027F8               = 0x040027F8; /* ROM:0x00F607F8 */
-		gPlayerAnim_002800               = 0x04002800; /* ROM:0x00F60800 */
-		gPlayerAnim_002808               = 0x04002808; /* ROM:0x00F60808 */
-		gPlayerAnim_002810               = 0x04002810; /* ROM:0x00F60810 */
-		gPlayerAnim_002818               = 0x04002818; /* ROM:0x00F60818 */
-		gPlayerAnim_002820               = 0x04002820; /* ROM:0x00F60820 */
-		gPlayerAnim_002828               = 0x04002828; /* ROM:0x00F60828 */
-		gPlayerAnim_002830               = 0x04002830; /* ROM:0x00F60830 */
-		gPlayerAnim_002838               = 0x04002838; /* ROM:0x00F60838 */
+		gPlayerAnim_link_boom_throw_side_walkL = 0x04002618; /* ROM:0x00F60618 */
+		gPlayerAnim_link_boom_throw_side_walkR = 0x04002620; /* ROM:0x00F60620 */
+		gPlayerAnim_link_boom_throw_wait2waitR = 0x04002628; /* ROM:0x00F60628 */
+		gPlayerAnim_link_boom_throw_waitL = 0x04002630; /* ROM:0x00F60630 */
+		gPlayerAnim_link_boom_throw_waitR = 0x04002638; /* ROM:0x00F60638 */
+		gPlayerAnim_link_bottle_bug_in   = 0x04002640; /* ROM:0x00F60640 */
+		gPlayerAnim_link_bottle_bug_miss = 0x04002648; /* ROM:0x00F60648 */
+		gPlayerAnim_link_bottle_bug_out  = 0x04002650; /* ROM:0x00F60650 */
+		gPlayerAnim_link_bottle_drink_demo = 0x04002658; /* ROM:0x00F60658 */
+		gPlayerAnim_link_bottle_drink_demo_end = 0x04002660; /* ROM:0x00F60660 */
+		gPlayerAnim_link_bottle_drink_demo_start = 0x04002668; /* ROM:0x00F60668 */
+		gPlayerAnim_link_bottle_drink_demo_wait = 0x04002670; /* ROM:0x00F60670 */
+		gPlayerAnim_link_bottle_fish_in  = 0x04002678; /* ROM:0x00F60678 */
+		gPlayerAnim_link_bottle_fish_miss = 0x04002680; /* ROM:0x00F60680 */
+		gPlayerAnim_link_bottle_fish_out = 0x04002688; /* ROM:0x00F60688 */
+		gPlayerAnim_link_bottle_read     = 0x04002690; /* ROM:0x00F60690 */
+		gPlayerAnim_link_bottle_read_end = 0x04002698; /* ROM:0x00F60698 */
+		gPlayerAnim_link_bow_bow_ready   = 0x040026A0; /* ROM:0x00F606A0 */
+		gPlayerAnim_link_bow_bow_shoot   = 0x040026A8; /* ROM:0x00F606A8 */
+		gPlayerAnim_link_bow_bow_shoot_end = 0x040026B0; /* ROM:0x00F606B0 */
+		gPlayerAnim_link_bow_bow_shoot_next = 0x040026B8; /* ROM:0x00F606B8 */
+		gPlayerAnim_link_bow_bow_wait    = 0x040026C0; /* ROM:0x00F606C0 */
+		gPlayerAnim_link_bow_defense     = 0x040026C8; /* ROM:0x00F606C8 */
+		gPlayerAnim_link_bow_defense_wait = 0x040026D0; /* ROM:0x00F606D0 */
+		gPlayerAnim_link_bow_side_runL   = 0x040026D8; /* ROM:0x00F606D8 */
+		gPlayerAnim_link_bow_side_runR   = 0x040026E0; /* ROM:0x00F606E0 */
+		gPlayerAnim_link_bow_side_walk   = 0x040026E8; /* ROM:0x00F606E8 */
+		gPlayerAnim_link_bow_walk2ready  = 0x040026F0; /* ROM:0x00F606F0 */
+		gPlayerAnim_link_child_tunnel_door = 0x040026F8; /* ROM:0x00F606F8 */
+		gPlayerAnim_link_child_tunnel_end = 0x04002700; /* ROM:0x00F60700 */
+		gPlayerAnim_link_child_tunnel_start = 0x04002708; /* ROM:0x00F60708 */
+		gPlayerAnim_link_demo_DDbox_open = 0x04002710; /* ROM:0x00F60710 */
+		gPlayerAnim_link_demo_Tbox_open  = 0x04002718; /* ROM:0x00F60718 */
+		gPlayerAnim_link_demo_back_to_past = 0x04002720; /* ROM:0x00F60720 */
+		gPlayerAnim_link_demo_baru_op1   = 0x04002728; /* ROM:0x00F60728 */
+		gPlayerAnim_link_demo_baru_op2   = 0x04002730; /* ROM:0x00F60730 */
+		gPlayerAnim_link_demo_baru_op3   = 0x04002738; /* ROM:0x00F60738 */
+		gPlayerAnim_link_demo_bikkuri    = 0x04002740; /* ROM:0x00F60740 */
+		gPlayerAnim_link_demo_doorA_link = 0x04002748; /* ROM:0x00F60748 */
+		gPlayerAnim_link_demo_doorA_link_free = 0x04002750; /* ROM:0x00F60750 */
+		gPlayerAnim_link_demo_doorB_link = 0x04002758; /* ROM:0x00F60758 */
+		gPlayerAnim_link_demo_doorB_link_free = 0x04002760; /* ROM:0x00F60760 */
+		gPlayerAnim_link_demo_furimuki2  = 0x04002768; /* ROM:0x00F60768 */
+		gPlayerAnim_link_demo_furimuki2_wait = 0x04002770; /* ROM:0x00F60770 */
+		gPlayerAnim_link_demo_furimuki   = 0x04002778; /* ROM:0x00F60778 */
+		gPlayerAnim_link_demo_get_itemA  = 0x04002780; /* ROM:0x00F60780 */
+		gPlayerAnim_link_demo_get_itemB  = 0x04002788; /* ROM:0x00F60788 */
+		gPlayerAnim_link_demo_goma_furimuki = 0x04002790; /* ROM:0x00F60790 */
+		gPlayerAnim_link_demo_gurad      = 0x04002798; /* ROM:0x00F60798 */
+		gPlayerAnim_link_demo_gurad_wait = 0x040027A0; /* ROM:0x00F607A0 */
+		gPlayerAnim_link_demo_jibunmiru  = 0x040027A8; /* ROM:0x00F607A8 */
+		gPlayerAnim_link_demo_kakeyori   = 0x040027B0; /* ROM:0x00F607B0 */
+		gPlayerAnim_link_demo_kakeyori_mimawasi = 0x040027B8; /* ROM:0x00F607B8 */
+		gPlayerAnim_link_demo_kakeyori_miokuri = 0x040027C0; /* ROM:0x00F607C0 */
+		gPlayerAnim_link_demo_kakeyori_miokuri_wait = 0x040027C8; /* ROM:0x00F607C8 */
+		gPlayerAnim_link_demo_kakeyori_wait = 0x040027D0; /* ROM:0x00F607D0 */
+		gPlayerAnim_link_demo_kaoage     = 0x040027D8; /* ROM:0x00F607D8 */
+		gPlayerAnim_link_demo_kaoage_wait = 0x040027E0; /* ROM:0x00F607E0 */
+		gPlayerAnim_link_demo_kenmiru1   = 0x040027E8; /* ROM:0x00F607E8 */
+		gPlayerAnim_link_demo_kenmiru1_wait = 0x040027F0; /* ROM:0x00F607F0 */
+		gPlayerAnim_link_demo_kenmiru2   = 0x040027F8; /* ROM:0x00F607F8 */
+		gPlayerAnim_link_demo_kenmiru2_modori = 0x04002800; /* ROM:0x00F60800 */
+		gPlayerAnim_link_demo_kenmiru2_wait = 0x04002808; /* ROM:0x00F60808 */
+		gPlayerAnim_link_demo_kousan     = 0x04002810; /* ROM:0x00F60810 */
+		gPlayerAnim_link_demo_look_hand  = 0x04002818; /* ROM:0x00F60818 */
+		gPlayerAnim_link_demo_look_hand_wait = 0x04002820; /* ROM:0x00F60820 */
+		gPlayerAnim_link_demo_nozokikomi = 0x04002828; /* ROM:0x00F60828 */
+		gPlayerAnim_link_demo_nozokikomi_wait = 0x04002830; /* ROM:0x00F60830 */
+		gPlayerAnim_link_demo_return_to_past = 0x04002838; /* ROM:0x00F60838 */
 		gPlayerAnim_002840               = 0x04002840; /* ROM:0x00F60840 */
-		gPlayerAnim_002848               = 0x04002848; /* ROM:0x00F60848 */
-		gPlayerAnim_002850               = 0x04002850; /* ROM:0x00F60850 */
-		gPlayerAnim_002858               = 0x04002858; /* ROM:0x00F60858 */
-		gPlayerAnim_002860               = 0x04002860; /* ROM:0x00F60860 */
-		gPlayerAnim_002868               = 0x04002868; /* ROM:0x00F60868 */
-		gPlayerAnim_002870               = 0x04002870; /* ROM:0x00F60870 */
-		gPlayerAnim_002878               = 0x04002878; /* ROM:0x00F60878 */
-		gPlayerAnim_002880               = 0x04002880; /* ROM:0x00F60880 */
-		gPlayerAnim_002888               = 0x04002888; /* ROM:0x00F60888 */
-		gPlayerAnim_002890               = 0x04002890; /* ROM:0x00F60890 */
-		gPlayerAnim_002898               = 0x04002898; /* ROM:0x00F60898 */
-		gPlayerAnim_0028A0               = 0x040028A0; /* ROM:0x00F608A0 */
-		gPlayerAnim_0028A8               = 0x040028A8; /* ROM:0x00F608A8 */
-		gPlayerAnim_0028B0               = 0x040028B0; /* ROM:0x00F608B0 */
-		gPlayerAnim_0028B8               = 0x040028B8; /* ROM:0x00F608B8 */
-		gPlayerAnim_0028C0               = 0x040028C0; /* ROM:0x00F608C0 */
-		gPlayerAnim_0028C8               = 0x040028C8; /* ROM:0x00F608C8 */
-		gPlayerAnim_0028D0               = 0x040028D0; /* ROM:0x00F608D0 */
-		gPlayerAnim_0028D8               = 0x040028D8; /* ROM:0x00F608D8 */
-		gPlayerAnim_0028E0               = 0x040028E0; /* ROM:0x00F608E0 */
-		gPlayerAnim_0028E8               = 0x040028E8; /* ROM:0x00F608E8 */
-		gPlayerAnim_0028F0               = 0x040028F0; /* ROM:0x00F608F0 */
-		gPlayerAnim_0028F8               = 0x040028F8; /* ROM:0x00F608F8 */
-		gPlayerAnim_002900               = 0x04002900; /* ROM:0x00F60900 */
-		gPlayerAnim_002908               = 0x04002908; /* ROM:0x00F60908 */
-		gPlayerAnim_002910               = 0x04002910; /* ROM:0x00F60910 */
-		gPlayerAnim_002918               = 0x04002918; /* ROM:0x00F60918 */
-		gPlayerAnim_002920               = 0x04002920; /* ROM:0x00F60920 */
-		gPlayerAnim_002928               = 0x04002928; /* ROM:0x00F60928 */
-		gPlayerAnim_002930               = 0x04002930; /* ROM:0x00F60930 */
-		gPlayerAnim_002938               = 0x04002938; /* ROM:0x00F60938 */
-		gPlayerAnim_002940               = 0x04002940; /* ROM:0x00F60940 */
-		gPlayerAnim_002948               = 0x04002948; /* ROM:0x00F60948 */
-		gPlayerAnim_002950               = 0x04002950; /* ROM:0x00F60950 */
-		gPlayerAnim_002958               = 0x04002958; /* ROM:0x00F60958 */
-		gPlayerAnim_002960               = 0x04002960; /* ROM:0x00F60960 */
-		gPlayerAnim_002968               = 0x04002968; /* ROM:0x00F60968 */
-		gPlayerAnim_002970               = 0x04002970; /* ROM:0x00F60970 */
-		gPlayerAnim_002978               = 0x04002978; /* ROM:0x00F60978 */
-		gPlayerAnim_002980               = 0x04002980; /* ROM:0x00F60980 */
-		gPlayerAnim_002988               = 0x04002988; /* ROM:0x00F60988 */
-		gPlayerAnim_002990               = 0x04002990; /* ROM:0x00F60990 */
-		gPlayerAnim_002998               = 0x04002998; /* ROM:0x00F60998 */
-		gPlayerAnim_0029A0               = 0x040029A0; /* ROM:0x00F609A0 */
-		gPlayerAnim_0029A8               = 0x040029A8; /* ROM:0x00F609A8 */
-		gPlayerAnim_0029B0               = 0x040029B0; /* ROM:0x00F609B0 */
-		gPlayerAnim_0029B8               = 0x040029B8; /* ROM:0x00F609B8 */
-		gPlayerAnim_0029C0               = 0x040029C0; /* ROM:0x00F609C0 */
-		gPlayerAnim_0029C8               = 0x040029C8; /* ROM:0x00F609C8 */
-		gPlayerAnim_0029D0               = 0x040029D0; /* ROM:0x00F609D0 */
-		gPlayerAnim_0029D8               = 0x040029D8; /* ROM:0x00F609D8 */
-		gPlayerAnim_0029E0               = 0x040029E0; /* ROM:0x00F609E0 */
-		gPlayerAnim_0029E8               = 0x040029E8; /* ROM:0x00F609E8 */
-		gPlayerAnim_0029F0               = 0x040029F0; /* ROM:0x00F609F0 */
-		gPlayerAnim_0029F8               = 0x040029F8; /* ROM:0x00F609F8 */
-		gPlayerAnim_002A00               = 0x04002A00; /* ROM:0x00F60A00 */
-		gPlayerAnim_002A08               = 0x04002A08; /* ROM:0x00F60A08 */
-		gPlayerAnim_002A10               = 0x04002A10; /* ROM:0x00F60A10 */
-		gPlayerAnim_002A18               = 0x04002A18; /* ROM:0x00F60A18 */
-		gPlayerAnim_002A20               = 0x04002A20; /* ROM:0x00F60A20 */
-		gPlayerAnim_002A28               = 0x04002A28; /* ROM:0x00F60A28 */
-		gPlayerAnim_002A30               = 0x04002A30; /* ROM:0x00F60A30 */
-		gPlayerAnim_002A38               = 0x04002A38; /* ROM:0x00F60A38 */
-		gPlayerAnim_002A40               = 0x04002A40; /* ROM:0x00F60A40 */
-		gPlayerAnim_002A48               = 0x04002A48; /* ROM:0x00F60A48 */
-		gPlayerAnim_002A50               = 0x04002A50; /* ROM:0x00F60A50 */
-		gPlayerAnim_002A58               = 0x04002A58; /* ROM:0x00F60A58 */
-		gPlayerAnim_002A60               = 0x04002A60; /* ROM:0x00F60A60 */
-		gPlayerAnim_002A68               = 0x04002A68; /* ROM:0x00F60A68 */
-		gPlayerAnim_002A70               = 0x04002A70; /* ROM:0x00F60A70 */
+		gPlayerAnim_link_demo_sita_wait  = 0x04002848; /* ROM:0x00F60848 */
+		gPlayerAnim_link_demo_ue         = 0x04002850; /* ROM:0x00F60850 */
+		gPlayerAnim_link_demo_ue_wait    = 0x04002858; /* ROM:0x00F60858 */
+		gPlayerAnim_link_demo_warp       = 0x04002860; /* ROM:0x00F60860 */
+		gPlayerAnim_link_demo_zeldamiru  = 0x04002868; /* ROM:0x00F60868 */
+		gPlayerAnim_link_demo_zeldamiru_wait = 0x04002870; /* ROM:0x00F60870 */
+		gPlayerAnim_link_derth_rebirth   = 0x04002878; /* ROM:0x00F60878 */
+		gPlayerAnim_link_fighter_LLside_kiru = 0x04002880; /* ROM:0x00F60880 */
+		gPlayerAnim_link_fighter_LLside_kiru_end = 0x04002888; /* ROM:0x00F60888 */
+		gPlayerAnim_link_fighter_LLside_kiru_finsh = 0x04002890; /* ROM:0x00F60890 */
+		gPlayerAnim_link_fighter_LLside_kiru_finsh_end = 0x04002898; /* ROM:0x00F60898 */
+		gPlayerAnim_link_fighter_LRside_kiru = 0x040028A0; /* ROM:0x00F608A0 */
+		gPlayerAnim_link_fighter_LRside_kiru_end = 0x040028A8; /* ROM:0x00F608A8 */
+		gPlayerAnim_link_fighter_LRside_kiru_finsh = 0x040028B0; /* ROM:0x00F608B0 */
+		gPlayerAnim_link_fighter_LRside_kiru_finsh_end = 0x040028B8; /* ROM:0x00F608B8 */
+		gPlayerAnim_link_fighter_Lnormal_kiru = 0x040028C0; /* ROM:0x00F608C0 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_end = 0x040028C8; /* ROM:0x00F608C8 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_finsh = 0x040028D0; /* ROM:0x00F608D0 */
+		gPlayerAnim_link_fighter_Lnormal_kiru_finsh_end = 0x040028D8; /* ROM:0x00F608D8 */
+		gPlayerAnim_link_fighter_Lpierce_kiru = 0x040028E0; /* ROM:0x00F608E0 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_end = 0x040028E8; /* ROM:0x00F608E8 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_finsh = 0x040028F0; /* ROM:0x00F608F0 */
+		gPlayerAnim_link_fighter_Lpierce_kiru_finsh_end = 0x040028F8; /* ROM:0x00F608F8 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru = 0x04002900; /* ROM:0x00F60900 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru_end = 0x04002908; /* ROM:0x00F60908 */
+		gPlayerAnim_link_fighter_Lpower_jump_kiru_hit = 0x04002910; /* ROM:0x00F60910 */
+		gPlayerAnim_link_fighter_Lpower_kiru_side_walk = 0x04002918; /* ROM:0x00F60918 */
+		gPlayerAnim_link_fighter_Lpower_kiru_start = 0x04002920; /* ROM:0x00F60920 */
+		gPlayerAnim_link_fighter_Lpower_kiru_wait = 0x04002928; /* ROM:0x00F60928 */
+		gPlayerAnim_link_fighter_Lpower_kiru_wait_end = 0x04002930; /* ROM:0x00F60930 */
+		gPlayerAnim_link_fighter_Lpower_kiru_walk = 0x04002938; /* ROM:0x00F60938 */
+		gPlayerAnim_link_fighter_Lrolling_kiru = 0x04002940; /* ROM:0x00F60940 */
+		gPlayerAnim_link_fighter_Lrolling_kiru_end = 0x04002948; /* ROM:0x00F60948 */
+		gPlayerAnim_link_fighter_Lside_jump = 0x04002950; /* ROM:0x00F60950 */
+		gPlayerAnim_link_fighter_Lside_jump_endL = 0x04002958; /* ROM:0x00F60958 */
+		gPlayerAnim_link_fighter_Lside_jump_end = 0x04002960; /* ROM:0x00F60960 */
+		gPlayerAnim_link_fighter_Lside_kiru = 0x04002968; /* ROM:0x00F60968 */
+		gPlayerAnim_link_fighter_Lside_kiru_end = 0x04002970; /* ROM:0x00F60970 */
+		gPlayerAnim_link_fighter_Lside_kiru_finsh = 0x04002978; /* ROM:0x00F60978 */
+		gPlayerAnim_link_fighter_Lside_kiru_finsh_end = 0x04002980; /* ROM:0x00F60980 */
+		gPlayerAnim_link_fighter_Rside_jump = 0x04002988; /* ROM:0x00F60988 */
+		gPlayerAnim_link_fighter_Rside_jump_endR = 0x04002990; /* ROM:0x00F60990 */
+		gPlayerAnim_link_fighter_Rside_jump_end = 0x04002998; /* ROM:0x00F60998 */
+		gPlayerAnim_link_fighter_Rside_kiru = 0x040029A0; /* ROM:0x00F609A0 */
+		gPlayerAnim_link_fighter_Rside_kiru_end = 0x040029A8; /* ROM:0x00F609A8 */
+		gPlayerAnim_link_fighter_Rside_kiru_finsh = 0x040029B0; /* ROM:0x00F609B0 */
+		gPlayerAnim_link_fighter_Rside_kiru_finsh_end = 0x040029B8; /* ROM:0x00F609B8 */
+		gPlayerAnim_link_fighter_Wrolling_kiru = 0x040029C0; /* ROM:0x00F609C0 */
+		gPlayerAnim_link_fighter_Wrolling_kiru_end = 0x040029C8; /* ROM:0x00F609C8 */
+		gPlayerAnim_link_fighter_backturn_jump = 0x040029D0; /* ROM:0x00F609D0 */
+		gPlayerAnim_link_fighter_backturn_jump_endR = 0x040029D8; /* ROM:0x00F609D8 */
+		gPlayerAnim_link_fighter_backturn_jump_end = 0x040029E0; /* ROM:0x00F609E0 */
+		gPlayerAnim_link_fighter_damage_run = 0x040029E8; /* ROM:0x00F609E8 */
+		gPlayerAnim_link_fighter_damage_run_long = 0x040029F0; /* ROM:0x00F609F0 */
+		gPlayerAnim_link_fighter_defense = 0x040029F8; /* ROM:0x00F609F8 */
+		gPlayerAnim_link_fighter_defense_long = 0x04002A00; /* ROM:0x00F60A00 */
+		gPlayerAnim_link_fighter_defense_long_hit = 0x04002A08; /* ROM:0x00F60A08 */
+		gPlayerAnim_link_fighter_defense_long_wait = 0x04002A10; /* ROM:0x00F60A10 */
+		gPlayerAnim_link_fighter_defense_wait = 0x04002A18; /* ROM:0x00F60A18 */
+		gPlayerAnim_link_fighter_fighter2long = 0x04002A20; /* ROM:0x00F60A20 */
+		gPlayerAnim_link_fighter_front_jump = 0x04002A28; /* ROM:0x00F60A28 */
+		gPlayerAnim_link_fighter_front_jump_endR = 0x04002A30; /* ROM:0x00F60A30 */
+		gPlayerAnim_link_fighter_front_jump_end = 0x04002A38; /* ROM:0x00F60A38 */
+		gPlayerAnim_link_fighter_heavy_run_long = 0x04002A40; /* ROM:0x00F60A40 */
+		gPlayerAnim_link_fighter_jump_kiru = 0x04002A48; /* ROM:0x00F60A48 */
+		gPlayerAnim_link_fighter_jump_kiru_finsh = 0x04002A50; /* ROM:0x00F60A50 */
+		gPlayerAnim_link_fighter_jump_kiru_finsh_end = 0x04002A58; /* ROM:0x00F60A58 */
+		gPlayerAnim_link_fighter_jump_rollkiru = 0x04002A60; /* ROM:0x00F60A60 */
+		gPlayerAnim_link_fighter_landing_roll_long = 0x04002A68; /* ROM:0x00F60A68 */
+		gPlayerAnim_link_fighter_normal2fighter = 0x04002A70; /* ROM:0x00F60A70 */
 		gPlayerAnim_002A78               = 0x04002A78; /* ROM:0x00F60A78 */
-		gPlayerAnim_002A80               = 0x04002A80; /* ROM:0x00F60A80 */
-		gPlayerAnim_002A88               = 0x04002A88; /* ROM:0x00F60A88 */
-		gPlayerAnim_002A90               = 0x04002A90; /* ROM:0x00F60A90 */
-		gPlayerAnim_002A98               = 0x04002A98; /* ROM:0x00F60A98 */
-		gPlayerAnim_002AA0               = 0x04002AA0; /* ROM:0x00F60AA0 */
-		gPlayerAnim_002AA8               = 0x04002AA8; /* ROM:0x00F60AA8 */
-		gPlayerAnim_002AB0               = 0x04002AB0; /* ROM:0x00F60AB0 */
-		gPlayerAnim_002AB8               = 0x04002AB8; /* ROM:0x00F60AB8 */
-		gPlayerAnim_002AC0               = 0x04002AC0; /* ROM:0x00F60AC0 */
-		gPlayerAnim_002AC8               = 0x04002AC8; /* ROM:0x00F60AC8 */
+		gPlayerAnim_link_fighter_normal_kiru = 0x04002A80; /* ROM:0x00F60A80 */
+		gPlayerAnim_link_fighter_normal_kiru_endR = 0x04002A88; /* ROM:0x00F60A88 */
+		gPlayerAnim_link_fighter_normal_kiru_end = 0x04002A90; /* ROM:0x00F60A90 */
+		gPlayerAnim_link_fighter_normal_kiru_finsh = 0x04002A98; /* ROM:0x00F60A98 */
+		gPlayerAnim_link_fighter_normal_kiru_finsh_end = 0x04002AA0; /* ROM:0x00F60AA0 */
+		gPlayerAnim_link_fighter_pierce_kiru = 0x04002AA8; /* ROM:0x00F60AA8 */
+		gPlayerAnim_link_fighter_pierce_kiru_end = 0x04002AB0; /* ROM:0x00F60AB0 */
+		gPlayerAnim_link_fighter_pierce_kiru_finsh = 0x04002AB8; /* ROM:0x00F60AB8 */
+		gPlayerAnim_link_fighter_pierce_kiru_finsh_end = 0x04002AC0; /* ROM:0x00F60AC0 */
+		gPlayerAnim_link_fighter_power_jump_kiru_end = 0x04002AC8; /* ROM:0x00F60AC8 */
 		gPlayerAnim_002AD0               = 0x04002AD0; /* ROM:0x00F60AD0 */
-		gPlayerAnim_002AD8               = 0x04002AD8; /* ROM:0x00F60AD8 */
-		gPlayerAnim_002AE0               = 0x04002AE0; /* ROM:0x00F60AE0 */
-		gPlayerAnim_002AE8               = 0x04002AE8; /* ROM:0x00F60AE8 */
-		gPlayerAnim_002AF0               = 0x04002AF0; /* ROM:0x00F60AF0 */
-		gPlayerAnim_002AF8               = 0x04002AF8; /* ROM:0x00F60AF8 */
-		gPlayerAnim_002B00               = 0x04002B00; /* ROM:0x00F60B00 */
-		gPlayerAnim_002B08               = 0x04002B08; /* ROM:0x00F60B08 */
-		gPlayerAnim_002B10               = 0x04002B10; /* ROM:0x00F60B10 */
-		gPlayerAnim_002B18               = 0x04002B18; /* ROM:0x00F60B18 */
-		gPlayerAnim_002B20               = 0x04002B20; /* ROM:0x00F60B20 */
-		gPlayerAnim_002B28               = 0x04002B28; /* ROM:0x00F60B28 */
-		gPlayerAnim_002B30               = 0x04002B30; /* ROM:0x00F60B30 */
-		gPlayerAnim_002B38               = 0x04002B38; /* ROM:0x00F60B38 */
-		gPlayerAnim_002B40               = 0x04002B40; /* ROM:0x00F60B40 */
+		gPlayerAnim_link_fighter_power_kiru_side_walk = 0x04002AD8; /* ROM:0x00F60AD8 */
+		gPlayerAnim_link_fighter_power_kiru_startL = 0x04002AE0; /* ROM:0x00F60AE0 */
+		gPlayerAnim_link_fighter_power_kiru_start = 0x04002AE8; /* ROM:0x00F60AE8 */
+		gPlayerAnim_link_fighter_power_kiru_wait = 0x04002AF0; /* ROM:0x00F60AF0 */
+		gPlayerAnim_link_fighter_power_kiru_wait_end = 0x04002AF8; /* ROM:0x00F60AF8 */
+		gPlayerAnim_link_fighter_power_kiru_walk = 0x04002B00; /* ROM:0x00F60B00 */
+		gPlayerAnim_link_fighter_reboundR = 0x04002B08; /* ROM:0x00F60B08 */
+		gPlayerAnim_link_fighter_rebound = 0x04002B10; /* ROM:0x00F60B10 */
+		gPlayerAnim_link_fighter_rebound_longR = 0x04002B18; /* ROM:0x00F60B18 */
+		gPlayerAnim_link_fighter_rebound_long = 0x04002B20; /* ROM:0x00F60B20 */
+		gPlayerAnim_link_fighter_rolling_kiru = 0x04002B28; /* ROM:0x00F60B28 */
+		gPlayerAnim_link_fighter_rolling_kiru_end = 0x04002B30; /* ROM:0x00F60B30 */
+		gPlayerAnim_link_fighter_run     = 0x04002B38; /* ROM:0x00F60B38 */
+		gPlayerAnim_link_fighter_run_long = 0x04002B40; /* ROM:0x00F60B40 */
 		gPlayerAnim_002B48               = 0x04002B48; /* ROM:0x00F60B48 */
 		gPlayerAnim_002B50               = 0x04002B50; /* ROM:0x00F60B50 */
-		gPlayerAnim_002B58               = 0x04002B58; /* ROM:0x00F60B58 */
-		gPlayerAnim_002B60               = 0x04002B60; /* ROM:0x00F60B60 */
-		gPlayerAnim_002B68               = 0x04002B68; /* ROM:0x00F60B68 */
-		gPlayerAnim_002B70               = 0x04002B70; /* ROM:0x00F60B70 */
-		gPlayerAnim_002B78               = 0x04002B78; /* ROM:0x00F60B78 */
-		gPlayerAnim_002B80               = 0x04002B80; /* ROM:0x00F60B80 */
-		gPlayerAnim_002B88               = 0x04002B88; /* ROM:0x00F60B88 */
-		gPlayerAnim_002B90               = 0x04002B90; /* ROM:0x00F60B90 */
-		gPlayerAnim_002B98               = 0x04002B98; /* ROM:0x00F60B98 */
-		gPlayerAnim_002BA0               = 0x04002BA0; /* ROM:0x00F60BA0 */
-		gPlayerAnim_002BA8               = 0x04002BA8; /* ROM:0x00F60BA8 */
-		gPlayerAnim_002BB0               = 0x04002BB0; /* ROM:0x00F60BB0 */
-		gPlayerAnim_002BB8               = 0x04002BB8; /* ROM:0x00F60BB8 */
-		gPlayerAnim_002BC0               = 0x04002BC0; /* ROM:0x00F60BC0 */
-		gPlayerAnim_002BC8               = 0x04002BC8; /* ROM:0x00F60BC8 */
-		gPlayerAnim_002BD0               = 0x04002BD0; /* ROM:0x00F60BD0 */
+		gPlayerAnim_link_fighter_side_walkL_long = 0x04002B58; /* ROM:0x00F60B58 */
+		gPlayerAnim_link_fighter_side_walkR_long = 0x04002B60; /* ROM:0x00F60B60 */
+		gPlayerAnim_link_fighter_side_walk_long = 0x04002B68; /* ROM:0x00F60B68 */
+		gPlayerAnim_link_fighter_turn_kiruL = 0x04002B70; /* ROM:0x00F60B70 */
+		gPlayerAnim_link_fighter_turn_kiruL_end = 0x04002B78; /* ROM:0x00F60B78 */
+		gPlayerAnim_link_fighter_turn_kiruR = 0x04002B80; /* ROM:0x00F60B80 */
+		gPlayerAnim_link_fighter_turn_kiruR_end = 0x04002B88; /* ROM:0x00F60B88 */
+		gPlayerAnim_link_fighter_upper_kiruR = 0x04002B90; /* ROM:0x00F60B90 */
+		gPlayerAnim_link_fighter_upper_pierce_kiru = 0x04002B98; /* ROM:0x00F60B98 */
+		gPlayerAnim_link_fighter_upper_pierce_kiru_end = 0x04002BA0; /* ROM:0x00F60BA0 */
+		gPlayerAnim_link_fighter_wait2waitL_long = 0x04002BA8; /* ROM:0x00F60BA8 */
+		gPlayerAnim_link_fighter_wait2waitR_long = 0x04002BB0; /* ROM:0x00F60BB0 */
+		gPlayerAnim_link_fighter_waitL2wait_long = 0x04002BB8; /* ROM:0x00F60BB8 */
+		gPlayerAnim_link_fighter_waitL_long = 0x04002BC0; /* ROM:0x00F60BC0 */
+		gPlayerAnim_link_fighter_waitR2wait_long = 0x04002BC8; /* ROM:0x00F60BC8 */
+		gPlayerAnim_link_fighter_waitR_long = 0x04002BD0; /* ROM:0x00F60BD0 */
 		gPlayerAnim_002BD8               = 0x04002BD8; /* ROM:0x00F60BD8 */
-		gPlayerAnim_002BE0               = 0x04002BE0; /* ROM:0x00F60BE0 */
-		gPlayerAnim_002BE8               = 0x04002BE8; /* ROM:0x00F60BE8 */
-		gPlayerAnim_002BF0               = 0x04002BF0; /* ROM:0x00F60BF0 */
-		gPlayerAnim_002BF8               = 0x04002BF8; /* ROM:0x00F60BF8 */
-		gPlayerAnim_002C00               = 0x04002C00; /* ROM:0x00F60C00 */
-		gPlayerAnim_002C08               = 0x04002C08; /* ROM:0x00F60C08 */
-		gPlayerAnim_002C10               = 0x04002C10; /* ROM:0x00F60C10 */
-		gPlayerAnim_002C18               = 0x04002C18; /* ROM:0x00F60C18 */
-		gPlayerAnim_002C20               = 0x04002C20; /* ROM:0x00F60C20 */
-		gPlayerAnim_002C28               = 0x04002C28; /* ROM:0x00F60C28 */
-		gPlayerAnim_002C30               = 0x04002C30; /* ROM:0x00F60C30 */
-		gPlayerAnim_002C38               = 0x04002C38; /* ROM:0x00F60C38 */
-		gPlayerAnim_002C40               = 0x04002C40; /* ROM:0x00F60C40 */
-		gPlayerAnim_002C48               = 0x04002C48; /* ROM:0x00F60C48 */
-		gPlayerAnim_002C50               = 0x04002C50; /* ROM:0x00F60C50 */
-		gPlayerAnim_002C58               = 0x04002C58; /* ROM:0x00F60C58 */
-		gPlayerAnim_002C60               = 0x04002C60; /* ROM:0x00F60C60 */
-		gPlayerAnim_002C68               = 0x04002C68; /* ROM:0x00F60C68 */
-		gPlayerAnim_002C70               = 0x04002C70; /* ROM:0x00F60C70 */
-		gPlayerAnim_002C78               = 0x04002C78; /* ROM:0x00F60C78 */
-		gPlayerAnim_002C80               = 0x04002C80; /* ROM:0x00F60C80 */
-		gPlayerAnim_002C88               = 0x04002C88; /* ROM:0x00F60C88 */
-		gPlayerAnim_002C90               = 0x04002C90; /* ROM:0x00F60C90 */
-		gPlayerAnim_002C98               = 0x04002C98; /* ROM:0x00F60C98 */
-		gPlayerAnim_002CA0               = 0x04002CA0; /* ROM:0x00F60CA0 */
-		gPlayerAnim_002CA8               = 0x04002CA8; /* ROM:0x00F60CA8 */
-		gPlayerAnim_002CB0               = 0x04002CB0; /* ROM:0x00F60CB0 */
-		gPlayerAnim_002CB8               = 0x04002CB8; /* ROM:0x00F60CB8 */
-		gPlayerAnim_002CC0               = 0x04002CC0; /* ROM:0x00F60CC0 */
-		gPlayerAnim_002CC8               = 0x04002CC8; /* ROM:0x00F60CC8 */
-		gPlayerAnim_002CD0               = 0x04002CD0; /* ROM:0x00F60CD0 */
-		gPlayerAnim_002CD8               = 0x04002CD8; /* ROM:0x00F60CD8 */
-		gPlayerAnim_002CE0               = 0x04002CE0; /* ROM:0x00F60CE0 */
-		gPlayerAnim_002CE8               = 0x04002CE8; /* ROM:0x00F60CE8 */
-		gPlayerAnim_002CF0               = 0x04002CF0; /* ROM:0x00F60CF0 */
-		gPlayerAnim_002CF8               = 0x04002CF8; /* ROM:0x00F60CF8 */
-		gPlayerAnim_002D00               = 0x04002D00; /* ROM:0x00F60D00 */
-		gPlayerAnim_002D08               = 0x04002D08; /* ROM:0x00F60D08 */
-		gPlayerAnim_002D10               = 0x04002D10; /* ROM:0x00F60D10 */
-		gPlayerAnim_002D18               = 0x04002D18; /* ROM:0x00F60D18 */
-		gPlayerAnim_002D20               = 0x04002D20; /* ROM:0x00F60D20 */
-		gPlayerAnim_002D28               = 0x04002D28; /* ROM:0x00F60D28 */
-		gPlayerAnim_002D30               = 0x04002D30; /* ROM:0x00F60D30 */
-		gPlayerAnim_002D38               = 0x04002D38; /* ROM:0x00F60D38 */
-		gPlayerAnim_002D40               = 0x04002D40; /* ROM:0x00F60D40 */
-		gPlayerAnim_002D48               = 0x04002D48; /* ROM:0x00F60D48 */
+		gPlayerAnim_link_fighter_wait_long = 0x04002BE0; /* ROM:0x00F60BE0 */
+		gPlayerAnim_link_fighter_walk_endL_long = 0x04002BE8; /* ROM:0x00F60BE8 */
+		gPlayerAnim_link_fighter_walk_endR_long = 0x04002BF0; /* ROM:0x00F60BF0 */
+		gPlayerAnim_link_fighter_walk_long = 0x04002BF8; /* ROM:0x00F60BF8 */
+		gPlayerAnim_link_fishing_fish_catch = 0x04002C00; /* ROM:0x00F60C00 */
+		gPlayerAnim_link_fishing_fish_catch_end = 0x04002C08; /* ROM:0x00F60C08 */
+		gPlayerAnim_link_fishing_reel_down = 0x04002C10; /* ROM:0x00F60C10 */
+		gPlayerAnim_link_fishing_reel_left = 0x04002C18; /* ROM:0x00F60C18 */
+		gPlayerAnim_link_fishing_reel_right = 0x04002C20; /* ROM:0x00F60C20 */
+		gPlayerAnim_link_fishing_reel_up = 0x04002C28; /* ROM:0x00F60C28 */
+		gPlayerAnim_link_fishing_throw   = 0x04002C30; /* ROM:0x00F60C30 */
+		gPlayerAnim_link_fishing_wait    = 0x04002C38; /* ROM:0x00F60C38 */
+		gPlayerAnim_link_hammer_hit      = 0x04002C40; /* ROM:0x00F60C40 */
+		gPlayerAnim_link_hammer_hit_endR = 0x04002C48; /* ROM:0x00F60C48 */
+		gPlayerAnim_link_hammer_hit_end  = 0x04002C50; /* ROM:0x00F60C50 */
+		gPlayerAnim_link_hammer_long2free = 0x04002C58; /* ROM:0x00F60C58 */
+		gPlayerAnim_link_hammer_long2long = 0x04002C60; /* ROM:0x00F60C60 */
+		gPlayerAnim_link_hammer_normal2long = 0x04002C68; /* ROM:0x00F60C68 */
+		gPlayerAnim_link_hammer_side_hit = 0x04002C70; /* ROM:0x00F60C70 */
+		gPlayerAnim_link_hammer_side_hit_endR = 0x04002C78; /* ROM:0x00F60C78 */
+		gPlayerAnim_link_hammer_side_hit_end = 0x04002C80; /* ROM:0x00F60C80 */
+		gPlayerAnim_link_hatto_demo      = 0x04002C88; /* ROM:0x00F60C88 */
+		gPlayerAnim_link_hook_fly_start  = 0x04002C90; /* ROM:0x00F60C90 */
+		gPlayerAnim_link_hook_fly_wait   = 0x04002C98; /* ROM:0x00F60C98 */
+		gPlayerAnim_link_hook_shot_ready = 0x04002CA0; /* ROM:0x00F60CA0 */
+		gPlayerAnim_link_hook_side_runL  = 0x04002CA8; /* ROM:0x00F60CA8 */
+		gPlayerAnim_link_hook_side_runR  = 0x04002CB0; /* ROM:0x00F60CB0 */
+		gPlayerAnim_link_hook_side_walk  = 0x04002CB8; /* ROM:0x00F60CB8 */
+		gPlayerAnim_link_hook_wait       = 0x04002CC0; /* ROM:0x00F60CC0 */
+		gPlayerAnim_link_hook_walk2ready = 0x04002CC8; /* ROM:0x00F60CC8 */
+		gPlayerAnim_link_last_hit_motion1 = 0x04002CD0; /* ROM:0x00F60CD0 */
+		gPlayerAnim_link_last_hit_motion2 = 0x04002CD8; /* ROM:0x00F60CD8 */
+		gPlayerAnim_link_magic_honoo1    = 0x04002CE0; /* ROM:0x00F60CE0 */
+		gPlayerAnim_link_magic_honoo2    = 0x04002CE8; /* ROM:0x00F60CE8 */
+		gPlayerAnim_link_magic_honoo3    = 0x04002CF0; /* ROM:0x00F60CF0 */
+		gPlayerAnim_link_magic_kaze1     = 0x04002CF8; /* ROM:0x00F60CF8 */
+		gPlayerAnim_link_magic_kaze2     = 0x04002D00; /* ROM:0x00F60D00 */
+		gPlayerAnim_link_magic_kaze3     = 0x04002D08; /* ROM:0x00F60D08 */
+		gPlayerAnim_link_magic_tamashii1 = 0x04002D10; /* ROM:0x00F60D10 */
+		gPlayerAnim_link_magic_tamashii2 = 0x04002D18; /* ROM:0x00F60D18 */
+		gPlayerAnim_link_magic_tamashii3 = 0x04002D20; /* ROM:0x00F60D20 */
+		gPlayerAnim_link_magic_tame      = 0x04002D28; /* ROM:0x00F60D28 */
+		gPlayerAnim_link_magic_tame_kaijyo = 0x04002D30; /* ROM:0x00F60D30 */
+		gPlayerAnim_link_normal_100step_up = 0x04002D38; /* ROM:0x00F60D38 */
+		gPlayerAnim_link_normal_150step_up = 0x04002D40; /* ROM:0x00F60D40 */
+		gPlayerAnim_link_normal_250jump_start = 0x04002D48; /* ROM:0x00F60D48 */
 		gPlayerAnim_002D50               = 0x04002D50; /* ROM:0x00F60D50 */
-		gPlayerAnim_002D58               = 0x04002D58; /* ROM:0x00F60D58 */
-		gPlayerAnim_002D60               = 0x04002D60; /* ROM:0x00F60D60 */
-		gPlayerAnim_002D68               = 0x04002D68; /* ROM:0x00F60D68 */
-		gPlayerAnim_002D70               = 0x04002D70; /* ROM:0x00F60D70 */
-		gPlayerAnim_002D78               = 0x04002D78; /* ROM:0x00F60D78 */
-		gPlayerAnim_002D80               = 0x04002D80; /* ROM:0x00F60D80 */
-		gPlayerAnim_002D88               = 0x04002D88; /* ROM:0x00F60D88 */
-		gPlayerAnim_002D90               = 0x04002D90; /* ROM:0x00F60D90 */
-		gPlayerAnim_002D98               = 0x04002D98; /* ROM:0x00F60D98 */
-		gPlayerAnim_002DA0               = 0x04002DA0; /* ROM:0x00F60DA0 */
-		gPlayerAnim_002DA8               = 0x04002DA8; /* ROM:0x00F60DA8 */
-		gPlayerAnim_002DB0               = 0x04002DB0; /* ROM:0x00F60DB0 */
-		gPlayerAnim_002DB8               = 0x04002DB8; /* ROM:0x00F60DB8 */
-		gPlayerAnim_002DC0               = 0x04002DC0; /* ROM:0x00F60DC0 */
-		gPlayerAnim_002DC8               = 0x04002DC8; /* ROM:0x00F60DC8 */
-		gPlayerAnim_002DD0               = 0x04002DD0; /* ROM:0x00F60DD0 */
-		gPlayerAnim_002DD8               = 0x04002DD8; /* ROM:0x00F60DD8 */
-		gPlayerAnim_002DE0               = 0x04002DE0; /* ROM:0x00F60DE0 */
-		gPlayerAnim_002DE8               = 0x04002DE8; /* ROM:0x00F60DE8 */
-		gPlayerAnim_002DF0               = 0x04002DF0; /* ROM:0x00F60DF0 */
-		gPlayerAnim_002DF8               = 0x04002DF8; /* ROM:0x00F60DF8 */
-		gPlayerAnim_002E00               = 0x04002E00; /* ROM:0x00F60E00 */
-		gPlayerAnim_002E08               = 0x04002E08; /* ROM:0x00F60E08 */
-		gPlayerAnim_002E10               = 0x04002E10; /* ROM:0x00F60E10 */
-		gPlayerAnim_002E18               = 0x04002E18; /* ROM:0x00F60E18 */
-		gPlayerAnim_002E20               = 0x04002E20; /* ROM:0x00F60E20 */
-		gPlayerAnim_002E28               = 0x04002E28; /* ROM:0x00F60E28 */
-		gPlayerAnim_002E30               = 0x04002E30; /* ROM:0x00F60E30 */
-		gPlayerAnim_002E38               = 0x04002E38; /* ROM:0x00F60E38 */
-		gPlayerAnim_002E40               = 0x04002E40; /* ROM:0x00F60E40 */
-		gPlayerAnim_002E48               = 0x04002E48; /* ROM:0x00F60E48 */
-		gPlayerAnim_002E50               = 0x04002E50; /* ROM:0x00F60E50 */
-		gPlayerAnim_002E58               = 0x04002E58; /* ROM:0x00F60E58 */
-		gPlayerAnim_002E60               = 0x04002E60; /* ROM:0x00F60E60 */
-		gPlayerAnim_002E68               = 0x04002E68; /* ROM:0x00F60E68 */
-		gPlayerAnim_002E70               = 0x04002E70; /* ROM:0x00F60E70 */
-		gPlayerAnim_002E78               = 0x04002E78; /* ROM:0x00F60E78 */
-		gPlayerAnim_002E80               = 0x04002E80; /* ROM:0x00F60E80 */
-		gPlayerAnim_002E88               = 0x04002E88; /* ROM:0x00F60E88 */
-		gPlayerAnim_002E90               = 0x04002E90; /* ROM:0x00F60E90 */
-		gPlayerAnim_002E98               = 0x04002E98; /* ROM:0x00F60E98 */
-		gPlayerAnim_002EA0               = 0x04002EA0; /* ROM:0x00F60EA0 */
-		gPlayerAnim_002EA8               = 0x04002EA8; /* ROM:0x00F60EA8 */
-		gPlayerAnim_002EB0               = 0x04002EB0; /* ROM:0x00F60EB0 */
-		gPlayerAnim_002EB8               = 0x04002EB8; /* ROM:0x00F60EB8 */
-		gPlayerAnim_002EC0               = 0x04002EC0; /* ROM:0x00F60EC0 */
-		gPlayerAnim_002EC8               = 0x04002EC8; /* ROM:0x00F60EC8 */
-		gPlayerAnim_002ED0               = 0x04002ED0; /* ROM:0x00F60ED0 */
-		gPlayerAnim_002ED8               = 0x04002ED8; /* ROM:0x00F60ED8 */
-		gPlayerAnim_002EE0               = 0x04002EE0; /* ROM:0x00F60EE0 */
-		gPlayerAnim_002EE8               = 0x04002EE8; /* ROM:0x00F60EE8 */
-		gPlayerAnim_002EF0               = 0x04002EF0; /* ROM:0x00F60EF0 */
-		gPlayerAnim_002EF8               = 0x04002EF8; /* ROM:0x00F60EF8 */
-		gPlayerAnim_002F00               = 0x04002F00; /* ROM:0x00F60F00 */
-		gPlayerAnim_002F08               = 0x04002F08; /* ROM:0x00F60F08 */
-		gPlayerAnim_002F10               = 0x04002F10; /* ROM:0x00F60F10 */
-		gPlayerAnim_002F18               = 0x04002F18; /* ROM:0x00F60F18 */
-		gPlayerAnim_002F20               = 0x04002F20; /* ROM:0x00F60F20 */
-		gPlayerAnim_002F28               = 0x04002F28; /* ROM:0x00F60F28 */
-		gPlayerAnim_002F30               = 0x04002F30; /* ROM:0x00F60F30 */
-		gPlayerAnim_002F38               = 0x04002F38; /* ROM:0x00F60F38 */
-		gPlayerAnim_002F40               = 0x04002F40; /* ROM:0x00F60F40 */
-		gPlayerAnim_002F48               = 0x04002F48; /* ROM:0x00F60F48 */
-		gPlayerAnim_002F50               = 0x04002F50; /* ROM:0x00F60F50 */
-		gPlayerAnim_002F58               = 0x04002F58; /* ROM:0x00F60F58 */
-		gPlayerAnim_002F60               = 0x04002F60; /* ROM:0x00F60F60 */
-		gPlayerAnim_002F68               = 0x04002F68; /* ROM:0x00F60F68 */
-		gPlayerAnim_002F70               = 0x04002F70; /* ROM:0x00F60F70 */
-		gPlayerAnim_002F78               = 0x04002F78; /* ROM:0x00F60F78 */
-		gPlayerAnim_002F80               = 0x04002F80; /* ROM:0x00F60F80 */
-		gPlayerAnim_002F88               = 0x04002F88; /* ROM:0x00F60F88 */
-		gPlayerAnim_002F90               = 0x04002F90; /* ROM:0x00F60F90 */
-		gPlayerAnim_002F98               = 0x04002F98; /* ROM:0x00F60F98 */
-		gPlayerAnim_002FA0               = 0x04002FA0; /* ROM:0x00F60FA0 */
-		gPlayerAnim_002FA8               = 0x04002FA8; /* ROM:0x00F60FA8 */
-		gPlayerAnim_002FB0               = 0x04002FB0; /* ROM:0x00F60FB0 */
-		gPlayerAnim_002FB8               = 0x04002FB8; /* ROM:0x00F60FB8 */
-		gPlayerAnim_002FC0               = 0x04002FC0; /* ROM:0x00F60FC0 */
-		gPlayerAnim_002FC8               = 0x04002FC8; /* ROM:0x00F60FC8 */
-		gPlayerAnim_002FD0               = 0x04002FD0; /* ROM:0x00F60FD0 */
-		gPlayerAnim_002FD8               = 0x04002FD8; /* ROM:0x00F60FD8 */
-		gPlayerAnim_002FE0               = 0x04002FE0; /* ROM:0x00F60FE0 */
-		gPlayerAnim_002FE8               = 0x04002FE8; /* ROM:0x00F60FE8 */
-		gPlayerAnim_002FF0               = 0x04002FF0; /* ROM:0x00F60FF0 */
-		gPlayerAnim_002FF8               = 0x04002FF8; /* ROM:0x00F60FF8 */
-		gPlayerAnim_003000               = 0x04003000; /* ROM:0x00F61000 */
-		gPlayerAnim_003008               = 0x04003008; /* ROM:0x00F61008 */
-		gPlayerAnim_003010               = 0x04003010; /* ROM:0x00F61010 */
-		gPlayerAnim_003018               = 0x04003018; /* ROM:0x00F61018 */
-		gPlayerAnim_003020               = 0x04003020; /* ROM:0x00F61020 */
-		gPlayerAnim_003028               = 0x04003028; /* ROM:0x00F61028 */
-		gPlayerAnim_003030               = 0x04003030; /* ROM:0x00F61030 */
-		gPlayerAnim_003038               = 0x04003038; /* ROM:0x00F61038 */
-		gPlayerAnim_003040               = 0x04003040; /* ROM:0x00F61040 */
-		gPlayerAnim_003048               = 0x04003048; /* ROM:0x00F61048 */
-		gPlayerAnim_003050               = 0x04003050; /* ROM:0x00F61050 */
-		gPlayerAnim_003058               = 0x04003058; /* ROM:0x00F61058 */
-		gPlayerAnim_003060               = 0x04003060; /* ROM:0x00F61060 */
-		gPlayerAnim_003068               = 0x04003068; /* ROM:0x00F61068 */
-		gPlayerAnim_003070               = 0x04003070; /* ROM:0x00F61070 */
-		gPlayerAnim_003078               = 0x04003078; /* ROM:0x00F61078 */
-		gPlayerAnim_003080               = 0x04003080; /* ROM:0x00F61080 */
-		gPlayerAnim_003088               = 0x04003088; /* ROM:0x00F61088 */
-		gPlayerAnim_003090               = 0x04003090; /* ROM:0x00F61090 */
-		gPlayerAnim_003098               = 0x04003098; /* ROM:0x00F61098 */
-		gPlayerAnim_0030A0               = 0x040030A0; /* ROM:0x00F610A0 */
-		gPlayerAnim_0030A8               = 0x040030A8; /* ROM:0x00F610A8 */
-		gPlayerAnim_0030B0               = 0x040030B0; /* ROM:0x00F610B0 */
-		gPlayerAnim_0030B8               = 0x040030B8; /* ROM:0x00F610B8 */
-		gPlayerAnim_0030C0               = 0x040030C0; /* ROM:0x00F610C0 */
-		gPlayerAnim_0030C8               = 0x040030C8; /* ROM:0x00F610C8 */
-		gPlayerAnim_0030D0               = 0x040030D0; /* ROM:0x00F610D0 */
-		gPlayerAnim_0030D8               = 0x040030D8; /* ROM:0x00F610D8 */
-		gPlayerAnim_0030E0               = 0x040030E0; /* ROM:0x00F610E0 */
-		gPlayerAnim_0030E8               = 0x040030E8; /* ROM:0x00F610E8 */
-		gPlayerAnim_0030F0               = 0x040030F0; /* ROM:0x00F610F0 */
-		gPlayerAnim_0030F8               = 0x040030F8; /* ROM:0x00F610F8 */
-		gPlayerAnim_003100               = 0x04003100; /* ROM:0x00F61100 */
-		gPlayerAnim_003108               = 0x04003108; /* ROM:0x00F61108 */
-		gPlayerAnim_003110               = 0x04003110; /* ROM:0x00F61110 */
-		gPlayerAnim_003118               = 0x04003118; /* ROM:0x00F61118 */
-		gPlayerAnim_003120               = 0x04003120; /* ROM:0x00F61120 */
-		gPlayerAnim_003128               = 0x04003128; /* ROM:0x00F61128 */
-		gPlayerAnim_003130               = 0x04003130; /* ROM:0x00F61130 */
-		gPlayerAnim_003138               = 0x04003138; /* ROM:0x00F61138 */
-		gPlayerAnim_003140               = 0x04003140; /* ROM:0x00F61140 */
-		gPlayerAnim_003148               = 0x04003148; /* ROM:0x00F61148 */
-		gPlayerAnim_003150               = 0x04003150; /* ROM:0x00F61150 */
-		gPlayerAnim_003158               = 0x04003158; /* ROM:0x00F61158 */
-		gPlayerAnim_003160               = 0x04003160; /* ROM:0x00F61160 */
-		gPlayerAnim_003168               = 0x04003168; /* ROM:0x00F61168 */
-		gPlayerAnim_003170               = 0x04003170; /* ROM:0x00F61170 */
-		gPlayerAnim_003178               = 0x04003178; /* ROM:0x00F61178 */
-		gPlayerAnim_003180               = 0x04003180; /* ROM:0x00F61180 */
-		gPlayerAnim_003188               = 0x04003188; /* ROM:0x00F61188 */
-		gPlayerAnim_003190               = 0x04003190; /* ROM:0x00F61190 */
-		gPlayerAnim_003198               = 0x04003198; /* ROM:0x00F61198 */
-		gPlayerAnim_0031A0               = 0x040031A0; /* ROM:0x00F611A0 */
-		gPlayerAnim_0031A8               = 0x040031A8; /* ROM:0x00F611A8 */
-		gPlayerAnim_0031B0               = 0x040031B0; /* ROM:0x00F611B0 */
-		gPlayerAnim_0031B8               = 0x040031B8; /* ROM:0x00F611B8 */
-		gPlayerAnim_0031C0               = 0x040031C0; /* ROM:0x00F611C0 */
-		gPlayerAnim_0031C8               = 0x040031C8; /* ROM:0x00F611C8 */
-		gPlayerAnim_0031D0               = 0x040031D0; /* ROM:0x00F611D0 */
-		gPlayerAnim_0031D8               = 0x040031D8; /* ROM:0x00F611D8 */
-		gPlayerAnim_0031E0               = 0x040031E0; /* ROM:0x00F611E0 */
-		gPlayerAnim_0031E8               = 0x040031E8; /* ROM:0x00F611E8 */
-		gPlayerAnim_0031F0               = 0x040031F0; /* ROM:0x00F611F0 */
-		gPlayerAnim_0031F8               = 0x040031F8; /* ROM:0x00F611F8 */
-		gPlayerAnim_003200               = 0x04003200; /* ROM:0x00F61200 */
-		gPlayerAnim_003208               = 0x04003208; /* ROM:0x00F61208 */
-		gPlayerAnim_003210               = 0x04003210; /* ROM:0x00F61210 */
-		gPlayerAnim_003218               = 0x04003218; /* ROM:0x00F61218 */
-		gPlayerAnim_003220               = 0x04003220; /* ROM:0x00F61220 */
-		gPlayerAnim_003228               = 0x04003228; /* ROM:0x00F61228 */
-		gPlayerAnim_003230               = 0x04003230; /* ROM:0x00F61230 */
-		gPlayerAnim_003238               = 0x04003238; /* ROM:0x00F61238 */
-		gPlayerAnim_003240               = 0x04003240; /* ROM:0x00F61240 */
-		gPlayerAnim_003248               = 0x04003248; /* ROM:0x00F61248 */
-		gPlayerAnim_003250               = 0x04003250; /* ROM:0x00F61250 */
-		gPlayerAnim_003258               = 0x04003258; /* ROM:0x00F61258 */
-		gPlayerAnim_003260               = 0x04003260; /* ROM:0x00F61260 */
-		gPlayerAnim_003268               = 0x04003268; /* ROM:0x00F61268 */
-		gPlayerAnim_003270               = 0x04003270; /* ROM:0x00F61270 */
-		gPlayerAnim_003278               = 0x04003278; /* ROM:0x00F61278 */
-		gPlayerAnim_003280               = 0x04003280; /* ROM:0x00F61280 */
-		gPlayerAnim_003288               = 0x04003288; /* ROM:0x00F61288 */
-		gPlayerAnim_003290               = 0x04003290; /* ROM:0x00F61290 */
-		gPlayerAnim_003298               = 0x04003298; /* ROM:0x00F61298 */
-		gPlayerAnim_0032A0               = 0x040032A0; /* ROM:0x00F612A0 */
-		gPlayerAnim_0032A8               = 0x040032A8; /* ROM:0x00F612A8 */
-		gPlayerAnim_0032B0               = 0x040032B0; /* ROM:0x00F612B0 */
-		gPlayerAnim_0032B8               = 0x040032B8; /* ROM:0x00F612B8 */
-		gPlayerAnim_0032C0               = 0x040032C0; /* ROM:0x00F612C0 */
-		gPlayerAnim_0032C8               = 0x040032C8; /* ROM:0x00F612C8 */
-		gPlayerAnim_0032D0               = 0x040032D0; /* ROM:0x00F612D0 */
-		gPlayerAnim_0032D8               = 0x040032D8; /* ROM:0x00F612D8 */
-		gPlayerAnim_0032E0               = 0x040032E0; /* ROM:0x00F612E0 */
-		gPlayerAnim_0032E8               = 0x040032E8; /* ROM:0x00F612E8 */
-		gPlayerAnim_0032F0               = 0x040032F0; /* ROM:0x00F612F0 */
-		gPlayerAnim_0032F8               = 0x040032F8; /* ROM:0x00F612F8 */
-		gPlayerAnim_003300               = 0x04003300; /* ROM:0x00F61300 */
-		gPlayerAnim_003308               = 0x04003308; /* ROM:0x00F61308 */
-		gPlayerAnim_003310               = 0x04003310; /* ROM:0x00F61310 */
-		gPlayerAnim_003318               = 0x04003318; /* ROM:0x00F61318 */
-		gPlayerAnim_003320               = 0x04003320; /* ROM:0x00F61320 */
-		gPlayerAnim_003328               = 0x04003328; /* ROM:0x00F61328 */
-		gPlayerAnim_003330               = 0x04003330; /* ROM:0x00F61330 */
-		gPlayerAnim_003338               = 0x04003338; /* ROM:0x00F61338 */
-		gPlayerAnim_003340               = 0x04003340; /* ROM:0x00F61340 */
-		gPlayerAnim_003348               = 0x04003348; /* ROM:0x00F61348 */
-		gPlayerAnim_003350               = 0x04003350; /* ROM:0x00F61350 */
-		gPlayerAnim_003358               = 0x04003358; /* ROM:0x00F61358 */
-		gPlayerAnim_003360               = 0x04003360; /* ROM:0x00F61360 */
-		gPlayerAnim_003368               = 0x04003368; /* ROM:0x00F61368 */
-		gPlayerAnim_003370               = 0x04003370; /* ROM:0x00F61370 */
-		gPlayerAnim_003378               = 0x04003378; /* ROM:0x00F61378 */
-		gPlayerAnim_003380               = 0x04003380; /* ROM:0x00F61380 */
-		gPlayerAnim_003388               = 0x04003388; /* ROM:0x00F61388 */
-		gPlayerAnim_003390               = 0x04003390; /* ROM:0x00F61390 */
-		gPlayerAnim_003398               = 0x04003398; /* ROM:0x00F61398 */
-		gPlayerAnim_0033A0               = 0x040033A0; /* ROM:0x00F613A0 */
-		gPlayerAnim_0033A8               = 0x040033A8; /* ROM:0x00F613A8 */
-		gPlayerAnim_0033B0               = 0x040033B0; /* ROM:0x00F613B0 */
-		gPlayerAnim_0033B8               = 0x040033B8; /* ROM:0x00F613B8 */
-		gPlayerAnim_0033C0               = 0x040033C0; /* ROM:0x00F613C0 */
-		gPlayerAnim_0033C8               = 0x040033C8; /* ROM:0x00F613C8 */
-		gPlayerAnim_0033D0               = 0x040033D0; /* ROM:0x00F613D0 */
-		gPlayerAnim_0033D8               = 0x040033D8; /* ROM:0x00F613D8 */
-		gPlayerAnim_0033E0               = 0x040033E0; /* ROM:0x00F613E0 */
-		gPlayerAnim_0033E8               = 0x040033E8; /* ROM:0x00F613E8 */
-		gPlayerAnim_0033F0               = 0x040033F0; /* ROM:0x00F613F0 */
-		gPlayerAnim_0033F8               = 0x040033F8; /* ROM:0x00F613F8 */
-		gPlayerAnim_003400               = 0x04003400; /* ROM:0x00F61400 */
-		gPlayerAnim_003408               = 0x04003408; /* ROM:0x00F61408 */
-		gPlayerAnim_003410               = 0x04003410; /* ROM:0x00F61410 */
-		gPlayerAnim_003418               = 0x04003418; /* ROM:0x00F61418 */
-		gPlayerAnim_003420               = 0x04003420; /* ROM:0x00F61420 */
-		gPlayerAnim_003428               = 0x04003428; /* ROM:0x00F61428 */
-		gPlayerAnim_003430               = 0x04003430; /* ROM:0x00F61430 */
-		gPlayerAnim_003438               = 0x04003438; /* ROM:0x00F61438 */
-		gPlayerAnim_003440               = 0x04003440; /* ROM:0x00F61440 */
-		gPlayerAnim_003448               = 0x04003448; /* ROM:0x00F61448 */
-		gPlayerAnim_003450               = 0x04003450; /* ROM:0x00F61450 */
-		gPlayerAnim_003458               = 0x04003458; /* ROM:0x00F61458 */
-		gPlayerAnim_003460               = 0x04003460; /* ROM:0x00F61460 */
-		gPlayerAnim_003468               = 0x04003468; /* ROM:0x00F61468 */
-		gPlayerAnim_003470               = 0x04003470; /* ROM:0x00F61470 */
-		gPlayerAnim_003478               = 0x04003478; /* ROM:0x00F61478 */
-		gPlayerAnim_003480               = 0x04003480; /* ROM:0x00F61480 */
-		gPlayerAnim_003488               = 0x04003488; /* ROM:0x00F61488 */
-		gPlayerAnim_003490               = 0x04003490; /* ROM:0x00F61490 */
-		gPlayerAnim_003498               = 0x04003498; /* ROM:0x00F61498 */
-		gPlayerAnim_0034A0               = 0x040034A0; /* ROM:0x00F614A0 */
-		gPlayerAnim_0034A8               = 0x040034A8; /* ROM:0x00F614A8 */
-		gPlayerAnim_0034B0               = 0x040034B0; /* ROM:0x00F614B0 */
-		gPlayerAnim_0034B8               = 0x040034B8; /* ROM:0x00F614B8 */
-		gPlayerAnim_0034C0               = 0x040034C0; /* ROM:0x00F614C0 */
-		gPlayerAnim_0034C8               = 0x040034C8; /* ROM:0x00F614C8 */
-		gPlayerAnim_0034D0               = 0x040034D0; /* ROM:0x00F614D0 */
-		gPlayerAnim_0034D8               = 0x040034D8; /* ROM:0x00F614D8 */
-		gPlayerAnim_0034E0               = 0x040034E0; /* ROM:0x00F614E0 */
-		gPlayerAnim_0034E8               = 0x040034E8; /* ROM:0x00F614E8 */
-		gPlayerAnim_0034F0               = 0x040034F0; /* ROM:0x00F614F0 */
+		gPlayerAnim_link_normal_45_turn  = 0x04002D58; /* ROM:0x00F60D58 */
+		gPlayerAnim_link_normal_45_turn_free = 0x04002D60; /* ROM:0x00F60D60 */
+		gPlayerAnim_link_normal_Fclimb_hold2upL = 0x04002D68; /* ROM:0x00F60D68 */
+		gPlayerAnim_link_normal_Fclimb_sideL = 0x04002D70; /* ROM:0x00F60D70 */
+		gPlayerAnim_link_normal_Fclimb_sideR = 0x04002D78; /* ROM:0x00F60D78 */
+		gPlayerAnim_link_normal_Fclimb_startA = 0x04002D80; /* ROM:0x00F60D80 */
+		gPlayerAnim_link_normal_Fclimb_startB = 0x04002D88; /* ROM:0x00F60D88 */
+		gPlayerAnim_link_normal_Fclimb_upL = 0x04002D90; /* ROM:0x00F60D90 */
+		gPlayerAnim_link_normal_Fclimb_upR = 0x04002D98; /* ROM:0x00F60D98 */
+		gPlayerAnim_link_normal_back_brake = 0x04002DA0; /* ROM:0x00F60DA0 */
+		gPlayerAnim_link_normal_back_brake_end = 0x04002DA8; /* ROM:0x00F60DA8 */
+		gPlayerAnim_link_normal_back_downA = 0x04002DB0; /* ROM:0x00F60DB0 */
+		gPlayerAnim_link_normal_back_downB = 0x04002DB8; /* ROM:0x00F60DB8 */
+		gPlayerAnim_link_normal_back_down_wake = 0x04002DC0; /* ROM:0x00F60DC0 */
+		gPlayerAnim_link_normal_back_hit = 0x04002DC8; /* ROM:0x00F60DC8 */
+		gPlayerAnim_link_normal_back_run = 0x04002DD0; /* ROM:0x00F60DD0 */
+		gPlayerAnim_link_normal_back_shitR = 0x04002DD8; /* ROM:0x00F60DD8 */
+		gPlayerAnim_link_normal_back_shit = 0x04002DE0; /* ROM:0x00F60DE0 */
+		gPlayerAnim_link_normal_back_walk = 0x04002DE8; /* ROM:0x00F60DE8 */
+		gPlayerAnim_link_normal_backspace = 0x04002DF0; /* ROM:0x00F60DF0 */
+		gPlayerAnim_link_normal_box_kick = 0x04002DF8; /* ROM:0x00F60DF8 */
+		gPlayerAnim_link_normal_carryB   = 0x04002E00; /* ROM:0x00F60E00 */
+		gPlayerAnim_link_normal_carryB_free = 0x04002E08; /* ROM:0x00F60E08 */
+		gPlayerAnim_link_normal_carryB_wait = 0x04002E10; /* ROM:0x00F60E10 */
+		gPlayerAnim_link_normal_check    = 0x04002E18; /* ROM:0x00F60E18 */
+		gPlayerAnim_link_normal_check_end = 0x04002E20; /* ROM:0x00F60E20 */
+		gPlayerAnim_link_normal_check_end_free = 0x04002E28; /* ROM:0x00F60E28 */
+		gPlayerAnim_link_normal_check_free = 0x04002E30; /* ROM:0x00F60E30 */
+		gPlayerAnim_link_normal_check_wait = 0x04002E38; /* ROM:0x00F60E38 */
+		gPlayerAnim_link_normal_check_wait_free = 0x04002E40; /* ROM:0x00F60E40 */
+		gPlayerAnim_link_normal_climb_down = 0x04002E48; /* ROM:0x00F60E48 */
+		gPlayerAnim_link_normal_climb_endAL = 0x04002E50; /* ROM:0x00F60E50 */
+		gPlayerAnim_link_normal_climb_endAR = 0x04002E58; /* ROM:0x00F60E58 */
+		gPlayerAnim_link_normal_climb_endBL = 0x04002E60; /* ROM:0x00F60E60 */
+		gPlayerAnim_link_normal_climb_endBR = 0x04002E68; /* ROM:0x00F60E68 */
+		gPlayerAnim_link_normal_climb_startA = 0x04002E70; /* ROM:0x00F60E70 */
+		gPlayerAnim_link_normal_climb_startB = 0x04002E78; /* ROM:0x00F60E78 */
+		gPlayerAnim_link_normal_climb_upL = 0x04002E80; /* ROM:0x00F60E80 */
+		gPlayerAnim_link_normal_climb_upR = 0x04002E88; /* ROM:0x00F60E88 */
+		gPlayerAnim_link_normal_climb_up = 0x04002E90; /* ROM:0x00F60E90 */
+		gPlayerAnim_link_normal_damage_run_free = 0x04002E98; /* ROM:0x00F60E98 */
+		gPlayerAnim_link_normal_defense  = 0x04002EA0; /* ROM:0x00F60EA0 */
+		gPlayerAnim_link_normal_defense_end = 0x04002EA8; /* ROM:0x00F60EA8 */
+		gPlayerAnim_link_normal_defense_end_free = 0x04002EB0; /* ROM:0x00F60EB0 */
+		gPlayerAnim_link_normal_defense_free = 0x04002EB8; /* ROM:0x00F60EB8 */
+		gPlayerAnim_link_normal_defense_hit = 0x04002EC0; /* ROM:0x00F60EC0 */
+		gPlayerAnim_link_normal_defense_kiru = 0x04002EC8; /* ROM:0x00F60EC8 */
+		gPlayerAnim_link_normal_defense_wait = 0x04002ED0; /* ROM:0x00F60ED0 */
+		gPlayerAnim_link_normal_defense_wait_free = 0x04002ED8; /* ROM:0x00F60ED8 */
+		gPlayerAnim_link_normal_down_slope_slip = 0x04002EE0; /* ROM:0x00F60EE0 */
+		gPlayerAnim_link_normal_down_slope_slip_end = 0x04002EE8; /* ROM:0x00F60EE8 */
+		gPlayerAnim_link_normal_down_slope_slip_end_free = 0x04002EF0; /* ROM:0x00F60EF0 */
+		gPlayerAnim_link_normal_down_slope_slip_end_long = 0x04002EF8; /* ROM:0x00F60EF8 */
+		gPlayerAnim_link_normal_electric_shock = 0x04002F00; /* ROM:0x00F60F00 */
+		gPlayerAnim_link_normal_electric_shock_end = 0x04002F08; /* ROM:0x00F60F08 */
+		gPlayerAnim_link_normal_fall     = 0x04002F10; /* ROM:0x00F60F10 */
+		gPlayerAnim_link_normal_fall_up  = 0x04002F18; /* ROM:0x00F60F18 */
+		gPlayerAnim_link_normal_fall_up_free = 0x04002F20; /* ROM:0x00F60F20 */
+		gPlayerAnim_link_normal_fall_wait = 0x04002F28; /* ROM:0x00F60F28 */
+		gPlayerAnim_link_normal_fighter2free = 0x04002F30; /* ROM:0x00F60F30 */
+		gPlayerAnim_link_normal_free2bom = 0x04002F38; /* ROM:0x00F60F38 */
+		gPlayerAnim_link_normal_free2fighter_free = 0x04002F40; /* ROM:0x00F60F40 */
+		gPlayerAnim_link_normal_free2freeB = 0x04002F48; /* ROM:0x00F60F48 */
+		gPlayerAnim_link_normal_free2free = 0x04002F50; /* ROM:0x00F60F50 */
+		gPlayerAnim_link_normal_front_downA = 0x04002F58; /* ROM:0x00F60F58 */
+		gPlayerAnim_link_normal_front_downB = 0x04002F60; /* ROM:0x00F60F60 */
+		gPlayerAnim_link_normal_front_down_wake = 0x04002F68; /* ROM:0x00F60F68 */
+		gPlayerAnim_link_normal_front_hit = 0x04002F70; /* ROM:0x00F60F70 */
+		gPlayerAnim_link_normal_front_shitR = 0x04002F78; /* ROM:0x00F60F78 */
+		gPlayerAnim_link_normal_front_shit = 0x04002F80; /* ROM:0x00F60F80 */
+		gPlayerAnim_link_normal_give_other = 0x04002F88; /* ROM:0x00F60F88 */
+		gPlayerAnim_link_normal_hang_up_down = 0x04002F90; /* ROM:0x00F60F90 */
+		gPlayerAnim_link_normal_heavy_carry = 0x04002F98; /* ROM:0x00F60F98 */
+		gPlayerAnim_link_normal_heavy_carry_end = 0x04002FA0; /* ROM:0x00F60FA0 */
+		gPlayerAnim_link_normal_heavy_run = 0x04002FA8; /* ROM:0x00F60FA8 */
+		gPlayerAnim_link_normal_heavy_run_free = 0x04002FB0; /* ROM:0x00F60FB0 */
+		gPlayerAnim_link_normal_hip_down = 0x04002FB8; /* ROM:0x00F60FB8 */
+		gPlayerAnim_link_normal_hip_down_free = 0x04002FC0; /* ROM:0x00F60FC0 */
+		gPlayerAnim_link_normal_hip_down_long = 0x04002FC8; /* ROM:0x00F60FC8 */
+		gPlayerAnim_link_normal_ice_down = 0x04002FD0; /* ROM:0x00F60FD0 */
+		gPlayerAnim_link_normal_jump2landing = 0x04002FD8; /* ROM:0x00F60FD8 */
+		gPlayerAnim_link_normal_jump     = 0x04002FE0; /* ROM:0x00F60FE0 */
+		gPlayerAnim_link_normal_jump_climb_hold = 0x04002FE8; /* ROM:0x00F60FE8 */
+		gPlayerAnim_link_normal_jump_climb_hold_free = 0x04002FF0; /* ROM:0x00F60FF0 */
+		gPlayerAnim_link_normal_jump_climb_up = 0x04002FF8; /* ROM:0x00F60FF8 */
+		gPlayerAnim_link_normal_jump_climb_up_free = 0x04003000; /* ROM:0x00F61000 */
+		gPlayerAnim_link_normal_jump_climb_wait = 0x04003008; /* ROM:0x00F61008 */
+		gPlayerAnim_link_normal_jump_climb_wait_free = 0x04003010; /* ROM:0x00F61010 */
+		gPlayerAnim_link_normal_jump_up  = 0x04003018; /* ROM:0x00F61018 */
+		gPlayerAnim_link_normal_landing  = 0x04003020; /* ROM:0x00F61020 */
+		gPlayerAnim_link_normal_landing_free = 0x04003028; /* ROM:0x00F61028 */
+		gPlayerAnim_link_normal_landing_roll = 0x04003030; /* ROM:0x00F61030 */
+		gPlayerAnim_link_normal_landing_roll_free = 0x04003038; /* ROM:0x00F61038 */
+		gPlayerAnim_link_normal_landing_wait = 0x04003040; /* ROM:0x00F61040 */
+		gPlayerAnim_link_normal_light_bom = 0x04003048; /* ROM:0x00F61048 */
+		gPlayerAnim_link_normal_light_bom_end = 0x04003050; /* ROM:0x00F61050 */
+		gPlayerAnim_link_normal_long2bom = 0x04003058; /* ROM:0x00F61058 */
+		gPlayerAnim_link_normal_nocarry_free = 0x04003060; /* ROM:0x00F61060 */
+		gPlayerAnim_link_normal_nocarry_free_end = 0x04003068; /* ROM:0x00F61068 */
+		gPlayerAnim_link_normal_nocarry_free_wait = 0x04003070; /* ROM:0x00F61070 */
+		gPlayerAnim_link_normal_normal2bom = 0x04003078; /* ROM:0x00F61078 */
+		gPlayerAnim_link_normal_normal2fighter = 0x04003080; /* ROM:0x00F61080 */
+		gPlayerAnim_link_normal_normal2fighter_free = 0x04003088; /* ROM:0x00F61088 */
+		gPlayerAnim_link_normal_normal2free = 0x04003090; /* ROM:0x00F61090 */
+		gPlayerAnim_link_normal_okarina_end = 0x04003098; /* ROM:0x00F61098 */
+		gPlayerAnim_link_normal_okarina_start = 0x040030A0; /* ROM:0x00F610A0 */
+		gPlayerAnim_link_normal_okarina_swing = 0x040030A8; /* ROM:0x00F610A8 */
+		gPlayerAnim_link_normal_pull_end = 0x040030B0; /* ROM:0x00F610B0 */
+		gPlayerAnim_link_normal_pull_end_free = 0x040030B8; /* ROM:0x00F610B8 */
+		gPlayerAnim_link_normal_pull_start = 0x040030C0; /* ROM:0x00F610C0 */
+		gPlayerAnim_link_normal_pull_start_free = 0x040030C8; /* ROM:0x00F610C8 */
+		gPlayerAnim_link_normal_pulling  = 0x040030D0; /* ROM:0x00F610D0 */
+		gPlayerAnim_link_normal_pulling_free = 0x040030D8; /* ROM:0x00F610D8 */
+		gPlayerAnim_link_normal_push_end = 0x040030E0; /* ROM:0x00F610E0 */
+		gPlayerAnim_link_normal_push_fall = 0x040030E8; /* ROM:0x00F610E8 */
+		gPlayerAnim_link_normal_push_start = 0x040030F0; /* ROM:0x00F610F0 */
+		gPlayerAnim_link_normal_push_wait = 0x040030F8; /* ROM:0x00F610F8 */
+		gPlayerAnim_link_normal_push_wait_end = 0x04003100; /* ROM:0x00F61100 */
+		gPlayerAnim_link_normal_pushing  = 0x04003108; /* ROM:0x00F61108 */
+		gPlayerAnim_link_normal_put      = 0x04003110; /* ROM:0x00F61110 */
+		gPlayerAnim_link_normal_put_free = 0x04003118; /* ROM:0x00F61118 */
+		gPlayerAnim_link_normal_re_dead_attack = 0x04003120; /* ROM:0x00F61120 */
+		gPlayerAnim_link_normal_re_dead_attack_wait = 0x04003128; /* ROM:0x00F61128 */
+		gPlayerAnim_link_normal_rebound  = 0x04003130; /* ROM:0x00F61130 */
+		gPlayerAnim_link_normal_run      = 0x04003138; /* ROM:0x00F61138 */
+		gPlayerAnim_link_normal_run_free = 0x04003140; /* ROM:0x00F61140 */
+		gPlayerAnim_link_normal_run_jump = 0x04003148; /* ROM:0x00F61148 */
+		gPlayerAnim_link_normal_run_jump_end = 0x04003150; /* ROM:0x00F61150 */
+		gPlayerAnim_link_normal_run_jump_water_fall = 0x04003158; /* ROM:0x00F61158 */
+		gPlayerAnim_link_normal_run_jump_water_fall_wait = 0x04003160; /* ROM:0x00F61160 */
+		gPlayerAnim_link_normal_short_landing = 0x04003168; /* ROM:0x00F61168 */
+		gPlayerAnim_link_normal_short_landing_free = 0x04003170; /* ROM:0x00F61170 */
+		gPlayerAnim_link_normal_side_walkL_free = 0x04003178; /* ROM:0x00F61178 */
+		gPlayerAnim_link_normal_side_walkR_free = 0x04003180; /* ROM:0x00F61180 */
+		gPlayerAnim_link_normal_side_walk = 0x04003188; /* ROM:0x00F61188 */
+		gPlayerAnim_link_normal_side_walk_free = 0x04003190; /* ROM:0x00F61190 */
+		gPlayerAnim_link_normal_take_out = 0x04003198; /* ROM:0x00F61198 */
+		gPlayerAnim_link_normal_talk_free = 0x040031A0; /* ROM:0x00F611A0 */
+		gPlayerAnim_link_normal_talk_free_wait = 0x040031A8; /* ROM:0x00F611A8 */
+		gPlayerAnim_link_normal_talk_navi = 0x040031B0; /* ROM:0x00F611B0 */
+		gPlayerAnim_link_normal_talk_navi_wait = 0x040031B8; /* ROM:0x00F611B8 */
+		gPlayerAnim_link_normal_throw    = 0x040031C0; /* ROM:0x00F611C0 */
+		gPlayerAnim_link_normal_throw_free = 0x040031C8; /* ROM:0x00F611C8 */
+		gPlayerAnim_link_normal_up_slope_slip = 0x040031D0; /* ROM:0x00F611D0 */
+		gPlayerAnim_link_normal_up_slope_slip_end = 0x040031D8; /* ROM:0x00F611D8 */
+		gPlayerAnim_link_normal_up_slope_slip_end_free = 0x040031E0; /* ROM:0x00F611E0 */
+		gPlayerAnim_link_normal_up_slope_slip_end_long = 0x040031E8; /* ROM:0x00F611E8 */
+		gPlayerAnim_link_normal_wait2waitL = 0x040031F0; /* ROM:0x00F611F0 */
+		gPlayerAnim_link_normal_wait2waitR = 0x040031F8; /* ROM:0x00F611F8 */
+		gPlayerAnim_link_normal_waitF_typeA_20f = 0x04003200; /* ROM:0x00F61200 */
+		gPlayerAnim_link_normal_waitF_typeB_20f = 0x04003208; /* ROM:0x00F61208 */
+		gPlayerAnim_link_normal_waitF_typeC_20f = 0x04003210; /* ROM:0x00F61210 */
+		gPlayerAnim_link_normal_waitL2wait = 0x04003218; /* ROM:0x00F61218 */
+		gPlayerAnim_link_normal_waitL_free = 0x04003220; /* ROM:0x00F61220 */
+		gPlayerAnim_link_normal_waitR2wait = 0x04003228; /* ROM:0x00F61228 */
+		gPlayerAnim_link_normal_waitR_free = 0x04003230; /* ROM:0x00F61230 */
+		gPlayerAnim_link_normal_wait     = 0x04003238; /* ROM:0x00F61238 */
+		gPlayerAnim_link_normal_wait_free = 0x04003240; /* ROM:0x00F61240 */
+		gPlayerAnim_link_normal_wait_typeA_20f = 0x04003248; /* ROM:0x00F61248 */
+		gPlayerAnim_link_normal_wait_typeB_20f = 0x04003250; /* ROM:0x00F61250 */
+		gPlayerAnim_link_normal_wait_typeC_20f = 0x04003258; /* ROM:0x00F61258 */
+		gPlayerAnim_link_normal_wakeup   = 0x04003260; /* ROM:0x00F61260 */
+		gPlayerAnim_link_normal_walk     = 0x04003268; /* ROM:0x00F61268 */
+		gPlayerAnim_link_normal_walk_endL = 0x04003270; /* ROM:0x00F61270 */
+		gPlayerAnim_link_normal_walk_endL_free = 0x04003278; /* ROM:0x00F61278 */
+		gPlayerAnim_link_normal_walk_endR = 0x04003280; /* ROM:0x00F61280 */
+		gPlayerAnim_link_normal_walk_endR_free = 0x04003288; /* ROM:0x00F61288 */
+		gPlayerAnim_link_normal_walk_free = 0x04003290; /* ROM:0x00F61290 */
+		gPlayerAnim_link_okarina_warp_goal = 0x04003298; /* ROM:0x00F61298 */
+		gPlayerAnim_link_okiru_demo      = 0x040032A0; /* ROM:0x00F612A0 */
+		gPlayerAnim_link_shagamu_demo    = 0x040032A8; /* ROM:0x00F612A8 */
+		gPlayerAnim_link_silver_carry    = 0x040032B0; /* ROM:0x00F612B0 */
+		gPlayerAnim_link_silver_throw    = 0x040032B8; /* ROM:0x00F612B8 */
+		gPlayerAnim_link_silver_wait     = 0x040032C0; /* ROM:0x00F612C0 */
+		gPlayerAnim_link_swimer_Lside_swim = 0x040032C8; /* ROM:0x00F612C8 */
+		gPlayerAnim_link_swimer_Rside_swim = 0x040032D0; /* ROM:0x00F612D0 */
+		gPlayerAnim_link_swimer_back_swim = 0x040032D8; /* ROM:0x00F612D8 */
+		gPlayerAnim_link_swimer_land2swim_wait = 0x040032E0; /* ROM:0x00F612E0 */
+		gPlayerAnim_link_swimer_swim_15step_up = 0x040032E8; /* ROM:0x00F612E8 */
+		gPlayerAnim_link_swimer_swim     = 0x040032F0; /* ROM:0x00F612F0 */
+		gPlayerAnim_link_swimer_swim_dead = 0x040032F8; /* ROM:0x00F612F8 */
+		gPlayerAnim_link_swimer_swim_deep_end = 0x04003300; /* ROM:0x00F61300 */
+		gPlayerAnim_link_swimer_swim_deep_start = 0x04003308; /* ROM:0x00F61308 */
+		gPlayerAnim_link_swimer_swim_down = 0x04003310; /* ROM:0x00F61310 */
+		gPlayerAnim_link_swimer_swim_get = 0x04003318; /* ROM:0x00F61318 */
+		gPlayerAnim_link_swimer_swim_hit = 0x04003320; /* ROM:0x00F61320 */
+		gPlayerAnim_link_swimer_swim_wait = 0x04003328; /* ROM:0x00F61328 */
+		gPlayerAnim_link_swimer_wait2swim_wait = 0x04003330; /* ROM:0x00F61330 */
+		gPlayerAnim_link_uma_anim_fastrun = 0x04003338; /* ROM:0x00F61338 */
+		gPlayerAnim_link_uma_anim_fastrun_muti = 0x04003340; /* ROM:0x00F61340 */
+		gPlayerAnim_link_uma_anim_jump100 = 0x04003348; /* ROM:0x00F61348 */
+		gPlayerAnim_link_uma_anim_jump200 = 0x04003350; /* ROM:0x00F61350 */
+		gPlayerAnim_link_uma_anim_slowrun = 0x04003358; /* ROM:0x00F61358 */
+		gPlayerAnim_link_uma_anim_slowrun_muti = 0x04003360; /* ROM:0x00F61360 */
+		gPlayerAnim_link_uma_anim_stand  = 0x04003368; /* ROM:0x00F61368 */
+		gPlayerAnim_link_uma_anim_stop   = 0x04003370; /* ROM:0x00F61370 */
+		gPlayerAnim_link_uma_anim_walk2  = 0x04003378; /* ROM:0x00F61378 */
+		gPlayerAnim_link_uma_anim_walk   = 0x04003380; /* ROM:0x00F61380 */
+		gPlayerAnim_link_uma_anim_walk_muti = 0x04003388; /* ROM:0x00F61388 */
+		gPlayerAnim_link_uma_left_down   = 0x04003390; /* ROM:0x00F61390 */
+		gPlayerAnim_link_uma_left_up     = 0x04003398; /* ROM:0x00F61398 */
+		gPlayerAnim_link_uma_right_down  = 0x040033A0; /* ROM:0x00F613A0 */
+		gPlayerAnim_link_uma_right_up    = 0x040033A8; /* ROM:0x00F613A8 */
+		gPlayerAnim_link_uma_stop_muti   = 0x040033B0; /* ROM:0x00F613B0 */
+		gPlayerAnim_link_uma_wait_1      = 0x040033B8; /* ROM:0x00F613B8 */
+		gPlayerAnim_link_uma_wait_2      = 0x040033C0; /* ROM:0x00F613C0 */
+		gPlayerAnim_link_uma_wait_3      = 0x040033C8; /* ROM:0x00F613C8 */
+		gPlayerAnim_link_waitF_heat1_20f = 0x040033D0; /* ROM:0x00F613D0 */
+		gPlayerAnim_link_waitF_heat2_20f = 0x040033D8; /* ROM:0x00F613D8 */
+		gPlayerAnim_link_waitF_itemA_20f = 0x040033E0; /* ROM:0x00F613E0 */
+		gPlayerAnim_link_waitF_itemB_20f = 0x040033E8; /* ROM:0x00F613E8 */
+		gPlayerAnim_link_waitF_typeD_20f = 0x040033F0; /* ROM:0x00F613F0 */
+		gPlayerAnim_link_wait_heat1_20f  = 0x040033F8; /* ROM:0x00F613F8 */
+		gPlayerAnim_link_wait_heat2_20f  = 0x04003400; /* ROM:0x00F61400 */
+		gPlayerAnim_link_wait_itemA_20f  = 0x04003408; /* ROM:0x00F61408 */
+		gPlayerAnim_link_wait_itemB_20f  = 0x04003410; /* ROM:0x00F61410 */
+		gPlayerAnim_link_wait_itemC_20f  = 0x04003418; /* ROM:0x00F61418 */
+		gPlayerAnim_link_wait_itemD1_20f = 0x04003420; /* ROM:0x00F61420 */
+		gPlayerAnim_link_wait_itemD2_20f = 0x04003428; /* ROM:0x00F61428 */
+		gPlayerAnim_link_wait_typeD_20f  = 0x04003430; /* ROM:0x00F61430 */
+		gPlayerAnim_lkt_nwait            = 0x04003438; /* ROM:0x00F61438 */
+		gPlayerAnim_nw_modoru            = 0x04003440; /* ROM:0x00F61440 */
+		gPlayerAnim_o_get_ato            = 0x04003448; /* ROM:0x00F61448 */
+		gPlayerAnim_o_get_mae            = 0x04003450; /* ROM:0x00F61450 */
+		gPlayerAnim_om_get               = 0x04003458; /* ROM:0x00F61458 */
+		gPlayerAnim_om_get_mae           = 0x04003460; /* ROM:0x00F61460 */
+		gPlayerAnim_sude_nwait           = 0x04003468; /* ROM:0x00F61468 */
+		gPlayerAnim_L_1kyoro             = 0x04003470; /* ROM:0x00F61470 */
+		gPlayerAnim_L_2kyoro             = 0x04003478; /* ROM:0x00F61478 */
+		gPlayerAnim_L_bouzen             = 0x04003480; /* ROM:0x00F61480 */
+		gPlayerAnim_L_hajikareru         = 0x04003488; /* ROM:0x00F61488 */
+		gPlayerAnim_L_kamaeru            = 0x04003490; /* ROM:0x00F61490 */
+		gPlayerAnim_L_ken_miru           = 0x04003498; /* ROM:0x00F61498 */
+		gPlayerAnim_L_kennasi_w          = 0x040034A0; /* ROM:0x00F614A0 */
+		gPlayerAnim_L_kw                 = 0x040034A8; /* ROM:0x00F614A8 */
+		gPlayerAnim_L_mukinaoru          = 0x040034B0; /* ROM:0x00F614B0 */
+		gPlayerAnim_L_okarina_get        = 0x040034B8; /* ROM:0x00F614B8 */
+		gPlayerAnim_L_sagaru             = 0x040034C0; /* ROM:0x00F614C0 */
+		gPlayerAnim_Link_ha              = 0x040034C8; /* ROM:0x00F614C8 */
+		gPlayerAnim_Link_m_wait          = 0x040034D0; /* ROM:0x00F614D0 */
+		gPlayerAnim_Link_miageru         = 0x040034D8; /* ROM:0x00F614D8 */
+		gPlayerAnim_Link_muku            = 0x040034E0; /* ROM:0x00F614E0 */
+		gPlayerAnim_Link_otituku_w       = 0x040034E8; /* ROM:0x00F614E8 */
+		gPlayerAnim_Link_ue_wait         = 0x040034F0; /* ROM:0x00F614F0 */
 		gameplay_keep_possiblePadding_0034F8 = 0x040034F8; /* ROM:0x00F614F8 */
 		gameplay_keepVtx_003500          = 0x04003500; /* ROM:0x00F61500 */
 		gDebugPyramidDL                  = 0x040035C0; /* ROM:0x00F615C0 */
@@ -9374,16 +9374,16 @@
 		gameplay_keep_possiblePadding_00D4D8 = 0x0400D4D8; /* ROM:0x00F6B4D8 */
 		gRockFragment1Tex                = 0x0400D4E0; /* ROM:0x00F6B4E0 */
 		gRockFragment2Tex                = 0x0400DCE0; /* ROM:0x00F6BCE0 */
-		sDoor1AnimFrameData              = 0x0400E4E0; /* ROM:0x00F6C4E0 */
-		sDoor1AnimJointIndices           = 0x0400E594; /* ROM:0x00F6C594 */
-		gDoor1Anim                       = 0x0400E5B4; /* ROM:0x00F6C5B4 */
+		sDoorChildOpeningLeftAnimFrameData = 0x0400E4E0; /* ROM:0x00F6C4E0 */
+		sDoorChildOpeningLeftAnimJointIndices = 0x0400E594; /* ROM:0x00F6C594 */
+		gDoorChildOpeningLeftAnim        = 0x0400E5B4; /* ROM:0x00F6C5B4 */
 		gameplay_keep_possiblePadding_00E5C4 = 0x0400E5C4; /* ROM:0x00F6C5C4 */
-		sDoor2AnimFrameData              = 0x0400E5D0; /* ROM:0x00F6C5D0 */
-		sDoor2AnimJointIndices           = 0x0400E680; /* ROM:0x00F6C680 */
-		gDoor2Anim                       = 0x0400E6A0; /* ROM:0x00F6C6A0 */
-		sDoor3AnimFrameData              = 0x0400E6B0; /* ROM:0x00F6C6B0 */
-		sDoor3AnimJointIndices           = 0x0400E738; /* ROM:0x00F6C738 */
-		gDoor3Anim                       = 0x0400E758; /* ROM:0x00F6C758 */
+		sDoorChildOpeningRightAnimFrameData = 0x0400E5D0; /* ROM:0x00F6C5D0 */
+		sDoorChildOpeningRightAnimJointIndices = 0x0400E680; /* ROM:0x00F6C680 */
+		gDoorChildOpeningRightAnim       = 0x0400E6A0; /* ROM:0x00F6C6A0 */
+		sDoorAdultOpeningLeftAnimFrameData = 0x0400E6B0; /* ROM:0x00F6C6B0 */
+		sDoorAdultOpeningLeftAnimJointIndices = 0x0400E738; /* ROM:0x00F6C738 */
+		gDoorAdultOpeningLeftAnim        = 0x0400E758; /* ROM:0x00F6C758 */
 		gameplay_keep_possiblePadding_00E768 = 0x0400E768; /* ROM:0x00F6C768 */
 		gameplay_keepVtx_00E770          = 0x0400E770; /* ROM:0x00F6C770 */
 		gDoorFrameDL                     = 0x0400EC30; /* ROM:0x00F6CC30 */
@@ -9396,9 +9396,9 @@
 		gDoorSkelLimbsLimb_00FF5C        = 0x0400FF5C; /* ROM:0x00F6DF5C */
 		gDoorSkelLimbs                   = 0x0400FF68; /* ROM:0x00F6DF68 */
 		gDoorSkel                        = 0x0400FF78; /* ROM:0x00F6DF78 */
-		sDoor4AnimFrameData              = 0x0400FF80; /* ROM:0x00F6DF80 */
-		sDoor4AnimJointIndices           = 0x04010018; /* ROM:0x00F6E018 */
-		gDoor4Anim                       = 0x04010038; /* ROM:0x00F6E038 */
+		sDoorAdultOpeningRightAnimFrameData = 0x0400FF80; /* ROM:0x00F6DF80 */
+		sDoorAdultOpeningRightAnimJointIndices = 0x04010018; /* ROM:0x00F6E018 */
+		gDoorAdultOpeningRightAnim       = 0x04010038; /* ROM:0x00F6E038 */
 		gameplay_keep_possiblePadding_010048 = 0x04010048; /* ROM:0x00F6E048 */
 		gEffDustDL                       = 0x04010050; /* ROM:0x00F6E050 */
 		gameplay_keepVtx_0100A8          = 0x040100A8; /* ROM:0x00F6E0A8 */
@@ -9935,8 +9935,8 @@
 		gBgBombwallCol                   = 0x050041B0; /* ROM:0x00FB91B0 */
 		gameplay_field_keepVtx_0041E0    = 0x050041E0; /* ROM:0x00FB91E0 */
 		gFieldDoorDL_004720              = 0x05004720; /* ROM:0x00FB9720 */
-		gFieldDoor1DL                    = 0x050047A0; /* ROM:0x00FB97A0 */
-		gFieldDoor2DL                    = 0x05004978; /* ROM:0x00FB9978 */
+		gFieldDoorLeftDL                 = 0x050047A0; /* ROM:0x00FB97A0 */
+		gFieldDoorRightDL                = 0x05004978; /* ROM:0x00FB9978 */
 		gameplay_field_keep_possiblePadding_004B48 = 0x05004B48; /* ROM:0x00FB9B48 */
 		gFieldDoorKnobTopHalfTex         = 0x05004B50; /* ROM:0x00FB9B50 */
 		gFieldDoorKnobTex                = 0x05004D50; /* ROM:0x00FB9D50 */
@@ -10151,7 +10151,7 @@
 		gLinkAdultBootFarTex             = 0x06005600; /* ROM:0x00FE1600 */
 		object_link_boyTLUT_005800       = 0x06005800; /* ROM:0x00FE1800 */
 		object_link_boyTLUT_005A00       = 0x06005A00; /* ROM:0x00FE1A00 */
-		gLinkAdultHeadTlut               = 0x06005C00; /* ROM:0x00FE1C00 */
+		gLinkAdultHeadTLUT               = 0x06005C00; /* ROM:0x00FE1C00 */
 		gLinkAdultTlut_005E00            = 0x06005E00; /* ROM:0x00FE1E00 */
 		gLinkAdultBootTex                = 0x06006000; /* ROM:0x00FE2000 */
 		gLinkAdultLegTex                 = 0x06006100; /* ROM:0x00FE2100 */
@@ -13526,8 +13526,8 @@
 		object_st_DL_004950              = 0x06004950; /* ROM:0x01155950 */
 		object_st_DL_0049E8              = 0x060049E8; /* ROM:0x011559E8 */
 		object_stVtx_004A80              = 0x06004A80; /* ROM:0x01155A80 */
-		object_st_DL_004DB0              = 0x06004DB0; /* ROM:0x01155DB0 */
-		object_st_DL_004EB8              = 0x06004EB8; /* ROM:0x01155EB8 */
+		gSkulltulaTokenDL                = 0x06004DB0; /* ROM:0x01155DB0 */
+		gSkulltulaTokenFlameDL           = 0x06004EB8; /* ROM:0x01155EB8 */
 		object_st_Limb_0050C8            = 0x060050C8; /* ROM:0x011560C8 */
 		object_st_Limb_0050D4            = 0x060050D4; /* ROM:0x011560D4 */
 		object_st_Limb_0050E0            = 0x060050E0; /* ROM:0x011560E0 */
@@ -14450,8 +14450,8 @@
 		gFireTempleDoorKillerTex         = 0x0600E5A0; /* ROM:0x0118B5A0 */
 		object_hidan_objectsVtx_00F5A0   = 0x0600F5A0; /* ROM:0x0118C5A0 */
 		gFireTempleBombableDoorFrameDL   = 0x0600F890; /* ROM:0x0118C890 */
-		gFireTempleDoorWithHandleBackDL  = 0x0600F938; /* ROM:0x0118C938 */
-		gFireTempleDoorWithHandleFrontDL = 0x0600F998; /* ROM:0x0118C998 */
+		gFireTempleDoorWithHandleRightDL = 0x0600F938; /* ROM:0x0118C938 */
+		gFireTempleDoorWithHandleLeftDL  = 0x0600F998; /* ROM:0x0118C998 */
 		object_hidan_objects_possiblePadding_00F9F8 = 0x0600F9F8; /* ROM:0x0118C9F8 */
 		gFireTempleStonePlatform2ColCamDataList = 0x0600FA00; /* ROM:0x0118CA00 */
 		gFireTempleStonePlatform2ColSurfaceType = 0x0600FA08; /* ROM:0x0118CA08 */
@@ -20212,7 +20212,7 @@
 		gSheikIdleAnim                   = 0x06004828; /* ROM:0x0137D828 */
 		object_xc_possiblePadding_004838 = 0x06004838; /* ROM:0x0137D838 */
 		object_xcTLUT_004840             = 0x06004840; /* ROM:0x0137D840 */
-		object_xcTLUT_004A40             = 0x06004A40; /* ROM:0x0137DA40 */
+		object_xc_TLUT_004A40            = 0x06004A40; /* ROM:0x0137DA40 */
 		object_xcTex_004C40              = 0x06004C40; /* ROM:0x0137DC40 */
 		object_xcTex_004C80              = 0x06004C80; /* ROM:0x0137DC80 */
 		gSheikEyeOpenTex                 = 0x06004CC0; /* ROM:0x0137DCC0 */
@@ -21487,141 +21487,141 @@
 	/* objects/object_gndd/object_gndd.o */
 		_object_gnddSegmentDataStart     = 0x06000000; /* ROM:0x01412000 */
 	/* objects/object_gndd/object_gndd.o */
-		object_gndd_Anim_0005B4FrameData = 0x06000000; /* ROM:0x01412000 */
-		object_gndd_Anim_0005B4JointIndices = 0x06000524; /* ROM:0x01412524 */
-		object_gndd_Anim_0005B4          = 0x060005B4; /* ROM:0x014125B4 */
+		sYoungGanondorfHorsebackRideAnimFrameData = 0x06000000; /* ROM:0x01412000 */
+		sYoungGanondorfHorsebackRideAnimJointIndices = 0x06000524; /* ROM:0x01412524 */
+		gYoungGanondorfHorsebackRideAnim = 0x060005B4; /* ROM:0x014125B4 */
 		object_gndd_possiblePadding_0005C4 = 0x060005C4; /* ROM:0x014125C4 */
-		object_gndd_Anim_0008A0FrameData = 0x060005D0; /* ROM:0x014125D0 */
-		object_gndd_Anim_0008A0JointIndices = 0x06000810; /* ROM:0x01412810 */
-		object_gndd_Anim_0008A0          = 0x060008A0; /* ROM:0x014128A0 */
-		object_gndd_Anim_000BC8FrameData = 0x060008B0; /* ROM:0x014128B0 */
-		object_gndd_Anim_000BC8JointIndices = 0x06000B38; /* ROM:0x01412B38 */
-		object_gndd_Anim_000BC8          = 0x06000BC8; /* ROM:0x01412BC8 */
+		sYoungGanondorfHorsebackMagicChargeUpStartAnimFrameData = 0x060005D0; /* ROM:0x014125D0 */
+		sYoungGanondorfHorsebackMagicChargeUpStartAnimJointIndices = 0x06000810; /* ROM:0x01412810 */
+		gYoungGanondorfHorsebackMagicChargeUpStartAnim = 0x060008A0; /* ROM:0x014128A0 */
+		sYoungGanondorfHorsebackMagicChargeUpLoopAnimFrameData = 0x060008B0; /* ROM:0x014128B0 */
+		sYoungGanondorfHorsebackMagicChargeUpLoopAnimJointIndices = 0x06000B38; /* ROM:0x01412B38 */
+		gYoungGanondorfHorsebackMagicChargeUpLoopAnim = 0x06000BC8; /* ROM:0x01412BC8 */
 		object_gndd_possiblePadding_000BD8 = 0x06000BD8; /* ROM:0x01412BD8 */
-		object_gndd_Anim_000F54FrameData = 0x06000BE0; /* ROM:0x01412BE0 */
-		object_gndd_Anim_000F54JointIndices = 0x06000EC4; /* ROM:0x01412EC4 */
-		object_gndd_Anim_000F54          = 0x06000F54; /* ROM:0x01412F54 */
+		sYoungGanondorfHorsebackLookSidewaysStartAnimFrameData = 0x06000BE0; /* ROM:0x01412BE0 */
+		sYoungGanondorfHorsebackLookSidewaysStartAnimJointIndices = 0x06000EC4; /* ROM:0x01412EC4 */
+		gYoungGanondorfHorsebackLookSidewaysStartAnim = 0x06000F54; /* ROM:0x01412F54 */
 		object_gndd_possiblePadding_000F64 = 0x06000F64; /* ROM:0x01412F64 */
-		object_gndd_Anim_0014F4FrameData = 0x06000F70; /* ROM:0x01412F70 */
-		object_gndd_Anim_0014F4JointIndices = 0x06001464; /* ROM:0x01413464 */
-		object_gndd_Anim_0014F4          = 0x060014F4; /* ROM:0x014134F4 */
+		sYoungGanondorfHorsebackLookSidewaysLoopAnimFrameData = 0x06000F70; /* ROM:0x01412F70 */
+		sYoungGanondorfHorsebackLookSidewaysLoopAnimJointIndices = 0x06001464; /* ROM:0x01413464 */
+		gYoungGanondorfHorsebackLookSidewaysLoopAnim = 0x060014F4; /* ROM:0x014134F4 */
 		object_gndd_possiblePadding_001504 = 0x06001504; /* ROM:0x01413504 */
-		object_gndd_Anim_001D28FrameData = 0x06001510; /* ROM:0x01413510 */
-		object_gndd_Anim_001D28JointIndices = 0x06001C98; /* ROM:0x01413C98 */
-		object_gndd_Anim_001D28          = 0x06001D28; /* ROM:0x01413D28 */
+		sYoungGanondorfHorsebackRearAnimFrameData = 0x06001510; /* ROM:0x01413510 */
+		sYoungGanondorfHorsebackRearAnimJointIndices = 0x06001C98; /* ROM:0x01413C98 */
+		gYoungGanondorfHorsebackRearAnim = 0x06001D28; /* ROM:0x01413D28 */
 		object_gndd_possiblePadding_001D38 = 0x06001D38; /* ROM:0x01413D38 */
-		object_gndd_Anim_002928FrameData = 0x06001D40; /* ROM:0x01413D40 */
-		object_gndd_Anim_002928JointIndices = 0x06002898; /* ROM:0x01414898 */
-		object_gndd_Anim_002928          = 0x06002928; /* ROM:0x01414928 */
+		sYoungGanondorfHorsebackIdleAnimFrameData = 0x06001D40; /* ROM:0x01413D40 */
+		sYoungGanondorfHorsebackIdleAnimJointIndices = 0x06002898; /* ROM:0x01414898 */
+		gYoungGanondorfHorsebackIdleAnim = 0x06002928; /* ROM:0x01414928 */
 		object_gndd_possiblePadding_002938 = 0x06002938; /* ROM:0x01414938 */
-		object_gndd_Anim_003284FrameData = 0x06002940; /* ROM:0x01414940 */
-		object_gndd_Anim_003284JointIndices = 0x060031F4; /* ROM:0x014151F4 */
-		object_gndd_Anim_003284          = 0x06003284; /* ROM:0x01415284 */
+		sYoungGanondorfKneelStartAnimFrameData = 0x06002940; /* ROM:0x01414940 */
+		sYoungGanondorfKneelStartAnimJointIndices = 0x060031F4; /* ROM:0x014151F4 */
+		gYoungGanondorfKneelStartAnim    = 0x06003284; /* ROM:0x01415284 */
 		object_gndd_possiblePadding_003294 = 0x06003294; /* ROM:0x01415294 */
-		object_gndd_Anim_003428FrameData = 0x060032A0; /* ROM:0x014152A0 */
-		object_gndd_Anim_003428JointIndices = 0x06003398; /* ROM:0x01415398 */
-		object_gndd_Anim_003428          = 0x06003428; /* ROM:0x01415428 */
+		sYoungGanondorfKneelLookSidewaysAnimFrameData = 0x060032A0; /* ROM:0x014152A0 */
+		sYoungGanondorfKneelLookSidewaysAnimJointIndices = 0x06003398; /* ROM:0x01415398 */
+		gYoungGanondorfKneelLookSidewaysAnim = 0x06003428; /* ROM:0x01415428 */
 		object_gndd_possiblePadding_003438 = 0x06003438; /* ROM:0x01415438 */
-		object_gndd_Anim_003D84FrameData = 0x06003440; /* ROM:0x01415440 */
-		object_gndd_Anim_003D84JointIndices = 0x06003CF4; /* ROM:0x01415CF4 */
-		object_gndd_Anim_003D84          = 0x06003D84; /* ROM:0x01415D84 */
+		sYoungGanondorfKneelLoopAnimFrameData = 0x06003440; /* ROM:0x01415440 */
+		sYoungGanondorfKneelLoopAnimJointIndices = 0x06003CF4; /* ROM:0x01415CF4 */
+		gYoungGanondorfKneelLoopAnim     = 0x06003D84; /* ROM:0x01415D84 */
 		object_gndd_possiblePadding_003D94 = 0x06003D94; /* ROM:0x01415D94 */
-		object_gndd_Anim_004260FrameData = 0x06003DA0; /* ROM:0x01415DA0 */
-		object_gndd_Anim_004260JointIndices = 0x060041D0; /* ROM:0x014161D0 */
-		object_gndd_Anim_004260          = 0x06004260; /* ROM:0x01416260 */
-		object_gndd_Anim_004534FrameData = 0x06004270; /* ROM:0x01416270 */
-		object_gndd_Anim_004534JointIndices = 0x060044A4; /* ROM:0x014164A4 */
-		object_gndd_Anim_004534          = 0x06004534; /* ROM:0x01416534 */
+		sYoungGanondorfArmsCrossedAnimFrameData = 0x06003DA0; /* ROM:0x01415DA0 */
+		sYoungGanondorfArmsCrossedAnimJointIndices = 0x060041D0; /* ROM:0x014161D0 */
+		gYoungGanondorfArmsCrossedAnim   = 0x06004260; /* ROM:0x01416260 */
+		sYoungGanondorfLaughStartAnimFrameData = 0x06004270; /* ROM:0x01416270 */
+		sYoungGanondorfLaughStartAnimJointIndices = 0x060044A4; /* ROM:0x014164A4 */
+		gYoungGanondorfLaughStartAnim    = 0x06004534; /* ROM:0x01416534 */
 		object_gndd_possiblePadding_004544 = 0x06004544; /* ROM:0x01416544 */
-		object_gndd_Anim_0048B0FrameData = 0x06004550; /* ROM:0x01416550 */
-		object_gndd_Anim_0048B0JointIndices = 0x06004820; /* ROM:0x01416820 */
-		object_gndd_Anim_0048B0          = 0x060048B0; /* ROM:0x014168B0 */
-		object_gndd_Anim_0050A8FrameData = 0x060048C0; /* ROM:0x014168C0 */
-		object_gndd_Anim_0050A8JointIndices = 0x06005018; /* ROM:0x01417018 */
-		object_gndd_Anim_0050A8          = 0x060050A8; /* ROM:0x014170A8 */
+		sYoungGanondorfLaughLoopAnimFrameData = 0x06004550; /* ROM:0x01416550 */
+		sYoungGanondorfLaughLoopAnimJointIndices = 0x06004820; /* ROM:0x01416820 */
+		gYoungGanondorfLaughLoopAnim     = 0x060048B0; /* ROM:0x014168B0 */
+		sYoungGanondorfWalkAnimFrameData = 0x060048C0; /* ROM:0x014168C0 */
+		sYoungGanondorfWalkAnimJointIndices = 0x06005018; /* ROM:0x01417018 */
+		gYoungGanondorfWalkAnim          = 0x060050A8; /* ROM:0x014170A8 */
 		object_gndd_possiblePadding_0050B8 = 0x060050B8; /* ROM:0x014170B8 */
 		object_gnddVtx_0050C0            = 0x060050C0; /* ROM:0x014170C0 */
-		object_gndd_DL_0061C0            = 0x060061C0; /* ROM:0x014181C0 */
-		object_gndd_DL_0069F8            = 0x060069F8; /* ROM:0x014189F8 */
-		object_gndd_DL_006B78            = 0x06006B78; /* ROM:0x01418B78 */
-		object_gndd_DL_006D90            = 0x06006D90; /* ROM:0x01418D90 */
-		object_gndd_DL_006FC8            = 0x06006FC8; /* ROM:0x01418FC8 */
+		gYoungGanondorfHeadDL            = 0x060061C0; /* ROM:0x014181C0 */
+		gYoungGanondorfRightUpperLipDL   = 0x060069F8; /* ROM:0x014189F8 */
+		gYoungGanondorfChinDL            = 0x06006B78; /* ROM:0x01418B78 */
+		gYoungGanondorfJawDL             = 0x06006D90; /* ROM:0x01418D90 */
+		gYoungGanondorfLeftUpperLipDL    = 0x06006FC8; /* ROM:0x01418FC8 */
 		object_gnddVtx_0070F8            = 0x060070F8; /* ROM:0x014190F8 */
-		object_gndd_DL_00A6A8            = 0x0600A6A8; /* ROM:0x0141C6A8 */
-		object_gndd_DL_00AB10            = 0x0600AB10; /* ROM:0x0141CB10 */
-		object_gndd_DL_00B410            = 0x0600B410; /* ROM:0x0141D410 */
-		object_gndd_DL_00B4B0            = 0x0600B4B0; /* ROM:0x0141D4B0 */
-		object_gndd_DL_00B918            = 0x0600B918; /* ROM:0x0141D918 */
-		object_gndd_DL_00BA90            = 0x0600BA90; /* ROM:0x0141DA90 */
-		object_gndd_DL_00BC08            = 0x0600BC08; /* ROM:0x0141DC08 */
-		object_gndd_DL_00BEA0            = 0x0600BEA0; /* ROM:0x0141DEA0 */
-		object_gndd_DL_00C138            = 0x0600C138; /* ROM:0x0141E138 */
-		object_gndd_DL_00C550            = 0x0600C550; /* ROM:0x0141E550 */
-		object_gndd_DL_00C968            = 0x0600C968; /* ROM:0x0141E968 */
-		object_gndd_DL_00CBF8            = 0x0600CBF8; /* ROM:0x0141EBF8 */
-		object_gndd_DL_00CE88            = 0x0600CE88; /* ROM:0x0141EE88 */
-		object_gndd_DL_00D080            = 0x0600D080; /* ROM:0x0141F080 */
-		object_gndd_DL_00D278            = 0x0600D278; /* ROM:0x0141F278 */
-		object_gndd_DL_00D470            = 0x0600D470; /* ROM:0x0141F470 */
-		object_gndd_DL_00D668            = 0x0600D668; /* ROM:0x0141F668 */
+		gYoungGanondorfPelvisDL          = 0x0600A6A8; /* ROM:0x0141C6A8 */
+		gYoungGanondorfTorsoDL           = 0x0600AB10; /* ROM:0x0141CB10 */
+		gYoungGanondorfJewelDL           = 0x0600B410; /* ROM:0x0141D410 */
+		gYoungGanondorfKnifeDL           = 0x0600B4B0; /* ROM:0x0141D4B0 */
+		gYoungGanondorfLeftUpperArmDL    = 0x0600B918; /* ROM:0x0141D918 */
+		gYoungGanondorfRightUpperArmDL   = 0x0600BA90; /* ROM:0x0141DA90 */
+		gYoungGanondorfLeftForearmDL     = 0x0600BC08; /* ROM:0x0141DC08 */
+		gYoungGanondorfRightForearmDL    = 0x0600BEA0; /* ROM:0x0141DEA0 */
+		gYoungGanondorfLeftHandDL        = 0x0600C138; /* ROM:0x0141E138 */
+		gYoungGanondorfRightHandDL       = 0x0600C550; /* ROM:0x0141E550 */
+		gYoungGanondorfLeftFootDL        = 0x0600C968; /* ROM:0x0141E968 */
+		gYoungGanondorfRightFootDL       = 0x0600CBF8; /* ROM:0x0141EBF8 */
+		gYoungGanondorfLeftThighDL       = 0x0600CE88; /* ROM:0x0141EE88 */
+		gYoungGanondorfLeftShinDL        = 0x0600D080; /* ROM:0x0141F080 */
+		gYoungGanondorfRightThighDL      = 0x0600D278; /* ROM:0x0141F278 */
+		gYoungGanondorfRightShinDL       = 0x0600D470; /* ROM:0x0141F470 */
+		gYoungGanondorfTeethDL           = 0x0600D668; /* ROM:0x0141F668 */
 		object_gnddVtx_00D708            = 0x0600D708; /* ROM:0x0141F708 */
-		object_gndd_DL_00E1A8            = 0x0600E1A8; /* ROM:0x014201A8 */
-		object_gndd_TLUT_00ECB8          = 0x0600ECB8; /* ROM:0x01420CB8 */
-		object_gndd_Tex_00EEB8           = 0x0600EEB8; /* ROM:0x01420EB8 */
-		object_gndd_Tex_00EF38           = 0x0600EF38; /* ROM:0x01420F38 */
-		object_gndd_Tex_00F138           = 0x0600F138; /* ROM:0x01421138 */
-		object_gndd_Tex_00F178           = 0x0600F178; /* ROM:0x01421178 */
-		object_gndd_Tex_00F378           = 0x0600F378; /* ROM:0x01421378 */
-		object_gndd_Tex_00F578           = 0x0600F578; /* ROM:0x01421578 */
-		object_gndd_Tex_00F778           = 0x0600F778; /* ROM:0x01421778 */
-		object_gndd_Tex_00F978           = 0x0600F978; /* ROM:0x01421978 */
-		object_gndd_Tex_00FB78           = 0x0600FB78; /* ROM:0x01421B78 */
-		object_gndd_Tex_00FC78           = 0x0600FC78; /* ROM:0x01421C78 */
-		object_gndd_Tex_00FCF8           = 0x0600FCF8; /* ROM:0x01421CF8 */
-		object_gndd_Tex_00FD78           = 0x0600FD78; /* ROM:0x01421D78 */
-		object_gndd_Tex_00FE78           = 0x0600FE78; /* ROM:0x01421E78 */
-		object_gndd_Tex_010078           = 0x06010078; /* ROM:0x01422078 */
-		object_gndd_Tex_010278           = 0x06010278; /* ROM:0x01422278 */
-		object_gndd_Tex_010678           = 0x06010678; /* ROM:0x01422678 */
-		object_gndd_Tex_010878           = 0x06010878; /* ROM:0x01422878 */
-		object_gndd_Tex_0108F8           = 0x060108F8; /* ROM:0x014228F8 */
-		object_gndd_Tex_010978           = 0x06010978; /* ROM:0x01422978 */
-		object_gndd_Tex_010B78           = 0x06010B78; /* ROM:0x01422B78 */
-		object_gndd_Tex_010D78           = 0x06010D78; /* ROM:0x01422D78 */
-		object_gndd_Tex_010F78           = 0x06010F78; /* ROM:0x01422F78 */
-		object_gndd_Tex_011378           = 0x06011378; /* ROM:0x01423378 */
-		object_gndd_Tex_011578           = 0x06011578; /* ROM:0x01423578 */
-		object_gndd_Tex_0115F8           = 0x060115F8; /* ROM:0x014235F8 */
-		object_gndd_Tex_011678           = 0x06011678; /* ROM:0x01423678 */
-		object_gndd_Tex_0116F8           = 0x060116F8; /* ROM:0x014236F8 */
-		object_gndd_Tex_011718           = 0x06011718; /* ROM:0x01423718 */
-		object_gndd_Tex_011818           = 0x06011818; /* ROM:0x01423818 */
-		object_gndd_Tex_011858           = 0x06011858; /* ROM:0x01423858 */
-		object_gndd_Limb_011878          = 0x06011878; /* ROM:0x01423878 */
-		object_gndd_Limb_011884          = 0x06011884; /* ROM:0x01423884 */
-		object_gndd_Limb_011890          = 0x06011890; /* ROM:0x01423890 */
-		object_gndd_Limb_01189C          = 0x0601189C; /* ROM:0x0142389C */
-		object_gndd_Limb_0118A8          = 0x060118A8; /* ROM:0x014238A8 */
-		object_gndd_Limb_0118B4          = 0x060118B4; /* ROM:0x014238B4 */
-		object_gndd_Limb_0118C0          = 0x060118C0; /* ROM:0x014238C0 */
-		object_gndd_Limb_0118CC          = 0x060118CC; /* ROM:0x014238CC */
-		object_gndd_Limb_0118D8          = 0x060118D8; /* ROM:0x014238D8 */
-		object_gndd_Limb_0118E4          = 0x060118E4; /* ROM:0x014238E4 */
-		object_gndd_Limb_0118F0          = 0x060118F0; /* ROM:0x014238F0 */
-		object_gndd_Limb_0118FC          = 0x060118FC; /* ROM:0x014238FC */
-		object_gndd_Limb_011908          = 0x06011908; /* ROM:0x01423908 */
-		object_gndd_Limb_011914          = 0x06011914; /* ROM:0x01423914 */
-		object_gndd_Limb_011920          = 0x06011920; /* ROM:0x01423920 */
-		object_gndd_Limb_01192C          = 0x0601192C; /* ROM:0x0142392C */
-		object_gndd_Limb_011938          = 0x06011938; /* ROM:0x01423938 */
-		object_gndd_Limb_011944          = 0x06011944; /* ROM:0x01423944 */
-		object_gndd_Limb_011950          = 0x06011950; /* ROM:0x01423950 */
-		object_gndd_Limb_01195C          = 0x0601195C; /* ROM:0x0142395C */
-		object_gndd_Limb_011968          = 0x06011968; /* ROM:0x01423968 */
-		object_gndd_Limb_011974          = 0x06011974; /* ROM:0x01423974 */
-		object_gndd_Limb_011980          = 0x06011980; /* ROM:0x01423980 */
-		object_gndd_Skel_0119E8Limbs     = 0x0601198C; /* ROM:0x0142398C */
-		object_gndd_Skel_0119E8          = 0x060119E8; /* ROM:0x014239E8 */
+		gYoungGanondorfOpenLeftHandDL    = 0x0600E1A8; /* ROM:0x014201A8 */
+		gYoungGanondorfEyeTLUT           = 0x0600ECB8; /* ROM:0x01420CB8 */
+		gYoungGanondorfInnerMouthTex     = 0x0600EEB8; /* ROM:0x01420EB8 */
+		gYoungGanondorfSideburnTex       = 0x0600EF38; /* ROM:0x01420F38 */
+		gYoungGanondorfOuterMouthTex     = 0x0600F138; /* ROM:0x01421138 */
+		gYoungGanondorfEyeOpenTex        = 0x0600F178; /* ROM:0x01421178 */
+		gYoungGanondorfEyeHalfTex        = 0x0600F378; /* ROM:0x01421378 */
+		gYoungGanondorfEyeClosedTex      = 0x0600F578; /* ROM:0x01421578 */
+		gYoungGanondorfEyeLookingDownTex = 0x0600F778; /* ROM:0x01421778 */
+		gYoungGanondorfUpperLipTex       = 0x0600F978; /* ROM:0x01421978 */
+		gYoungGanondorfEarTex            = 0x0600FB78; /* ROM:0x01421B78 */
+		gYoungGanondorfNoseTex           = 0x0600FC78; /* ROM:0x01421C78 */
+		gYoungGanondorfNoseBridgeTex     = 0x0600FCF8; /* ROM:0x01421CF8 */
+		gYoungGanondorfEyebrowTex        = 0x0600FD78; /* ROM:0x01421D78 */
+		gYoungGanondorfJawTex            = 0x0600FE78; /* ROM:0x01421E78 */
+		gYoungGanondorfBlackLeatherTex   = 0x06010078; /* ROM:0x01422078 */
+		gYoungGanondorfGerudoFabricWithSunTex = 0x06010278; /* ROM:0x01422278 */
+		gYoungGanondorfLeatherTex        = 0x06010678; /* ROM:0x01422678 */
+		gYoungGanondorfBodysuitTex       = 0x06010878; /* ROM:0x01422878 */
+		gYoungGanondorfNeckTex           = 0x060108F8; /* ROM:0x014228F8 */
+		gYoungGanondorfChestAndKnifeJewelTex = 0x06010978; /* ROM:0x01422978 */
+		gYoungGanondorfGerudoFabricTex   = 0x06010B78; /* ROM:0x01422B78 */
+		gYoungGanondorfHairFringeTex     = 0x06010D78; /* ROM:0x01422D78 */
+		gYoungGanondorfJewelTex          = 0x06010F78; /* ROM:0x01422F78 */
+		gYoungGanondorfPauldronTex       = 0x06011378; /* ROM:0x01423378 */
+		gYoungGanondorfThumbTex          = 0x06011578; /* ROM:0x01423578 */
+		gYoungGanondorfHandSideTex       = 0x060115F8; /* ROM:0x014235F8 */
+		gYoungGanondorfFingerTex         = 0x06011678; /* ROM:0x01423678 */
+		gYoungGanondorfTeethTex          = 0x060116F8; /* ROM:0x014236F8 */
+		gYoungGanondorfPalmMaskTex       = 0x06011718; /* ROM:0x01423718 */
+		gYoungGanondorfFingerUndersideTex = 0x06011818; /* ROM:0x01423818 */
+		gYoungGanondorfFingernailTex     = 0x06011858; /* ROM:0x01423858 */
+		gYoungGanondorfRootLimb          = 0x06011878; /* ROM:0x01423878 */
+		gYoungGanondorfTorsoLimb         = 0x06011884; /* ROM:0x01423884 */
+		gYoungGanondorfLeftUpperArmLimb  = 0x06011890; /* ROM:0x01423890 */
+		gYoungGanondorfLeftForearmLimb   = 0x0601189C; /* ROM:0x0142389C */
+		gYoungGanondorfLeftHandLimb      = 0x060118A8; /* ROM:0x014238A8 */
+		gYoungGanondorfRightUpperArmLimb = 0x060118B4; /* ROM:0x014238B4 */
+		gYoungGanondorfRightForearmLimb  = 0x060118C0; /* ROM:0x014238C0 */
+		gYoungGanondorfRightHandLimb     = 0x060118CC; /* ROM:0x014238CC */
+		gYoungGanondorfJewelLimb         = 0x060118D8; /* ROM:0x014238D8 */
+		gYoungGanondorfLeftUpperLipLimb  = 0x060118E4; /* ROM:0x014238E4 */
+		gYoungGanondorfJawLimb           = 0x060118F0; /* ROM:0x014238F0 */
+		gYoungGanondorfChinLimb          = 0x060118FC; /* ROM:0x014238FC */
+		gYoungGanondorfRightUpperLipLimb = 0x06011908; /* ROM:0x01423908 */
+		gYoungGanondorfTeethLimb         = 0x06011914; /* ROM:0x01423914 */
+		gYoungGanondorfHeadLimb          = 0x06011920; /* ROM:0x01423920 */
+		gYoungGanondorfPelvisLimb        = 0x0601192C; /* ROM:0x0142392C */
+		gYoungGanondorfLeftThighLimb     = 0x06011938; /* ROM:0x01423938 */
+		gYoungGanondorfLeftShinLimb      = 0x06011944; /* ROM:0x01423944 */
+		gYoungGanondorfLeftFootLimb      = 0x06011950; /* ROM:0x01423950 */
+		gYoungGanondorfKnifeLimb         = 0x0601195C; /* ROM:0x0142395C */
+		gYoungGanondorfRightThighLimb    = 0x06011968; /* ROM:0x01423968 */
+		gYoungGanondorfRightShinLimb     = 0x06011974; /* ROM:0x01423974 */
+		gYoungGanondorfRightFootLimb     = 0x06011980; /* ROM:0x01423980 */
+		gYoungGanondorfSkelLimbs         = 0x0601198C; /* ROM:0x0142398C */
+		gYoungGanondorfSkel              = 0x060119E8; /* ROM:0x014239E8 */
 		_object_gnddSegmentDataEnd       = 0x06011A00; /* ROM:0x01423A00 */
 		_object_gnddSegmentDataSize      = 0x00011A00; /* ROM:0xFB423A00 */
 	/* objects/object_gndd/object_gndd.o */
@@ -25074,7 +25074,7 @@
 		gGoronDL_00BD80                  = 0x0600BD80; /* ROM:0x01590D80 */
 		gGoronDL_00C140                  = 0x0600C140; /* ROM:0x01591140 */
 		object_oF1d_mapTLUT_00C440       = 0x0600C440; /* ROM:0x01591440 */
-		object_oF1d_mapTLUT_00C640       = 0x0600C640; /* ROM:0x01591640 */
+		object_oF1d_map_TLUT_00C640      = 0x0600C640; /* ROM:0x01591640 */
 		object_oF1d_mapTex_00C840        = 0x0600C840; /* ROM:0x01591840 */
 		object_oF1d_mapTex_00C880        = 0x0600C880; /* ROM:0x01591880 */
 		object_oF1d_mapTex_00CA80        = 0x0600CA80; /* ROM:0x01591A80 */
@@ -25343,7 +25343,7 @@
 		object_oF1s_Skel_000110Limbs     = 0x060000CC; /* ROM:0x015AE0CC */
 		object_oF1s_Skel_000110          = 0x06000110; /* ROM:0x015AE110 */
 		object_oF1s_TLUT_00011C          = 0x0600011C; /* ROM:0x015AE11C */
-		object_oF1sTLUT_0002CC           = 0x060002CC; /* ROM:0x015AE2CC */
+		object_oF1s_TLUT_0002CC          = 0x060002CC; /* ROM:0x015AE2CC */
 		object_oF1s_Tex_0004BC           = 0x060004BC; /* ROM:0x015AE4BC */
 		object_oF1s_Tex_0008BC           = 0x060008BC; /* ROM:0x015AE8BC */
 		object_oF1s_Tex_0018BC           = 0x060018BC; /* ROM:0x015AF8BC */
@@ -26733,97 +26733,97 @@
 		_object_ganonSegmentDataStart    = 0x06000000; /* ROM:0x01629000 */
 	/* objects/object_ganon/object_ganon.o */
 		object_ganonVtx_000000           = 0x06000000; /* ROM:0x01629000 */
-		object_ganon_DL_0049C0           = 0x060049C0; /* ROM:0x0162D9C0 */
-		object_ganon_DL_004C08           = 0x06004C08; /* ROM:0x0162DC08 */
-		object_ganon_DL_004E08           = 0x06004E08; /* ROM:0x0162DE08 */
-		object_ganon_DL_004F20           = 0x06004F20; /* ROM:0x0162DF20 */
-		object_ganon_DL_005070           = 0x06005070; /* ROM:0x0162E070 */
-		object_ganon_DL_005270           = 0x06005270; /* ROM:0x0162E270 */
-		object_ganon_DL_005388           = 0x06005388; /* ROM:0x0162E388 */
-		object_ganon_DL_0054D8           = 0x060054D8; /* ROM:0x0162E4D8 */
-		object_ganon_DL_006030           = 0x06006030; /* ROM:0x0162F030 */
-		object_ganon_DL_006198           = 0x06006198; /* ROM:0x0162F198 */
-		object_ganon_DL_0062F0           = 0x060062F0; /* ROM:0x0162F2F0 */
-		object_ganon_DL_006460           = 0x06006460; /* ROM:0x0162F460 */
-		object_ganon_DL_0066E8           = 0x060066E8; /* ROM:0x0162F6E8 */
-		object_ganon_DL_006A28           = 0x06006A28; /* ROM:0x0162FA28 */
-		object_ganon_DL_006B90           = 0x06006B90; /* ROM:0x0162FB90 */
-		object_ganon_DL_006F20           = 0x06006F20; /* ROM:0x0162FF20 */
-		object_ganon_DL_007048           = 0x06007048; /* ROM:0x01630048 */
-		object_ganon_DL_007310           = 0x06007310; /* ROM:0x01630310 */
-		object_ganon_DL_007518           = 0x06007518; /* ROM:0x01630518 */
-		object_ganon_DL_007640           = 0x06007640; /* ROM:0x01630640 */
-		object_ganon_DL_007908           = 0x06007908; /* ROM:0x01630908 */
-		object_ganon_TLUT_007B10         = 0x06007B10; /* ROM:0x01630B10 */
-		object_ganon_TLUT_007D10         = 0x06007D10; /* ROM:0x01630D10 */
-		object_ganon_Tex_007F10          = 0x06007F10; /* ROM:0x01630F10 */
-		object_ganon_Tex_007F90          = 0x06007F90; /* ROM:0x01630F90 */
-		object_ganon_Tex_008090          = 0x06008090; /* ROM:0x01631090 */
-		object_ganon_Tex_008190          = 0x06008190; /* ROM:0x01631190 */
-		object_ganon_Tex_0081D0          = 0x060081D0; /* ROM:0x016311D0 */
-		object_ganon_Tex_0082D0          = 0x060082D0; /* ROM:0x016312D0 */
-		object_ganon_Tex_0083D0          = 0x060083D0; /* ROM:0x016313D0 */
-		object_ganon_Tex_0083F0          = 0x060083F0; /* ROM:0x016313F0 */
-		object_ganon_Tex_008470          = 0x06008470; /* ROM:0x01631470 */
-		object_ganon_Tex_008570          = 0x06008570; /* ROM:0x01631570 */
-		object_ganon_Tex_0085F0          = 0x060085F0; /* ROM:0x016315F0 */
-		object_ganon_Tex_008630          = 0x06008630; /* ROM:0x01631630 */
-		object_ganon_Tex_008730          = 0x06008730; /* ROM:0x01631730 */
-		object_ganon_Tex_008930          = 0x06008930; /* ROM:0x01631930 */
-		object_ganon_Tex_008B30          = 0x06008B30; /* ROM:0x01631B30 */
-		object_ganon_Tex_008D30          = 0x06008D30; /* ROM:0x01631D30 */
-		object_ganon_Tex_008DB0          = 0x06008DB0; /* ROM:0x01631DB0 */
-		object_ganon_Tex_008FB0          = 0x06008FB0; /* ROM:0x01631FB0 */
-		object_ganon_Tex_0091B0          = 0x060091B0; /* ROM:0x016321B0 */
-		object_ganon_TLUT_0095B0         = 0x060095B0; /* ROM:0x016325B0 */
-		object_ganon_Tex_009620          = 0x06009620; /* ROM:0x01632620 */
-		gDorfEyeTex                      = 0x06009A20; /* ROM:0x01632A20 */
-		object_ganon_Tex_009E20          = 0x06009E20; /* ROM:0x01632E20 */
-		object_ganon_Tex_00A020          = 0x0600A020; /* ROM:0x01633020 */
-		object_ganon_Tex_00A220          = 0x0600A220; /* ROM:0x01633220 */
-		object_ganon_Tex_00A260          = 0x0600A260; /* ROM:0x01633260 */
-		object_ganon_Tex_00A460          = 0x0600A460; /* ROM:0x01633460 */
-		object_ganon_Tex_00A4A0          = 0x0600A4A0; /* ROM:0x016334A0 */
-		object_ganon_Tex_00A4E0          = 0x0600A4E0; /* ROM:0x016334E0 */
-		object_ganon_Tex_00A8E0          = 0x0600A8E0; /* ROM:0x016338E0 */
+		gGanondorfPelvisDL               = 0x060049C0; /* ROM:0x0162D9C0 */
+		gGanondorfRightShinDL            = 0x06004C08; /* ROM:0x0162DC08 */
+		gGanondorfRightFootDL            = 0x06004E08; /* ROM:0x0162DE08 */
+		gGanondorfRightThighDL           = 0x06004F20; /* ROM:0x0162DF20 */
+		gGanondorfLeftShinDL             = 0x06005070; /* ROM:0x0162E070 */
+		gGanondorfLeftFootDL             = 0x06005270; /* ROM:0x0162E270 */
+		gGanondorfLeftThighDL            = 0x06005388; /* ROM:0x0162E388 */
+		gGanondorfHeadDL                 = 0x060054D8; /* ROM:0x0162E4D8 */
+		gGanondorfRightUpperLipDL        = 0x06006030; /* ROM:0x0162F030 */
+		gGanondorfLowerHairEndDL         = 0x06006198; /* ROM:0x0162F198 */
+		gGanondorfUpperHairEndDL         = 0x060062F0; /* ROM:0x0162F2F0 */
+		gGanondorfJawDL                  = 0x06006460; /* ROM:0x0162F460 */
+		gGanondorfMouthDL                = 0x060066E8; /* ROM:0x0162F6E8 */
+		gGanondorfLeftUpperLipDL         = 0x06006A28; /* ROM:0x0162FA28 */
+		gGanondorfTorsoDL                = 0x06006B90; /* ROM:0x0162FB90 */
+		gGanondorfRightForearmDL         = 0x06006F20; /* ROM:0x0162FF20 */
+		gGanondorfRightUpperArmDL        = 0x06007048; /* ROM:0x01630048 */
+		gGanondorfRightShoulderDL        = 0x06007310; /* ROM:0x01630310 */
+		gGanondorfLeftForearmDL          = 0x06007518; /* ROM:0x01630518 */
+		gGanondorfLeftUpperArmDL         = 0x06007640; /* ROM:0x01630640 */
+		gGanondorfLeftShoulderDL         = 0x06007908; /* ROM:0x01630908 */
+		gGanondorfSkinTLUT               = 0x06007B10; /* ROM:0x01630B10 */
+		gGanondorfHairTLUT               = 0x06007D10; /* ROM:0x01630D10 */
+		gGanondorfInnerMouthTex          = 0x06007F10; /* ROM:0x01630F10 */
+		gGanondorfJawTex                 = 0x06007F90; /* ROM:0x01630F90 */
+		gGanondorfSideburnTex            = 0x06008090; /* ROM:0x01631090 */
+		gGanondorfOuterMouthTex          = 0x06008190; /* ROM:0x01631190 */
+		gGanondorfUpperLipTex            = 0x060081D0; /* ROM:0x016311D0 */
+		gGanondorfHairTex                = 0x060082D0; /* ROM:0x016312D0 */
+		gGanondorfTeethTex               = 0x060083D0; /* ROM:0x016313D0 */
+		gGanondorfEyebrowTex             = 0x060083F0; /* ROM:0x016313F0 */
+		gGanondorfHairFringeTex          = 0x06008470; /* ROM:0x01631470 */
+		gGanondorfNoseBridgeTex          = 0x06008570; /* ROM:0x01631570 */
+		gGanondorfNoseTex                = 0x060085F0; /* ROM:0x016315F0 */
+		gGanondorfEarTex                 = 0x06008630; /* ROM:0x01631630 */
+		gGanondorfEyeOrbitTex            = 0x06008730; /* ROM:0x01631730 */
+		gGanondorfGerudoFabricTex        = 0x06008930; /* ROM:0x01631930 */
+		gGanondorfRedFabricTex           = 0x06008B30; /* ROM:0x01631B30 */
+		gGanondorfBodysuitTex            = 0x06008D30; /* ROM:0x01631D30 */
+		gGanondorfLeatherTex             = 0x06008DB0; /* ROM:0x01631DB0 */
+		gGanondorfCapeFasteningTex       = 0x06008FB0; /* ROM:0x01631FB0 */
+		gGanondorfGerudoFabricWithSunTex = 0x060091B0; /* ROM:0x016321B0 */
+		gGanondorfHandTLUT               = 0x060095B0; /* ROM:0x016325B0 */
+		gGanondorfJewelTex               = 0x06009620; /* ROM:0x01632620 */
+		gGanondorfNormalEyeTex           = 0x06009A20; /* ROM:0x01632A20 */
+		gGanondorfChestJewelTex          = 0x06009E20; /* ROM:0x01632E20 */
+		gGanondorfBlackLeatherTex        = 0x0600A020; /* ROM:0x01633020 */
+		gGanondorfThumbTex               = 0x0600A220; /* ROM:0x01633220 */
+		gGanondorfGauntletAndPauldronTex = 0x0600A260; /* ROM:0x01633260 */
+		gGanondorfHandSideTex            = 0x0600A460; /* ROM:0x01633460 */
+		gGanondorfFingerTex              = 0x0600A4A0; /* ROM:0x016334A0 */
+		gGanondorfCrazedEyeTex           = 0x0600A4E0; /* ROM:0x016334E0 */
+		gGanondorfEmptyEyeTex            = 0x0600A8E0; /* ROM:0x016338E0 */
 		object_ganonVtx_00ACE0           = 0x0600ACE0; /* ROM:0x01633CE0 */
-		object_ganon_DL_00BE90           = 0x0600BE90; /* ROM:0x01634E90 */
-		object_ganon_DL_00BF40           = 0x0600BF40; /* ROM:0x01634F40 */
-		object_ganon_DL_00C048           = 0x0600C048; /* ROM:0x01635048 */
-		object_ganon_DL_00C518           = 0x0600C518; /* ROM:0x01635518 */
-		gDorfOpenHandDL                  = 0x0600C9E8; /* ROM:0x016359E8 */
-		gDorfTitleCardTex                = 0x0600CF00; /* ROM:0x01635F00 */
+		gGanondorfEyesDL                 = 0x0600BE90; /* ROM:0x01634E90 */
+		gGanondorfJewelDL                = 0x0600BF40; /* ROM:0x01634F40 */
+		gGanondorfLeftHandDL             = 0x0600C048; /* ROM:0x01635048 */
+		gGanondorfRightHandClosedDL      = 0x0600C518; /* ROM:0x01635518 */
+		gGanondorfRightHandOpenDL        = 0x0600C9E8; /* ROM:0x016359E8 */
+		gGanondorfTitleCardTex           = 0x0600CF00; /* ROM:0x01635F00 */
 		object_ganon_unaccounted_00E300  = 0x0600E300; /* ROM:0x01637300 */
-		object_ganon_Anim_011348FrameData = 0x06010B00; /* ROM:0x01639B00 */
-		object_ganon_Anim_011348JointIndices = 0x060112AC; /* ROM:0x0163A2AC */
-		object_ganon_Anim_011348         = 0x06011348; /* ROM:0x0163A348 */
-		object_ganon_Limb_011358         = 0x06011358; /* ROM:0x0163A358 */
-		object_ganon_Limb_011364         = 0x06011364; /* ROM:0x0163A364 */
-		object_ganon_Limb_011370         = 0x06011370; /* ROM:0x0163A370 */
-		object_ganon_Limb_01137C         = 0x0601137C; /* ROM:0x0163A37C */
-		object_ganon_Limb_011388         = 0x06011388; /* ROM:0x0163A388 */
-		object_ganon_Limb_011394         = 0x06011394; /* ROM:0x0163A394 */
-		object_ganon_Limb_0113A0         = 0x060113A0; /* ROM:0x0163A3A0 */
-		object_ganon_Limb_0113AC         = 0x060113AC; /* ROM:0x0163A3AC */
-		object_ganon_Limb_0113B8         = 0x060113B8; /* ROM:0x0163A3B8 */
-		object_ganon_Limb_0113C4         = 0x060113C4; /* ROM:0x0163A3C4 */
-		object_ganon_Limb_0113D0         = 0x060113D0; /* ROM:0x0163A3D0 */
-		object_ganon_Limb_0113DC         = 0x060113DC; /* ROM:0x0163A3DC */
-		object_ganon_Limb_0113E8         = 0x060113E8; /* ROM:0x0163A3E8 */
-		object_ganon_Limb_0113F4         = 0x060113F4; /* ROM:0x0163A3F4 */
-		object_ganon_Limb_011400         = 0x06011400; /* ROM:0x0163A400 */
-		object_ganon_Limb_01140C         = 0x0601140C; /* ROM:0x0163A40C */
-		object_ganon_Limb_011418         = 0x06011418; /* ROM:0x0163A418 */
-		object_ganon_Limb_011424         = 0x06011424; /* ROM:0x0163A424 */
-		object_ganon_Limb_011430         = 0x06011430; /* ROM:0x0163A430 */
-		object_ganon_Limb_01143C         = 0x0601143C; /* ROM:0x0163A43C */
-		object_ganon_Limb_011448         = 0x06011448; /* ROM:0x0163A448 */
-		object_ganon_Limb_011454         = 0x06011454; /* ROM:0x0163A454 */
-		object_ganon_Limb_011460         = 0x06011460; /* ROM:0x0163A460 */
-		object_ganon_Limb_01146C         = 0x0601146C; /* ROM:0x0163A46C */
-		object_ganon_Limb_011478         = 0x06011478; /* ROM:0x0163A478 */
-		gDorfSkelLimbs                   = 0x06011484; /* ROM:0x0163A484 */
-		gDorfSkel                        = 0x060114E8; /* ROM:0x0163A4E8 */
+		sGanondorfEndingFloatAnimFrameData = 0x06010B00; /* ROM:0x01639B00 */
+		sGanondorfEndingFloatAnimJointIndices = 0x060112AC; /* ROM:0x0163A2AC */
+		gGanondorfEndingFloatAnim        = 0x06011348; /* ROM:0x0163A348 */
+		gGanondorfRootLimb               = 0x06011358; /* ROM:0x0163A358 */
+		gGanondorfTorsoLimb              = 0x06011364; /* ROM:0x0163A364 */
+		gGanondorfLeftShoulderLimb       = 0x06011370; /* ROM:0x0163A370 */
+		gGanondorfLeftUpperArmLimb       = 0x0601137C; /* ROM:0x0163A37C */
+		gGanondorfLeftForearmLimb        = 0x06011388; /* ROM:0x0163A388 */
+		gGanondorfLeftHandLimb           = 0x06011394; /* ROM:0x0163A394 */
+		gGanondorfRightShoulderLimb      = 0x060113A0; /* ROM:0x0163A3A0 */
+		gGanondorfRightUpperArmLimb      = 0x060113AC; /* ROM:0x0163A3AC */
+		gGanondorfRightForearmLimb       = 0x060113B8; /* ROM:0x0163A3B8 */
+		gGanondorfRightHandLimb          = 0x060113C4; /* ROM:0x0163A3C4 */
+		gGanondorfJewelLimb              = 0x060113D0; /* ROM:0x0163A3D0 */
+		gGanondorfLeftUpperLipLimb       = 0x060113DC; /* ROM:0x0163A3DC */
+		gGanondorfMouthLimb              = 0x060113E8; /* ROM:0x0163A3E8 */
+		gGanondorfJawLimb                = 0x060113F4; /* ROM:0x0163A3F4 */
+		gGanondorfUpperHairEndLimb       = 0x06011400; /* ROM:0x0163A400 */
+		gGanondorfLowerHairEndLimb       = 0x0601140C; /* ROM:0x0163A40C */
+		gGanondorfRightUpperLipLimb      = 0x06011418; /* ROM:0x0163A418 */
+		gGanondorfHeadLimb               = 0x06011424; /* ROM:0x0163A424 */
+		gGanondorfPelvisLimb             = 0x06011430; /* ROM:0x0163A430 */
+		gGanondorfLeftThighLimb          = 0x0601143C; /* ROM:0x0163A43C */
+		gGanondorfLeftShinLimb           = 0x06011448; /* ROM:0x0163A448 */
+		gGanondorfLeftFootLimb           = 0x06011454; /* ROM:0x0163A454 */
+		gGanondorfRightThighLimb         = 0x06011460; /* ROM:0x0163A460 */
+		gGanondorfRightShinLimb          = 0x0601146C; /* ROM:0x0163A46C */
+		gGanondorfRightFootLimb          = 0x06011478; /* ROM:0x0163A478 */
+		gGanondorfSkelLimbs              = 0x06011484; /* ROM:0x0163A484 */
+		gGanondorfSkel                   = 0x060114E8; /* ROM:0x0163A4E8 */
 		_object_ganonSegmentDataEnd      = 0x06011500; /* ROM:0x0163A500 */
 		_object_ganonSegmentDataSize     = 0x00011500; /* ROM:0xFB63A500 */
 	/* objects/object_ganon/object_ganon.o */
@@ -27388,7 +27388,6 @@
 		gRoofManSandalBuckleTex          = 0x06000D88; /* ROM:0x0166CD88 */
 		gRoofManTrouserPatternTex        = 0x06000E88; /* ROM:0x0166CE88 */
 		gRoofMan2TLUT                    = 0x06001088; /* ROM:0x0166D088 */
-		object_ani_unaccounted_001188    = 0x06001188; /* ROM:0x0166D188 */
 		object_aniTex_0011D8             = 0x060011D8; /* ROM:0x0166D1D8 */
 		gRoofManSkinGradientTex          = 0x060012D8; /* ROM:0x0166D2D8 */
 		gRoofManEarTex                   = 0x06001318; /* ROM:0x0166D318 */
@@ -28215,8 +28214,8 @@
 		sKzIdleAnimJointIndices          = 0x06000714; /* ROM:0x016CA714 */
 		gKzIdleAnim                      = 0x0600075C; /* ROM:0x016CA75C */
 		object_kz_possiblePadding_00076C = 0x0600076C; /* ROM:0x016CA76C */
-		gKzTlut                          = 0x06000770; /* ROM:0x016CA770 */
-		gKzEyeTlut                       = 0x06000970; /* ROM:0x016CA970 */
+		gKzTLUT                          = 0x06000770; /* ROM:0x016CA770 */
+		gKzEyeTLUT                       = 0x06000970; /* ROM:0x016CA970 */
 		gKzFaceScalesTex                 = 0x06000B70; /* ROM:0x016CAB70 */
 		gKzSkinGradient1Tex              = 0x06000F70; /* ROM:0x016CAF70 */
 		gKzCrownTex                      = 0x06000FF0; /* ROM:0x016CAFF0 */
@@ -28742,7 +28741,7 @@
 		object_ahg_DL_0043C0             = 0x060043C0; /* ROM:0x017063C0 */
 		object_ahg_DL_0044F0             = 0x060044F0; /* ROM:0x017064F0 */
 		object_ahg_DL_004628             = 0x06004628; /* ROM:0x01706628 */
-		object_ahgTLUT_0047C8            = 0x060047C8; /* ROM:0x017067C8 */
+		object_ahg_TLUT_0047C8           = 0x060047C8; /* ROM:0x017067C8 */
 		object_ahg_Tex_004948            = 0x06004948; /* ROM:0x01706948 */
 		object_ahg_Tex_004988            = 0x06004988; /* ROM:0x01706988 */
 		object_ahg_Tex_004B88            = 0x06004B88; /* ROM:0x01706B88 */
@@ -28765,51 +28764,51 @@
 	/* objects/object_cne/object_cne.o */
 		_object_cneSegmentDataStart      = 0x06000000; /* ROM:0x01708000 */
 	/* objects/object_cne/object_cne.o */
-		object_cne_Limb_000000           = 0x06000000; /* ROM:0x01708000 */
-		object_cne_Limb_00000C           = 0x0600000C; /* ROM:0x0170800C */
-		object_cne_Limb_000018           = 0x06000018; /* ROM:0x01708018 */
-		object_cne_Limb_000024           = 0x06000024; /* ROM:0x01708024 */
-		object_cne_Limb_000030           = 0x06000030; /* ROM:0x01708030 */
-		object_cne_Limb_00003C           = 0x0600003C; /* ROM:0x0170803C */
-		object_cne_Limb_000048           = 0x06000048; /* ROM:0x01708048 */
-		object_cne_Limb_000054           = 0x06000054; /* ROM:0x01708054 */
-		object_cne_Limb_000060           = 0x06000060; /* ROM:0x01708060 */
-		object_cne_Limb_00006C           = 0x0600006C; /* ROM:0x0170806C */
-		object_cne_Limb_000078           = 0x06000078; /* ROM:0x01708078 */
-		object_cne_Limb_000084           = 0x06000084; /* ROM:0x01708084 */
-		object_cne_Limb_000090           = 0x06000090; /* ROM:0x01708090 */
-		object_cne_Limb_00009C           = 0x0600009C; /* ROM:0x0170809C */
-		object_cne_Limb_0000A8           = 0x060000A8; /* ROM:0x017080A8 */
-		object_cne_Skel_0000F0Limbs      = 0x060000B4; /* ROM:0x017080B4 */
-		object_cne_Skel_0000F0           = 0x060000F0; /* ROM:0x017080F0 */
-		object_cne_TLUT_0000FC           = 0x060000FC; /* ROM:0x017080FC */
-		object_cne_Tex_0002FC            = 0x060002FC; /* ROM:0x017082FC */
-		object_cne_Tex_00033C            = 0x0600033C; /* ROM:0x0170833C */
-		object_cne_Tex_00037C            = 0x0600037C; /* ROM:0x0170837C */
-		object_cne_Tex_0003BC            = 0x060003BC; /* ROM:0x017083BC */
-		object_cne_Tex_0003FC            = 0x060003FC; /* ROM:0x017083FC */
-		object_cne_Tex_00047C            = 0x0600047C; /* ROM:0x0170847C */
-		object_cne_Tex_0004BC            = 0x060004BC; /* ROM:0x017084BC */
+		gCnePelvisLimb                   = 0x06000000; /* ROM:0x01708000 */
+		gCneLeftThighLimb                = 0x0600000C; /* ROM:0x0170800C */
+		gCneLeftShinLimb                 = 0x06000018; /* ROM:0x01708018 */
+		gCneLeftFootLimb                 = 0x06000024; /* ROM:0x01708024 */
+		gCneRightThighLimb               = 0x06000030; /* ROM:0x01708030 */
+		gCneRightShinLimb                = 0x0600003C; /* ROM:0x0170803C */
+		gCneRightFootLimb                = 0x06000048; /* ROM:0x01708048 */
+		gCneTorsoLimb                    = 0x06000054; /* ROM:0x01708054 */
+		gCneLeftUpperArmLimb             = 0x06000060; /* ROM:0x01708060 */
+		gCneLeftForearmLimb              = 0x0600006C; /* ROM:0x0170806C */
+		gCneLeftHandLimb                 = 0x06000078; /* ROM:0x01708078 */
+		gCneRightUpperArmLimb            = 0x06000084; /* ROM:0x01708084 */
+		gCneRightForearmLimb             = 0x06000090; /* ROM:0x01708090 */
+		gCneRightHandLimb                = 0x0600009C; /* ROM:0x0170809C */
+		gCneHeadLimb                     = 0x060000A8; /* ROM:0x017080A8 */
+		gCneSkelLimbs                    = 0x060000B4; /* ROM:0x017080B4 */
+		gCneSkel                         = 0x060000F0; /* ROM:0x017080F0 */
+		gCneTLUT                         = 0x060000FC; /* ROM:0x017080FC */
+		gCneSkinTex                      = 0x060002FC; /* ROM:0x017082FC */
+		gCneBrownHairTex                 = 0x0600033C; /* ROM:0x0170833C */
+		gCneHandTex                      = 0x0600037C; /* ROM:0x0170837C */
+		gCneBrownHairSkinTex             = 0x060003BC; /* ROM:0x017083BC */
+		gCneBrownHairFaceTex             = 0x060003FC; /* ROM:0x017083FC */
+		gCneDressTex                     = 0x0600047C; /* ROM:0x0170847C */
+		gCneDressNeckTex                 = 0x060004BC; /* ROM:0x017084BC */
 		object_cneVtx_000500             = 0x06000500; /* ROM:0x01708500 */
-		object_cne_DL_001300             = 0x06001300; /* ROM:0x01709300 */
-		object_cne_DL_001608             = 0x06001608; /* ROM:0x01709608 */
-		object_cne_DL_0016E8             = 0x060016E8; /* ROM:0x017096E8 */
-		object_cne_DL_001808             = 0x06001808; /* ROM:0x01709808 */
-		object_cne_DL_0018C8             = 0x060018C8; /* ROM:0x017098C8 */
-		object_cne_DL_0019A8             = 0x060019A8; /* ROM:0x017099A8 */
-		object_cne_DL_001AC8             = 0x06001AC8; /* ROM:0x01709AC8 */
-		object_cne_DL_001B88             = 0x06001B88; /* ROM:0x01709B88 */
-		object_cne_DL_001E50             = 0x06001E50; /* ROM:0x01709E50 */
-		object_cne_DL_001F18             = 0x06001F18; /* ROM:0x01709F18 */
-		object_cne_DL_001FE0             = 0x06001FE0; /* ROM:0x01709FE0 */
-		object_cne_DL_0020A8             = 0x060020A8; /* ROM:0x0170A0A8 */
-		object_cne_DL_002170             = 0x06002170; /* ROM:0x0170A170 */
-		object_cne_DL_002238             = 0x06002238; /* ROM:0x0170A238 */
-		object_cne_DL_002300             = 0x06002300; /* ROM:0x0170A300 */
-		object_cne_Tex_0023D0            = 0x060023D0; /* ROM:0x0170A3D0 */
-		object_cne_Tex_0024D0            = 0x060024D0; /* ROM:0x0170A4D0 */
+		gCneHeadBrownHairDL              = 0x06001300; /* ROM:0x01709300 */
+		gCneRightHandDL                  = 0x06001608; /* ROM:0x01709608 */
+		gCneRightForearmDL               = 0x060016E8; /* ROM:0x017096E8 */
+		gCneRightUpperArmDL              = 0x06001808; /* ROM:0x01709808 */
+		gCneLeftHandDL                   = 0x060018C8; /* ROM:0x017098C8 */
+		gCneLeftForearmDL                = 0x060019A8; /* ROM:0x017099A8 */
+		gCneLeftUpperArmDL               = 0x06001AC8; /* ROM:0x01709AC8 */
+		gCneTorsoDL                      = 0x06001B88; /* ROM:0x01709B88 */
+		gCneRightFootDL                  = 0x06001E50; /* ROM:0x01709E50 */
+		gCneRightShinDL                  = 0x06001F18; /* ROM:0x01709F18 */
+		gCneRightThighDL                 = 0x06001FE0; /* ROM:0x01709FE0 */
+		gCneLeftFootDL                   = 0x060020A8; /* ROM:0x0170A0A8 */
+		gCneLeftShinDL                   = 0x06002170; /* ROM:0x0170A170 */
+		gCneLeftThighDL                  = 0x06002238; /* ROM:0x0170A238 */
+		gCnePelvisDL                     = 0x06002300; /* ROM:0x0170A300 */
+		gCneOrangeHairFaceTex            = 0x060023D0; /* ROM:0x0170A3D0 */
+		gCneOrangeHairSkinTex            = 0x060024D0; /* ROM:0x0170A4D0 */
 		object_cneVtx_002550             = 0x06002550; /* ROM:0x0170A550 */
-		object_cne_DL_002860             = 0x06002860; /* ROM:0x0170A860 */
+		gCneHeadOrangeHairDL             = 0x06002860; /* ROM:0x0170A860 */
 		_object_cneSegmentDataEnd        = 0x060029D0; /* ROM:0x0170A9D0 */
 		_object_cneSegmentDataSize       = 0x000029D0; /* ROM:0xFB70A9D0 */
 	/* objects/object_cne/object_cne.o */
@@ -29264,7 +29263,7 @@
 		object_boj_DL_003798             = 0x06003798; /* ROM:0x01731798 */
 		object_boj_DL_0038A8             = 0x060038A8; /* ROM:0x017318A8 */
 		object_boj_DL_0039B0             = 0x060039B0; /* ROM:0x017319B0 */
-		object_bojTLUT_003B98            = 0x06003B98; /* ROM:0x01731B98 */
+		object_boj_TLUT_003B98           = 0x06003B98; /* ROM:0x01731B98 */
 		object_boj_Tex_003D90            = 0x06003D90; /* ROM:0x01731D90 */
 		object_boj_Tex_003DD0            = 0x06003DD0; /* ROM:0x01731DD0 */
 		object_boj_Tex_003ED0            = 0x06003ED0; /* ROM:0x01731ED0 */
@@ -30355,8 +30354,8 @@
 		gOwlUpperLeftLegDL               = 0x06006A58; /* ROM:0x017A9A58 */
 		gOwlLowerLeftLegDL               = 0x06006B20; /* ROM:0x017A9B20 */
 		gOwlLeftClawDL                   = 0x06006C10; /* ROM:0x017A9C10 */
-		object_owlTLUT_006DA8            = 0x06006DA8; /* ROM:0x017A9DA8 */
-		object_owlTLUT_006FA8            = 0x06006FA8; /* ROM:0x017A9FA8 */
+		object_owl_TLUT_006DA8           = 0x06006DA8; /* ROM:0x017A9DA8 */
+		object_owl_TLUT_006FA8           = 0x06006FA8; /* ROM:0x017A9FA8 */
 		object_owlTex_0071A8             = 0x060071A8; /* ROM:0x017AA1A8 */
 		object_owlTex_0079A8             = 0x060079A8; /* ROM:0x017AA9A8 */
 		object_owlTex_0081A8             = 0x060081A8; /* ROM:0x017AB1A8 */
@@ -31673,221 +31672,221 @@
 	/* objects/object_ganon2/object_ganon2.o */
 		_object_ganon2SegmentDataStart   = 0x06000000; /* ROM:0x01852000 */
 	/* objects/object_ganon2/object_ganon2.o */
-		object_ganon2_Anim_003B1CFrameData = 0x06000000; /* ROM:0x01852000 */
-		object_ganon2_Anim_003B1CJointIndices = 0x06003A00; /* ROM:0x01855A00 */
-		object_ganon2_Anim_003B1C        = 0x06003B1C; /* ROM:0x01855B1C */
+		sGanonFinalBlowAnimFrameData     = 0x06000000; /* ROM:0x01852000 */
+		sGanonFinalBlowAnimJointIndices  = 0x06003A00; /* ROM:0x01855A00 */
+		gGanonFinalBlowAnim              = 0x06003B1C; /* ROM:0x01855B1C */
 		object_ganon2_possiblePadding_003B2C = 0x06003B2C; /* ROM:0x01855B2C */
-		object_ganon2_Anim_007288FrameData = 0x06003B30; /* ROM:0x01855B30 */
-		object_ganon2_Anim_007288JointIndices = 0x0600716C; /* ROM:0x0185916C */
-		object_ganon2_Anim_007288        = 0x06007288; /* ROM:0x01859288 */
+		sGanonDeadStartAnimFrameData     = 0x06003B30; /* ROM:0x01855B30 */
+		sGanonDeadStartAnimJointIndices  = 0x0600716C; /* ROM:0x0185916C */
+		gGanonDeadStartAnim              = 0x06007288; /* ROM:0x01859288 */
 		object_ganon2_possiblePadding_007298 = 0x06007298; /* ROM:0x01859298 */
-		object_ganon2_Anim_008EB8FrameData = 0x060072A0; /* ROM:0x018592A0 */
-		object_ganon2_Anim_008EB8JointIndices = 0x06008D9C; /* ROM:0x0185AD9C */
-		object_ganon2_Anim_008EB8        = 0x06008EB8; /* ROM:0x0185AEB8 */
+		sGanonDeadLoopAnimFrameData      = 0x060072A0; /* ROM:0x018592A0 */
+		sGanonDeadLoopAnimJointIndices   = 0x06008D9C; /* ROM:0x0185AD9C */
+		gGanonDeadLoopAnim               = 0x06008EB8; /* ROM:0x0185AEB8 */
 		object_ganon2_possiblePadding_008EC8 = 0x06008EC8; /* ROM:0x0185AEC8 */
-		object_ganon2_Anim_009654FrameData = 0x06008ED0; /* ROM:0x0185AED0 */
-		object_ganon2_Anim_009654JointIndices = 0x06009538; /* ROM:0x0185B538 */
-		object_ganon2_Anim_009654        = 0x06009654; /* ROM:0x0185B654 */
+		sGanonGuardToWalkFrameData       = 0x06008ED0; /* ROM:0x0185AED0 */
+		sGanonGuardToWalkJointIndices    = 0x06009538; /* ROM:0x0185B538 */
+		gGanonGuardToWalk                = 0x06009654; /* ROM:0x0185B654 */
 		object_ganon2_possiblePadding_009664 = 0x06009664; /* ROM:0x0185B664 */
-		object_ganon2_Anim_00ADD0FrameData = 0x06009670; /* ROM:0x0185B670 */
-		object_ganon2_Anim_00ADD0JointIndices = 0x0600ACB4; /* ROM:0x0185CCB4 */
-		object_ganon2_Anim_00ADD0        = 0x0600ADD0; /* ROM:0x0185CDD0 */
-		object_ganon2_Anim_00CAF8FrameData = 0x0600ADE0; /* ROM:0x0185CDE0 */
-		object_ganon2_Anim_00CAF8JointIndices = 0x0600C9DC; /* ROM:0x0185E9DC */
-		object_ganon2_Anim_00CAF8        = 0x0600CAF8; /* ROM:0x0185EAF8 */
+		sGanonLeftSwordSwingAnimFrameData = 0x06009670; /* ROM:0x0185B670 */
+		sGanonLeftSwordSwingAnimJointIndices = 0x0600ACB4; /* ROM:0x0185CCB4 */
+		gGanonLeftSwordSwingAnim         = 0x0600ADD0; /* ROM:0x0185CDD0 */
+		sGanonRightSwordSwingAnimFrameData = 0x0600ADE0; /* ROM:0x0185CDE0 */
+		sGanonRightSwordSwingAnimJointIndices = 0x0600C9DC; /* ROM:0x0185E9DC */
+		gGanonRightSwordSwingAnim        = 0x0600CAF8; /* ROM:0x0185EAF8 */
 		object_ganon2_possiblePadding_00CB08 = 0x0600CB08; /* ROM:0x0185EB08 */
-		object_ganon2_Anim_00DFF0FrameData = 0x0600CB10; /* ROM:0x0185EB10 */
-		object_ganon2_Anim_00DFF0JointIndices = 0x0600DED4; /* ROM:0x0185FED4 */
-		object_ganon2_Anim_00DFF0        = 0x0600DFF0; /* ROM:0x0185FFF0 */
-		object_ganon2_Anim_00E8ECFrameData = 0x0600E000; /* ROM:0x01860000 */
-		object_ganon2_Anim_00E8ECJointIndices = 0x0600E7D0; /* ROM:0x018607D0 */
-		object_ganon2_Anim_00E8EC        = 0x0600E8EC; /* ROM:0x018608EC */
+		sGanonDamageAnimFrameData        = 0x0600CB10; /* ROM:0x0185EB10 */
+		sGanonDamageAnimJointIndices     = 0x0600DED4; /* ROM:0x0185FED4 */
+		gGanonDamageAnim                 = 0x0600DFF0; /* ROM:0x0185FFF0 */
+		sGanonGuardWalkAnimFrameData     = 0x0600E000; /* ROM:0x01860000 */
+		sGanonGuardWalkAnimJointIndices  = 0x0600E7D0; /* ROM:0x018607D0 */
+		gGanonGuardWalkAnim              = 0x0600E8EC; /* ROM:0x018608EC */
 		object_ganon2_possiblePadding_00E8FC = 0x0600E8FC; /* ROM:0x018608FC */
-		object_ganon2_Anim_00F1D0FrameData = 0x0600E900; /* ROM:0x01860900 */
-		object_ganon2_Anim_00F1D0JointIndices = 0x0600F0B4; /* ROM:0x018610B4 */
-		object_ganon2_Anim_00F1D0        = 0x0600F1D0; /* ROM:0x018611D0 */
-		object_ganon2_Anim_00FFE4FrameData = 0x0600F1E0; /* ROM:0x018611E0 */
-		object_ganon2_Anim_00FFE4JointIndices = 0x0600FEC8; /* ROM:0x01861EC8 */
-		object_ganon2_Anim_00FFE4        = 0x0600FFE4; /* ROM:0x01861FE4 */
+		sGanonGuardSidestepAnimFrameData = 0x0600E900; /* ROM:0x01860900 */
+		sGanonGuardSidestepAnimJointIndices = 0x0600F0B4; /* ROM:0x018610B4 */
+		gGanonGuardSidestepAnim          = 0x0600F1D0; /* ROM:0x018611D0 */
+		sGanonGuardIdleAnimFrameData     = 0x0600F1E0; /* ROM:0x018611E0 */
+		sGanonGuardIdleAnimJointIndices  = 0x0600FEC8; /* ROM:0x01861EC8 */
+		gGanonGuardIdleAnim              = 0x0600FFE4; /* ROM:0x01861FE4 */
 		object_ganon2_possiblePadding_00FFF4 = 0x0600FFF4; /* ROM:0x01861FF4 */
 		object_ganon2Vtx_010000          = 0x06010000; /* ROM:0x01862000 */
-		object_ganon2_DL_0163F0          = 0x060163F0; /* ROM:0x018683F0 */
-		object_ganon2_DL_016630          = 0x06016630; /* ROM:0x01868630 */
-		object_ganon2_DL_016740          = 0x06016740; /* ROM:0x01868740 */
-		object_ganon2_DL_0168E0          = 0x060168E0; /* ROM:0x018688E0 */
-		object_ganon2_DL_016AA8          = 0x06016AA8; /* ROM:0x01868AA8 */
-		object_ganon2_DL_016BE8          = 0x06016BE8; /* ROM:0x01868BE8 */
-		object_ganon2_DL_016D10          = 0x06016D10; /* ROM:0x01868D10 */
-		object_ganon2_DL_016F80          = 0x06016F80; /* ROM:0x01868F80 */
-		object_ganon2_DL_017160          = 0x06017160; /* ROM:0x01869160 */
-		object_ganon2_DL_017620          = 0x06017620; /* ROM:0x01869620 */
-		object_ganon2_DL_017910          = 0x06017910; /* ROM:0x01869910 */
-		object_ganon2_DL_017AF0          = 0x06017AF0; /* ROM:0x01869AF0 */
-		object_ganon2_DL_017FB0          = 0x06017FB0; /* ROM:0x01869FB0 */
-		object_ganon2_DL_0180E0          = 0x060180E0; /* ROM:0x0186A0E0 */
-		object_ganon2_DL_018650          = 0x06018650; /* ROM:0x0186A650 */
-		object_ganon2_DL_018740          = 0x06018740; /* ROM:0x0186A740 */
-		object_ganon2_DL_018828          = 0x06018828; /* ROM:0x0186A828 */
-		object_ganon2_DL_0188D8          = 0x060188D8; /* ROM:0x0186A8D8 */
-		object_ganon2_DL_0189C8          = 0x060189C8; /* ROM:0x0186A9C8 */
-		object_ganon2_DL_018AB0          = 0x06018AB0; /* ROM:0x0186AAB0 */
-		object_ganon2_DL_018B60          = 0x06018B60; /* ROM:0x0186AB60 */
-		object_ganon2_DL_018EA0          = 0x06018EA0; /* ROM:0x0186AEA0 */
-		object_ganon2_DL_019210          = 0x06019210; /* ROM:0x0186B210 */
-		object_ganon2_DL_019330          = 0x06019330; /* ROM:0x0186B330 */
-		object_ganon2_DL_019420          = 0x06019420; /* ROM:0x0186B420 */
-		object_ganon2_DL_019510          = 0x06019510; /* ROM:0x0186B510 */
-		object_ganon2_DL_0195C0          = 0x060195C0; /* ROM:0x0186B5C0 */
-		object_ganon2_DL_019A40          = 0x06019A40; /* ROM:0x0186BA40 */
-		object_ganon2_DL_019C68          = 0x06019C68; /* ROM:0x0186BC68 */
-		object_ganon2_DL_019F48          = 0x06019F48; /* ROM:0x0186BF48 */
-		object_ganon2_DL_01A050          = 0x0601A050; /* ROM:0x0186C050 */
-		object_ganon2_DL_01A4E0          = 0x0601A4E0; /* ROM:0x0186C4E0 */
-		object_ganon2_DL_01A708          = 0x0601A708; /* ROM:0x0186C708 */
-		object_ganon2_DL_01A9E8          = 0x0601A9E8; /* ROM:0x0186C9E8 */
-		object_ganon2_DL_01AAF0          = 0x0601AAF0; /* ROM:0x0186CAF0 */
-		object_ganon2_TLUT_01AF80        = 0x0601AF80; /* ROM:0x0186CF80 */
-		object_ganon2_TLUT_01B180        = 0x0601B180; /* ROM:0x0186D180 */
-		object_ganon2_Blob_01B380        = 0x0601B380; /* ROM:0x0186D380 */
-		object_ganon2_TLUT_01B580        = 0x0601B580; /* ROM:0x0186D580 */
-		object_ganon2_TLUT_01B780        = 0x0601B780; /* ROM:0x0186D780 */
-		object_ganon2_TLUT_01B980        = 0x0601B980; /* ROM:0x0186D980 */
-		object_ganon2_TLUT_01BB80        = 0x0601BB80; /* ROM:0x0186DB80 */
-		object_ganon2_TLUT_01BD80        = 0x0601BD80; /* ROM:0x0186DD80 */
-		object_ganon2_TLUT_01BF80        = 0x0601BF80; /* ROM:0x0186DF80 */
-		object_ganon2_Tex_01C180         = 0x0601C180; /* ROM:0x0186E180 */
-		object_ganon2_Tex_01C280         = 0x0601C280; /* ROM:0x0186E280 */
-		object_ganon2_Tex_01C380         = 0x0601C380; /* ROM:0x0186E380 */
-		object_ganon2_Tex_01C400         = 0x0601C400; /* ROM:0x0186E400 */
-		object_ganon2_Tex_01C800         = 0x0601C800; /* ROM:0x0186E800 */
-		object_ganon2_Tex_01C900         = 0x0601C900; /* ROM:0x0186E900 */
-		object_ganon2_Tex_01CA00         = 0x0601CA00; /* ROM:0x0186EA00 */
-		object_ganon2_Tex_01CC00         = 0x0601CC00; /* ROM:0x0186EC00 */
-		object_ganon2_Tex_01CD00         = 0x0601CD00; /* ROM:0x0186ED00 */
-		object_ganon2_Tex_01CF00         = 0x0601CF00; /* ROM:0x0186EF00 */
-		object_ganon2_Tex_01D000         = 0x0601D000; /* ROM:0x0186F000 */
-		object_ganon2_Tex_01D100         = 0x0601D100; /* ROM:0x0186F100 */
-		object_ganon2_Tex_01D200         = 0x0601D200; /* ROM:0x0186F200 */
-		object_ganon2_Tex_01D300         = 0x0601D300; /* ROM:0x0186F300 */
-		object_ganon2_Tex_01D400         = 0x0601D400; /* ROM:0x0186F400 */
-		object_ganon2_Tex_01D500         = 0x0601D500; /* ROM:0x0186F500 */
-		object_ganon2_Tex_01D580         = 0x0601D580; /* ROM:0x0186F580 */
-		object_ganon2_TLUT_01D780        = 0x0601D780; /* ROM:0x0186F780 */
+		gGanonPelvisDL                   = 0x060163F0; /* ROM:0x018683F0 */
+		gGanonTail1DL                    = 0x06016630; /* ROM:0x01868630 */
+		gGanonTail2DL                    = 0x06016740; /* ROM:0x01868740 */
+		gGanonTail3DL                    = 0x060168E0; /* ROM:0x018688E0 */
+		gGanonTail4DL                    = 0x06016AA8; /* ROM:0x01868AA8 */
+		gGanonTail5DL                    = 0x06016BE8; /* ROM:0x01868BE8 */
+		gGanonRightShinDL                = 0x06016D10; /* ROM:0x01868D10 */
+		gGanonRightFootDL                = 0x06016F80; /* ROM:0x01868F80 */
+		gGanonRightThighDL               = 0x06017160; /* ROM:0x01869160 */
+		gGanonLeftShinDL                 = 0x06017620; /* ROM:0x01869620 */
+		gGanonLeftFootDL                 = 0x06017910; /* ROM:0x01869910 */
+		gGanonLeftThighDL                = 0x06017AF0; /* ROM:0x01869AF0 */
+		gGanonNeckDL                     = 0x06017FB0; /* ROM:0x01869FB0 */
+		gGanonHeadDL                     = 0x060180E0; /* ROM:0x0186A0E0 */
+		gGanonRightHair3DL               = 0x06018650; /* ROM:0x0186A650 */
+		gGanonRightHair2DL               = 0x06018740; /* ROM:0x0186A740 */
+		gGanonRightHair1DL               = 0x06018828; /* ROM:0x0186A828 */
+		gGanonLeftHair3DL                = 0x060188D8; /* ROM:0x0186A8D8 */
+		gGanonLeftHair2DL                = 0x060189C8; /* ROM:0x0186A9C8 */
+		gGanonLeftHair1DL                = 0x06018AB0; /* ROM:0x0186AAB0 */
+		gGanonJawDL                      = 0x06018B60; /* ROM:0x0186AB60 */
+		gGanonMouthDL                    = 0x06018EA0; /* ROM:0x0186AEA0 */
+		gGanonSnoutDL                    = 0x06019210; /* ROM:0x0186B210 */
+		gGanonMiddleHair3DL              = 0x06019330; /* ROM:0x0186B330 */
+		gGanonMiddleHair2DL              = 0x06019420; /* ROM:0x0186B420 */
+		gGanonMiddleHair1DL              = 0x06019510; /* ROM:0x0186B510 */
+		gGanonTorsoDL                    = 0x060195C0; /* ROM:0x0186B5C0 */
+		gGanonRightShoulderDL            = 0x06019A40; /* ROM:0x0186BA40 */
+		gGanonRightForearmDL             = 0x06019C68; /* ROM:0x0186BC68 */
+		gGanonRightWristDL               = 0x06019F48; /* ROM:0x0186BF48 */
+		gGanonRightUpperArmDL            = 0x0601A050; /* ROM:0x0186C050 */
+		gGanonLeftShoulderDL             = 0x0601A4E0; /* ROM:0x0186C4E0 */
+		gGanonLeftForearmDL              = 0x0601A708; /* ROM:0x0186C708 */
+		gGanonLeftWristDL                = 0x0601A9E8; /* ROM:0x0186C9E8 */
+		gGanonLeftUpperArmDL             = 0x0601AAF0; /* ROM:0x0186CAF0 */
+		gGanonBodyTLUT                   = 0x0601AF80; /* ROM:0x0186CF80 */
+		gGanonHairFringeTLUT             = 0x0601B180; /* ROM:0x0186D180 */
+		gGanonUnusedTLUT                 = 0x0601B380; /* ROM:0x0186D380 */
+		gGanonGerudoFabricTLUT           = 0x0601B580; /* ROM:0x0186D580 */
+		gGanonRedFabricTLUT              = 0x0601B780; /* ROM:0x0186D780 */
+		gGanonBlackLeatherAndPauldronTLUT = 0x0601B980; /* ROM:0x0186D980 */
+		gGanonLeatherTLUT                = 0x0601BB80; /* ROM:0x0186DB80 */
+		gGanonHoofTLUT                   = 0x0601BD80; /* ROM:0x0186DD80 */
+		gGanonTailTLUT                   = 0x0601BF80; /* ROM:0x0186DF80 */
+		gGanonHairTex                    = 0x0601C180; /* ROM:0x0186E180 */
+		gGanonMouthTex                   = 0x0601C280; /* ROM:0x0186E280 */
+		gGanonFacialHairTex              = 0x0601C380; /* ROM:0x0186E380 */
+		gGanonBodyTex                    = 0x0601C400; /* ROM:0x0186E400 */
+		gGanonSnoutFrontTex              = 0x0601C800; /* ROM:0x0186E800 */
+		gGanonSnoutSideTex               = 0x0601C900; /* ROM:0x0186E900 */
+		gGanonHairFringeTex              = 0x0601CA00; /* ROM:0x0186EA00 */
+		gGanonGerudoFabricTex            = 0x0601CC00; /* ROM:0x0186EC00 */
+		gGanonFurTuftTex                 = 0x0601CD00; /* ROM:0x0186ED00 */
+		gGanonRedFabricTex               = 0x0601CF00; /* ROM:0x0186EF00 */
+		gGanonPauldronTex                = 0x0601D000; /* ROM:0x0186F000 */
+		gGanonCapeFasteningTex           = 0x0601D100; /* ROM:0x0186F100 */
+		gGanonBlackLeatherTex            = 0x0601D200; /* ROM:0x0186F200 */
+		gGanonLeatherTex                 = 0x0601D300; /* ROM:0x0186F300 */
+		gGanonHoofTex                    = 0x0601D400; /* ROM:0x0186F400 */
+		gGanonUnderSkirtTex              = 0x0601D500; /* ROM:0x0186F500 */
+		gGanonTailTex                    = 0x0601D580; /* ROM:0x0186F580 */
+		gGanonEyesTLUT                   = 0x0601D780; /* ROM:0x0186F780 */
 		object_ganon2_possiblePadding_01D7A0 = 0x0601D7A0; /* ROM:0x0186F7A0 */
-		object_ganon2_TLUT_01D7A8        = 0x0601D7A8; /* ROM:0x0186F7A8 */
-		object_ganon2_Tex_01D908         = 0x0601D908; /* ROM:0x0186F908 */
-		object_ganon2_Tex_01DD08         = 0x0601DD08; /* ROM:0x0186FD08 */
-		object_ganon2_Tex_01E108         = 0x0601E108; /* ROM:0x01870108 */
-		object_ganon2_Tex_01E188         = 0x0601E188; /* ROM:0x01870188 */
-		object_ganon2_Tex_01E208         = 0x0601E208; /* ROM:0x01870208 */
-		object_ganon2_Tex_01E288         = 0x0601E288; /* ROM:0x01870288 */
-		object_ganon2_Tex_01E488         = 0x0601E488; /* ROM:0x01870488 */
-		object_ganon2_Tex_01E588         = 0x0601E588; /* ROM:0x01870588 */
-		object_ganon2_Tex_01E788         = 0x0601E788; /* ROM:0x01870788 */
-		object_ganon2_Tex_01E888         = 0x0601E888; /* ROM:0x01870888 */
-		object_ganon2_Tex_01E988         = 0x0601E988; /* ROM:0x01870988 */
-		object_ganon2_Tex_01EA08         = 0x0601EA08; /* ROM:0x01870A08 */
+		gGanonHandTLUT                   = 0x0601D7A8; /* ROM:0x0186F7A8 */
+		gGanonHandTex                    = 0x0601D908; /* ROM:0x0186F908 */
+		gGanonJewelTex                   = 0x0601DD08; /* ROM:0x0186FD08 */
+		gGanonClawAndTeethTex            = 0x0601E108; /* ROM:0x01870108 */
+		gGanonEyeOpenTex                 = 0x0601E188; /* ROM:0x01870188 */
+		gGanonLipsTex                    = 0x0601E208; /* ROM:0x01870208 */
+		gGanonHornBaseTex                = 0x0601E288; /* ROM:0x01870288 */
+		gGanonHornTex                    = 0x0601E488; /* ROM:0x01870488 */
+		gGanonSwordBladeTex              = 0x0601E588; /* ROM:0x01870588 */
+		gGanonSwordGuardTex              = 0x0601E788; /* ROM:0x01870788 */
+		gGanonSwordGripTex               = 0x0601E888; /* ROM:0x01870888 */
+		gGanonEyeHalfTex                 = 0x0601E988; /* ROM:0x01870988 */
+		gGanonEyeClosedTex               = 0x0601EA08; /* ROM:0x01870A08 */
 		object_ganon2Vtx_01EA88          = 0x0601EA88; /* ROM:0x01870A88 */
-		object_ganon2_DL_020B18          = 0x06020B18; /* ROM:0x01872B18 */
-		object_ganon2_DL_020BE0          = 0x06020BE0; /* ROM:0x01872BE0 */
-		object_ganon2_DL_020C80          = 0x06020C80; /* ROM:0x01872C80 */
-		object_ganon2_DL_020DE8          = 0x06020DE8; /* ROM:0x01872DE8 */
-		object_ganon2_DL_020F50          = 0x06020F50; /* ROM:0x01872F50 */
-		object_ganon2_DL_021120          = 0x06021120; /* ROM:0x01873120 */
-		object_ganon2_DL_0212F0          = 0x060212F0; /* ROM:0x018732F0 */
-		object_ganon2_DL_0215D0          = 0x060215D0; /* ROM:0x018735D0 */
-		object_ganon2_DL_0218B8          = 0x060218B8; /* ROM:0x018738B8 */
-		object_ganon2_DL_0219D8          = 0x060219D8; /* ROM:0x018739D8 */
-		object_ganon2_Tex_021A90         = 0x06021A90; /* ROM:0x01873A90 */
-		object_ganon2_Limb_025690        = 0x06025690; /* ROM:0x01877690 */
-		object_ganon2_Limb_02569C        = 0x0602569C; /* ROM:0x0187769C */
-		object_ganon2_Limb_0256A8        = 0x060256A8; /* ROM:0x018776A8 */
-		object_ganon2_Limb_0256B4        = 0x060256B4; /* ROM:0x018776B4 */
-		object_ganon2_Limb_0256C0        = 0x060256C0; /* ROM:0x018776C0 */
-		object_ganon2_Limb_0256CC        = 0x060256CC; /* ROM:0x018776CC */
-		object_ganon2_Limb_0256D8        = 0x060256D8; /* ROM:0x018776D8 */
-		object_ganon2_Limb_0256E4        = 0x060256E4; /* ROM:0x018776E4 */
-		object_ganon2_Limb_0256F0        = 0x060256F0; /* ROM:0x018776F0 */
-		object_ganon2_Limb_0256FC        = 0x060256FC; /* ROM:0x018776FC */
-		object_ganon2_Limb_025708        = 0x06025708; /* ROM:0x01877708 */
-		object_ganon2_Limb_025714        = 0x06025714; /* ROM:0x01877714 */
-		object_ganon2_Limb_025720        = 0x06025720; /* ROM:0x01877720 */
-		object_ganon2_Limb_02572C        = 0x0602572C; /* ROM:0x0187772C */
-		object_ganon2_Limb_025738        = 0x06025738; /* ROM:0x01877738 */
-		object_ganon2_Limb_025744        = 0x06025744; /* ROM:0x01877744 */
-		object_ganon2_Limb_025750        = 0x06025750; /* ROM:0x01877750 */
-		object_ganon2_Limb_02575C        = 0x0602575C; /* ROM:0x0187775C */
-		object_ganon2_Limb_025768        = 0x06025768; /* ROM:0x01877768 */
-		object_ganon2_Limb_025774        = 0x06025774; /* ROM:0x01877774 */
-		object_ganon2_Limb_025780        = 0x06025780; /* ROM:0x01877780 */
-		object_ganon2_Limb_02578C        = 0x0602578C; /* ROM:0x0187778C */
-		object_ganon2_Limb_025798        = 0x06025798; /* ROM:0x01877798 */
-		object_ganon2_Limb_0257A4        = 0x060257A4; /* ROM:0x018777A4 */
-		object_ganon2_Limb_0257B0        = 0x060257B0; /* ROM:0x018777B0 */
-		object_ganon2_Limb_0257BC        = 0x060257BC; /* ROM:0x018777BC */
-		object_ganon2_Limb_0257C8        = 0x060257C8; /* ROM:0x018777C8 */
-		object_ganon2_Limb_0257D4        = 0x060257D4; /* ROM:0x018777D4 */
-		object_ganon2_Limb_0257E0        = 0x060257E0; /* ROM:0x018777E0 */
-		object_ganon2_Limb_0257EC        = 0x060257EC; /* ROM:0x018777EC */
-		object_ganon2_Limb_0257F8        = 0x060257F8; /* ROM:0x018777F8 */
-		object_ganon2_Limb_025804        = 0x06025804; /* ROM:0x01877804 */
-		object_ganon2_Limb_025810        = 0x06025810; /* ROM:0x01877810 */
-		object_ganon2_Limb_02581C        = 0x0602581C; /* ROM:0x0187781C */
-		object_ganon2_Limb_025828        = 0x06025828; /* ROM:0x01877828 */
-		object_ganon2_Limb_025834        = 0x06025834; /* ROM:0x01877834 */
-		object_ganon2_Limb_025840        = 0x06025840; /* ROM:0x01877840 */
-		object_ganon2_Limb_02584C        = 0x0602584C; /* ROM:0x0187784C */
-		object_ganon2_Limb_025858        = 0x06025858; /* ROM:0x01877858 */
-		object_ganon2_Limb_025864        = 0x06025864; /* ROM:0x01877864 */
-		object_ganon2_Limb_025870        = 0x06025870; /* ROM:0x01877870 */
-		object_ganon2_Limb_02587C        = 0x0602587C; /* ROM:0x0187787C */
-		object_ganon2_Limb_025888        = 0x06025888; /* ROM:0x01877888 */
-		object_ganon2_Limb_025894        = 0x06025894; /* ROM:0x01877894 */
-		object_ganon2_Limb_0258A0        = 0x060258A0; /* ROM:0x018778A0 */
-		object_ganon2_Limb_0258AC        = 0x060258AC; /* ROM:0x018778AC */
-		object_ganon2_Skel_025970Limbs   = 0x060258B8; /* ROM:0x018778B8 */
-		object_ganon2_Skel_025970        = 0x06025970; /* ROM:0x01877970 */
+		gGanonEyesDL                     = 0x06020B18; /* ROM:0x01872B18 */
+		gGanonJewelDL                    = 0x06020BE0; /* ROM:0x01872BE0 */
+		gGanonRightHornDL                = 0x06020C80; /* ROM:0x01872C80 */
+		gGanonLeftHornDL                 = 0x06020DE8; /* ROM:0x01872DE8 */
+		gGanonRightHandDL                = 0x06020F50; /* ROM:0x01872F50 */
+		gGanonLeftHandDL                 = 0x06021120; /* ROM:0x01873120 */
+		gGanonRightSwordDL               = 0x060212F0; /* ROM:0x018732F0 */
+		gGanonLeftSwordDL                = 0x060215D0; /* ROM:0x018735D0 */
+		gGanonOuterTeethDL               = 0x060218B8; /* ROM:0x018738B8 */
+		gGanonInnerTeethDL               = 0x060219D8; /* ROM:0x018739D8 */
+		gGanonTitleCardTex               = 0x06021A90; /* ROM:0x01873A90 */
+		gGanonRootLimb                   = 0x06025690; /* ROM:0x01877690 */
+		gGanonTorsoLimb                  = 0x0602569C; /* ROM:0x0187769C */
+		gGanonLeftShoulderLimb           = 0x060256A8; /* ROM:0x018776A8 */
+		gGanonLeftUpperArmLimb           = 0x060256B4; /* ROM:0x018776B4 */
+		gGanonLeftForearmLimb            = 0x060256C0; /* ROM:0x018776C0 */
+		gGanonLeftWristLimb              = 0x060256CC; /* ROM:0x018776CC */
+		gGanonLeftSwordLimb              = 0x060256D8; /* ROM:0x018776D8 */
+		gGanonLeftHandLimb               = 0x060256E4; /* ROM:0x018776E4 */
+		gGanonRightShoulderLimb          = 0x060256F0; /* ROM:0x018776F0 */
+		gGanonRightUpperArmLimb          = 0x060256FC; /* ROM:0x018776FC */
+		gGanonRightForearmLimb           = 0x06025708; /* ROM:0x01877708 */
+		gGanonRightWristLimb             = 0x06025714; /* ROM:0x01877714 */
+		gGanonRightSwordLimb             = 0x06025720; /* ROM:0x01877720 */
+		gGanonRightHandLimb              = 0x0602572C; /* ROM:0x0187772C */
+		gGanonNeckLimb                   = 0x06025738; /* ROM:0x01877738 */
+		gGanonJewelLimb                  = 0x06025744; /* ROM:0x01877744 */
+		gGanonSnoutLimb                  = 0x06025750; /* ROM:0x01877750 */
+		gGanonOuterTeethLimb             = 0x0602575C; /* ROM:0x0187775C */
+		gGanonMouthLimb                  = 0x06025768; /* ROM:0x01877768 */
+		gGanonInnerTeethLimb             = 0x06025774; /* ROM:0x01877774 */
+		gGanonJawLimb                    = 0x06025780; /* ROM:0x01877780 */
+		gGanonMiddleHair1Limb            = 0x0602578C; /* ROM:0x0187778C */
+		gGanonMiddleHair2Limb            = 0x06025798; /* ROM:0x01877798 */
+		gGanonMiddleHair3Limb            = 0x060257A4; /* ROM:0x018777A4 */
+		gGanonLeftHair1Limb              = 0x060257B0; /* ROM:0x018777B0 */
+		gGanonLeftHair2Limb              = 0x060257BC; /* ROM:0x018777BC */
+		gGanonLeftHair3Limb              = 0x060257C8; /* ROM:0x018777C8 */
+		gGanonRightHair1Limb             = 0x060257D4; /* ROM:0x018777D4 */
+		gGanonRightHair2Limb             = 0x060257E0; /* ROM:0x018777E0 */
+		gGanonRightHair3Limb             = 0x060257EC; /* ROM:0x018777EC */
+		gGanonEyesLimb                   = 0x060257F8; /* ROM:0x018777F8 */
+		gGanonHeadLimb                   = 0x06025804; /* ROM:0x01877804 */
+		gGanonLeftHornLimb               = 0x06025810; /* ROM:0x01877810 */
+		gGanonRightHornLimb              = 0x0602581C; /* ROM:0x0187781C */
+		gGanonPelvisLimb                 = 0x06025828; /* ROM:0x01877828 */
+		gGanonLeftThighLimb              = 0x06025834; /* ROM:0x01877834 */
+		gGanonLeftShinLimb               = 0x06025840; /* ROM:0x01877840 */
+		gGanonLeftFootLimb               = 0x0602584C; /* ROM:0x0187784C */
+		gGanonRightThighLimb             = 0x06025858; /* ROM:0x01877858 */
+		gGanonRightShinLimb              = 0x06025864; /* ROM:0x01877864 */
+		gGanonRightFootLimb              = 0x06025870; /* ROM:0x01877870 */
+		gGanonTail1Limb                  = 0x0602587C; /* ROM:0x0187787C */
+		gGanonTail2Limb                  = 0x06025888; /* ROM:0x01877888 */
+		gGanonTail3Limb                  = 0x06025894; /* ROM:0x01877894 */
+		gGanonTail4Limb                  = 0x060258A0; /* ROM:0x018778A0 */
+		gGanonTail5Limb                  = 0x060258AC; /* ROM:0x018778AC */
+		gGanonSkelLimbs                  = 0x060258B8; /* ROM:0x018778B8 */
+		gGanonSkel                       = 0x06025970; /* ROM:0x01877970 */
 		object_ganon2_possiblePadding_02597C = 0x0602597C; /* ROM:0x0187797C */
-		object_ganon2_Anim_026510FrameData = 0x06025980; /* ROM:0x01877980 */
-		object_ganon2_Anim_026510JointIndices = 0x060263F4; /* ROM:0x018783F4 */
-		object_ganon2_Anim_026510        = 0x06026510; /* ROM:0x01878510 */
-		object_ganon2_Anim_026AF4FrameData = 0x06026520; /* ROM:0x01878520 */
-		object_ganon2_Anim_026AF4JointIndices = 0x060269D8; /* ROM:0x018789D8 */
-		object_ganon2_Anim_026AF4        = 0x06026AF4; /* ROM:0x01878AF4 */
+		sGanonStunStartAnimFrameData     = 0x06025980; /* ROM:0x01877980 */
+		sGanonStunStartAnimJointIndices  = 0x060263F4; /* ROM:0x018783F4 */
+		gGanonStunStartAnim              = 0x06026510; /* ROM:0x01878510 */
+		sGanonStunLoopAnimFrameData      = 0x06026520; /* ROM:0x01878520 */
+		sGanonStunLoopAnimJointIndices   = 0x060269D8; /* ROM:0x018789D8 */
+		gGanonStunLoopAnim               = 0x06026AF4; /* ROM:0x01878AF4 */
 		object_ganon2_possiblePadding_026B04 = 0x06026B04; /* ROM:0x01878B04 */
-		object_ganon2_Anim_027824FrameData = 0x06026B10; /* ROM:0x01878B10 */
-		object_ganon2_Anim_027824JointIndices = 0x06027708; /* ROM:0x01879708 */
-		object_ganon2_Anim_027824        = 0x06027824; /* ROM:0x01879824 */
+		sGanonStunEndAnimFrameData       = 0x06026B10; /* ROM:0x01878B10 */
+		sGanonStunEndAnimJointIndices    = 0x06027708; /* ROM:0x01879708 */
+		gGanonStunEndAnim                = 0x06027824; /* ROM:0x01879824 */
 		object_ganon2_possiblePadding_027834 = 0x06027834; /* ROM:0x01879834 */
-		object_ganon2_Anim_02A848FrameData = 0x06027840; /* ROM:0x01879840 */
-		object_ganon2_Anim_02A848JointIndices = 0x0602A72C; /* ROM:0x0187C72C */
-		object_ganon2_Anim_02A848        = 0x0602A848; /* ROM:0x0187C848 */
+		sGanonDownedStartAnimFrameData   = 0x06027840; /* ROM:0x01879840 */
+		sGanonDownedStartAnimJointIndices = 0x0602A72C; /* ROM:0x0187C72C */
+		gGanonDownedStartAnim            = 0x0602A848; /* ROM:0x0187C848 */
 		object_ganon2_possiblePadding_02A858 = 0x0602A858; /* ROM:0x0187C858 */
-		object_ganon2_Anim_02B528FrameData = 0x0602A860; /* ROM:0x0187C860 */
-		object_ganon2_Anim_02B528JointIndices = 0x0602B40C; /* ROM:0x0187D40C */
-		object_ganon2_Anim_02B528        = 0x0602B528; /* ROM:0x0187D528 */
+		sGanonStunEndToWalkAnimFrameData = 0x0602A860; /* ROM:0x0187C860 */
+		sGanonStunEndToWalkAnimJointIndices = 0x0602B40C; /* ROM:0x0187D40C */
+		gGanonStunEndToWalkAnim          = 0x0602B528; /* ROM:0x0187D528 */
 		object_ganon2_possiblePadding_02B538 = 0x0602B538; /* ROM:0x0187D538 */
-		object_ganon2_Anim_02C0D0FrameData = 0x0602B540; /* ROM:0x0187D540 */
-		object_ganon2_Anim_02C0D0JointIndices = 0x0602BFB4; /* ROM:0x0187DFB4 */
-		object_ganon2_Anim_02C0D0        = 0x0602C0D0; /* ROM:0x0187E0D0 */
-		object_ganon2_Anim_02C6B4FrameData = 0x0602C0E0; /* ROM:0x0187E0E0 */
-		object_ganon2_Anim_02C6B4JointIndices = 0x0602C598; /* ROM:0x0187E598 */
-		object_ganon2_Anim_02C6B4        = 0x0602C6B4; /* ROM:0x0187E6B4 */
+		sGanonDuplicateStunStartAnimFrameData = 0x0602B540; /* ROM:0x0187D540 */
+		sGanonDuplicateStunStartAnimJointIndices = 0x0602BFB4; /* ROM:0x0187DFB4 */
+		gGanonDuplicateStunStartAnim     = 0x0602C0D0; /* ROM:0x0187E0D0 */
+		sGanonDuplicateStunLoopAnimFrameData = 0x0602C0E0; /* ROM:0x0187E0E0 */
+		sGanonDuplicateStunLoopAnimJointIndices = 0x0602C598; /* ROM:0x0187E598 */
+		gGanonDuplicateStunLoopAnim      = 0x0602C6B4; /* ROM:0x0187E6B4 */
 		object_ganon2_possiblePadding_02C6C4 = 0x0602C6C4; /* ROM:0x0187E6C4 */
-		object_ganon2_Anim_0334F8FrameData = 0x0602C6D0; /* ROM:0x0187E6D0 */
-		object_ganon2_Anim_0334F8JointIndices = 0x060333DC; /* ROM:0x018853DC */
-		object_ganon2_Anim_0334F8        = 0x060334F8; /* ROM:0x018854F8 */
+		sGanonGetUpAnimFrameData         = 0x0602C6D0; /* ROM:0x0187E6D0 */
+		sGanonGetUpAnimJointIndices      = 0x060333DC; /* ROM:0x018853DC */
+		gGanonGetUpAnim                  = 0x060334F8; /* ROM:0x018854F8 */
 		object_ganon2_possiblePadding_033508 = 0x06033508; /* ROM:0x01885508 */
-		object_ganon2_Anim_034278FrameData = 0x06033510; /* ROM:0x01885510 */
-		object_ganon2_Anim_034278JointIndices = 0x0603415C; /* ROM:0x0188615C */
-		object_ganon2_Anim_034278        = 0x06034278; /* ROM:0x01886278 */
+		sGanonDownedLoopAnimFrameData    = 0x06033510; /* ROM:0x01885510 */
+		sGanonDownedLoopAnimJointIndices = 0x0603415C; /* ROM:0x0188615C */
+		gGanonDownedLoopAnim             = 0x06034278; /* ROM:0x01886278 */
 		object_ganon2_possiblePadding_034288 = 0x06034288; /* ROM:0x01886288 */
-		object_ganon2_Anim_0353C0FrameData = 0x06034290; /* ROM:0x01886290 */
-		object_ganon2_Anim_0353C0JointIndices = 0x060352A4; /* ROM:0x018872A4 */
-		object_ganon2_Anim_0353C0        = 0x060353C0; /* ROM:0x018873C0 */
-		object_ganon2_Anim_035BDCFrameData = 0x060353D0; /* ROM:0x018873D0 */
-		object_ganon2_Anim_035BDCJointIndices = 0x06035AC0; /* ROM:0x01887AC0 */
-		object_ganon2_Anim_035BDC        = 0x06035BDC; /* ROM:0x01887BDC */
+		sGanonWalkAnimFrameData          = 0x06034290; /* ROM:0x01886290 */
+		sGanonWalkAnimJointIndices       = 0x060352A4; /* ROM:0x018872A4 */
+		gGanonWalkAnim                   = 0x060353C0; /* ROM:0x018873C0 */
+		sGanonWalkToGuardAnimFrameData   = 0x060353D0; /* ROM:0x018873D0 */
+		sGanonWalkToGuardAnimJointIndices = 0x06035AC0; /* ROM:0x01887AC0 */
+		gGanonWalkToGuardAnim            = 0x06035BDC; /* ROM:0x01887BDC */
 		_object_ganon2SegmentDataEnd     = 0x06035BF0; /* ROM:0x01887BF0 */
 		_object_ganon2SegmentDataSize    = 0x00035BF0; /* ROM:0xFB887BF0 */
 	/* objects/object_ganon2/object_ganon2.o */
@@ -34104,100 +34103,100 @@
 	/* objects/object_ganon_anime1/object_ganon_anime1.o */
 		_object_ganon_anime1SegmentDataStart = 0x06000000; /* ROM:0x0194B000 */
 	/* objects/object_ganon_anime1/object_ganon_anime1.o */
-		sDorfBigMagicWindupAnimFrameData = 0x06000000; /* ROM:0x0194B000 */
-		sDorfBigMagicWindupAnimJointIndices = 0x060004A4; /* ROM:0x0194B4A4 */
-		gDorfBigMagicWindupAnim          = 0x06000540; /* ROM:0x0194B540 */
-		sDorfBigMagicThrowAnimFrameData  = 0x06000550; /* ROM:0x0194B550 */
-		sDorfBigMagicThrowAnimJointIndices = 0x06000F4C; /* ROM:0x0194BF4C */
-		gDorfBigMagicThrowAnim           = 0x06000FE8; /* ROM:0x0194BFE8 */
+		sGanondorfBigMagicWindupAnimFrameData = 0x06000000; /* ROM:0x0194B000 */
+		sGanondorfBigMagicWindupAnimJointIndices = 0x060004A4; /* ROM:0x0194B4A4 */
+		gGanondorfBigMagicWindupAnim     = 0x06000540; /* ROM:0x0194B540 */
+		sGanondorfBigMagicThrowAnimFrameData = 0x06000550; /* ROM:0x0194B550 */
+		sGanondorfBigMagicThrowAnimJointIndices = 0x06000F4C; /* ROM:0x0194BF4C */
+		gGanondorfBigMagicThrowAnim      = 0x06000FE8; /* ROM:0x0194BFE8 */
 		object_ganon_anime1_possiblePadding_000FF8 = 0x06000FF8; /* ROM:0x0194BFF8 */
-		sDorfBigMagicThrowEndAnimFrameData = 0x06001000; /* ROM:0x0194C000 */
-		sDorfBigMagicThrowEndAnimJointIndices = 0x060013A4; /* ROM:0x0194C3A4 */
-		gDorfBigMagicThrowEndAnim        = 0x06001440; /* ROM:0x0194C440 */
-		sDorfBigMagicChargeStartAnimFrameData = 0x06001450; /* ROM:0x0194C450 */
-		sDorfBigMagicChargeStartAnimJointIndices = 0x06001A70; /* ROM:0x0194CA70 */
-		gDorfBigMagicChargeStartAnim     = 0x06001B0C; /* ROM:0x0194CB0C */
+		sGanondorfBigMagicThrowEndAnimFrameData = 0x06001000; /* ROM:0x0194C000 */
+		sGanondorfBigMagicThrowEndAnimJointIndices = 0x060013A4; /* ROM:0x0194C3A4 */
+		gGanondorfBigMagicThrowEndAnim   = 0x06001440; /* ROM:0x0194C440 */
+		sGanondorfBigMagicChargeStartAnimFrameData = 0x06001450; /* ROM:0x0194C450 */
+		sGanondorfBigMagicChargeStartAnimJointIndices = 0x06001A70; /* ROM:0x0194CA70 */
+		gGanondorfBigMagicChargeStartAnim = 0x06001B0C; /* ROM:0x0194CB0C */
 		object_ganon_anime1_possiblePadding_001B1C = 0x06001B1C; /* ROM:0x0194CB1C */
-		sDorfBigMagicChargeHoldAnimFrameData = 0x06001B20; /* ROM:0x0194CB20 */
-		sDorfBigMagicChargeHoldAnimJointIndices = 0x06001F5C; /* ROM:0x0194CF5C */
-		gDorfBigMagicChargeHoldAnim      = 0x06001FF8; /* ROM:0x0194CFF8 */
+		sGanondorfBigMagicChargeHoldAnimFrameData = 0x06001B20; /* ROM:0x0194CB20 */
+		sGanondorfBigMagicChargeHoldAnimJointIndices = 0x06001F5C; /* ROM:0x0194CF5C */
+		gGanondorfBigMagicChargeHoldAnim = 0x06001FF8; /* ROM:0x0194CFF8 */
 		object_ganon_anime1_possiblePadding_002008 = 0x06002008; /* ROM:0x0194D008 */
-		sDorfPoundAnimFrameData          = 0x06002010; /* ROM:0x0194D010 */
-		sDorfPoundAnimJointIndices       = 0x06002C90; /* ROM:0x0194DC90 */
-		gDorfPoundAnim                   = 0x06002D2C; /* ROM:0x0194DD2C */
+		sGanondorfPoundAnimFrameData     = 0x06002010; /* ROM:0x0194D010 */
+		sGanondorfPoundAnimJointIndices  = 0x06002C90; /* ROM:0x0194DC90 */
+		gGanondorfPoundAnim              = 0x06002D2C; /* ROM:0x0194DD2C */
 		object_ganon_anime1_possiblePadding_002D3C = 0x06002D3C; /* ROM:0x0194DD3C */
-		sDorfPoundEndAnimFrameData       = 0x06002D40; /* ROM:0x0194DD40 */
-		sDorfPoundEndAnimJointIndices    = 0x060033A0; /* ROM:0x0194E3A0 */
-		gDorfPoundEndAnim                = 0x0600343C; /* ROM:0x0194E43C */
+		sGanondorfPoundEndAnimFrameData  = 0x06002D40; /* ROM:0x0194DD40 */
+		sGanondorfPoundEndAnimJointIndices = 0x060033A0; /* ROM:0x0194E3A0 */
+		gGanondorfPoundEndAnim           = 0x0600343C; /* ROM:0x0194E43C */
 		object_ganon_anime1_possiblePadding_00344C = 0x0600344C; /* ROM:0x0194E44C */
-		sDorfKneelVulnerableAnimFrameData = 0x06003450; /* ROM:0x0194E450 */
-		sDorfKneelVulnerableAnimJointIndices = 0x06003CA4; /* ROM:0x0194ECA4 */
-		gDorfKneelVulnerableAnim         = 0x06003D40; /* ROM:0x0194ED40 */
-		sDorfLightArrowHitAnimFrameData  = 0x06003D50; /* ROM:0x0194ED50 */
-		sDorfLightArrowHitAnimJointIndices = 0x060047E8; /* ROM:0x0194F7E8 */
-		gDorfLightArrowHitAnim           = 0x06004884; /* ROM:0x0194F884 */
+		sGanondorfDownedAnimFrameData    = 0x06003450; /* ROM:0x0194E450 */
+		sGanondorfDownedAnimJointIndices = 0x06003CA4; /* ROM:0x0194ECA4 */
+		gGanondorfDownedAnim             = 0x06003D40; /* ROM:0x0194ED40 */
+		sGanondorfLightArrowHitAnimFrameData = 0x06003D50; /* ROM:0x0194ED50 */
+		sGanondorfLightArrowHitAnimJointIndices = 0x060047E8; /* ROM:0x0194F7E8 */
+		gGanondorfLightArrowHitAnim      = 0x06004884; /* ROM:0x0194F884 */
 		object_ganon_anime1_possiblePadding_004894 = 0x06004894; /* ROM:0x0194F894 */
-		sDorfLightEnergyHitAnimFrameData = 0x060048A0; /* ROM:0x0194F8A0 */
-		sDorfLightEnergyHitAnimJointIndices = 0x06004D0C; /* ROM:0x0194FD0C */
-		gDorfLightEnergyHitAnim          = 0x06004DA8; /* ROM:0x0194FDA8 */
+		sGanondorfLightEnergyHitAnimFrameData = 0x060048A0; /* ROM:0x0194F8A0 */
+		sGanondorfLightEnergyHitAnimJointIndices = 0x06004D0C; /* ROM:0x0194FD0C */
+		gGanondorfLightEnergyHitAnim     = 0x06004DA8; /* ROM:0x0194FDA8 */
 		object_ganon_anime1_possiblePadding_004DB8 = 0x06004DB8; /* ROM:0x0194FDB8 */
-		sDorfGetUp1AnimFrameData         = 0x06004DC0; /* ROM:0x0194FDC0 */
-		sDorfGetUp1AnimJointIndices      = 0x06005828; /* ROM:0x01950828 */
-		gDorfGetUp1Anim                  = 0x060058C4; /* ROM:0x019508C4 */
+		sGanondorfGetUp1AnimFrameData    = 0x06004DC0; /* ROM:0x0194FDC0 */
+		sGanondorfGetUp1AnimJointIndices = 0x06005828; /* ROM:0x01950828 */
+		gGanondorfGetUp1Anim             = 0x060058C4; /* ROM:0x019508C4 */
 		object_ganon_anime1_possiblePadding_0058D4 = 0x060058D4; /* ROM:0x019508D4 */
-		sDorfGetUp2AnimFrameData         = 0x060058E0; /* ROM:0x019508E0 */
-		sDorfGetUp2AnimJointIndices      = 0x06005F8C; /* ROM:0x01950F8C */
-		gDorfGetUp2Anim                  = 0x06006028; /* ROM:0x01951028 */
+		sGanondorfGetUp2AnimFrameData    = 0x060058E0; /* ROM:0x019508E0 */
+		sGanondorfGetUp2AnimJointIndices = 0x06005F8C; /* ROM:0x01950F8C */
+		gGanondorfGetUp2Anim             = 0x06006028; /* ROM:0x01951028 */
 		object_ganon_anime1_possiblePadding_006038 = 0x06006038; /* ROM:0x01951038 */
-		sDorfLandAnimFrameData           = 0x06006040; /* ROM:0x01951040 */
-		sDorfLandAnimJointIndices        = 0x06006330; /* ROM:0x01951330 */
-		gDorfLandAnim                    = 0x060063CC; /* ROM:0x019513CC */
+		sGanondorfLandAnimFrameData      = 0x06006040; /* ROM:0x01951040 */
+		sGanondorfLandAnimJointIndices   = 0x06006330; /* ROM:0x01951330 */
+		gGanondorfLandAnim               = 0x060063CC; /* ROM:0x019513CC */
 		object_ganon_anime1_possiblePadding_0063DC = 0x060063DC; /* ROM:0x019513DC */
-		sDorfVulnerableAnimFrameData     = 0x060063E0; /* ROM:0x019513E0 */
-		sDorfVulnerableAnimJointIndices  = 0x06006904; /* ROM:0x01951904 */
-		gDorfVulnerableAnim              = 0x060069A0; /* ROM:0x019519A0 */
-		sDorfThrowAnimFrameData          = 0x060069B0; /* ROM:0x019519B0 */
-		sDorfThrowAnimJointIndices       = 0x060072F0; /* ROM:0x019522F0 */
-		gDorfThrowAnim                   = 0x0600738C; /* ROM:0x0195238C */
+		sGanondorfVulnerableAnimFrameData = 0x060063E0; /* ROM:0x019513E0 */
+		sGanondorfVulnerableAnimJointIndices = 0x06006904; /* ROM:0x01951904 */
+		gGanondorfVulnerableAnim         = 0x060069A0; /* ROM:0x019519A0 */
+		sGanondorfThrowAnimFrameData     = 0x060069B0; /* ROM:0x019519B0 */
+		sGanondorfThrowAnimJointIndices  = 0x060072F0; /* ROM:0x019522F0 */
+		gGanondorfThrowAnim              = 0x0600738C; /* ROM:0x0195238C */
 		object_ganon_anime1_possiblePadding_00739C = 0x0600739C; /* ROM:0x0195239C */
-		sDorfBigMagicHitAnimFrameData    = 0x060073A0; /* ROM:0x019523A0 */
-		sDorfBigMagicHitAnimJointIndices = 0x0600808C; /* ROM:0x0195308C */
-		gDorfBigMagicHitAnim             = 0x06008128; /* ROM:0x01953128 */
+		sGanondorfBigMagicHitAnimFrameData = 0x060073A0; /* ROM:0x019523A0 */
+		sGanondorfBigMagicHitAnimJointIndices = 0x0600808C; /* ROM:0x0195308C */
+		gGanondorfBigMagicHitAnim        = 0x06008128; /* ROM:0x01953128 */
 		object_ganon_anime1_possiblePadding_008138 = 0x06008138; /* ROM:0x01953138 */
-		sDorfGetUp3AnimFrameData         = 0x06008140; /* ROM:0x01953140 */
-		sDorfGetUp3AnimJointIndices      = 0x060089EC; /* ROM:0x019539EC */
-		gDorfGetUp3Anim                  = 0x06008A88; /* ROM:0x01953A88 */
+		sGanondorfGetUp3AnimFrameData    = 0x06008140; /* ROM:0x01953140 */
+		sGanondorfGetUp3AnimJointIndices = 0x060089EC; /* ROM:0x019539EC */
+		gGanondorfGetUp3Anim             = 0x06008A88; /* ROM:0x01953A88 */
 		object_ganon_anime1_possiblePadding_008A98 = 0x06008A98; /* ROM:0x01953A98 */
-		sDorfLightArrowWaitAnimFrameData = 0x06008AA0; /* ROM:0x01953AA0 */
-		sDorfLightArrowWaitAnimJointIndices = 0x06008EA8; /* ROM:0x01953EA8 */
-		gDorfLightArrowWaitAnim          = 0x06008F44; /* ROM:0x01953F44 */
+		sGanondorfLightArrowWaitAnimFrameData = 0x06008AA0; /* ROM:0x01953AA0 */
+		sGanondorfLightArrowWaitAnimJointIndices = 0x06008EA8; /* ROM:0x01953EA8 */
+		gGanondorfLightArrowWaitAnim     = 0x06008F44; /* ROM:0x01953F44 */
 		object_ganon_anime1_possiblePadding_008F54 = 0x06008F54; /* ROM:0x01953F54 */
-		sDorfDamageAnimFrameData         = 0x06008F60; /* ROM:0x01953F60 */
-		sDorfDamageAnimJointIndices      = 0x06009614; /* ROM:0x01954614 */
-		gDorfDamageAnim                  = 0x060096B0; /* ROM:0x019546B0 */
-		sDorfFloatAnimFrameData          = 0x060096C0; /* ROM:0x019546C0 */
-		sDorfFloatAnimJointIndices       = 0x06009978; /* ROM:0x01954978 */
-		gDorfFloatAnim                   = 0x06009A14; /* ROM:0x01954A14 */
+		sGanondorfDamageAnimFrameData    = 0x06008F60; /* ROM:0x01953F60 */
+		sGanondorfDamageAnimJointIndices = 0x06009614; /* ROM:0x01954614 */
+		gGanondorfDamageAnim             = 0x060096B0; /* ROM:0x019546B0 */
+		sGanondorfFloatAnimFrameData     = 0x060096C0; /* ROM:0x019546C0 */
+		sGanondorfFloatAnimJointIndices  = 0x06009978; /* ROM:0x01954978 */
+		gGanondorfFloatAnim              = 0x06009A14; /* ROM:0x01954A14 */
 		object_ganon_anime1_possiblePadding_009A24 = 0x06009A24; /* ROM:0x01954A24 */
-		sDorfBlockAnimFrameData          = 0x06009A30; /* ROM:0x01954A30 */
-		sDorfBlockAnimJointIndices       = 0x06009CC0; /* ROM:0x01954CC0 */
-		gDorfBlockAnim                   = 0x06009D5C; /* ROM:0x01954D5C */
+		sGanondorfBlockAnimFrameData     = 0x06009A30; /* ROM:0x01954A30 */
+		sGanondorfBlockAnimJointIndices  = 0x06009CC0; /* ROM:0x01954CC0 */
+		gGanondorfBlockAnim              = 0x06009D5C; /* ROM:0x01954D5C */
 		object_ganon_anime1_possiblePadding_009D6C = 0x06009D6C; /* ROM:0x01954D6C */
-		sDorfBlockReleaseAnimFrameData   = 0x06009D70; /* ROM:0x01954D70 */
-		sDorfBlockReleaseAnimJointIndices = 0x0600A4FC; /* ROM:0x019554FC */
-		gDorfBlockReleaseAnim            = 0x0600A598; /* ROM:0x01955598 */
+		sGanondorfBlockReleaseAnimFrameData = 0x06009D70; /* ROM:0x01954D70 */
+		sGanondorfBlockReleaseAnimJointIndices = 0x0600A4FC; /* ROM:0x019554FC */
+		gGanondorfBlockReleaseAnim       = 0x0600A598; /* ROM:0x01955598 */
 		object_ganon_anime1_possiblePadding_00A5A8 = 0x0600A5A8; /* ROM:0x019555A8 */
-		sDorfChargeLightBallAnimFrameData = 0x0600A5B0; /* ROM:0x019555B0 */
-		sDorfChargeLightBallAnimJointIndices = 0x0600A988; /* ROM:0x01955988 */
-		gDorfChargeLightBallAnim         = 0x0600AA24; /* ROM:0x01955A24 */
+		sGanondorfChargeLightBallAnimFrameData = 0x0600A5B0; /* ROM:0x019555B0 */
+		sGanondorfChargeLightBallAnimJointIndices = 0x0600A988; /* ROM:0x01955988 */
+		gGanondorfChargeLightBallAnim    = 0x0600AA24; /* ROM:0x01955A24 */
 		object_ganon_anime1_possiblePadding_00AA34 = 0x0600AA34; /* ROM:0x01955A34 */
-		sDorfVolleyLeftAnimFrameData     = 0x0600AA40; /* ROM:0x01955A40 */
-		sDorfVolleyLeftAnimJointIndices  = 0x0600B410; /* ROM:0x01956410 */
-		gDorfVolleyLeftAnim              = 0x0600B4AC; /* ROM:0x019564AC */
+		sGanondorfVolleyLeftAnimFrameData = 0x0600AA40; /* ROM:0x01955A40 */
+		sGanondorfVolleyLeftAnimJointIndices = 0x0600B410; /* ROM:0x01956410 */
+		gGanondorfVolleyLeftAnim         = 0x0600B4AC; /* ROM:0x019564AC */
 		object_ganon_anime1_possiblePadding_00B4BC = 0x0600B4BC; /* ROM:0x019564BC */
-		sDorfVolleyRightAnimFrameData    = 0x0600B4C0; /* ROM:0x019564C0 */
-		sDorfVolleyRightAnimJointIndices = 0x0600BB8C; /* ROM:0x01956B8C */
-		gDorfVolleyRightAnim             = 0x0600BC28; /* ROM:0x01956C28 */
+		sGanondorfVolleyRightAnimFrameData = 0x0600B4C0; /* ROM:0x019564C0 */
+		sGanondorfVolleyRightAnimJointIndices = 0x0600BB8C; /* ROM:0x01956B8C */
+		gGanondorfVolleyRightAnim        = 0x0600BC28; /* ROM:0x01956C28 */
 		_object_ganon_anime1SegmentDataEnd = 0x0600BC40; /* ROM:0x01956C40 */
 		_object_ganon_anime1SegmentDataSize = 0x0000BC40; /* ROM:0xFB956C40 */
 	/* objects/object_ganon_anime1/object_ganon_anime1.o */
@@ -34213,71 +34212,71 @@
 	/* objects/object_ganon_anime2/object_ganon_anime2.o */
 		_object_ganon_anime2SegmentDataStart = 0x06000000; /* ROM:0x01957000 */
 	/* objects/object_ganon_anime2/object_ganon_anime2.o */
-		object_ganon_anime2_Anim_001F58FrameData = 0x06000000; /* ROM:0x01957000 */
-		object_ganon_anime2_Anim_001F58JointIndices = 0x06001EBC; /* ROM:0x01958EBC */
-		object_ganon_anime2_Anim_001F58  = 0x06001F58; /* ROM:0x01958F58 */
+		sGanondorfTurnAroundAnimFrameData = 0x06000000; /* ROM:0x01957000 */
+		sGanondorfTurnAroundAnimJointIndices = 0x06001EBC; /* ROM:0x01958EBC */
+		gGanondorfTurnAroundAnim         = 0x06001F58; /* ROM:0x01958F58 */
 		object_ganon_anime2_possiblePadding_001F68 = 0x06001F68; /* ROM:0x01958F68 */
-		object_ganon_anime2_Anim_003018FrameData = 0x06001F70; /* ROM:0x01958F70 */
-		object_ganon_anime2_Anim_003018JointIndices = 0x06002F7C; /* ROM:0x01959F7C */
-		object_ganon_anime2_Anim_003018  = 0x06003018; /* ROM:0x0195A018 */
+		sGanondorfStandIdleAnimFrameData = 0x06001F70; /* ROM:0x01958F70 */
+		sGanondorfStandIdleAnimJointIndices = 0x06002F7C; /* ROM:0x01959F7C */
+		gGanondorfStandIdleAnim          = 0x06003018; /* ROM:0x0195A018 */
 		object_ganon_anime2_possiblePadding_003028 = 0x06003028; /* ROM:0x0195A028 */
-		object_ganon_anime2_Anim_004304FrameData = 0x06003030; /* ROM:0x0195A030 */
-		object_ganon_anime2_Anim_004304JointIndices = 0x06004268; /* ROM:0x0195B268 */
-		object_ganon_anime2_Anim_004304  = 0x06004304; /* ROM:0x0195B304 */
+		sGanondorfStandUpFromOrganAnimFrameData = 0x06003030; /* ROM:0x0195A030 */
+		sGanondorfStandUpFromOrganAnimJointIndices = 0x06004268; /* ROM:0x0195B268 */
+		gGanondorfStandUpFromOrganAnim   = 0x06004304; /* ROM:0x0195B304 */
 		object_ganon_anime2_possiblePadding_004314 = 0x06004314; /* ROM:0x0195B314 */
-		object_ganon_anime2_Anim_004F64FrameData = 0x06004320; /* ROM:0x0195B320 */
-		object_ganon_anime2_Anim_004F64JointIndices = 0x06004EC8; /* ROM:0x0195BEC8 */
-		object_ganon_anime2_Anim_004F64  = 0x06004F64; /* ROM:0x0195BF64 */
+		sGanondorfStopPlayingOrganAnimFrameData = 0x06004320; /* ROM:0x0195B320 */
+		sGanondorfStopPlayingOrganAnimJointIndices = 0x06004EC8; /* ROM:0x0195BEC8 */
+		gGanondorfStopPlayingOrganAnim   = 0x06004F64; /* ROM:0x0195BF64 */
 		object_ganon_anime2_possiblePadding_004F74 = 0x06004F74; /* ROM:0x0195BF74 */
-		object_ganon_anime2_Anim_005FFCFrameData = 0x06004F80; /* ROM:0x0195BF80 */
-		object_ganon_anime2_Anim_005FFCJointIndices = 0x06005F60; /* ROM:0x0195CF60 */
-		object_ganon_anime2_Anim_005FFC  = 0x06005FFC; /* ROM:0x0195CFFC */
+		sGanondorfPlayOrganAnimFrameData = 0x06004F80; /* ROM:0x0195BF80 */
+		sGanondorfPlayOrganAnimJointIndices = 0x06005F60; /* ROM:0x0195CF60 */
+		gGanondorfPlayOrganAnim          = 0x06005FFC; /* ROM:0x0195CFFC */
 		object_ganon_anime2_possiblePadding_00600C = 0x0600600C; /* ROM:0x0195D00C */
-		object_ganon_anime2_Anim_006AF4FrameData = 0x06006010; /* ROM:0x0195D010 */
-		object_ganon_anime2_Anim_006AF4JointIndices = 0x06006A58; /* ROM:0x0195DA58 */
-		object_ganon_anime2_Anim_006AF4  = 0x06006AF4; /* ROM:0x0195DAF4 */
+		sGanondorfLeanOnOrganAnimFrameData = 0x06006010; /* ROM:0x0195D010 */
+		sGanondorfLeanOnOrganAnimJointIndices = 0x06006A58; /* ROM:0x0195DA58 */
+		gGanondorfLeanOnOrganAnim        = 0x06006AF4; /* ROM:0x0195DAF4 */
 		object_ganon_anime2_possiblePadding_006B04 = 0x06006B04; /* ROM:0x0195DB04 */
-		object_ganon_anime2_Anim_007268FrameData = 0x06006B10; /* ROM:0x0195DB10 */
-		object_ganon_anime2_Anim_007268JointIndices = 0x060071CC; /* ROM:0x0195E1CC */
-		object_ganon_anime2_Anim_007268  = 0x06007268; /* ROM:0x0195E268 */
+		sGanondorfRaiseHandStartAnimFrameData = 0x06006B10; /* ROM:0x0195DB10 */
+		sGanondorfRaiseHandStartAnimJointIndices = 0x060071CC; /* ROM:0x0195E1CC */
+		gGanondorfRaiseHandStartAnim     = 0x06007268; /* ROM:0x0195E268 */
 		object_ganon_anime2_possiblePadding_007278 = 0x06007278; /* ROM:0x0195E278 */
-		object_ganon_anime2_Anim_007A64FrameData = 0x06007280; /* ROM:0x0195E280 */
-		object_ganon_anime2_Anim_007A64JointIndices = 0x060079C8; /* ROM:0x0195E9C8 */
-		object_ganon_anime2_Anim_007A64  = 0x06007A64; /* ROM:0x0195EA64 */
+		sGanondorfRaiseHandLoopAnimFrameData = 0x06007280; /* ROM:0x0195E280 */
+		sGanondorfRaiseHandLoopAnimJointIndices = 0x060079C8; /* ROM:0x0195E9C8 */
+		gGanondorfRaiseHandLoopAnim      = 0x06007A64; /* ROM:0x0195EA64 */
 		object_ganon_anime2_possiblePadding_007A74 = 0x06007A74; /* ROM:0x0195EA74 */
-		object_ganon_anime2_Anim_0089F8FrameData = 0x06007A80; /* ROM:0x0195EA80 */
-		object_ganon_anime2_Anim_0089F8JointIndices = 0x0600895C; /* ROM:0x0195F95C */
-		object_ganon_anime2_Anim_0089F8  = 0x060089F8; /* ROM:0x0195F9F8 */
+		sGanondorfStandBackwardsAnimFrameData = 0x06007A80; /* ROM:0x0195EA80 */
+		sGanondorfStandBackwardsAnimJointIndices = 0x0600895C; /* ROM:0x0195F95C */
+		gGanondorfStandBackwardsAnim     = 0x060089F8; /* ROM:0x0195F9F8 */
 		object_ganon_anime2_possiblePadding_008A08 = 0x06008A08; /* ROM:0x0195FA08 */
-		object_ganon_anime2_Anim_009AE0FrameData = 0x06008A10; /* ROM:0x0195FA10 */
-		object_ganon_anime2_Anim_009AE0JointIndices = 0x06009A44; /* ROM:0x01960A44 */
-		object_ganon_anime2_Anim_009AE0  = 0x06009AE0; /* ROM:0x01960AE0 */
-		object_ganon_anime2_Anim_00ADDCFrameData = 0x06009AF0; /* ROM:0x01960AF0 */
-		object_ganon_anime2_Anim_00ADDCJointIndices = 0x0600AD40; /* ROM:0x01961D40 */
-		object_ganon_anime2_Anim_00ADDC  = 0x0600ADDC; /* ROM:0x01961DDC */
+		sGanondorfLaughWhileLeaningAnimFrameData = 0x06008A10; /* ROM:0x0195FA10 */
+		sGanondorfLaughWhileLeaningAnimJointIndices = 0x06009A44; /* ROM:0x01960A44 */
+		gGanondorfLaughWhileLeaningAnim  = 0x06009AE0; /* ROM:0x01960AE0 */
+		sGanondorfCollapseAnimFrameData  = 0x06009AF0; /* ROM:0x01960AF0 */
+		sGanondorfCollapseAnimJointIndices = 0x0600AD40; /* ROM:0x01961D40 */
+		gGanondorfCollapseAnim           = 0x0600ADDC; /* ROM:0x01961DDC */
 		object_ganon_anime2_possiblePadding_00ADEC = 0x0600ADEC; /* ROM:0x01961DEC */
-		object_ganon_anime2_Anim_00B668FrameData = 0x0600ADF0; /* ROM:0x01961DF0 */
-		object_ganon_anime2_Anim_00B668JointIndices = 0x0600B5CC; /* ROM:0x019625CC */
-		object_ganon_anime2_Anim_00B668  = 0x0600B668; /* ROM:0x01962668 */
+		sGanondorfVomitStartAnimFrameData = 0x0600ADF0; /* ROM:0x01961DF0 */
+		sGanondorfVomitStartAnimJointIndices = 0x0600B5CC; /* ROM:0x019625CC */
+		gGanondorfVomitStartAnim         = 0x0600B668; /* ROM:0x01962668 */
 		object_ganon_anime2_possiblePadding_00B678 = 0x0600B678; /* ROM:0x01962678 */
-		object_ganon_anime2_Anim_00BE38FrameData = 0x0600B680; /* ROM:0x01962680 */
-		object_ganon_anime2_Anim_00BE38JointIndices = 0x0600BD9C; /* ROM:0x01962D9C */
-		object_ganon_anime2_Anim_00BE38  = 0x0600BE38; /* ROM:0x01962E38 */
+		sGanondorfVomitLoopAnimFrameData = 0x0600B680; /* ROM:0x01962680 */
+		sGanondorfVomitLoopAnimJointIndices = 0x0600BD9C; /* ROM:0x01962D9C */
+		gGanondorfVomitLoopAnim          = 0x0600BE38; /* ROM:0x01962E38 */
 		object_ganon_anime2_possiblePadding_00BE48 = 0x0600BE48; /* ROM:0x01962E48 */
-		object_ganon_anime2_Anim_00EA00FrameData = 0x0600BE50; /* ROM:0x01962E50 */
-		object_ganon_anime2_Anim_00EA00JointIndices = 0x0600E964; /* ROM:0x01965964 */
-		object_ganon_anime2_Anim_00EA00  = 0x0600EA00; /* ROM:0x01965A00 */
-		object_ganon_anime2_Anim_00F19CFrameData = 0x0600EA10; /* ROM:0x01965A10 */
-		object_ganon_anime2_Anim_00F19CJointIndices = 0x0600F100; /* ROM:0x01966100 */
-		object_ganon_anime2_Anim_00F19C  = 0x0600F19C; /* ROM:0x0196619C */
+		sGanondorfDefeatedStartAnimFrameData = 0x0600BE50; /* ROM:0x01962E50 */
+		sGanondorfDefeatedStartAnimJointIndices = 0x0600E964; /* ROM:0x01965964 */
+		gGanondorfDefeatedStartAnim      = 0x0600EA00; /* ROM:0x01965A00 */
+		sGanondorfDefeatedLoopAnimFrameData = 0x0600EA10; /* ROM:0x01965A10 */
+		sGanondorfDefeatedLoopAnimJointIndices = 0x0600F100; /* ROM:0x01966100 */
+		gGanondorfDefeatedLoopAnim       = 0x0600F19C; /* ROM:0x0196619C */
 		object_ganon_anime2_possiblePadding_00F1AC = 0x0600F1AC; /* ROM:0x019661AC */
-		object_ganon_anime2_Anim_010298FrameData = 0x0600F1B0; /* ROM:0x019661B0 */
-		object_ganon_anime2_Anim_010298JointIndices = 0x060101FC; /* ROM:0x019671FC */
-		object_ganon_anime2_Anim_010298  = 0x06010298; /* ROM:0x01967298 */
+		sGanondorfYellStartAnimFrameData = 0x0600F1B0; /* ROM:0x019661B0 */
+		sGanondorfYellStartAnimJointIndices = 0x060101FC; /* ROM:0x019671FC */
+		gGanondorfYellStartAnim          = 0x06010298; /* ROM:0x01967298 */
 		object_ganon_anime2_possiblePadding_0102A8 = 0x060102A8; /* ROM:0x019672A8 */
-		object_ganon_anime2_Anim_010514FrameData = 0x060102B0; /* ROM:0x019672B0 */
-		object_ganon_anime2_Anim_010514JointIndices = 0x06010478; /* ROM:0x01967478 */
-		object_ganon_anime2_Anim_010514  = 0x06010514; /* ROM:0x01967514 */
+		sGanondorfYellLoopAnimFrameData  = 0x060102B0; /* ROM:0x019672B0 */
+		sGanondorfYellLoopAnimJointIndices = 0x06010478; /* ROM:0x01967478 */
+		gGanondorfYellLoopAnim           = 0x06010514; /* ROM:0x01967514 */
 		_object_ganon_anime2SegmentDataEnd = 0x06010530; /* ROM:0x01967530 */
 		_object_ganon_anime2SegmentDataSize = 0x00010530; /* ROM:0xFB967530 */
 	/* objects/object_ganon_anime2/object_ganon_anime2.o */
@@ -34293,40 +34292,40 @@
 	/* objects/object_ganon_anime3/object_ganon_anime3.o */
 		_object_ganon_anime3SegmentDataStart = 0x06000000; /* ROM:0x01968000 */
 	/* objects/object_ganon_anime3/object_ganon_anime3.o */
-		object_ganon_anime3_Anim_000BFCFrameData = 0x06000000; /* ROM:0x01968000 */
-		object_ganon_anime3_Anim_000BFCJointIndices = 0x06000B60; /* ROM:0x01968B60 */
-		object_ganon_anime3_Anim_000BFC  = 0x06000BFC; /* ROM:0x01968BFC */
+		sGanondorfShowTriforceStartAnimFrameData = 0x06000000; /* ROM:0x01968000 */
+		sGanondorfShowTriforceStartAnimJointIndices = 0x06000B60; /* ROM:0x01968B60 */
+		gGanondorfShowTriforceStartAnim  = 0x06000BFC; /* ROM:0x01968BFC */
 		object_ganon_anime3_possiblePadding_000C0C = 0x06000C0C; /* ROM:0x01968C0C */
-		object_ganon_anime3_Anim_002168FrameData = 0x06000C10; /* ROM:0x01968C10 */
-		object_ganon_anime3_Anim_002168JointIndices = 0x060020CC; /* ROM:0x0196A0CC */
-		object_ganon_anime3_Anim_002168  = 0x06002168; /* ROM:0x0196A168 */
+		sGanondorfBurstOutAnimFrameData  = 0x06000C10; /* ROM:0x01968C10 */
+		sGanondorfBurstOutAnimJointIndices = 0x060020CC; /* ROM:0x0196A0CC */
+		gGanondorfBurstOutAnim           = 0x06002168; /* ROM:0x0196A168 */
 		object_ganon_anime3_possiblePadding_002178 = 0x06002178; /* ROM:0x0196A178 */
-		object_ganon_anime3_Anim_0028A8FrameData = 0x06002180; /* ROM:0x0196A180 */
-		object_ganon_anime3_Anim_0028A8JointIndices = 0x0600280C; /* ROM:0x0196A80C */
-		object_ganon_anime3_Anim_0028A8  = 0x060028A8; /* ROM:0x0196A8A8 */
+		sGanondorfTransformEndAnimFrameData = 0x06002180; /* ROM:0x0196A180 */
+		sGanondorfTransformEndAnimJointIndices = 0x0600280C; /* ROM:0x0196A80C */
+		gGanondorfTransformEndAnim       = 0x060028A8; /* ROM:0x0196A8A8 */
 		object_ganon_anime3_possiblePadding_0028B8 = 0x060028B8; /* ROM:0x0196A8B8 */
-		object_ganon_anime3_Anim_002E6CFrameData = 0x060028C0; /* ROM:0x0196A8C0 */
-		object_ganon_anime3_Anim_002E6CJointIndices = 0x06002DD0; /* ROM:0x0196ADD0 */
-		object_ganon_anime3_Anim_002E6C  = 0x06002E6C; /* ROM:0x0196AE6C */
+		sGanondorfFloatingHeavyBreathingAnimFrameData = 0x060028C0; /* ROM:0x0196A8C0 */
+		sGanondorfFloatingHeavyBreathingAnimJointIndices = 0x06002DD0; /* ROM:0x0196ADD0 */
+		gGanondorfFloatingHeavyBreathingAnim = 0x06002E6C; /* ROM:0x0196AE6C */
 		object_ganon_anime3_possiblePadding_002E7C = 0x06002E7C; /* ROM:0x0196AE7C */
-		object_ganon_anime3_Anim_003754FrameData = 0x06002E80; /* ROM:0x0196AE80 */
-		object_ganon_anime3_Anim_003754JointIndices = 0x060036B8; /* ROM:0x0196B6B8 */
-		object_ganon_anime3_Anim_003754  = 0x06003754; /* ROM:0x0196B754 */
+		sGanondorfTransformStartAnimFrameData = 0x06002E80; /* ROM:0x0196AE80 */
+		sGanondorfTransformStartAnimJointIndices = 0x060036B8; /* ROM:0x0196B6B8 */
+		gGanondorfTransformStartAnim     = 0x06003754; /* ROM:0x0196B754 */
 		object_ganon_anime3_possiblePadding_003764 = 0x06003764; /* ROM:0x0196B764 */
-		object_ganon_anime3_Anim_003884FrameData = 0x06003770; /* ROM:0x0196B770 */
-		object_ganon_anime3_Anim_003884JointIndices = 0x060037E8; /* ROM:0x0196B7E8 */
-		object_ganon_anime3_Anim_003884  = 0x06003884; /* ROM:0x0196B884 */
+		sGanondorfTransformLoopAnimFrameData = 0x06003770; /* ROM:0x0196B770 */
+		sGanondorfTransformLoopAnimJointIndices = 0x060037E8; /* ROM:0x0196B7E8 */
+		gGanondorfTransformLoopAnim      = 0x06003884; /* ROM:0x0196B884 */
 		object_ganon_anime3_possiblePadding_003894 = 0x06003894; /* ROM:0x0196B894 */
-		object_ganon_anime3_Anim_003F38FrameData = 0x060038A0; /* ROM:0x0196B8A0 */
-		object_ganon_anime3_Anim_003F38JointIndices = 0x06003E9C; /* ROM:0x0196BE9C */
-		object_ganon_anime3_Anim_003F38  = 0x06003F38; /* ROM:0x0196BF38 */
+		sGanondorfShowTriforceLoopAnimFrameData = 0x060038A0; /* ROM:0x0196B8A0 */
+		sGanondorfShowTriforceLoopAnimJointIndices = 0x06003E9C; /* ROM:0x0196BE9C */
+		gGanondorfShowTriforceLoopAnim   = 0x06003F38; /* ROM:0x0196BF38 */
 		object_ganon_anime3_possiblePadding_003F48 = 0x06003F48; /* ROM:0x0196BF48 */
-		object_ganon_anime3_Anim_010380FrameData = 0x06003F50; /* ROM:0x0196BF50 */
-		object_ganon_anime3_Anim_010380JointIndices = 0x06010264; /* ROM:0x01978264 */
-		object_ganon_anime3_Anim_010380  = 0x06010380; /* ROM:0x01978380 */
-		object_ganon_anime3_Anim_0147E0FrameData = 0x06010390; /* ROM:0x01978390 */
-		object_ganon_anime3_Anim_0147E0JointIndices = 0x060146C4; /* ROM:0x0197C6C4 */
-		object_ganon_anime3_Anim_0147E0  = 0x060147E0; /* ROM:0x0197C7E0 */
+		sGanonUncurlAndFlailAnimFrameData = 0x06003F50; /* ROM:0x0196BF50 */
+		sGanonUncurlAndFlailAnimJointIndices = 0x06010264; /* ROM:0x01978264 */
+		gGanonUncurlAndFlailAnim         = 0x06010380; /* ROM:0x01978380 */
+		sGanonRoarAnimFrameData          = 0x06010390; /* ROM:0x01978390 */
+		sGanonRoarAnimJointIndices       = 0x060146C4; /* ROM:0x0197C6C4 */
+		gGanonRoarAnim                   = 0x060147E0; /* ROM:0x0197C7E0 */
 		_object_ganon_anime3SegmentDataEnd = 0x060147F0; /* ROM:0x0197C7F0 */
 		_object_ganon_anime3SegmentDataSize = 0x000147F0; /* ROM:0xFB97C7F0 */
 	/* objects/object_ganon_anime3/object_ganon_anime3.o */
@@ -35012,8 +35011,8 @@
 		object_haka_door_Tex_000000      = 0x06000000; /* ROM:0x019B3000 */
 		object_haka_doorVtx_001000       = 0x06001000; /* ROM:0x019B4000 */
 		object_haka_door_DL_001310       = 0x06001310; /* ROM:0x019B4310 */
-		object_haka_door_DL_0013B8       = 0x060013B8; /* ROM:0x019B43B8 */
-		object_haka_door_DL_001420       = 0x06001420; /* ROM:0x019B4420 */
+		gShadowDoorLeftDL                = 0x060013B8; /* ROM:0x019B43B8 */
+		gShadowDoorRightDL               = 0x06001420; /* ROM:0x019B4420 */
 		object_haka_door_possiblePadding_001488 = 0x06001488; /* ROM:0x019B4488 */
 		object_haka_door_Tex_001490      = 0x06001490; /* ROM:0x019B4490 */
 		object_haka_doorVtx_002490       = 0x06002490; /* ROM:0x019B5490 */
@@ -36431,9 +36430,9 @@
 	/* textures/place_title_cards/g_pn_44.o */
 		_g_pn_44SegmentDataStart         = 0x06089BA0; /* ROM:0x01A74000 */
 	/* textures/place_title_cards/g_pn_44.o */
-		gRoyalFamilysTumbTitleCardENGTex = 0x06089BA0; /* ROM:0x01A74000 */
-		gRoyalFamilysTumbTitleCardGERTex = 0x0608A920; /* ROM:0x01A74D80 */
-		gRoyalFamilysTumbTitleCardFRATex = 0x0608B6A0; /* ROM:0x01A75B00 */
+		gRoyalFamilysTombTitleCardENGTex = 0x06089BA0; /* ROM:0x01A74000 */
+		gRoyalFamilysTombTitleCardGERTex = 0x0608A920; /* ROM:0x01A74D80 */
+		gRoyalFamilysTombTitleCardFRATex = 0x0608B6A0; /* ROM:0x01A75B00 */
 		_g_pn_44SegmentDataEnd           = 0x0608C420; /* ROM:0x01A76880 */
 		_g_pn_44SegmentDataSize          = 0x00002880; /* ROM:0xFB9ECCE0 */
 	/* textures/place_title_cards/g_pn_44.o */
@@ -36985,3 +36984,1159 @@
 
 /* vr_fine0_static */
 		_vr_fine0_staticSegmentStart     = 0x02003B00; /* ROM:0x01AF0000 */
+	/* textures/skyboxes/vr_fine0_static.o */
+		_vr_fine0_staticSegmentDataStart = 0x02003B00; /* ROM:0x01AF0000 */
+	/* textures/skyboxes/vr_fine0_static.o */
+		gSunriseSkybox1Tex               = 0x02003B00; /* ROM:0x01AF0000 */
+		gSunriseSkybox2Tex               = 0x02005B00; /* ROM:0x01AF2000 */
+		gSunriseSkybox3Tex               = 0x02007B00; /* ROM:0x01AF4000 */
+		gSunriseSkybox4Tex               = 0x02009B00; /* ROM:0x01AF6000 */
+		gSunriseSkybox5Tex               = 0x0200BB00; /* ROM:0x01AF8000 */
+		_vr_fine0_staticSegmentDataEnd   = 0x0200FB00; /* ROM:0x01AFC000 */
+		_vr_fine0_staticSegmentDataSize  = 0x0000C000; /* ROM:0xFFAF8500 */
+	/* textures/skyboxes/vr_fine0_static.o */
+		_vr_fine0_staticSegmentRomEnd    = 0x01AFC000; /* ROM:0x015E8500 */
+
+/* vr_fine0_static.bss */
+	/* textures/skyboxes/vr_fine0_static.o */
+		_vr_fine0_staticSegmentEnd       = 0x0200FB00; /* ROM:0x01AFC000 */
+		_vr_fine0_pal_staticSegmentRomStart = 0x01AFC000; /* ROM:0x015E8500 */
+
+/* vr_fine0_pal_static */
+		_vr_fine0_pal_staticSegmentStart = 0x0200FB00; /* ROM:0x01AFC000 */
+	/* textures/skyboxes/vr_fine0_pal_static.o */
+		_vr_fine0_pal_staticSegmentDataStart = 0x0200FB00; /* ROM:0x01AFC000 */
+	/* textures/skyboxes/vr_fine0_pal_static.o */
+		gSunriseSkyboxTLUT               = 0x0200FB00; /* ROM:0x01AFC000 */
+		_vr_fine0_pal_staticSegmentDataEnd = 0x0200FC00; /* ROM:0x01AFC100 */
+		_vr_fine0_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAEC600 */
+	/* textures/skyboxes/vr_fine0_pal_static.o */
+		_vr_fine0_pal_staticSegmentRomEnd = 0x01AFC100; /* ROM:0x015E8600 */
+
+/* vr_fine0_pal_static.bss */
+	/* textures/skyboxes/vr_fine0_pal_static.o */
+		_vr_fine0_pal_staticSegmentEnd   = 0x0200FC00; /* ROM:0x01AFC100 */
+		_vr_fine1_staticSegmentRomStart  = 0x01AFD000; /* ROM:0x015E9500 */
+
+/* vr_fine1_static */
+		_vr_fine1_staticSegmentStart     = 0x0200FC00; /* ROM:0x01AFD000 */
+	/* textures/skyboxes/vr_fine1_static.o */
+		_vr_fine1_staticSegmentDataStart = 0x0200FC00; /* ROM:0x01AFD000 */
+	/* textures/skyboxes/vr_fine1_static.o */
+		gDaySkybox1Tex                   = 0x0200FC00; /* ROM:0x01AFD000 */
+		gDaySkybox2Tex                   = 0x02011C00; /* ROM:0x01AFF000 */
+		gDaySkybox3Tex                   = 0x02013C00; /* ROM:0x01B01000 */
+		gDaySkybox4Tex                   = 0x02015C00; /* ROM:0x01B03000 */
+		gDaySkybox5Tex                   = 0x02017C00; /* ROM:0x01B05000 */
+		_vr_fine1_staticSegmentDataEnd   = 0x0201BC00; /* ROM:0x01B09000 */
+		_vr_fine1_staticSegmentDataSize  = 0x0000C000; /* ROM:0xFFAF9400 */
+	/* textures/skyboxes/vr_fine1_static.o */
+		_vr_fine1_staticSegmentRomEnd    = 0x01B09000; /* ROM:0x015F6400 */
+
+/* vr_fine1_static.bss */
+	/* textures/skyboxes/vr_fine1_static.o */
+		_vr_fine1_staticSegmentEnd       = 0x0201BC00; /* ROM:0x01B09000 */
+		_vr_fine1_pal_staticSegmentRomStart = 0x01B09000; /* ROM:0x015F6400 */
+
+/* vr_fine1_pal_static */
+		_vr_fine1_pal_staticSegmentStart = 0x0201BC00; /* ROM:0x01B09000 */
+	/* textures/skyboxes/vr_fine1_pal_static.o */
+		_vr_fine1_pal_staticSegmentDataStart = 0x0201BC00; /* ROM:0x01B09000 */
+	/* textures/skyboxes/vr_fine1_pal_static.o */
+		gDaySkyboxTLUT                   = 0x0201BC00; /* ROM:0x01B09000 */
+		_vr_fine1_pal_staticSegmentDataEnd = 0x0201BD00; /* ROM:0x01B09100 */
+		_vr_fine1_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAED500 */
+	/* textures/skyboxes/vr_fine1_pal_static.o */
+		_vr_fine1_pal_staticSegmentRomEnd = 0x01B09100; /* ROM:0x015F6500 */
+
+/* vr_fine1_pal_static.bss */
+	/* textures/skyboxes/vr_fine1_pal_static.o */
+		_vr_fine1_pal_staticSegmentEnd   = 0x0201BD00; /* ROM:0x01B09100 */
+		_vr_fine2_staticSegmentRomStart  = 0x01B0A000; /* ROM:0x015F7400 */
+
+/* vr_fine2_static */
+		_vr_fine2_staticSegmentStart     = 0x0201BD00; /* ROM:0x01B0A000 */
+	/* textures/skyboxes/vr_fine2_static.o */
+		_vr_fine2_staticSegmentDataStart = 0x0201BD00; /* ROM:0x01B0A000 */
+	/* textures/skyboxes/vr_fine2_static.o */
+		gSunsetSkybox1Tex                = 0x0201BD00; /* ROM:0x01B0A000 */
+		gSunsetSkybox2Tex                = 0x0201DD00; /* ROM:0x01B0C000 */
+		gSunsetSkybox3Tex                = 0x0201FD00; /* ROM:0x01B0E000 */
+		gSunsetSkybox4Tex                = 0x02021D00; /* ROM:0x01B10000 */
+		gSunsetSkybox5Tex                = 0x02023D00; /* ROM:0x01B12000 */
+		_vr_fine2_staticSegmentDataEnd   = 0x02027D00; /* ROM:0x01B16000 */
+		_vr_fine2_staticSegmentDataSize  = 0x0000C000; /* ROM:0xFFAFA300 */
+	/* textures/skyboxes/vr_fine2_static.o */
+		_vr_fine2_staticSegmentRomEnd    = 0x01B16000; /* ROM:0x01604300 */
+
+/* vr_fine2_static.bss */
+	/* textures/skyboxes/vr_fine2_static.o */
+		_vr_fine2_staticSegmentEnd       = 0x02027D00; /* ROM:0x01B16000 */
+		_vr_fine2_pal_staticSegmentRomStart = 0x01B16000; /* ROM:0x01604300 */
+
+/* vr_fine2_pal_static */
+		_vr_fine2_pal_staticSegmentStart = 0x02027D00; /* ROM:0x01B16000 */
+	/* textures/skyboxes/vr_fine2_pal_static.o */
+		_vr_fine2_pal_staticSegmentDataStart = 0x02027D00; /* ROM:0x01B16000 */
+	/* textures/skyboxes/vr_fine2_pal_static.o */
+		gSunsetSkyboxTLUT                = 0x02027D00; /* ROM:0x01B16000 */
+		_vr_fine2_pal_staticSegmentDataEnd = 0x02027E00; /* ROM:0x01B16100 */
+		_vr_fine2_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAEE400 */
+	/* textures/skyboxes/vr_fine2_pal_static.o */
+		_vr_fine2_pal_staticSegmentRomEnd = 0x01B16100; /* ROM:0x01604400 */
+
+/* vr_fine2_pal_static.bss */
+	/* textures/skyboxes/vr_fine2_pal_static.o */
+		_vr_fine2_pal_staticSegmentEnd   = 0x02027E00; /* ROM:0x01B16100 */
+		_vr_fine3_staticSegmentRomStart  = 0x01B17000; /* ROM:0x01605300 */
+
+/* vr_fine3_static */
+		_vr_fine3_staticSegmentStart     = 0x02027E00; /* ROM:0x01B17000 */
+	/* textures/skyboxes/vr_fine3_static.o */
+		_vr_fine3_staticSegmentDataStart = 0x02027E00; /* ROM:0x01B17000 */
+	/* textures/skyboxes/vr_fine3_static.o */
+		gNightSkybox1Tex                 = 0x02027E00; /* ROM:0x01B17000 */
+		gNightSkybox2Tex                 = 0x02029E00; /* ROM:0x01B19000 */
+		gNightSkybox3Tex                 = 0x0202BE00; /* ROM:0x01B1B000 */
+		gNightSkybox4Tex                 = 0x0202DE00; /* ROM:0x01B1D000 */
+		gNightSkybox5Tex                 = 0x0202FE00; /* ROM:0x01B1F000 */
+		_vr_fine3_staticSegmentDataEnd   = 0x02033E00; /* ROM:0x01B23000 */
+		_vr_fine3_staticSegmentDataSize  = 0x0000C000; /* ROM:0xFFAFB200 */
+	/* textures/skyboxes/vr_fine3_static.o */
+		_vr_fine3_staticSegmentRomEnd    = 0x01B23000; /* ROM:0x01612200 */
+
+/* vr_fine3_static.bss */
+	/* textures/skyboxes/vr_fine3_static.o */
+		_vr_fine3_staticSegmentEnd       = 0x02033E00; /* ROM:0x01B23000 */
+		_vr_fine3_pal_staticSegmentRomStart = 0x01B23000; /* ROM:0x01612200 */
+
+/* vr_fine3_pal_static */
+		_vr_fine3_pal_staticSegmentStart = 0x02033E00; /* ROM:0x01B23000 */
+	/* textures/skyboxes/vr_fine3_pal_static.o */
+		_vr_fine3_pal_staticSegmentDataStart = 0x02033E00; /* ROM:0x01B23000 */
+	/* textures/skyboxes/vr_fine3_pal_static.o */
+		gNightSkyboxTLUT                 = 0x02033E00; /* ROM:0x01B23000 */
+		_vr_fine3_pal_staticSegmentDataEnd = 0x02033F00; /* ROM:0x01B23100 */
+		_vr_fine3_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAEF300 */
+	/* textures/skyboxes/vr_fine3_pal_static.o */
+		_vr_fine3_pal_staticSegmentRomEnd = 0x01B23100; /* ROM:0x01612300 */
+
+/* vr_fine3_pal_static.bss */
+	/* textures/skyboxes/vr_fine3_pal_static.o */
+		_vr_fine3_pal_staticSegmentEnd   = 0x02033F00; /* ROM:0x01B23100 */
+		_vr_cloud0_staticSegmentRomStart = 0x01B24000; /* ROM:0x01613200 */
+
+/* vr_cloud0_static */
+		_vr_cloud0_staticSegmentStart    = 0x02033F00; /* ROM:0x01B24000 */
+	/* textures/skyboxes/vr_cloud0_static.o */
+		_vr_cloud0_staticSegmentDataStart = 0x02033F00; /* ROM:0x01B24000 */
+	/* textures/skyboxes/vr_cloud0_static.o */
+		gSunriseOvercastSkybox1Tex       = 0x02033F00; /* ROM:0x01B24000 */
+		gSunriseOvercastSkybox2Tex       = 0x02035F00; /* ROM:0x01B26000 */
+		gSunriseOvercastSkybox3Tex       = 0x02037F00; /* ROM:0x01B28000 */
+		gSunriseOvercastSkybox4Tex       = 0x02039F00; /* ROM:0x01B2A000 */
+		gSunriseOvercastSkybox5Tex       = 0x0203BF00; /* ROM:0x01B2C000 */
+		_vr_cloud0_staticSegmentDataEnd  = 0x0203FF00; /* ROM:0x01B30000 */
+		_vr_cloud0_staticSegmentDataSize = 0x0000C000; /* ROM:0xFFAFC100 */
+	/* textures/skyboxes/vr_cloud0_static.o */
+		_vr_cloud0_staticSegmentRomEnd   = 0x01B30000; /* ROM:0x01620100 */
+
+/* vr_cloud0_static.bss */
+	/* textures/skyboxes/vr_cloud0_static.o */
+		_vr_cloud0_staticSegmentEnd      = 0x0203FF00; /* ROM:0x01B30000 */
+		_vr_cloud0_pal_staticSegmentRomStart = 0x01B30000; /* ROM:0x01620100 */
+
+/* vr_cloud0_pal_static */
+		_vr_cloud0_pal_staticSegmentStart = 0x0203FF00; /* ROM:0x01B30000 */
+	/* textures/skyboxes/vr_cloud0_pal_static.o */
+		_vr_cloud0_pal_staticSegmentDataStart = 0x0203FF00; /* ROM:0x01B30000 */
+	/* textures/skyboxes/vr_cloud0_pal_static.o */
+		gSunriseOvercastSkyboxTLUT       = 0x0203FF00; /* ROM:0x01B30000 */
+		_vr_cloud0_pal_staticSegmentDataEnd = 0x02040000; /* ROM:0x01B30100 */
+		_vr_cloud0_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF0200 */
+	/* textures/skyboxes/vr_cloud0_pal_static.o */
+		_vr_cloud0_pal_staticSegmentRomEnd = 0x01B30100; /* ROM:0x01620200 */
+
+/* vr_cloud0_pal_static.bss */
+	/* textures/skyboxes/vr_cloud0_pal_static.o */
+		_vr_cloud0_pal_staticSegmentEnd  = 0x02040000; /* ROM:0x01B30100 */
+		_vr_cloud1_staticSegmentRomStart = 0x01B31000; /* ROM:0x01621100 */
+
+/* vr_cloud1_static */
+		_vr_cloud1_staticSegmentStart    = 0x02040000; /* ROM:0x01B31000 */
+	/* textures/skyboxes/vr_cloud1_static.o */
+		_vr_cloud1_staticSegmentDataStart = 0x02040000; /* ROM:0x01B31000 */
+	/* textures/skyboxes/vr_cloud1_static.o */
+		gDayOvercastSkybox1Tex           = 0x02040000; /* ROM:0x01B31000 */
+		gDayOvercastSkybox2Tex           = 0x02042000; /* ROM:0x01B33000 */
+		gDayOvercastSkybox3Tex           = 0x02044000; /* ROM:0x01B35000 */
+		gDayOvercastSkybox4Tex           = 0x02046000; /* ROM:0x01B37000 */
+		gDayOvercastSkybox5Tex           = 0x02048000; /* ROM:0x01B39000 */
+		_vr_cloud1_staticSegmentDataEnd  = 0x0204C000; /* ROM:0x01B3D000 */
+		_vr_cloud1_staticSegmentDataSize = 0x0000C000; /* ROM:0xFFAFD000 */
+	/* textures/skyboxes/vr_cloud1_static.o */
+		_vr_cloud1_staticSegmentRomEnd   = 0x01B3D000; /* ROM:0x0162E000 */
+
+/* vr_cloud1_static.bss */
+	/* textures/skyboxes/vr_cloud1_static.o */
+		_vr_cloud1_staticSegmentEnd      = 0x0204C000; /* ROM:0x01B3D000 */
+		_vr_cloud1_pal_staticSegmentRomStart = 0x01B3D000; /* ROM:0x0162E000 */
+
+/* vr_cloud1_pal_static */
+		_vr_cloud1_pal_staticSegmentStart = 0x0204C000; /* ROM:0x01B3D000 */
+	/* textures/skyboxes/vr_cloud1_pal_static.o */
+		_vr_cloud1_pal_staticSegmentDataStart = 0x0204C000; /* ROM:0x01B3D000 */
+	/* textures/skyboxes/vr_cloud1_pal_static.o */
+		gDayOvercastSkyboxTLUT           = 0x0204C000; /* ROM:0x01B3D000 */
+		_vr_cloud1_pal_staticSegmentDataEnd = 0x0204C100; /* ROM:0x01B3D100 */
+		_vr_cloud1_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF1100 */
+	/* textures/skyboxes/vr_cloud1_pal_static.o */
+		_vr_cloud1_pal_staticSegmentRomEnd = 0x01B3D100; /* ROM:0x0162E100 */
+
+/* vr_cloud1_pal_static.bss */
+	/* textures/skyboxes/vr_cloud1_pal_static.o */
+		_vr_cloud1_pal_staticSegmentEnd  = 0x0204C100; /* ROM:0x01B3D100 */
+		_vr_cloud2_staticSegmentRomStart = 0x01B3E000; /* ROM:0x0162F000 */
+
+/* vr_cloud2_static */
+		_vr_cloud2_staticSegmentStart    = 0x0204C100; /* ROM:0x01B3E000 */
+	/* textures/skyboxes/vr_cloud2_static.o */
+		_vr_cloud2_staticSegmentDataStart = 0x0204C100; /* ROM:0x01B3E000 */
+	/* textures/skyboxes/vr_cloud2_static.o */
+		gSunsetOvercastSkybox1Tex        = 0x0204C100; /* ROM:0x01B3E000 */
+		gSunsetOvercastSkybox2Tex        = 0x0204E100; /* ROM:0x01B40000 */
+		gSunsetOvercastSkybox3Tex        = 0x02050100; /* ROM:0x01B42000 */
+		gSunsetOvercastSkybox4Tex        = 0x02052100; /* ROM:0x01B44000 */
+		gSunsetOvercastSkybox5Tex        = 0x02054100; /* ROM:0x01B46000 */
+		_vr_cloud2_staticSegmentDataEnd  = 0x02058100; /* ROM:0x01B4A000 */
+		_vr_cloud2_staticSegmentDataSize = 0x0000C000; /* ROM:0xFFAFDF00 */
+	/* textures/skyboxes/vr_cloud2_static.o */
+		_vr_cloud2_staticSegmentRomEnd   = 0x01B4A000; /* ROM:0x0163BF00 */
+
+/* vr_cloud2_static.bss */
+	/* textures/skyboxes/vr_cloud2_static.o */
+		_vr_cloud2_staticSegmentEnd      = 0x02058100; /* ROM:0x01B4A000 */
+		_vr_cloud2_pal_staticSegmentRomStart = 0x01B4A000; /* ROM:0x0163BF00 */
+
+/* vr_cloud2_pal_static */
+		_vr_cloud2_pal_staticSegmentStart = 0x02058100; /* ROM:0x01B4A000 */
+	/* textures/skyboxes/vr_cloud2_pal_static.o */
+		_vr_cloud2_pal_staticSegmentDataStart = 0x02058100; /* ROM:0x01B4A000 */
+	/* textures/skyboxes/vr_cloud2_pal_static.o */
+		gSunsetOvercastSkyboxTLUT        = 0x02058100; /* ROM:0x01B4A000 */
+		_vr_cloud2_pal_staticSegmentDataEnd = 0x02058200; /* ROM:0x01B4A100 */
+		_vr_cloud2_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF2000 */
+	/* textures/skyboxes/vr_cloud2_pal_static.o */
+		_vr_cloud2_pal_staticSegmentRomEnd = 0x01B4A100; /* ROM:0x0163C000 */
+
+/* vr_cloud2_pal_static.bss */
+	/* textures/skyboxes/vr_cloud2_pal_static.o */
+		_vr_cloud2_pal_staticSegmentEnd  = 0x02058200; /* ROM:0x01B4A100 */
+		_vr_cloud3_staticSegmentRomStart = 0x01B4B000; /* ROM:0x0163CF00 */
+
+/* vr_cloud3_static */
+		_vr_cloud3_staticSegmentStart    = 0x02058200; /* ROM:0x01B4B000 */
+	/* textures/skyboxes/vr_cloud3_static.o */
+		_vr_cloud3_staticSegmentDataStart = 0x02058200; /* ROM:0x01B4B000 */
+	/* textures/skyboxes/vr_cloud3_static.o */
+		gNightOvercastSkybox1Tex         = 0x02058200; /* ROM:0x01B4B000 */
+		gNightOvercastSkybox2Tex         = 0x0205A200; /* ROM:0x01B4D000 */
+		gNightOvercastSkybox3Tex         = 0x0205C200; /* ROM:0x01B4F000 */
+		gNightOvercastSkybox4Tex         = 0x0205E200; /* ROM:0x01B51000 */
+		gNightOvercastSkybox5Tex         = 0x02060200; /* ROM:0x01B53000 */
+		_vr_cloud3_staticSegmentDataEnd  = 0x02064200; /* ROM:0x01B57000 */
+		_vr_cloud3_staticSegmentDataSize = 0x0000C000; /* ROM:0xFFAFEE00 */
+	/* textures/skyboxes/vr_cloud3_static.o */
+		_vr_cloud3_staticSegmentRomEnd   = 0x01B57000; /* ROM:0x01649E00 */
+
+/* vr_cloud3_static.bss */
+	/* textures/skyboxes/vr_cloud3_static.o */
+		_vr_cloud3_staticSegmentEnd      = 0x02064200; /* ROM:0x01B57000 */
+		_vr_cloud3_pal_staticSegmentRomStart = 0x01B57000; /* ROM:0x01649E00 */
+
+/* vr_cloud3_pal_static */
+		_vr_cloud3_pal_staticSegmentStart = 0x02064200; /* ROM:0x01B57000 */
+	/* textures/skyboxes/vr_cloud3_pal_static.o */
+		_vr_cloud3_pal_staticSegmentDataStart = 0x02064200; /* ROM:0x01B57000 */
+	/* textures/skyboxes/vr_cloud3_pal_static.o */
+		gNightOvercastSkyboxTLUT         = 0x02064200; /* ROM:0x01B57000 */
+		_vr_cloud3_pal_staticSegmentDataEnd = 0x02064300; /* ROM:0x01B57100 */
+		_vr_cloud3_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF2F00 */
+	/* textures/skyboxes/vr_cloud3_pal_static.o */
+		_vr_cloud3_pal_staticSegmentRomEnd = 0x01B57100; /* ROM:0x01649F00 */
+
+/* vr_cloud3_pal_static.bss */
+	/* textures/skyboxes/vr_cloud3_pal_static.o */
+		_vr_cloud3_pal_staticSegmentEnd  = 0x02064300; /* ROM:0x01B57100 */
+		_vr_holy0_staticSegmentRomStart  = 0x01B58000; /* ROM:0x0164AE00 */
+
+/* vr_holy0_static */
+		_vr_holy0_staticSegmentStart     = 0x02064300; /* ROM:0x01B58000 */
+	/* textures/skyboxes/vr_holy0_static.o */
+		_vr_holy0_staticSegmentDataStart = 0x02064300; /* ROM:0x01B58000 */
+	/* textures/skyboxes/vr_holy0_static.o */
+		gHoly0Skybox1Tex                 = 0x02064300; /* ROM:0x01B58000 */
+		gHoly0Skybox2Tex                 = 0x02066300; /* ROM:0x01B5A000 */
+		gHoly0Skybox3Tex                 = 0x02068300; /* ROM:0x01B5C000 */
+		gHoly0Skybox4Tex                 = 0x0206A300; /* ROM:0x01B5E000 */
+		gHoly0Skybox5Tex                 = 0x0206C300; /* ROM:0x01B60000 */
+		gHoly0Skybox6Tex                 = 0x02070300; /* ROM:0x01B64000 */
+		_vr_holy0_staticSegmentDataEnd   = 0x02074300; /* ROM:0x01B68000 */
+		_vr_holy0_staticSegmentDataSize  = 0x00010000; /* ROM:0xFFB03D00 */
+	/* textures/skyboxes/vr_holy0_static.o */
+		_vr_holy0_staticSegmentRomEnd    = 0x01B68000; /* ROM:0x0165BD00 */
+
+/* vr_holy0_static.bss */
+	/* textures/skyboxes/vr_holy0_static.o */
+		_vr_holy0_staticSegmentEnd       = 0x02074300; /* ROM:0x01B68000 */
+		_vr_holy0_pal_staticSegmentRomStart = 0x01B68000; /* ROM:0x0165BD00 */
+
+/* vr_holy0_pal_static */
+		_vr_holy0_pal_staticSegmentStart = 0x02074300; /* ROM:0x01B68000 */
+	/* textures/skyboxes/vr_holy0_pal_static.o */
+		_vr_holy0_pal_staticSegmentDataStart = 0x02074300; /* ROM:0x01B68000 */
+	/* textures/skyboxes/vr_holy0_pal_static.o */
+		gHoly0SkyboxTLUT                 = 0x02074300; /* ROM:0x01B68000 */
+		_vr_holy0_pal_staticSegmentDataEnd = 0x02074400; /* ROM:0x01B68100 */
+		_vr_holy0_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF3E00 */
+	/* textures/skyboxes/vr_holy0_pal_static.o */
+		_vr_holy0_pal_staticSegmentRomEnd = 0x01B68100; /* ROM:0x0165BE00 */
+
+/* vr_holy0_pal_static.bss */
+	/* textures/skyboxes/vr_holy0_pal_static.o */
+		_vr_holy0_pal_staticSegmentEnd   = 0x02074400; /* ROM:0x01B68100 */
+		_vr_holy1_staticSegmentRomStart  = 0x01B69000; /* ROM:0x0165CD00 */
+
+/* vr_holy1_static */
+		_vr_holy1_staticSegmentStart     = 0x02074400; /* ROM:0x01B69000 */
+	/* textures/skyboxes/vr_holy1_static.o */
+		_vr_holy1_staticSegmentDataStart = 0x02074400; /* ROM:0x01B69000 */
+	/* textures/skyboxes/vr_holy1_static.o */
+		gHoly1Skybox1Tex                 = 0x02074400; /* ROM:0x01B69000 */
+		gHoly1Skybox2Tex                 = 0x02076400; /* ROM:0x01B6B000 */
+		gHoly1Skybox3Tex                 = 0x02078400; /* ROM:0x01B6D000 */
+		gHoly1Skybox4Tex                 = 0x0207A400; /* ROM:0x01B6F000 */
+		gHoly1Skybox5Tex                 = 0x0207C400; /* ROM:0x01B71000 */
+		gHoly1Skybox6Tex                 = 0x02080400; /* ROM:0x01B75000 */
+		_vr_holy1_staticSegmentDataEnd   = 0x02084400; /* ROM:0x01B79000 */
+		_vr_holy1_staticSegmentDataSize  = 0x00010000; /* ROM:0xFFB04C00 */
+	/* textures/skyboxes/vr_holy1_static.o */
+		_vr_holy1_staticSegmentRomEnd    = 0x01B79000; /* ROM:0x0166DC00 */
+
+/* vr_holy1_static.bss */
+	/* textures/skyboxes/vr_holy1_static.o */
+		_vr_holy1_staticSegmentEnd       = 0x02084400; /* ROM:0x01B79000 */
+		_vr_holy1_pal_staticSegmentRomStart = 0x01B79000; /* ROM:0x0166DC00 */
+
+/* vr_holy1_pal_static */
+		_vr_holy1_pal_staticSegmentStart = 0x02084400; /* ROM:0x01B79000 */
+	/* textures/skyboxes/vr_holy1_pal_static.o */
+		_vr_holy1_pal_staticSegmentDataStart = 0x02084400; /* ROM:0x01B79000 */
+	/* textures/skyboxes/vr_holy1_pal_static.o */
+		gHoly1SkyboxTLUT                 = 0x02084400; /* ROM:0x01B79000 */
+		_vr_holy1_pal_staticSegmentDataEnd = 0x02084500; /* ROM:0x01B79100 */
+		_vr_holy1_pal_staticSegmentDataSize = 0x00000100; /* ROM:0xFFAF4D00 */
+	/* textures/skyboxes/vr_holy1_pal_static.o */
+		_vr_holy1_pal_staticSegmentRomEnd = 0x01B79100; /* ROM:0x0166DD00 */
+
+/* vr_holy1_pal_static.bss */
+	/* textures/skyboxes/vr_holy1_pal_static.o */
+		_vr_holy1_pal_staticSegmentEnd   = 0x02084500; /* ROM:0x01B79100 */
+		_vr_MDVR_staticSegmentRomStart   = 0x01B7A000; /* ROM:0x0166EC00 */
+
+/* vr_MDVR_static */
+		_vr_MDVR_staticSegmentStart      = 0x02084500; /* ROM:0x01B7A000 */
+	/* textures/backgrounds/vr_MDVR_static.o */
+		_vr_MDVR_staticSegmentDataStart  = 0x02084500; /* ROM:0x01B7A000 */
+	/* textures/backgrounds/vr_MDVR_static.o */
+		gMarketDayBgTex                  = 0x02084500; /* ROM:0x01B7A000 */
+		gMarketDay2BgTex                 = 0x02094500; /* ROM:0x01B8A000 */
+		gMarketDay3BgTex                 = 0x020A4500; /* ROM:0x01B9A000 */
+		gMarketDay4BgTex                 = 0x020B4500; /* ROM:0x01BAA000 */
+		_vr_MDVR_staticSegmentDataEnd    = 0x020C4500; /* ROM:0x01BBA000 */
+		_vr_MDVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB35B00 */
+	/* textures/backgrounds/vr_MDVR_static.o */
+		_vr_MDVR_staticSegmentRomEnd     = 0x01BBA000; /* ROM:0x016AFB00 */
+
+/* vr_MDVR_static.bss */
+	/* textures/backgrounds/vr_MDVR_static.o */
+		_vr_MDVR_staticSegmentEnd        = 0x020C4500; /* ROM:0x01BBA000 */
+		_vr_MDVR_pal_staticSegmentRomStart = 0x01BBA000; /* ROM:0x016AFB00 */
+
+/* vr_MDVR_pal_static */
+		_vr_MDVR_pal_staticSegmentStart  = 0x020C4500; /* ROM:0x01BBA000 */
+	/* textures/backgrounds/vr_MDVR_pal_static.o */
+		_vr_MDVR_pal_staticSegmentDataStart = 0x020C4500; /* ROM:0x01BBA000 */
+	/* textures/backgrounds/vr_MDVR_pal_static.o */
+		gMarketDayBgTLUT                 = 0x020C4500; /* ROM:0x01BBA000 */
+		gMarketDayBg2TLUT                = 0x020C4700; /* ROM:0x01BBA200 */
+		gMarketDayBg3TLUT                = 0x020C4900; /* ROM:0x01BBA400 */
+		gMarketDayBg4TLUT                = 0x020C4B00; /* ROM:0x01BBA600 */
+		_vr_MDVR_pal_staticSegmentDataEnd = 0x020C4D00; /* ROM:0x01BBA800 */
+		_vr_MDVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAF6300 */
+	/* textures/backgrounds/vr_MDVR_pal_static.o */
+		_vr_MDVR_pal_staticSegmentRomEnd = 0x01BBA800; /* ROM:0x016B0300 */
+
+/* vr_MDVR_pal_static.bss */
+	/* textures/backgrounds/vr_MDVR_pal_static.o */
+		_vr_MDVR_pal_staticSegmentEnd    = 0x020C4D00; /* ROM:0x01BBA800 */
+		_vr_MNVR_staticSegmentRomStart   = 0x01BBB000; /* ROM:0x016B0B00 */
+
+/* vr_MNVR_static */
+		_vr_MNVR_staticSegmentStart      = 0x020C4D00; /* ROM:0x01BBB000 */
+	/* textures/backgrounds/vr_MNVR_static.o */
+		_vr_MNVR_staticSegmentDataStart  = 0x020C4D00; /* ROM:0x01BBB000 */
+	/* textures/backgrounds/vr_MNVR_static.o */
+		gMarketNightBgTex                = 0x020C4D00; /* ROM:0x01BBB000 */
+		gMarketNight2BgTex               = 0x020D4D00; /* ROM:0x01BCB000 */
+		gMarketNight3BgTex               = 0x020E4D00; /* ROM:0x01BDB000 */
+		gMarketNight4BgTex               = 0x020F4D00; /* ROM:0x01BEB000 */
+		_vr_MNVR_staticSegmentDataEnd    = 0x02104D00; /* ROM:0x01BFB000 */
+		_vr_MNVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB36300 */
+	/* textures/backgrounds/vr_MNVR_static.o */
+		_vr_MNVR_staticSegmentRomEnd     = 0x01BFB000; /* ROM:0x016F1300 */
+
+/* vr_MNVR_static.bss */
+	/* textures/backgrounds/vr_MNVR_static.o */
+		_vr_MNVR_staticSegmentEnd        = 0x02104D00; /* ROM:0x01BFB000 */
+		_vr_MNVR_pal_staticSegmentRomStart = 0x01BFB000; /* ROM:0x016F1300 */
+
+/* vr_MNVR_pal_static */
+		_vr_MNVR_pal_staticSegmentStart  = 0x02104D00; /* ROM:0x01BFB000 */
+	/* textures/backgrounds/vr_MNVR_pal_static.o */
+		_vr_MNVR_pal_staticSegmentDataStart = 0x02104D00; /* ROM:0x01BFB000 */
+	/* textures/backgrounds/vr_MNVR_pal_static.o */
+		gMarketNightBgTLUT               = 0x02104D00; /* ROM:0x01BFB000 */
+		gMarketNightBg2TLUT              = 0x02104F00; /* ROM:0x01BFB200 */
+		gMarketNightBg3TLUT              = 0x02105100; /* ROM:0x01BFB400 */
+		gMarketNightBg4TLUT              = 0x02105300; /* ROM:0x01BFB600 */
+		_vr_MNVR_pal_staticSegmentDataEnd = 0x02105500; /* ROM:0x01BFB800 */
+		_vr_MNVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAF6B00 */
+	/* textures/backgrounds/vr_MNVR_pal_static.o */
+		_vr_MNVR_pal_staticSegmentRomEnd = 0x01BFB800; /* ROM:0x016F1B00 */
+
+/* vr_MNVR_pal_static.bss */
+	/* textures/backgrounds/vr_MNVR_pal_static.o */
+		_vr_MNVR_pal_staticSegmentEnd    = 0x02105500; /* ROM:0x01BFB800 */
+		_vr_RUVR_staticSegmentRomStart   = 0x01BFC000; /* ROM:0x016F2300 */
+
+/* vr_RUVR_static */
+		_vr_RUVR_staticSegmentStart      = 0x02105500; /* ROM:0x01BFC000 */
+	/* textures/backgrounds/vr_RUVR_static.o */
+		_vr_RUVR_staticSegmentDataStart  = 0x02105500; /* ROM:0x01BFC000 */
+	/* textures/backgrounds/vr_RUVR_static.o */
+		gMarketRuinsBgTex                = 0x02105500; /* ROM:0x01BFC000 */
+		gMarketRuins2BgTex               = 0x02115500; /* ROM:0x01C0C000 */
+		gMarketRuins3BgTex               = 0x02125500; /* ROM:0x01C1C000 */
+		gMarketRuins4BgTex               = 0x02135500; /* ROM:0x01C2C000 */
+		_vr_RUVR_staticSegmentDataEnd    = 0x02145500; /* ROM:0x01C3C000 */
+		_vr_RUVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB36B00 */
+	/* textures/backgrounds/vr_RUVR_static.o */
+		_vr_RUVR_staticSegmentRomEnd     = 0x01C3C000; /* ROM:0x01732B00 */
+
+/* vr_RUVR_static.bss */
+	/* textures/backgrounds/vr_RUVR_static.o */
+		_vr_RUVR_staticSegmentEnd        = 0x02145500; /* ROM:0x01C3C000 */
+		_vr_RUVR_pal_staticSegmentRomStart = 0x01C3C000; /* ROM:0x01732B00 */
+
+/* vr_RUVR_pal_static */
+		_vr_RUVR_pal_staticSegmentStart  = 0x02145500; /* ROM:0x01C3C000 */
+	/* textures/backgrounds/vr_RUVR_pal_static.o */
+		_vr_RUVR_pal_staticSegmentDataStart = 0x02145500; /* ROM:0x01C3C000 */
+	/* textures/backgrounds/vr_RUVR_pal_static.o */
+		gMarketRuinsBgTLUT               = 0x02145500; /* ROM:0x01C3C000 */
+		gMarketRuinsBg2TLUT              = 0x02145700; /* ROM:0x01C3C200 */
+		gMarketRuinsBg3TLUT              = 0x02145900; /* ROM:0x01C3C400 */
+		gMarketRuinsBg4TLUT              = 0x02145B00; /* ROM:0x01C3C600 */
+		_vr_RUVR_pal_staticSegmentDataEnd = 0x02145D00; /* ROM:0x01C3C800 */
+		_vr_RUVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAF7300 */
+	/* textures/backgrounds/vr_RUVR_pal_static.o */
+		_vr_RUVR_pal_staticSegmentRomEnd = 0x01C3C800; /* ROM:0x01733300 */
+
+/* vr_RUVR_pal_static.bss */
+	/* textures/backgrounds/vr_RUVR_pal_static.o */
+		_vr_RUVR_pal_staticSegmentEnd    = 0x02145D00; /* ROM:0x01C3C800 */
+		_vr_LHVR_staticSegmentRomStart   = 0x01C3D000; /* ROM:0x01733B00 */
+
+/* vr_LHVR_static */
+		_vr_LHVR_staticSegmentStart      = 0x02145D00; /* ROM:0x01C3D000 */
+	/* textures/backgrounds/vr_LHVR_static.o */
+		_vr_LHVR_staticSegmentDataStart  = 0x02145D00; /* ROM:0x01C3D000 */
+	/* textures/backgrounds/vr_LHVR_static.o */
+		gLinksHouseBgTex                 = 0x02145D00; /* ROM:0x01C3D000 */
+		gLinksHouse2BgTex                = 0x02155D00; /* ROM:0x01C4D000 */
+		gLinksHouse3BgTex                = 0x02165D00; /* ROM:0x01C5D000 */
+		gLinksHouse4BgTex                = 0x02175D00; /* ROM:0x01C6D000 */
+		_vr_LHVR_staticSegmentDataEnd    = 0x02185D00; /* ROM:0x01C7D000 */
+		_vr_LHVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB37300 */
+	/* textures/backgrounds/vr_LHVR_static.o */
+		_vr_LHVR_staticSegmentRomEnd     = 0x01C7D000; /* ROM:0x01774300 */
+
+/* vr_LHVR_static.bss */
+	/* textures/backgrounds/vr_LHVR_static.o */
+		_vr_LHVR_staticSegmentEnd        = 0x02185D00; /* ROM:0x01C7D000 */
+		_vr_LHVR_pal_staticSegmentRomStart = 0x01C7D000; /* ROM:0x01774300 */
+
+/* vr_LHVR_pal_static */
+		_vr_LHVR_pal_staticSegmentStart  = 0x02185D00; /* ROM:0x01C7D000 */
+	/* textures/backgrounds/vr_LHVR_pal_static.o */
+		_vr_LHVR_pal_staticSegmentDataStart = 0x02185D00; /* ROM:0x01C7D000 */
+	/* textures/backgrounds/vr_LHVR_pal_static.o */
+		gLinksHouseBgTLUT                = 0x02185D00; /* ROM:0x01C7D000 */
+		gLinksHouseBg2TLUT               = 0x02185F00; /* ROM:0x01C7D200 */
+		gLinksHouseBg3TLUT               = 0x02186100; /* ROM:0x01C7D400 */
+		gLinksHouseBg4TLUT               = 0x02186300; /* ROM:0x01C7D600 */
+		_vr_LHVR_pal_staticSegmentDataEnd = 0x02186500; /* ROM:0x01C7D800 */
+		_vr_LHVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAF7B00 */
+	/* textures/backgrounds/vr_LHVR_pal_static.o */
+		_vr_LHVR_pal_staticSegmentRomEnd = 0x01C7D800; /* ROM:0x01774B00 */
+
+/* vr_LHVR_pal_static.bss */
+	/* textures/backgrounds/vr_LHVR_pal_static.o */
+		_vr_LHVR_pal_staticSegmentEnd    = 0x02186500; /* ROM:0x01C7D800 */
+		_vr_KHVR_staticSegmentRomStart   = 0x01C7E000; /* ROM:0x01775300 */
+
+/* vr_KHVR_static */
+		_vr_KHVR_staticSegmentStart      = 0x02186500; /* ROM:0x01C7E000 */
+	/* textures/backgrounds/vr_KHVR_static.o */
+		_vr_KHVR_staticSegmentDataStart  = 0x02186500; /* ROM:0x01C7E000 */
+	/* textures/backgrounds/vr_KHVR_static.o */
+		gKnowItAllBrosHouseBgTex         = 0x02186500; /* ROM:0x01C7E000 */
+		gKnowItAllBrosHouse2BgTex        = 0x02196500; /* ROM:0x01C8E000 */
+		gKnowItAllBrosHouse3BgTex        = 0x021A6500; /* ROM:0x01C9E000 */
+		gKnowItAllBrosHouse4BgTex        = 0x021B6500; /* ROM:0x01CAE000 */
+		_vr_KHVR_staticSegmentDataEnd    = 0x021C6500; /* ROM:0x01CBE000 */
+		_vr_KHVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB37B00 */
+	/* textures/backgrounds/vr_KHVR_static.o */
+		_vr_KHVR_staticSegmentRomEnd     = 0x01CBE000; /* ROM:0x017B5B00 */
+
+/* vr_KHVR_static.bss */
+	/* textures/backgrounds/vr_KHVR_static.o */
+		_vr_KHVR_staticSegmentEnd        = 0x021C6500; /* ROM:0x01CBE000 */
+		_vr_KHVR_pal_staticSegmentRomStart = 0x01CBE000; /* ROM:0x017B5B00 */
+
+/* vr_KHVR_pal_static */
+		_vr_KHVR_pal_staticSegmentStart  = 0x021C6500; /* ROM:0x01CBE000 */
+	/* textures/backgrounds/vr_KHVR_pal_static.o */
+		_vr_KHVR_pal_staticSegmentDataStart = 0x021C6500; /* ROM:0x01CBE000 */
+	/* textures/backgrounds/vr_KHVR_pal_static.o */
+		gKnowItAllBrosHouseBgTLUT        = 0x021C6500; /* ROM:0x01CBE000 */
+		gKnowItAllBrosHouseBg2TLUT       = 0x021C6700; /* ROM:0x01CBE200 */
+		gKnowItAllBrosHouseBg3TLUT       = 0x021C6900; /* ROM:0x01CBE400 */
+		gKnowItAllBrosHouseBg4TLUT       = 0x021C6B00; /* ROM:0x01CBE600 */
+		_vr_KHVR_pal_staticSegmentDataEnd = 0x021C6D00; /* ROM:0x01CBE800 */
+		_vr_KHVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAF8300 */
+	/* textures/backgrounds/vr_KHVR_pal_static.o */
+		_vr_KHVR_pal_staticSegmentRomEnd = 0x01CBE800; /* ROM:0x017B6300 */
+
+/* vr_KHVR_pal_static.bss */
+	/* textures/backgrounds/vr_KHVR_pal_static.o */
+		_vr_KHVR_pal_staticSegmentEnd    = 0x021C6D00; /* ROM:0x01CBE800 */
+		_vr_K3VR_staticSegmentRomStart   = 0x01CBF000; /* ROM:0x017B6B00 */
+
+/* vr_K3VR_static */
+		_vr_K3VR_staticSegmentStart      = 0x021C6D00; /* ROM:0x01CBF000 */
+	/* textures/backgrounds/vr_K3VR_static.o */
+		_vr_K3VR_staticSegmentDataStart  = 0x021C6D00; /* ROM:0x01CBF000 */
+	/* textures/backgrounds/vr_K3VR_static.o */
+		gHouseOfTwinsBgTex               = 0x021C6D00; /* ROM:0x01CBF000 */
+		gHouseOfTwins2BgTex              = 0x021D6D00; /* ROM:0x01CCF000 */
+		gHouseOfTwins3BgTex              = 0x021E6D00; /* ROM:0x01CDF000 */
+		_vr_K3VR_staticSegmentDataEnd    = 0x021F6D00; /* ROM:0x01CEF000 */
+		_vr_K3VR_staticSegmentDataSize   = 0x00030000; /* ROM:0xFFB28300 */
+	/* textures/backgrounds/vr_K3VR_static.o */
+		_vr_K3VR_staticSegmentRomEnd     = 0x01CEF000; /* ROM:0x017E7300 */
+
+/* vr_K3VR_static.bss */
+	/* textures/backgrounds/vr_K3VR_static.o */
+		_vr_K3VR_staticSegmentEnd        = 0x021F6D00; /* ROM:0x01CEF000 */
+		_vr_K3VR_pal_staticSegmentRomStart = 0x01CEF000; /* ROM:0x017E7300 */
+
+/* vr_K3VR_pal_static */
+		_vr_K3VR_pal_staticSegmentStart  = 0x021F6D00; /* ROM:0x01CEF000 */
+	/* textures/backgrounds/vr_K3VR_pal_static.o */
+		_vr_K3VR_pal_staticSegmentDataStart = 0x021F6D00; /* ROM:0x01CEF000 */
+	/* textures/backgrounds/vr_K3VR_pal_static.o */
+		gHouseOfTwinsBgTLUT              = 0x021F6D00; /* ROM:0x01CEF000 */
+		gHouseOfTwinsBg2TLUT             = 0x021F6F00; /* ROM:0x01CEF200 */
+		gHouseOfTwinsBg3TLUT             = 0x021F7100; /* ROM:0x01CEF400 */
+		_vr_K3VR_pal_staticSegmentDataEnd = 0x021F7300; /* ROM:0x01CEF600 */
+		_vr_K3VR_pal_staticSegmentDataSize = 0x00000600; /* ROM:0xFFAF8900 */
+	/* textures/backgrounds/vr_K3VR_pal_static.o */
+		_vr_K3VR_pal_staticSegmentRomEnd = 0x01CEF600; /* ROM:0x017E7900 */
+
+/* vr_K3VR_pal_static.bss */
+	/* textures/backgrounds/vr_K3VR_pal_static.o */
+		_vr_K3VR_pal_staticSegmentEnd    = 0x021F7300; /* ROM:0x01CEF600 */
+		_vr_K4VR_staticSegmentRomStart   = 0x01CF0000; /* ROM:0x017E8300 */
+
+/* vr_K4VR_static */
+		_vr_K4VR_staticSegmentStart      = 0x021F7300; /* ROM:0x01CF0000 */
+	/* textures/backgrounds/vr_K4VR_static.o */
+		_vr_K4VR_staticSegmentDataStart  = 0x021F7300; /* ROM:0x01CF0000 */
+	/* textures/backgrounds/vr_K4VR_static.o */
+		gMidosHouseBgTex                 = 0x021F7300; /* ROM:0x01CF0000 */
+		gMidosHouse2BgTex                = 0x02207300; /* ROM:0x01D00000 */
+		gMidosHouse3BgTex                = 0x02217300; /* ROM:0x01D10000 */
+		_vr_K4VR_staticSegmentDataEnd    = 0x02227300; /* ROM:0x01D20000 */
+		_vr_K4VR_staticSegmentDataSize   = 0x00030000; /* ROM:0xFFB28D00 */
+	/* textures/backgrounds/vr_K4VR_static.o */
+		_vr_K4VR_staticSegmentRomEnd     = 0x01D20000; /* ROM:0x01818D00 */
+
+/* vr_K4VR_static.bss */
+	/* textures/backgrounds/vr_K4VR_static.o */
+		_vr_K4VR_staticSegmentEnd        = 0x02227300; /* ROM:0x01D20000 */
+		_vr_K4VR_pal_staticSegmentRomStart = 0x01D20000; /* ROM:0x01818D00 */
+
+/* vr_K4VR_pal_static */
+		_vr_K4VR_pal_staticSegmentStart  = 0x02227300; /* ROM:0x01D20000 */
+	/* textures/backgrounds/vr_K4VR_pal_static.o */
+		_vr_K4VR_pal_staticSegmentDataStart = 0x02227300; /* ROM:0x01D20000 */
+	/* textures/backgrounds/vr_K4VR_pal_static.o */
+		gMidosHouseBgTLUT                = 0x02227300; /* ROM:0x01D20000 */
+		gMidosHouseBg2TLUT               = 0x02227500; /* ROM:0x01D20200 */
+		gMidosHouseBg3TLUT               = 0x02227700; /* ROM:0x01D20400 */
+		_vr_K4VR_pal_staticSegmentDataEnd = 0x02227900; /* ROM:0x01D20600 */
+		_vr_K4VR_pal_staticSegmentDataSize = 0x00000600; /* ROM:0xFFAF9300 */
+	/* textures/backgrounds/vr_K4VR_pal_static.o */
+		_vr_K4VR_pal_staticSegmentRomEnd = 0x01D20600; /* ROM:0x01819300 */
+
+/* vr_K4VR_pal_static.bss */
+	/* textures/backgrounds/vr_K4VR_pal_static.o */
+		_vr_K4VR_pal_staticSegmentEnd    = 0x02227900; /* ROM:0x01D20600 */
+		_vr_K5VR_staticSegmentRomStart   = 0x01D21000; /* ROM:0x01819D00 */
+
+/* vr_K5VR_static */
+		_vr_K5VR_staticSegmentStart      = 0x02227900; /* ROM:0x01D21000 */
+	/* textures/backgrounds/vr_K5VR_static.o */
+		_vr_K5VR_staticSegmentDataStart  = 0x02227900; /* ROM:0x01D21000 */
+	/* textures/backgrounds/vr_K5VR_static.o */
+		gSariasHouseBgTex                = 0x02227900; /* ROM:0x01D21000 */
+		gSariasHouse2BgTex               = 0x02237900; /* ROM:0x01D31000 */
+		gSariasHouse3BgTex               = 0x02247900; /* ROM:0x01D41000 */
+		_vr_K5VR_staticSegmentDataEnd    = 0x02257900; /* ROM:0x01D51000 */
+		_vr_K5VR_staticSegmentDataSize   = 0x00030000; /* ROM:0xFFB29700 */
+	/* textures/backgrounds/vr_K5VR_static.o */
+		_vr_K5VR_staticSegmentRomEnd     = 0x01D51000; /* ROM:0x0184A700 */
+
+/* vr_K5VR_static.bss */
+	/* textures/backgrounds/vr_K5VR_static.o */
+		_vr_K5VR_staticSegmentEnd        = 0x02257900; /* ROM:0x01D51000 */
+		_vr_K5VR_pal_staticSegmentRomStart = 0x01D51000; /* ROM:0x0184A700 */
+
+/* vr_K5VR_pal_static */
+		_vr_K5VR_pal_staticSegmentStart  = 0x02257900; /* ROM:0x01D51000 */
+	/* textures/backgrounds/vr_K5VR_pal_static.o */
+		_vr_K5VR_pal_staticSegmentDataStart = 0x02257900; /* ROM:0x01D51000 */
+	/* textures/backgrounds/vr_K5VR_pal_static.o */
+		gSariasHouseBgTLUT               = 0x02257900; /* ROM:0x01D51000 */
+		gSariasHouseBg2TLUT              = 0x02257B00; /* ROM:0x01D51200 */
+		gSariasHouseBg3TLUT              = 0x02257D00; /* ROM:0x01D51400 */
+		_vr_K5VR_pal_staticSegmentDataEnd = 0x02257F00; /* ROM:0x01D51600 */
+		_vr_K5VR_pal_staticSegmentDataSize = 0x00000600; /* ROM:0xFFAF9D00 */
+	/* textures/backgrounds/vr_K5VR_pal_static.o */
+		_vr_K5VR_pal_staticSegmentRomEnd = 0x01D51600; /* ROM:0x0184AD00 */
+
+/* vr_K5VR_pal_static.bss */
+	/* textures/backgrounds/vr_K5VR_pal_static.o */
+		_vr_K5VR_pal_staticSegmentEnd    = 0x02257F00; /* ROM:0x01D51600 */
+		_vr_SP1a_staticSegmentRomStart   = 0x01D52000; /* ROM:0x0184B700 */
+
+/* vr_SP1a_static */
+		_vr_SP1a_staticSegmentStart      = 0x02257F00; /* ROM:0x01D52000 */
+	/* textures/backgrounds/vr_SP1a_static.o */
+		_vr_SP1a_staticSegmentDataStart  = 0x02257F00; /* ROM:0x01D52000 */
+	/* textures/backgrounds/vr_SP1a_static.o */
+		gBazaarBgTex                     = 0x02257F00; /* ROM:0x01D52000 */
+		gBazaar2BgTex                    = 0x02267F00; /* ROM:0x01D62000 */
+		_vr_SP1a_staticSegmentDataEnd    = 0x02277F00; /* ROM:0x01D72000 */
+		_vr_SP1a_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1A100 */
+	/* textures/backgrounds/vr_SP1a_static.o */
+		_vr_SP1a_staticSegmentRomEnd     = 0x01D72000; /* ROM:0x0186C100 */
+
+/* vr_SP1a_static.bss */
+	/* textures/backgrounds/vr_SP1a_static.o */
+		_vr_SP1a_staticSegmentEnd        = 0x02277F00; /* ROM:0x01D72000 */
+		_vr_SP1a_pal_staticSegmentRomStart = 0x01D72000; /* ROM:0x0186C100 */
+
+/* vr_SP1a_pal_static */
+		_vr_SP1a_pal_staticSegmentStart  = 0x02277F00; /* ROM:0x01D72000 */
+	/* textures/backgrounds/vr_SP1a_pal_static.o */
+		_vr_SP1a_pal_staticSegmentDataStart = 0x02277F00; /* ROM:0x01D72000 */
+	/* textures/backgrounds/vr_SP1a_pal_static.o */
+		gBazaarBgTLUT                    = 0x02277F00; /* ROM:0x01D72000 */
+		gBazaarBg2TLUT                   = 0x02278100; /* ROM:0x01D72200 */
+		_vr_SP1a_pal_staticSegmentDataEnd = 0x02278300; /* ROM:0x01D72400 */
+		_vr_SP1a_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFAFA500 */
+	/* textures/backgrounds/vr_SP1a_pal_static.o */
+		_vr_SP1a_pal_staticSegmentRomEnd = 0x01D72400; /* ROM:0x0186C500 */
+
+/* vr_SP1a_pal_static.bss */
+	/* textures/backgrounds/vr_SP1a_pal_static.o */
+		_vr_SP1a_pal_staticSegmentEnd    = 0x02278300; /* ROM:0x01D72400 */
+		_vr_MLVR_staticSegmentRomStart   = 0x01D73000; /* ROM:0x0186D100 */
+
+/* vr_MLVR_static */
+		_vr_MLVR_staticSegmentStart      = 0x02278300; /* ROM:0x01D73000 */
+	/* textures/backgrounds/vr_MLVR_static.o */
+		_vr_MLVR_staticSegmentDataStart  = 0x02278300; /* ROM:0x01D73000 */
+	/* textures/backgrounds/vr_MLVR_static.o */
+		gStableBgTex                     = 0x02278300; /* ROM:0x01D73000 */
+		gStable2BgTex                    = 0x02288300; /* ROM:0x01D83000 */
+		gStable3BgTex                    = 0x02298300; /* ROM:0x01D93000 */
+		gStable4BgTex                    = 0x022A8300; /* ROM:0x01DA3000 */
+		_vr_MLVR_staticSegmentDataEnd    = 0x022B8300; /* ROM:0x01DB3000 */
+		_vr_MLVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB3AD00 */
+	/* textures/backgrounds/vr_MLVR_static.o */
+		_vr_MLVR_staticSegmentRomEnd     = 0x01DB3000; /* ROM:0x018ADD00 */
+
+/* vr_MLVR_static.bss */
+	/* textures/backgrounds/vr_MLVR_static.o */
+		_vr_MLVR_staticSegmentEnd        = 0x022B8300; /* ROM:0x01DB3000 */
+		_vr_MLVR_pal_staticSegmentRomStart = 0x01DB3000; /* ROM:0x018ADD00 */
+
+/* vr_MLVR_pal_static */
+		_vr_MLVR_pal_staticSegmentStart  = 0x022B8300; /* ROM:0x01DB3000 */
+	/* textures/backgrounds/vr_MLVR_pal_static.o */
+		_vr_MLVR_pal_staticSegmentDataStart = 0x022B8300; /* ROM:0x01DB3000 */
+	/* textures/backgrounds/vr_MLVR_pal_static.o */
+		gStableBgTLUT                    = 0x022B8300; /* ROM:0x01DB3000 */
+		gStableBg2TLUT                   = 0x022B8500; /* ROM:0x01DB3200 */
+		gStableBg3TLUT                   = 0x022B8700; /* ROM:0x01DB3400 */
+		gStableBg4TLUT                   = 0x022B8900; /* ROM:0x01DB3600 */
+		_vr_MLVR_pal_staticSegmentDataEnd = 0x022B8B00; /* ROM:0x01DB3800 */
+		_vr_MLVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAFB500 */
+	/* textures/backgrounds/vr_MLVR_pal_static.o */
+		_vr_MLVR_pal_staticSegmentRomEnd = 0x01DB3800; /* ROM:0x018AE500 */
+
+/* vr_MLVR_pal_static.bss */
+	/* textures/backgrounds/vr_MLVR_pal_static.o */
+		_vr_MLVR_pal_staticSegmentEnd    = 0x022B8B00; /* ROM:0x01DB3800 */
+		_vr_KKRVR_staticSegmentRomStart  = 0x01DB4000; /* ROM:0x018AED00 */
+
+/* vr_KKRVR_static */
+		_vr_KKRVR_staticSegmentStart     = 0x022B8B00; /* ROM:0x01DB4000 */
+	/* textures/backgrounds/vr_KKRVR_static.o */
+		_vr_KKRVR_staticSegmentDataStart = 0x022B8B00; /* ROM:0x01DB4000 */
+	/* textures/backgrounds/vr_KKRVR_static.o */
+		gCarpentersHouseBgTex            = 0x022B8B00; /* ROM:0x01DB4000 */
+		gCarpentersHouse2BgTex           = 0x022C8B00; /* ROM:0x01DC4000 */
+		gCarpentersHouse3BgTex           = 0x022D8B00; /* ROM:0x01DD4000 */
+		gCarpentersHouse4BgTex           = 0x022E8B00; /* ROM:0x01DE4000 */
+		_vr_KKRVR_staticSegmentDataEnd   = 0x022F8B00; /* ROM:0x01DF4000 */
+		_vr_KKRVR_staticSegmentDataSize  = 0x00040000; /* ROM:0xFFB3B500 */
+	/* textures/backgrounds/vr_KKRVR_static.o */
+		_vr_KKRVR_staticSegmentRomEnd    = 0x01DF4000; /* ROM:0x018EF500 */
+
+/* vr_KKRVR_static.bss */
+	/* textures/backgrounds/vr_KKRVR_static.o */
+		_vr_KKRVR_staticSegmentEnd       = 0x022F8B00; /* ROM:0x01DF4000 */
+		_vr_KKRVR_pal_staticSegmentRomStart = 0x01DF4000; /* ROM:0x018EF500 */
+
+/* vr_KKRVR_pal_static */
+		_vr_KKRVR_pal_staticSegmentStart = 0x022F8B00; /* ROM:0x01DF4000 */
+	/* textures/backgrounds/vr_KKRVR_pal_static.o */
+		_vr_KKRVR_pal_staticSegmentDataStart = 0x022F8B00; /* ROM:0x01DF4000 */
+	/* textures/backgrounds/vr_KKRVR_pal_static.o */
+		gCarpentersHouseBgTLUT           = 0x022F8B00; /* ROM:0x01DF4000 */
+		gCarpentersHouseBg2TLUT          = 0x022F8D00; /* ROM:0x01DF4200 */
+		gCarpentersHouseBg3TLUT          = 0x022F8F00; /* ROM:0x01DF4400 */
+		gCarpentersHouseBg4TLUT          = 0x022F9100; /* ROM:0x01DF4600 */
+		_vr_KKRVR_pal_staticSegmentDataEnd = 0x022F9300; /* ROM:0x01DF4800 */
+		_vr_KKRVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAFBD00 */
+	/* textures/backgrounds/vr_KKRVR_pal_static.o */
+		_vr_KKRVR_pal_staticSegmentRomEnd = 0x01DF4800; /* ROM:0x018EFD00 */
+
+/* vr_KKRVR_pal_static.bss */
+	/* textures/backgrounds/vr_KKRVR_pal_static.o */
+		_vr_KKRVR_pal_staticSegmentEnd   = 0x022F9300; /* ROM:0x01DF4800 */
+		_vr_KR3VR_staticSegmentRomStart  = 0x01DF5000; /* ROM:0x018F0500 */
+
+/* vr_KR3VR_static */
+		_vr_KR3VR_staticSegmentStart     = 0x022F9300; /* ROM:0x01DF5000 */
+	/* textures/backgrounds/vr_KR3VR_static.o */
+		_vr_KR3VR_staticSegmentDataStart = 0x022F9300; /* ROM:0x01DF5000 */
+	/* textures/backgrounds/vr_KR3VR_static.o */
+		gBackAlleyHouseBgTex             = 0x022F9300; /* ROM:0x01DF5000 */
+		gBackAlleyHouse2BgTex            = 0x02309300; /* ROM:0x01E05000 */
+		gBackAlleyHouse3BgTex            = 0x02319300; /* ROM:0x01E15000 */
+		_vr_KR3VR_staticSegmentDataEnd   = 0x02329300; /* ROM:0x01E25000 */
+		_vr_KR3VR_staticSegmentDataSize  = 0x00030000; /* ROM:0xFFB2BD00 */
+	/* textures/backgrounds/vr_KR3VR_static.o */
+		_vr_KR3VR_staticSegmentRomEnd    = 0x01E25000; /* ROM:0x01920D00 */
+
+/* vr_KR3VR_static.bss */
+	/* textures/backgrounds/vr_KR3VR_static.o */
+		_vr_KR3VR_staticSegmentEnd       = 0x02329300; /* ROM:0x01E25000 */
+		_vr_KR3VR_pal_staticSegmentRomStart = 0x01E25000; /* ROM:0x01920D00 */
+
+/* vr_KR3VR_pal_static */
+		_vr_KR3VR_pal_staticSegmentStart = 0x02329300; /* ROM:0x01E25000 */
+	/* textures/backgrounds/vr_KR3VR_pal_static.o */
+		_vr_KR3VR_pal_staticSegmentDataStart = 0x02329300; /* ROM:0x01E25000 */
+	/* textures/backgrounds/vr_KR3VR_pal_static.o */
+		gBackAlleyHouseBgTLUT            = 0x02329300; /* ROM:0x01E25000 */
+		gBackAlleyHouseBg2TLUT           = 0x02329500; /* ROM:0x01E25200 */
+		gBackAlleyHouseBg3TLUT           = 0x02329700; /* ROM:0x01E25400 */
+		_vr_KR3VR_pal_staticSegmentDataEnd = 0x02329900; /* ROM:0x01E25600 */
+		_vr_KR3VR_pal_staticSegmentDataSize = 0x00000600; /* ROM:0xFFAFC300 */
+	/* textures/backgrounds/vr_KR3VR_pal_static.o */
+		_vr_KR3VR_pal_staticSegmentRomEnd = 0x01E25600; /* ROM:0x01921300 */
+
+/* vr_KR3VR_pal_static.bss */
+	/* textures/backgrounds/vr_KR3VR_pal_static.o */
+		_vr_KR3VR_pal_staticSegmentEnd   = 0x02329900; /* ROM:0x01E25600 */
+		_vr_IPVR_staticSegmentRomStart   = 0x01E26000; /* ROM:0x01921D00 */
+
+/* vr_IPVR_static */
+		_vr_IPVR_staticSegmentStart      = 0x02329900; /* ROM:0x01E26000 */
+	/* textures/backgrounds/vr_IPVR_static.o */
+		_vr_IPVR_staticSegmentDataStart  = 0x02329900; /* ROM:0x01E26000 */
+	/* textures/backgrounds/vr_IPVR_static.o */
+		gRichardsHouseBgTex              = 0x02329900; /* ROM:0x01E26000 */
+		gRichardsHouse2BgTex             = 0x02339900; /* ROM:0x01E36000 */
+		gRichardsHouse3BgTex             = 0x02349900; /* ROM:0x01E46000 */
+		gRichardsHouse4BgTex             = 0x02359900; /* ROM:0x01E56000 */
+		_vr_IPVR_staticSegmentDataEnd    = 0x02369900; /* ROM:0x01E66000 */
+		_vr_IPVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB3C700 */
+	/* textures/backgrounds/vr_IPVR_static.o */
+		_vr_IPVR_staticSegmentRomEnd     = 0x01E66000; /* ROM:0x01962700 */
+
+/* vr_IPVR_static.bss */
+	/* textures/backgrounds/vr_IPVR_static.o */
+		_vr_IPVR_staticSegmentEnd        = 0x02369900; /* ROM:0x01E66000 */
+		_vr_IPVR_pal_staticSegmentRomStart = 0x01E66000; /* ROM:0x01962700 */
+
+/* vr_IPVR_pal_static */
+		_vr_IPVR_pal_staticSegmentStart  = 0x02369900; /* ROM:0x01E66000 */
+	/* textures/backgrounds/vr_IPVR_pal_static.o */
+		_vr_IPVR_pal_staticSegmentDataStart = 0x02369900; /* ROM:0x01E66000 */
+	/* textures/backgrounds/vr_IPVR_pal_static.o */
+		gRichardsHouseBgTLUT             = 0x02369900; /* ROM:0x01E66000 */
+		gRichardsHouseBg2TLUT            = 0x02369B00; /* ROM:0x01E66200 */
+		gRichardsHouseBg3TLUT            = 0x02369D00; /* ROM:0x01E66400 */
+		gRichardsHouseBg4TLUT            = 0x02369F00; /* ROM:0x01E66600 */
+		_vr_IPVR_pal_staticSegmentDataEnd = 0x0236A100; /* ROM:0x01E66800 */
+		_vr_IPVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFAFCF00 */
+	/* textures/backgrounds/vr_IPVR_pal_static.o */
+		_vr_IPVR_pal_staticSegmentRomEnd = 0x01E66800; /* ROM:0x01962F00 */
+
+/* vr_IPVR_pal_static.bss */
+	/* textures/backgrounds/vr_IPVR_pal_static.o */
+		_vr_IPVR_pal_staticSegmentEnd    = 0x0236A100; /* ROM:0x01E66800 */
+		_vr_KSVR_staticSegmentRomStart   = 0x01E67000; /* ROM:0x01963700 */
+
+/* vr_KSVR_static */
+		_vr_KSVR_staticSegmentStart      = 0x0236A100; /* ROM:0x01E67000 */
+	/* textures/backgrounds/vr_KSVR_static.o */
+		_vr_KSVR_staticSegmentDataStart  = 0x0236A100; /* ROM:0x01E67000 */
+	/* textures/backgrounds/vr_KSVR_static.o */
+		gKokiriShopBgTex                 = 0x0236A100; /* ROM:0x01E67000 */
+		gKokiriShop2BgTex                = 0x0237A100; /* ROM:0x01E77000 */
+		_vr_KSVR_staticSegmentDataEnd    = 0x0238A100; /* ROM:0x01E87000 */
+		_vr_KSVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1CF00 */
+	/* textures/backgrounds/vr_KSVR_static.o */
+		_vr_KSVR_staticSegmentRomEnd     = 0x01E87000; /* ROM:0x01983F00 */
+
+/* vr_KSVR_static.bss */
+	/* textures/backgrounds/vr_KSVR_static.o */
+		_vr_KSVR_staticSegmentEnd        = 0x0238A100; /* ROM:0x01E87000 */
+		_vr_KSVR_pal_staticSegmentRomStart = 0x01E87000; /* ROM:0x01983F00 */
+
+/* vr_KSVR_pal_static */
+		_vr_KSVR_pal_staticSegmentStart  = 0x0238A100; /* ROM:0x01E87000 */
+	/* textures/backgrounds/vr_KSVR_pal_static.o */
+		_vr_KSVR_pal_staticSegmentDataStart = 0x0238A100; /* ROM:0x01E87000 */
+	/* textures/backgrounds/vr_KSVR_pal_static.o */
+		gKokiriShopBgTLUT                = 0x0238A100; /* ROM:0x01E87000 */
+		gKokiriShopBg2TLUT               = 0x0238A300; /* ROM:0x01E87200 */
+		_vr_KSVR_pal_staticSegmentDataEnd = 0x0238A500; /* ROM:0x01E87400 */
+		_vr_KSVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFAFD300 */
+	/* textures/backgrounds/vr_KSVR_pal_static.o */
+		_vr_KSVR_pal_staticSegmentRomEnd = 0x01E87400; /* ROM:0x01984300 */
+
+/* vr_KSVR_pal_static.bss */
+	/* textures/backgrounds/vr_KSVR_pal_static.o */
+		_vr_KSVR_pal_staticSegmentEnd    = 0x0238A500; /* ROM:0x01E87400 */
+		_vr_GLVR_staticSegmentRomStart   = 0x01E88000; /* ROM:0x01984F00 */
+
+/* vr_GLVR_static */
+		_vr_GLVR_staticSegmentStart      = 0x0238A500; /* ROM:0x01E88000 */
+	/* textures/backgrounds/vr_GLVR_static.o */
+		_vr_GLVR_staticSegmentDataStart  = 0x0238A500; /* ROM:0x01E88000 */
+	/* textures/backgrounds/vr_GLVR_static.o */
+		gGoronShopBgTex                  = 0x0238A500; /* ROM:0x01E88000 */
+		gGoronShop2BgTex                 = 0x0239A500; /* ROM:0x01E98000 */
+		_vr_GLVR_staticSegmentDataEnd    = 0x023AA500; /* ROM:0x01EA8000 */
+		_vr_GLVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1DB00 */
+	/* textures/backgrounds/vr_GLVR_static.o */
+		_vr_GLVR_staticSegmentRomEnd     = 0x01EA8000; /* ROM:0x019A5B00 */
+
+/* vr_GLVR_static.bss */
+	/* textures/backgrounds/vr_GLVR_static.o */
+		_vr_GLVR_staticSegmentEnd        = 0x023AA500; /* ROM:0x01EA8000 */
+		_vr_GLVR_pal_staticSegmentRomStart = 0x01EA8000; /* ROM:0x019A5B00 */
+
+/* vr_GLVR_pal_static */
+		_vr_GLVR_pal_staticSegmentStart  = 0x023AA500; /* ROM:0x01EA8000 */
+	/* textures/backgrounds/vr_GLVR_pal_static.o */
+		_vr_GLVR_pal_staticSegmentDataStart = 0x023AA500; /* ROM:0x01EA8000 */
+	/* textures/backgrounds/vr_GLVR_pal_static.o */
+		gGoronShopBgTLUT                 = 0x023AA500; /* ROM:0x01EA8000 */
+		gGoronShopBg2TLUT                = 0x023AA700; /* ROM:0x01EA8200 */
+		_vr_GLVR_pal_staticSegmentDataEnd = 0x023AA900; /* ROM:0x01EA8400 */
+		_vr_GLVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFAFDF00 */
+	/* textures/backgrounds/vr_GLVR_pal_static.o */
+		_vr_GLVR_pal_staticSegmentRomEnd = 0x01EA8400; /* ROM:0x019A5F00 */
+
+/* vr_GLVR_pal_static.bss */
+	/* textures/backgrounds/vr_GLVR_pal_static.o */
+		_vr_GLVR_pal_staticSegmentEnd    = 0x023AA900; /* ROM:0x01EA8400 */
+		_vr_ZRVR_staticSegmentRomStart   = 0x01EA9000; /* ROM:0x019A6B00 */
+
+/* vr_ZRVR_static */
+		_vr_ZRVR_staticSegmentStart      = 0x023AA900; /* ROM:0x01EA9000 */
+	/* textures/backgrounds/vr_ZRVR_static.o */
+		_vr_ZRVR_staticSegmentDataStart  = 0x023AA900; /* ROM:0x01EA9000 */
+	/* textures/backgrounds/vr_ZRVR_static.o */
+		gZoraShopBgTex                   = 0x023AA900; /* ROM:0x01EA9000 */
+		gZoraShop2BgTex                  = 0x023BA900; /* ROM:0x01EB9000 */
+		_vr_ZRVR_staticSegmentDataEnd    = 0x023CA900; /* ROM:0x01EC9000 */
+		_vr_ZRVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1E700 */
+	/* textures/backgrounds/vr_ZRVR_static.o */
+		_vr_ZRVR_staticSegmentRomEnd     = 0x01EC9000; /* ROM:0x019C7700 */
+
+/* vr_ZRVR_static.bss */
+	/* textures/backgrounds/vr_ZRVR_static.o */
+		_vr_ZRVR_staticSegmentEnd        = 0x023CA900; /* ROM:0x01EC9000 */
+		_vr_ZRVR_pal_staticSegmentRomStart = 0x01EC9000; /* ROM:0x019C7700 */
+
+/* vr_ZRVR_pal_static */
+		_vr_ZRVR_pal_staticSegmentStart  = 0x023CA900; /* ROM:0x01EC9000 */
+	/* textures/backgrounds/vr_ZRVR_pal_static.o */
+		_vr_ZRVR_pal_staticSegmentDataStart = 0x023CA900; /* ROM:0x01EC9000 */
+	/* textures/backgrounds/vr_ZRVR_pal_static.o */
+		gZoraShopBgTLUT                  = 0x023CA900; /* ROM:0x01EC9000 */
+		gZoraShopBg2TLUT                 = 0x023CAB00; /* ROM:0x01EC9200 */
+		_vr_ZRVR_pal_staticSegmentDataEnd = 0x023CAD00; /* ROM:0x01EC9400 */
+		_vr_ZRVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFAFEB00 */
+	/* textures/backgrounds/vr_ZRVR_pal_static.o */
+		_vr_ZRVR_pal_staticSegmentRomEnd = 0x01EC9400; /* ROM:0x019C7B00 */
+
+/* vr_ZRVR_pal_static.bss */
+	/* textures/backgrounds/vr_ZRVR_pal_static.o */
+		_vr_ZRVR_pal_staticSegmentEnd    = 0x023CAD00; /* ROM:0x01EC9400 */
+		_vr_DGVR_staticSegmentRomStart   = 0x01ECA000; /* ROM:0x019C8700 */
+
+/* vr_DGVR_static */
+		_vr_DGVR_staticSegmentStart      = 0x023CAD00; /* ROM:0x01ECA000 */
+	/* textures/backgrounds/vr_DGVR_static.o */
+		_vr_DGVR_staticSegmentDataStart  = 0x023CAD00; /* ROM:0x01ECA000 */
+	/* textures/backgrounds/vr_DGVR_static.o */
+		gKakPotionShopBgTex              = 0x023CAD00; /* ROM:0x01ECA000 */
+		gKakPotionShop2BgTex             = 0x023DAD00; /* ROM:0x01EDA000 */
+		_vr_DGVR_staticSegmentDataEnd    = 0x023EAD00; /* ROM:0x01EEA000 */
+		_vr_DGVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1F300 */
+	/* textures/backgrounds/vr_DGVR_static.o */
+		_vr_DGVR_staticSegmentRomEnd     = 0x01EEA000; /* ROM:0x019E9300 */
+
+/* vr_DGVR_static.bss */
+	/* textures/backgrounds/vr_DGVR_static.o */
+		_vr_DGVR_staticSegmentEnd        = 0x023EAD00; /* ROM:0x01EEA000 */
+		_vr_DGVR_pal_staticSegmentRomStart = 0x01EEA000; /* ROM:0x019E9300 */
+
+/* vr_DGVR_pal_static */
+		_vr_DGVR_pal_staticSegmentStart  = 0x023EAD00; /* ROM:0x01EEA000 */
+	/* textures/backgrounds/vr_DGVR_pal_static.o */
+		_vr_DGVR_pal_staticSegmentDataStart = 0x023EAD00; /* ROM:0x01EEA000 */
+	/* textures/backgrounds/vr_DGVR_pal_static.o */
+		gKakPotionShopBgTLUT             = 0x023EAD00; /* ROM:0x01EEA000 */
+		gKakPotionShopBg2TLUT            = 0x023EAF00; /* ROM:0x01EEA200 */
+		_vr_DGVR_pal_staticSegmentDataEnd = 0x023EB100; /* ROM:0x01EEA400 */
+		_vr_DGVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFAFF700 */
+	/* textures/backgrounds/vr_DGVR_pal_static.o */
+		_vr_DGVR_pal_staticSegmentRomEnd = 0x01EEA400; /* ROM:0x019E9700 */
+
+/* vr_DGVR_pal_static.bss */
+	/* textures/backgrounds/vr_DGVR_pal_static.o */
+		_vr_DGVR_pal_staticSegmentEnd    = 0x023EB100; /* ROM:0x01EEA400 */
+		_vr_ALVR_staticSegmentRomStart   = 0x01EEB000; /* ROM:0x019EA300 */
+
+/* vr_ALVR_static */
+		_vr_ALVR_staticSegmentStart      = 0x023EB100; /* ROM:0x01EEB000 */
+	/* textures/backgrounds/vr_ALVR_static.o */
+		_vr_ALVR_staticSegmentDataStart  = 0x023EB100; /* ROM:0x01EEB000 */
+	/* textures/backgrounds/vr_ALVR_static.o */
+		gMarketPotionShopBgTex           = 0x023EB100; /* ROM:0x01EEB000 */
+		gMarketPotionShop2BgTex          = 0x023FB100; /* ROM:0x01EFB000 */
+		_vr_ALVR_staticSegmentDataEnd    = 0x0240B100; /* ROM:0x01F0B000 */
+		_vr_ALVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB1FF00 */
+	/* textures/backgrounds/vr_ALVR_static.o */
+		_vr_ALVR_staticSegmentRomEnd     = 0x01F0B000; /* ROM:0x01A0AF00 */
+
+/* vr_ALVR_static.bss */
+	/* textures/backgrounds/vr_ALVR_static.o */
+		_vr_ALVR_staticSegmentEnd        = 0x0240B100; /* ROM:0x01F0B000 */
+		_vr_ALVR_pal_staticSegmentRomStart = 0x01F0B000; /* ROM:0x01A0AF00 */
+
+/* vr_ALVR_pal_static */
+		_vr_ALVR_pal_staticSegmentStart  = 0x0240B100; /* ROM:0x01F0B000 */
+	/* textures/backgrounds/vr_ALVR_pal_static.o */
+		_vr_ALVR_pal_staticSegmentDataStart = 0x0240B100; /* ROM:0x01F0B000 */
+	/* textures/backgrounds/vr_ALVR_pal_static.o */
+		gMarketPotionShopBgTLUT          = 0x0240B100; /* ROM:0x01F0B000 */
+		gMarketPotionShopBg2TLUT         = 0x0240B300; /* ROM:0x01F0B200 */
+		_vr_ALVR_pal_staticSegmentDataEnd = 0x0240B500; /* ROM:0x01F0B400 */
+		_vr_ALVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFB00300 */
+	/* textures/backgrounds/vr_ALVR_pal_static.o */
+		_vr_ALVR_pal_staticSegmentRomEnd = 0x01F0B400; /* ROM:0x01A0B300 */
+
+/* vr_ALVR_pal_static.bss */
+	/* textures/backgrounds/vr_ALVR_pal_static.o */
+		_vr_ALVR_pal_staticSegmentEnd    = 0x0240B500; /* ROM:0x01F0B400 */
+		_vr_NSVR_staticSegmentRomStart   = 0x01F0C000; /* ROM:0x01A0BF00 */
+
+/* vr_NSVR_static */
+		_vr_NSVR_staticSegmentStart      = 0x0240B500; /* ROM:0x01F0C000 */
+	/* textures/backgrounds/vr_NSVR_static.o */
+		_vr_NSVR_staticSegmentDataStart  = 0x0240B500; /* ROM:0x01F0C000 */
+	/* textures/backgrounds/vr_NSVR_static.o */
+		gBombchuShopBgTex                = 0x0240B500; /* ROM:0x01F0C000 */
+		gBombchuShop2BgTex               = 0x0241B500; /* ROM:0x01F1C000 */
+		_vr_NSVR_staticSegmentDataEnd    = 0x0242B500; /* ROM:0x01F2C000 */
+		_vr_NSVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB20B00 */
+	/* textures/backgrounds/vr_NSVR_static.o */
+		_vr_NSVR_staticSegmentRomEnd     = 0x01F2C000; /* ROM:0x01A2CB00 */
+
+/* vr_NSVR_static.bss */
+	/* textures/backgrounds/vr_NSVR_static.o */
+		_vr_NSVR_staticSegmentEnd        = 0x0242B500; /* ROM:0x01F2C000 */
+		_vr_NSVR_pal_staticSegmentRomStart = 0x01F2C000; /* ROM:0x01A2CB00 */
+
+/* vr_NSVR_pal_static */
+		_vr_NSVR_pal_staticSegmentStart  = 0x0242B500; /* ROM:0x01F2C000 */
+	/* textures/backgrounds/vr_NSVR_pal_static.o */
+		_vr_NSVR_pal_staticSegmentDataStart = 0x0242B500; /* ROM:0x01F2C000 */
+	/* textures/backgrounds/vr_NSVR_pal_static.o */
+		gBombchuShopBgTLUT               = 0x0242B500; /* ROM:0x01F2C000 */
+		gBombchuShopBg2TLUT              = 0x0242B700; /* ROM:0x01F2C200 */
+		_vr_NSVR_pal_staticSegmentDataEnd = 0x0242B900; /* ROM:0x01F2C400 */
+		_vr_NSVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFB00F00 */
+	/* textures/backgrounds/vr_NSVR_pal_static.o */
+		_vr_NSVR_pal_staticSegmentRomEnd = 0x01F2C400; /* ROM:0x01A2CF00 */
+
+/* vr_NSVR_pal_static.bss */
+	/* textures/backgrounds/vr_NSVR_pal_static.o */
+		_vr_NSVR_pal_staticSegmentEnd    = 0x0242B900; /* ROM:0x01F2C400 */
+		_vr_LBVR_staticSegmentRomStart   = 0x01F2D000; /* ROM:0x01A2DB00 */
+
+/* vr_LBVR_static */
+		_vr_LBVR_staticSegmentStart      = 0x0242B900; /* ROM:0x01F2D000 */
+	/* textures/backgrounds/vr_LBVR_static.o */
+		_vr_LBVR_staticSegmentDataStart  = 0x0242B900; /* ROM:0x01F2D000 */
+	/* textures/backgrounds/vr_LBVR_static.o */
+		gCowHouseBgTex                   = 0x0242B900; /* ROM:0x01F2D000 */
+		gCowHouse2BgTex                  = 0x0243B900; /* ROM:0x01F3D000 */
+		gCowHouse3BgTex                  = 0x0244B900; /* ROM:0x01F4D000 */
+		gCowHouse4BgTex                  = 0x0245B900; /* ROM:0x01F5D000 */
+		_vr_LBVR_staticSegmentDataEnd    = 0x0246B900; /* ROM:0x01F6D000 */
+		_vr_LBVR_staticSegmentDataSize   = 0x00040000; /* ROM:0xFFB41700 */
+	/* textures/backgrounds/vr_LBVR_static.o */
+		_vr_LBVR_staticSegmentRomEnd     = 0x01F6D000; /* ROM:0x01A6E700 */
+
+/* vr_LBVR_static.bss */
+	/* textures/backgrounds/vr_LBVR_static.o */
+		_vr_LBVR_staticSegmentEnd        = 0x0246B900; /* ROM:0x01F6D000 */
+		_vr_LBVR_pal_staticSegmentRomStart = 0x01F6D000; /* ROM:0x01A6E700 */
+
+/* vr_LBVR_pal_static */
+		_vr_LBVR_pal_staticSegmentStart  = 0x0246B900; /* ROM:0x01F6D000 */
+	/* textures/backgrounds/vr_LBVR_pal_static.o */
+		_vr_LBVR_pal_staticSegmentDataStart = 0x0246B900; /* ROM:0x01F6D000 */
+	/* textures/backgrounds/vr_LBVR_pal_static.o */
+		gCowHouseBgTLUT                  = 0x0246B900; /* ROM:0x01F6D000 */
+		gCowHouseBg2TLUT                 = 0x0246BB00; /* ROM:0x01F6D200 */
+		gCowHouseBg3TLUT                 = 0x0246BD00; /* ROM:0x01F6D400 */
+		gCowHouseBg4TLUT                 = 0x0246BF00; /* ROM:0x01F6D600 */
+		_vr_LBVR_pal_staticSegmentDataEnd = 0x0246C100; /* ROM:0x01F6D800 */
+		_vr_LBVR_pal_staticSegmentDataSize = 0x00000800; /* ROM:0xFFB01F00 */
+	/* textures/backgrounds/vr_LBVR_pal_static.o */
+		_vr_LBVR_pal_staticSegmentRomEnd = 0x01F6D800; /* ROM:0x01A6EF00 */
+
+/* vr_LBVR_pal_static.bss */
+	/* textures/backgrounds/vr_LBVR_pal_static.o */
+		_vr_LBVR_pal_staticSegmentEnd    = 0x0246C100; /* ROM:0x01F6D800 */
+		_vr_TTVR_staticSegmentRomStart   = 0x01F6E000; /* ROM:0x01A6F700 */
+
+/* vr_TTVR_static */
+		_vr_TTVR_staticSegmentStart      = 0x0246C100; /* ROM:0x01F6E000 */
+	/* textures/backgrounds/vr_TTVR_static.o */
+		_vr_TTVR_staticSegmentDataStart  = 0x0246C100; /* ROM:0x01F6E000 */
+	/* textures/backgrounds/vr_TTVR_static.o */
+		gCarpentersTentBgTex             = 0x0246C100; /* ROM:0x01F6E000 */
+		gCarpentersTent2BgTex            = 0x0247C100; /* ROM:0x01F7E000 */
+		gCarpentersTent3BgTex            = 0x0248C100; /* ROM:0x01F8E000 */
+		_vr_TTVR_staticSegmentDataEnd    = 0x0249C100; /* ROM:0x01F9E000 */
+		_vr_TTVR_staticSegmentDataSize   = 0x00030000; /* ROM:0xFFB31F00 */
+	/* textures/backgrounds/vr_TTVR_static.o */
+		_vr_TTVR_staticSegmentRomEnd     = 0x01F9E000; /* ROM:0x01A9FF00 */
+
+/* vr_TTVR_static.bss */
+	/* textures/backgrounds/vr_TTVR_static.o */
+		_vr_TTVR_staticSegmentEnd        = 0x0249C100; /* ROM:0x01F9E000 */
+		_vr_TTVR_pal_staticSegmentRomStart = 0x01F9E000; /* ROM:0x01A9FF00 */
+
+/* vr_TTVR_pal_static */
+		_vr_TTVR_pal_staticSegmentStart  = 0x0249C100; /* ROM:0x01F9E000 */
+	/* textures/backgrounds/vr_TTVR_pal_static.o */
+		_vr_TTVR_pal_staticSegmentDataStart = 0x0249C100; /* ROM:0x01F9E000 */
+	/* textures/backgrounds/vr_TTVR_pal_static.o */
+		gCarpentersTentBgTLUT            = 0x0249C100; /* ROM:0x01F9E000 */
+		gCarpentersTentBg2TLUT           = 0x0249C300; /* ROM:0x01F9E200 */
+		gCarpentersTentBg3TLUT           = 0x0249C500; /* ROM:0x01F9E400 */
+		_vr_TTVR_pal_staticSegmentDataEnd = 0x0249C700; /* ROM:0x01F9E600 */
+		_vr_TTVR_pal_staticSegmentDataSize = 0x00000600; /* ROM:0xFFB02500 */
+	/* textures/backgrounds/vr_TTVR_pal_static.o */
+		_vr_TTVR_pal_staticSegmentRomEnd = 0x01F9E600; /* ROM:0x01AA0500 */
+
+/* vr_TTVR_pal_static.bss */
+	/* textures/backgrounds/vr_TTVR_pal_static.o */
+		_vr_TTVR_pal_staticSegmentEnd    = 0x0249C700; /* ROM:0x01F9E600 */
+		_vr_FCVR_staticSegmentRomStart   = 0x01F9F000; /* ROM:0x01AA0F00 */
+
+/* vr_FCVR_static */
+		_vr_FCVR_staticSegmentStart      = 0x0249C700; /* ROM:0x01F9F000 */
+	/* textures/backgrounds/vr_FCVR_static.o */
+		_vr_FCVR_staticSegmentDataStart  = 0x0249C700; /* ROM:0x01F9F000 */
+	/* textures/backgrounds/vr_FCVR_static.o */
+		gMaskShopBgTex                   = 0x0249C700; /* ROM:0x01F9F000 */
+		gMaskShop2BgTex                  = 0x024AC700; /* ROM:0x01FAF000 */
+		_vr_FCVR_staticSegmentDataEnd    = 0x024BC700; /* ROM:0x01FBF000 */
+		_vr_FCVR_staticSegmentDataSize   = 0x00020000; /* ROM:0xFFB22900 */
+	/* textures/backgrounds/vr_FCVR_static.o */
+		_vr_FCVR_staticSegmentRomEnd     = 0x01FBF000; /* ROM:0x01AC1900 */
+
+/* vr_FCVR_static.bss */
+	/* textures/backgrounds/vr_FCVR_static.o */
+		_vr_FCVR_staticSegmentEnd        = 0x024BC700; /* ROM:0x01FBF000 */
+		_vr_FCVR_pal_staticSegmentRomStart = 0x01FBF000; /* ROM:0x01AC1900 */
+
+/* vr_FCVR_pal_static */
+		_vr_FCVR_pal_staticSegmentStart  = 0x024BC700; /* ROM:0x01FBF000 */
+	/* textures/backgrounds/vr_FCVR_pal_static.o */
+		_vr_FCVR_pal_staticSegmentDataStart = 0x024BC700; /* ROM:0x01FBF000 */
+	/* textures/backgrounds/vr_FCVR_pal_static.o */
+		gMaskShopBgTLUT                  = 0x024BC700; /* ROM:0x01FBF000 */
+		gMaskShopBg2TLUT                 = 0x024BC900; /* ROM:0x01FBF200 */
+		_vr_FCVR_pal_staticSegmentDataEnd = 0x024BCB00; /* ROM:0x01FBF400 */
+		_vr_FCVR_pal_staticSegmentDataSize = 0x00000400; /* ROM:0xFFB02D00 */
+	/* textures/backgrounds/vr_FCVR_pal_static.o */
+		_vr_FCVR_pal_staticSegmentRomEnd = 0x01FBF400; /* ROM:0x01AC1D00 */
+
+/* vr_FCVR_pal_static.bss */
+	/* textures/backgrounds/vr_FCVR_pal_static.o */
+		_vr_FCVR_pal_staticSegmentEnd    = 0x024BCB00; /* ROM:0x01FBF400 */
+		_elf_message_fieldSegmentRomStart = 0x01FC0000; /* ROM:0x01AC2900 */
+
+/* elf_message_field */
+		_elf_message_fieldSegmentStart   = 0x00000000; /* ROM:0x01FC0000 */

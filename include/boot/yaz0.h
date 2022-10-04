@@ -4,17 +4,17 @@
 #include "global.h"
 
 extern u8 sYaz0DataBuffer[0x400];
-extern u32 sYaz0CurDataEnd;
-extern u32 sYaz0CurRomStart;
+extern u8* sYaz0DataBufferEnd;
+extern uintptr_t sYaz0CurRomStart;
 extern u32 sYaz0CurSize;
-extern u32 sYaz0MaxPtr;
+extern u8* sYaz0MaxPtr;
 
 void* Yaz0_FirstDMA(void);
 
-void* Yaz0_NextDMA(void* curSrcPos);
+void* Yaz0_NextDMA(u8* curSrcPos);
 
 void Yaz0_DecompressImpl(Yaz0Header* hdr, u8* dst);
 
-void Yaz0_Decompress(u32 romStart, void* dst, u32 size);
+void Yaz0_Decompress(uintptr_t romStart, u8* dst, u32 size);
 
 #endif

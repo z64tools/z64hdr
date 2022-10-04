@@ -26,7 +26,7 @@ void GameState_SetFrameBuffer(GraphicsContext* gfxCtx);
 
 void func_800C49F4(GraphicsContext* gfxCtx);
 
-void PadMgr_RequestPadData(PadMgr*, Input*, s32);
+void PadMgr_RequestPadData(PadMgr* padMgr, Input* inputs, s32 gameRequest);
 
 void GameState_ReqPadData(GameState* gameState);
 

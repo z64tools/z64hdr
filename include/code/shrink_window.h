@@ -3,23 +3,29 @@
 
 #include "global.h"
 
-extern s32 D_8012CED0;
+typedef enum {
+    /* 0 */ LETTERBOX_STATE_IDLE,
+    /* 1 */ LETTERBOX_STATE_GROWING,
+    /* 2 */ LETTERBOX_STATE_SHRINKING
+} LetterboxState;
 
-extern s32 sShrinkWindowVal;
-extern s32 sShrinkWindowCurrentVal;
+extern s32 sLetterboxState;
 
-void ShrinkWindow_SetVal(s32 value);
+extern s32 sLetterboxSizeTarget;
+extern s32 sLetterboxSize;
 
-u32 ShrinkWindow_GetVal(void);
+void Letterbox_SetSizeTarget(s32 target);
 
-void ShrinkWindow_SetCurrentVal(s32 currentVal);
+u32 Letterbox_GetSizeTarget(void);
 
-u32 ShrinkWindow_GetCurrentVal(void);
+void Letterbox_SetSize(s32 size);
 
-void ShrinkWindow_Init(void);
+u32 Letterbox_GetSize(void);
 
-void ShrinkWindow_Destroy(void);
+void Letterbox_Init(void);
 
-void ShrinkWindow_Update(s32 updateRate);
+void Letterbox_Destroy(void);
+
+void Letterbox_Update(s32 updateRate);
 
 #endif

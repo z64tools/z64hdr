@@ -16,7 +16,7 @@ void EnItem00_Draw(Actor* thisx, PlayState* play);
 void func_8001DFC8(EnItem00* this, PlayState* play);
 void func_8001E1C8(EnItem00* this, PlayState* play);
 void func_8001E304(EnItem00* this, PlayState* play);
-void func_8001E5C8(EnItem00* this, PlayState* play);
+void EnItem00_Collected(EnItem00* this, PlayState* play);
 
 void EnItem00_DrawRupee(EnItem00* this, PlayState* play);
 void EnItem00_DrawCollectible(EnItem00* this, PlayState* play);
@@ -54,7 +54,7 @@ void func_8001E1C8(EnItem00* this, PlayState* play);
 
 void func_8001E304(EnItem00* this, PlayState* play);
 
-void func_8001E5C8(EnItem00* this, PlayState* play);
+void EnItem00_Collected(EnItem00* this, PlayState* play);
 
 // The BSS in the function acted weird in the past. It is matching now but might cause issues in the future
 void EnItem00_Update(Actor* thisx, PlayState* play);

@@ -5,25 +5,25 @@
 
 void DynaPolyActor_Init(DynaPolyActor* dynaActor, s32 flags);
 
-void func_800434A0(DynaPolyActor* dynaActor);
+void DynaPolyActor_UnsetAllInteractFlags(DynaPolyActor* dynaActor);
 
-void func_800434A8(DynaPolyActor* dynaActor);
+void DynaPolyActor_SetActorOnTop(DynaPolyActor* dynaActor);
 
-void func_800434B8(DynaPolyActor* dynaActor);
+void DynaPolyActor_SetPlayerOnTop(DynaPolyActor* dynaActor);
 
-void func_800434C8(CollisionContext* colCtx, s32 floorBgId);
+void DynaPoly_SetPlayerOnTop(CollisionContext* colCtx, s32 floorBgId);
 
-void func_800434F8(DynaPolyActor* dynaActor);
+void DynaPolyActor_SetPlayerAbove(DynaPolyActor* dynaActor);
 
-void func_80043508(CollisionContext* colCtx, s32 floorBgId);
+void DynaPoly_SetPlayerAbove(CollisionContext* colCtx, s32 floorBgId);
 
 void func_80043538(DynaPolyActor* dynaActor);
 
-s32 func_80043548(DynaPolyActor* dynaActor);
+s32 DynaPolyActor_IsActorOnTop(DynaPolyActor* dynaActor);
 
-s32 func_8004356C(DynaPolyActor* dynaActor);
+s32 DynaPolyActor_IsPlayerOnTop(DynaPolyActor* dynaActor);
 
-s32 func_80043590(DynaPolyActor* dynaActor);
+s32 DynaPolyActor_IsPlayerAbove(DynaPolyActor* dynaActor);
 
 s32 func_800435B4(DynaPolyActor* dynaActor);
 

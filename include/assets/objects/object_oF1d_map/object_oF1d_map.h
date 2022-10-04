@@ -58,7 +58,7 @@ extern Vtx object_oF1d_mapVtx_00AC70[];
 extern Gfx gGoronDL_00BD80[];
 extern Gfx gGoronDL_00C140[];
 extern u64 object_oF1d_mapTLUT_00C440[];
-extern u64 object_oF1d_mapTLUT_00C640[];
+extern u64 object_oF1d_map_TLUT_00C640[];
 extern u64 object_oF1d_mapTex_00C840[];
 extern u64 object_oF1d_mapTex_00C880[];
 extern u64 object_oF1d_mapTex_00CA80[];

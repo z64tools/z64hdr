@@ -1,20 +1,47 @@
 #ifndef Z64_AUDIO_SEQPLAYER_H
 #define Z64_AUDIO_SEQPLAYER_H
 
+/**
+ * @file audio_seqplayer.c
+ *
+ * Manages audio sequence players, interprets and executes sequence instructions used to write .seq files
+ *
+ * Sequence Instructions:
+ *   - A customized assembly language based on MIDI
+ *   - All sequences are written using these instructions
+ *   - There are 3 different sets of instructions
+ *        1) Sequence Instructions
+ *        2) Channel Instructions
+ *        3) Layer Instruction
+ *   - All three sets share a common pool of control flow instructions (>= 0xF2).
+ *     Otherwise, each set of instructions has its own command interpreter
+ */
 #include "ultra64.h"
 #include "global.h"
 
 #define PORTAMENTO_IS_SPECIAL(x) ((x).mode & 0x80)
 #define PORTAMENTO_MODE(x) ((x).mode & ~0x80)
-#define PORTAMENTO_MODE_1 1
-#define PORTAMENTO_MODE_2 2
-#define PORTAMENTO_MODE_3 3
-#define PORTAMENTO_MODE_4 4
-#define PORTAMENTO_MODE_5 5
+
+#define PROCESS_SCRIPT_END -1
+
+typedef enum {
+    /* 0 */ PORTAMENTO_MODE_OFF,
+    /* 1 */ PORTAMENTO_MODE_1,
+    /* 2 */ PORTAMENTO_MODE_2,
+    /* 3 */ PORTAMENTO_MODE_3,
+    /* 4 */ PORTAMENTO_MODE_4,
+    /* 5 */ PORTAMENTO_MODE_5
+} PortamentoMode;
 
 u8 AudioSeq_ScriptReadU8(SeqScriptState* state);
 s16 AudioSeq_ScriptReadS16(SeqScriptState* state);
 u16 AudioSeq_ScriptReadCompressedU16(SeqScriptState* state);
+
+void AudioSeq_SeqLayerProcessScriptStep1(SequenceLayer* layer);
+s32 AudioSeq_SeqLayerProcessScriptStep2(SequenceLayer* layer);
+s32 AudioSeq_SeqLayerProcessScriptStep3(SequenceLayer* layer, s32 cmd);
+s32 AudioSeq_SeqLayerProcessScriptStep4(SequenceLayer* layer, s32 cmd);
+s32 AudioSeq_SeqLayerProcessScriptStep5(SequenceLayer* layer, s32 sameTunedSample);
 
 u8 AudioSeq_GetInstrument(SequenceChannel* channel, u8 instId, Instrument** instOut, AdsrSettings* adsr);
 
@@ -54,15 +81,19 @@ extern u8 sSeqInstructionArgsTable[];
  */
 u16 AudioSeq_GetScriptControlFlowArgument(SeqScriptState* state, u8 cmd);
 
+/**
+ * Read and execute the control flow sequence instructions
+ * @return number of frames until next instruction. -1 signals termination
+ */
 s32 AudioSeq_HandleScriptFlowControl(SequencePlayer* seqPlayer, SeqScriptState* state, s32 cmd, s32 cmdArg);
 
 void AudioSeq_InitSequenceChannel(SequenceChannel* channel);
 
-s32 AudioSeq_SeqChannelSetLayer(SequenceChannel* channel, s32 layerIdx);
+s32 AudioSeq_SeqChannelSetLayer(SequenceChannel* channel, s32 layerIndex);
 
 void AudioSeq_SeqLayerDisable(SequenceLayer* layer);
 
-void AudioSeq_SeqLayerFree(SequenceChannel* channel, s32 layerIdx);
+void AudioSeq_SeqLayerFree(SequenceChannel* channel, s32 layerIndex);
 
 void AudioSeq_SequenceChannelDisable(SequenceChannel* channel);
 
@@ -70,7 +101,7 @@ void AudioSeq_SequencePlayerSetupChannels(SequencePlayer* seqPlayer, u16 channel
 
 void AudioSeq_SequencePlayerDisableChannels(SequencePlayer* seqPlayer, u16 channelBitsUnused);
 
-void AudioSeq_SequenceChannelEnable(SequencePlayer* seqPlayer, u8 channelIdx, void* script);
+void AudioSeq_SequenceChannelEnable(SequencePlayer* seqPlayer, u8 channelIndex, void* script);
 
 void AudioSeq_SequencePlayerDisableAsFinished(SequencePlayer* seqPlayer);
 
@@ -88,17 +119,11 @@ s16 AudioSeq_ScriptReadS16(SeqScriptState* state);
 
 u16 AudioSeq_ScriptReadCompressedU16(SeqScriptState* state);
 
-void AudioSeq_SeqLayerProcessScriptStep1(SequenceLayer* layer);
-s32 AudioSeq_SeqLayerProcessScriptStep2(SequenceLayer* layer);
-s32 AudioSeq_SeqLayerProcessScriptStep3(SequenceLayer* layer, s32 cmd);
-s32 AudioSeq_SeqLayerProcessScriptStep4(SequenceLayer* layer, s32 cmd);
-s32 AudioSeq_SeqLayerProcessScriptStep5(SequenceLayer* layer, s32 sameSound);
-
 void AudioSeq_SeqLayerProcessScript(SequenceLayer* layer);
 
 void AudioSeq_SeqLayerProcessScriptStep1(SequenceLayer* layer);
 
-s32 AudioSeq_SeqLayerProcessScriptStep5(SequenceLayer* layer, s32 sameSound);
+s32 AudioSeq_SeqLayerProcessScriptStep5(SequenceLayer* layer, s32 sameTunedSample);
 
 s32 AudioSeq_SeqLayerProcessScriptStep2(SequenceLayer* layer);
 
@@ -106,7 +131,7 @@ s32 AudioSeq_SeqLayerProcessScriptStep4(SequenceLayer* layer, s32 cmd);
 
 s32 AudioSeq_SeqLayerProcessScriptStep3(SequenceLayer* layer, s32 cmd);
 
-void AudioSeq_SetChannelPriorities(SequenceChannel* channel, u8 arg1);
+void AudioSeq_SetChannelPriorities(SequenceChannel* channel, u8 priority);
 
 u8 AudioSeq_GetInstrument(SequenceChannel* channel, u8 instId, Instrument** instOut, AdsrSettings* adsr);
 
