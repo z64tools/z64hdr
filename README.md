@@ -1,4 +1,6 @@
 # z64hdr
+
+Current Commit: [Introduce Sequence flags (#1261)](https://github.com/zeldaret/oot/commit/3ff19c253e045ac7fd6b81f625703f3403bfa2f2)
  
 Zelda 64 header files and function/symbol addresses. For compiling code to be
 linked to OoT or MM, including custom actors and other generic romhack code.
@@ -23,7 +25,7 @@ Currently supports OoT MQ Debug (the Debug ROM) and OoT 1.0 J/U.
 ## Other info
 
 z64hdr can / will be updated to match the current state of decomp headers. When
-the decomp updates a function name, e.g. from `func_800XXXXX` to 
+the decomp updates a function name, e.g. from `func_800XXXXX` to
 `Something_DoSomething`, it will be updated in `z64hdr` and you will have to
 update your project code.
 
@@ -41,7 +43,7 @@ Addresses from:
 - [The decomp](https://github.com/zeldaret/oot)
 - [z64ovl_archived](https://github.com/z64me/z64ovl_archived)
 - [CrookedPoe's spreadsheet](https://docs.google.com/spreadsheets/d/1PqqbENJRmxj0iWDexm-6J3LWJ5lAWZpWQJM8_sRhMQU/edit#gid=0)
-- Manual asm comparison by z64me, rankaisija, Sauraen, Skawo, Dragorn421 
+- Manual asm comparison by z64me, rankaisija, Sauraen, Skawo, Dragorn421
 
 ## Internal documentation: what to change when copying new decomp headers
 
