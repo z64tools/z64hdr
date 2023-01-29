@@ -1,0 +1,56 @@
+#ifndef OBJECT_GANON_ANIME2_H
+#define OBJECT_GANON_ANIME2_H 1
+
+extern s16 sGanondorfTurnAroundAnimFrameData[];
+extern JointIndex sGanondorfTurnAroundAnimJointIndices[];
+extern AnimationHeader gGanondorfTurnAroundAnim;
+extern s16 sGanondorfStandIdleAnimFrameData[];
+extern JointIndex sGanondorfStandIdleAnimJointIndices[];
+extern AnimationHeader gGanondorfStandIdleAnim;
+extern s16 sGanondorfStandUpFromOrganAnimFrameData[];
+extern JointIndex sGanondorfStandUpFromOrganAnimJointIndices[];
+extern AnimationHeader gGanondorfStandUpFromOrganAnim;
+extern s16 sGanondorfStopPlayingOrganAnimFrameData[];
+extern JointIndex sGanondorfStopPlayingOrganAnimJointIndices[];
+extern AnimationHeader gGanondorfStopPlayingOrganAnim;
+extern s16 sGanondorfPlayOrganAnimFrameData[];
+extern JointIndex sGanondorfPlayOrganAnimJointIndices[];
+extern AnimationHeader gGanondorfPlayOrganAnim;
+extern s16 sGanondorfLeanOnOrganAnimFrameData[];
+extern JointIndex sGanondorfLeanOnOrganAnimJointIndices[];
+extern AnimationHeader gGanondorfLeanOnOrganAnim;
+extern s16 sGanondorfRaiseHandStartAnimFrameData[];
+extern JointIndex sGanondorfRaiseHandStartAnimJointIndices[];
+extern AnimationHeader gGanondorfRaiseHandStartAnim;
+extern s16 sGanondorfRaiseHandLoopAnimFrameData[];
+extern JointIndex sGanondorfRaiseHandLoopAnimJointIndices[];
+extern AnimationHeader gGanondorfRaiseHandLoopAnim;
+extern s16 sGanondorfStandBackwardsAnimFrameData[];
+extern JointIndex sGanondorfStandBackwardsAnimJointIndices[];
+extern AnimationHeader gGanondorfStandBackwardsAnim;
+extern s16 sGanondorfLaughWhileLeaningAnimFrameData[];
+extern JointIndex sGanondorfLaughWhileLeaningAnimJointIndices[];
+extern AnimationHeader gGanondorfLaughWhileLeaningAnim;
+extern s16 sGanondorfCollapseAnimFrameData[];
+extern JointIndex sGanondorfCollapseAnimJointIndices[];
+extern AnimationHeader gGanondorfCollapseAnim;
+extern s16 sGanondorfVomitStartAnimFrameData[];
+extern JointIndex sGanondorfVomitStartAnimJointIndices[];
+extern AnimationHeader gGanondorfVomitStartAnim;
+extern s16 sGanondorfVomitLoopAnimFrameData[];
+extern JointIndex sGanondorfVomitLoopAnimJointIndices[];
+extern AnimationHeader gGanondorfVomitLoopAnim;
+extern s16 sGanondorfDefeatedStartAnimFrameData[];
+extern JointIndex sGanondorfDefeatedStartAnimJointIndices[];
+extern AnimationHeader gGanondorfDefeatedStartAnim;
+extern s16 sGanondorfDefeatedLoopAnimFrameData[];
+extern JointIndex sGanondorfDefeatedLoopAnimJointIndices[];
+extern AnimationHeader gGanondorfDefeatedLoopAnim;
+extern s16 sGanondorfYellStartAnimFrameData[];
+extern JointIndex sGanondorfYellStartAnimJointIndices[];
+extern AnimationHeader gGanondorfYellStartAnim;
+extern s16 sGanondorfYellLoopAnimFrameData[];
+extern JointIndex sGanondorfYellLoopAnimJointIndices[];
+extern AnimationHeader gGanondorfYellLoopAnim;
+
+#endif

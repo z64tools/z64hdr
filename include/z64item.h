@@ -1,12 +1,74 @@
-#ifndef _Z64ITEM_H_
-#define _Z64ITEM_H_
+#ifndef Z64ITEM_H
+#define Z64ITEM_H
 
 typedef enum {
-    /* 0x00 */ EQUIP_SWORD,
-    /* 0x01 */ EQUIP_SHIELD,
-    /* 0x02 */ EQUIP_TUNIC,
-    /* 0x03 */ EQUIP_BOOTS
+    /* 0 */ EQUIP_TYPE_SWORD,
+    /* 1 */ EQUIP_TYPE_SHIELD,
+    /* 2 */ EQUIP_TYPE_TUNIC,
+    /* 3 */ EQUIP_TYPE_BOOTS,
+    /* 4 */ EQUIP_TYPE_MAX
 } EquipmentType;
+
+// `EquipInv*` enums are for Inventory.equipment (for example used in the `CHECK_OWNED_EQUIP` macro)
+
+typedef enum {
+    /* 0 */ EQUIP_INV_SWORD_KOKIRI,
+    /* 1 */ EQUIP_INV_SWORD_MASTER,
+    /* 2 */ EQUIP_INV_SWORD_BGS,
+    /* 3 */ EQUIP_INV_SWORD_BROKENGIANTKNIFE
+} EquipInvSword;
+
+typedef enum {
+    /* 0 */ EQUIP_INV_SHIELD_DEKU,
+    /* 1 */ EQUIP_INV_SHIELD_HYLIAN,
+    /* 2 */ EQUIP_INV_SHIELD_MIRROR
+} EquipInvShield;
+
+typedef enum {
+    /* 0 */ EQUIP_INV_TUNIC_KOKIRI,
+    /* 1 */ EQUIP_INV_TUNIC_GORON,
+    /* 2 */ EQUIP_INV_TUNIC_ZORA
+} EquipInvTunic;
+
+typedef enum {
+    /* 0 */ EQUIP_INV_BOOTS_KOKIRI,
+    /* 1 */ EQUIP_INV_BOOTS_IRON,
+    /* 2 */ EQUIP_INV_BOOTS_HOVER
+} EquipInvBoots;
+
+// `EquipValue*` enums are for ItemEquips.equipment (for example used in the `CUR_EQUIP_VALUE` macro)
+
+typedef enum {
+    /* 0 */ EQUIP_VALUE_SWORD_NONE,
+    /* 1 */ EQUIP_VALUE_SWORD_KOKIRI,
+    /* 2 */ EQUIP_VALUE_SWORD_MASTER,
+    /* 3 */ EQUIP_VALUE_SWORD_BGS,
+    /* 4 */ EQUIP_VALUE_SWORD_MAX
+} EquipValueSword;
+
+typedef enum {
+    /* 0 */ EQUIP_VALUE_SHIELD_NONE,
+    /* 1 */ EQUIP_VALUE_SHIELD_DEKU,
+    /* 2 */ EQUIP_VALUE_SHIELD_HYLIAN,
+    /* 3 */ EQUIP_VALUE_SHIELD_MIRROR,
+    /* 4 */ EQUIP_VALUE_SHIELD_MAX
+} EquipValueShield;
+
+typedef enum {
+    /* 0 */ EQUIP_VALUE_TUNIC_NONE,
+    /* 1 */ EQUIP_VALUE_TUNIC_KOKIRI,
+    /* 2 */ EQUIP_VALUE_TUNIC_GORON,
+    /* 3 */ EQUIP_VALUE_TUNIC_ZORA,
+    /* 4 */ EQUIP_VALUE_TUNIC_MAX
+} EquipValueTunic;
+
+typedef enum {
+    /* 0 */ EQUIP_VALUE_BOOTS_NONE,
+    /* 1 */ EQUIP_VALUE_BOOTS_KOKIRI,
+    /* 2 */ EQUIP_VALUE_BOOTS_IRON,
+    /* 3 */ EQUIP_VALUE_BOOTS_HOVER,
+    /* 4 */ EQUIP_VALUE_BOOTS_MAX
+} EquipValueBoots;
 
 typedef enum {
     /* 0x00 */ UPG_QUIVER,
@@ -16,7 +78,8 @@ typedef enum {
     /* 0x04 */ UPG_WALLET,
     /* 0x05 */ UPG_BULLET_BAG,
     /* 0x06 */ UPG_STICKS,
-    /* 0x07 */ UPG_NUTS
+    /* 0x07 */ UPG_NUTS,
+    /* 0x08 */ UPG_MAX
 } UpgradeType;
 
 typedef enum {
@@ -44,7 +107,7 @@ typedef enum {
     /* 0x15 */ QUEST_STONE_OF_AGONY,
     /* 0x16 */ QUEST_GERUDO_CARD,
     /* 0x17 */ QUEST_SKULL_TOKEN,
-    /* 0x18 */ QUEST_HEART_PIECE
+    /* 0x1C */ QUEST_HEART_PIECE_COUNT = 0x1C
 } QuestItem;
 
 typedef enum {
@@ -213,7 +276,7 @@ typedef enum {
     /* 0x80 */ ITEM_INVALID_6,
     /* 0x81 */ ITEM_INVALID_7,
     /* 0x82 */ ITEM_MILK,
-    /* 0x83 */ ITEM_HEART,
+    /* 0x83 */ ITEM_RECOVERY_HEART,
     /* 0x84 */ ITEM_RUPEE_GREEN,
     /* 0x85 */ ITEM_RUPEE_BLUE,
     /* 0x86 */ ITEM_RUPEE_RED,
@@ -320,7 +383,7 @@ typedef enum {
     /* 0x45 */ GI_WALLET_ADULT,
     /* 0x46 */ GI_WALLET_GIANT,
     /* 0x47 */ GI_WEIRD_EGG,
-    /* 0x48 */ GI_HEART,
+    /* 0x48 */ GI_RECOVERY_HEART,
     /* 0x49 */ GI_ARROWS_SMALL,  // amount changes depending on context
     /* 0x4A */ GI_ARROWS_MEDIUM, // amount changes depending on context
     /* 0x4B */ GI_ARROWS_LARGE,  // amount changes depending on context
@@ -386,7 +449,7 @@ typedef enum {
     /* 0x05 */ GID_SONG_REQUIEM,
     /* 0x06 */ GID_SONG_NOCTURNE,
     /* 0x07 */ GID_SONG_PRELUDE,
-    /* 0x08 */ GID_HEART,
+    /* 0x08 */ GID_RECOVERY_HEART,
     /* 0x09 */ GID_KEY_BOSS,
     /* 0x0A */ GID_COMPASS,
     /* 0x0B */ GID_MEDALLION_FOREST,

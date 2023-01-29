@@ -52,3 +52,4 @@ Mkfile.old
 dkms.conf
 compile_flags.txt
 .vscode/c_cpp_properties.json
+*.sh

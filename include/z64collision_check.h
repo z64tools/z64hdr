@@ -1,5 +1,5 @@
-#ifndef _Z_COLLISION_CHECK_H_
-#define _Z_COLLISION_CHECK_H_
+#ifndef Z_COLLISION_CHECK_H
+#define Z_COLLISION_CHECK_H
 
 #define COLLISION_CHECK_AT_MAX 50
 #define COLLISION_CHECK_AC_MAX 60
@@ -14,7 +14,7 @@ typedef struct {
     /* 0x04 */ struct Actor* at; // Actor attached to what it collided with as an AT collider.
     /* 0x08 */ struct Actor* ac; // Actor attached to what it collided with as an AC collider.
     /* 0x0C */ struct Actor* oc; // Actor attached to what it collided with as an OC collider.
-    /* 0x10 */ u8 atFlags; // Information flags for AT collisions. 
+    /* 0x10 */ u8 atFlags; // Information flags for AT collisions.
     /* 0x11 */ u8 acFlags; // Information flags for AC collisions.
     /* 0x12 */ u8 ocFlags1; // Information flags for OC collisions.
     /* 0x13 */ u8 ocFlags2;  // Flags related to which colliders it can OC collide with.
@@ -24,8 +24,8 @@ typedef struct {
 
 typedef struct {
     /* 0x00 */ u8 colType; // Determines hitmarks and sound effects during AC collisions.
-    /* 0x01 */ u8 atFlags; // Information flags for AT collisions. 
-    /* 0x02 */ u8 acFlags; // Information flags for OC collisions.
+    /* 0x01 */ u8 atFlags; // Information flags for AT collisions.
+    /* 0x02 */ u8 acFlags; // Information flags for AC collisions.
     /* 0x03 */ u8 ocFlags1; // Information flags for OC collisions.
     /* 0x04 */ u8 ocFlags2; // Flags related to which colliders it can OC collide with.
     /* 0x05 */ u8 shape; // JntSph, Cylinder, Tris, or Quad
@@ -33,7 +33,7 @@ typedef struct {
 
 typedef struct {
     /* 0x00 */ u8 colType; // Determines hitmarks and sound effects during AC collisions.
-    /* 0x01 */ u8 atFlags; // Information flags for AT collisions. 
+    /* 0x01 */ u8 atFlags; // Information flags for AT collisions.
     /* 0x02 */ u8 acFlags; // Information flags for AC collisions.
     /* 0x03 */ u8 ocFlags1; // Information flags for OC collisions.
     /* 0x04 */ u8 shape; // JntSph, Cylinder, Tris, or Quad
@@ -171,7 +171,7 @@ typedef struct {
 typedef struct {
     /* 0x00 */ ColliderInfoInit info;
     /* 0x18 */ ColliderTrisElementDimInit dim;
-} ColliderTrisElementInit; // size 0x3C
+} ColliderTrisElementInit; // size = 0x3C
 
 typedef struct {
     /* 0x00 */ Collider base;
@@ -195,7 +195,7 @@ typedef struct {
     /* 0x00 */ Vec3f quad[4];
     /* 0x30 */ Vec3s dcMid; // midpoint of vectors d, c
     /* 0x36 */ Vec3s baMid; // midpoint of vectors b, a
-    /* 0x3C */ f32 acDist; // distance to nearest AC collision this frame.
+    /* 0x3C */ f32 acDistSq; // distance to nearest AC collision this frame, squared.
 } ColliderQuadDim; // size = 0x40
 
 typedef struct {
@@ -252,13 +252,13 @@ typedef enum {
     /* 1 */ COLSHAPE_CYLINDER,
     /* 2 */ COLSHAPE_TRIS,
     /* 3 */ COLSHAPE_QUAD,
-    /* 4 */ COLSHAPE_INVALID
+    /* 4 */ COLSHAPE_MAX
 } ColliderShape;
 
 /**
  * Affects the sound Link's sword makes when hitting it, hookability,
  * and possibly other things. It's definitely not flags, as all checks
- * are == or !=. Will probably need more actors decomped to truly 
+ * are == or !=. Will probably need more actors decomped to truly
  * understand what this is.
  */
 typedef enum {
@@ -271,6 +271,8 @@ typedef enum {
     /* 6 */ ELEMTYPE_UNK6,
     /* 7 */ ELEMTYPE_UNK7
 } ElementType;
+
+#define SAC_ENABLE (1 << 0)
 
 #define AT_NONE 0 // No flags set. Cannot have AT collisions when set as AT
 #define AT_ON (1 << 0) // Can have AT collisions when set as AT
@@ -315,6 +317,7 @@ typedef enum {
 #define TOUCH_ON (1 << 0) // Can have AT collisions
 #define TOUCH_HIT (1 << 1) // Had an AT collision
 #define TOUCH_NEAREST (1 << 2) // If a Quad, only collides with the closest bumper
+#define TOUCH_SFX_MASK (3 << 3)
 #define TOUCH_SFX_NORMAL (0 << 3) // Hit sound effect based on AC collider's type
 #define TOUCH_SFX_HARD (1 << 3) // Always uses hard deflection sound
 #define TOUCH_SFX_WOOD (2 << 3) // Always uses wood deflection sound
@@ -329,7 +332,7 @@ typedef enum {
 #define BUMP_HOOKABLE (1 << 2) // Can be hooked if actor has hookability flags set.
 #define BUMP_NO_AT_INFO (1 << 3) // Does not give its info to the AT collider that hit it.
 #define BUMP_NO_DAMAGE (1 << 4) // Does not take damage.
-#define BUMP_NO_SWORD_SFX (1 << 5) // Does not have a sound when hit by player-attached AT colliders.
+#define BUMP_NO_SWORD_SFX (1 << 5) // Does not have a sound effect when hit by player-attached AT colliders.
 #define BUMP_NO_HITMARK (1 << 6) // Skips hit effects.
 #define BUMP_DRAW_HITMARK (1 << 7) // Draw hitmark for AC collision this frame.
 
@@ -343,39 +346,38 @@ typedef enum {
 
 #define DMG_ENTRY(damage, effect) ((damage) | ((effect) << 4))
 
-// These flags are not to be used in code until we figure out how we want to format them. They are only here for reference 
-#define DMG_DEKU_NUT     (1 << 0x00)
-#define DMG_DEKU_STICK   (1 << 0x01)
-#define DMG_SLINGSHOT    (1 << 0x02)
-#define DMG_EXPLOSIVE    (1 << 0x03)
-#define DMG_BOOMERANG    (1 << 0x04)
-#define DMG_ARROW_NORMAL (1 << 0x05)
-#define DMG_HAMMER_SWING (1 << 0x06)
-#define DMG_HOOKSHOT     (1 << 0x07)
-#define DMG_SLASH_KOKIRI (1 << 0x08)
-#define DMG_SLASH_MASTER (1 << 0x09)
-#define DMG_SLASH_GIANT  (1 << 0x0A)
-#define DMG_ARROW_FIRE   (1 << 0x0B)
-#define DMG_ARROW_ICE    (1 << 0x0C)
-#define DMG_ARROW_LIGHT  (1 << 0x0D)
-#define DMG_ARROW_UNK1   (1 << 0x0E)
-#define DMG_ARROW_UNK2   (1 << 0x0F)
-#define DMG_ARROW_UNK3   (1 << 0x10)
-#define DMG_MAGIC_FIRE   (1 << 0x11)
-#define DMG_MAGIC_ICE    (1 << 0x12)
-#define DMG_MAGIC_LIGHT  (1 << 0x13)
-#define DMG_SHIELD       (1 << 0x14)
-#define DMG_MIR_RAY      (1 << 0x15)
-#define DMG_SPIN_KOKIRI  (1 << 0x16)
-#define DMG_SPIN_GIANT   (1 << 0x17)
-#define DMG_SPIN_MASTER  (1 << 0x18)
-#define DMG_JUMP_KOKIRI  (1 << 0x19)
-#define DMG_JUMP_GIANT   (1 << 0x1A)
-#define DMG_JUMP_MASTER  (1 << 0x1B)
-#define DMG_UNKNOWN_1    (1 << 0x1C)
-#define DMG_UNBLOCKABLE  (1 << 0x1D)
-#define DMG_HAMMER_JUMP  (1 << 0x1E)
-#define DMG_UNKNOWN_2    (1 << 0x1F)
+#define DMG_DEKU_NUT     (1 << 0)
+#define DMG_DEKU_STICK   (1 << 1)
+#define DMG_SLINGSHOT    (1 << 2)
+#define DMG_EXPLOSIVE    (1 << 3)
+#define DMG_BOOMERANG    (1 << 4)
+#define DMG_ARROW_NORMAL (1 << 5)
+#define DMG_HAMMER_SWING (1 << 6)
+#define DMG_HOOKSHOT     (1 << 7)
+#define DMG_SLASH_KOKIRI (1 << 8)
+#define DMG_SLASH_MASTER (1 << 9)
+#define DMG_SLASH_GIANT  (1 << 10)
+#define DMG_ARROW_FIRE   (1 << 11)
+#define DMG_ARROW_ICE    (1 << 12)
+#define DMG_ARROW_LIGHT  (1 << 13)
+#define DMG_ARROW_UNK1   (1 << 14)
+#define DMG_ARROW_UNK2   (1 << 15)
+#define DMG_ARROW_UNK3   (1 << 16)
+#define DMG_MAGIC_FIRE   (1 << 17)
+#define DMG_MAGIC_ICE    (1 << 18)
+#define DMG_MAGIC_LIGHT  (1 << 19)
+#define DMG_SHIELD       (1 << 20)
+#define DMG_MIR_RAY      (1 << 21)
+#define DMG_SPIN_KOKIRI  (1 << 22)
+#define DMG_SPIN_GIANT   (1 << 23)
+#define DMG_SPIN_MASTER  (1 << 24)
+#define DMG_JUMP_KOKIRI  (1 << 25)
+#define DMG_JUMP_GIANT   (1 << 26)
+#define DMG_JUMP_MASTER  (1 << 27)
+#define DMG_UNKNOWN_1    (1 << 28)
+#define DMG_UNBLOCKABLE  (1 << 29)
+#define DMG_HAMMER_JUMP  (1 << 30)
+#define DMG_UNKNOWN_2    (1 << 31)
 
 #define DMG_SLASH (DMG_SLASH_KOKIRI | DMG_SLASH_MASTER | DMG_SLASH_GIANT)
 #define DMG_SPIN_ATTACK (DMG_SPIN_KOKIRI | DMG_SPIN_MASTER | DMG_SPIN_GIANT)
@@ -383,7 +385,7 @@ typedef enum {
 #define DMG_SWORD (DMG_SLASH | DMG_SPIN_ATTACK | DMG_JUMP_SLASH)
 #define DMG_HAMMER (DMG_HAMMER_SWING | DMG_HAMMER_JUMP)
 #define DMG_FIRE (DMG_ARROW_FIRE | DMG_MAGIC_FIRE)
-#define DMG_ARROW (DMG_ARROW_NORMAL | DMG_ARROW_FIRE | DMG_ARROW_ICE | DMG_ARROW_LIGHT | DMG_UNK_ARROW_1 | DMG_UNK_ARROW_2 | DMG_UNK_ARROW_3)
+#define DMG_ARROW (DMG_ARROW_NORMAL | DMG_ARROW_FIRE | DMG_ARROW_ICE | DMG_ARROW_LIGHT | DMG_ARROW_UNK1 | DMG_ARROW_UNK2 | DMG_ARROW_UNK3)
 #define DMG_RANGED (DMG_ARROW | DMG_HOOKSHOT | DMG_SLINGSHOT)
 #define DMG_DEFAULT ~(DMG_SHIELD | DMG_MIR_RAY)
 

@@ -1,5 +1,5 @@
-#ifndef	_GS2DEX_H_
-#define	_GS2DEX_H_
+#ifndef	GS2DEX_H
+#define	GS2DEX_H
 
 #ifdef _LANGUAGE_C_PLUS_PLUS
 extern "C" {
@@ -351,14 +351,7 @@ typedef	struct	{
 /*===========================================================================*
  *	External functions
  *===========================================================================*/
-extern	u64	gspS2DEX_fifoTextStart[], gspS2DEX_fifoTextEnd[];
-extern	u64	gspS2DEX_fifoDataStart[], gspS2DEX_fifoDataEnd[];
-extern	u64	gspS2DEX_fifo_dTextStart[], gspS2DEX_fifo_dTextEnd[];
-extern	u64	gspS2DEX_fifo_dDataStart[], gspS2DEX_fifo_dDataEnd[];
-extern	u64	gspS2DEX2_fifoTextStart[], gspS2DEX2_fifoTextEnd[];
-extern	u64	gspS2DEX2_fifoDataStart[], gspS2DEX2_fifoDataEnd[];
-extern	u64	gspS2DEX2_xbusTextStart[], gspS2DEX2_xbusTextEnd[];
-extern	u64	gspS2DEX2_xbusDataStart[], gspS2DEX2_xbusDataEnd[];
+
 extern	void	guS2DInitBg(uObjBg *);
 
 #ifdef	F3DEX_GBI_2
@@ -374,6 +367,6 @@ extern	void	guS2DInitBg(uObjBg *);
 #ifdef _LANGUAGE_C_PLUS_PLUS
 }
 #endif
-#endif /* _GS2DEX_H_ */
+#endif /* GS2DEX_H */
 
 /*======== End of gs2dex.h ========*/

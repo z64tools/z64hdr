@@ -1,7 +1,7 @@
-#ifndef _Z64HDR_OOT_MQ_DEBUG_H_
-#define _Z64HDR_OOT_MQ_DEBUG_H_
-#define _Z64HDR_MQ_DEBUG_
+#ifndef Z64HDR_H
+#define Z64HDR_H
 
-#include "../z64hdr.h"
+#define OOT_MQ_DEBUG_PAL
+#include "../common/z64common.h"
 
 #endif

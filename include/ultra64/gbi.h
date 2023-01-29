@@ -32,162 +32,169 @@
 
 #ifndef N64_GBI_H
 #define N64_GBI_H
-#define F3DEX_GBI_2
-#define _GS2DEX_H_
 
-#include <stdint.h>
+#ifndef ULTRA64_TYPES_H
+	typedef signed char            s8;
+	typedef unsigned char          u8;
+	typedef signed short int       s16;
+	typedef unsigned short int     u16;
+	typedef signed int             s32;
+	typedef unsigned int           u32;
+	typedef signed long long int   s64;
+	typedef unsigned long long int u64;
+#endif
 
 /* use fast3d by default */
 #if !defined(F3D_GBI) && !defined(F3DEX_GBI) && !defined(F3DEX_GBI_2)
- # define F3D_GBI
+	#define F3D_GBI
 #endif
 
 /* commands for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_SPNOOP            0x00
- # define G_MTX               0x01
- # define G_MOVEMEM           0x03
- # define G_VTX               0x04
- # define G_DL                0x06
- # if defined(F3D_BETA)
-  #  define G_RDPHALF_2       0xB2
-  #  define G_RDPHALF_1       0xB3
-  #  define G_PERSPNORM       0xB4
- # else
-  #  define G_RDPHALF_2       0xB3
-  #  define G_RDPHALF_1       0xB4
- # endif
- # define G_LINE3D            0xB5
- # define G_CLEARGEOMETRYMODE 0xB6
- # define G_SETGEOMETRYMODE   0xB7
- # define G_ENDDL             0xB8
- # define G_SETOTHERMODE_L    0xB9
- # define G_SETOTHERMODE_H    0xBA
- # define G_TEXTURE           0xBB
- # define G_MOVEWORD          0xBC
- # define G_POPMTX            0xBD
- # define G_CULLDL            0xBE
- # define G_TRI1              0xBF
- # define G_NOOP              0xC0
+	#define G_SPNOOP  0x00
+	#define G_MTX     0x01
+	#define G_MOVEMEM 0x03
+	#define G_VTX     0x04
+	#define G_DL      0x06
+  #if defined(F3D_BETA)
+		#define G_RDPHALF_2 0xB2
+		#define G_RDPHALF_1 0xB3
+		#define G_PERSPNORM 0xB4
+  #else
+		#define G_RDPHALF_2 0xB3
+		#define G_RDPHALF_1 0xB4
+  #endif
+	#define G_LINE3D            0xB5
+	#define G_CLEARGEOMETRYMODE 0xB6
+	#define G_SETGEOMETRYMODE   0xB7
+	#define G_ENDDL             0xB8
+	#define G_SETOTHERMODE_L    0xB9
+	#define G_SETOTHERMODE_H    0xBA
+	#define G_TEXTURE           0xBB
+	#define G_MOVEWORD          0xBC
+	#define G_POPMTX            0xBD
+	#define G_CULLDL            0xBE
+	#define G_TRI1              0xBF
+	#define G_NOOP              0xC0
 #endif
 
 /* commands for f3dex */
 #if defined(F3DEX_GBI)
- # define G_LOAD_UCODE        0xAF
- # define G_BRANCH_Z          0xB0
- # define G_TRI2              0xB1
- # if !defined(F3D_BETA)
-  #  define G_MODIFYVTX       0xB2
- # endif
+	#define G_LOAD_UCODE 0xAF
+	#define G_BRANCH_Z   0xB0
+	#define G_TRI2       0xB1
+  #if !defined(F3D_BETA)
+		#define G_MODIFYVTX 0xB2
+  #endif
 #endif
 
 /* commands for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_NOOP              0x00
- # define G_VTX               0x01
- # define G_MODIFYVTX         0x02
- # define G_CULLDL            0x03
- # define G_BRANCH_Z          0x04
- # define G_TRI1              0x05
- # define G_TRI2              0x06
- # define G_QUAD              0x07
- # define G_LINE3D            0x08
- # define G_SPECIAL_3         0xD3
- # define G_SPECIAL_2         0xD4
- # define G_SPECIAL_1         0xD5
- # define G_DMA_IO            0xD6
- # define G_TEXTURE           0xD7
- # define G_POPMTX            0xD8
- # define G_GEOMETRYMODE      0xD9
- # define G_MTX               0xDA
- # define G_MOVEWORD          0xDB
- # define G_MOVEMEM           0xDC
- # define G_LOAD_UCODE        0xDD
- # define G_DL                0xDE
- # define G_ENDDL             0xDF
- # define G_SPNOOP            0xE0
- # define G_RDPHALF_1         0xE1
- # define G_SETOTHERMODE_L    0xE2
- # define G_SETOTHERMODE_H    0xE3
- # define G_RDPHALF_2         0xF1
+	#define G_NOOP           0x00
+	#define G_VTX            0x01
+	#define G_MODIFYVTX      0x02
+	#define G_CULLDL         0x03
+	#define G_BRANCH_Z       0x04
+	#define G_TRI1           0x05
+	#define G_TRI2           0x06
+	#define G_QUAD           0x07
+	#define G_LINE3D         0x08
+	#define G_SPECIAL_3      0xD3
+	#define G_SPECIAL_2      0xD4
+	#define G_SPECIAL_1      0xD5
+	#define G_DMA_IO         0xD6
+	#define G_TEXTURE        0xD7
+	#define G_POPMTX         0xD8
+	#define G_GEOMETRYMODE   0xD9
+	#define G_MTX            0xDA
+	#define G_MOVEWORD       0xDB
+	#define G_MOVEMEM        0xDC
+	#define G_LOAD_UCODE     0xDD
+	#define G_DL             0xDE
+	#define G_ENDDL          0xDF
+	#define G_SPNOOP         0xE0
+	#define G_RDPHALF_1      0xE1
+	#define G_SETOTHERMODE_L 0xE2
+	#define G_SETOTHERMODE_H 0xE3
+	#define G_RDPHALF_2      0xF1
 #endif
 
 /* rdp commands */
-#define G_TEXRECT             0xE4
-#define G_TEXRECTFLIP         0xE5
-#define G_RDPLOADSYNC         0xE6
-#define G_RDPPIPESYNC         0xE7
-#define G_RDPTILESYNC         0xE8
-#define G_RDPFULLSYNC         0xE9
-#define G_SETKEYGB            0xEA
-#define G_SETKEYR             0xEB
-#define G_SETCONVERT          0xEC
-#define G_SETSCISSOR          0xED
-#define G_SETPRIMDEPTH        0xEE
-#define G_RDPSETOTHERMODE     0xEF
-#define G_LOADTLUT            0xF0
-#define G_SETTILESIZE         0xF2
-#define G_LOADBLOCK           0xF3
-#define G_LOADTILE            0xF4
-#define G_SETTILE             0xF5
-#define G_FILLRECT            0xF6
-#define G_SETFILLCOLOR        0xF7
-#define G_SETFOGCOLOR         0xF8
-#define G_SETBLENDCOLOR       0xF9
-#define G_SETPRIMCOLOR        0xFA
-#define G_SETENVCOLOR         0xFB
-#define G_SETCOMBINE          0xFC
-#define G_SETTIMG             0xFD
-#define G_SETZIMG             0xFE
-#define G_SETCIMG             0xFF
+#define G_TEXRECT         0xE4
+#define G_TEXRECTFLIP     0xE5
+#define G_RDPLOADSYNC     0xE6
+#define G_RDPPIPESYNC     0xE7
+#define G_RDPTILESYNC     0xE8
+#define G_RDPFULLSYNC     0xE9
+#define G_SETKEYGB        0xEA
+#define G_SETKEYR         0xEB
+#define G_SETCONVERT      0xEC
+#define G_SETSCISSOR      0xED
+#define G_SETPRIMDEPTH    0xEE
+#define G_RDPSETOTHERMODE 0xEF
+#define G_LOADTLUT        0xF0
+#define G_SETTILESIZE     0xF2
+#define G_LOADBLOCK       0xF3
+#define G_LOADTILE        0xF4
+#define G_SETTILE         0xF5
+#define G_FILLRECT        0xF6
+#define G_SETFILLCOLOR    0xF7
+#define G_SETFOGCOLOR     0xF8
+#define G_SETBLENDCOLOR   0xF9
+#define G_SETPRIMCOLOR    0xFA
+#define G_SETENVCOLOR     0xFB
+#define G_SETCOMBINE      0xFC
+#define G_SETTIMG         0xFD
+#define G_SETZIMG         0xFE
+#define G_SETCIMG         0xFF
 
 /* commands for s2dex */
 #if defined(F3DEX_GBI)
- # define G_BG_1CYC           0x01
- # define G_BG_COPY           0x02
- # define G_OBJ_RECTANGLE     0x03
- # define G_OBJ_SPRITE        0x04
- # define G_OBJ_MOVEMEM       0x05
- # define G_SELECT_DL         0xB0
- # define G_OBJ_RENDERMODE    0xB1
- # define G_OBJ_RECTANGLE_R   0xB2
- # define G_OBJ_LOADTXTR      0xC1
- # define G_OBJ_LDTX_SPRITE   0xC2
- # define G_OBJ_LDTX_RECT     0xC3
- # define G_OBJ_LDTX_RECT_R   0xC4
+	#define G_BG_1CYC         0x01
+	#define G_BG_COPY         0x02
+	#define G_OBJ_RECTANGLE   0x03
+	#define G_OBJ_SPRITE      0x04
+	#define G_OBJ_MOVEMEM     0x05
+	#define G_SELECT_DL       0xB0
+	#define G_OBJ_RENDERMODE  0xB1
+	#define G_OBJ_RECTANGLE_R 0xB2
+	#define G_OBJ_LOADTXTR    0xC1
+	#define G_OBJ_LDTX_SPRITE 0xC2
+	#define G_OBJ_LDTX_RECT   0xC3
+	#define G_OBJ_LDTX_RECT_R 0xC4
 #endif
 
 /* commands for s2dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_OBJ_RECTANGLE     0x01
- # define G_OBJ_SPRITE        0x02
- # define G_SELECT_DL         0x04
- # define G_OBJ_LOADTXTR      0x05
- # define G_OBJ_LDTX_SPRITE   0x06
- # define G_OBJ_LDTX_RECT     0x07
- # define G_OBJ_LDTX_RECT_R   0x08
- # define G_BG_1CYC           0x09
- # define G_BG_COPY           0x0A
- # define G_OBJ_RENDERMODE    0x0B
- # define G_OBJ_RECTANGLE_R   0xDA
- # define G_OBJ_MOVEMEM       0xDC
+	#define G_OBJ_RECTANGLE   0x01
+	#define G_OBJ_SPRITE      0x02
+	#define G_SELECT_DL       0x04
+	#define G_OBJ_LOADTXTR    0x05
+	#define G_OBJ_LDTX_SPRITE 0x06
+	#define G_OBJ_LDTX_RECT   0x07
+	#define G_OBJ_LDTX_RECT_R 0x08
+	#define G_BG_1CYC         0x09
+	#define G_BG_COPY         0x0A
+	#define G_OBJ_RENDERMODE  0x0B
+	#define G_OBJ_RECTANGLE_R 0xDA
+	#define G_OBJ_MOVEMEM     0xDC
 #endif
 
 /* commands for s2dex and s2dex2 */
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define G_RDPHALF_0         0xE4
+	#define G_RDPHALF_0 0xE4
 #endif
 
 /* image formats */
-#define G_IM_FMT_RGBA         0
-#define G_IM_FMT_YUV          1
-#define G_IM_FMT_CI           2
-#define G_IM_FMT_IA           3
-#define G_IM_FMT_I            4
-#define G_IM_SIZ_4b           0
-#define G_IM_SIZ_8b           1
-#define G_IM_SIZ_16b          2
-#define G_IM_SIZ_32b          3
+#define G_IM_FMT_RGBA 0
+#define G_IM_FMT_YUV  1
+#define G_IM_FMT_CI   2
+#define G_IM_FMT_IA   3
+#define G_IM_FMT_I    4
+#define G_IM_SIZ_4b   0
+#define G_IM_SIZ_8b   1
+#define G_IM_SIZ_16b  2
+#define G_IM_SIZ_32b  3
 
 /* fast64 now emits gsDPLoadTextureBlock and friends as their constituent
 instructions, using the SGI gbi.h names. */
@@ -197,600 +204,598 @@ instructions, using the SGI gbi.h names. */
 #define G_IM_SIZ_32b_LOAD_BLOCK G_SIZ_LDSIZ(G_IM_SIZ_32b)
 
 /* texture settings */
-#define G_TX_NOMIRROR         (gI_(0b0) << 0)
-#define G_TX_MIRROR           (gI_(0b1) << 0)
-#define G_TX_WRAP             (gI_(0b0) << 1)
-#define G_TX_CLAMP            (gI_(0b1) << 1)
-#define G_TX_NOMASK           gI_(0)
-#define G_TX_NOLOD            gI_(0)
-// #define G_OFF                 gI_(0)
-// #define G_ON                  gI_(1)
+#define G_TX_NOMIRROR (gI_(0b0) << 0)
+#define G_TX_MIRROR   (gI_(0b1) << 0)
+#define G_TX_WRAP     (gI_(0b0) << 1)
+#define G_TX_CLAMP    (gI_(0b1) << 1)
+#define G_TX_NOMASK   gI_(0)
+#define G_TX_NOLOD    gI_(0)
 
 /* tile indices */
-#define G_TX_LOADTILE         7
-#define G_TX_RENDERTILE       0
+#define G_TX_LOADTILE   7
+#define G_TX_RENDERTILE 0
 
 /* loadblock constants */
-#define G_TX_DXT_FRAC         11
-#define G_TX_LDBLK_MAX_TXL    2047
+#define G_TX_DXT_FRAC      11
+#define G_TX_LDBLK_MAX_TXL 2047
 
 /* geometry mode */
-#define G_ZBUFFER             (gI_(0b1) << 0)
-#define G_SHADE               (gI_(0b1) << 2)
-#define G_CULL_BOTH           (G_CULL_FRONT | G_CULL_BACK)
-#define G_FOG                 (gI_(0b1) << 16)
-#define G_LIGHTING            (gI_(0b1) << 17)
-#define G_TEXTURE_GEN         (gI_(0b1) << 18)
-#define G_TEXTURE_GEN_LINEAR  (gI_(0b1) << 19)
-#define G_LOD                 (gI_(0b1) << 20)
+#define G_ZBUFFER            (gI_(0b1) << 0)
+#define G_SHADE              (gI_(0b1) << 2)
+#define G_CULL_BOTH          (G_CULL_FRONT | G_CULL_BACK)
+#define G_FOG                (gI_(0b1) << 16)
+#define G_LIGHTING           (gI_(0b1) << 17)
+#define G_TEXTURE_GEN        (gI_(0b1) << 18)
+#define G_TEXTURE_GEN_LINEAR (gI_(0b1) << 19)
+#define G_LOD                (gI_(0b1) << 20)
 
 /* geometry mode for fast3d */
 #if defined(F3D_GBI)
- # define G_CLIPPING          (gI_(0b0) << 0)
+	#define G_CLIPPING (gI_(0b0) << 0)
 #endif
 
 /* geometry mode for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_TEXTURE_ENABLE    (gI_(0b1) << 1)
- # define G_SHADING_SMOOTH    (gI_(0b1) << 9)
- # define G_CULL_FRONT        (gI_(0b1) << 12)
- # define G_CULL_BACK         (gI_(0b1) << 13)
+	#define G_TEXTURE_ENABLE (gI_(0b1) << 1)
+	#define G_SHADING_SMOOTH (gI_(0b1) << 9)
+	#define G_CULL_FRONT     (gI_(0b1) << 12)
+	#define G_CULL_BACK      (gI_(0b1) << 13)
 #endif
 
 /* geometry mode for f3dex and f3dex2 */
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define G_CLIPPING          (gI_(0b1) << 23)
+	#define G_CLIPPING (gI_(0b1) << 23)
 #endif
 
 /* geometry mode for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_TEXTURE_ENABLE    (gI_(0b0) << 0)
- # define G_CULL_FRONT        (gI_(0b1) << 9)
- # define G_CULL_BACK         (gI_(0b1) << 10)
- # define G_SHADING_SMOOTH    (gI_(0b1) << 21)
+	#define G_TEXTURE_ENABLE (gI_(0b0) << 0)
+	#define G_CULL_FRONT     (gI_(0b1) << 9)
+	#define G_CULL_BACK      (gI_(0b1) << 10)
+	#define G_SHADING_SMOOTH (gI_(0b1) << 21)
 #endif
 
 /* othermode lo */
-#define G_MDSFT_ALPHACOMPARE  0
-#define G_MDSFT_ZSRCSEL       2
-#define G_MDSFT_RENDERMODE    3
-#define G_MDSFT_BLENDER       16
-#define G_MDSIZ_ALPHACOMPARE  2
-#define G_MDSIZ_ZSRCSEL       1
-#define G_MDSIZ_RENDERMODE    29
-#define G_MDSIZ_BLENDER       13
+#define G_MDSFT_ALPHACOMPARE 0
+#define G_MDSFT_ZSRCSEL      2
+#define G_MDSFT_RENDERMODE   3
+#define G_MDSFT_BLENDER      16
+#define G_MDSIZ_ALPHACOMPARE 2
+#define G_MDSIZ_ZSRCSEL      1
+#define G_MDSIZ_RENDERMODE   29
+#define G_MDSIZ_BLENDER      13
 
-#define G_AC_NONE             (gI_(0b00) << G_MDSFT_ALPHACOMPARE)
-#define G_AC_THRESHOLD        (gI_(0b01) << G_MDSFT_ALPHACOMPARE)
-#define G_AC_DITHER           (gI_(0b11) << G_MDSFT_ALPHACOMPARE)
-#define G_ZS_PIXEL            (gI_(0b0) << G_MDSFT_ZSRCSEL)
-#define G_ZS_PRIM             (gI_(0b1) << G_MDSFT_ZSRCSEL)
-#define AA_EN                 (gI_(0b1) << (G_MDSFT_RENDERMODE + 0))
-#define Z_CMP                 (gI_(0b1) << (G_MDSFT_RENDERMODE + 1))
-#define Z_UPD                 (gI_(0b1) << (G_MDSFT_RENDERMODE + 2))
-#define IM_RD                 (gI_(0b1) << (G_MDSFT_RENDERMODE + 3))
-#define CLR_ON_CVG            (gI_(0b1) << (G_MDSFT_RENDERMODE + 4))
-#define CVG_DST_CLAMP         (gI_(0b00) << (G_MDSFT_RENDERMODE + 5))
-#define CVG_DST_WRAP          (gI_(0b01) << (G_MDSFT_RENDERMODE + 5))
-#define CVG_DST_FULL          (gI_(0b10) << (G_MDSFT_RENDERMODE + 5))
-#define CVG_DST_SAVE          (gI_(0b11) << (G_MDSFT_RENDERMODE + 5))
-#define ZMODE_OPA             (gI_(0b00) << (G_MDSFT_RENDERMODE + 7))
-#define ZMODE_INTER           (gI_(0b01) << (G_MDSFT_RENDERMODE + 7))
-#define ZMODE_XLU             (gI_(0b10) << (G_MDSFT_RENDERMODE + 7))
-#define ZMODE_DEC             (gI_(0b11) << (G_MDSFT_RENDERMODE + 7))
-#define CVG_X_ALPHA           (gI_(0b1) << (G_MDSFT_RENDERMODE + 9))
-#define ALPHA_CVG_SEL         (gI_(0b1) << (G_MDSFT_RENDERMODE + 10))
-#define FORCE_BL              (gI_(0b1) << (G_MDSFT_RENDERMODE + 11))
+#define G_AC_NONE      (gI_(0b00) << G_MDSFT_ALPHACOMPARE)
+#define G_AC_THRESHOLD (gI_(0b01) << G_MDSFT_ALPHACOMPARE)
+#define G_AC_DITHER    (gI_(0b11) << G_MDSFT_ALPHACOMPARE)
+#define G_ZS_PIXEL     (gI_(0b0) << G_MDSFT_ZSRCSEL)
+#define G_ZS_PRIM      (gI_(0b1) << G_MDSFT_ZSRCSEL)
+#define AA_EN          (gI_(0b1) << (G_MDSFT_RENDERMODE + 0))
+#define Z_CMP          (gI_(0b1) << (G_MDSFT_RENDERMODE + 1))
+#define Z_UPD          (gI_(0b1) << (G_MDSFT_RENDERMODE + 2))
+#define IM_RD          (gI_(0b1) << (G_MDSFT_RENDERMODE + 3))
+#define CLR_ON_CVG     (gI_(0b1) << (G_MDSFT_RENDERMODE + 4))
+#define CVG_DST_CLAMP  (gI_(0b00) << (G_MDSFT_RENDERMODE + 5))
+#define CVG_DST_WRAP   (gI_(0b01) << (G_MDSFT_RENDERMODE + 5))
+#define CVG_DST_FULL   (gI_(0b10) << (G_MDSFT_RENDERMODE + 5))
+#define CVG_DST_SAVE   (gI_(0b11) << (G_MDSFT_RENDERMODE + 5))
+#define ZMODE_OPA      (gI_(0b00) << (G_MDSFT_RENDERMODE + 7))
+#define ZMODE_INTER    (gI_(0b01) << (G_MDSFT_RENDERMODE + 7))
+#define ZMODE_XLU      (gI_(0b10) << (G_MDSFT_RENDERMODE + 7))
+#define ZMODE_DEC      (gI_(0b11) << (G_MDSFT_RENDERMODE + 7))
+#define CVG_X_ALPHA    (gI_(0b1) << (G_MDSFT_RENDERMODE + 9))
+#define ALPHA_CVG_SEL  (gI_(0b1) << (G_MDSFT_RENDERMODE + 10))
+#define FORCE_BL       (gI_(0b1) << (G_MDSFT_RENDERMODE + 11))
 
-#define G_BL_1MA              gI_(0b00)
-#define G_BL_1                gI_(0b10)
-#define G_BL_0                gI_(0b11)
-#define G_BL_CLR_IN           gI_(0b00)
-#define G_BL_CLR_MEM          gI_(0b01)
-#define G_BL_CLR_BL           gI_(0b10)
-#define G_BL_CLR_FOG          gI_(0b11)
-#define G_BL_A_IN             gI_(0b00)
-#define G_BL_A_FOG            gI_(0b01)
-#define G_BL_A_MEM            gI_(0b01)
-#define G_BL_A_SHADE          gI_(0b10)
+#define G_BL_1MA     gI_(0b00)
+#define G_BL_1       gI_(0b10)
+#define G_BL_0       gI_(0b11)
+#define G_BL_CLR_IN  gI_(0b00)
+#define G_BL_CLR_MEM gI_(0b01)
+#define G_BL_CLR_BL  gI_(0b10)
+#define G_BL_CLR_FOG gI_(0b11)
+#define G_BL_A_IN    gI_(0b00)
+#define G_BL_A_FOG   gI_(0b01)
+#define G_BL_A_MEM   gI_(0b01)
+#define G_BL_A_SHADE gI_(0b10)
 
 #define GBL_c1(p, a, m, b) \
-	( \
-		gF_(p, 2, 30) | \
-		gF_(a, 2, 26) | \
-		gF_(m, 2, 22) | \
-		gF_(b, 2, 18) \
+	(                      \
+		gF_(p, 2, 30) |    \
+		gF_(a, 2, 26) |    \
+		gF_(m, 2, 22) |    \
+		gF_(b, 2, 18)      \
 	)
 #define GBL_c2(p, a, m, b) \
-	( \
-		gF_(p, 2, 28) | \
-		gF_(a, 2, 24) | \
-		gF_(m, 2, 20) | \
-		gF_(b, 2, 16) \
+	(                      \
+		gF_(p, 2, 28) |    \
+		gF_(a, 2, 24) |    \
+		gF_(m, 2, 20) |    \
+		gF_(b, 2, 16)      \
 	)
 
 /* render modes */
-#define G_RM_OPA_SURF \
-	( \
-		CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL | \
+#define G_RM_OPA_SURF                                    \
+	(                                                    \
+		CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL |           \
 		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
 	)
-#define G_RM_OPA_SURF2 \
-	( \
-		CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL | \
+#define G_RM_OPA_SURF2                                   \
+	(                                                    \
+		CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL |           \
 		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
 	)
-#define G_RM_AA_OPA_SURF \
-	( \
+#define G_RM_AA_OPA_SURF                                            \
+	(                                                               \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
+	)
+#define G_RM_AA_OPA_SURF2                                           \
+	(                                                               \
+		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
+	)
+#define G_RM_RA_OPA_SURF                                         \
+	(                                                            \
+		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL |      \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_AA_OPA_SURF2 \
-	( \
-		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
+#define G_RM_RA_OPA_SURF2                                        \
+	(                                                            \
+		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL |      \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_RA_OPA_SURF \
-	( \
-		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_RA_OPA_SURF2 \
-	( \
-		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_ZB_OPA_SURF \
-	( \
+#define G_RM_ZB_OPA_SURF                                           \
+	(                                                              \
 		Z_CMP | Z_UPD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_ZB_OPA_SURF2 \
-	( \
+#define G_RM_ZB_OPA_SURF2                                          \
+	(                                                              \
 		Z_CMP | Z_UPD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_AA_ZB_OPA_SURF \
-	( \
+#define G_RM_AA_ZB_OPA_SURF                                         \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
+		ALPHA_CVG_SEL |                                             \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
+	)
+#define G_RM_AA_ZB_OPA_SURF2                                        \
+	(                                                               \
+		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
+		ALPHA_CVG_SEL |                                             \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
+	)
+#define G_RM_RA_ZB_OPA_SURF                                      \
+	(                                                            \
+		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_OPA |      \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_AA_ZB_OPA_SURF2 \
-	( \
-		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_RA_ZB_OPA_SURF \
-	( \
-		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_RA_ZB_OPA_SURF2 \
-	( \
-		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
+#define G_RM_RA_ZB_OPA_SURF2                                     \
+	(                                                            \
+		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_OPA |      \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
 
-#define G_RM_XLU_SURF \
-	( \
-		IM_RD | CVG_DST_FULL | ZMODE_OPA | FORCE_BL | \
+#define G_RM_XLU_SURF                                          \
+	(                                                          \
+		IM_RD | CVG_DST_FULL | ZMODE_OPA | FORCE_BL |          \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_XLU_SURF2 \
-	( \
-		IM_RD | CVG_DST_FULL | ZMODE_OPA | FORCE_BL | \
+#define G_RM_XLU_SURF2                                         \
+	(                                                          \
+		IM_RD | CVG_DST_FULL | ZMODE_OPA | FORCE_BL |          \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_XLU_SURF \
-	( \
+#define G_RM_AA_XLU_SURF                                        \
+	(                                                           \
 		AA_EN | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | ZMODE_OPA | \
-		FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		FORCE_BL |                                              \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)  \
 	)
-#define G_RM_AA_XLU_SURF2 \
-	( \
+#define G_RM_AA_XLU_SURF2                                       \
+	(                                                           \
 		AA_EN | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | ZMODE_OPA | \
-		FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		FORCE_BL |                                              \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)  \
 	)
-#define G_RM_ZB_XLU_SURF \
-	( \
-		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_XLU | FORCE_BL | \
+#define G_RM_ZB_XLU_SURF                                       \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_XLU | FORCE_BL |  \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_ZB_XLU_SURF2 \
-	( \
-		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_XLU | FORCE_BL | \
+#define G_RM_ZB_XLU_SURF2                                      \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_XLU | FORCE_BL |  \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_XLU_SURF \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_XLU | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_SURF                                    \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_XLU | FORCE_BL |                                 \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_XLU_SURF2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_XLU | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_SURF2                                   \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_XLU | FORCE_BL |                                 \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_ZB_OPA_DECAL \
-	( \
-		Z_CMP | CVG_DST_FULL | ZMODE_DEC | ALPHA_CVG_SEL | \
+#define G_RM_ZB_OPA_DECAL                                        \
+	(                                                            \
+		Z_CMP | CVG_DST_FULL | ZMODE_DEC | ALPHA_CVG_SEL |       \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_ZB_OPA_DECAL2 \
-	( \
-		Z_CMP | CVG_DST_FULL | ZMODE_DEC | ALPHA_CVG_SEL | \
+#define G_RM_ZB_OPA_DECAL2                                       \
+	(                                                            \
+		Z_CMP | CVG_DST_FULL | ZMODE_DEC | ALPHA_CVG_SEL |       \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_AA_ZB_OPA_DECAL \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_WRAP | ZMODE_DEC | \
-		ALPHA_CVG_SEL | \
+#define G_RM_AA_ZB_OPA_DECAL                                     \
+	(                                                            \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_WRAP | ZMODE_DEC |       \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_AA_ZB_OPA_DECAL2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_WRAP | ZMODE_DEC | \
-		ALPHA_CVG_SEL | \
+#define G_RM_AA_ZB_OPA_DECAL2                                    \
+	(                                                            \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_WRAP | ZMODE_DEC |       \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_RA_ZB_OPA_DECAL \
-	( \
+#define G_RM_RA_ZB_OPA_DECAL                                       \
+	(                                                              \
 		AA_EN | Z_CMP | CVG_DST_WRAP | ZMODE_DEC | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_RA_ZB_OPA_DECAL2 \
-	( \
+#define G_RM_RA_ZB_OPA_DECAL2                                      \
+	(                                                              \
 		AA_EN | Z_CMP | CVG_DST_WRAP | ZMODE_DEC | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
 
-#define G_RM_ZB_XLU_DECAL \
-	( \
-		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_DEC | FORCE_BL | \
+#define G_RM_ZB_XLU_DECAL                                      \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_DEC | FORCE_BL |  \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_ZB_XLU_DECAL2 \
-	( \
-		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_DEC | FORCE_BL | \
+#define G_RM_ZB_XLU_DECAL2                                     \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_FULL | ZMODE_DEC | FORCE_BL |  \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_XLU_DECAL \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_DEC | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_DECAL                                   \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_DEC | FORCE_BL |                                 \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_XLU_DECAL2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_DEC | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_DECAL2                                  \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_DEC | FORCE_BL |                                 \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_AA_ZB_OPA_INTER \
-	( \
+#define G_RM_AA_ZB_OPA_INTER                                          \
+	(                                                                 \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_INTER | \
-		ALPHA_CVG_SEL | \
+		ALPHA_CVG_SEL |                                               \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)      \
+	)
+#define G_RM_AA_ZB_OPA_INTER2                                         \
+	(                                                                 \
+		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_INTER | \
+		ALPHA_CVG_SEL |                                               \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)      \
+	)
+#define G_RM_RA_ZB_OPA_INTER                                     \
+	(                                                            \
+		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_INTER |    \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
-#define G_RM_AA_ZB_OPA_INTER2 \
-	( \
-		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_INTER | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_RA_ZB_OPA_INTER \
-	( \
-		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_INTER | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
-	)
-#define G_RM_RA_ZB_OPA_INTER2 \
-	( \
-		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_INTER | \
-		ALPHA_CVG_SEL | \
+#define G_RM_RA_ZB_OPA_INTER2                                    \
+	(                                                            \
+		AA_EN | Z_CMP | Z_UPD | CVG_DST_CLAMP | ZMODE_INTER |    \
+		ALPHA_CVG_SEL |                                          \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
 	)
 
-#define G_RM_AA_ZB_XLU_INTER \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_INTER | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_INTER                                   \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_INTER | FORCE_BL |                               \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_XLU_INTER2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP | \
-		ZMODE_INTER | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_INTER2                                  \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CLR_ON_CVG | CVG_DST_WRAP |    \
+		ZMODE_INTER | FORCE_BL |                               \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_AA_XLU_LINE \
-	( \
+#define G_RM_AA_XLU_LINE                                          \
+	(                                                             \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
+		ALPHA_CVG_SEL | FORCE_BL |                                \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
+	)
+#define G_RM_AA_XLU_LINE2                                         \
+	(                                                             \
+		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
+		ALPHA_CVG_SEL | FORCE_BL |                                \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
+	)
+#define G_RM_AA_ZB_XLU_LINE                                    \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_CLAMP | ZMODE_XLU |    \
+		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL |               \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_XLU_LINE2 \
-	( \
-		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-#define G_RM_AA_ZB_XLU_LINE \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_CLAMP | ZMODE_XLU | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-#define G_RM_AA_ZB_XLU_LINE2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_CLAMP | ZMODE_XLU | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL | \
+#define G_RM_AA_ZB_XLU_LINE2                                   \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_CLAMP | ZMODE_XLU |    \
+		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL |               \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_AA_DEC_LINE \
-	( \
+#define G_RM_AA_DEC_LINE                                         \
+	(                                                            \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL | FORCE_BL |                               \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)   \
 	)
-#define G_RM_AA_DEC_LINE2 \
-	( \
+#define G_RM_AA_DEC_LINE2                                        \
+	(                                                            \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL | FORCE_BL |                               \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)   \
 	)
-#define G_RM_AA_ZB_DEC_LINE \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL | \
+#define G_RM_AA_ZB_DEC_LINE                                    \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC |     \
+		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL |               \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_ZB_DEC_LINE2 \
-	( \
-		AA_EN | Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL | \
+#define G_RM_AA_ZB_DEC_LINE2                                   \
+	(                                                          \
+		AA_EN | Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC |     \
+		CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL |               \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_TEX_EDGE \
-	( \
+#define G_RM_TEX_EDGE                                     \
+	(                                                     \
 		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		ALPHA_CVG_SEL | FORCE_BL |                        \
+		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)  \
 	)
-#define G_RM_TEX_EDGE2 \
-	( \
+#define G_RM_TEX_EDGE2                                    \
+	(                                                     \
 		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		ALPHA_CVG_SEL | FORCE_BL |                        \
+		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)  \
 	)
-#define G_RM_AA_TEX_EDGE \
-	( \
+#define G_RM_AA_TEX_EDGE                                          \
+	(                                                             \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		ALPHA_CVG_SEL |                                           \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)  \
 	)
-#define G_RM_AA_TEX_EDGE2 \
-	( \
+#define G_RM_AA_TEX_EDGE2                                         \
+	(                                                             \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		ALPHA_CVG_SEL |                                           \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)  \
 	)
-#define G_RM_AA_ZB_TEX_EDGE \
-	( \
+#define G_RM_AA_ZB_TEX_EDGE                                         \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                               \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
 	)
-#define G_RM_AA_ZB_TEX_EDGE2 \
-	( \
+#define G_RM_AA_ZB_TEX_EDGE2                                        \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                               \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)    \
 	)
 
-#define G_RM_AA_ZB_TEX_INTER \
-	( \
+#define G_RM_AA_ZB_TEX_INTER                                          \
+	(                                                                 \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_INTER | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                                 \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)      \
 	)
-#define G_RM_AA_ZB_TEX_INTER2 \
-	( \
+#define G_RM_AA_ZB_TEX_INTER2                                         \
+	(                                                                 \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_INTER | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                                 \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)      \
 	)
 
-#define G_RM_AA_SUB_SURF \
-	( \
+#define G_RM_AA_SUB_SURF                                           \
+	(                                                              \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_AA_SUB_SURF2 \
-	( \
+#define G_RM_AA_SUB_SURF2                                          \
+	(                                                              \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_AA_ZB_SUB_SURF \
-	( \
+#define G_RM_AA_ZB_SUB_SURF                                        \
+	(                                                              \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_FULL | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		ALPHA_CVG_SEL |                                            \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
-#define G_RM_AA_ZB_SUB_SURF2 \
-	( \
+#define G_RM_AA_ZB_SUB_SURF2                                       \
+	(                                                              \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_FULL | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM) \
+		ALPHA_CVG_SEL |                                            \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_A_MEM)   \
 	)
 
-#define G_RM_PCL_SURF \
-	( \
+#define G_RM_PCL_SURF                                       \
+	(                                                       \
 		G_AC_DITHER | CVG_DST_FULL | ZMODE_OPA | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)    \
 	)
-#define G_RM_PCL_SURF2 \
-	( \
+#define G_RM_PCL_SURF2                                      \
+	(                                                       \
 		G_AC_DITHER | CVG_DST_FULL | ZMODE_OPA | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)    \
 	)
-#define G_RM_AA_PCL_SURF \
-	( \
+#define G_RM_AA_PCL_SURF                                          \
+	(                                                             \
 		G_AC_DITHER | AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
 	)
-#define G_RM_AA_PCL_SURF2 \
-	( \
+#define G_RM_AA_PCL_SURF2                                         \
+	(                                                             \
 		G_AC_DITHER | AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
 	)
-#define G_RM_ZB_PCL_SURF \
-	( \
+#define G_RM_ZB_PCL_SURF                                         \
+	(                                                            \
 		G_AC_DITHER | Z_CMP | Z_UPD | CVG_DST_FULL | ZMODE_OPA | \
-		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)         \
 	)
-#define G_RM_ZB_PCL_SURF2 \
-	( \
+#define G_RM_ZB_PCL_SURF2                                        \
+	(                                                            \
 		G_AC_DITHER | Z_CMP | Z_UPD | CVG_DST_FULL | ZMODE_OPA | \
-		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
+		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)         \
 	)
-#define G_RM_AA_ZB_PCL_SURF \
-	( \
+#define G_RM_AA_ZB_PCL_SURF                                           \
+	(                                                                 \
 		G_AC_DITHER | AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | \
-		ZMODE_OPA | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ZMODE_OPA |                                                   \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)        \
 	)
-#define G_RM_AA_ZB_PCL_SURF2 \
-	( \
+#define G_RM_AA_ZB_PCL_SURF2                                          \
+	(                                                                 \
 		G_AC_DITHER | AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | \
-		ZMODE_OPA | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ZMODE_OPA |                                                   \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)        \
 	)
 
-#define G_RM_AA_OPA_TERR \
-	( \
+#define G_RM_AA_OPA_TERR                                            \
+	(                                                               \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
-#define G_RM_AA_OPA_TERR2 \
-	( \
+#define G_RM_AA_OPA_TERR2                                           \
+	(                                                               \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
-#define G_RM_AA_ZB_OPA_TERR \
-	( \
+#define G_RM_AA_ZB_OPA_TERR                                         \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL |                                             \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
-#define G_RM_AA_ZB_OPA_TERR2 \
-	( \
+#define G_RM_AA_ZB_OPA_TERR2                                        \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL |                                             \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
 
-#define G_RM_AA_TEX_TERR \
-	( \
+#define G_RM_AA_TEX_TERR                                          \
+	(                                                             \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL |                                           \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
 	)
-#define G_RM_AA_TEX_TERR2 \
-	( \
+#define G_RM_AA_TEX_TERR2                                         \
+	(                                                             \
 		AA_EN | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL |                                           \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)    \
 	)
-#define G_RM_AA_ZB_TEX_TERR \
-	( \
+#define G_RM_AA_ZB_TEX_TERR                                         \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                               \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
-#define G_RM_AA_ZB_TEX_TERR2 \
-	( \
+#define G_RM_AA_ZB_TEX_TERR2                                        \
+	(                                                               \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_CLAMP | ZMODE_OPA | \
-		CVG_X_ALPHA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		CVG_X_ALPHA | ALPHA_CVG_SEL |                               \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)      \
 	)
 
-#define G_RM_AA_SUB_TERR \
-	( \
+#define G_RM_AA_SUB_TERR                                           \
+	(                                                              \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)     \
 	)
-#define G_RM_AA_SUB_TERR2 \
-	( \
+#define G_RM_AA_SUB_TERR2                                          \
+	(                                                              \
 		AA_EN | IM_RD | CVG_DST_FULL | ZMODE_OPA | ALPHA_CVG_SEL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)     \
 	)
-#define G_RM_AA_ZB_SUB_TERR \
-	( \
+#define G_RM_AA_ZB_SUB_TERR                                        \
+	(                                                              \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_FULL | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+		ALPHA_CVG_SEL |                                            \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)     \
 	)
-#define G_RM_AA_ZB_SUB_TERR2 \
-	( \
+#define G_RM_AA_ZB_SUB_TERR2                                       \
+	(                                                              \
 		AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_FULL | ZMODE_OPA | \
-		ALPHA_CVG_SEL | \
+		ALPHA_CVG_SEL |                                            \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)     \
+	)
+
+#define G_RM_CLD_SURF                                          \
+	(                                                          \
+		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL |          \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+	)
+#define G_RM_CLD_SURF2                                         \
+	(                                                          \
+		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL |          \
+		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+	)
+#define G_RM_ZB_CLD_SURF                                       \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_XLU | FORCE_BL |  \
+		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
+	)
+#define G_RM_ZB_CLD_SURF2                                      \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_XLU | FORCE_BL |  \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_CLD_SURF \
-	( \
-		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL | \
+#define G_RM_ZB_OVL_SURF                                       \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | FORCE_BL |  \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_CLD_SURF2 \
-	( \
-		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-#define G_RM_ZB_CLD_SURF \
-	( \
-		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_XLU | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-#define G_RM_ZB_CLD_SURF2 \
-	( \
-		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_XLU | FORCE_BL | \
+#define G_RM_ZB_OVL_SURF2                                      \
+	(                                                          \
+		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | FORCE_BL |  \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
 
-#define G_RM_ZB_OVL_SURF \
-	( \
-		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | FORCE_BL | \
-		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-#define G_RM_ZB_OVL_SURF2 \
-	( \
-		Z_CMP | IM_RD | CVG_DST_SAVE | ZMODE_DEC | FORCE_BL | \
-		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
-	)
-
-#define G_RM_ADD \
-	( \
-		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL | \
+#define G_RM_ADD                                              \
+	(                                                         \
+		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL |         \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_FOG, G_BL_CLR_MEM, G_BL_1) \
 	)
-#define G_RM_ADD2 \
-	( \
-		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL | \
+#define G_RM_ADD2                                             \
+	(                                                         \
+		IM_RD | CVG_DST_SAVE | ZMODE_OPA | FORCE_BL |         \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_FOG, G_BL_CLR_MEM, G_BL_1) \
 	)
 
@@ -803,125 +808,125 @@ instructions, using the SGI gbi.h names. */
 #define G_RM_PASS \
 	GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1)
 
-#define G_RM_VISCVG \
-	( \
-		IM_RD | FORCE_BL | \
+#define G_RM_VISCVG                                          \
+	(                                                        \
+		IM_RD | FORCE_BL |                                   \
 		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_BL, G_BL_A_MEM) \
 	)
-#define G_RM_VISCVG2 \
-	( \
-		IM_RD | FORCE_BL | \
+#define G_RM_VISCVG2                                         \
+	(                                                        \
+		IM_RD | FORCE_BL |                                   \
 		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_BL, G_BL_A_MEM) \
 	)
 
-#define G_RM_OPA_CI \
-	( \
-		CVG_DST_CLAMP | ZMODE_OPA | \
+#define G_RM_OPA_CI                                      \
+	(                                                    \
+		CVG_DST_CLAMP | ZMODE_OPA |                      \
 		GBL_c1(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
 	)
-#define G_RM_OPA_CI2 \
-	( \
-		CVG_DST_CLAMP | ZMODE_OPA | \
+#define G_RM_OPA_CI2                                     \
+	(                                                    \
+		CVG_DST_CLAMP | ZMODE_OPA |                      \
 		GBL_c2(G_BL_CLR_IN, G_BL_0, G_BL_CLR_IN, G_BL_1) \
 	)
 
-#define G_RM_NOOP               GBL_c1(0, 0, 0, 0)
-#define G_RM_NOOP2              GBL_c2(0, 0, 0, 0)
+#define G_RM_NOOP  GBL_c1(0, 0, 0, 0)
+#define G_RM_NOOP2 GBL_c2(0, 0, 0, 0)
 
-#define G_RM_SPRITE             G_RM_OPA_SURF
-#define G_RM_SPRITE2            G_RM_OPA_SURF2
-#define G_RM_RA_SPRITE \
-	( \
-		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
+#define G_RM_SPRITE  G_RM_OPA_SURF
+#define G_RM_SPRITE2 G_RM_OPA_SURF2
+#define G_RM_RA_SPRITE                                         \
+	(                                                          \
+		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA |      \
+		ALPHA_CVG_SEL |                                        \
 		GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_RA_SPRITE2 \
-	( \
-		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA | \
-		ALPHA_CVG_SEL | \
+#define G_RM_RA_SPRITE2                                        \
+	(                                                          \
+		AA_EN | CVG_DST_CLAMP | ZMODE_OPA | CVG_X_ALPHA |      \
+		ALPHA_CVG_SEL |                                        \
 		GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) \
 	)
-#define G_RM_AA_SPRITE          G_RM_AA_TEX_TERR
-#define G_RM_AA_SPRITE2         G_RM_AA_TEX_TERR2
-#define G_RM_XLU_SPRITE         G_RM_XLU_SURF
-#define G_RM_XLU_SPRITE2        G_RM_XLU_SURF2
-#define G_RM_AA_XLU_SPRITE      G_RM_AA_XLU_SURF
-#define G_RM_AA_XLU_SPRITE2     G_RM_AA_XLU_SURF2
+#define G_RM_AA_SPRITE      G_RM_AA_TEX_TERR
+#define G_RM_AA_SPRITE2     G_RM_AA_TEX_TERR2
+#define G_RM_XLU_SPRITE     G_RM_XLU_SURF
+#define G_RM_XLU_SPRITE2    G_RM_XLU_SURF2
+#define G_RM_AA_XLU_SPRITE  G_RM_AA_XLU_SURF
+#define G_RM_AA_XLU_SPRITE2 G_RM_AA_XLU_SURF2
 
-#define G_OBJRM_NOTXCLAMP       (gI_(0b1) << 0)
-#define G_OBJRM_XLU             (gI_(0b1) << 1)
-#define G_OBJRM_ANTIALIAS       (gI_(0b1) << 2)
-#define G_OBJRM_BILERP          (gI_(0b1) << 3)
-#define G_OBJRM_SHRINKSIZE_1    (gI_(0b1) << 4)
-#define G_OBJRM_SHRINKSIZE_2    (gI_(0b1) << 5)
-#define G_OBJRM_WIDEN           (gI_(0b1) << 6)
+#define G_OBJRM_NOTXCLAMP    (gI_(0b1) << 0)
+#define G_OBJRM_XLU          (gI_(0b1) << 1)
+#define G_OBJRM_ANTIALIAS    (gI_(0b1) << 2)
+#define G_OBJRM_BILERP       (gI_(0b1) << 3)
+#define G_OBJRM_SHRINKSIZE_1 (gI_(0b1) << 4)
+#define G_OBJRM_SHRINKSIZE_2 (gI_(0b1) << 5)
+#define G_OBJRM_WIDEN        (gI_(0b1) << 6)
 
 /* othermode hi */
-#define G_MDSFT_ALPHADITHER     4
-#define G_MDSFT_RGBDITHER       6
-#define G_MDSFT_COMBKEY         8
-#define G_MDSFT_TEXTCONV        9
-#define G_MDSFT_TEXTFILT        12
-#define G_MDSFT_TEXTLUT         14
-#define G_MDSFT_TEXTLOD         16
-#define G_MDSFT_TEXTDETAIL      17
-#define G_MDSFT_TEXTPERSP       19
-#define G_MDSFT_CYCLETYPE       20
-#define G_MDSFT_PIPELINE        23
-#define G_MDSIZ_ALPHADITHER     2
-#define G_MDSIZ_RGBDITHER       2
-#define G_MDSIZ_COMBKEY         1
-#define G_MDSIZ_TEXTCONV        3
-#define G_MDSIZ_TEXTFILT        2
-#define G_MDSIZ_TEXTLUT         2
-#define G_MDSIZ_TEXTLOD         1
-#define G_MDSIZ_TEXTDETAIL      2
-#define G_MDSIZ_TEXTPERSP       1
-#define G_MDSIZ_CYCLETYPE       2
-#define G_MDSIZ_PIPELINE        1
+#define G_MDSFT_ALPHADITHER 4
+#define G_MDSFT_RGBDITHER   6
+#define G_MDSFT_COMBKEY     8
+#define G_MDSFT_TEXTCONV    9
+#define G_MDSFT_TEXTFILT    12
+#define G_MDSFT_TEXTLUT     14
+#define G_MDSFT_TEXTLOD     16
+#define G_MDSFT_TEXTDETAIL  17
+#define G_MDSFT_TEXTPERSP   19
+#define G_MDSFT_CYCLETYPE   20
+#define G_MDSFT_PIPELINE    23
+#define G_MDSIZ_ALPHADITHER 2
+#define G_MDSIZ_RGBDITHER   2
+#define G_MDSIZ_COMBKEY     1
+#define G_MDSIZ_TEXTCONV    3
+#define G_MDSIZ_TEXTFILT    2
+#define G_MDSIZ_TEXTLUT     2
+#define G_MDSIZ_TEXTLOD     1
+#define G_MDSIZ_TEXTDETAIL  2
+#define G_MDSIZ_TEXTPERSP   1
+#define G_MDSIZ_CYCLETYPE   2
+#define G_MDSIZ_PIPELINE    1
 
-#define G_AD_PATTERN            (gI_(0b00) << G_MDSFT_ALPHADITHER)
-#define G_AD_NOTPATTERN         (gI_(0b01) << G_MDSFT_ALPHADITHER)
-#define G_AD_NOISE              (gI_(0b10) << G_MDSFT_ALPHADITHER)
-#define G_AD_DISABLE            (gI_(0b11) << G_MDSFT_ALPHADITHER)
-#define G_CD_MAGICSQ            (gI_(0b00) << G_MDSFT_RGBDITHER)
-#define G_CD_BAYER              (gI_(0b01) << G_MDSFT_RGBDITHER)
-#define G_CD_NOISE              (gI_(0b10) << G_MDSFT_RGBDITHER)
-#define G_CD_DISABLE            (gI_(0b11) << G_MDSFT_RGBDITHER)
-#define G_CD_ENABLE             (gI_(0b10) << G_MDSFT_RGBDITHER)
-#define G_CK_NONE               (gI_(0b0) << G_MDSFT_COMBKEY)
-#define G_CK_KEY                (gI_(0b1) << G_MDSFT_COMBKEY)
-#define G_TC_CONV               (gI_(0b000) << G_MDSFT_TEXTCONV)
-#define G_TC_FILTCONV           (gI_(0b101) << G_MDSFT_TEXTCONV)
-#define G_TC_FILT               (gI_(0b110) << G_MDSFT_TEXTCONV)
-#define G_TF_POINT              (gI_(0b00) << G_MDSFT_TEXTFILT)
-#define G_TF_BILERP             (gI_(0b10) << G_MDSFT_TEXTFILT)
-#define G_TF_AVERAGE            (gI_(0b11) << G_MDSFT_TEXTFILT)
-#define G_TT_NONE               (gI_(0b00) << G_MDSFT_TEXTLUT)
-#define G_TT_RGBA16             (gI_(0b10) << G_MDSFT_TEXTLUT)
-#define G_TT_IA16               (gI_(0b11) << G_MDSFT_TEXTLUT)
-#define G_TL_TILE               (gI_(0b0) << G_MDSFT_TEXTLOD)
-#define G_TL_LOD                (gI_(0b1) << G_MDSFT_TEXTLOD)
-#define G_TD_CLAMP              (gI_(0b00) << G_MDSFT_TEXTDETAIL)
-#define G_TD_SHARPEN            (gI_(0b01) << G_MDSFT_TEXTDETAIL)
-#define G_TD_DETAIL             (gI_(0b10) << G_MDSFT_TEXTDETAIL)
-#define G_TP_NONE               (gI_(0b0) << G_MDSFT_TEXTPERSP)
-#define G_TP_PERSP              (gI_(0b1) << G_MDSFT_TEXTPERSP)
-#define G_CYC_1CYCLE            (gI_(0b00) << G_MDSFT_CYCLETYPE)
-#define G_CYC_2CYCLE            (gI_(0b01) << G_MDSFT_CYCLETYPE)
-#define G_CYC_COPY              (gI_(0b10) << G_MDSFT_CYCLETYPE)
-#define G_CYC_FILL              (gI_(0b11) << G_MDSFT_CYCLETYPE)
-#define G_PM_NPRIMITIVE         (gI_(0b0) << G_MDSFT_PIPELINE)
-#define G_PM_1PRIMITIVE         (gI_(0b1) << G_MDSFT_PIPELINE)
+#define G_AD_PATTERN    (gI_(0b00) << G_MDSFT_ALPHADITHER)
+#define G_AD_NOTPATTERN (gI_(0b01) << G_MDSFT_ALPHADITHER)
+#define G_AD_NOISE      (gI_(0b10) << G_MDSFT_ALPHADITHER)
+#define G_AD_DISABLE    (gI_(0b11) << G_MDSFT_ALPHADITHER)
+#define G_CD_MAGICSQ    (gI_(0b00) << G_MDSFT_RGBDITHER)
+#define G_CD_BAYER      (gI_(0b01) << G_MDSFT_RGBDITHER)
+#define G_CD_NOISE      (gI_(0b10) << G_MDSFT_RGBDITHER)
+#define G_CD_DISABLE    (gI_(0b11) << G_MDSFT_RGBDITHER)
+#define G_CD_ENABLE     (gI_(0b10) << G_MDSFT_RGBDITHER)
+#define G_CK_NONE       (gI_(0b0) << G_MDSFT_COMBKEY)
+#define G_CK_KEY        (gI_(0b1) << G_MDSFT_COMBKEY)
+#define G_TC_CONV       (gI_(0b000) << G_MDSFT_TEXTCONV)
+#define G_TC_FILTCONV   (gI_(0b101) << G_MDSFT_TEXTCONV)
+#define G_TC_FILT       (gI_(0b110) << G_MDSFT_TEXTCONV)
+#define G_TF_POINT      (gI_(0b00) << G_MDSFT_TEXTFILT)
+#define G_TF_BILERP     (gI_(0b10) << G_MDSFT_TEXTFILT)
+#define G_TF_AVERAGE    (gI_(0b11) << G_MDSFT_TEXTFILT)
+#define G_TT_NONE       (gI_(0b00) << G_MDSFT_TEXTLUT)
+#define G_TT_RGBA16     (gI_(0b10) << G_MDSFT_TEXTLUT)
+#define G_TT_IA16       (gI_(0b11) << G_MDSFT_TEXTLUT)
+#define G_TL_TILE       (gI_(0b0) << G_MDSFT_TEXTLOD)
+#define G_TL_LOD        (gI_(0b1) << G_MDSFT_TEXTLOD)
+#define G_TD_CLAMP      (gI_(0b00) << G_MDSFT_TEXTDETAIL)
+#define G_TD_SHARPEN    (gI_(0b01) << G_MDSFT_TEXTDETAIL)
+#define G_TD_DETAIL     (gI_(0b10) << G_MDSFT_TEXTDETAIL)
+#define G_TP_NONE       (gI_(0b0) << G_MDSFT_TEXTPERSP)
+#define G_TP_PERSP      (gI_(0b1) << G_MDSFT_TEXTPERSP)
+#define G_CYC_1CYCLE    (gI_(0b00) << G_MDSFT_CYCLETYPE)
+#define G_CYC_2CYCLE    (gI_(0b01) << G_MDSFT_CYCLETYPE)
+#define G_CYC_COPY      (gI_(0b10) << G_MDSFT_CYCLETYPE)
+#define G_CYC_FILL      (gI_(0b11) << G_MDSFT_CYCLETYPE)
+#define G_PM_NPRIMITIVE (gI_(0b0) << G_MDSFT_PIPELINE)
+#define G_PM_1PRIMITIVE (gI_(0b1) << G_MDSFT_PIPELINE)
 
 /* color conversion constants */
-#define G_CV_K0                 (175)
-#define G_CV_K1                 (-43)
-#define G_CV_K2                 (-89)
-#define G_CV_K3                 (222)
-#define G_CV_K4                 (114)
-#define G_CV_K5                 (42)
+#define G_CV_K0 (175)
+#define G_CV_K1 (-43)
+#define G_CV_K2 (-89)
+#define G_CV_K3 (222)
+#define G_CV_K4 (114)
+#define G_CV_K5 (42)
 
 /* color combiner */
 #define G_CCMUX_COMBINED        0
@@ -960,13 +965,13 @@ instructions, using the SGI gbi.h names. */
  * combine modes
  *	( A		- B )		* C		+ D
  */
-#define G_CC_MODULATEI \
+#define G_CC_MODULATEI                                 \
 	TEXEL0,         0,              SHADE,          0, \
 	0,              0,              0,              SHADE
-#define G_CC_MODULATEIA \
+#define G_CC_MODULATEIA                                \
 	TEXEL0,         0,              SHADE,          0, \
 	TEXEL0,         0,              SHADE,          0
-#define G_CC_MODULATEIDECALA \
+#define G_CC_MODULATEIDECALA                           \
 	TEXEL0,         0,              SHADE,          0, \
 	0,              0,              0,              TEXEL0
 #define G_CC_MODULATERGB \
@@ -975,13 +980,13 @@ instructions, using the SGI gbi.h names. */
 	G_CC_MODULATEIA
 #define G_CC_MODULATERGBDECALA \
 	G_CC_MODULATEIDECALA
-#define G_CC_MODULATEI_PRIM \
+#define G_CC_MODULATEI_PRIM                            \
 	TEXEL0,         0,              PRIMITIVE,      0, \
 	0,              0,              0,              PRIMITIVE
-#define G_CC_MODULATEIA_PRIM \
+#define G_CC_MODULATEIA_PRIM                           \
 	TEXEL0,         0,              PRIMITIVE,      0, \
 	TEXEL0,         0,              PRIMITIVE,      0
-#define G_CC_MODULATEIDECALA_PRIM \
+#define G_CC_MODULATEIDECALA_PRIM                      \
 	TEXEL0,         0,              PRIMITIVE,      0, \
 	0,              0,              0,              TEXEL0
 #define G_CC_MODULATERGB_PRIM \
@@ -990,212 +995,212 @@ instructions, using the SGI gbi.h names. */
 	G_CC_MODULATEIA_PRIM
 #define G_CC_MODULATERGBDECALA_PRIM \
 	G_CC_MODULATEIDECALA_PRIM
-#define G_CC_DECALRGB \
+#define G_CC_DECALRGB                                       \
 	0,              0,              0,              TEXEL0, \
 	0,              0,              0,              SHADE
-#define G_CC_DECALRGBA \
+#define G_CC_DECALRGBA                                      \
 	0,              0,              0,              TEXEL0, \
 	0,              0,              0,              TEXEL0
-#define G_CC_BLENDI \
+#define G_CC_BLENDI                                        \
 	ENVIRONMENT,    SHADE,          TEXEL0,         SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_BLENDIA \
+#define G_CC_BLENDIA                                       \
 	ENVIRONMENT,    SHADE,          TEXEL0,         SHADE, \
 	TEXEL0,         0,              SHADE,          0
-#define G_CC_BLENDIDECALA \
+#define G_CC_BLENDIDECALA                                  \
 	ENVIRONMENT,    SHADE,          TEXEL0,         SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_BLENDRGBA \
+#define G_CC_BLENDRGBA                                     \
 	TEXEL0,         SHADE,          TEXEL0_ALPHA,   SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_BLENDRGBDECALA \
+#define G_CC_BLENDRGBDECALA                                \
 	TEXEL0,         SHADE,          TEXEL0_ALPHA,   SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_REFLECTRGB \
+#define G_CC_REFLECTRGB                                    \
 	ENVIRONMENT,    0,              TEXEL0,         SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_REFLECTRGBDECALA \
+#define G_CC_REFLECTRGBDECALA                              \
 	ENVIRONMENT,    0,              TEXEL0,         SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_HILITERGB \
+#define G_CC_HILITERGB                                     \
 	PRIMITIVE,      SHADE,          TEXEL0,         SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_HILITERGBA \
+#define G_CC_HILITERGBA                                    \
 	PRIMITIVE,      SHADE,          TEXEL0,         SHADE, \
 	PRIMITIVE,      SHADE,          TEXEL0,         SHADE
-#define G_CC_HILITERGBDECALA \
+#define G_CC_HILITERGBDECALA                               \
 	PRIMITIVE,      SHADE,          TEXEL0,         SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_1CYUV2RGB \
+#define G_CC_1CYUV2RGB                                      \
 	TEXEL0,         K4,             K5,             TEXEL0, \
 	0,              0,              0,              SHADE
-#define G_CC_PRIMITIVE \
+#define G_CC_PRIMITIVE                                         \
 	0,              0,              0,              PRIMITIVE, \
 	0,              0,              0,              PRIMITIVE
-#define G_CC_SHADE \
+#define G_CC_SHADE                                         \
 	0,              0,              0,              SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_ADDRGB \
+#define G_CC_ADDRGB                                        \
 	1,              0,              TEXEL0,         SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_ADDRGBDECALA \
+#define G_CC_ADDRGBDECALA                                  \
 	1,              0,              TEXEL0,         SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_SHADEDECALA \
+#define G_CC_SHADEDECALA                                   \
 	0,              0,              0,              SHADE, \
 	0,              0,              0,              TEXEL0
-#define G_CC_BLENDPE \
+#define G_CC_BLENDPE                                             \
 	PRIMITIVE,      ENVIRONMENT,    TEXEL0,         ENVIRONMENT, \
 	TEXEL0,         0,              SHADE,          0
-#define G_CC_BLENDPEDECALA \
+#define G_CC_BLENDPEDECALA                                       \
 	PRIMITIVE,      ENVIRONMENT,    TEXEL0,         ENVIRONMENT, \
 	0,              0,              0,              TEXEL0
-#define G_CC_TRILERP \
+#define G_CC_TRILERP                                        \
 	TEXEL1,         TEXEL0,         LOD_FRACTION,   TEXEL0, \
 	TEXEL1,         TEXEL0,         LOD_FRACTION,   TEXEL0
-#define G_CC_TEMPLERP \
+#define G_CC_TEMPLERP                                       \
 	TEXEL1,         TEXEL0,         PRIM_LOD_FRAC,  TEXEL0, \
 	TEXEL1,         TEXEL0,         PRIM_LOD_FRAC,  TEXEL0
-#define G_CC_INTERFERENCE \
+#define G_CC_INTERFERENCE                              \
 	TEXEL0,         0,              TEXEL1,         0, \
 	TEXEL0,         0,              TEXEL1,         0
-#define _G_CC_BLENDPE \
+#define _G_CC_BLENDPE                                          \
 	ENVIRONMENT,    PRIMITIVE,      TEXEL0,         PRIMITIVE, \
 	TEXEL0,         0,              SHADE,          0
-#define _G_CC_BLENDPEDECALA \
+#define _G_CC_BLENDPEDECALA                                    \
 	ENVIRONMENT,    PRIMITIVE,      TEXEL0,         PRIMITIVE, \
 	0,              0,              0,              TEXEL0
-#define _G_CC_SPARSEST \
+#define _G_CC_SPARSEST                                      \
 	PRIMITIVE,      TEXEL0,         LOD_FRACTION,   TEXEL0, \
 	PRIMITIVE,      TEXEL0,         LOD_FRACTION,   TEXEL0
-#define _G_CC_TWOCOLORTEX \
+#define _G_CC_TWOCOLORTEX                                  \
 	PRIMITIVE,      SHADE,          TEXEL0,         SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_MODULATEI2 \
+#define G_CC_MODULATEI2                                \
 	COMBINED,       0,              SHADE,          0, \
 	0,              0,              0,              SHADE
-#define G_CC_MODULATEIA2 \
+#define G_CC_MODULATEIA2                               \
 	COMBINED,       0,              SHADE,          0, \
 	COMBINED,       0,              SHADE,          0
 #define G_CC_MODULATERGB2 \
 	G_CC_MODULATEI2
 #define G_CC_MODULATERGBA2 \
 	G_CC_MODULATEIA2
-#define G_CC_MODULATEI_PRIM2 \
+#define G_CC_MODULATEI_PRIM2                           \
 	COMBINED,       0,              PRIMITIVE,      0, \
 	0,              0,              0,              PRIMITIVE
-#define G_CC_MODULATEIA_PRIM2 \
+#define G_CC_MODULATEIA_PRIM2                          \
 	COMBINED,       0,              PRIMITIVE,      0, \
 	COMBINED,       0,              PRIMITIVE,      0
 #define G_CC_MODULATERGB_PRIM2 \
 	G_CC_MODULATEI_PRIM2
 #define G_CC_MODULATERGBA_PRIM2 \
 	G_CC_MODULATEIA_PRIM2
-#define G_CC_DECALRGB2 \
+#define G_CC_DECALRGB2                                        \
 	0,              0,              0,              COMBINED, \
 	0,              0,              0,              SHADE
-#define G_CC_BLENDI2 \
+#define G_CC_BLENDI2                                       \
 	ENVIRONMENT,    SHADE,          COMBINED,       SHADE, \
 	0,              0,              0,              SHADE
-#define G_CC_BLENDIA2 \
+#define G_CC_BLENDIA2                                      \
 	ENVIRONMENT,    SHADE,          COMBINED,       SHADE, \
 	COMBINED,       0,              SHADE,          0
-#define G_CC_HILITERGB2 \
+#define G_CC_HILITERGB2                                       \
 	ENVIRONMENT,    COMBINED,       TEXEL0,         COMBINED, \
 	0,              0,              0,              SHADE
-#define G_CC_HILITERGBA2 \
+#define G_CC_HILITERGBA2                                      \
 	ENVIRONMENT,    COMBINED,       TEXEL0,         COMBINED, \
 	ENVIRONMENT,    COMBINED,       TEXEL0,         COMBINED
-#define G_CC_HILITERGBDECALA2 \
+#define G_CC_HILITERGBDECALA2                                 \
 	ENVIRONMENT,    COMBINED,       TEXEL0,         COMBINED, \
 	0,              0,              0,              TEXEL0
-#define G_CC_HILITERGBPASSA2 \
+#define G_CC_HILITERGBPASSA2                                  \
 	ENVIRONMENT,    COMBINED,       TEXEL0,         COMBINED, \
 	0,              0,              0,              COMBINED
-#define G_CC_CHROMA_KEY2 \
+#define G_CC_CHROMA_KEY2                               \
 	TEXEL0,         CENTER,         SCALE,          0, \
 	0,              0,              0,              0
-#define G_CC_YUV2RGB \
+#define G_CC_YUV2RGB                                        \
 	TEXEL1,         K4,             K5,             TEXEL1, \
 	0,              0,              0,              0
-#define G_CC_PASS2 \
+#define G_CC_PASS2                                            \
 	0,              0,              0,              COMBINED, \
 	0,              0,              0,              COMBINED
 #define G_CC_LERP(a0, b0, c0, d0, Aa0, Ab0, Ac0, Ad0, \
-	    a1, b1, c1, d1, Aa1, Ab1, Ac1, Ad1) \
-	( \
-		gFL_(G_CCMUX_ ## a0, 4, 52) | \
-		gFL_(G_CCMUX_ ## c0, 5, 47) | \
-		gFL_(G_ACMUX_ ## Aa0, 3, 44) | \
-		gFL_(G_ACMUX_ ## Ac0, 3, 41) | \
-		gFL_(G_CCMUX_ ## a1, 4, 37) | \
-		gFL_(G_CCMUX_ ## c1, 5, 32) | \
-		gFL_(G_CCMUX_ ## b0, 4, 28) | \
-		gFL_(G_CCMUX_ ## b1, 4, 24) | \
-		gFL_(G_ACMUX_ ## Aa1, 3, 21) | \
-		gFL_(G_ACMUX_ ## Ac1, 3, 18) | \
-		gFL_(G_CCMUX_ ## d0, 3, 15) | \
-		gFL_(G_ACMUX_ ## Ab0, 3, 12) | \
-		gFL_(G_ACMUX_ ## Ad0, 3, 9) | \
-		gFL_(G_CCMUX_ ## d1, 3, 6) | \
-		gFL_(G_ACMUX_ ## Ab1, 3, 3) | \
-		gFL_(G_ACMUX_ ## Ad1, 3, 0) \
+	    a1, b1, c1, d1, Aa1, Ab1, Ac1, Ad1)           \
+	(                                                 \
+		gFL_(G_CCMUX_ ## a0, 4, 52) |                 \
+		gFL_(G_CCMUX_ ## c0, 5, 47) |                 \
+		gFL_(G_ACMUX_ ## Aa0, 3, 44) |                \
+		gFL_(G_ACMUX_ ## Ac0, 3, 41) |                \
+		gFL_(G_CCMUX_ ## a1, 4, 37) |                 \
+		gFL_(G_CCMUX_ ## c1, 5, 32) |                 \
+		gFL_(G_CCMUX_ ## b0, 4, 28) |                 \
+		gFL_(G_CCMUX_ ## b1, 4, 24) |                 \
+		gFL_(G_ACMUX_ ## Aa1, 3, 21) |                \
+		gFL_(G_ACMUX_ ## Ac1, 3, 18) |                \
+		gFL_(G_CCMUX_ ## d0, 3, 15) |                 \
+		gFL_(G_ACMUX_ ## Ab0, 3, 12) |                \
+		gFL_(G_ACMUX_ ## Ad0, 3, 9) |                 \
+		gFL_(G_CCMUX_ ## d1, 3, 6) |                  \
+		gFL_(G_ACMUX_ ## Ab1, 3, 3) |                 \
+		gFL_(G_ACMUX_ ## Ad1, 3, 0)                   \
 	)
 #define G_CC_MODE(mode1, mode2) G_CC_LERP(mode1, mode2)
 
 /* scissor modes */
-#define G_SC_NON_INTERLACE   gI_(0b00)
-#define G_SC_EVEN_INTERLACE  gI_(0b10)
-#define G_SC_ODD_INTERLACE   gI_(0b11)
+#define G_SC_NON_INTERLACE  gI_(0b00)
+#define G_SC_EVEN_INTERLACE gI_(0b10)
+#define G_SC_ODD_INTERLACE  gI_(0b11)
 
 /* display list branch flags */
-#define G_DL_PUSH            gI_(0b0)
-#define G_DL_NOPUSH          gI_(0b1)
+#define G_DL_PUSH   gI_(0b0)
+#define G_DL_NOPUSH gI_(0b1)
 
 /* conditional branching flags (f3dex and f3dex2) */
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define G_BZ_PERSP         0
- # define G_BZ_ORTHO         1
+	#define G_BZ_PERSP 0
+	#define G_BZ_ORTHO 1
 #endif
 
 /* matrix params */
-#define G_MTX_MUL            (gI_(0b0) << 1)
-#define G_MTX_LOAD           (gI_(0b1) << 1)
+#define G_MTX_MUL  (gI_(0b0) << 1)
+#define G_MTX_LOAD (gI_(0b1) << 1)
 
 /* matrix params for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_MTX_MODELVIEW    (gI_(0b0) << 0)
- # define G_MTX_PROJECTION   (gI_(0b1) << 0)
- # define G_MTX_NOPUSH       (gI_(0b0) << 2)
- # define G_MTX_PUSH         (gI_(0b1) << 2)
+	#define G_MTX_MODELVIEW  (gI_(0b0) << 0)
+	#define G_MTX_PROJECTION (gI_(0b1) << 0)
+	#define G_MTX_NOPUSH     (gI_(0b0) << 2)
+	#define G_MTX_PUSH       (gI_(0b1) << 2)
 #endif
 
 /* matrix params for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_MTX_NOPUSH       (gI_(0b0) << 0)
- # define G_MTX_PUSH         (gI_(0b1) << 0)
- # define G_MTX_MODELVIEW    (gI_(0b0) << 2)
- # define G_MTX_PROJECTION   (gI_(0b1) << 2)
+	#define G_MTX_NOPUSH     (gI_(0b0) << 0)
+	#define G_MTX_PUSH       (gI_(0b1) << 0)
+	#define G_MTX_MODELVIEW  (gI_(0b0) << 2)
+	#define G_MTX_PROJECTION (gI_(0b1) << 2)
 #endif
 
 /* moveword indices */
-#define G_MW_MATRIX          0
-#define G_MW_NUMLIGHT        2
-#define G_MW_CLIP            4
-#define G_MW_SEGMENT         6
-#define G_MW_FOG             8
-#define G_MW_GENSTAT         8
-#define G_MW_LIGHTCOL        10
-#define G_MW_PERSPNORM       14
+#define G_MW_MATRIX    0
+#define G_MW_NUMLIGHT  2
+#define G_MW_CLIP      4
+#define G_MW_SEGMENT   6
+#define G_MW_FOG       8
+#define G_MW_GENSTAT   8
+#define G_MW_LIGHTCOL  10
+#define G_MW_PERSPNORM 14
 
 /* moveword indices for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_MW_POINTS        12
+	#define G_MW_POINTS 12
 #endif
 
 /* moveword indices for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_MW_FORCEMTX      12
+	#define G_MW_FORCEMTX 12
 #endif
 
 /* moveword offsets */
@@ -1246,123 +1251,123 @@ instructions, using the SGI gbi.h names. */
 
 /* moveword offsets for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_MWO_aLIGHT_2     gI_(0x20)
- # define G_MWO_bLIGHT_2     gI_(0x24)
- # define G_MWO_aLIGHT_3     gI_(0x40)
- # define G_MWO_bLIGHT_3     gI_(0x44)
- # define G_MWO_aLIGHT_4     gI_(0x60)
- # define G_MWO_bLIGHT_4     gI_(0x64)
- # define G_MWO_aLIGHT_5     gI_(0x80)
- # define G_MWO_bLIGHT_5     gI_(0x84)
- # define G_MWO_aLIGHT_6     gI_(0xA0)
- # define G_MWO_bLIGHT_6     gI_(0xA4)
- # define G_MWO_aLIGHT_7     gI_(0xC0)
- # define G_MWO_bLIGHT_7     gI_(0xC4)
- # define G_MWO_aLIGHT_8     gI_(0xE0)
- # define G_MWO_bLIGHT_8     gI_(0xE4)
+	#define G_MWO_aLIGHT_2 gI_(0x20)
+	#define G_MWO_bLIGHT_2 gI_(0x24)
+	#define G_MWO_aLIGHT_3 gI_(0x40)
+	#define G_MWO_bLIGHT_3 gI_(0x44)
+	#define G_MWO_aLIGHT_4 gI_(0x60)
+	#define G_MWO_bLIGHT_4 gI_(0x64)
+	#define G_MWO_aLIGHT_5 gI_(0x80)
+	#define G_MWO_bLIGHT_5 gI_(0x84)
+	#define G_MWO_aLIGHT_6 gI_(0xA0)
+	#define G_MWO_bLIGHT_6 gI_(0xA4)
+	#define G_MWO_aLIGHT_7 gI_(0xC0)
+	#define G_MWO_bLIGHT_7 gI_(0xC4)
+	#define G_MWO_aLIGHT_8 gI_(0xE0)
+	#define G_MWO_bLIGHT_8 gI_(0xE4)
 #endif
 
 /* moveword offsets for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_MWO_aLIGHT_2     gI_(0x18)
- # define G_MWO_bLIGHT_2     gI_(0x1C)
- # define G_MWO_aLIGHT_3     gI_(0x30)
- # define G_MWO_bLIGHT_3     gI_(0x34)
- # define G_MWO_aLIGHT_4     gI_(0x48)
- # define G_MWO_bLIGHT_4     gI_(0x4C)
- # define G_MWO_aLIGHT_5     gI_(0x60)
- # define G_MWO_bLIGHT_5     gI_(0x64)
- # define G_MWO_aLIGHT_6     gI_(0x78)
- # define G_MWO_bLIGHT_6     gI_(0x7C)
- # define G_MWO_aLIGHT_7     gI_(0x90)
- # define G_MWO_bLIGHT_7     gI_(0x94)
- # define G_MWO_aLIGHT_8     gI_(0xA8)
- # define G_MWO_bLIGHT_8     gI_(0xAC)
+	#define G_MWO_aLIGHT_2 gI_(0x18)
+	#define G_MWO_bLIGHT_2 gI_(0x1C)
+	#define G_MWO_aLIGHT_3 gI_(0x30)
+	#define G_MWO_bLIGHT_3 gI_(0x34)
+	#define G_MWO_aLIGHT_4 gI_(0x48)
+	#define G_MWO_bLIGHT_4 gI_(0x4C)
+	#define G_MWO_aLIGHT_5 gI_(0x60)
+	#define G_MWO_bLIGHT_5 gI_(0x64)
+	#define G_MWO_aLIGHT_6 gI_(0x78)
+	#define G_MWO_bLIGHT_6 gI_(0x7C)
+	#define G_MWO_aLIGHT_7 gI_(0x90)
+	#define G_MWO_bLIGHT_7 gI_(0x94)
+	#define G_MWO_aLIGHT_8 gI_(0xA8)
+	#define G_MWO_bLIGHT_8 gI_(0xAC)
 #endif
 
 /* movemem params for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define G_MV_VIEWPORT      128
- # define G_MV_LOOKATY       130
- # define G_MV_LOOKATX       132
- # define G_MV_L0            134
- # define G_MV_L1            136
- # define G_MV_L2            138
- # define G_MV_L3            140
- # define G_MV_L4            142
- # define G_MV_L5            144
- # define G_MV_L6            146
- # define G_MV_L7            148
- # define G_MV_TXTATT        150
- # define G_MV_MATRIX_2      152
- # define G_MV_MATRIX_3      154
- # define G_MV_MATRIX_4      156
- # define G_MV_MATRIX_1      158
+	#define G_MV_VIEWPORT 128
+	#define G_MV_LOOKATY  130
+	#define G_MV_LOOKATX  132
+	#define G_MV_L0       134
+	#define G_MV_L1       136
+	#define G_MV_L2       138
+	#define G_MV_L3       140
+	#define G_MV_L4       142
+	#define G_MV_L5       144
+	#define G_MV_L6       146
+	#define G_MV_L7       148
+	#define G_MV_TXTATT   150
+	#define G_MV_MATRIX_2 152
+	#define G_MV_MATRIX_3 154
+	#define G_MV_MATRIX_4 156
+	#define G_MV_MATRIX_1 158
 #endif
 
 /* movemem params for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define G_MV_MMTX          2
- # define G_MV_PMTX          6
- # define G_MV_VIEWPORT      8
- # define G_MV_LIGHT         10
- # define G_MV_POINT         12
- # define G_MV_MATRIX        14
- # define G_MVO_LOOKATX      gI_(0 * 0x18)
- # define G_MVO_LOOKATY      gI_(1 * 0x18)
- # define G_MVO_L0           gI_(2 * 0x18)
- # define G_MVO_L1           gI_(3 * 0x18)
- # define G_MVO_L2           gI_(4 * 0x18)
- # define G_MVO_L3           gI_(5 * 0x18)
- # define G_MVO_L4           gI_(6 * 0x18)
- # define G_MVO_L5           gI_(7 * 0x18)
- # define G_MVO_L6           gI_(8 * 0x18)
- # define G_MVO_L7           gI_(9 * 0x18)
+	#define G_MV_MMTX     2
+	#define G_MV_PMTX     6
+	#define G_MV_VIEWPORT 8
+	#define G_MV_LIGHT    10
+	#define G_MV_POINT    12
+	#define G_MV_MATRIX   14
+	#define G_MVO_LOOKATX gI_(0 * 0x18)
+	#define G_MVO_LOOKATY gI_(1 * 0x18)
+	#define G_MVO_L0      gI_(2 * 0x18)
+	#define G_MVO_L1      gI_(3 * 0x18)
+	#define G_MVO_L2      gI_(4 * 0x18)
+	#define G_MVO_L3      gI_(5 * 0x18)
+	#define G_MVO_L4      gI_(6 * 0x18)
+	#define G_MVO_L5      gI_(7 * 0x18)
+	#define G_MVO_L6      gI_(8 * 0x18)
+	#define G_MVO_L7      gI_(9 * 0x18)
 #endif
 
 /* frustum ratios */
-#define FRUSTRATIO_1         gI_(1)
-#define FRUSTRATIO_2         gI_(2)
-#define FRUSTRATIO_3         gI_(3)
-#define FRUSTRATIO_4         gI_(4)
-#define FRUSTRATIO_5         gI_(5)
-#define FRUSTRATIO_6         gI_(6)
+#define FRUSTRATIO_1 gI_(1)
+#define FRUSTRATIO_2 gI_(2)
+#define FRUSTRATIO_3 gI_(3)
+#define FRUSTRATIO_4 gI_(4)
+#define FRUSTRATIO_5 gI_(5)
+#define FRUSTRATIO_6 gI_(6)
 
 /* light params */
-#define NUMLIGHTS_0          1
-#define NUMLIGHTS_1          1
-#define NUMLIGHTS_2          2
-#define NUMLIGHTS_3          3
-#define NUMLIGHTS_4          4
-#define NUMLIGHTS_5          5
-#define NUMLIGHTS_6          6
-#define NUMLIGHTS_7          7
-#define LIGHT_1              1
-#define LIGHT_2              2
-#define LIGHT_3              3
-#define LIGHT_4              4
-#define LIGHT_5              5
-#define LIGHT_6              6
-#define LIGHT_7              7
-#define LIGHT_8              8
+#define NUMLIGHTS_0 1
+#define NUMLIGHTS_1 1
+#define NUMLIGHTS_2 2
+#define NUMLIGHTS_3 3
+#define NUMLIGHTS_4 4
+#define NUMLIGHTS_5 5
+#define NUMLIGHTS_6 6
+#define NUMLIGHTS_7 7
+#define LIGHT_1     1
+#define LIGHT_2     2
+#define LIGHT_3     3
+#define LIGHT_4     4
+#define LIGHT_5     5
+#define LIGHT_6     6
+#define LIGHT_7     7
+#define LIGHT_8     8
 
 /* light params for fast3d and f3dex */
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define NUML(n) (((n) + 1) * 32 + 0x80000000)
+	#define NUML(n) (((n) + 1) * 32 + 0x80000000)
 #endif
 
 /* light params for f3dex2 */
 #if defined(F3DEX_GBI_2)
- # define NUML(n) ((n) * 0x18)
+	#define NUML(n) ((n) * 0x18)
 #endif
 
 /* background load types */
-#define G_BGLT_LOADBLOCK  gI_(0x0033)
-#define G_BGLT_LOADTILE   gI_(0xFFF4)
+#define G_BGLT_LOADBLOCK gI_(0x0033)
+#define G_BGLT_LOADTILE  gI_(0xFFF4)
 
 /* background flags */
-#define G_BG_FLAG_FLIPS   (gI_(0b1) << 0)
-#define G_BG_FLAG_FLIPT   (gI_(0b1) << 1)
+#define G_BG_FLAG_FLIPS (gI_(0b1) << 0)
+#define G_BG_FLAG_FLIPT (gI_(0b1) << 1)
 
 /* object load types */
 #define G_OBJLT_TXTRBLOCK gI_(0x00001033)
@@ -1370,39 +1375,39 @@ instructions, using the SGI gbi.h names. */
 #define G_OBJLT_TLUT      gI_(0x00000030)
 
 /* object flags */
-#define G_OBJ_FLAG_FLIPS  (gI_(0b1) << 0)
-#define G_OBJ_FLAG_FLIPT  (gI_(0b1) << 4)
+#define G_OBJ_FLAG_FLIPS (gI_(0b1) << 0)
+#define G_OBJ_FLAG_FLIPT (gI_(0b1) << 4)
 
 /* color macros */
-#define G_MAXZ            0x03FF
-#define G_MAXFBZ          0x3FFF
+#define G_MAXZ   0x03FF
+#define G_MAXFBZ 0x3FFF
 #define GPACK_RGBA5551(r, g, b, a) \
-	( \
-		gF_(r, 5, 11) | \
-		gF_(g, 5, 6) | \
-		gF_(b, 5, 1) | \
-		gF_(a, 1, 0) \
+	(                              \
+		gF_(r, 5, 11) |            \
+		gF_(g, 5, 6) |             \
+		gF_(b, 5, 1) |             \
+		gF_(a, 1, 0)               \
 	)
 #define GPACK_RGBA8888(r, g, b, a) \
-	( \
-		gF_(r, 8, 24) | \
-		gF_(g, 8, 16) | \
-		gF_(b, 8, 8) | \
-		gF_(a, 8, 0) \
+	(                              \
+		gF_(r, 8, 24) |            \
+		gF_(g, 8, 16) |            \
+		gF_(b, 8, 8) |             \
+		gF_(a, 8, 0)               \
 	)
 #define GPACK_RGB24A8(rgb, a) (gF_(rgb, 24, 8) | gF_(a, 8, 0))
 #define GPACK_ZDZ(z, dz)      (gF_(z, 14, 2) | gF_(dz, 2, 0))
 
 /* structure definition macros */
-#define gdSPDefMtx(xx, xy, xz, xw, \
-	    yx, yy, yz, yw, \
-	    zx, zy, zz, zw, \
-	    wx, wy, wz, ww) \
-	( \
-		(Mtx) \
-	{ \
-		.i = \
-		{ \
+#define gdSPDefMtx(xx, xy, xz, xw,       \
+	    yx, yy, yz, yw,                  \
+	    zx, zy, zz, zw,                  \
+	    wx, wy, wz, ww)                  \
+	(                                    \
+		(Mtx)                            \
+	{                                    \
+		.i =                             \
+		{                                \
 			(qs1616(xx) >> 16) & 0xFFFF, \
 			(qs1616(xy) >> 16) & 0xFFFF, \
 			(qs1616(xz) >> 16) & 0xFFFF, \
@@ -1419,379 +1424,379 @@ instructions, using the SGI gbi.h names. */
 			(qs1616(wy) >> 16) & 0xFFFF, \
 			(qs1616(wz) >> 16) & 0xFFFF, \
 			(qs1616(ww) >> 16) & 0xFFFF, \
-		}, \
-		.f = \
-		{ \
-			qs1616(xx) & 0xFFFF, \
-			qs1616(xy) & 0xFFFF, \
-			qs1616(xz) & 0xFFFF, \
-			qs1616(xw) & 0xFFFF, \
-			qs1616(yx) & 0xFFFF, \
-			qs1616(yy) & 0xFFFF, \
-			qs1616(yz) & 0xFFFF, \
-			qs1616(yw) & 0xFFFF, \
-			qs1616(zx) & 0xFFFF, \
-			qs1616(zy) & 0xFFFF, \
-			qs1616(zz) & 0xFFFF, \
-			qs1616(zw) & 0xFFFF, \
-			qs1616(wx) & 0xFFFF, \
-			qs1616(wy) & 0xFFFF, \
-			qs1616(wz) & 0xFFFF, \
-			qs1616(ww) & 0xFFFF, \
-		} \
-	} \
+		},                               \
+		.f =                             \
+		{                                \
+			qs1616(xx) & 0xFFFF,         \
+			qs1616(xy) & 0xFFFF,         \
+			qs1616(xz) & 0xFFFF,         \
+			qs1616(xw) & 0xFFFF,         \
+			qs1616(yx) & 0xFFFF,         \
+			qs1616(yy) & 0xFFFF,         \
+			qs1616(yz) & 0xFFFF,         \
+			qs1616(yw) & 0xFFFF,         \
+			qs1616(zx) & 0xFFFF,         \
+			qs1616(zy) & 0xFFFF,         \
+			qs1616(zz) & 0xFFFF,         \
+			qs1616(zw) & 0xFFFF,         \
+			qs1616(wx) & 0xFFFF,         \
+			qs1616(wy) & 0xFFFF,         \
+			qs1616(wz) & 0xFFFF,         \
+			qs1616(ww) & 0xFFFF,         \
+		}                                \
+	}                                    \
 	)
 #define gdSPDefLookAt(rx, ry, rz, ux, uy, uz) \
-	( \
-		(LookAt) \
-	{ \
-		.l[0].l = \
-		{ \
-			.col = { 0, 0, 0 }, \
-			.colc = { 0, 0, 0 }, \
-			.dir = { rx, ry, rz }, \
-		}, \
-		.l[1].l = \
-		{ \
-			.col = { 0, 0x80, 0 }, \
-			.colc = { 0, 0x80, 0 }, \
-			.dir = { ux, uy, uz }, \
-		}, \
-	} \
+	(                                         \
+		(LookAt)                              \
+	{                                         \
+		.l[0].l =                             \
+		{                                     \
+			.col  = { 0,  0,  0  },           \
+			.colc = { 0,  0,  0  },           \
+			.dir  = { rx, ry, rz },           \
+		},                                    \
+		.l[1].l =                             \
+		{                                     \
+			.col  = { 0,  0x80,  0     },     \
+			.colc = { 0,  0x80,  0     },     \
+			.dir  = { ux, uy,    uz    },     \
+		},                                    \
+	}                                         \
 	)
-#define gdSPDefLights0(ar, ag, ab) \
-	( \
-		(Lights0) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights0(ar, ag, ab)  \
+	(                               \
+		(Lights0)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-		} \
-	} \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights1(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1) \
-	( \
-		(Lights1) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights1(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1)     \
+	(                               \
+		(Lights1)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-	} \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights2(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2) \
-	( \
-		(Lights2) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights2(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2)     \
+	(                               \
+		(Lights2)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-	} \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights3(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2, \
-	    r3, g3, b3, x3, y3, z3) \
-	( \
-		(Lights3) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights3(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2,     \
+	    r3, g3, b3, x3, y3, z3)     \
+	(                               \
+		(Lights3)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-		.l[2].l = \
-		{ \
-			.col = { r3, g3, b3 }, \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+		.l[2].l =                   \
+		{                           \
+			.col  = { r3, g3, b3 }, \
 			.colc = { r3, g3, b3 }, \
-			.dir = { x3, y3, z3 }, \
-		} \
-	} \
+			.dir  = { x3, y3, z3 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights4(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2, \
-	    r3, g3, b3, x3, y3, z3, \
-	    r4, g4, b4, x4, y4, z4) \
-	( \
-		(Lights4) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights4(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2,     \
+	    r3, g3, b3, x3, y3, z3,     \
+	    r4, g4, b4, x4, y4, z4)     \
+	(                               \
+		(Lights4)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-		.l[2].l = \
-		{ \
-			.col = { r3, g3, b3 }, \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+		.l[2].l =                   \
+		{                           \
+			.col  = { r3, g3, b3 }, \
 			.colc = { r3, g3, b3 }, \
-			.dir = { x3, y3, z3 }, \
-		} \
-		.l[3].l = \
-		{ \
-			.col = { r4, g4, b4 }, \
+			.dir  = { x3, y3, z3 }, \
+		}                           \
+		.l[3].l =                   \
+		{                           \
+			.col  = { r4, g4, b4 }, \
 			.colc = { r4, g4, b4 }, \
-			.dir = { x4, y4, z4 }, \
-		} \
-	} \
+			.dir  = { x4, y4, z4 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights5(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2, \
-	    r3, g3, b3, x3, y3, z3, \
-	    r4, g4, b4, x4, y4, z4, \
-	    r5, g5, b5, x5, y5, z5) \
-	( \
-		(Lights5) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights5(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2,     \
+	    r3, g3, b3, x3, y3, z3,     \
+	    r4, g4, b4, x4, y4, z4,     \
+	    r5, g5, b5, x5, y5, z5)     \
+	(                               \
+		(Lights5)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-		.l[2].l = \
-		{ \
-			.col = { r3, g3, b3 }, \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+		.l[2].l =                   \
+		{                           \
+			.col  = { r3, g3, b3 }, \
 			.colc = { r3, g3, b3 }, \
-			.dir = { x3, y3, z3 }, \
-		} \
-		.l[3].l = \
-		{ \
-			.col = { r4, g4, b4 }, \
+			.dir  = { x3, y3, z3 }, \
+		}                           \
+		.l[3].l =                   \
+		{                           \
+			.col  = { r4, g4, b4 }, \
 			.colc = { r4, g4, b4 }, \
-			.dir = { x4, y4, z4 }, \
-		} \
-		.l[4].l = \
-		{ \
-			.col = { r5, g5, b5 }, \
+			.dir  = { x4, y4, z4 }, \
+		}                           \
+		.l[4].l =                   \
+		{                           \
+			.col  = { r5, g5, b5 }, \
 			.colc = { r5, g5, b5 }, \
-			.dir = { x5, y5, z5 }, \
-		} \
-	} \
+			.dir  = { x5, y5, z5 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights6(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2, \
-	    r3, g3, b3, x3, y3, z3, \
-	    r4, g4, b4, x4, y4, z4, \
-	    r5, g5, b5, x5, y5, z5, \
-	    r6, g6, b6, x6, y6, z6) \
-	( \
-		(Lights6) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights6(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2,     \
+	    r3, g3, b3, x3, y3, z3,     \
+	    r4, g4, b4, x4, y4, z4,     \
+	    r5, g5, b5, x5, y5, z5,     \
+	    r6, g6, b6, x6, y6, z6)     \
+	(                               \
+		(Lights6)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-		.l[2].l = \
-		{ \
-			.col = { r3, g3, b3 }, \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+		.l[2].l =                   \
+		{                           \
+			.col  = { r3, g3, b3 }, \
 			.colc = { r3, g3, b3 }, \
-			.dir = { x3, y3, z3 }, \
-		} \
-		.l[3].l = \
-		{ \
-			.col = { r4, g4, b4 }, \
+			.dir  = { x3, y3, z3 }, \
+		}                           \
+		.l[3].l =                   \
+		{                           \
+			.col  = { r4, g4, b4 }, \
 			.colc = { r4, g4, b4 }, \
-			.dir = { x4, y4, z4 }, \
-		} \
-		.l[4].l = \
-		{ \
-			.col = { r5, g5, b5 }, \
+			.dir  = { x4, y4, z4 }, \
+		}                           \
+		.l[4].l =                   \
+		{                           \
+			.col  = { r5, g5, b5 }, \
 			.colc = { r5, g5, b5 }, \
-			.dir = { x5, y5, z5 }, \
-		} \
-		.l[5].l = \
-		{ \
-			.col = { r6, g6, b6 }, \
+			.dir  = { x5, y5, z5 }, \
+		}                           \
+		.l[5].l =                   \
+		{                           \
+			.col  = { r6, g6, b6 }, \
 			.colc = { r6, g6, b6 }, \
-			.dir = { x6, y6, z6 }, \
-		} \
-	} \
+			.dir  = { x6, y6, z6 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefLights7(ar, ag, ab, \
-	    r1, g1, b1, x1, y1, z1, \
-	    r2, g2, b2, x2, y2, z2, \
-	    r3, g3, b3, x3, y3, z3, \
-	    r4, g4, b4, x4, y4, z4, \
-	    r5, g5, b5, x5, y5, z5, \
-	    r6, g6, b6, x6, y6, z6, \
-	    r7, g7, b7, x7, y7, z7) \
-	( \
-		(Lights7) \
-	{ \
-		.a.l = \
-		{ \
-			.col = { ar, ag, ab }, \
+#define gdSPDefLights7(ar, ag, ab,  \
+	    r1, g1, b1, x1, y1, z1,     \
+	    r2, g2, b2, x2, y2, z2,     \
+	    r3, g3, b3, x3, y3, z3,     \
+	    r4, g4, b4, x4, y4, z4,     \
+	    r5, g5, b5, x5, y5, z5,     \
+	    r6, g6, b6, x6, y6, z6,     \
+	    r7, g7, b7, x7, y7, z7)     \
+	(                               \
+		(Lights7)                   \
+	{                               \
+		.a.l =                      \
+		{                           \
+			.col  = { ar, ag, ab }, \
 			.colc = { ar, ag, ab }, \
-		}, \
-		.l[0].l = \
-		{ \
-			.col = { r1, g1, b1 }, \
+		},                          \
+		.l[0].l =                   \
+		{                           \
+			.col  = { r1, g1, b1 }, \
 			.colc = { r1, g1, b1 }, \
-			.dir = { x1, y1, z1 }, \
-		} \
-		.l[1].l = \
-		{ \
-			.col = { r2, g2, b2 }, \
+			.dir  = { x1, y1, z1 }, \
+		}                           \
+		.l[1].l =                   \
+		{                           \
+			.col  = { r2, g2, b2 }, \
 			.colc = { r2, g2, b2 }, \
-			.dir = { x2, y2, z2 }, \
-		} \
-		.l[2].l = \
-		{ \
-			.col = { r3, g3, b3 }, \
+			.dir  = { x2, y2, z2 }, \
+		}                           \
+		.l[2].l =                   \
+		{                           \
+			.col  = { r3, g3, b3 }, \
 			.colc = { r3, g3, b3 }, \
-			.dir = { x3, y3, z3 }, \
-		} \
-		.l[3].l = \
-		{ \
-			.col = { r4, g4, b4 }, \
+			.dir  = { x3, y3, z3 }, \
+		}                           \
+		.l[3].l =                   \
+		{                           \
+			.col  = { r4, g4, b4 }, \
 			.colc = { r4, g4, b4 }, \
-			.dir = { x4, y4, z4 }, \
-		} \
-		.l[4].l = \
-		{ \
-			.col = { r5, g5, b5 }, \
+			.dir  = { x4, y4, z4 }, \
+		}                           \
+		.l[4].l =                   \
+		{                           \
+			.col  = { r5, g5, b5 }, \
 			.colc = { r5, g5, b5 }, \
-			.dir = { x5, y5, z5 }, \
-		} \
-		.l[5].l = \
-		{ \
-			.col = { r6, g6, b6 }, \
+			.dir  = { x5, y5, z5 }, \
+		}                           \
+		.l[5].l =                   \
+		{                           \
+			.col  = { r6, g6, b6 }, \
 			.colc = { r6, g6, b6 }, \
-			.dir = { x6, y6, z6 }, \
-		} \
-		.l[6].l = \
-		{ \
-			.col = { r7, g7, b7 }, \
+			.dir  = { x6, y6, z6 }, \
+		}                           \
+		.l[6].l =                   \
+		{                           \
+			.col  = { r7, g7, b7 }, \
 			.colc = { r7, g7, b7 }, \
-			.dir = { x7, y7, z7 }, \
-		} \
-	} \
+			.dir  = { x7, y7, z7 }, \
+		}                           \
+	}                               \
 	)
-#define gdSPDefVtx(x, y, z, s, t) \
-	( \
-		(Vtx) \
-	{ \
-		.v = \
-		{ \
-			.ob = { x, y, z }, \
-			.tc = { qs105(s), qs105(t) }, \
-		} \
-	} \
+#define gdSPDefVtx(x, y, z, s, t)                   \
+	(                                               \
+		(Vtx)                                       \
+	{                                               \
+		.v =                                        \
+		{                                           \
+			.ob = { x,        y,        z        }, \
+			.tc = { qs105(s), qs105(t) },           \
+		}                                           \
+	}                                               \
 	)
-#define gdSPDefVtxC(x, y, z, s, t, cr, cg, cb, ca) \
-	( \
-		(Vtx) \
-	{ \
-		.v = \
-		{ \
-			.ob = { x, y, z }, \
-			.tc = { qs105(s), qs105(t) }, \
-			.cn = { cr, cg, cb, ca }, \
-		} \
-	} \
+#define gdSPDefVtxC(x, y, z, s, t, cr, cg, cb, ca)  \
+	(                                               \
+		(Vtx)                                       \
+	{                                               \
+		.v =                                        \
+		{                                           \
+			.ob = { x,        y,        z        }, \
+			.tc = { qs105(s), qs105(t) },           \
+			.cn = { cr,       cg,       cb, ca   }, \
+		}                                           \
+	}                                               \
 	)
-#define gdSPDefVtxN(x, y, z, s, t, nx, ny, nz, ca) \
-	( \
-		(Vtx) \
-	{ \
-		.n = \
-		{ \
-			.ob = { x, y, z }, \
-			.tc = { qs105(s), qs105(t) }, \
-			.n = { nx, ny, nz }, \
-			.a = ca \
-		} \
-	} \
+#define gdSPDefVtxN(x, y, z, s, t, nx, ny, nz, ca)  \
+	(                                               \
+		(Vtx)                                       \
+	{                                               \
+		.n =                                        \
+		{                                           \
+			.ob = { x,        y,        z        }, \
+			.tc = { qs105(s), qs105(t) },           \
+			.n  = { nx,       ny,       nz       }, \
+			.a  = ca                                \
+		}                                           \
+	}                                               \
 	)
 
 /* instruction macros */
 
 #define gsDPFillRectangle(ulx, uly, lrx, lry) \
-	gO_( \
-		G_FILLRECT, \
-		gF_(lrx, 10, 14) | \
-		gF_(lry, 10, 2), \
-		gF_(ulx, 10, 14) | \
-		gF_(uly, 10, 2) \
+	gO_(                                      \
+		G_FILLRECT,                           \
+		gF_(lrx, 10, 14) |                    \
+		gF_(lry, 10, 2),                      \
+		gF_(ulx, 10, 14) |                    \
+		gF_(uly, 10, 2)                       \
 	)
 
 #define gsDPScisFillRectangle(ulx, uly, lrx, lry) \
@@ -1815,752 +1820,752 @@ instructions, using the SGI gbi.h names. */
 #define gsDPLoadTLUT_pal256(dram) \
 	gsDPLoadTLUT(256, 256, dram)
 
-#define gLTB_(timg, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt, \
-	    dxt, tmem, rt, line) \
+#define gLTB_(timg, fmt, siz, width, height, pal,        \
+	    cms, cmt, masks, maskt, shifts, shiftt,          \
+	    dxt, tmem, rt, line)                             \
 	gsDPSetTextureImage(fmt, G_SIZ_LDSIZ(siz), 1, timg), \
-	gsDPSetTile( \
-		fmt, \
-		G_SIZ_LDSIZ(siz), \
-		0, \
-		tmem, \
-		G_TX_LOADTILE, \
-		0, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
-	gsDPLoadSync(), \
-	gsDPLoadBlock( \
-		G_TX_LOADTILE, \
-		0, \
-		0, \
-		G_LTB_LRS(width, height, siz), \
-		dxt \
-	), \
-	gsDPPipeSync(), \
-	gsDPSetTile( \
-		fmt, \
-		siz, \
-		line, \
-		tmem, \
-		rt, \
-		pal, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
+	gsDPSetTile(                                         \
+		fmt,                                             \
+		G_SIZ_LDSIZ(siz),                                \
+		0,                                               \
+		tmem,                                            \
+		G_TX_LOADTILE,                                   \
+		0,                                               \
+		cmt,                                             \
+		maskt,                                           \
+		shiftt,                                          \
+		cms,                                             \
+		masks,                                           \
+		shifts                                           \
+	),                                                   \
+	gsDPLoadSync(),                                      \
+	gsDPLoadBlock(                                       \
+		G_TX_LOADTILE,                                   \
+		0,                                               \
+		0,                                               \
+		G_LTB_LRS(width, height, siz),                   \
+		dxt                                              \
+	),                                                   \
+	gsDPPipeSync(),                                      \
+	gsDPSetTile(                                         \
+		fmt,                                             \
+		siz,                                             \
+		line,                                            \
+		tmem,                                            \
+		rt,                                              \
+		pal,                                             \
+		cmt,                                             \
+		maskt,                                           \
+		shiftt,                                          \
+		cms,                                             \
+		masks,                                           \
+		shifts                                           \
+	),                                                   \
 	gsDPSetTileSize(rt, 0, 0, qu102((width) - 1), qu102((height) - 1))
 
 #define gsDPLoadTextureBlock(timg, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                  \
+	gLTB_(                                                       \
+		timg,                                                    \
+		fmt,                                                     \
+		siz,                                                     \
+		width,                                                   \
+		height,                                                  \
+		pal,                                                     \
+		cms,                                                     \
+		cmt,                                                     \
+		masks,                                                   \
+		maskt,                                                   \
+		shifts,                                                  \
+		shiftt,                                                  \
+		G_DXT(siz, width),                                       \
+		0x0,                                                     \
+		G_TX_RENDERTILE,                                         \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                  \
 	)
 
 #define gsDPLoadTextureBlockS(timg, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                   \
+	gLTB_(                                                        \
+		timg,                                                     \
+		fmt,                                                      \
+		siz,                                                      \
+		width,                                                    \
+		height,                                                   \
+		pal,                                                      \
+		cms,                                                      \
+		cmt,                                                      \
+		masks,                                                    \
+		maskt,                                                    \
+		shifts,                                                   \
+		shiftt,                                                   \
+		0,                                                        \
+		0x0,                                                      \
+		G_TX_RENDERTILE,                                          \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                   \
 	)
 
 #define gsDPLoadTextureBlock_4b(timg, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(G_IM_SIZ_4b, width), \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                \
+	gLTB_(                                                     \
+		timg,                                                  \
+		fmt,                                                   \
+		G_IM_SIZ_4b,                                           \
+		width,                                                 \
+		height,                                                \
+		pal,                                                   \
+		cms,                                                   \
+		cmt,                                                   \
+		masks,                                                 \
+		maskt,                                                 \
+		shifts,                                                \
+		shiftt,                                                \
+		G_DXT(G_IM_SIZ_4b, width),                             \
+		0x0,                                                   \
+		G_TX_RENDERTILE,                                       \
+		((width) * 4 + 63) / 64                                \
 	)
 
 #define gsDPLoadTextureBlock_4bS(timg, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                 \
+	gLTB_(                                                      \
+		timg,                                                   \
+		fmt,                                                    \
+		G_IM_SIZ_4b,                                            \
+		width,                                                  \
+		height,                                                 \
+		pal,                                                    \
+		cms,                                                    \
+		cmt,                                                    \
+		masks,                                                  \
+		maskt,                                                  \
+		shifts,                                                 \
+		shiftt,                                                 \
+		0,                                                      \
+		0x0,                                                    \
+		G_TX_RENDERTILE,                                        \
+		((width) * 4 + 63) / 64                                 \
 	)
 
 #define gsDPLoadTextureBlockYuv(timg, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                     \
+	gLTB_(                                                          \
+		timg,                                                       \
+		fmt,                                                        \
+		siz,                                                        \
+		width,                                                      \
+		height,                                                     \
+		pal,                                                        \
+		cms,                                                        \
+		cmt,                                                        \
+		masks,                                                      \
+		maskt,                                                      \
+		shifts,                                                     \
+		shiftt,                                                     \
+		G_DXT(siz, width),                                          \
+		0x0,                                                        \
+		G_TX_RENDERTILE,                                            \
+		((width) + 7) / 8                                           \
 	)
 
 #define gsDPLoadTextureBlockYuvS(timg, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		0x0, \
-		G_TX_RENDERTILE, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                      \
+	gLTB_(                                                           \
+		timg,                                                        \
+		fmt,                                                         \
+		siz,                                                         \
+		width,                                                       \
+		height,                                                      \
+		pal,                                                         \
+		cms,                                                         \
+		cmt,                                                         \
+		masks,                                                       \
+		maskt,                                                       \
+		shifts,                                                      \
+		shiftt,                                                      \
+		0,                                                           \
+		0x0,                                                         \
+		G_TX_RENDERTILE,                                             \
+		((width) + 7) / 8                                            \
 	)
 
 #define _gsDPLoadTextureBlock(timg, tmem, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                         \
+	gLTB_(                                                              \
+		timg,                                                           \
+		fmt,                                                            \
+		siz,                                                            \
+		width,                                                          \
+		height,                                                         \
+		pal,                                                            \
+		cms,                                                            \
+		cmt,                                                            \
+		masks,                                                          \
+		maskt,                                                          \
+		shifts,                                                         \
+		shiftt,                                                         \
+		G_DXT(siz, width),                                              \
+		tmem,                                                           \
+		G_TX_RENDERTILE,                                                \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                         \
 	)
 
 #define _gsDPLoadTextureBlockS(timg, tmem, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                          \
+	gLTB_(                                                               \
+		timg,                                                            \
+		fmt,                                                             \
+		siz,                                                             \
+		width,                                                           \
+		height,                                                          \
+		pal,                                                             \
+		cms,                                                             \
+		cmt,                                                             \
+		masks,                                                           \
+		maskt,                                                           \
+		shifts,                                                          \
+		shiftt,                                                          \
+		0,                                                               \
+		tmem,                                                            \
+		G_TX_RENDERTILE,                                                 \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                          \
 	)
 
 #define _gsDPLoadTextureBlock_4b(timg, tmem, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(G_IM_SIZ_4b, width), \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                       \
+	gLTB_(                                                            \
+		timg,                                                         \
+		fmt,                                                          \
+		G_IM_SIZ_4b,                                                  \
+		width,                                                        \
+		height,                                                       \
+		pal,                                                          \
+		cms,                                                          \
+		cmt,                                                          \
+		masks,                                                        \
+		maskt,                                                        \
+		shifts,                                                       \
+		shiftt,                                                       \
+		G_DXT(G_IM_SIZ_4b, width),                                    \
+		tmem,                                                         \
+		G_TX_RENDERTILE,                                              \
+		((width) * 4 + 63) / 64                                       \
 	)
 
 #define _gsDPLoadTextureBlock_4bS(timg, tmem, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                        \
+	gLTB_(                                                             \
+		timg,                                                          \
+		fmt,                                                           \
+		G_IM_SIZ_4b,                                                   \
+		width,                                                         \
+		height,                                                        \
+		pal,                                                           \
+		cms,                                                           \
+		cmt,                                                           \
+		masks,                                                         \
+		maskt,                                                         \
+		shifts,                                                        \
+		shiftt,                                                        \
+		0,                                                             \
+		tmem,                                                          \
+		G_TX_RENDERTILE,                                               \
+		((width) * 4 + 63) / 64                                        \
 	)
 
 #define _gsDPLoadTextureBlockYuv(timg, tmem, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                            \
+	gLTB_(                                                                 \
+		timg,                                                              \
+		fmt,                                                               \
+		siz,                                                               \
+		width,                                                             \
+		height,                                                            \
+		pal,                                                               \
+		cms,                                                               \
+		cmt,                                                               \
+		masks,                                                             \
+		maskt,                                                             \
+		shifts,                                                            \
+		shiftt,                                                            \
+		G_DXT(siz, width),                                                 \
+		tmem,                                                              \
+		G_TX_RENDERTILE,                                                   \
+		((width) + 7) / 8                                                  \
 	)
 
 #define _gsDPLoadTextureBlockYuvS(timg, tmem, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		G_TX_RENDERTILE, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                             \
+	gLTB_(                                                                  \
+		timg,                                                               \
+		fmt,                                                                \
+		siz,                                                                \
+		width,                                                              \
+		height,                                                             \
+		pal,                                                                \
+		cms,                                                                \
+		cmt,                                                                \
+		masks,                                                              \
+		maskt,                                                              \
+		shifts,                                                             \
+		shiftt,                                                             \
+		0,                                                                  \
+		tmem,                                                               \
+		G_TX_RENDERTILE,                                                    \
+		((width) + 7) / 8                                                   \
 	)
 
 #define gsDPLoadMultiBlock(timg, tmem, rt, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		tmem, \
-		rt, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                          \
+	gLTB_(                                                               \
+		timg,                                                            \
+		fmt,                                                             \
+		siz,                                                             \
+		width,                                                           \
+		height,                                                          \
+		pal,                                                             \
+		cms,                                                             \
+		cmt,                                                             \
+		masks,                                                           \
+		maskt,                                                           \
+		shifts,                                                          \
+		shiftt,                                                          \
+		G_DXT(siz, width),                                               \
+		tmem,                                                            \
+		rt,                                                              \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                          \
 	)
 
 #define gsDPLoadMultiBlockS(timg, tmem, rt, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		rt, \
-		((width) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                           \
+	gLTB_(                                                                \
+		timg,                                                             \
+		fmt,                                                              \
+		siz,                                                              \
+		width,                                                            \
+		height,                                                           \
+		pal,                                                              \
+		cms,                                                              \
+		cmt,                                                              \
+		masks,                                                            \
+		maskt,                                                            \
+		shifts,                                                           \
+		shiftt,                                                           \
+		0,                                                                \
+		tmem,                                                             \
+		rt,                                                               \
+		((width) * G_SIZ_LDBITS(siz) + 63) / 64                           \
 	)
 
 #define gsDPLoadMultiBlock_4b(timg, tmem, rt, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(G_IM_SIZ_4b, width), \
-		tmem, \
-		rt, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                        \
+	gLTB_(                                                             \
+		timg,                                                          \
+		fmt,                                                           \
+		G_IM_SIZ_4b,                                                   \
+		width,                                                         \
+		height,                                                        \
+		pal,                                                           \
+		cms,                                                           \
+		cmt,                                                           \
+		masks,                                                         \
+		maskt,                                                         \
+		shifts,                                                        \
+		shiftt,                                                        \
+		G_DXT(G_IM_SIZ_4b, width),                                     \
+		tmem,                                                          \
+		rt,                                                            \
+		((width) * 4 + 63) / 64                                        \
 	)
 
 #define gsDPLoadMultiBlock_4bS(timg, tmem, rt, fmt, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		G_IM_SIZ_4b, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		rt, \
-		((width) * 4 + 63) / 64 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                         \
+	gLTB_(                                                              \
+		timg,                                                           \
+		fmt,                                                            \
+		G_IM_SIZ_4b,                                                    \
+		width,                                                          \
+		height,                                                         \
+		pal,                                                            \
+		cms,                                                            \
+		cmt,                                                            \
+		masks,                                                          \
+		maskt,                                                          \
+		shifts,                                                         \
+		shiftt,                                                         \
+		0,                                                              \
+		tmem,                                                           \
+		rt,                                                             \
+		((width) * 4 + 63) / 64                                         \
 	)
 
 #define gsDPLoadMultiBlockYuv(timg, tmem, rt, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		G_DXT(siz, width), \
-		tmem, \
-		rt, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                             \
+	gLTB_(                                                                  \
+		timg,                                                               \
+		fmt,                                                                \
+		siz,                                                                \
+		width,                                                              \
+		height,                                                             \
+		pal,                                                                \
+		cms,                                                                \
+		cmt,                                                                \
+		masks,                                                              \
+		maskt,                                                              \
+		shifts,                                                             \
+		shiftt,                                                             \
+		G_DXT(siz, width),                                                  \
+		tmem,                                                               \
+		rt,                                                                 \
+		((width) + 7) / 8                                                   \
 	)
 
 #define gsDPLoadMultiBlockYuvS(timg, tmem, rt, fmt, siz, width, height, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTB_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0, \
-		tmem, \
-		rt, \
-		((width) + 7) / 8 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                              \
+	gLTB_(                                                                   \
+		timg,                                                                \
+		fmt,                                                                 \
+		siz,                                                                 \
+		width,                                                               \
+		height,                                                              \
+		pal,                                                                 \
+		cms,                                                                 \
+		cmt,                                                                 \
+		masks,                                                               \
+		maskt,                                                               \
+		shifts,                                                              \
+		shiftt,                                                              \
+		0,                                                                   \
+		tmem,                                                                \
+		rt,                                                                  \
+		((width) + 7) / 8                                                    \
 	)
 
 #define gLTT_(timg, fmt, siz, width, height, uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt, \
-	    tmem, rt, line) \
-	gsDPSetTextureImage(fmt, siz, width, timg), \
-	gsDPSetTile( \
-		fmt, \
-		siz, \
-		line, \
-		tmem, \
-		G_TX_LOADTILE, \
-		0, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
-	gsDPLoadSync(), \
-	gsDPLoadTile( \
-		G_TX_LOADTILE, \
-		qu102(uls), \
-		qu102(ult), \
-		qu102(lrs), \
-		qu102(lrt) \
-	), \
-	gsDPPipeSync(), \
-	gsDPSetTile( \
-		fmt, \
-		siz, \
-		line, \
-		tmem, \
-		rt, \
-		pal, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
-	gsDPSetTileSize( \
-		rt, \
-		qu102(uls), \
-		qu102(ult), \
-		qu102(lrs), \
-		qu102(lrt) \
+	    cms, cmt, masks, maskt, shifts, shiftt,                       \
+	    tmem, rt, line)                                               \
+	gsDPSetTextureImage(fmt, siz, width, timg),                       \
+	gsDPSetTile(                                                      \
+		fmt,                                                          \
+		siz,                                                          \
+		line,                                                         \
+		tmem,                                                         \
+		G_TX_LOADTILE,                                                \
+		0,                                                            \
+		cmt,                                                          \
+		maskt,                                                        \
+		shiftt,                                                       \
+		cms,                                                          \
+		masks,                                                        \
+		shifts                                                        \
+	),                                                                \
+	gsDPLoadSync(),                                                   \
+	gsDPLoadTile(                                                     \
+		G_TX_LOADTILE,                                                \
+		qu102(uls),                                                   \
+		qu102(ult),                                                   \
+		qu102(lrs),                                                   \
+		qu102(lrt)                                                    \
+	),                                                                \
+	gsDPPipeSync(),                                                   \
+	gsDPSetTile(                                                      \
+		fmt,                                                          \
+		siz,                                                          \
+		line,                                                         \
+		tmem,                                                         \
+		rt,                                                           \
+		pal,                                                          \
+		cmt,                                                          \
+		maskt,                                                        \
+		shiftt,                                                       \
+		cms,                                                          \
+		masks,                                                        \
+		shifts                                                        \
+	),                                                                \
+	gsDPSetTileSize(                                                  \
+		rt,                                                           \
+		qu102(uls),                                                   \
+		qu102(ult),                                                   \
+		qu102(lrs),                                                   \
+		qu102(lrt)                                                    \
 	)
 
 #define gLTT4_(timg, fmt, width, height, uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt, \
-	    tmem, rt) \
-	gsDPSetTextureImage(fmt, G_IM_SIZ_8b, (width) / 2, timg), \
-	gsDPSetTile( \
-		fmt, \
-		G_IM_SIZ_8b, \
-		(((lrs) - (uls) + 1) / 2 + 7) / 8, \
-		tmem, \
-		G_TX_LOADTILE, \
-		0, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
-	gsDPLoadSync(), \
-	gsDPLoadTile( \
-		G_TX_LOADTILE, \
-		qu102(uls) / 2, \
-		qu102(ult), \
-		qu102(lrs) / 2, \
-		qu102(lrt) \
-	), \
-	gsDPPipeSync(), \
-	gsDPSetTile( \
-		fmt, \
-		G_IM_SIZ_4b, \
-		(((lrs) - (uls) + 1) / 2 + 7) / 8, \
-		tmem, \
-		rt, \
-		pal, \
-		cmt, \
-		maskt, \
-		shiftt, \
-		cms, \
-		masks, \
-		shifts \
-	), \
-	gsDPSetTileSize( \
-		rt, \
-		qu102(uls), \
-		qu102(ult), \
-		qu102(lrs), \
-		qu102(lrt) \
+	    cms, cmt, masks, maskt, shifts, shiftt,                   \
+	    tmem, rt)                                                 \
+	gsDPSetTextureImage(fmt, G_IM_SIZ_8b, (width) / 2, timg),     \
+	gsDPSetTile(                                                  \
+		fmt,                                                      \
+		G_IM_SIZ_8b,                                              \
+		(((lrs) - (uls) + 1) / 2 + 7) / 8,                        \
+		tmem,                                                     \
+		G_TX_LOADTILE,                                            \
+		0,                                                        \
+		cmt,                                                      \
+		maskt,                                                    \
+		shiftt,                                                   \
+		cms,                                                      \
+		masks,                                                    \
+		shifts                                                    \
+	),                                                            \
+	gsDPLoadSync(),                                               \
+	gsDPLoadTile(                                                 \
+		G_TX_LOADTILE,                                            \
+		qu102(uls) / 2,                                           \
+		qu102(ult),                                               \
+		qu102(lrs) / 2,                                           \
+		qu102(lrt)                                                \
+	),                                                            \
+	gsDPPipeSync(),                                               \
+	gsDPSetTile(                                                  \
+		fmt,                                                      \
+		G_IM_SIZ_4b,                                              \
+		(((lrs) - (uls) + 1) / 2 + 7) / 8,                        \
+		tmem,                                                     \
+		rt,                                                       \
+		pal,                                                      \
+		cmt,                                                      \
+		maskt,                                                    \
+		shiftt,                                                   \
+		cms,                                                      \
+		masks,                                                    \
+		shifts                                                    \
+	),                                                            \
+	gsDPSetTileSize(                                              \
+		rt,                                                       \
+		qu102(uls),                                               \
+		qu102(ult),                                               \
+		qu102(lrs),                                               \
+		qu102(lrt)                                                \
 	)
 
-#define gsDPLoadTextureTile(timg, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0x0, \
-		G_TX_RENDERTILE, \
+#define gsDPLoadTextureTile(timg, fmt, siz, width, height,  \
+	    uls, ult, lrs, lrt, pal,                            \
+	    cms, cmt, masks, maskt, shifts, shiftt)             \
+	gLTT_(                                                  \
+		timg,                                               \
+		fmt,                                                \
+		siz,                                                \
+		width,                                              \
+		height,                                             \
+		uls,                                                \
+		ult,                                                \
+		lrs,                                                \
+		lrt,                                                \
+		pal,                                                \
+		cms,                                                \
+		cmt,                                                \
+		masks,                                              \
+		maskt,                                              \
+		shifts,                                             \
+		shiftt,                                             \
+		0x0,                                                \
+		G_TX_RENDERTILE,                                    \
 		(((lrs) - (uls) + 1) * G_SIZ_LDBITS(siz) + 63) / 64 \
 	)
 
 #define gsDPLoadTextureTile_4b(timg, fmt, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT4_( \
-		timg, \
-		fmt, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0x0, \
-		G_TX_RENDERTILE \
+	    uls, ult, lrs, lrt, pal,                         \
+	    cms, cmt, masks, maskt, shifts, shiftt)          \
+	gLTT4_(                                              \
+		timg,                                            \
+		fmt,                                             \
+		width,                                           \
+		height,                                          \
+		uls,                                             \
+		ult,                                             \
+		lrs,                                             \
+		lrt,                                             \
+		pal,                                             \
+		cms,                                             \
+		cmt,                                             \
+		masks,                                           \
+		maskt,                                           \
+		shifts,                                          \
+		shiftt,                                          \
+		0x0,                                             \
+		G_TX_RENDERTILE                                  \
 	)
 
 #define gsDPLoadTextureTileYuv(timg, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		0x0, \
-		G_TX_RENDERTILE, \
-		(((lrs) - (uls) + 1) + 7) / 8 \
+	    uls, ult, lrs, lrt, pal,                              \
+	    cms, cmt, masks, maskt, shifts, shiftt)               \
+	gLTT_(                                                    \
+		timg,                                                 \
+		fmt,                                                  \
+		siz,                                                  \
+		width,                                                \
+		height,                                               \
+		uls,                                                  \
+		ult,                                                  \
+		lrs,                                                  \
+		lrt,                                                  \
+		pal,                                                  \
+		cms,                                                  \
+		cmt,                                                  \
+		masks,                                                \
+		maskt,                                                \
+		shifts,                                               \
+		shiftt,                                               \
+		0x0,                                                  \
+		G_TX_RENDERTILE,                                      \
+		(((lrs) - (uls) + 1) + 7) / 8                         \
 	)
 
 #define _gsDPLoadTextureTile(timg, tmem, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		G_TX_RENDERTILE, \
-		(((lrs) - (uls) + 1) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    uls, ult, lrs, lrt, pal,                                  \
+	    cms, cmt, masks, maskt, shifts, shiftt)                   \
+	gLTT_(                                                        \
+		timg,                                                     \
+		fmt,                                                      \
+		siz,                                                      \
+		width,                                                    \
+		height,                                                   \
+		uls,                                                      \
+		ult,                                                      \
+		lrs,                                                      \
+		lrt,                                                      \
+		pal,                                                      \
+		cms,                                                      \
+		cmt,                                                      \
+		masks,                                                    \
+		maskt,                                                    \
+		shifts,                                                   \
+		shiftt,                                                   \
+		tmem,                                                     \
+		G_TX_RENDERTILE,                                          \
+		(((lrs) - (uls) + 1) * G_SIZ_LDBITS(siz) + 63) / 64       \
 	)
 
 #define _gsDPLoadTextureTile_4b(timg, tmem, fmt, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT4_( \
-		timg, \
-		fmt, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		G_TX_RENDERTILE \
+	    uls, ult, lrs, lrt, pal,                                \
+	    cms, cmt, masks, maskt, shifts, shiftt)                 \
+	gLTT4_(                                                     \
+		timg,                                                   \
+		fmt,                                                    \
+		width,                                                  \
+		height,                                                 \
+		uls,                                                    \
+		ult,                                                    \
+		lrs,                                                    \
+		lrt,                                                    \
+		pal,                                                    \
+		cms,                                                    \
+		cmt,                                                    \
+		masks,                                                  \
+		maskt,                                                  \
+		shifts,                                                 \
+		shiftt,                                                 \
+		tmem,                                                   \
+		G_TX_RENDERTILE                                         \
 	)
 
 #define _gsDPLoadTextureTileYuv(timg, tmem, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, cms, cmt, \
-	    masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		G_TX_RENDERTILE, \
-		(((lrs) - (uls) + 1) + 7) / 8 \
+	    uls, ult, lrs, lrt, pal, cms, cmt,                           \
+	    masks, maskt, shifts, shiftt)                                \
+	gLTT_(                                                           \
+		timg,                                                        \
+		fmt,                                                         \
+		siz,                                                         \
+		width,                                                       \
+		height,                                                      \
+		uls,                                                         \
+		ult,                                                         \
+		lrs,                                                         \
+		lrt,                                                         \
+		pal,                                                         \
+		cms,                                                         \
+		cmt,                                                         \
+		masks,                                                       \
+		maskt,                                                       \
+		shifts,                                                      \
+		shiftt,                                                      \
+		tmem,                                                        \
+		G_TX_RENDERTILE,                                             \
+		(((lrs) - (uls) + 1) + 7) / 8                                \
 	)
 
 #define gsDPLoadMultiTile(timg, tmem, rt, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		rt, \
-		(((lrs) - (uls) + 1) * G_SIZ_LDBITS(siz) + 63) / 64 \
+	    uls, ult, lrs, lrt, pal,                                   \
+	    cms, cmt, masks, maskt, shifts, shiftt)                    \
+	gLTT_(                                                         \
+		timg,                                                      \
+		fmt,                                                       \
+		siz,                                                       \
+		width,                                                     \
+		height,                                                    \
+		uls,                                                       \
+		ult,                                                       \
+		lrs,                                                       \
+		lrt,                                                       \
+		pal,                                                       \
+		cms,                                                       \
+		cmt,                                                       \
+		masks,                                                     \
+		maskt,                                                     \
+		shifts,                                                    \
+		shiftt,                                                    \
+		tmem,                                                      \
+		rt,                                                        \
+		(((lrs) - (uls) + 1) * G_SIZ_LDBITS(siz) + 63) / 64        \
 	)
 
 #define gsDPLoadMultiTile_4b(timg, tmem, rt, fmt, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT4_( \
-		timg, \
-		fmt, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		rt \
+	    uls, ult, lrs, lrt, pal,                                 \
+	    cms, cmt, masks, maskt, shifts, shiftt)                  \
+	gLTT4_(                                                      \
+		timg,                                                    \
+		fmt,                                                     \
+		width,                                                   \
+		height,                                                  \
+		uls,                                                     \
+		ult,                                                     \
+		lrs,                                                     \
+		lrt,                                                     \
+		pal,                                                     \
+		cms,                                                     \
+		cmt,                                                     \
+		masks,                                                   \
+		maskt,                                                   \
+		shifts,                                                  \
+		shiftt,                                                  \
+		tmem,                                                    \
+		rt                                                       \
 	)
 
 #define gsDPLoadMultiTileYuv(timg, tmem, rt, fmt, siz, width, height, \
-	    uls, ult, lrs, lrt, pal, \
-	    cms, cmt, masks, maskt, shifts, shiftt) \
-	gLTT_( \
-		timg, \
-		fmt, \
-		siz, \
-		width, \
-		height, \
-		uls, \
-		ult, \
-		lrs, \
-		lrt, \
-		pal, \
-		cms, \
-		cmt, \
-		masks, \
-		maskt, \
-		shifts, \
-		shiftt, \
-		tmem, \
-		rt, \
-		(((lrs) - (uls) + 1) + 7) / 8 \
+	    uls, ult, lrs, lrt, pal,                                      \
+	    cms, cmt, masks, maskt, shifts, shiftt)                       \
+	gLTT_(                                                            \
+		timg,                                                         \
+		fmt,                                                          \
+		siz,                                                          \
+		width,                                                        \
+		height,                                                       \
+		uls,                                                          \
+		ult,                                                          \
+		lrs,                                                          \
+		lrt,                                                          \
+		pal,                                                          \
+		cms,                                                          \
+		cmt,                                                          \
+		masks,                                                        \
+		maskt,                                                        \
+		shifts,                                                       \
+		shiftt,                                                       \
+		tmem,                                                         \
+		rt,                                                           \
+		(((lrs) - (uls) + 1) + 7) / 8                                 \
 	)
 
 #define gsDPLoadBlock(tile, uls, ult, lrs, dxt) \
-	gO_( \
-		G_LOADBLOCK, \
-		gF_(uls, 12, 12) | \
-		gF_(ult, 12, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(G_LDBLK_TXL(lrs), 12, 12) | \
-		gF_(dxt, 12, 0) \
+	gO_(                                        \
+		G_LOADBLOCK,                            \
+		gF_(uls, 12, 12) |                      \
+		gF_(ult, 12, 0),                        \
+		gF_(tile, 3, 24) |                      \
+		gF_(G_LDBLK_TXL(lrs), 12, 12) |         \
+		gF_(dxt, 12, 0)                         \
 	)
 
 #define gsDPNoOp() \
@@ -2573,84 +2578,84 @@ instructions, using the SGI gbi.h names. */
 	gsSPSetOtherModeHi(G_MDSFT_PIPELINE, G_MDSIZ_PIPELINE, mode)
 
 #define gsDPSetBlendColor(r, g, b, a) \
-	gO_( \
-		G_SETBLENDCOLOR, \
-		0, \
-		gF_(r, 8, 24) | \
-		gF_(g, 8, 16) | \
-		gF_(b, 8, 8) | \
-		gF_(a, 8, 0) \
+	gO_(                              \
+		G_SETBLENDCOLOR,              \
+		0,                            \
+		gF_(r, 8, 24) |               \
+		gF_(g, 8, 16) |               \
+		gF_(b, 8, 8) |                \
+		gF_(a, 8, 0)                  \
 	)
 
 #define gsDPSetEnvColor(r, g, b, a) \
-	gO_( \
-		G_SETENVCOLOR, \
-		0, \
-		gF_(r, 8, 24) | \
-		gF_(g, 8, 16) | \
-		gF_(b, 8, 8) | \
-		gF_(a, 8, 0) \
+	gO_(                            \
+		G_SETENVCOLOR,              \
+		0,                          \
+		gF_(r, 8, 24) |             \
+		gF_(g, 8, 16) |             \
+		gF_(b, 8, 8) |              \
+		gF_(a, 8, 0)                \
 	)
 
 #define gsDPSetFillColor(c) \
 	gO_(G_SETFILLCOLOR, 0, c)
 
 #define gsDPSetFogColor(r, g, b, a) \
-	gO_( \
-		G_SETFOGCOLOR, \
-		0, \
-		gF_(r, 8, 24) | \
-		gF_(g, 8, 16) | \
-		gF_(b, 8, 8) | \
-		gF_(a, 8, 0) \
+	gO_(                            \
+		G_SETFOGCOLOR,              \
+		0,                          \
+		gF_(r, 8, 24) |             \
+		gF_(g, 8, 16) |             \
+		gF_(b, 8, 8) |              \
+		gF_(a, 8, 0)                \
 	)
 
 #define gsDPSetPrimColor(m, l, r, g, b, a) \
-	gO_( \
-		G_SETPRIMCOLOR, \
-		gF_(m, 8, 8) | \
-		gF_(l, 8, 0), \
-		gF_(r, 8, 24) | \
-		gF_(g, 8, 16) | \
-		gF_(b, 8, 8) | \
-		gF_(a, 8, 0) \
+	gO_(                                   \
+		G_SETPRIMCOLOR,                    \
+		gF_(m, 8, 8) |                     \
+		gF_(l, 8, 0),                      \
+		gF_(r, 8, 24) |                    \
+		gF_(g, 8, 16) |                    \
+		gF_(b, 8, 8) |                     \
+		gF_(a, 8, 0)                       \
 	)
 
 #define gsDPSetColorImage(fmt, siz, width, img) \
-	gO_( \
-		G_SETCIMG, \
-		gF_(fmt, 3, 21) | \
-		gF_(siz, 2, 19) | \
-		gF_((width) - 1, 12, 0), \
-		img \
+	gO_(                                        \
+		G_SETCIMG,                              \
+		gF_(fmt, 3, 21) |                       \
+		gF_(siz, 2, 19) |                       \
+		gF_((width) - 1, 12, 0),                \
+		img                                     \
 	)
 
 #define gsDPSetDepthImage(img) \
 	gO_(G_SETZIMG, 0, img)
 
 #define gsDPSetTextureImage(fmt, siz, width, img) \
-	gO_( \
-		G_SETTIMG, \
-		gF_(fmt, 3, 21) | \
-		gF_(siz, 2, 19) | \
-		gF_((width) - 1, 12, 0), \
-		img \
+	gO_(                                          \
+		G_SETTIMG,                                \
+		gF_(fmt, 3, 21) |                         \
+		gF_(siz, 2, 19) |                         \
+		gF_((width) - 1, 12, 0),                  \
+		img                                       \
 	)
 
-#define gsDPSetHilite1Tile(tile, hilite, width, height) \
-	gsDPSetTileSize( \
-		tile, \
-		((Hilite*)(hilite))->h.x1 & 0xFFF, \
-		((Hilite*)(hilite))->h.y1 & 0xFFF, \
+#define gsDPSetHilite1Tile(tile, hilite, width, height)          \
+	gsDPSetTileSize(                                             \
+		tile,                                                    \
+		((Hilite*)(hilite))->h.x1 & 0xFFF,                       \
+		((Hilite*)(hilite))->h.y1 & 0xFFF,                       \
 		(((width) - 1) * 4 + ((Hilite*)(hilite))->h.x1) & 0xFFF, \
 		(((height) - 1) * 4 + ((Hilite*)(hilite))->h.y1) & 0xFFF \
 	)
 
-#define gsDPSetHilite2Tile(tile, hilite, width, height) \
-	gsDPSetTileSize( \
-		tile, \
-		((Hilite*)(hilite))->h.x2 & 0xFFF, \
-		((Hilite*)(hilite))->h.y2 & 0xFFF, \
+#define gsDPSetHilite2Tile(tile, hilite, width, height)          \
+	gsDPSetTileSize(                                             \
+		tile,                                                    \
+		((Hilite*)(hilite))->h.x2 & 0xFFF,                       \
+		((Hilite*)(hilite))->h.y2 & 0xFFF,                       \
 		(((width) - 1) * 4 + ((Hilite*)(hilite))->h.x2) & 0xFFF, \
 		(((height) - 1) * 4 + ((Hilite*)(hilite))->h.y2) & 0xFFF \
 	)
@@ -2668,37 +2673,37 @@ instructions, using the SGI gbi.h names. */
 	gsDPSetCombineLERP(mode1, mode2)
 
 #define gsDPSetCombineLERP(a0, b0, c0, d0, Aa0, Ab0, Ac0, Ad0, \
-	    a1, b1, c1, d1, Aa1, Ab1, Ac1, Ad1) \
-	gO_( \
-		G_SETCOMBINE, \
-		gF_(G_CCMUX_ ## a0, 4, 20) | \
-		gF_(G_CCMUX_ ## c0, 5, 15) | \
-		gF_(G_ACMUX_ ## Aa0, 3, 12) | \
-		gF_(G_ACMUX_ ## Ac0, 3, 9) | \
-		gF_(G_CCMUX_ ## a1, 4, 5) | \
-		gF_(G_CCMUX_ ## c1, 5, 0), \
-		gF_(G_CCMUX_ ## b0, 4, 28) | \
-		gF_(G_CCMUX_ ## b1, 4, 24) | \
-		gF_(G_ACMUX_ ## Aa1, 3, 21) | \
-		gF_(G_ACMUX_ ## Ac1, 3, 18) | \
-		gF_(G_CCMUX_ ## d0, 3, 15) | \
-		gF_(G_ACMUX_ ## Ab0, 3, 12) | \
-		gF_(G_ACMUX_ ## Ad0, 3, 9) | \
-		gF_(G_CCMUX_ ## d1, 3, 6) | \
-		gF_(G_ACMUX_ ## Ab1, 3, 3) | \
-		gF_(G_ACMUX_ ## Ad1, 3, 0) \
+	    a1, b1, c1, d1, Aa1, Ab1, Ac1, Ad1)                    \
+	gO_(                                                       \
+		G_SETCOMBINE,                                          \
+		gF_(G_CCMUX_ ## a0, 4, 20) |                           \
+		gF_(G_CCMUX_ ## c0, 5, 15) |                           \
+		gF_(G_ACMUX_ ## Aa0, 3, 12) |                          \
+		gF_(G_ACMUX_ ## Ac0, 3, 9) |                           \
+		gF_(G_CCMUX_ ## a1, 4, 5) |                            \
+		gF_(G_CCMUX_ ## c1, 5, 0),                             \
+		gF_(G_CCMUX_ ## b0, 4, 28) |                           \
+		gF_(G_CCMUX_ ## b1, 4, 24) |                           \
+		gF_(G_ACMUX_ ## Aa1, 3, 21) |                          \
+		gF_(G_ACMUX_ ## Ac1, 3, 18) |                          \
+		gF_(G_CCMUX_ ## d0, 3, 15) |                           \
+		gF_(G_ACMUX_ ## Ab0, 3, 12) |                          \
+		gF_(G_ACMUX_ ## Ad0, 3, 9) |                           \
+		gF_(G_CCMUX_ ## d1, 3, 6) |                            \
+		gF_(G_ACMUX_ ## Ab1, 3, 3) |                           \
+		gF_(G_ACMUX_ ## Ad1, 3, 0)                             \
 	)
 
 #define gsDPSetConvert(k0, k1, k2, k3, k4, k5) \
-	gO_( \
-		G_SETCONVERT, \
-		gF_(k0, 9, 13) | \
-		gF_(k1, 9, 4) | \
-		gF_(gI_(k2) >> 5, 4, 0), \
-		gF_(k2, 5, 27) | \
-		gF_(k3, 9, 18) | \
-		gF_(k4, 9, 9) | \
-		gF_(k5, 9, 0) \
+	gO_(                                       \
+		G_SETCONVERT,                          \
+		gF_(k0, 9, 13) |                       \
+		gF_(k1, 9, 4) |                        \
+		gF_(gI_(k2) >> 5, 4, 0),               \
+		gF_(k2, 5, 27) |                       \
+		gF_(k3, 9, 18) |                       \
+		gF_(k4, 9, 9) |                        \
+		gF_(k5, 9, 0)                          \
 	)
 
 #define gsDPSetTextureConvert(type) \
@@ -2714,58 +2719,58 @@ instructions, using the SGI gbi.h names. */
 	gsSPSetOtherModeHi(G_MDSFT_COMBKEY, G_MDSIZ_COMBKEY, type)
 
 #define gsDPSetKeyGB(cG, sG, wG, cB, sB, wB) \
-	gO_( \
-		G_SETKEYGB, \
-		gF_(wG, 12, 12) | \
-		gF_(wB, 12, 0), \
-		gF_(cG, 8, 24) | \
-		gF_(sG, 8, 16) | \
-		gF_(cB, 8, 8) | \
-		gF_(sB, 8, 0) \
+	gO_(                                     \
+		G_SETKEYGB,                          \
+		gF_(wG, 12, 12) |                    \
+		gF_(wB, 12, 0),                      \
+		gF_(cG, 8, 24) |                     \
+		gF_(sG, 8, 16) |                     \
+		gF_(cB, 8, 8) |                      \
+		gF_(sB, 8, 0)                        \
 	)
 
 #define gsDPSetKeyR(cR, sR, wR) \
-	gO_( \
-		G_SETKEYR, \
-		0, \
-		gF_(wR, 12, 16) | \
-		gF_(cR, 8, 8) | \
-		gF_(sR, 8, 0) \
+	gO_(                        \
+		G_SETKEYR,              \
+		0,                      \
+		gF_(wR, 12, 16) |       \
+		gF_(cR, 8, 8) |         \
+		gF_(sR, 8, 0)           \
 	)
 
 #define gsDPSetPrimDepth(z, dz) \
-	gO_( \
-		G_SETPRIMDEPTH, \
-		0, \
-		gF_(z, 16, 16) | \
-		gF_(dz, 16, 0) \
+	gO_(                        \
+		G_SETPRIMDEPTH,         \
+		0,                      \
+		gF_(z, 16, 16) |        \
+		gF_(dz, 16, 0)          \
 	)
 
 #define gsDPSetRenderMode(mode1, mode2) \
-	gsSPSetOtherModeLo( \
-		G_MDSFT_RENDERMODE, \
-		G_MDSIZ_RENDERMODE, \
-		gI_(mode1) | \
-		gI_(mode2) \
+	gsSPSetOtherModeLo(                 \
+		G_MDSFT_RENDERMODE,             \
+		G_MDSIZ_RENDERMODE,             \
+		gI_(mode1) |                    \
+		gI_(mode2)                      \
 	)
 
 #define gsDPSetScissor(mode, ulx, uly, lrx, lry) \
-	gsDPSetScissorFrac( \
-		mode, \
-		qu102(gI_(ulx)), \
-		qu102(gI_(uly)), \
-		qu102(gI_(lrx)), \
-		qu102(gI_(lry)) \
+	gsDPSetScissorFrac(                          \
+		mode,                                    \
+		qu102(gI_(ulx)),                         \
+		qu102(gI_(uly)),                         \
+		qu102(gI_(lrx)),                         \
+		qu102(gI_(lry))                          \
 	)
 
 #define gsDPSetScissorFrac(mode, ulx, uly, lrx, lry) \
-	gO_( \
-		G_SETSCISSOR, \
-		gF_(ulx, 12, 12) | \
-		gF_(uly, 12, 0), \
-		gF_(mode, 2, 24) | \
-		gF_(lrx, 12, 12) | \
-		gF_(lry, 12, 0) \
+	gO_(                                             \
+		G_SETSCISSOR,                                \
+		gF_(ulx, 12, 12) |                           \
+		gF_(uly, 12, 0),                             \
+		gF_(mode, 2, 24) |                           \
+		gF_(lrx, 12, 12) |                           \
+		gF_(lry, 12, 0)                              \
 	)
 
 #define gsDPSetTextureDetail(type) \
@@ -2784,39 +2789,39 @@ instructions, using the SGI gbi.h names. */
 	gsSPSetOtherModeHi(G_MDSFT_TEXTPERSP, G_MDSIZ_TEXTPERSP, enable)
 
 #define gsDPSetTile(fmt, siz, line, tmem, tile, palette, \
-	    cmt, maskt, shiftt, cms, masks, shifts) \
-	gO_( \
-		G_SETTILE, \
-		gF_(fmt, 3, 21) | \
-		gF_(siz, 2, 19) | \
-		gF_(line, 9, 9) | \
-		gF_(tmem, 9, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(palette, 4, 20) | \
-		gF_(cmt, 2, 18) | \
-		gF_(maskt, 4, 14) | \
-		gF_(shiftt, 4, 10) | \
-		gF_(cms, 2, 8) | \
-		gF_(masks, 4, 4) | \
-		gF_(shifts, 4, 0) \
+	    cmt, maskt, shiftt, cms, masks, shifts)          \
+	gO_(                                                 \
+		G_SETTILE,                                       \
+		gF_(fmt, 3, 21) |                                \
+		gF_(siz, 2, 19) |                                \
+		gF_(line, 9, 9) |                                \
+		gF_(tmem, 9, 0),                                 \
+		gF_(tile, 3, 24) |                               \
+		gF_(palette, 4, 20) |                            \
+		gF_(cmt, 2, 18) |                                \
+		gF_(maskt, 4, 14) |                              \
+		gF_(shiftt, 4, 10) |                             \
+		gF_(cms, 2, 8) |                                 \
+		gF_(masks, 4, 4) |                               \
+		gF_(shifts, 4, 0)                                \
 	)
 
 #define gsDPSetTileSize(tile, uls, ult, lrs, lrt) \
-	gO_( \
-		G_SETTILESIZE, \
-		gF_(uls, 12, 12) | \
-		gF_(ult, 12, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(lrs, 12, 12) | \
-		gF_(lrt, 12, 0) \
+	gO_(                                          \
+		G_SETTILESIZE,                            \
+		gF_(uls, 12, 12) |                        \
+		gF_(ult, 12, 0),                          \
+		gF_(tile, 3, 24) |                        \
+		gF_(lrs, 12, 12) |                        \
+		gF_(lrt, 12, 0)                           \
 	)
 
 #define gsSPBranchList(dl) \
 	gsDisplayList(dl, 1)
 
-#define gsSPClipRatio(r) \
-	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RNX, (u16)(r)), \
-	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RNY, (u16)(r)), \
+#define gsSPClipRatio(r)                              \
+	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RNX, (u16)(r)),    \
+	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RNY, (u16)(r)),    \
 	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RPX, (u16) - (r)), \
 	gsMoveWd(G_MW_CLIP, G_MWO_CLIP_RPY, (u16) - (r))
 
@@ -2827,16 +2832,16 @@ instructions, using the SGI gbi.h names. */
 	gO_(G_ENDDL, 0, 0)
 
 #define gsSPFogFactor(fm, fo) \
-	gsMoveWd( \
-		G_MW_FOG, \
-		G_MWO_FOG, \
-		gF_(fm, 16, 16) | \
-		gF_(fo, 16, 0) \
+	gsMoveWd(                 \
+		G_MW_FOG,             \
+		G_MWO_FOG,            \
+		gF_(fm, 16, 16) |     \
+		gF_(fo, 16, 0)        \
 	)
 
-#define gsSPFogPosition(min, max) \
-	gsSPFogFactor( \
-		(500 * 0x100) / ((max) - (min)), \
+#define gsSPFogPosition(min, max)               \
+	gsSPFogFactor(                              \
+		(500 * 0x100) / ((max) - (min)),        \
 		(500 - (min)) * 0x100 / ((max) - (min)) \
 	)
 
@@ -2844,45 +2849,45 @@ instructions, using the SGI gbi.h names. */
 	gsSPLineW3D(v0, v1, 0, flag)
 
 #define gsSPLookAt(l) \
-	gsSPLookAtX(l), \
+	gsSPLookAtX(l),   \
 	gsSPLookAtY(gI_(l) + 0x10)
 
 #define gsSPSegment(seg, base) \
 	gsMoveWd(G_MW_SEGMENT, (seg) * 4, base)
 
-#define gsSPSetLights0(lites) \
-	gsSPNumLights(NUMLIGHTS_0), \
+#define gsSPSetLights0(lites)    \
+	gsSPNumLights(NUMLIGHTS_0),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).a, 2)
 
-#define gsSPSetLights1(lites) \
-	gsSPNumLights(NUMLIGHTS_1), \
+#define gsSPSetLights1(lites)    \
+	gsSPNumLights(NUMLIGHTS_1),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).a, 2)
 
-#define gsSPSetLights2(lites) \
-	gsSPNumLights(NUMLIGHTS_2), \
+#define gsSPSetLights2(lites)    \
+	gsSPNumLights(NUMLIGHTS_2),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).a, 3)
 
-#define gsSPSetLights3(lites) \
-	gsSPNumLights(NUMLIGHTS_3), \
+#define gsSPSetLights3(lites)    \
+	gsSPNumLights(NUMLIGHTS_3),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).l[2], 3), \
 	gsSPLight(&(lites).a, 4)
 
-#define gsSPSetLights4(lites) \
-	gsSPNumLights(NUMLIGHTS_4), \
+#define gsSPSetLights4(lites)    \
+	gsSPNumLights(NUMLIGHTS_4),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).l[2], 3), \
 	gsSPLight(&(lites).l[3], 4), \
 	gsSPLight(&(lites).a, 5)
 
-#define gsSPSetLights5(lites) \
-	gsSPNumLights(NUMLIGHTS_5), \
+#define gsSPSetLights5(lites)    \
+	gsSPNumLights(NUMLIGHTS_5),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).l[2], 3), \
@@ -2890,8 +2895,8 @@ instructions, using the SGI gbi.h names. */
 	gsSPLight(&(lites).l[4], 5), \
 	gsSPLight(&(lites).a, 6)
 
-#define gsSPSetLights6(lites) \
-	gsSPNumLights(NUMLIGHTS_6), \
+#define gsSPSetLights6(lites)    \
+	gsSPNumLights(NUMLIGHTS_6),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).l[2], 3), \
@@ -2900,8 +2905,8 @@ instructions, using the SGI gbi.h names. */
 	gsSPLight(&(lites).l[5], 6), \
 	gsSPLight(&(lites).a, 7)
 
-#define gsSPSetLights7(lites) \
-	gsSPNumLights(NUMLIGHTS_7), \
+#define gsSPSetLights7(lites)    \
+	gsSPNumLights(NUMLIGHTS_7),  \
 	gsSPLight(&(lites).l[0], 1), \
 	gsSPLight(&(lites).l[1], 2), \
 	gsSPLight(&(lites).l[2], 3), \
@@ -2917,35 +2922,35 @@ instructions, using the SGI gbi.h names. */
 #define gsSPNumLights(n) \
 	gsMoveWd(G_MW_NUMLIGHT, G_MWO_NUMLIGHT, NUML(n))
 
-#define gsSPLightColor(Lightnum, packedcolor) \
+#define gsSPLightColor(Lightnum, packedcolor)                  \
 	gsMoveWd(G_MW_LIGHTCOL, G_MWO_a ## Lightnum, packedcolor), \
 	gsMoveWd(G_MW_LIGHTCOL, G_MWO_b ## Lightnum, packedcolor)
 
 #define gsSPTextureRectangle(ulx, uly, lrx, lry, tile, s, t, dsdx, dtdy) \
-	gsTexRect(ulx, uly, lrx, lry, tile), \
-	gsDPHalf1(gF_(s, 16, 16) | gF_(t, 16, 0)), \
+	gsTexRect(ulx, uly, lrx, lry, tile),                                 \
+	gsDPHalf1(gF_(s, 16, 16) | gF_(t, 16, 0)),                           \
 	gsDPHalf2(gF_(dsdx, 16, 16) | gF_(dtdy, 16, 0))
 
 #define gsSPScisTextureRectangle(ulx, uly, lrx, lry, tile, s, t, dsdx, dtdy) \
-	gsTexRect(gScC_(ulx), gScC_(uly), gScC_(lrx), gScC_(lry), tile), \
-	gsDPHalf1( \
-		gF_(gScD_(s, ulx, dsdx), 16, 16) | \
-		gF_(gScD_(t, uly, dtdy), 16, 0) \
-	), \
+	gsTexRect(gScC_(ulx), gScC_(uly), gScC_(lrx), gScC_(lry), tile),         \
+	gsDPHalf1(                                                               \
+		gF_(gScD_(s, ulx, dsdx), 16, 16) |                                   \
+		gF_(gScD_(t, uly, dtdy), 16, 0)                                      \
+	),                                                                       \
 	gsDPHalf2(gF_(dsdx, 16, 16) | gF_(dtdy, 16, 0))
 
 #define gsSPTextureRectangleFlip(ulx, uly, lrx, lry, tile, s, t, dsdx, dtdy) \
-	gsTexRectFlip(ulx, uly, lrx, lry, tile), \
-	gsDPHalf1(gF_(s, 16, 16) | gF_(t, 16, 0)), \
+	gsTexRectFlip(ulx, uly, lrx, lry, tile),                                 \
+	gsDPHalf1(gF_(s, 16, 16) | gF_(t, 16, 0)),                               \
 	gsDPHalf2(gF_(dsdx, 16, 16) | gF_(dtdy, 16, 0))
 
-#define gsSPScisTextureRectangleFlip( \
-		ulx, uly, lrx, lry, tile, s, t, dsdx, dtdy) \
+#define gsSPScisTextureRectangleFlip(                                    \
+		ulx, uly, lrx, lry, tile, s, t, dsdx, dtdy)                      \
 	gsTexRectFlip(gScC_(ulx), gScC_(uly), gScC_(lrx), gScC_(lry), tile), \
-	gsDPHalf1( \
-		gF_(gScD_(s, ulx, dsdx), 16, 16) | \
-		gF_(gScD_(t, uly, dtdy), 16, 0) \
-	), \
+	gsDPHalf1(                                                           \
+		gF_(gScD_(s, ulx, dsdx), 16, 16) |                               \
+		gF_(gScD_(t, uly, dtdy), 16, 0)                                  \
+	),                                                                   \
 	gsDPHalf2(gF_(dsdx, 16, 16) | gF_(dtdy, 16, 0))
 
 #define gsSPBgRectCopy(bg) \
@@ -2963,19 +2968,19 @@ instructions, using the SGI gbi.h names. */
 #define gsSPObjSprite(sp) \
 	gO_(G_OBJ_SPRITE, 0, sp)
 
-#define gsSPObjMatrix(mtx) \
-	gO_( \
-		G_OBJ_MOVEMEM, \
+#define gsSPObjMatrix(mtx)               \
+	gO_(                                 \
+		G_OBJ_MOVEMEM,                   \
 		gF_(sizeof(uObjMtx) - 1, 8, 16), \
-		mtx \
+		mtx                              \
 	)
 
-#define gsSPObjSubMatrix(mtx) \
-	gO_( \
-		G_OBJ_MOVEMEM, \
+#define gsSPObjSubMatrix(mtx)                \
+	gO_(                                     \
+		G_OBJ_MOVEMEM,                       \
 		gF_(sizeof(uObjSubMtx) - 1, 8, 16) | \
-		gF_(2, 16, 0), \
-		mtx \
+		gF_(2, 16, 0),                       \
+		mtx                                  \
 	)
 
 #define gsSPObjRenderMode(mode) \
@@ -2994,69 +2999,69 @@ instructions, using the SGI gbi.h names. */
 	gO_(G_OBJ_LDTX_SPRITE, 47, txsp)
 
 #define gsSPSelectDL(ldl, sid, flag, mask) \
-	gO_( \
-		G_RDPHALF_0, \
-		gF_(sid, 8, 16) | \
-		gF_(ldl, 16, 0), \
-		flag \
-	), \
-	gO_( \
-		G_SELECT_DL, \
-		gF_(0x00, 8, 16) | \
-		gF_(gI_(ldl) >> 16, 16, 0), \
-		mask \
+	gO_(                                   \
+		G_RDPHALF_0,                       \
+		gF_(sid, 8, 16) |                  \
+		gF_(ldl, 16, 0),                   \
+		flag                               \
+	),                                     \
+	gO_(                                   \
+		G_SELECT_DL,                       \
+		gF_(0x00, 8, 16) |                 \
+		gF_(gI_(ldl) >> 16, 16, 0),        \
+		mask                               \
 	)
 
 #define gsSPSelectBranchDL(bdl, sid, flag, mask) \
-	gO_( \
-		G_RDPHALF_0, \
-		gF_(sid, 8, 16) | \
-		gF_(bdl, 16, 0), \
-		flag \
-	), \
-	gO_( \
-		G_SELECT_DL, \
-		gF_(0x01, 8, 16) | \
-		gF_(gI_(bdl) >> 16, 16, 0), \
-		mask \
+	gO_(                                         \
+		G_RDPHALF_0,                             \
+		gF_(sid, 8, 16) |                        \
+		gF_(bdl, 16, 0),                         \
+		flag                                     \
+	),                                           \
+	gO_(                                         \
+		G_SELECT_DL,                             \
+		gF_(0x01, 8, 16) |                       \
+		gF_(gI_(bdl) >> 16, 16, 0),              \
+		mask                                     \
 	)
 
 /* unlisted instructions */
 
 #define gsDPLoadTLUTCmd(tile, count) \
-	gO_( \
-		G_LOADTLUT, \
-		0, \
-		gF_(tile, 3, 24) | \
-		gF_(count, 10, 14) \
+	gO_(                             \
+		G_LOADTLUT,                  \
+		0,                           \
+		gF_(tile, 3, 24) |           \
+		gF_(count, 10, 14)           \
 	)
 
-#define gsDPLoadTLUT(count, tmem, dram) \
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, dram), \
-	gsDPTileSync(), \
+#define gsDPLoadTLUT(count, tmem, dram)                             \
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, dram),      \
+	gsDPTileSync(),                                                 \
 	gsDPSetTile(0, 0, 0, tmem, G_TX_LOADTILE, 0, 0, 0, 0, 0, 0, 0), \
-	gsDPLoadSync(), \
-	gsDPLoadTLUTCmd(G_TX_LOADTILE, (count) - 1), \
+	gsDPLoadSync(),                                                 \
+	gsDPLoadTLUTCmd(G_TX_LOADTILE, (count) - 1),                    \
 	gsDPPipeSync()
 
 #define gsDisplayList(dl, branch) \
 	gO_(G_DL, gF_(branch, 8, 16), dl)
 
 #define gsDPLoadTile(tile, uls, ult, lrs, lrt) \
-	gO_( \
-		G_LOADTILE, \
-		gF_(uls, 12, 12) | \
-		gF_(ult, 12, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(lrs, 12, 12) | \
-		gF_(lrt, 12, 0) \
+	gO_(                                       \
+		G_LOADTILE,                            \
+		gF_(uls, 12, 12) |                     \
+		gF_(ult, 12, 0),                       \
+		gF_(tile, 3, 24) |                     \
+		gF_(lrs, 12, 12) |                     \
+		gF_(lrt, 12, 0)                        \
 	)
 
-#define gsDPSetCombine(c) \
-	gO_( \
-		G_SETCOMBINE, \
+#define gsDPSetCombine(c)            \
+	gO_(                             \
+		G_SETCOMBINE,                \
 		(gL_(c) >> 32) & 0xFFFFFFFF, \
-		(gL_(c) >> 0) & 0xFFFFFFFF \
+		(gL_(c) >> 0) & 0xFFFFFFFF   \
 	)
 
 #define gsSPSetOtherModeLo(shift, length, data) \
@@ -3069,23 +3074,23 @@ instructions, using the SGI gbi.h names. */
 	gO_(G_RDPSETOTHERMODE, gF_(mode0, 24, 0), mode1)
 
 #define gsTexRect(ulx, uly, lrx, lry, tile) \
-	gO_( \
-		G_TEXRECT, \
-		gF_(lrx, 12, 12) | \
-		gF_(lry, 12, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(ulx, 12, 12) | \
-		gF_(uly, 12, 0) \
+	gO_(                                    \
+		G_TEXRECT,                          \
+		gF_(lrx, 12, 12) |                  \
+		gF_(lry, 12, 0),                    \
+		gF_(tile, 3, 24) |                  \
+		gF_(ulx, 12, 12) |                  \
+		gF_(uly, 12, 0)                     \
 	)
 
 #define gsTexRectFlip(ulx, uly, lrx, lry, tile) \
-	gO_( \
-		G_TEXRECTFLIP, \
-		gF_(lrx, 12, 12) | \
-		gF_(lry, 12, 0), \
-		gF_(tile, 3, 24) | \
-		gF_(ulx, 12, 12) | \
-		gF_(uly, 12, 0) \
+	gO_(                                        \
+		G_TEXRECTFLIP,                          \
+		gF_(lrx, 12, 12) |                      \
+		gF_(lry, 12, 0),                        \
+		gF_(tile, 3, 24) |                      \
+		gF_(ulx, 12, 12) |                      \
+		gF_(uly, 12, 0)                         \
 	)
 
 #define gsSPNoOp() \
@@ -3098,466 +3103,466 @@ instructions, using the SGI gbi.h names. */
 	gO_(G_RDPHALF_2, 0, wordlo)
 
 #define gsDPWord(wordhi, wordlo) \
-	gsDPHalf1(wordhi), \
+	gsDPHalf1(wordhi),           \
 	gsDPHalf2(wordlo)
 
 /* instruction macros for fast3d */
 
 #if defined(F3D_GBI)
-	
- # define gsSP1Triangle(v0, v1, v2, flag) \
-	gO_( \
-		G_TRI1, \
-		0, \
-		gF_(flag, 8, 24) | \
-		gF_(gI_(v0) * 10, 8, 16) | \
-		gF_(gI_(v1) * 10, 8, 8) | \
-		gF_(gI_(v2) * 10, 8, 0) \
-	)
-	
- # define gsSPCullDisplayList(v0, vn) \
-	gO_( \
-		G_CULLDL, \
-		(gI_(v0) & 0xF) * 40, \
-		gI_((vn) + 1) & 0xF \
-	) * 40)
-	
- # define gsSPLineW3D(v0, v1, wd, flag) \
-	gO_( \
-		G_LINE3D, \
-		0, \
-		gF_(flag, 8, 24) | \
-		gF_(gI_(v0) * 10, 8, 16) | \
-		gF_(gI_(v1) * 10, 8, 8) | \
-		gF_(wd, 8, 0) \
-	)
-	
- # define gsSPVertex(v, n, v0) \
-	gO_( \
-		G_VTX, \
-		gF_((n) - 1, 4, 20) | \
-		gF_(v0, 4, 16) | \
-		gF_(sizeof(Vtx) * (n), 16, 0), \
-		v \
-	)
-	
+    
+	#define gsSP1Triangle(v0, v1, v2, flag) \
+		gO_(                                \
+			G_TRI1,                         \
+			0,                              \
+			gF_(flag, 8, 24) |              \
+			gF_(gI_(v0) * 10, 8, 16) |      \
+			gF_(gI_(v1) * 10, 8, 8) |       \
+			gF_(gI_(v2) * 10, 8, 0)         \
+		)
+    
+	#define gsSPCullDisplayList(v0, vn) \
+		gO_(                            \
+			G_CULLDL,                   \
+			(gI_(v0) & 0xF) * 40,       \
+			gI_((vn) + 1) & 0xF         \
+		) * 40)
+    
+	#define gsSPLineW3D(v0, v1, wd, flag) \
+		gO_(                              \
+			G_LINE3D,                     \
+			0,                            \
+			gF_(flag, 8, 24) |            \
+			gF_(gI_(v0) * 10, 8, 16) |    \
+			gF_(gI_(v1) * 10, 8, 8) |     \
+			gF_(wd, 8, 0)                 \
+		)
+    
+	#define gsSPVertex(v, n, v0)           \
+		gO_(                               \
+			G_VTX,                         \
+			gF_((n) - 1, 4, 20) |          \
+			gF_(v0, 4, 16) |               \
+			gF_(sizeof(Vtx) * (n), 16, 0), \
+			v                              \
+		)
+    
 #endif
 
 /* instruction macros for fast3d and beta f3dex */
 #if defined(F3D_GBI) || (defined(F3D_BETA) && defined(F3DEX_GBI))
-	
- # define gsSPModifyVertex(vtx, where, val) \
-	gsMoveWd(G_MW_POINTS, (vtx) * 40 + (where), val)
-	
+    
+	#define gsSPModifyVertex(vtx, where, val) \
+		gsMoveWd(G_MW_POINTS, (vtx) * 40 + (where), val)
+    
 #endif
 
 /* instruction macros for fast3d and f3dex */
 
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
-	
- # define gsSPForceMatrix(mptr) \
-	gsMoveMem(16, G_MV_MATRIX_1, (char*)(mptr)), \
-	gsMoveMem(16, G_MV_MATRIX_2, (char*)(mptr) + 16), \
-	gsMoveMem(16, G_MV_MATRIX_3, (char*)(mptr) + 32), \
-	gsMoveMem(16, G_MV_MATRIX_4, (char*)(mptr) + 48)
-	
- # define gsSPSetGeometryMode(mode) \
-	gO_(G_SETGEOMETRYMODE, 0, gI_(mode))
-	
- # define gsSPClearGeometryMode(mode) \
-	gO_(G_CLEARGEOMETRYMODE, 0, gI_(mode))
-	
- # define gsSPLoadGeometryMode(mode) \
-	gsSPClearGeometryMode(~gI_(0)), \
-	gsSPSetGeometryMode(mode)
-	
- # define gsSPInsertMatrix(where, num) \
-	gsMoveWd(G_MW_MATRIX, where, num)
-	
- # define gsSPLookAtX(l) \
-	gsMoveMem(sizeof(Light), G_MV_LOOKATX, l)
-	
- # define gsSPLookAtY(l) \
-	gsMoveMem(sizeof(Light), G_MV_LOOKATY, l)
-	
- # define gsSPMatrix(matrix, param) \
-	gO_( \
-		G_MTX, \
-		gF_(param, 8, 16) | \
-		gF_(sizeof(Mtx), 16, 0), \
-		matrix \
-	)
-	
- # define gsSPPopMatrix(param) \
-	gO_(G_POPMTX, 0, param)
-	
- # define gsSPLight(l, n) \
-	gsMoveMem(sizeof(Light), G_MV_L0 + ((n) - 1) * 2, l)
-	
- # define gsSPTexture(sc, tc, level, tile, on) \
-	gO_( \
-		G_TEXTURE, \
-		gF_(level, 3, 11) | \
-		gF_(tile, 3, 8) | \
-		gF_(on, 8, 0), \
-		gF_(sc, 16, 16) | \
-		gF_(tc, 16, 0) \
-	)
-	
- # define gsSPViewport(v) \
-	gsMoveMem(sizeof(Vp), G_MV_VIEWPORT, v)
-	
- # define gsSPSetOtherMode(opc, shift, length, data) \
-	gO_( \
-		opc, \
-		gF_(shift, 8, 8) | \
-		gF_(length, 8, 0), \
-		data \
-	)
-	
- # define gsMoveWd(index, offset, data) \
-	gO_( \
-		G_MOVEWORD, \
-		gF_(offset, 16, 8) | \
-		gF_(index, 8, 0), \
-		data \
-	)
-	
- # define gsMoveMem(size, index, address) \
-	gO_( \
-		G_MOVEMEM, \
-		gF_(index, 8, 16) | \
-		gF_(size, 16, 0), \
-		address \
-	)
-	
+    
+	#define gsSPForceMatrix(mptr)                         \
+		gsMoveMem(16, G_MV_MATRIX_1, (char*)(mptr)),      \
+		gsMoveMem(16, G_MV_MATRIX_2, (char*)(mptr) + 16), \
+		gsMoveMem(16, G_MV_MATRIX_3, (char*)(mptr) + 32), \
+		gsMoveMem(16, G_MV_MATRIX_4, (char*)(mptr) + 48)
+    
+	#define gsSPSetGeometryMode(mode) \
+		gO_(G_SETGEOMETRYMODE, 0, gI_(mode))
+    
+	#define gsSPClearGeometryMode(mode) \
+		gO_(G_CLEARGEOMETRYMODE, 0, gI_(mode))
+    
+	#define gsSPLoadGeometryMode(mode)  \
+		gsSPClearGeometryMode(~gI_(0)), \
+		gsSPSetGeometryMode(mode)
+    
+	#define gsSPInsertMatrix(where, num) \
+		gsMoveWd(G_MW_MATRIX, where, num)
+    
+	#define gsSPLookAtX(l) \
+		gsMoveMem(sizeof(Light), G_MV_LOOKATX, l)
+    
+	#define gsSPLookAtY(l) \
+		gsMoveMem(sizeof(Light), G_MV_LOOKATY, l)
+    
+	#define gsSPMatrix(matrix, param) \
+		gO_(                          \
+			G_MTX,                    \
+			gF_(param, 8, 16) |       \
+			gF_(sizeof(Mtx), 16, 0),  \
+			matrix                    \
+		)
+    
+	#define gsSPPopMatrix(param) \
+		gO_(G_POPMTX, 0, param)
+    
+	#define gsSPLight(l, n) \
+		gsMoveMem(sizeof(Light), G_MV_L0 + ((n) - 1) * 2, l)
+    
+	#define gsSPTexture(sc, tc, level, tile, on) \
+		gO_(                                     \
+			G_TEXTURE,                           \
+			gF_(level, 3, 11) |                  \
+			gF_(tile, 3, 8) |                    \
+			gF_(on, 8, 0),                       \
+			gF_(sc, 16, 16) |                    \
+			gF_(tc, 16, 0)                       \
+		)
+    
+	#define gsSPViewport(v) \
+		gsMoveMem(sizeof(Vp), G_MV_VIEWPORT, v)
+    
+	#define gsSPSetOtherMode(opc, shift, length, data) \
+		gO_(                                           \
+			opc,                                       \
+			gF_(shift, 8, 8) |                         \
+			gF_(length, 8, 0),                         \
+			data                                       \
+		)
+    
+	#define gsMoveWd(index, offset, data) \
+		gO_(                              \
+			G_MOVEWORD,                   \
+			gF_(offset, 16, 8) |          \
+			gF_(index, 8, 0),             \
+			data                          \
+		)
+    
+	#define gsMoveMem(size, index, address) \
+		gO_(                                \
+			G_MOVEMEM,                      \
+			gF_(index, 8, 16) |             \
+			gF_(size, 16, 0),               \
+			address                         \
+		)
+    
 #endif
 
 /* instruction macros for f3dex */
 
 #if defined(F3DEX_GBI)
-	
- # define gsSP1Triangle(v0, v1, v2, flag) \
-	gO_( \
-		G_TRI1, \
-		0, \
-		gF_(gV3_(v0, v1, v2, flag) * 2, 8, 16) | \
-		gF_(gV3_(v1, v2, v0, flag) * 2, 8, 8) | \
-		gF_(gV3_(v2, v0, v1, flag) * 2, 8, 0) \
-	)
-	
- # define gsSP1Quadrangle(v0, v1, v2, v3, flag) \
-	gO_( \
-		G_TRI2, \
-		gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
-		gF_(gV4_(v1, v2, v3, v0, flag) * 2, 8, 8) | \
-		gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 0), \
-		gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
-		gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 8) | \
-		gF_(gV4_(v3, v0, v1, v2, flag) * 2, 8, 0) \
-	)
-	
- # define gsSPLineW3D(v0, v1, wd, flag) \
-	gO_( \
-		G_LINE3D, \
-		0, \
-		gF_(gV2_(v0, v1, flag) * 2, 8, 16) | \
-		gF_(gV2_(v1, v0, flag) * 2, 8, 8) | \
-		gF_(wd, 8, 0) \
-	)
-	
- # define gsSPVertex(v, n, v0) \
-	gO_( \
-		G_VTX, \
-		gF_((v0) * 2, 8, 16) | \
-		gF_(n, 6, 10) | \
-		gF_(sizeof(Vtx) * (n) - 1, 10, 0), \
-		v \
-	)
-	
+    
+	#define gsSP1Triangle(v0, v1, v2, flag)          \
+		gO_(                                         \
+			G_TRI1,                                  \
+			0,                                       \
+			gF_(gV3_(v0, v1, v2, flag) * 2, 8, 16) | \
+			gF_(gV3_(v1, v2, v0, flag) * 2, 8, 8) |  \
+			gF_(gV3_(v2, v0, v1, flag) * 2, 8, 0)    \
+		)
+    
+	#define gsSP1Quadrangle(v0, v1, v2, v3, flag)        \
+		gO_(                                             \
+			G_TRI2,                                      \
+			gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
+			gF_(gV4_(v1, v2, v3, v0, flag) * 2, 8, 8) |  \
+			gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 0),   \
+			gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
+			gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 8) |  \
+			gF_(gV4_(v3, v0, v1, v2, flag) * 2, 8, 0)    \
+		)
+    
+	#define gsSPLineW3D(v0, v1, wd, flag)        \
+		gO_(                                     \
+			G_LINE3D,                            \
+			0,                                   \
+			gF_(gV2_(v0, v1, flag) * 2, 8, 16) | \
+			gF_(gV2_(v1, v0, flag) * 2, 8, 8) |  \
+			gF_(wd, 8, 0)                        \
+		)
+    
+	#define gsSPVertex(v, n, v0)               \
+		gO_(                                   \
+			G_VTX,                             \
+			gF_((v0) * 2, 8, 16) |             \
+			gF_(n, 6, 10) |                    \
+			gF_(sizeof(Vtx) * (n) - 1, 10, 0), \
+			v                                  \
+		)
+    
 #endif
 
 /* instruction macros for f3dex and f3dex2 */
 
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
-	
- # define gsSP2Triangles(v00, v01, v02, flag0, v10, v11, v12, flag1) \
-	gO_( \
-		G_TRI2, \
-		gF_(gV3_(v00, v01, v02, flag0) * 2, 8, 16) | \
-		gF_(gV3_(v01, v02, v00, flag0) * 2, 8, 8) | \
-		gF_(gV3_(v02, v00, v01, flag0) * 2, 8, 0), \
-		gF_(gV3_(v10, v11, v12, flag1) * 2, 8, 16) | \
-		gF_(gV3_(v11, v12, v10, flag1) * 2, 8, 8) | \
-		gF_(gV3_(v12, v10, v11, flag1) * 2, 8, 0) \
-	)
-	
- # define gsSPBranchLessZ(branchdl, vtx, zval, near, far, flag) \
-	gsSPBranchLessZrg(branchdl, vtx, zval, near, far, flag, 0, G_MAXZ)
-	
- # define gsSPBranchLessZrg(branchdl, vtx, zval, near, far, flag, zmin, zmax) \
-	gsSPBranchLessZraw( \
-		branchdl, \
-		vtx, \
-		G_DEPTOZSrg(zval, near, far, flag, zmin, zmax) \
-	)
-	
- # define gsSPBranchLessZraw(branchdl, vtx, zval) \
-	gsDPHalf1(branchdl), \
-	gsBranchZ(vtx, zval)
-	
- # define gsSPCullDisplayList(v0, vn) \
-	gO_( \
-		G_CULLDL, \
-		gF_((v0) * 2, 16, 0), \
-		gF_((vn) * 2, 16, 0) \
-	)
-	
- # define gsSPLoadUcode(uc_start, uc_dstart) \
-	gsSPLoadUcodeEx(uc_start, uc_dstart, 0x800)
-	
- # define gsSPLoadUcodeL(ucode) \
-	gsSPLoadUcode( \
-		gI_(&ucode ## TextStart) & 0x1FFFFFFF, \
-		gI_(&ucode ## DataStart) & 0x1FFFFFFF \
-	)
-	
- # if !(defined(F3D_BETA) && defined(F3DEX_GBI))
-  #  define gsSPModifyVertex(vtx, where, val) \
-	gO_( \
-		G_MODIFYVTX, \
-		gF_(where, 8, 16) | \
-		gF_((vtx) * 2, 16, 0), \
-		val \
-	)
- # endif
-	
- # define gsBranchZ(vtx, zval) \
-	gO_( \
-		G_BRANCH_Z, \
-		gF_((vtx) * 5, 12, 12) | \
-		gF_((vtx) * 2, 12, 0), \
-		zval \
-	)
-	
- # define gsLoadUcode(uc_start, uc_dsize) \
-	gO_( \
-		G_LOAD_UCODE, \
-		gF_((uc_dsize) - 1, 16, 0), \
-		uc_start \
-	)
-	
- # define gsSPLoadUcodeEx(uc_start, uc_dstart, uc_dsize) \
-	gsDPHalf1(uc_dstart), \
-	gsLoadUcode(uc_start, uc_dsize)
-	
+    
+	#define gsSP2Triangles(v00, v01, v02, flag0, v10, v11, v12, flag1) \
+		gO_(                                                           \
+			G_TRI2,                                                    \
+			gF_(gV3_(v00, v01, v02, flag0) * 2, 8, 16) |               \
+			gF_(gV3_(v01, v02, v00, flag0) * 2, 8, 8) |                \
+			gF_(gV3_(v02, v00, v01, flag0) * 2, 8, 0),                 \
+			gF_(gV3_(v10, v11, v12, flag1) * 2, 8, 16) |               \
+			gF_(gV3_(v11, v12, v10, flag1) * 2, 8, 8) |                \
+			gF_(gV3_(v12, v10, v11, flag1) * 2, 8, 0)                  \
+		)
+    
+	#define gsSPBranchLessZ(branchdl, vtx, zval, near, far, flag) \
+		gsSPBranchLessZrg(branchdl, vtx, zval, near, far, flag, 0, G_MAXZ)
+    
+	#define gsSPBranchLessZrg(branchdl, vtx, zval, near, far, flag, zmin, zmax) \
+		gsSPBranchLessZraw(                                                     \
+			branchdl,                                                           \
+			vtx,                                                                \
+			G_DEPTOZSrg(zval, near, far, flag, zmin, zmax)                      \
+		)
+    
+	#define gsSPBranchLessZraw(branchdl, vtx, zval) \
+		gsDPHalf1(branchdl),                        \
+		gsBranchZ(vtx, zval)
+    
+	#define gsSPCullDisplayList(v0, vn) \
+		gO_(                            \
+			G_CULLDL,                   \
+			gF_((v0) * 2, 16, 0),       \
+			gF_((vn) * 2, 16, 0)        \
+		)
+    
+	#define gsSPLoadUcode(uc_start, uc_dstart) \
+		gsSPLoadUcodeEx(uc_start, uc_dstart, 0x800)
+    
+	#define gsSPLoadUcodeL(ucode)                  \
+		gsSPLoadUcode(                             \
+			gI_(&ucode ## TextStart) & 0x1FFFFFFF, \
+			gI_(&ucode ## DataStart) & 0x1FFFFFFF  \
+		)
+    
+  #if !(defined(F3D_BETA) && defined(F3DEX_GBI))
+		#define gsSPModifyVertex(vtx, where, val) \
+			gO_(                                  \
+				G_MODIFYVTX,                      \
+				gF_(where, 8, 16) |               \
+				gF_((vtx) * 2, 16, 0),            \
+				val                               \
+			)
+  #endif
+    
+	#define gsBranchZ(vtx, zval)     \
+		gO_(                         \
+			G_BRANCH_Z,              \
+			gF_((vtx) * 5, 12, 12) | \
+			gF_((vtx) * 2, 12, 0),   \
+			zval                     \
+		)
+    
+	#define gsLoadUcode(uc_start, uc_dsize) \
+		gO_(                                \
+			G_LOAD_UCODE,                   \
+			gF_((uc_dsize) - 1, 16, 0),     \
+			uc_start                        \
+		)
+    
+	#define gsSPLoadUcodeEx(uc_start, uc_dstart, uc_dsize) \
+		gsDPHalf1(uc_dstart),                              \
+		gsLoadUcode(uc_start, uc_dsize)
+    
 #endif
 
 /* instruction macros for f3dex2 */
 
 #if defined(F3DEX_GBI_2)
-	
- # define gsSP1Triangle(v0, v1, v2, flag) \
-	gO_( \
-		G_TRI1, \
-		gF_(gV3_(v0, v1, v2, flag) * 2, 8, 16) | \
-		gF_(gV3_(v1, v2, v0, flag) * 2, 8, 8) | \
-		gF_(gV3_(v2, v0, v1, flag) * 2, 8, 0), \
-		0 \
-	)
-	
- # define gsSP1Quadrangle(v0, v1, v2, v3, flag) \
-	gO_( \
-		G_QUAD, \
-		gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
-		gF_(gV4_(v1, v2, v3, v0, flag) * 2, 8, 8) | \
-		gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 0), \
-		gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
-		gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 8) | \
-		gF_(gV4_(v3, v0, v1, v2, flag) * 2, 8, 0) \
-	)
-	
- # define gsSPForceMatrix(mptr) \
-	gsMoveMem(sizeof(Mtx), G_MV_MATRIX, 0, mptr), \
-	gsMoveWd(G_MW_FORCEMTX, 0, 0x10000)
-	
- # define gsSPSetGeometryMode(mode) \
-	gsSPGeometryMode(0, mode)
-	
- # define gsSPClearGeometryMode(mode) \
-	gsSPGeometryMode(mode, 0)
-	
- # define gsSPLoadGeometryMode(mode) \
-	gsSPGeometryMode(~gI_(0), mode)
-	
- # define gsSPLineW3D(v0, v1, wd, flag) \
-	gO_( \
-		G_LINE3D, \
-		gF_(gV2_(v0, v1, flag) * 2, 8, 16) | \
-		gF_(gV2_(v1, v0, flag) * 2, 8, 8) | \
-		gF_(wd, 8, 0), \
-		0 \
-	)
-	
- # define gsSPLookAtX(l) \
-	gsMoveMem(sizeof(Light), G_MV_LIGHT, G_MVO_LOOKATX, l)
-	
- # define gsSPLookAtY(l) \
-	gsMoveMem(sizeof(Light), G_MV_LIGHT, G_MVO_LOOKATY, l)
-	
- # define gsSPMatrix(matrix, param) \
-	gO_( \
-		G_MTX, \
-		gF_((sizeof(Mtx) - 1) / 8, 5, 19) | \
-		gF_(gI_(param) ^ G_MTX_PUSH, 8, 0), \
-		matrix \
-	)
-	
- # define gsSPPopMatrix(param) \
-	gsSPPopMatrixN(param, 1)
-	
- # define gsSPPopMatrixN(param, n) \
-	gO_( \
-		G_POPMTX, \
-		gF_((sizeof(Mtx) - 1) / 8, 5, 19) | \
-		gF_(2, 8, 0), \
-		sizeof(Mtx) * (n) \
-	)
-	
- # define gsSPLight(l, n) \
-	gsMoveMem(sizeof(Light), G_MV_LIGHT, ((n) + 1) * 0x18, l)
-	
- # define gsSPTexture(sc, tc, level, tile, on) \
-	gO_( \
-		G_TEXTURE, \
-		gF_(level, 3, 11) | \
-		gF_(tile, 3, 8) | \
-		gF_(on, 7, 1), \
-		gF_(sc, 16, 16) | \
-		gF_(tc, 16, 0) \
-	)
-	
- # define gsSPVertex(v, n, v0) \
-	gO_( \
-		G_VTX, \
-		gF_(n, 8, 12) | \
-		gF_((v0) + (n), 7, 1), \
-		v \
-	)
-	
- # define gsSPViewport(v) \
-	gsMoveMem(sizeof(Vp), G_MV_VIEWPORT, 0, v)
-	
- # define gsSPGeometryMode(clearbits, setbits) \
-	gO_( \
-		G_GEOMETRYMODE, \
-		gF_(~gI_(clearbits), 24, 0), \
-		setbits \
-	)
-	
- # define gsSPSetOtherMode(opc, shift, length, data) \
-	gO_( \
-		opc, \
-		gF_(32 - (shift) - (length), 8, 8) | \
-		gF_((length) - 1, 8, 0), \
-		data \
-	)
-	
- # define gsMoveWd(index, offset, data) \
-	gO_( \
-		G_MOVEWORD, \
-		gF_(index, 8, 16) | \
-		gF_(offset, 16, 0), \
-		data \
-	)
-	
- # define gsMoveMem(size, index, offset, address) \
-	gO_( \
-		G_MOVEMEM, \
-		gF_((size - 1) / 8, 5, 19) | \
-		gF_((offset) / 8, 8, 8) | \
-		gF_(index, 8, 0), \
-		address \
-	)
-	
- # define gsSPDma_io(flag, dmem, dram, size) \
-	gO_( \
-		G_DMA_IO, \
-		gF_(flag, 1, 23) | \
-		gF_((dmem) / 8, 10, 13) | \
-		gF_((size) - 1, 12, 0), \
-		dram \
-	)
-	
- # define gsSPDmaRead(dmem, dram, size) \
-	gsSPDma_io(0, dmem, dram, size)
-	
- # define gsSPDmaWrite(dmem, dram, size) \
-	gsSPDma_io(1, dmem, dram, size)
-	
- # define gsSpecial3(hi, lo) \
-	gO_(G_SPECIAL_3, hi, lo)
-	
- # define gsSpecial2(hi, lo) \
-	gO_(G_SPECIAL_2, hi, lo)
-	
- # define gsSpecial1(hi, lo) \
-	gO_(G_SPECIAL_1, hi, lo)
-	
+    
+	#define gsSP1Triangle(v0, v1, v2, flag)          \
+		gO_(                                         \
+			G_TRI1,                                  \
+			gF_(gV3_(v0, v1, v2, flag) * 2, 8, 16) | \
+			gF_(gV3_(v1, v2, v0, flag) * 2, 8, 8) |  \
+			gF_(gV3_(v2, v0, v1, flag) * 2, 8, 0),   \
+			0                                        \
+		)
+    
+	#define gsSP1Quadrangle(v0, v1, v2, v3, flag)        \
+		gO_(                                             \
+			G_QUAD,                                      \
+			gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
+			gF_(gV4_(v1, v2, v3, v0, flag) * 2, 8, 8) |  \
+			gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 0),   \
+			gF_(gV4_(v0, v1, v2, v3, flag) * 2, 8, 16) | \
+			gF_(gV4_(v2, v3, v0, v1, flag) * 2, 8, 8) |  \
+			gF_(gV4_(v3, v0, v1, v2, flag) * 2, 8, 0)    \
+		)
+    
+	#define gsSPForceMatrix(mptr)                     \
+		gsMoveMem(sizeof(Mtx), G_MV_MATRIX, 0, mptr), \
+		gsMoveWd(G_MW_FORCEMTX, 0, 0x10000)
+    
+	#define gsSPSetGeometryMode(mode) \
+		gsSPGeometryMode(0, mode)
+    
+	#define gsSPClearGeometryMode(mode) \
+		gsSPGeometryMode(mode, 0)
+    
+	#define gsSPLoadGeometryMode(mode) \
+		gsSPGeometryMode(~gI_(0), mode)
+    
+	#define gsSPLineW3D(v0, v1, wd, flag)        \
+		gO_(                                     \
+			G_LINE3D,                            \
+			gF_(gV2_(v0, v1, flag) * 2, 8, 16) | \
+			gF_(gV2_(v1, v0, flag) * 2, 8, 8) |  \
+			gF_(wd, 8, 0),                       \
+			0                                    \
+		)
+    
+	#define gsSPLookAtX(l) \
+		gsMoveMem(sizeof(Light), G_MV_LIGHT, G_MVO_LOOKATX, l)
+    
+	#define gsSPLookAtY(l) \
+		gsMoveMem(sizeof(Light), G_MV_LIGHT, G_MVO_LOOKATY, l)
+    
+	#define gsSPMatrix(matrix, param)           \
+		gO_(                                    \
+			G_MTX,                              \
+			gF_((sizeof(Mtx) - 1) / 8, 5, 19) | \
+			gF_(gI_(param) ^ G_MTX_PUSH, 8, 0), \
+			matrix                              \
+		)
+    
+	#define gsSPPopMatrix(param) \
+		gsSPPopMatrixN(param, 1)
+    
+	#define gsSPPopMatrixN(param, n)            \
+		gO_(                                    \
+			G_POPMTX,                           \
+			gF_((sizeof(Mtx) - 1) / 8, 5, 19) | \
+			gF_(2, 8, 0),                       \
+			sizeof(Mtx) * (n)                   \
+		)
+    
+	#define gsSPLight(l, n) \
+		gsMoveMem(sizeof(Light), G_MV_LIGHT, ((n) + 1) * 0x18, l)
+    
+	#define gsSPTexture(sc, tc, level, tile, on) \
+		gO_(                                     \
+			G_TEXTURE,                           \
+			gF_(level, 3, 11) |                  \
+			gF_(tile, 3, 8) |                    \
+			gF_(on, 7, 1),                       \
+			gF_(sc, 16, 16) |                    \
+			gF_(tc, 16, 0)                       \
+		)
+    
+	#define gsSPVertex(v, n, v0)   \
+		gO_(                       \
+			G_VTX,                 \
+			gF_(n, 8, 12) |        \
+			gF_((v0) + (n), 7, 1), \
+			v                      \
+		)
+    
+	#define gsSPViewport(v) \
+		gsMoveMem(sizeof(Vp), G_MV_VIEWPORT, 0, v)
+    
+	#define gsSPGeometryMode(clearbits, setbits) \
+		gO_(                                     \
+			G_GEOMETRYMODE,                      \
+			gF_(~gI_(clearbits), 24, 0),         \
+			setbits                              \
+		)
+    
+	#define gsSPSetOtherMode(opc, shift, length, data) \
+		gO_(                                           \
+			opc,                                       \
+			gF_(32 - (shift) - (length), 8, 8) |       \
+			gF_((length) - 1, 8, 0),                   \
+			data                                       \
+		)
+    
+	#define gsMoveWd(index, offset, data) \
+		gO_(                              \
+			G_MOVEWORD,                   \
+			gF_(index, 8, 16) |           \
+			gF_(offset, 16, 0),           \
+			data                          \
+		)
+    
+	#define gsMoveMem(size, index, offset, address) \
+		gO_(                                        \
+			G_MOVEMEM,                              \
+			gF_((size - 1) / 8, 5, 19) |            \
+			gF_((offset) / 8, 8, 8) |               \
+			gF_(index, 8, 0),                       \
+			address                                 \
+		)
+    
+	#define gsSPDma_io(flag, dmem, dram, size) \
+		gO_(                                   \
+			G_DMA_IO,                          \
+			gF_(flag, 1, 23) |                 \
+			gF_((dmem) / 8, 10, 13) |          \
+			gF_((size) - 1, 12, 0),            \
+			dram                               \
+		)
+    
+	#define gsSPDmaRead(dmem, dram, size) \
+		gsSPDma_io(0, dmem, dram, size)
+    
+	#define gsSPDmaWrite(dmem, dram, size) \
+		gsSPDma_io(1, dmem, dram, size)
+    
+	#define gsSpecial3(hi, lo) \
+		gO_(G_SPECIAL_3, hi, lo)
+    
+	#define gsSpecial2(hi, lo) \
+		gO_(G_SPECIAL_2, hi, lo)
+    
+	#define gsSpecial1(hi, lo) \
+		gO_(G_SPECIAL_1, hi, lo)
+    
 #endif
 
 /* instruction macros for beta fast3d and f3dex */
 
 #if defined(F3D_BETA) && (defined(F3D_GBI) || defined(F3DEX_GBI))
-	
- # define gsSPPerspNormalize(scale) \
-	gO_(G_PERSPNORM, 0, scale)
-	
+    
+	#define gsSPPerspNormalize(scale) \
+		gO_(G_PERSPNORM, 0, scale)
+    
 #else
-	
- # define gsSPPerspNormalize(scale) \
-	gsMoveWd(G_MW_PERSPNORM, 0, scale)
-	
+    
+	#define gsSPPerspNormalize(scale) \
+		gsMoveWd(G_MW_PERSPNORM, 0, scale)
+    
 #endif
 
 /* dynamic instruction macros */
 
-#define gDisplayListPut(gdl, ...) \
-	({ \
-		Gfx Gd_[] = { __VA_ARGS__ }; \
-		for(size_t Gi_ = 0; Gi_ < sizeof(Gd_) / sizeof(Gfx); Gi_++) \
-		{ \
-			*(Gfx*)(gdl) = Gd_[Gi_]; \
-		} \
-		(void)0; \
+#define gDisplayListPut(gdl, ...)                                    \
+	({                                                               \
+		Gfx Gd_[] = { __VA_ARGS__ };                                 \
+		for (size_t Gi_ = 0; Gi_ < sizeof(Gd_) / sizeof(Gfx); Gi_++) \
+		{                                                            \
+			*(Gfx*)(gdl) = Gd_[Gi_];                                 \
+		}                                                            \
+		(void)0;                                                     \
 	})
-#define gDisplayListAppend(pgdl, ...) \
-	({ \
-		Gfx Gd_[] = { __VA_ARGS__ }; \
-		for(size_t Gi_ = 0; Gi_ < sizeof(Gd_) / sizeof(Gfx); Gi_++) \
-		{ \
-			*(*(Gfx**)(pgdl))++ = Gd_[Gi_]; \
-		} \
-		(void)0; \
+#define gDisplayListAppend(pgdl, ...)                                \
+	({                                                               \
+		Gfx Gd_[] = { __VA_ARGS__ };                                 \
+		for (size_t Gi_ = 0; Gi_ < sizeof(Gd_) / sizeof(Gfx); Gi_++) \
+		{                                                            \
+			*(*(Gfx**)(pgdl))++ = Gd_[Gi_];                          \
+		}                                                            \
+		(void)0;                                                     \
 	})
-#define gDisplayListData(pgdl, d) \
-	({ \
-		Gfx** Gp_ = (void*)(pgdl); \
-		struct \
-		{ \
-			__typeof__(d) v; \
-		}* Gd_, * Gs_; \
+#define gDisplayListData(pgdl, d)                               \
+	({                                                          \
+		Gfx** Gp_ = (void*)(pgdl);                              \
+		struct                                                  \
+		{                                                       \
+			__typeof__(d) v;                                    \
+		}* Gd_, * Gs_;                                          \
 		*Gp_ -= (sizeof(*Gd_) + sizeof(Gfx) - 1) / sizeof(Gfx); \
-		Gd_ = (void*)*Gp_; \
-		Gs_ = (void*)&(d); \
-		*Gd_ = *Gs_; \
-		&Gd_->v; \
+		Gd_ = (void*)*Gp_;                                      \
+		Gs_ = (void*)&(d);                                      \
+		*Gd_ = *Gs_;                                            \
+		&Gd_->v;                                                \
 	})
-#define gDisplayListAlloc(pgdl, s) \
-	({ \
-		Gfx** Gp_ = (void*)(pgdl); \
+#define gDisplayListAlloc(pgdl, s)                     \
+	({                                                 \
+		Gfx** Gp_ = (void*)(pgdl);                     \
 		*Gp_ -= ((s) + sizeof(Gfx) - 1) / sizeof(Gfx); \
-		(void*)*Gp_; \
+		(void*)*Gp_;                                   \
 	})
 
 #define gDPFillRectangle(gdl, ...) \
@@ -3707,16 +3712,16 @@ instructions, using the SGI gbi.h names. */
 #define gSP1Triangle(gdl, ...) \
 	gD_(gdl, gsSP1Triangle, __VA_ARGS__)
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define gSP2Triangles(gdl, ...) \
-	gD_(gdl, gsSP2Triangles, __VA_ARGS__)
- # define gSP1Quadrangle(gdl, ...) \
-	gD_(gdl, gsSP1Quadrangle, __VA_ARGS__)
- # define gSPBranchLessZ(gdl, ...) \
-	gD_(gdl, gsSPBranchLessZ, __VA_ARGS__)
- # define gSPBranchLessZrg(gdl, ...) \
-	gD_(gdl, gsSPBranchLessZrg, __VA_ARGS__)
- # define gSPBranchLessZraw(gdl, ...) \
-	gD_(gdl, gsSPBranchLessZraw, __VA_ARGS__)
+	#define gSP2Triangles(gdl, ...) \
+		gD_(gdl, gsSP2Triangles, __VA_ARGS__)
+	#define gSP1Quadrangle(gdl, ...) \
+		gD_(gdl, gsSP1Quadrangle, __VA_ARGS__)
+	#define gSPBranchLessZ(gdl, ...) \
+		gD_(gdl, gsSPBranchLessZ, __VA_ARGS__)
+	#define gSPBranchLessZrg(gdl, ...) \
+		gD_(gdl, gsSPBranchLessZrg, __VA_ARGS__)
+	#define gSPBranchLessZraw(gdl, ...) \
+		gD_(gdl, gsSPBranchLessZraw, __VA_ARGS__)
 #endif
 #define gSPBranchList(gdl, ...) \
 	gD_(gdl, gsSPBranchList, __VA_ARGS__)
@@ -3741,8 +3746,8 @@ instructions, using the SGI gbi.h names. */
 #define gSPLoadGeometryMode(gdl, ...) \
 	gD_(gdl, gsSPLoadGeometryMode, __VA_ARGS__)
 #if defined(F3D_GBI) || defined(F3DEX_GBI)
- # define gSPInsertMatrix(gdl, ...) \
-	gD_(gdl, gsSPInsertMatrix, __VA_ARGS__)
+	#define gSPInsertMatrix(gdl, ...) \
+		gD_(gdl, gsSPInsertMatrix, __VA_ARGS__)
 #endif
 #define gSPLine3D(gdl, ...) \
 	gD_(gdl, gsSPLine3D, __VA_ARGS__)
@@ -3767,8 +3772,8 @@ instructions, using the SGI gbi.h names. */
 #define gSPPopMatrix(gdl, ...) \
 	gD_(gdl, gsSPPopMatrix, __VA_ARGS__)
 #if defined(F3DEX_GBI_2)
- # define gSPPopMatrixN(gdl, ...) \
-	gD_(gdl, gsSPPopMatrixN, __VA_ARGS__)
+	#define gSPPopMatrixN(gdl, ...) \
+		gD_(gdl, gsSPPopMatrixN, __VA_ARGS__)
 #endif
 #define gSPSegment(gdl, ...) \
 	gD_(gdl, gsSPSegment, __VA_ARGS__)
@@ -3843,8 +3848,8 @@ instructions, using the SGI gbi.h names. */
 #define gDPLoadTLUT(gdl, ...) \
 	gD_(gdl, gsDPLoadTLUT, __VA_ARGS__)
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define gBranchZ(gdl, ...) \
-	gD_(gdl, gsBranchZ, __VA_ARGS__)
+	#define gBranchZ(gdl, ...) \
+		gD_(gdl, gsBranchZ, __VA_ARGS__)
 #endif
 #define gDisplayList(gdl, ...) \
 	gD_(gdl, gsDisplayList, __VA_ARGS__)
@@ -3857,8 +3862,8 @@ instructions, using the SGI gbi.h names. */
 #define gDPSetCombine(gdl, ...) \
 	gD_(gdl, gsDPSetCombine, __VA_ARGS__)
 #if defined(F3DEX_GBI_2)
- # define gSPGeometryMode(gdl, ...) \
-	gD_(gdl, gsSPGeometryMode, __VA_ARGS__)
+	#define gSPGeometryMode(gdl, ...) \
+		gD_(gdl, gsSPGeometryMode, __VA_ARGS__)
 #endif
 #define gSPSetOtherMode(gdl, ...) \
 	gD_(gdl, gsSPSetOtherMode, __VA_ARGS__)
@@ -3873,18 +3878,18 @@ instructions, using the SGI gbi.h names. */
 #define gMoveMem(gdl, ...) \
 	gD_(gdl, gsMoveMem, __VA_ARGS__)
 #if defined(F3DEX_GBI_2)
- # define gSPDma_io(gdl, ...) \
-	gD_(gdl, gsSPDma_io, __VA_ARGS__)
- # define gSPDmaRead(gdl, ...) \
-	gD_(gdl, gsSPDmaRead, __VA_ARGS__)
- # define gSPDmaWrite(gdl, ...) \
-	gD_(gdl, gsSPDmaWrite, __VA_ARGS__)
+	#define gSPDma_io(gdl, ...) \
+		gD_(gdl, gsSPDma_io, __VA_ARGS__)
+	#define gSPDmaRead(gdl, ...) \
+		gD_(gdl, gsSPDmaRead, __VA_ARGS__)
+	#define gSPDmaWrite(gdl, ...) \
+		gD_(gdl, gsSPDmaWrite, __VA_ARGS__)
 #endif
 #if defined(F3DEX_GBI) || defined(F3DEX_GBI_2)
- # define gLoadUcode(gdl, ...) \
-	gD_(gdl, gsLoadUcode, __VA_ARGS__)
- # define gSPLoadUcodeEx(gdl, ...) \
-	gD_(gdl, gsSPLoadUcodeEx, __VA_ARGS__)
+	#define gLoadUcode(gdl, ...) \
+		gD_(gdl, gsLoadUcode, __VA_ARGS__)
+	#define gSPLoadUcodeEx(gdl, ...) \
+		gD_(gdl, gsSPLoadUcodeEx, __VA_ARGS__)
 #endif
 #define gTexRect(gdl, ...) \
 	gD_(gdl, gsTexRect, __VA_ARGS__)
@@ -3895,16 +3900,16 @@ instructions, using the SGI gbi.h names. */
 #define gDPWord(gdl, ...) \
 	gD_(gdl, gsDPWord, __VA_ARGS__)
 #if defined(F3DEX_GBI_2)
- # define gSpecial3(gdl, ...) \
-	gD_(gdl, gsSpecial3, __VA_ARGS__)
- # define gSpecial2(gdl, ...) \
-	gD_(gdl, gsSpecial2, __VA_ARGS__)
- # define gSpecial1(gdl, ...) \
-	gD_(gdl, gsSpecial1, __VA_ARGS__)
+	#define gSpecial3(gdl, ...) \
+		gD_(gdl, gsSpecial3, __VA_ARGS__)
+	#define gSpecial2(gdl, ...) \
+		gD_(gdl, gsSpecial2, __VA_ARGS__)
+	#define gSpecial1(gdl, ...) \
+		gD_(gdl, gsSpecial1, __VA_ARGS__)
 #endif
 
 /* data types and structures */
-typedef u8 qu08_t;
+typedef u8  qu08_t;
 typedef u16 qu016_t;
 typedef s16 qs48_t;
 typedef s16 qs510_t;
@@ -3920,10 +3925,10 @@ typedef s32 qs1616_t;
 typedef s32 qs205_t;
 
 typedef u16 g_bglt_t;
-typedef u8 g_ifmt_t;
-typedef u8 g_isiz_t;
+typedef u8  g_ifmt_t;
+typedef u8  g_isiz_t;
 typedef u16 g_bgf_t;
-typedef u8 g_objf_t;
+typedef u8  g_objf_t;
 typedef u32 g_objlt_t;
 
 typedef struct {
@@ -3948,14 +3953,14 @@ typedef union {
 
 // typedef union
 // {
-// 	_Alignas(8)
-// 	Mtx_t		m;
-// 	s32		l[16];
-// 	struct
-// 	{
-// 		s16		i[16];
-// 		u16	f[16];
-// 	};
+//      _Alignas(8)
+//      Mtx_t		m;
+//      s32		l[16];
+//      struct
+//      {
+//              s16		i[16];
+//              u16	f[16];
+//      };
 // } Mtx;
 
 typedef struct {
@@ -4101,18 +4106,18 @@ typedef struct {
 	u16  imageH;
 	s16  frameY;
 	u16  frameH;
-	u64*     imagePtr;
-	u16 imageLoad;
-	u8 imageFmt;
-	u8 imageSiz;
-	u16      imagePal;
+	u64* imagePtr;
+	u16  imageLoad;
+	u8   imageFmt;
+	u8   imageSiz;
+	u16  imagePal;
 	u16  imageFlip;
-	u16      tmemW;
+	u16  tmemW;
 	u16  tmemH;
-	u16      tmemLoadSH;
-	u16      tmemLoadTH;
-	u16      tmemSizeW;
-	u16      tmemSize;
+	u16  tmemLoadSH;
+	u16  tmemLoadTH;
+	u16  tmemSizeW;
+	u16  tmemSize;
 } uObjBg_t;
 
 typedef struct {
@@ -4210,86 +4215,86 @@ typedef struct {
 } uObjTxSprite;
 
 /* rectangle scissoring macros */
-#define gScC_(c)          ((c) < 0 ? 0 : (c))
-#define gScD_(t, c, d) \
-	( \
-		(c) < 0 ? \
-		( \
-			(d) < 0 ? \
+#define gScC_(c) ((c) < 0 ? 0 : (c))
+#define gScD_(t, c, d)               \
+	(                                \
+		(c) < 0 ?                    \
+		(                            \
+			(d) < 0 ?                \
 			(t) + (c) * (d) / 0x80 : \
-			(t) - (c) * (d) / 0x80 \
-		) : \
-		(t) \
+			(t) - (c) * (d) / 0x80   \
+		) :                          \
+		(t)                          \
 	)
 
 /* texture loading helper macros */
 #define G_SIZ_LDSIZ(siz)  ((siz) < G_IM_SIZ_16b ? G_IM_SIZ_16b : (siz))
 #define G_SIZ_BITS(siz)   (4 << gI_(siz))
 #define G_SIZ_LDBITS(siz) ((siz) < G_IM_SIZ_16b ? G_SIZ_BITS(siz) : 16)
-#define G_DXT(siz, width) \
-	( \
-		(width) * G_SIZ_BITS(siz) > 64 ? \
+#define G_DXT(siz, width)                                  \
+	(                                                      \
+		(width) * G_SIZ_BITS(siz) > 64 ?                   \
 		((1 << 11) + (width) * G_SIZ_BITS(siz) / 64 - 1) / \
-		((width) * G_SIZ_BITS(siz) / 64) : \
-		(1 << 11) \
+		((width) * G_SIZ_BITS(siz) / 64) :                 \
+		(1 << 11)                                          \
 	)
-#define G_LTB_LRS(width, height, siz) \
-	( \
+#define G_LTB_LRS(width, height, siz)                      \
+	(                                                      \
 		(((width) * (height) + 1) * G_SIZ_BITS(siz) - 1) / \
-		G_SIZ_BITS(G_SIZ_LDSIZ(siz)) - 1 \
+		G_SIZ_BITS(G_SIZ_LDSIZ(siz)) - 1                   \
 	)
-#define G_LDBLK_TXL(txl) \
-	( \
+#define G_LDBLK_TXL(txl)             \
+	(                                \
 		(txl) > G_TX_LDBLK_MAX_TXL ? \
-		G_TX_LDBLK_MAX_TXL : \
-		(txl) \
+		G_TX_LDBLK_MAX_TXL :         \
+		(txl)                        \
 	)
 
 /* depth value macros */
-#define gZp_(zval, near, far) \
-	( \
+#define gZp_(zval, near, far)                   \
+	(                                           \
 		(1.f - (float)(near) / (float)(zval)) / \
-		(1.f - (float)(near) / (float)(far)) \
+		(1.f - (float)(near) / (float)(far))    \
 	)
-#define gZo_(zval, near, far) \
-	( \
+#define gZo_(zval, near, far)             \
+	(                                     \
 		((float)(zval) - (float)(near)) / \
-		((float)(far) - (float)(near)) \
+		((float)(far) - (float)(near))    \
 	)
 #define gZf_(zval, near, far, flag) \
-	qs1616 \
-	( \
-		(flag) == G_BZ_PERSP ? \
-		gZp_(zval, near, far) : \
-		gZo_(zval, near, far) \
+	qs1616                          \
+	(                               \
+		(flag) == G_BZ_PERSP ?      \
+		gZp_(zval, near, far) :     \
+		gZo_(zval, near, far)       \
 	)
 #define G_DEPTOZSrg(zval, near, far, flag, zmin, zmax) \
-	( \
-		gZf_(zval, near, far, flag) * \
-		((s32)((zmax) - (zmin)) & ~(s32)1) + \
-		qs1616(zmin) \
+	(                                                  \
+		gZf_(zval, near, far, flag) *                  \
+		((s32)((zmax) - (zmin)) & ~(s32)1) +           \
+		qs1616(zmin)                                   \
 	)
 #define G_DEPTOZS(zval, near, far, flag) \
 	G_DEPTOZSrg(zval, near, far, flag, 0, G_MAXZ)
 
 /* vertex ordering macros */
-#define gV2_(v0, v1, flag) \
-	( \
+#define gV2_(v0, v1, flag)      \
+	(                           \
 		(flag) == 0 ? gI_(v0) : \
-		gI_(v1) \
+		gI_(v1)                 \
 	)
-#define gV3_(v0, v1, v2, flag) \
-	( \
+#define gV3_(v0, v1, v2, flag)  \
+	(                           \
 		(flag) == 0 ? gI_(v0) : \
 		(flag) == 1 ? gI_(v1) : \
-		gI_(v2) \
+		gI_(v2)                 \
 	)
 #define gV4_(v0, v1, v2, v3, flag) \
-	( \
-		(flag) == 0 ? gI_(v0) : \
-		(flag) == 1 ? gI_(v1) : \
-		(flag) == 2 ? gI_(v2) : \
-		gI_(v3) \
+	(                              \
+		(flag) == 0 ? gI_(v0) :    \
+		(flag) == 1 ? gI_(v1) :    \
+		(flag) == 2 ? gI_(v2) :    \
+		gI_(v3)                    \
 	)
 
 /* sprite texture parameter macros */
@@ -4302,38 +4307,39 @@ typedef struct {
 #define GS_PAL_NUM(num)         ((num) - 1)
 
 /* fixed-point conversion macros */
-#define qu08(n)                 ((qu08_t)((n) * 0x100))
-#define qu016(n)                ((qu016_t)((n) * 0x10000))
-#define qs48(n)                 ((qs48_t)((n) * 0x0100))
-#define qs510(n)                ((qs510_t)((n) * 0x0400))
-#define qu510(n)                ((qu510_t)((n) * 0x0400))
-#define qs102(n)                ((qs102_t)((n) * 0x0004))
-#define qu102(n)                ((qu102_t)((n) * 0x0004))
-#define qs105(n)                ((qs105_t)((n) * 0x0020))
-#define qu105(n)                ((qu105_t)((n) * 0x0020))
-#define qs132(n)                ((qs132_t)((n) * 0x0004))
-#define qs142(n)                ((qs142_t)((n) * 0x0004))
-#define qs1516(n)               ((qs1516_t)((n) * 0x00010000))
-#define qs1616(n)               ((qs1616_t)((n) * 0x00010000))
-#define qs205(n)                ((qs205_t)((n) * 0x00000020))
+#define qu08(n)   ((qu08_t)((n) * 0x100))
+#define qu016(n)  ((qu016_t)((n) * 0x10000))
+#define qs48(n)   ((qs48_t)((n) * 0x0100))
+#define qs510(n)  ((qs510_t)((n) * 0x0400))
+#define qu510(n)  ((qu510_t)((n) * 0x0400))
+#define qs102(n)  ((qs102_t)((n) * 0x0004))
+#define qu102(n)  ((qu102_t)((n) * 0x0004))
+#define qs105(n)  ((qs105_t)((n) * 0x0020))
+#define qu105(n)  ((qu105_t)((n) * 0x0020))
+#define qs132(n)  ((qs132_t)((n) * 0x0004))
+#define qs142(n)  ((qs142_t)((n) * 0x0004))
+#define qs1516(n) ((qs1516_t)((n) * 0x00010000))
+#define qs1616(n) ((qs1616_t)((n) * 0x00010000))
+#define qs205(n)  ((qs205_t)((n) * 0x00000020))
 
 /* private helper macros */
-#define gI_(i)                  ((u32)(i))
-#define gL_(l)                  ((u64)(l))
-#define gF_(i, n, s)            ((gI_(i) & ((gI_(1) << (n)) - 1)) << (s))
-#define gFL_(l, n, s)           ((gL_(l) & ((gL_(1) << (n)) - 1)) << (s))
-#define gO_(opc, hi, lo)        ((Gfx) { gF_(opc, 8, 24) | gI_(hi), gI_(lo) })
-#define gD_(gdl, m, ...)        gDisplayListPut(gdl, m(__VA_ARGS__))
+#define gI_(i)           ((u32)(i))
+#define gL_(l)           ((u64)(l))
+#define gF_(i, n, s)     ((gI_(i) & ((gI_(1) << (n)) - 1)) << (s))
+#define gFL_(l, n, s)    ((gL_(l) & ((gL_(1) << (n)) - 1)) << (s))
+#define gO_(opc, hi, lo) ((Gfx) { gF_(opc, 8, 24) | gI_(hi), gI_(lo) })
+#define gD_(gdl, m, ...) gDisplayListPut(gdl, m(__VA_ARGS__))
 
-#define _DW(macro) do {macro} while (0)
-#define gDma1p(pkt, c, s, l, p)                     \
-_DW({                                   \
-    Gfx *_g = (Gfx *)(pkt);                     \
-                                    \
-    _g->hi = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
-            _SHIFTL((l), 0, 16));               \
-    _g->lo = (unsigned int)(s);               \
-})
+#define _DW(macro) do { macro } while (0)
+#define gDma1p(pkt, c, s, l, p)                               \
+	_DW(                                                      \
+	{                                                         \
+		Gfx* _g = (Gfx*)(pkt);                                \
+		_g->hi = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
+		_SHIFTL((l), 0, 16));                                 \
+		_g->lo = (unsigned int)(s);                           \
+	}                                                         \
+	)
 
 #define gDPNoOpHere(pkt, file, line)        gDma1p(pkt, G_NOOP, file, line, 1)
 #define gDPNoOpString(pkt, data, n)         gDma1p(pkt, G_NOOP, data, n, 2)

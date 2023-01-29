@@ -1,7 +1,7 @@
-#ifndef _ULTRA64_PFS_H_
-#define _ULTRA64_PFS_H_
+#ifndef ULTRA64_PFS_H
+#define ULTRA64_PFS_H
 
-#include "ultra64.h"
+#include "message.h"
 
 /* File System size */
 #define OS_PFS_VERSION      0x0200
@@ -38,7 +38,7 @@
 #define PFS_ERR_NOPACK          1   /* no memory card is plugged or */
 #define PFS_ERR_NEW_PACK        2   /* ram pack has been changed to a  different one */
 #define PFS_ERR_INCONSISTENT    3   /* need to run Pfschecker*/
-#define PFS_ERR_CONTRFAIL       CONT_OVERRUN_ERROR              
+#define PFS_ERR_CONTRFAIL       CONT_OVERRUN_ERROR
 #define PFS_ERR_INVALID         5   /* invalid parameter or file not exist*/
 #define PFS_ERR_BAD_DATA        6   /* the data read from pack are bad*/
 #define PFS_DATA_FULL           7   /* no free pages on ram pack*/
@@ -77,16 +77,16 @@ typedef struct {
     /* 0x2C */ u8 label[32];
     /* 0x4C */ s32 version;
     /* 0x50 */ s32 dir_size;
-    /* 0x54 */ s32 inode_table;         /* block location */
-    /* 0x58 */ s32 minode_table;        /* mirrioring inode_table */
-    /* 0x5C */ s32 dir_table;           /* block location */
-    /* 0x60 */ s32 inodeStartPage;    /* page # */
+    /* 0x54 */ s32 inode_table;     /* block location */
+    /* 0x58 */ s32 minode_table;    /* mirroring inode_table */
+    /* 0x5C */ s32 dir_table;       /* block location */
+    /* 0x60 */ s32 inodeStartPage;  /* page # */
     /* 0x64 */ u8 banks;
     /* 0x65 */ u8 activebank;
 } OSPfs; // size = 0x68
 
 typedef struct {
-    /* 0x00 */ u32 file_size;   /* bytes */
+    /* 0x00 */ u32 file_size;       /* bytes */
     /* 0x04 */ u32 game_code;
     /* 0x08 */ u16 company_code;
     /* 0x0C */ char ext_name[4];

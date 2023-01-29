@@ -1,5 +1,7 @@
-#ifndef _ULTRA64_INTERNAL_H_
-#define _ULTRA64_INTERNAL_H_
+#ifndef ULTRA64_INTERNAL_H
+#define ULTRA64_INTERNAL_H
+
+#include "pi.h"
 
 typedef struct {
     /* 0x00 */ u32 initialized;
@@ -14,15 +16,9 @@ typedef struct {
 typedef struct  {
     /* 0x00 */ OSMesgQueue* queue;
     /* 0x04 */ OSMesg msg;
-} __osHwInt; // size = 0x08
-
-typedef struct  {
-    /* 0x00 */ OSMesgQueue* queue;
-    /* 0x04 */ OSMesg msg;
 } __OSEventState; // size = 0x08
 
 extern OSMgrArgs __osPiDevMgr;
-extern __osHwInt __osHwIntTable[];
 extern __OSEventState __osEventStateTab[];
 
 #endif

@@ -1,9 +1,9 @@
-#ifndef _Z64MATH_H_
-#define _Z64MATH_H_
+#ifndef Z64MATH_H
+#define Z64MATH_H
 
 #include "ultra64.h"
 
-#define VEC_SET(V,X,Y,Z) V.x=X;V.y=Y;V.z=Z
+#define VEC_SET(V,X,Y,Z) (V).x=(X);(V).y=(Y);(V).z=(Z)
 
 typedef struct {
     f32 x, y;
@@ -76,11 +76,14 @@ typedef struct {
     /* 0x06 */ s16 yaw;    // azimuthal angle
 } VecSph; // size = 0x08
 
-#define F32_LERP(v0,v1,t) ((1.0f - (t)) * (v0) + (t) * (v1))
+#define LERP(x, y, scale) (((y) - (x)) * (scale) + (x))
+#define LERP32(x, y, scale) ((s32)(((y) - (x)) * (scale)) + (x))
+#define LERP16(x, y, scale) ((s16)(((y) - (x)) * (scale)) + (x))
+#define F32_LERP(v0,v1,t) ((v0) * (1.0f - (t)) + (v1) * (t))
 #define F32_LERPIMP(v0, v1, t) (v0 + ((v1 - v0) * t))
 #define F32_LERPIMPINV(v0, v1, t) ((v0) + (((v1) - (v0)) / (t)))
-#define BINANG_LERPIMP(v0, v1, t) ((v0) + (s16)(BINANG_SUB((v1), (v0)) * (t)))
-#define BINANG_LERPIMPINV(v0, v1, t) ((v0) + BINANG_SUB((v1), (v0)) / (t))
+#define BINANG_LERPIMP(v0, v1, t) ((v0) + (s16)((s16)((v1) - (v0)) * (t)))
+#define BINANG_LERPIMPINV(v0, v1, t) ((v0) + (s16)((v1) - (v0)) / (t))
 
 #define VEC3F_LERPIMPDST(dst, v0, v1, t){ \
     (dst)->x = (v0)->x + (((v1)->x - (v0)->x) * t); \
@@ -90,16 +93,15 @@ typedef struct {
 
 #define IS_ZERO(f) (fabsf(f) < 0.008f)
 
-// Trig macros
-#define DEGF_TO_BINANG(degreesf) (s16)(degreesf * 182.04167f + .5f)
-#define RADF_TO_BINANG(radf) (s16)(radf * (32768.0f / M_PI))
-#define RADF_TO_DEGF(radf) (radf * (180.0f / M_PI))
-#define DEGF_TO_RADF(degf) (degf * (M_PI / 180.0f))
-#define BINANG_ROT180(angle) ((s16)(angle - 0x7FFF))
-#define BINANG_SUB(a, b) ((s16)(a - b))
+// Angle conversion macros
+#define DEG_TO_BINANG(degrees) (s16)((degrees) * (0x8000 / 180.0f))
+#define RAD_TO_BINANG(radians) (s16)((radians) * (0x8000 / M_PI))
+#define RAD_TO_DEG(radians) ((radians) * (180.0f / M_PI))
 #define DEG_TO_RAD(degrees) ((degrees) * (M_PI / 180.0f))
-#define BINANG_TO_DEGF(binang) ((f32)binang * (360.0001525f / 65535.0f))
-#define BINANG_TO_RAD(binang) (((f32)binang / 32768.0f) * M_PI)
+#define BINANG_TO_DEG(binang) ((f32)(binang) * (180.0f / 0x8000))
+#define BINANG_TO_RAD(binang) ((f32)(binang) * (M_PI / 0x8000))
+#define BINANG_TO_RAD_ALT(binang) (((f32)(binang) / (f32)0x8000) * M_PI)
+#define BINANG_TO_RAD_ALT2(binang) (((f32)(binang) * M_PI) / 0x8000)
 
 // Vector macros
 #define SQXZ(vec) ((vec.x) * (vec.x) + (vec.z) * (vec.z))

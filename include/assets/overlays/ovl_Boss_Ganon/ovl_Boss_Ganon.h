@@ -1,0 +1,50 @@
+#ifndef OVL_BOSS_GANON_H
+#define OVL_BOSS_GANON_H 1
+
+extern Gfx gGanondorfShadowSetupDL[];
+extern Gfx gGanondorfShadowModelDL[];
+extern Gfx gGanondorfTriforceDL[];
+extern Gfx gGanondorfWindowShardMaterialDL[];
+extern Gfx gGanondorfWindowShardModelDL[];
+extern u64 gGanondorfWindowShatterTemplateTex[];
+extern Gfx gGanondorfLightBallMaterialDL[];
+extern Gfx gGanondorfSquareDL[];
+extern u64 gGanondorfLightning1Tex[];
+extern u64 gGanondorfLightning2Tex[];
+extern u64 gGanondorfLightning3Tex[];
+extern u64 gGanondorfLightning4Tex[];
+extern u64 gGanondorfLightning5Tex[];
+extern u64 gGanondorfLightning6Tex[];
+extern u64 gGanondorfLightning7Tex[];
+extern u64 gGanondorfLightning8Tex[];
+extern u64 gGanondorfLightning9Tex[];
+extern u64 gGanondorfLightning10Tex[];
+extern u64 gGanondorfLightning11Tex[];
+extern u64 gGanondorfLightning12Tex[];
+extern Gfx gGanondorfLightningDL[];
+extern Gfx gGanondorfUnusedDL[];
+extern Gfx gGanondorfLightRayTriDL[];
+extern Gfx gGanondorfLightFlecksDL[];
+extern Gfx gGanondorfBigMagicBGCircleDL[];
+extern Gfx gGanondorfDotDL[];
+extern Gfx gGanondorfShockwaveDL[];
+extern Gfx gGanondorfImpactDarkDL[];
+extern Gfx gGanondorfImpactLightDL[];
+extern Gfx gGanondorfShockGlowDL[];
+extern Gfx gGanondorfLightStreak1DL[];
+extern Gfx gGanondorfLightStreak2DL[];
+extern Gfx gGanondorfLightStreak3DL[];
+extern Gfx gGanondorfLightStreak4DL[];
+extern Gfx gGanondorfLightStreak5DL[];
+extern Gfx gGanondorfLightStreak6DL[];
+extern Gfx gGanondorfLightStreak7DL[];
+extern Gfx gGanondorfLightStreak8DL[];
+extern Gfx gGanondorfLightStreak9DL[];
+extern Gfx gGanondorfLightStreak10DL[];
+extern Gfx gGanondorfLightStreak11DL[];
+extern Gfx gGanondorfLightStreak12DL[];
+extern Gfx gGanondorfLightCoreDL[];
+extern Gfx gGanondorfShockDL[];
+extern Gfx gGanondorfVortexDL[];
+
+#endif
