@@ -1,0 +1,40 @@
+#ifndef OBJECT_OPEN_OBJ_H
+#define OBJECT_OPEN_OBJ_H 1
+
+extern Vtx object_open_objVtx_000000[];
+extern Gfx object_open_obj_DL_0003E0[];
+extern Gfx object_open_obj_DL_0003E8[];
+extern u64 object_open_obj_Tex_000558[];
+extern CamData object_open_obj_Colheader_001640CamDataList[];
+extern SurfaceType object_open_obj_Colheader_001640SurfaceType[];
+extern CollisionPoly object_open_obj_Colheader_001640Polygons[];
+extern Vec3s object_open_obj_Colheader_001640Vertices[];
+extern CollisionHeader object_open_obj_Colheader_001640;
+extern Vtx object_open_objVtx_001670[];
+extern Gfx gSpotlightLeftDL[];
+extern Gfx gSpotlightRightDL[];
+extern u64 gSpotlightShapesTex[];
+extern u64 gSpotlightFloorTex[];
+extern AnimatedMatTexScrollParams gSpotlightTexAnimTexScrollParams_002CD0[];
+extern AnimatedMatTexScrollParams gSpotlightTexAnimTexScrollParams_002CD8[];
+extern AnimatedMaterial gSpotlightTexAnim[];
+extern Vtx object_open_objVtx_002CF0[];
+extern Gfx object_open_obj_DL_002D30[];
+extern Gfx object_open_obj_DL_002DC0[];
+extern u64 object_open_obj_Tex_00DDC8[];
+extern u64 object_open_obj_Tex_00DFC8[];
+extern u64 object_open_obj_Tex_00E1C8[];
+extern u64 object_open_obj_Tex_00E3C8[];
+extern u64 object_open_obj_Tex_00E5C8[];
+extern u64 object_open_obj_Tex_00E7C8[];
+extern u64 object_open_obj_Tex_00E9C8[];
+extern u64 object_open_obj_Tex_00EBC8[];
+extern u64 object_open_obj_Tex_00EDC8[];
+extern u64 object_open_obj_Tex_00EFC8[];
+extern F3DPrimColor object_open_objTexColorChangingPrimColors_0113D0[];
+extern AnimatedMatColorParams object_open_obj_Matanimheader_011458ColorParams_011404;
+extern TexturePtr object_open_objTexCycleTexPtrs_011414[];
+extern u8 object_open_objTexCycleTexIndices_01143C[];
+extern AnimatedMatTexCycleParams object_open_obj_Matanimheader_011458TexCycleParams_011448;
+extern AnimatedMaterial object_open_obj_Matanimheader_011458[];
+#endif

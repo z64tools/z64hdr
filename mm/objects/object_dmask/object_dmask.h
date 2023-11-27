@@ -1,0 +1,46 @@
+#ifndef OBJECT_DMASK_H
+#define OBJECT_DMASK_H 1
+
+extern s16 object_dmask_Anim_00017CFrameData[];
+extern JointIndex object_dmask_Anim_00017CJointIndices[];
+extern AnimationHeader object_dmask_Anim_00017C;
+extern s16 object_dmask_Anim_0001A8FrameData[];
+extern JointIndex object_dmask_Anim_0001A8JointIndices[];
+extern AnimationHeader object_dmask_Anim_0001A8;
+extern StandardLimb object_dmask_Standardlimb_01C0;
+extern void* object_dmask_Skel_001D0Limbs[];
+extern FlexSkeletonHeader object_dmask_Skel_001D0;
+extern Vtx object_dmaskVtx_0001E0[];
+extern Gfx object_dmask_DL_000430[];
+extern u64 object_dmask_Tex_000578[];
+extern u64 object_dmask_Tex_000D78[];
+extern s16 object_dmask_Anim_001090FrameData[];
+extern JointIndex object_dmask_Anim_001090JointIndices[];
+extern AnimationHeader object_dmask_Anim_001090;
+extern StandardLimb object_dmask_Standardlimb_010A0;
+extern void* object_dmask_Skel_010B0Limbs[];
+extern SkeletonHeader object_dmask_Skel_010B0;
+extern s16 object_dmask_Anim_0011A0FrameData[];
+extern JointIndex object_dmask_Anim_0011A0JointIndices[];
+extern AnimationHeader object_dmask_Anim_0011A0;
+extern s16 object_dmask_Anim_0013A4FrameData[];
+extern JointIndex object_dmask_Anim_0013A4JointIndices[];
+extern AnimationHeader object_dmask_Anim_0013A4;
+extern StandardLimb object_dmask_Standardlimb_013C0;
+extern void* object_dmask_Skel_013D0Limbs[];
+extern SkeletonHeader object_dmask_Skel_013D0;
+extern Vtx object_dmaskVtx_0013E0[];
+extern Gfx object_dmask_DL_001E70[];
+extern u64 object_dmask_Tex_002220[];
+extern u64 object_dmask_Tex_003220[];
+extern u64 object_dmask_Tex_003420[];
+extern u64 object_dmask_Tex_003620[];
+extern u64 object_dmask_Tex_003820[];
+extern u64 object_dmask_Tex_003A20[];
+extern s16 object_dmask_Anim_004288FrameData[];
+extern JointIndex object_dmask_Anim_004288JointIndices[];
+extern AnimationHeader object_dmask_Anim_004288;
+extern StandardLimb object_dmask_Standardlimb_042A0;
+extern void* object_dmask_Skel_042B0Limbs[];
+extern SkeletonHeader object_dmask_Skel_042B0;
+#endif

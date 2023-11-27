@@ -1,0 +1,42 @@
+#ifndef OBJECT_WATER_EFFECT_H
+#define OBJECT_WATER_EFFECT_H 1
+
+extern Vtx object_water_effectVtx_000000[];
+extern Gfx object_water_effect_DL_000180[];
+extern Vtx object_water_effectVtx_0002A0[];
+extern Gfx object_water_effect_DL_000420[];
+extern Vtx object_water_effectVtx_000530[];
+extern Gfx object_water_effect_DL_000730[];
+extern Vtx object_water_effectVtx_000848[];
+extern Gfx object_water_effect_DL_000A48[];
+extern Vtx object_water_effectVtx_000B58[];
+extern Gfx object_water_effect_DL_000CD8[];
+extern AnimatedMatTexScrollParams object_water_effect_Matanimheader_000DD0TexScrollParams_000DC8[];
+extern AnimatedMaterial object_water_effect_Matanimheader_000DD0[];
+extern AnimatedMatTexScrollParams object_water_effect_Matanimheader_000DE0TexScrollParams_000DD8[];
+extern AnimatedMaterial object_water_effect_Matanimheader_000DE0[];
+extern F3DPrimColor object_water_effectTexColorChangingPrimColors_000DE8[];
+extern AnimatedMatColorParams object_water_effect_Matanimheader_000E0CColorParams_000DF4;
+extern AnimatedMatTexScrollParams object_water_effect_Matanimheader_000E0CTexScrollParams_000E04[];
+extern AnimatedMaterial object_water_effect_Matanimheader_000E0C[];
+extern F3DPrimColor object_water_effectTexColorChangingPrimColors_000E1C[];
+extern AnimatedMatColorParams object_water_effect_Matanimheader_000E40ColorParams_000E28;
+extern AnimatedMatTexScrollParams object_water_effect_Matanimheader_000E40TexScrollParams_000E38[];
+extern AnimatedMaterial object_water_effect_Matanimheader_000E40[];
+extern AnimatedMatTexScrollParams object_water_effect_Matanimheader_000E58TexScrollParams_000E50[];
+extern AnimatedMaterial object_water_effect_Matanimheader_000E58[];
+extern u64 object_water_effect_Tex_000E60[];
+extern u64 object_water_effect_Tex_001260[];
+extern u64 object_water_effect_Tex_001A60[];
+extern u64 object_water_effect_Tex_002260[];
+extern u64 object_water_effect_Tex_002A60[];
+extern u64 object_water_effect_Tex_003260[];
+extern u64 object_water_effect_Tex_003A60[];
+extern Gfx object_water_effect_DL_004260[];
+extern Gfx object_water_effect_DL_0042B0[];
+extern Vtx object_water_effectVtx_0042C8[];
+extern Gfx object_water_effect_DL_0042F8[];
+extern Vtx object_water_effectVtx_004310[];
+extern Gfx object_water_effect_DL_004340[];
+extern Gfx object_water_effect_DL_0043E8[];
+#endif

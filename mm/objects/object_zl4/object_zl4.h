@@ -1,0 +1,259 @@
+#ifndef OBJECT_ZL4_H
+#define OBJECT_ZL4_H 1
+
+typedef enum Zl4Limb {
+    /* 0x00 */ ZL4_LIMB_NONE,
+    /* 0x01 */ ZL4_LIMB_ROOT,
+    /* 0x02 */ ZL4_LIMB_WAIST,
+    /* 0x03 */ ZL4_LIMB_LEFT_LEG,
+    /* 0x04 */ ZL4_LIMB_LEFT_FOOT,
+    /* 0x05 */ ZL4_LIMB_RIGHT_LEG,
+    /* 0x06 */ ZL4_LIMB_RIGHT_FOOT,
+    /* 0x07 */ ZL4_LIMB_DRESS_1,
+    /* 0x08 */ ZL4_LIMB_DRESS_2,
+    /* 0x09 */ ZL4_LIMB_DRESS_3,
+    /* 0x0A */ ZL4_LIMB_TORSO,
+    /* 0x0B */ ZL4_LIMB_LEFT_UPPER_ARM,
+    /* 0x0C */ ZL4_LIMB_LEFT_FOREARM,
+    /* 0x0D */ ZL4_LIMB_LEFT_HAND,
+    /* 0x0E */ ZL4_LIMB_RIGHT_UPPER_ARM,
+    /* 0x0F */ ZL4_LIMB_RIGHT_FOREARM,
+    /* 0x10 */ ZL4_LIMB_RIGHT_HAND,
+    /* 0x11 */ ZL4_LIMB_HEAD,
+    /* 0x12 */ ZL4_LIMB_MAX
+} Zl4Limb;
+
+extern s16 sDmZl4IdleAnimFrameData[];
+extern JointIndex sDmZl4IdleAnimJointIndices[];
+extern AnimationHeader gDmZl4IdleAnim;
+extern u64 gDmZl4DressTLUT[];
+extern u64 gDmZl4EyeTLUT[];
+extern u64 gDmZl4MouthTLUT[];
+extern u64 gDmZl4DressGradientTex[];
+extern u64 gDmZl4DressPurpleTex[];
+extern u64 gDmZl4TriforceSashTex[];
+extern u64 gDmZl4BootLacesTex[];
+extern u64 gDmZl4BootTex[];
+extern u64 gDmZl4AltDressBeltTex[];
+extern u64 gDmZl4AltDressTex[];
+extern u64 gDmZl4DressWrinklesTex[];
+extern u64 gDmZl4AltDressLiningTex[];
+extern u64 gDmZl4AltDressGradientTex[];
+extern u64 gDmZl4_001DF0_Tex[];
+extern u64 gDmZl4HeadressTriforceEmblemTex[];
+extern u64 gDmZl4HeadressGradientTex[];
+extern u64 gDmZl4_002270_Tex[];
+extern u64 gDmZl4HeaddressStripeTex[];
+extern u64 gDmZl4EarTex[];
+extern u64 gDmZl4HairOnSideTex[];
+extern u64 gDmZl4SkinGradientTex[];
+extern u64 gDmZl4_002970_Tex[];
+extern u64 gDmZl4HairTex[];
+extern u64 gDmZl4EyeOpenNormalTex[];
+extern u64 gDmZl4EyeHalfTex[];
+extern u64 gDmZl4EyeClosedTex[];
+extern u64 gDmZl4EyeWideTex[];
+extern u64 gDmZl4EyeHappyTex[];
+extern u64 gDmZl4EyeOpenLookingLeftTex[];
+extern u64 gDmZl4EyeOpenLookingRightTex[];
+extern u64 gZl4MouthNeutralTex[];
+extern u64 gZl4MouthOpenSmilingTex[];
+extern u64 gZl4MouthFrowningTex[];
+extern u64 gZl4MouthOpenTex[];
+extern u64 gDmZl4FingersTex[];
+extern u64 gDmZl4BraceletTex[];
+extern u64 gDmZl4BlueUndershirtGradient1Tex[];
+extern u64 gDmZl4BlueUndershirtGradient2Tex[];
+extern u64 gDmZl4StripedShoulderTex[];
+extern u64 gDmZl4UndershirtWrinklesTex[];
+extern u64 gDmZl4PendantTex[];
+extern Vtx object_zl4Vtx_0065B0[];
+extern Gfx gDmZl4ChestDL[];
+extern Gfx gDmZl4HeadDL[];
+extern Gfx gDmZl4RightUpperArmDL[];
+extern Gfx gDmZl4RightForearmDL[];
+extern Gfx gDmZl4RightHandDL[];
+extern Gfx gDmZl4LeftUpperArmDL[];
+extern Gfx gDmZl4LeftForearmDL[];
+extern Gfx gDmZl4LeftHandDL[];
+extern Gfx gDmZl4HorseRidingDressDL[];
+extern Gfx gDmZl4WaistDL[];
+extern Gfx gDmZl4Dress1DL[];
+extern Gfx gDmZl4Dress2DL[];
+extern Gfx gDmZl4Dress3DL[];
+extern Gfx gDmZl4RightLegDL[];
+extern Gfx gDmZl4RightBootDL[];
+extern Gfx gDmZl4LeftLegDL[];
+extern Gfx gDmZl4LeftBootDL[];
+extern u64 gDmZl4OcarinaTex[];
+extern Vtx object_zl4Vtx_00DCB8[];
+extern Gfx gDmZl4OcarinaDL[];
+extern StandardLimb gDmZl4RootLimb;
+extern StandardLimb gDmZl4WaistLimb;
+extern StandardLimb gDmZl4LeftLegLimb;
+extern StandardLimb gDmZl4LeftFootLimb;
+extern StandardLimb gDmZl4RightLegLimb;
+extern StandardLimb gDmZl4RightFootLimb;
+extern StandardLimb gDmZl4Dress1Limb;
+extern StandardLimb gDmZl4Dress2Limb;
+extern StandardLimb gDmZl4Dress3Limb;
+extern StandardLimb gDmZl4TorsoLimb;
+extern StandardLimb gDmZl4LeftUpperArmLimb;
+extern StandardLimb gDmZl4LeftForearmLimb;
+extern StandardLimb gDmZl4LeftHandLimb;
+extern StandardLimb gDmZl4RightUpperArmLimb;
+extern StandardLimb gDmZl4RightForearmLimb;
+extern StandardLimb gDmZl4RightHandLimb;
+extern StandardLimb gDmZl4HeadLimb;
+extern void* gZl4SkelLimbs[];
+extern FlexSkeletonHeader gZl4Skel;
+extern s16 sDmZl4TurningAroundAnimFrameData[];
+extern JointIndex sDmZl4TurningAroundAnimJointIndices[];
+extern AnimationHeader gDmZl4TurningAroundAnim;
+extern s16 sDmZl4HoldingFluteInFrontAnimFrameData[];
+extern JointIndex sDmZl4HoldingFluteInFrontAnimJointIndices[];
+extern AnimationHeader gDmZl4HoldingFluteInFrontAnim;
+extern s16 sDmZl4RaiseFluteToPlayAnimFrameData[];
+extern JointIndex sDmZl4RaiseFluteToPlayAnimJointIndices[];
+extern AnimationHeader gDmZl4RaiseFluteToPlayAnim;
+extern s16 sDmZl4LowerFluteAfterPlayAnimFrameData[];
+extern JointIndex sDmZl4LowerFluteAfterPlayAnimJointIndices[];
+extern AnimationHeader gDmZl4LowerFluteAfterPlayAnim;
+extern s16 sDmZl4PlayingFluteAnimFrameData[];
+extern JointIndex sDmZl4PlayingFluteAnimJointIndices[];
+extern AnimationHeader gDmZl4PlayingFluteAnim;
+extern s16 sDmZl4FacingAwayIdleAnimFrameData[];
+extern JointIndex sDmZl4FacingAwayIdleAnimJointIndices[];
+extern AnimationHeader gDmZl4FacingAwayIdleAnim;
+extern s16 sDmZl4GivingItemStartAnimFrameData[];
+extern JointIndex sDmZl4GivingItemStartAnimJointIndices[];
+extern AnimationHeader gDmZl4GivingItemStartAnim;
+extern s16 sDmZl4GivingItemLoopAnimFrameData[];
+extern JointIndex sDmZl4GivingItemLoopAnimJointIndices[];
+extern AnimationHeader gDmZl4GivingItemLoopAnim;
+extern s16 sDmZl4RaisingOcarinaToPlayAnimFrameData[];
+extern JointIndex sDmZl4RaisingOcarinaToPlayAnimJointIndices[];
+extern AnimationHeader gDmZl4RaisingOcarinaToPlayAnim;
+extern s16 sDmZl4PlayingOcarinaAnimFrameData[];
+extern JointIndex sDmZl4PlayingOcarinaAnimJointIndices[];
+extern AnimationHeader gDmZl4PlayingOcarinaAnim;
+extern s16 sDmZl4BackflipAnimFrameData[];
+extern JointIndex sDmZl4BackflipAnimJointIndices[];
+extern AnimationHeader gDmZl4BackflipAnim;
+extern s16 sDmZl4BackflipPrepareAnimFrameData[];
+extern JointIndex sDmZl4BackflipPrepareAnimJointIndices[];
+extern AnimationHeader gDmZl4BackflipPrepareAnim;
+extern s16 sDmZl4BackflipPrepareHoldingReadyAnimFrameData[];
+extern JointIndex sDmZl4BackflipPrepareHoldingReadyAnimJointIndices[];
+extern AnimationHeader gDmZl4BackflipPrepareHoldingReadyAnim;
+extern s16 sDmZl4TurningAround2AnimFrameData[];
+extern JointIndex sDmZl4TurningAround2AnimJointIndices[];
+extern AnimationHeader gDmZl4TurningAround2Anim;
+extern s16 sDmZl4HandsOverEmblemLoopAnimFrameData[];
+extern JointIndex sDmZl4HandsOverEmblemLoopAnimJointIndices[];
+extern AnimationHeader gDmZl4HandsOverEmblemLoopAnim;
+extern s16 sDmZl4FacingAwayHandsOverEmblemLoopAnimFrameData[];
+extern JointIndex sDmZl4FacingAwayHandsOverEmblemLoopAnimJointIndices[];
+extern AnimationHeader gDmZl4FacingAwayHandsOverEmblemLoopAnim;
+extern s16 sDmZl4Anim_016328FrameData[];
+extern JointIndex sDmZl4Anim_016328JointIndices[];
+extern AnimationHeader gDmZl4Anim_016328;
+extern s16 sDmZl4Anim_016924FrameData[];
+extern JointIndex sDmZl4Anim_016924JointIndices[];
+extern AnimationHeader gDmZl4Anim_016924;
+extern s16 sDmZl4Anim_016E04FrameData[];
+extern JointIndex sDmZl4Anim_016E04JointIndices[];
+extern AnimationHeader gDmZl4Anim_016E04;
+extern s16 sDmZl4Anim_0175F4FrameData[];
+extern JointIndex sDmZl4Anim_0175F4JointIndices[];
+extern AnimationHeader gDmZl4Anim_0175F4;
+extern s16 sDmZl4Anim_018B58FrameData[];
+extern JointIndex sDmZl4Anim_018B58JointIndices[];
+extern AnimationHeader gDmZl4Anim_018B58;
+extern s16 sDmZl4Anim_018FA8FrameData[];
+extern JointIndex sDmZl4Anim_018FA8JointIndices[];
+extern AnimationHeader gDmZl4Anim_018FA8;
+extern s16 sDmZl4Anim_0193F8FrameData[];
+extern JointIndex sDmZl4Anim_0193F8JointIndices[];
+extern AnimationHeader gDmZl4Anim_0193F8;
+extern s16 sDmZl4Anim_019894FrameData[];
+extern JointIndex sDmZl4Anim_019894JointIndices[];
+extern AnimationHeader gDmZl4Anim_019894;
+extern s16 sDmZl4Anim_01A344FrameData[];
+extern JointIndex sDmZl4Anim_01A344JointIndices[];
+extern AnimationHeader gDmZl4Anim_01A344;
+extern s16 sDmZl4Anim_01ABB8FrameData[];
+extern JointIndex sDmZl4Anim_01ABB8JointIndices[];
+extern AnimationHeader gDmZl4Anim_01ABB8;
+extern s16 sDmZl4Anim_01AFE0FrameData[];
+extern JointIndex sDmZl4Anim_01AFE0JointIndices[];
+extern AnimationHeader gDmZl4Anim_01AFE0;
+extern s16 sDmZl4Anim_01B388FrameData[];
+extern JointIndex sDmZl4Anim_01B388JointIndices[];
+extern AnimationHeader gDmZl4Anim_01B388;
+extern s16 sDmZl4Anim_01B7B0FrameData[];
+extern JointIndex sDmZl4Anim_01B7B0JointIndices[];
+extern AnimationHeader gDmZl4Anim_01B7B0;
+extern s16 sDmZl4Anim_01BC00FrameData[];
+extern JointIndex sDmZl4Anim_01BC00JointIndices[];
+extern AnimationHeader gDmZl4Anim_01BC00;
+extern s16 sDmZl4Anim_01DC74FrameData[];
+extern JointIndex sDmZl4Anim_01DC74JointIndices[];
+extern AnimationHeader gDmZl4Anim_01DC74;
+extern s16 sDmZl4Anim_01E714FrameData[];
+extern JointIndex sDmZl4Anim_01E714JointIndices[];
+extern AnimationHeader gDmZl4Anim_01E714;
+extern s16 sDmZl4Anim_01EA68FrameData[];
+extern JointIndex sDmZl4Anim_01EA68JointIndices[];
+extern AnimationHeader gDmZl4Anim_01EA68;
+extern s16 sDmZl4Anim_01EFCCFrameData[];
+extern JointIndex sDmZl4Anim_01EFCCJointIndices[];
+extern AnimationHeader gDmZl4Anim_01EFCC;
+extern s16 sDmZl4Anim_01F578FrameData[];
+extern JointIndex sDmZl4Anim_01F578JointIndices[];
+extern AnimationHeader gDmZl4Anim_01F578;
+extern s16 sDmZl4Anim_01FDBCFrameData[];
+extern JointIndex sDmZl4Anim_01FDBCJointIndices[];
+extern AnimationHeader gDmZl4Anim_01FDBC;
+extern s16 sDmZl4Anim_0205F8FrameData[];
+extern JointIndex sDmZl4Anim_0205F8JointIndices[];
+extern AnimationHeader gDmZl4Anim_0205F8;
+extern s16 sDmZl4Anim_020E6CFrameData[];
+extern JointIndex sDmZl4Anim_020E6CJointIndices[];
+extern AnimationHeader gDmZl4Anim_020E6C;
+extern s16 sDmZl4Anim_021360FrameData[];
+extern JointIndex sDmZl4Anim_021360JointIndices[];
+extern AnimationHeader gDmZl4Anim_021360;
+extern s16 sDmZl4Anim_02167CFrameData[];
+extern JointIndex sDmZl4Anim_02167CJointIndices[];
+extern AnimationHeader gDmZl4Anim_02167C;
+extern s16 sDmZl4Anim_02205CFrameData[];
+extern JointIndex sDmZl4Anim_02205CJointIndices[];
+extern AnimationHeader gDmZl4Anim_02205C;
+extern s16 sDmZl4Anim_022840FrameData[];
+extern JointIndex sDmZl4Anim_022840JointIndices[];
+extern AnimationHeader gDmZl4Anim_022840;
+extern s16 sDmZl4Anim_022BE8FrameData[];
+extern JointIndex sDmZl4Anim_022BE8JointIndices[];
+extern AnimationHeader gDmZl4Anim_022BE8;
+extern s16 sDmZl4Anim_0235D4FrameData[];
+extern JointIndex sDmZl4Anim_0235D4JointIndices[];
+extern AnimationHeader gDmZl4Anim_0235D4;
+extern s16 sDmZl4Anim_023A50FrameData[];
+extern JointIndex sDmZl4Anim_023A50JointIndices[];
+extern AnimationHeader gDmZl4Anim_023A50;
+extern s16 sDmZl4Anim_0241F4FrameData[];
+extern JointIndex sDmZl4Anim_0241F4JointIndices[];
+extern AnimationHeader gDmZl4Anim_0241F4;
+extern s16 sDmZl4Anim_024510FrameData[];
+extern JointIndex sDmZl4Anim_024510JointIndices[];
+extern AnimationHeader gDmZl4Anim_024510;
+extern s16 sDmZl4Anim_024B68FrameData[];
+extern JointIndex sDmZl4Anim_024B68JointIndices[];
+extern AnimationHeader gDmZl4Anim_024B68;
+extern Vtx object_zl4Vtx_024B80[];
+extern Gfx gDmZl4FluteDL[];
+extern Gfx gDmZl4FluteWrapperDL[];
+extern u64 gDmZl4FluteHoleTex[];
+extern AnimatedMaterial gDmZlEmptyTexAnim[];
+#endif

@@ -1,0 +1,28 @@
+#ifndef OBJECT_TAISOU_H
+#define OBJECT_TAISOU_H 1
+
+extern s16 sGoronAthleticsSquatSideToSideAnimFrameData[];
+extern JointIndex sGoronAthleticsSquatSideToSideAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsSquatSideToSideAnim;
+extern s16 sGoronAthleticsShakeLimbsAnimFrameData[];
+extern JointIndex sGoronAthleticsShakeLimbsAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsShakeLimbsAnim;
+extern s16 sGoronAthleticsCheerAnimFrameData[];
+extern JointIndex sGoronAthleticsCheerAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsCheerAnim;
+extern s16 sGoronAthleticsShoutAnimFrameData[];
+extern JointIndex sGoronAthleticsShoutAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsShoutAnim;
+extern s16 sGoronAthleticsDoubleArmSideBendAnimFrameData[];
+extern JointIndex sGoronAthleticsDoubleArmSideBendAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsDoubleArmSideBendAnim;
+extern s16 sGoronAthleticsHamstringStretchStandingAnimFrameData[];
+extern JointIndex sGoronAthleticsHamstringStretchStandingAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsHamstringStretchStandingAnim;
+extern s16 sGoronAthleticsHamstringStretchSittingAnimFrameData[];
+extern JointIndex sGoronAthleticsHamstringStretchSittingAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsHamstringStretchSittingAnim;
+extern s16 sGoronAthleticsSingleArmSideBendAnimFrameData[];
+extern JointIndex sGoronAthleticsSingleArmSideBendAnimJointIndices[];
+extern AnimationHeader gGoronAthleticsSingleArmSideBendAnim;
+#endif
