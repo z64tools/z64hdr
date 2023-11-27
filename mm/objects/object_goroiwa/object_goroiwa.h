@@ -1,0 +1,40 @@
+#ifndef OBJECT_GOROIWA_H
+#define OBJECT_GOROIWA_H 1
+
+extern Vtx object_goroiwaVtx_000000[];
+extern Gfx object_goroiwa_DL_0003B0[];
+extern u64 object_goroiwa_Tex_000520[];
+extern u64 object_goroiwa_Tex_000D20[];
+extern u64 object_goroiwa_Tex_001520[];
+extern Vtx object_goroiwaVtx_002520[];
+extern Gfx object_goroiwa_DL_0028E0[];
+extern Vtx object_goroiwaVtx_002A00[];
+extern Gfx object_goroiwa_DL_002D70[];
+extern Vtx object_goroiwaVtx_002E80[];
+extern Gfx object_goroiwa_DL_0032E0[];
+extern Vtx object_goroiwaVtx_0034F0[];
+extern Gfx object_goroiwa_DL_003B40[];
+extern Vtx object_goroiwaVtx_003DC0[];
+extern Gfx object_goroiwa_DL_0042B0[];
+extern Vtx object_goroiwaVtx_004410[];
+extern Gfx object_goroiwa_DL_004960[];
+extern Vtx object_goroiwaVtx_004AB0[];
+extern Gfx object_goroiwa_DL_004EF0[];
+extern Vtx object_goroiwaVtx_005030[];
+extern Gfx object_goroiwa_DL_005C20[];
+extern u64 object_goroiwa_TLUT_005EE0[];
+extern u64 object_goroiwa_TLUT_005F00[];
+extern u64 object_goroiwa_Tex_005F20[];
+extern u64 object_goroiwa_Tex_006720[];
+extern Vtx object_goroiwaVtx_006F20[];
+extern Gfx object_goroiwa_DL_0072F0[];
+extern Vtx object_goroiwaVtx_007410[];
+extern Gfx object_goroiwa_DL_0077D0[];
+extern Vtx object_goroiwaVtx_0078F0[];
+extern Gfx object_goroiwa_DL_007C60[];
+extern Vtx object_goroiwaVtx_007D70[];
+extern Gfx object_goroiwa_DL_0082D0[];
+extern Vtx object_goroiwaVtx_008490[];
+extern Gfx object_goroiwa_DL_008B90[];
+extern u64 object_goroiwa_Tex_008DA0[];
+#endif

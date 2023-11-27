@@ -1,0 +1,45 @@
+#ifndef OBJECT_SYOTEN_H
+#define OBJECT_SYOTEN_H 1
+
+extern u8 object_syoten_Blob_000000[];
+extern u8 object_syoten_Blob_00023C[];
+extern Vtx object_syotenVtx_000250[];
+extern Gfx object_syoten_DL_000450[];
+extern Gfx object_syoten_DL_000518[];
+extern Gfx object_syoten_DL_0005E0[];
+extern Gfx object_syoten_DL_0006A8[];
+extern Gfx object_syoten_DL_000770[];
+extern Gfx object_syoten_DL_000838[];
+extern Gfx object_syoten_DL_000900[];
+extern Gfx object_syoten_DL_0009C8[];
+extern u64 object_syoten_Tex_000A90[];
+extern u64 object_syoten_Tex_000E90[];
+extern AnimatedMatTexScrollParams object_syoten_Matanimheader_001298TexScrollParams_001290[];
+extern AnimatedMaterial object_syoten_Matanimheader_001298[];
+extern u8 object_syoten_Blob_001328[];
+extern Vtx object_syotenVtx_001330[];
+extern Gfx object_syoten_DL_001370[];
+extern AnimatedMatTexScrollParams object_syoten_Matanimheader_001448TexScrollParams_001440[];
+extern AnimatedMaterial object_syoten_Matanimheader_001448[];
+extern Vtx object_syotenVtx_001450[];
+extern Gfx object_syoten_DL_001730[];
+extern Gfx object_syoten_DL_0018A0[];
+extern AnimatedMatTexScrollParams object_syoten_Matanimheader_0018B8TexScrollParams_0018B0[];
+extern AnimatedMaterial object_syoten_Matanimheader_0018B8[];
+extern Vtx object_syotenVtx_0018C0[];
+extern Gfx object_syoten_DL_001DD0[];
+extern Gfx object_syoten_DL_002018[];
+extern Vtx object_syotenVtx_002020[];
+extern Gfx object_syoten_DL_002880[];
+extern Gfx object_syoten_DL_002A20[];
+extern AnimatedMatTexScrollParams object_syoten_Matanimheader_002B88TexScrollParams_002B80[];
+extern AnimatedMaterial object_syoten_Matanimheader_002B88[];
+extern AnimatedMatTexScrollParams object_syoten_Matanimheader_002B98TexScrollParams_002B90[];
+extern AnimatedMaterial object_syoten_Matanimheader_002B98[];
+extern u64 object_syoten_Tex_002BA0[];
+extern u64 object_syoten_Tex_002FA0[];
+extern u64 object_syoten_Tex_0033A0[];
+extern u64 object_syoten_Tex_003BA0[];
+extern u64 object_syoten_Tex_003DA0[];
+extern u64 object_syoten_Tex_0045A0[];
+#endif

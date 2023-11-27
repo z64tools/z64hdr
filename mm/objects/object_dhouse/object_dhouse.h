@@ -1,0 +1,41 @@
+#ifndef OBJECT_DHOUSE_H
+#define OBJECT_DHOUSE_H 1
+
+extern u64 object_dhouse_TLUT_000000[];
+extern u64 object_dhouse_TLUT_000020[];
+extern u64 object_dhouse_Tex_000040[];
+extern u64 object_dhouse_Tex_000840[];
+extern u64 object_dhouse_Tex_001040[];
+extern u64 object_dhouse_Tex_002040[];
+extern u64 object_dhouse_Tex_002840[];
+extern u64 object_dhouse_Tex_003040[];
+extern Vtx object_dhouseVtx_003840[];
+extern Gfx object_dhouse_DL_004920[];
+extern Gfx object_dhouse_DL_004928[];
+extern Vtx object_dhouseVtx_004E30[];
+extern Gfx object_dhouse_DL_005A70[];
+extern Gfx object_dhouse_DL_005A78[];
+extern Vtx object_dhouseVtx_005E20[];
+extern Gfx object_dhouse_DL_006CE0[];
+extern Gfx object_dhouse_DL_006E28[];
+extern Gfx object_dhouse_DL_006EF8[];
+extern Gfx object_dhouse_DL_0070A8[];
+extern Gfx object_dhouse_DL_007190[];
+extern Gfx object_dhouse_DL_007348[];
+extern Gfx object_dhouse_DL_007438[];
+extern Gfx object_dhouse_DL_007568[];
+extern Gfx object_dhouse_DL_007638[];
+extern Gfx object_dhouse_DL_007780[];
+extern Gfx object_dhouse_DL_007850[];
+extern Gfx object_dhouse_DL_007A00[];
+extern Gfx object_dhouse_DL_007AE8[];
+extern Gfx object_dhouse_DL_007C98[];
+extern CamData object_dhouse_Colheader_008040CamDataList[];
+extern SurfaceType object_dhouse_Colheader_008040SurfaceType[];
+extern CollisionPoly object_dhouse_Colheader_008040Polygons[];
+extern Vec3s object_dhouse_Colheader_008040Vertices[];
+extern CollisionHeader object_dhouse_Colheader_008040;
+extern Vtx object_dhouseVtx_008070[];
+extern Gfx object_dhouse_DL_0081D0[];
+extern Gfx object_dhouse_DL_0081D8[];
+#endif

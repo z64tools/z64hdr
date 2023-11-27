@@ -1,0 +1,42 @@
+#ifndef OBJECT_KEIKOKU_OBJ_H
+#define OBJECT_KEIKOKU_OBJ_H 1
+
+extern Vtx object_keikoku_objVtx_000000[];
+extern Gfx object_keikoku_obj_DL_000100[];
+extern AnimatedMatTexScrollParams object_keikoku_obj_Matanimheader_0001F8TexScrollParams_0001F0[];
+extern AnimatedMaterial object_keikoku_obj_Matanimheader_0001F8[];
+extern Vtx object_keikoku_objVtx_000200[];
+extern Gfx object_keikoku_obj_DL_000300[];
+extern AnimatedMatTexScrollParams object_keikoku_obj_Matanimheader_0003F8TexScrollParams_0003F0[];
+extern AnimatedMaterial object_keikoku_obj_Matanimheader_0003F8[];
+extern Vtx object_keikoku_objVtx_000400[];
+extern Gfx object_keikoku_obj_DL_000500[];
+extern AnimatedMatTexScrollParams object_keikoku_obj_Matanimheader_0005F8TexScrollParams_0005F0[];
+extern AnimatedMaterial object_keikoku_obj_Matanimheader_0005F8[];
+extern u64 object_keikoku_obj_Tex_000600[];
+extern u64 object_keikoku_obj_Tex_000E00[];
+extern Vtx object_keikoku_objVtx_001600[];
+extern Gfx object_keikoku_obj_DL_001640[];
+extern u64 object_keikoku_obj_Tex_001780[];
+extern u64 object_keikoku_obj_Tex_001F80[];
+extern u64 object_keikoku_obj_Tex_002180[];
+extern CamData object_keikoku_obj_Colheader_002300CamDataList[];
+extern SurfaceType object_keikoku_obj_Colheader_002300SurfaceType[];
+extern CollisionPoly object_keikoku_obj_Colheader_002300Polygons[];
+extern Vec3s object_keikoku_obj_Colheader_002300Vertices[];
+extern CollisionHeader object_keikoku_obj_Colheader_002300;
+extern Vtx object_keikoku_objVtx_002330[];
+extern Gfx object_keikoku_obj_DL_0027D0[];
+extern Gfx object_keikoku_obj_DL_0027D8[];
+extern u64 object_keikoku_obj_Tex_002A78[];
+extern u64 object_keikoku_obj_Tex_003278[];
+extern u64 object_keikoku_obj_Tex_003A78[];
+extern AnimatedMatTexScrollParams object_keikoku_obj_Matanimheader_004290TexScrollParams_004280[];
+extern AnimatedMatTexScrollParams object_keikoku_obj_Matanimheader_004290TexScrollParams_004288[];
+extern AnimatedMaterial object_keikoku_obj_Matanimheader_004290[];
+extern Vtx object_keikoku_objVtx_0042A0[];
+extern Gfx object_keikoku_obj_DL_0044A0[];
+extern Gfx object_keikoku_obj_DL_0044A8[];
+extern u64 object_keikoku_obj_Tex_004618[];
+extern u64 object_keikoku_obj_Tex_004A18[];
+#endif
